@@ -1,0 +1,436 @@
+/*+++++++++++++++++++++
+=====================================
+ Template Name : Himu
+ Author Name : Mostafizur Rahman
+ Author URI : http://mostafiz.me/
+ Template URI :http://mostafiz.me/demo/himu/
+ Version : 1.1
+===============================
++++++++++++++++++++*/
+
+
+
+
+
+/*
+====================================
+------------------------------------
+	1. Typography
+	2. Header
+	3. Main Slider
+	4. About Us
+	5. Service
+	6. Our Team
+	7. Portfolio
+	8. Clients
+	9. Our Blog
+	10. Contact
+	11. Footer
+	12. Carousel Effect
+	13. Isotope
+	14. Portfolio Hover effect
+-------------------------------------
+=====================================
+*/
+
+
+/*====================
+======Typography=====
+======================*/
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic);
+
+
+
+
+/*====================
+======Contact CSS=====
+======================*/
+
+#contact {
+	overflow:hidden;
+	background-color: #f6f6f6;
+	position:relative;
+	padding-bottom:85px;
+	border-top:2px solid #ddd
+}
+
+#contact .contact-heading {
+	padding-bottom:35px;
+	position: relative;
+	z-index: 10;
+}
+
+.contact-details {	
+	padding-top:75px;
+}
+
+.pattern {
+	height:100%;
+	position:absolute;
+	width:100%;
+	z-index:1;
+	left:0;
+	bottom:0;
+	background-image:url(../img/pattern.png);
+	background-repeat:repeat;
+	opacity:0.2;
+}
+
+
+.contact-address {
+	background-color: #fff;
+	height:390px;
+	padding-top:85px
+}
+
+.contact-address .social-icons a i {
+	border-radius:0;
+	height:30px;
+	line-height:inherit;
+	width:30px;
+	border-width:0;
+	transition: all 1s ease 0s;
+	-moz-transition: all 1s ease 0s;
+	-webkit-transition: all 1s ease 0s;
+	-o-transition: all 1s ease 0s;
+	margin-right:10px
+}
+.contact-address .social-icons i:hover {
+	transform: scale(.9);
+}
+
+.social-icons a {
+	color: #A2A2A2;
+	font-size: 20px;
+	border: 1px solid #A2A2A2;
+	border-radius: 50%;
+	text-align: center;
+	padding: 6px;
+	width: 44px;
+	height: 44px;
+	display: inline-block;
+	margin: 2px;
+}
+
+
+.social-icons a:hover {
+  color: #fc7700;
+  border: 1px solid #fc7700;
+}
+
+.contact-address .social-icons, 
+.contact-address address {
+	z-index:2;
+	position:relative
+}
+
+.contact-address  p {
+	font-weight:800;
+	font-size:24px
+}
+
+.contact-address  p span {
+	color:#fc7700;
+	
+}
+
+#contact-form-section {	
+	padding:35px;
+	background-color: #FFF; 
+	height:390px;
+}
+#contact-form-section .btn-primary {
+	background-color:#fc7700;
+	border-color:#f6f6f6;
+	border-radius:0;
+	padding:10px 35px;
+	text-transform:uppercase;
+	font-weight:800;
+	transition: all 0.9s ease 0s;
+  -moz-transition: all 0.9s ease 0s;
+  -webkit-transition: all 0.9s ease 0s;
+  -o-transition: all 0.9s ease 0s;
+}
+
+#contact-form-section .btn-primary:hover {
+	background-color:#43484E
+}
+
+#contact-form input, 
+#contact-form textarea, 
+#contact-form .btn-primary  {
+	position:relative;
+	z-index:2;
+}
+
+#contact-form .name-field, 
+#contact-form .mail-field  {
+	width:49%;
+}
+
+#contact-form .name-field {
+	margin-right:2%;	
+	float:left
+}
+
+#contact-form .mail-field {
+	
+}
+
+#contact-form-section .form-control {
+	border-radius:0;
+	-webkit-box-shadow:none;
+	box-shadow:none;
+}
+
+#contact-form-section textarea {
+	resize:none
+}
+
+#contact-form-section .form-control:focus {
+	border-color: #fc7700;
+	outline: 0;
+	-webkit-box-shadow:none;
+	box-shadow:none;
+}
+
+
+/*====================
+======Footer CSS=====
+======================*/
+
+#footer {
+	background-color:#f6f6f6;
+	padding:25px 0;
+	color:#43484E;
+	font-size:16px;
+	position:relative;
+	margin-top:1px;
+}
+
+#footer p {
+	margin: 0
+}
+
+
+/*============================
+======Carousel Effect CSS=====
+==============================*/
+
+
+.carousel.scale .carousel-inner > .item.left > div:nth-child(1),
+.carousel.scale .carousel-inner > .item.right > div:nth-child(1) {
+  -webkit-animation: fadeOutDown 300ms linear 0ms both;
+  animation: fadeOutDown 300ms linear 0ms both;
+}
+.carousel.scale .carousel-inner > .item.next > div:nth-child(1),
+.carousel.scale .carousel-inner > .item.prev > div:nth-child(1) {
+  -webkit-animation: fadeInDown 300ms linear 75ms both;
+  animation: fadeInDown 300ms linear 75ms both;
+}
+
+.carousel.scale .carousel-inner > .item.left > div:nth-child(2),
+.carousel.scale .carousel-inner > .item.right > div:nth-child(2) {
+  -webkit-animation: fadeOutDown 300ms linear 75ms both;
+  animation: fadeOutDown 300ms linear 75ms both;
+}
+.carousel.scale .carousel-inner > .item.next > div:nth-child(2),
+.carousel.scale .carousel-inner > .item.prev > div:nth-child(2) {
+  -webkit-animation: fadeInDown 300ms linear 150ms both;
+  animation: fadeInDown 300ms linear 150ms both;
+}
+
+.carousel.scale .carousel-inner > .item.left > div:nth-child(3),
+.carousel.scale .carousel-inner > .item.right > div:nth-child(3) {
+  -webkit-animation: fadeOutDown 300ms linear 150ms both;
+  animation: fadeOutDown 300ms linear 150ms both;
+}
+.carousel.scale .carousel-inner > .item.next > div:nth-child(3),
+.carousel.scale .carousel-inner > .item.prev > div:nth-child(3) {
+  -webkit-animation: fadeInDown 300ms linear 225ms both;
+  animation: fadeInDown 300ms linear 225ms both;
+}
+
+.carousel.scale .carousel-inner > .item.left > div:nth-child(4),
+.carousel.scale .carousel-inner > .item.right > div:nth-child(4) {
+  -webkit-animation: fadeOutDown 300ms linear 225ms both;
+  animation: fadeOutDown 300ms linear 225ms both;
+}
+.carousel.scale .carousel-inner > .item.next > div:nth-child(4),
+.carousel.scale .carousel-inner > .item.prev > div:nth-child(4) {
+  -webkit-animation: fadeInDown 300ms linear 300ms both;
+  animation: fadeInDown 300ms linear 300ms both;
+}
+
+
+/*==================================
+====== Isotope Recommended CSS=====
+====================================*/
+
+/**** Isotope Filtering ****/
+.isotope-item {
+  z-index: 2;
+}
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+/**** Isotope CSS3 transitions ****/
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+  -moz-transition-duration: 0.8s;
+  -ms-transition-duration: 0.8s;
+  -o-transition-duration: 0.8s;
+  transition-duration: 0.8s;
+}
+
+.isotope {
+  -webkit-transition-property: height, width;
+  -moz-transition-property: height, width;
+  -ms-transition-property: height, width;
+  -o-transition-property: height, width;
+  transition-property: height, width;
+}
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+  -moz-transition-property: -moz-transform, opacity;
+  -ms-transition-property: -ms-transform, opacity;
+  -o-transition-property: -o-transform, opacity;
+  transition-property: transform, opacity;
+}
+
+/**** disabling Isotope CSS3 transitions ****/
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+  -webkit-transition-duration: 0s;
+  -moz-transition-duration: 0s;
+  -ms-transition-duration: 0s;
+  -o-transition-duration: 0s;
+  transition-duration: 0s;
+}
+/* End: Recommended Isotope styles */
+
+
+
+
+/*==================================
+====== Portfolio Hover effect=======
+====================================*/
+
+
+.efffect img {
+   -webkit-transform: scaleY(1);
+   -moz-transform: scaleY(1);
+   -o-transform: scaleY(1);
+   -ms-transform: scaleY(1);
+   transform: scaleY(1);
+   -webkit-transition: all 0.7s ease-in-out;
+   -moz-transition: all 0.7s ease-in-out;
+   -o-transition: all 0.7s ease-in-out;
+   -ms-transition: all 0.7s ease-in-out;
+   transition: all 0.7s ease-in-out;
+}
+.efffect .mask {
+   -webkit-transition: all 0.5s linear;
+   -moz-transition: all 0.5s linear;
+   -o-transition: all 0.5s linear;
+   -ms-transition: all 0.5s linear;
+   transition: all 0.5s linear;
+   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+   filter: alpha(opacity=0);
+   opacity: 0;
+   cursor: zoom-in;
+}
+.efffect h4 {   
+   background: transparent;
+   -webkit-transform: scale(0);
+   -moz-transform: scale(0);
+   -o-transform: scale(0);
+   -ms-transform: scale(0);
+   transform: scale(0);
+   -webkit-transition: all 0.5s linear;
+   -moz-transition: all 0.5s linear;
+   -o-transition: all 0.5s linear;
+   -ms-transition: all 0.5s linear;
+   transition: all 0.5s linear;
+   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+   filter: alpha(opacity=0);
+   opacity: 0;
+}
+.efffect h3 {
+   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+   filter: alpha(opacity=0);
+   opacity: 0;
+   font-size:22px;
+   -webkit-transform: scale(0);
+   -moz-transform: scale(0);
+   -o-transform: scale(0);
+   -ms-transform: scale(0);
+   transform: scale(0);
+   -webkit-transition: all 0.5s linear;
+   -moz-transition: all 0.5s linear;
+   -o-transition: all 0.5s linear;
+   -ms-transition: all 0.5s linear;
+   transition: all 0.5s linear;
+}
+.mask a i {
+   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+   filter: alpha(opacity=0);
+   opacity: 0;
+   -webkit-transform:rotate(-180deg);
+   -moz-transform:rotate(-180deg);
+   -o-transform:rotate(-180deg);
+   -ms-transform:rotate(-180deg);
+   transform:rotate(-180deg);
+   -webkit-transition:all 0.5s linear 0.7s;
+   -moz-transition: all 0.5s linear 0.7s;
+   -o-transition:all 0.5s linear 0.7s;
+   -ms-transition:all 0.5s linear 0.7s;
+   transition:all 0.5s linear 0.7s;
+}
+.efffect:hover img {
+   -webkit-transform: scale(10);
+   -moz-transform: scale(10);
+   -o-transform: scale(10);
+   -ms-transform: scale(10);
+   transform: scale(10);
+   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+   filter: alpha(opacity=0);
+   opacity: 0;
+}
+.efffect:hover .mask {
+   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
+   filter: alpha(opacity=100);
+   opacity: 1;
+}
+.efffect:hover h4,.efffect:hover h3,.efffect:hover a i {
+   -webkit-transform: scale(1);
+   -moz-transform: scale(1);
+   -o-transform: scale(1);
+   -ms-transform: scale(1);
+   transform: scale(1);
+   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
+   filter: alpha(opacity=100);
+   opacity: 1;
+}
+
+.title-one:before {
+	color: #fc7700;
+	content: "||";
+	left: -45px;
+	position: relative;
+	top: 0;
+}
+
+.title-one:after {
+	color: #fc7700;
+	content: "||";
+	position: relative;
+	right: -45px;
+	top: -2px;
+}
