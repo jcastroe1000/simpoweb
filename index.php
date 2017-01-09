@@ -36,10 +36,10 @@
         <link rel="stylesheet" href="css/animate.css">
         <!-- Main Stylesheet -->
         <link rel="stylesheet" href="css/main.css">
-        
+
         <!-- Modernizer Script for old Browsers -->
         <script src="js/modernizr-2.6.2.min.js"></script>
-        
+
 
     </head>
 
@@ -281,85 +281,84 @@
                                 <ol class="carousel-indicators">
                                     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                                     <li data-target="#myCarousel" data-slide-to="1"></li>
-                                    
+
                                 </ol>
 
                                 <!-- Wrapper for slides -->
                                 <div class="carousel-inner" role="listbox">
 
                                     <div class="item active">
-                                        <div class="col-md-3 col-sm-6 col-xs-12 text-center wow animated zoomIn">
+                                        <div class="col-md-3 col-sm-6 col-xs-12 col-md-offset-1 text-center wow animated zoomIn">
                                             <div class="service-item">
-								<div class="service-icon">
-									<i class="fa fa-home fa-3x"></i>
-								</div>
-								<h3>Support</h3>
-								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-					    </div>
-					</div>
+                                                <div class="service-icon">
+                                                    <i class="fa fa-home fa-3x"></i>
+                                                </div>
+                                                <h3>Support</h3>
+                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                                            </div>
+                                        </div>
                                         <div class="col-md-3 col-sm-6 col-xs-12 text-center wow animated zoomIn" data-wow-delay="0.3s">
-							<div class="service-item">
-								<div class="service-icon">
-									<i class="fa fa-tasks fa-3x"></i>
-								</div>
-								<h3>Well Documented</h3>
-								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-							</div>
-						</div>
+                                            <div class="service-item">
+                                                <div class="service-icon">
+                                                    <i class="fa fa-tasks fa-3x"></i>
+                                                </div>
+                                                <h3>Well Documented</h3>
+                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                                            </div>
+                                        </div>
                                         <div class="col-md-3 col-sm-6 col-xs-12 text-center wow animated zoomIn" data-wow-delay="0.6s">
-							<div class="service-item">
-								<div class="service-icon">
-									<i class="fa fa-clock-o fa-3x"></i>
-								</div>
-								<h3>Design UI/UX</h3>
-								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-							</div>
-						</div>
+                                            <div class="service-item">
+                                                <div class="service-icon">
+                                                    <i class="fa fa-clock-o fa-3x"></i>
+                                                </div>
+                                                <h3>Design UI/UX</h3>
+                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                                            </div>
+                                        </div>
                                     </div>
 
                                     <div class="item">
-                                        <div class="col-md-4 col-sm-6 col-xs-12 text-center wow animated zoomIn" >
-							<div class="service-item">
-								<div class="service-icon">
-									<i class="fa fa-heart fa-3x"></i>
-								</div>
-								
-								<h3>Web Security</h3>
-								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>							
-							</div>
-						</div>
-                                        <div class="col-md-4 col-sm-6 col-xs-12 text-center wow animated zoomIn" >
-							<div class="service-item">
-								<div class="service-icon">
-									<i class="fa fa-heart fa-3x"></i>
-								</div>
-								
-								<h3>Web Security</h3>
-								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>							
-							</div>
-						</div>
+                                        <div class="col-md-4 col-sm-6 col-xs-12 col-md-offset-3 text-center wow animated zoomIn" data-wow-delay="0.6s">
+                                            <div class="service-item">
+                                                <div class="service-icon">
+                                                    <i class="fa fa-clock-o fa-3x"></i>
+                                                </div>
+                                                <h3>Design UI/UX</h3>
+                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-sm-6 col-xs-12 text-center wow animated zoomIn" data-wow-delay="0.6s">
+                                            <div class="service-item">
+                                                <div class="service-icon">
+                                                    <i class="fa fa-tasks fa-3x"></i>
+                                                </div>
+                                                <h3>Well Documented</h3>
+                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                                            </div>
+                                        </div>
+                                        
 
-                                            
+
                                     </div>
 
 
 
                                 </div>
-                                    
 
-                                    <!-- Left and right controls -->
-                                    <a class="left carousel-control " href="#myCarousel" role="button" data-slide="prev" >
-                                        <span class="fa fa-angle-left fa-3x" aria-hidden="true"></span>
-                                        <span class="sr-only">Previous</span>
-                                    </a>
-                                    <a class="right carousel-control " href="#myCarousel" role="button" data-slide="next">
-                                        <span class="fa fa-angle-right fa-3x" aria-hidden="true"></span>
-                                        <span class="sr-only">Next</span>
-                                    </a>
-                                </div>
+
+                                <!-- Left and right controls -->
+                                <a class="left carousel-control " href="#myCarousel" role="button" data-slide="prev" >
+                                    <span class="fa fa-angle-left fa-3x" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control " href="#myCarousel" role="button" data-slide="next">
+                                    <span class="fa fa-angle-right fa-3x" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
                             </div>
-                        </div>    
+                        </div>
                     </div>    
+                </div>    
             </section>
             <!-- end Service section -->
 
