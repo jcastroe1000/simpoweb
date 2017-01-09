@@ -281,8 +281,7 @@
                                 <ol class="carousel-indicators">
                                     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                                     <li data-target="#myCarousel" data-slide-to="1"></li>
-                                    <li data-target="#myCarousel" data-slide-to="2"></li>
-                                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                                    
                                 </ol>
 
                                 <!-- Wrapper for slides -->
@@ -319,7 +318,7 @@
                                     </div>
 
                                     <div class="item">
-                                        <div class="col-md-3 col-sm-6 col-xs-12 text-center wow animated zoomIn" data-wow-delay="0.9s">
+                                        <div class="col-md-4 col-sm-6 col-xs-12 text-center wow animated zoomIn" >
 							<div class="service-item">
 								<div class="service-icon">
 									<i class="fa fa-heart fa-3x"></i>
@@ -329,7 +328,7 @@
 								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>							
 							</div>
 						</div>
-                                        <div class="col-md-3 col-sm-6 col-xs-12 text-center wow animated zoomIn" data-wow-delay="0.9s">
+                                        <div class="col-md-4 col-sm-6 col-xs-12 text-center wow animated zoomIn" >
 							<div class="service-item">
 								<div class="service-icon">
 									<i class="fa fa-heart fa-3x"></i>
@@ -346,14 +345,15 @@
 
 
                                 </div>
+                                    
 
                                     <!-- Left and right controls -->
-                                    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-                                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                    <a class="left carousel-control " href="#myCarousel" role="button" data-slide="prev" >
+                                        <span class="fa fa-angle-left fa-3x" aria-hidden="true"></span>
                                         <span class="sr-only">Previous</span>
                                     </a>
-                                    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                    <a class="right carousel-control " href="#myCarousel" role="button" data-slide="next">
+                                        <span class="fa fa-angle-right fa-3x" aria-hidden="true"></span>
                                         <span class="sr-only">Next</span>
                                     </a>
                                 </div>
