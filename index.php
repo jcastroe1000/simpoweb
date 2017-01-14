@@ -156,7 +156,7 @@
                     </nav>
                     -->
                     <div id="gridSystemModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
+                        <div class="modal-dialog"> 
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -165,7 +165,7 @@
                                 <div class="modal-body">
                                     <div class="container-fluid bd-example-row">
                                         <!--form-->
-                                        <form class="input_mask col-md-offset-1">
+                                        <form class="well form-horizontal input_mask ">
                                              
                       <div class="col-md-8 col-sm-8 col-xs-8 form-group has-feedback ">
                         <input type="text" class="form-control has-feedback-left" id="inputSuccess2" placeholder="Nombre (s)">
