@@ -951,7 +951,7 @@ ul.external li a:hover {
     margin-bottom: 10px;
 }
 
-.form-control {
+.form-control_contact {
     border: 1px solid #ececec;
     border-radius: 0;
     box-shadow: none;
@@ -960,7 +960,7 @@ ul.external li a:hover {
     height: 50px;
 }
 
-textarea.form-control {
+textarea.form-control_contact {
     width: 100%;
     height: 165px;
 }

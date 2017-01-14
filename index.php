@@ -21,7 +21,7 @@
         ================================================== -->
 
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
-       
+
         <!-- Fontawesome Icon font -->
         <link rel="stylesheet" href="css/font-awesome.min.css">
         <!-- bootstrap.min -->
@@ -37,9 +37,9 @@
         <!-- Main Stylesheet -->
         <link rel="stylesheet" href="css/main.css">
         <!--Contacto Form-->
-        
+
         <link rel="stylesheet" href="css/form.css">
- 
+
         <!-- Modernizer Script for old Browsers -->
         <script src="js/modernizr-2.6.2.min.js"></script>
 
@@ -164,65 +164,73 @@
                                 </div>
                                 <div class="modal-body">
                                     <div class="container-fluid bd-example-row">
-                                        <!--form-->
-                                        <form class="well form-horizontal input_mask ">
-                                             
-                      <div class="col-md-8 col-sm-8 col-xs-8 form-group has-feedback ">
-                        <input type="text" class="form-control has-feedback-left" id="inputSuccess2" placeholder="Nombre (s)">
+                                          <div class="x_panel">
+                  <div class="x_title">
+                    
+                    
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                    <br />
+                    <form class="form-horizontal form-label-left input_mask">
+
+                      <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                        <input type="text" class="form-control has-feedback-left" id="inputSuccess2" placeholder="First Name">
                         <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
                       </div>
-                      
-                      <div class="col-md-8 col-sm-8 col-xs-8 form-group has-feedback ">
-                        <input type="text" class="form-control has-feedback-left" id="inputSuccess2" placeholder="Apellido Paterno">
-                        <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
+
+                      <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                        <input type="text" class="form-control" id="inputSuccess3" placeholder="Last Name">
+                        <span class="fa fa-user form-control-feedback right" aria-hidden="true"></span>
                       </div>
-                      <div class="col-md-8 col-sm-8 col-xs-8 form-group has-feedback ">
-                        <input type="text" class="form-control has-feedback-left" id="inputSuccess2" placeholder="Apellido Materno">
-                        <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
-                      </div>                      
-                      <div class="col-md-8 col-sm-8 col-xs-8 form-group has-feedback">
-                        <input type="text" class="form-control has-feedback-left" id="inputSuccess4" placeholder="Correo Electrónico">
+
+                      <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                        <input type="text" class="form-control has-feedback-left" id="inputSuccess4" placeholder="Email">
                         <span class="fa fa-envelope form-control-feedback left" aria-hidden="true"></span>
-                      </div>                      
-                      <div class="col-md-8 col-sm-8 col-xs-8 form-group has-feedback">
-                        <input type="text" class="form-control has-feedback-left" id="inputSuccess5" placeholder="Teléfono">
-                        <span class="fa fa-phone form-control-feedback left" aria-hidden="true"></span>
+                      </div>
+
+                      <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                        <input type="text" class="form-control" id="inputSuccess5" placeholder="Phone">
+                        <span class="fa fa-phone form-control-feedback right" aria-hidden="true"></span>
                       </div>
 
                       
                       <div class="ln_solid"></div>
                       <div class="form-group">
                         <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
-                          <button  class="btn btn-primary">Cancel</button>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
                           <button type="submit" class="btn btn-success">Submit</button>
                         </div>
                       </div>
 
                     </form>
                   </div>
-                </div>    
-                                    </div>
-                                </div>
+                </div>
 
+                                    </div>
+                                </div>    
                             </div>
                         </div>
+
                     </div>
+                </div>
+                </div>
 
-                    <nav id="nav-arrows" class="nav-arrows hidden-xs hidden-sm visible-md visible-lg">
-                        <a href="javascript:;" class="sl-prev">
-                            <i class="fa fa-angle-left fa-3x"></i>
-                        </a>
-                        <a href="javascript:;" class="sl-next">
-                            <i class="fa fa-angle-right fa-3x"></i>
-                        </a>
-                    </nav>
+                <nav id="nav-arrows" class="nav-arrows hidden-xs hidden-sm visible-md visible-lg">
+                    <a href="javascript:;" class="sl-prev">
+                        <i class="fa fa-angle-left fa-3x"></i>
+                    </a>
+                    <a href="javascript:;" class="sl-next">
+                        <i class="fa fa-angle-right fa-3x"></i>
+                    </a>
+                </nav>
 
 
-                    <nav id="nav-dots" class="nav-dots visible-xs visible-sm hidden-md hidden-lg">
-                        <span class="nav-dot-current"></span>
-                        <span></span>
-                        <span></span>
-                    </nav>
+                <nav id="nav-dots" class="nav-dots visible-xs visible-sm hidden-md hidden-lg">
+                    <span class="nav-dot-current"></span>
+                    <span></span>
+                    <span></span>
+                </nav>
 
                 </div><!-- /slider-wrapper -->
             </section>
@@ -235,28 +243,28 @@
             <section id="about" >
                 <div class="container">
                     <div class="row">
-<!--                        <div class="col-md-5 wow animated fadeInLeft">
-                            <div class="recent-works">
-                                <h3>DIRECTORIO</h3>
-                                <div id="works">
-                                    <div class="work-item">
-                                        <p>1</p>
-                                        <BR>
-                                        <p>2</p>
-                                    </div>
-                                    <div class="work-item">
-                                        <p>3</p>
-                                        <br>
-                                        <p>4</p>
-                                    </div>
-                                    <div class="work-item">
-                                        <p>5</p>
-                                        <br>
-                                        <p>6</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>-->
+                        <!--                        <div class="col-md-5 wow animated fadeInLeft">
+                                                    <div class="recent-works">
+                                                        <h3>DIRECTORIO</h3>
+                                                        <div id="works">
+                                                            <div class="work-item">
+                                                                <p>1</p>
+                                                                <BR>
+                                                                <p>2</p>
+                                                            </div>
+                                                            <div class="work-item">
+                                                                <p>3</p>
+                                                                <br>
+                                                                <p>4</p>
+                                                            </div>
+                                                            <div class="work-item">
+                                                                <p>5</p>
+                                                                <br>
+                                                                <p>6</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>-->
                         <div class="col-md-8 col-md-offset-2 wow animated fadeInRight ">
                             <div class="welcome-block">
                                 <h3>¿Quiénes Somos?</h3>								
@@ -314,52 +322,52 @@
 
                         <div class="container">
                             <div class="col-md-3 col-sm-6 col-xs-12 col-md-offset-1 text-center wow animated zoomIn">
-                                            <div class="service-item">
-                                                <div class="service-icon">
-                                                    <i class="fa fa-home fa-3x"></i>
-                                                </div>
-                                                <h3>Support</h3>
-                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3 col-sm-6 col-xs-12 text-center wow animated zoomIn" data-wow-delay="0.3s">
-                                            <div class="service-item">
-                                                <div class="service-icon">
-                                                    <i class="fa fa-tasks fa-3x"></i>
-                                                </div>
-                                                <h3>Well Documented</h3>
-                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3 col-sm-6 col-xs-12 text-center wow animated zoomIn" data-wow-delay="0.6s">
-                                            <div class="service-item">
-                                                <div class="service-icon">
-                                                    <i class="fa fa-clock-o fa-3x"></i>
-                                                </div>
-                                                <h3>Design UI/UX</h3>
-                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                                            </div>
-                                        </div>
-                                                       <div class="col-md-4 col-sm-6 col-xs-12 col-md-offset-3 text-center wow animated zoomIn" data-wow-delay="0.6s">
-                                            <div class="service-item">
-                                                <div class="service-icon">
-                                                    <i class="fa fa-clock-o fa-3x"></i>
-                                                </div>
-                                                <h3>Design UI/UX</h3>
-                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3 col-sm-6 col-xs-12 text-center wow animated zoomIn" data-wow-delay="0.6s">
-                                            <div class="service-item">
-                                                <div class="service-icon">
-                                                    <i class="fa fa-tasks fa-3x"></i>
-                                                </div>
-                                                <h3>Well Documented</h3>
-                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                                            </div>
-                                        </div>
-                                  
-                    
+                                <div class="service-item">
+                                    <div class="service-icon">
+                                        <i class="fa fa-home fa-3x"></i>
+                                    </div>
+                                    <h3>Support</h3>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 col-xs-12 text-center wow animated zoomIn" data-wow-delay="0.3s">
+                                <div class="service-item">
+                                    <div class="service-icon">
+                                        <i class="fa fa-tasks fa-3x"></i>
+                                    </div>
+                                    <h3>Well Documented</h3>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 col-xs-12 text-center wow animated zoomIn" data-wow-delay="0.6s">
+                                <div class="service-item">
+                                    <div class="service-icon">
+                                        <i class="fa fa-clock-o fa-3x"></i>
+                                    </div>
+                                    <h3>Design UI/UX</h3>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-xs-12 col-md-offset-3 text-center wow animated zoomIn" data-wow-delay="0.6s">
+                                <div class="service-item">
+                                    <div class="service-icon">
+                                        <i class="fa fa-clock-o fa-3x"></i>
+                                    </div>
+                                    <h3>Design UI/UX</h3>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 col-xs-12 text-center wow animated zoomIn" data-wow-delay="0.6s">
+                                <div class="service-item">
+                                    <div class="service-icon">
+                                        <i class="fa fa-tasks fa-3x"></i>
+                                    </div>
+                                    <h3>Well Documented</h3>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                                </div>
+                            </div>
+
+
                         </div>
                     </div>    
                 </div>    
@@ -475,16 +483,16 @@
                         <div class="col-md-7 contact-form wow animated fadeInLeft">
                             <form action="#" method="post">
                                 <div class="input-field">
-                                    <input type="text" name="name" class="form-control" placeholder="Nombre">
+                                    <input type="text" name="name" class="form-control_contact" placeholder="Nombre">
                                 </div>
                                 <div class="input-field">
-                                    <input type="email" name="email" class="form-control" placeholder="Correo Electrónico">
+                                    <input type="email" name="email" class="form-control_contact" placeholder="Correo Electrónico">
                                 </div>
                                 <div class="input-field">
-                                    <input type="text" name="subject" class="form-control" placeholder="Asunto">
+                                    <input type="text" name="subject" class="form-control_contact" placeholder="Asunto">
                                 </div>
                                 <div class="input-field">
-                                    <textarea name="message" class="form-control" placeholder="Mensaje"></textarea>
+                                    <textarea name="message" class="form-control_contact" placeholder="Mensaje"></textarea>
                                 </div>
                                 <button type="submit" id="submit" class="btn btn-blue btn-effect">Enviar</button>
                             </form>
@@ -527,7 +535,7 @@
                         </div>
                         <form action="#" method="post" class="subscribe-form wow animated fadeInUp">
                             <div class="input-field">
-                                <input type="email" class="subscribe form-control" placeholder="Enter Your Email...">
+                                <input type="email" class="subscribe form-control_contact" placeholder="Enter Your Email...">
                                 <button type="submit" class="submit-icon">
                                     <i class="fa fa-paper-plane fa-lg"></i>
                                 </button>
@@ -540,7 +548,7 @@
                             </ul>
                         </div>
 
-                        
+
                     </div>
                 </div>
             </div>
