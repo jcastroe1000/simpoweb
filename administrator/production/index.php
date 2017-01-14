@@ -64,6 +64,7 @@
 
                                         </ul>
                                     </li>
+                                    <li><a href="newsletter.html"><i class="fa fa-thumbs-o-up"></i>NewsLetter</a></li>
                                     <li><a href="simposiums.html"><i class="fa fa-desktop"></i> Simposiums</a>
                                     </li>
                                     <li><a href="simposiums.html"><i class="fa fa-desktop"></i> Cursos </a>
