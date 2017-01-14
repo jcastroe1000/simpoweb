@@ -165,26 +165,28 @@
                                 <div class="modal-body">
                                     <div class="container-fluid bd-example-row">
                                         <!--form-->
-                                        <form class="form-horizontal form-label-left input_mask">
-
-                      <div class="col-md-12 col-sm-12 col-xs-12 form-group has-feedback">
-                        <input type="text" class="form-control has-feedback-left" id="inputSuccess2" placeholder="First Name">
+                                        <form class="input_mask col-md-offset-1">
+                                             
+                      <div class="col-md-8 col-sm-8 col-xs-8 form-group has-feedback ">
+                        <input type="text" class="form-control has-feedback-left" id="inputSuccess2" placeholder="Nombre (s)">
                         <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
                       </div>
-
-                      <div class="col-md-12 col-sm-12 col-xs-12 form-group has-feedback">
-                        <input type="text" class="form-control" id="inputSuccess3" placeholder="Last Name">
-                        <span class="fa fa-user form-control-feedback right" aria-hidden="true"></span>
+                      
+                      <div class="col-md-8 col-sm-8 col-xs-8 form-group has-feedback ">
+                        <input type="text" class="form-control has-feedback-left" id="inputSuccess2" placeholder="Apellido Paterno">
+                        <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
                       </div>
-
-                      <div class="col-md-12 col-sm-12 col-xs-12 form-group has-feedback">
-                        <input type="text" class="form-control has-feedback-left" id="inputSuccess4" placeholder="Email">
+                      <div class="col-md-8 col-sm-8 col-xs-8 form-group has-feedback ">
+                        <input type="text" class="form-control has-feedback-left" id="inputSuccess2" placeholder="Apellido Materno">
+                        <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
+                      </div>                      
+                      <div class="col-md-8 col-sm-8 col-xs-8 form-group has-feedback">
+                        <input type="text" class="form-control has-feedback-left" id="inputSuccess4" placeholder="Correo Electrónico">
                         <span class="fa fa-envelope form-control-feedback left" aria-hidden="true"></span>
-                      </div>
-
-                      <div class="col-md-12 col-sm-12 col-xs-12 form-group has-feedback">
-                        <input type="text" class="form-control" id="inputSuccess5" placeholder="Phone">
-                        <span class="fa fa-phone form-control-feedback right" aria-hidden="true"></span>
+                      </div>                      
+                      <div class="col-md-8 col-sm-8 col-xs-8 form-group has-feedback">
+                        <input type="text" class="form-control has-feedback-left" id="inputSuccess5" placeholder="Teléfono">
+                        <span class="fa fa-phone form-control-feedback left" aria-hidden="true"></span>
                       </div>
 
                       
