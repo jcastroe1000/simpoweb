@@ -270,7 +270,7 @@
                                 <h3 style="text-align: center">¿Quiénes Somos?</h3>								
                                 <div class="message-body" style="text-align: justify">
 
-                                    <h4 style="color: white;padding:5px;line-height: 30px ">El objetivo del Simposium es propiciar un mayor intercambio de información entre profesores e investigadores de las diversas instituciones de educación en los ámbitos nacionales e internacionales, así como representantes del sector productivo.   </h4>
+                                    <h4 style="color: white;padding:5px;line-height: 30px ">El objetivo del Simposium es propiciar un mayor intercambio de información entre profesores e investigadores de las diversas instituciones de educación en los ámbitos nacionales e internacionales, así como representantes del sector productivo.</h4>
                                 </div>
                                 <a href="" class="btn btn-border btn-effect col-md-offset-5  " data-toggle="modal" data-target="#QuienesSomos">Leer Más</a>
 
