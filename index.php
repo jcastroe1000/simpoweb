@@ -263,36 +263,15 @@
             <section id="about" >
                 <div class="container">
                     <div class="row">
-                        <!--                        <div class="col-md-5 wow animated fadeInLeft">
-                                                    <div class="recent-works">
-                                                        <h3>DIRECTORIO</h3>
-                                                        <div id="works">
-                                                            <div class="work-item">
-                                                                <p>1</p>
-                                                                <BR>
-                                                                <p>2</p>
-                                                            </div>
-                                                            <div class="work-item">
-                                                                <p>3</p>
-                                                                <br>
-                                                                <p>4</p>
-                                                            </div>
-                                                            <div class="work-item">
-                                                                <p>5</p>
-                                                                <br>
-                                                                <p>6</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>-->
+                      
                         <div class="col-md-8 col-md-offset-2 wow animated fadeInRight ">
-                            <div class="welcome-block">
-                                <h3>¿Quiénes Somos?</h3>								
-                                <div class="message-body">
+                            <div class="welcome-block center-block">
+                                <h3 style="text-align: center">¿Quiénes Somos?</h3>								
+                                <div class="message-body" style="text-align: justify">
 
-                                    <p>El objetivo del Simposium es propiciar un mayor intercambio de información entre profesores e investigadores de las diversas instituciones de educación en los ámbitos nacionales e internacionales, así como representantes del sector productivo.   </p>
+                                    <h4 style="color: white;padding:5px;line-height: 30px ">El objetivo del Simposium es propiciar un mayor intercambio de información entre profesores e investigadores de las diversas instituciones de educación en los ámbitos nacionales e internacionales, así como representantes del sector productivo.   </h4>
                                 </div>
-                                <a href="" class="btn btn-border btn-effect center-block" data-toggle="modal" data-target="#QuienesSomos">Leer Más</a>
+                                <a href="" class="btn btn-border btn-effect col-md-offset-5  " data-toggle="modal" data-target="#QuienesSomos">Leer Más</a>
 
                             </div>
                         </div>
@@ -316,7 +295,7 @@
                                         </div>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary center-block" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary center-block" data-dismiss="modal">Cerrar</button>
 
                                     </div>
 
