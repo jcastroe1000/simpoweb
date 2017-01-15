@@ -8,7 +8,7 @@
         <meta charset="utf-8">
         <!-- Always force latest IE rendering engine or request Chrome Frame -->
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Blue One Page HTML Template</title>		
+        <title>SimpoWeb</title>		
         <!-- Meta Description -->
         <meta name="description" content="Blue One Page Creative HTML5 Template">
         <meta name="keywords" content="one page, single page, onepage, responsive, parallax, creative, business, html5, css3, css3 animation">
@@ -86,6 +86,7 @@
                         <li><a href="#portfolio">Portfolio</a></li>
                         <li><a href="#contact">Contacto</a></li>
                         <li><a href="#footer">Suscríbete</a></li>
+                        <li><a href="#footer">FAQ'S</a></li>
                     </ul>
                 </nav>
                 <!-- /main nav -->
@@ -315,54 +316,54 @@
 
                         <div class="sec-title text-center">
                             <h2 class="wow animated bounceInLeft">Servicios</h2>
-                            <p class="wow animated bounceInRight">The Key Features of our Job</p>
+                            <h4 class="wow animated bounceInRight">Selecciona El Servicio De Tu Interes</h4>
                         </div>
 
 
-                        <div class="container">
-                            <div class="col-md-2 col-sm-6 col-xs-12  text-center wow animated zoomIn" data-wow-delay="0.3s">
-                                <div class="service-item">
+                        <div class="container" >
+                            <div class="col-md-33 text-center wow animated zoomIn" data-wow-delay="0.3s" >
+                                <div class="service-item" style="padding-top: 60px;">
                                     <div class="service-icon">
                                         <i class="fa fa-home fa-3x"></i>
                                     </div>
                                     <h3>SEMINARIOS</h3>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+<!--                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>-->
                                 </div>
                             </div>
-                            <div class="col-md-2 col-sm-6 col-xs-12  text-center wow animated zoomIn" data-wow-delay="0.3s">
-                                <div class="service-item">
+                            <div class="col-md-33   text-center wow animated zoomIn" data-wow-delay="0.3s">
+                                <div class="service-item" style="padding-top: 60px;">
                                     <div class="service-icon">
                                         <i class="fa fa-tasks fa-3x"></i>
                                     </div>
                                     <h3>talleres</h3>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+<!--                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>-->
                                 </div>
                             </div>
-                            <div class="col-md-2 col-sm-4 col-xs-12 text-center wow animated zoomIn" data-wow-delay="0.3s">
-                                <div class="service-item">
+                            <div class="col-md-33   text-center wow animated zoomIn" data-wow-delay="0.3s">
+                                <div class="service-item" style="padding-top: 60px;">
                                     <div class="service-icon">
                                         <i class="fa fa-clock-o fa-3x"></i>
                                     </div>
                                     <h3>CURSOS</h3>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+<!--                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>-->
                                 </div>
                             </div>
-                            <div class="col-md-2 col-sm-4 col-xs-12  text-center wow animated zoomIn" data-wow-delay="0.3s">
-                                <div class="service-item">
+                            <div class="col-md-33   text-center wow animated zoomIn" data-wow-delay="0.3s">
+                                <div class="service-item" style="padding-top: 60px;">
                                     <div class="service-icon">
                                         <i class="fa fa-clock-o fa-3x"></i>
                                     </div>
                                     <h3>DIPLOMADOS</h3>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+<!--                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>-->
                                 </div>
                             </div>
-                            <div class="col-md-2 col-sm-4 col-xs-12  text-center wow animated zoomIn" data-wow-delay="0.3s">
-                                <div class="service-item">
+                            <div class="col-md-33 text-center wow animated zoomIn" data-wow-delay="0.3s">
+                                <div class="service-item" style="padding-top: 60px;">
                                     <div class="service-icon">
                                         <i class="fa fa-clock-o fa-3x"></i>
                                     </div>
                                     <h3>REVISTA</h3>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+<!--                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>-->
                                 </div>
                             </div>
 
@@ -535,9 +536,22 @@
                         </div>
                         <form action="#" method="post" class="subscribe-form wow animated fadeInUp">
                             <div class="input-field">
-                                <input type="email" class="subscribe form-control_contact" placeholder="Enter Your Email...">
-                                
+                                <input type="email" class="subscribe form-control_contact" placeholder="Ingresa tu correo electrónico">
                             </div>
+                            <div class="form-group ">
+
+                                <div class=" selectContainer ">
+                                    <select class="form-control_contact subscribe " name="size">
+                                        <option value="">Quiero Recibir Noticias De..</option>
+                                        <option value="s">Seminarios</option>
+                                        <option value="m">Cursos</option>
+                                        <option value="m">Talleres</option>
+                                        <option value="m">Diplomados</option>
+                                        <option value="m">Todos</option>
+                                    </select>
+                                </div>
+                            </div> 
+                            <button type="submit" id="submit" class="btn-primary btn-blue_2 btn-effect">Suscribirme</button>
                         </form>
                         <div class="footer-social">
                             <ul>

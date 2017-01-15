@@ -574,8 +574,8 @@ h1.navbar-brand {
 .service-icon {
     border: 3px solid transparent;
     display: inline-block;
-    height: 85px;
-    width: 85px;
+    height: 55px;
+    width: 55px;
     line-height: 101px;
 
     -webkit-transform: rotate(47deg);

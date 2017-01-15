@@ -70,7 +70,13 @@ main > section {
     padding: 15px 55px;
     color: #fff;
 }
-
+.btn-blue_2 {
+    background-color: rgba(0,158,227, 0.78);
+    box-shadow: 0 -2px 0 rgba(0, 0, 0, 0.15) inset;
+    padding: 10px 35px;
+    margin-top: 25px;
+    color: #fff;
+}
 .btn-border {
     border: 2px solid #fff;
     color: #fff;
@@ -1041,12 +1047,12 @@ textarea.form-control_contact {
     position: relative;
 }
 
-.subscribe.form-control {
+.subscribe.form-control_contact {
     background-color: transparent;
     border: 1px solid #7f7f7f;
 }
 
-.subscribe.form-control:focus {
+.subscribe.form-control_contact:focus {
     -webkit-box-shadow: none;
        -moz-box-shadow: none;
             box-shadow: none;
