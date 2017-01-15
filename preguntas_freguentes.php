@@ -40,7 +40,8 @@
 
         <link rel="stylesheet" href="css/form.css">
         <link rel="stylesheet" href="css/styles.css">
-        <!-- Modernizer Script for old Browsers -->
+        <link rel="stylesheet" href="css/font-face.css"> 
+         <!-- Modernizer Script for old Browsers -->
         <script src="js/modernizr-2.6.2.min.js"></script>
 
 
@@ -86,7 +87,7 @@
                         <li><a href="#portfolio">Portfolio</a></li>
                         <li><a href="www.google.com">Contacto</a></li>
                         <li><a href="#footer">Suscríbete</a></li>
-                        <li><a href="#footer">FAQ'S</a></li>
+                        
                     </ul>
                 </nav>
                 <!-- /main nav -->
