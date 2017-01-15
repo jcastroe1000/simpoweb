@@ -324,7 +324,7 @@
                             <div class="col-md-33 text-center wow animated zoomIn" data-wow-delay="0.3s" >
                                 <div class="service-item" style="padding-top: 60px;">
                                     <div class="service-icon">
-                                        <i class="fa fa-home fa-3x"></i>
+                                        <i class="fa fa-mortar-board fa-3x"></i>
                                     </div>
                                     <h3>SEMINARIOS</h3>
 <!--                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>-->
@@ -333,7 +333,7 @@
                             <div class="col-md-33   text-center wow animated zoomIn" data-wow-delay="0.3s">
                                 <div class="service-item" style="padding-top: 60px;">
                                     <div class="service-icon">
-                                        <i class="fa fa-tasks fa-3x"></i>
+                                        <i class="fa fa-laptop fa-3x"></i>
                                     </div>
                                     <h3>talleres</h3>
 <!--                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>-->
@@ -342,7 +342,7 @@
                             <div class="col-md-33   text-center wow animated zoomIn" data-wow-delay="0.3s">
                                 <div class="service-item" style="padding-top: 60px;">
                                     <div class="service-icon">
-                                        <i class="fa fa-clock-o fa-3x"></i>
+                                        <i class="fa fa-briefcase fa-3x"></i>
                                     </div>
                                     <h3>CURSOS</h3>
 <!--                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>-->
@@ -351,7 +351,7 @@
                             <div class="col-md-33   text-center wow animated zoomIn" data-wow-delay="0.3s">
                                 <div class="service-item" style="padding-top: 60px;">
                                     <div class="service-icon">
-                                        <i class="fa fa-clock-o fa-3x"></i>
+                                        <i class="fa fa-university fa-3x"></i>
                                     </div>
                                     <h3>DIPLOMADOS</h3>
 <!--                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>-->
@@ -360,7 +360,7 @@
                             <div class="col-md-33 text-center wow animated zoomIn" data-wow-delay="0.3s">
                                 <div class="service-item" style="padding-top: 60px;">
                                     <div class="service-icon">
-                                        <i class="fa fa-clock-o fa-3x"></i>
+                                        <i class="fa fa-book fa-3x"></i>
                                     </div>
                                     <h3>REVISTA</h3>
 <!--                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>-->
@@ -559,8 +559,6 @@
 
                             </ul>
                         </div>
-
-
                     </div>
                 </div>
             </div>
