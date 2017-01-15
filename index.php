@@ -73,7 +73,7 @@
 
                     <!-- logo -->
                     <h1 class="navbar-brand">
-                        <a href="#body">Blue</a>
+                        <a href="#body">Inicio</a>
                     </h1>
                     <!-- /logo -->
                 </div>
@@ -81,7 +81,7 @@
                 <!-- main nav -->
                 <nav class="collapse navbar-collapse navbar-right" role="navigation">
                     <ul id="nav" class="nav navbar-nav">
-                        <li><a href="#body">Home</a></li>
+                        
                         <li><a href="#service">Servicios</a></li>
                         <li><a href="#portfolio">Portfolio</a></li>
                         <li><a href="#contact">Contacto</a></li>
@@ -175,31 +175,51 @@
                     <form class="form-horizontal form-label-left input_mask">
 
                       <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-                        <input type="text" class="form-control has-feedback-left" id="inputSuccess2" placeholder="First Name">
+                        <input type="text" class="form-control has-feedback-left" id="inputSuccess2" placeholder="Nombre (s)">
                         <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
                       </div>
 
                       <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-                        <input type="text" class="form-control" id="inputSuccess3" placeholder="Last Name">
+                        <input type="text" class="form-control" id="inputSuccess3" placeholder="Apellidos">
                         <span class="fa fa-user form-control-feedback right" aria-hidden="true"></span>
                       </div>
-
+                       
                       <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-                        <input type="text" class="form-control has-feedback-left" id="inputSuccess4" placeholder="Email">
+                        <input type="text" class="form-control has-feedback-left" id="inputSuccess4" placeholder="Correo Electrónico">
                         <span class="fa fa-envelope form-control-feedback left" aria-hidden="true"></span>
                       </div>
 
                       <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-                        <input type="text" class="form-control" id="inputSuccess5" placeholder="Phone">
+                        <input type="text" class="form-control" id="inputSuccess5" placeholder="Teléfono">
                         <span class="fa fa-phone form-control-feedback right" aria-hidden="true"></span>
                       </div>
+                      <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                        
+                            <div class=" selectContainer">
+                                <select class="form-control" name="size">
+                                    <option value="">Genero</option>
+                                    <option value="s">Masculino</option>
+                                    <option value="m">Feminino</option>
+                                </select>
+                            </div>
+                      </div> 
+                      <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                        
+                            <div class=" selectContainer">
+                                <select class="form-control" name="size">
+                                    <option value="">Soy de....</option>
+                                    <option value="s">Masculino</option>
+                                    <option value="m">Feminino</option>
+                                </select>
+                            </div>
+                      </div>   
 
                       
                       <div class="ln_solid"></div>
                       <div class="form-group">
-                        <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
+                          <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-4" style="margin-top: 25px">
                             <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
-                          <button type="submit" class="btn btn-success">Submit</button>
+                          <button type="submit" class="btn btn-success">Registrarme</button>
                         </div>
                       </div>
 
@@ -509,7 +529,7 @@
                                 <h4>Telefono:</h4>
                                 <p>57-29-60-00</p>
                                 <p><i class="fa fa-phone"></i>Adelina Pérez Rosas (Ext.: 55107)</p>
-                                <p><i class="fa fa-phone"></i> Fabián D. Martínez Valdés (Ext.: 55107></p>
+                                <p><i class="fa fa-phone"></i> Fabián D. Martínez Valdés (Ext.: 55107)</p>
 
                             </address>
 
@@ -533,12 +553,10 @@
                             <p>¡Quédate con nosotros!</p>
                             <p>Suscríbete a nuestra lista para recibir noticias y publicaciones.</p>
                         </div>
-                        <form action="#" method="post" class="subscribe-form wow animated fadeInUp">
+                        <form action="#" method="post" class="col-md-6 subscribe-form wow animated fadeInUp">
                             <div class="input-field">
-                                <input type="email" class="subscribe form-control_contact" placeholder="Enter Your Email...">
-                                <button type="submit" class="submit-icon">
-                                    <i class="fa fa-paper-plane fa-lg"></i>
-                                </button>
+                                <input type="email" class=" form-control_contact" placeholder="Ingresa Tu Correo Electrónico...">
+                                
                             </div>
                         </form>
                         <div class="footer-social">
