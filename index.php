@@ -81,7 +81,7 @@
                 <!-- main nav -->
                 <nav class="collapse navbar-collapse navbar-right" role="navigation">
                     <ul id="nav" class="nav navbar-nav">
-                        
+
                         <li><a href="#service">Servicios</a></li>
                         <li><a href="#portfolio">Portfolio</a></li>
                         <li><a href="#contact">Contacto</a></li>
@@ -164,68 +164,68 @@
                                 </div>
                                 <div class="modal-body">
                                     <div class="container-fluid bd-example-row">
-                                          <div class="x_panel">
-                  <div class="x_title">
-                    
-                    
-                    <div class="clearfix"></div>
-                  </div>
-                  <div class="x_content">
-                    <br />
-                    <form class="form-horizontal form-label-left input_mask">
+                                        <div class="x_panel">
+                                            <div class="x_title">
 
-                      <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-                        <input type="text" class="form-control has-feedback-left" id="inputSuccess2" placeholder="Nombre (s)">
-                        <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
-                      </div>
 
-                      <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-                        <input type="text" class="form-control" id="inputSuccess3" placeholder="Apellidos">
-                        <span class="fa fa-user form-control-feedback right" aria-hidden="true"></span>
-                      </div>
-                       
-                      <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-                        <input type="text" class="form-control has-feedback-left" id="inputSuccess4" placeholder="Correo Electrónico">
-                        <span class="fa fa-envelope form-control-feedback left" aria-hidden="true"></span>
-                      </div>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                            <div class="x_content">
+                                                <br />
+                                                <form class="form-horizontal form-label-left input_mask">
 
-                      <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-                        <input type="text" class="form-control" id="inputSuccess5" placeholder="Teléfono">
-                        <span class="fa fa-phone form-control-feedback right" aria-hidden="true"></span>
-                      </div>
-                      <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-                        
-                            <div class=" selectContainer">
-                                <select class="form-control" name="size">
-                                    <option value="">Genero</option>
-                                    <option value="s">Masculino</option>
-                                    <option value="m">Feminino</option>
-                                </select>
-                            </div>
-                      </div> 
-                      <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-                        
-                            <div class=" selectContainer">
-                                <select class="form-control" name="size">
-                                    <option value="">Soy de....</option>
-                                    <option value="s">Masculino</option>
-                                    <option value="m">Feminino</option>
-                                </select>
-                            </div>
-                      </div>   
+                                                    <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                                                        <input type="text" class="form-control has-feedback-left" id="inputSuccess2" placeholder="Nombre (s)">
+                                                        <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
+                                                    </div>
 
-                      
-                      <div class="ln_solid"></div>
-                      <div class="form-group">
-                          <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-4" style="margin-top: 25px">
-                            <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
-                          <button type="submit" class="btn btn-success">Registrarme</button>
-                        </div>
-                      </div>
+                                                    <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                                                        <input type="text" class="form-control" id="inputSuccess3" placeholder="Apellidos">
+                                                        <span class="fa fa-user form-control-feedback right" aria-hidden="true"></span>
+                                                    </div>
 
-                    </form>
-                  </div>
-                </div>
+                                                    <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                                                        <input type="text" class="form-control has-feedback-left" id="inputSuccess4" placeholder="Correo Electrónico">
+                                                        <span class="fa fa-envelope form-control-feedback left" aria-hidden="true"></span>
+                                                    </div>
+
+                                                    <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                                                        <input type="text" class="form-control" id="inputSuccess5" placeholder="Teléfono">
+                                                        <span class="fa fa-phone form-control-feedback right" aria-hidden="true"></span>
+                                                    </div>
+                                                    <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+
+                                                        <div class=" selectContainer">
+                                                            <select class="form-control" name="size">
+                                                                <option value="">Genero</option>
+                                                                <option value="s">Masculino</option>
+                                                                <option value="m">Feminino</option>
+                                                            </select>
+                                                        </div>
+                                                    </div> 
+                                                    <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+
+                                                        <div class=" selectContainer">
+                                                            <select class="form-control" name="size">
+                                                                <option value="">Soy de....</option>
+                                                                <option value="s">Masculino</option>
+                                                                <option value="m">Feminino</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>   
+
+
+                                                    <div class="ln_solid"></div>
+                                                    <div class="form-group">
+                                                        <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-4" style="margin-top: 25px">
+                                                            <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
+                                                            <button type="submit" class="btn btn-success">Registrarme</button>
+                                                        </div>
+                                                    </div>
+
+                                                </form>
+                                            </div>
+                                        </div>
 
                                     </div>
                                 </div>    
@@ -263,7 +263,7 @@
             <section id="about" >
                 <div class="container">
                     <div class="row">
-                      
+
                         <div class="col-md-8 col-md-offset-2 wow animated fadeInRight ">
                             <div class="welcome-block center-block">
                                 <h3 style="text-align: center">¿Quiénes Somos?</h3>								
@@ -365,7 +365,7 @@
                                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
                                 </div>
                             </div>
-                            
+
 
 
                         </div>
@@ -533,9 +533,9 @@
                             <p>¡Quédate con nosotros!</p>
                             <p>Suscríbete a nuestra lista para recibir noticias y publicaciones.</p>
                         </div>
-                        <form action="#" method="post" class="col-md-6 subscribe-form wow animated fadeInUp">
+                        <form action="#" method="post" class="subscribe-form wow animated fadeInUp">
                             <div class="input-field">
-                                <input type="email" class=" form-control_contact" placeholder="Ingresa Tu Correo Electrónico...">
+                                <input type="email" class="subscribe form-control_contact" placeholder="Enter Your Email...">
                                 
                             </div>
                         </form>
