@@ -320,51 +320,52 @@
 
 
                         <div class="container">
-                            <div class="col-md-3 col-sm-6 col-xs-12 col-md-offset-1 text-center wow animated zoomIn">
+                            <div class="col-md-2 col-sm-6 col-xs-12  text-center wow animated zoomIn" data-wow-delay="0.3s">
                                 <div class="service-item">
                                     <div class="service-icon">
                                         <i class="fa fa-home fa-3x"></i>
                                     </div>
-                                    <h3>Support</h3>
+                                    <h3>SEMINARIOS</h3>
                                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
                                 </div>
                             </div>
-                            <div class="col-md-3 col-sm-6 col-xs-12 text-center wow animated zoomIn" data-wow-delay="0.3s">
+                            <div class="col-md-2 col-sm-6 col-xs-12  text-center wow animated zoomIn" data-wow-delay="0.3s">
                                 <div class="service-item">
                                     <div class="service-icon">
                                         <i class="fa fa-tasks fa-3x"></i>
                                     </div>
-                                    <h3>Well Documented</h3>
+                                    <h3>talleres</h3>
                                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
                                 </div>
                             </div>
-                            <div class="col-md-3 col-sm-6 col-xs-12 text-center wow animated zoomIn" data-wow-delay="0.6s">
+                            <div class="col-md-2 col-sm-4 col-xs-12 text-center wow animated zoomIn" data-wow-delay="0.3s">
                                 <div class="service-item">
                                     <div class="service-icon">
                                         <i class="fa fa-clock-o fa-3x"></i>
                                     </div>
-                                    <h3>Design UI/UX</h3>
+                                    <h3>CURSOS</h3>
                                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
                                 </div>
                             </div>
-                            <div class="col-md-4 col-sm-6 col-xs-12 col-md-offset-3 text-center wow animated zoomIn" data-wow-delay="0.6s">
+                            <div class="col-md-2 col-sm-4 col-xs-12  text-center wow animated zoomIn" data-wow-delay="0.3s">
                                 <div class="service-item">
                                     <div class="service-icon">
                                         <i class="fa fa-clock-o fa-3x"></i>
                                     </div>
-                                    <h3>Design UI/UX</h3>
+                                    <h3>DIPLOMADOS</h3>
                                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
                                 </div>
                             </div>
-                            <div class="col-md-3 col-sm-6 col-xs-12 text-center wow animated zoomIn" data-wow-delay="0.6s">
+                            <div class="col-md-2 col-sm-4 col-xs-12  text-center wow animated zoomIn" data-wow-delay="0.3s">
                                 <div class="service-item">
                                     <div class="service-icon">
-                                        <i class="fa fa-tasks fa-3x"></i>
+                                        <i class="fa fa-clock-o fa-3x"></i>
                                     </div>
-                                    <h3>Well Documented</h3>
+                                    <h3>REVISTA</h3>
                                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
                                 </div>
                             </div>
+                            
 
 
                         </div>
@@ -379,7 +380,7 @@
                     <div class="row">
 
                         <div class="sec-title text-center wow animated fadeInDown">
-                            <h2>FEATURED PROJECTS</h2>
+                            <h2>NUESTROS PROYECTOS</h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                         </div>
 
@@ -468,7 +469,7 @@
 
 
             <!-- Contact section -->
-            <section id="contact" >
+            <section id="contact" style="background-color: #E6E6E6">
                 <div class="container">
                     <div class="row">
 
