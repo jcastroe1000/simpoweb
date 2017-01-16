@@ -86,7 +86,9 @@
                         <li><a class="scroll-link" data-id="portfolio">Portfolio</a></li>
                         <li><a class="scroll-link" data-id="contact">Contacto</a></li>
                         <li><a class="scroll-link" data-id="footer">Suscríbete</a></li>
+                        <li><a href="directorio.php">Directorio</a></li>
                         <li><a href="preguntas_freguentes.php">FAQ'S</a></li>
+                        
                     </ul>
                 </nav>
                 <!-- /main nav -->

@@ -87,7 +87,7 @@
                         <li><a href="index.php#portafolio">Portfolio</a></li>
                         <li><a href="index.php#contact">Contacto</a></li>
                         <li><a href="index.php#footer">Suscríbete</a></li>
-                        
+                        <li><a href="directorio.php">Directorio</a></li>
                     </ul>
                 </nav>
                 <!-- /main nav -->
@@ -102,7 +102,7 @@
                     <section id="who" class="who2 section">
             <div class="container text-center">
                 <br>
-                <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35">PREGUNTAS FRECUENTES</h2>
+                <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:75px;  ">PREGUNTAS FRECUENTES</h2>
             </div>   
             <br>
             <br>
