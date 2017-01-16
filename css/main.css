@@ -1446,3 +1446,31 @@ textarea.form-control_contact {
         width: 380px;
     }
 }
+
+/*bootons*/
+@media only screen and (max-width:768px) { 
+    .button_index { 
+        margin-left: 125px;
+    }
+   
+}
+@media only screen and (max-width:480px) { 
+     .button_index { 
+         margin-left: 115px;
+    }
+   
+}
+@media only screen and (max-width:360px) { 
+      .button_index { 
+          margin-left: 95px;
+    }
+   
+    
+}
+@media only screen and (max-width:320px) { 
+      .button_index { 
+          margin-left: 80px;
+    }
+   
+    
+}

@@ -116,7 +116,7 @@
                                 <div class="caption-content">
                                     <h2 class="animated fadeInDown">ACTIVIDADES ACADEMICAS</h2>
                                     <span class="animated fadeInDown">ESIQIE-IPN</span>
-                                    <a  class="btn btn-blue btn-effect" data-toggle="modal" data-target="#gridSystemModal">REGISTRATE</a>
+                                    <a href="" class="btn btn-blue btn-effect" data-toggle="modal" data-target="#gridSystemModal">REGISTRATE</a>
                                 </div>
                             </div>
 
@@ -272,10 +272,8 @@
 
                                     <h4 style="color: white;padding:5px;line-height: 30px ">El objetivo del Simposium es propiciar un mayor intercambio de información entre profesores e investigadores de las diversas instituciones de educación en los ámbitos nacionales e internacionales, así como representantes del sector productivo.</h4>
                                 </div>
-                                <div class="col-md-offset-5 ">
-                                    <a href="" style="" class="btn btn-border btn-effect  " data-toggle="modal" data-target="#QuienesSomos">Leer Más</a>
-                                </div>
                                 
+                                <a  class="btn btn-border btn-effect col-md-offset-5 " data-toggle="modal" data-target="#QuienesSomos">Leer Más</a>
 
                             </div>
                         </div>
@@ -498,7 +496,7 @@
                                 <div class="input-field">
                                     <textarea name="message" class="form-control_contact" placeholder="Mensaje"></textarea>
                                 </div>
-                                <button type="submit" id="submit" class="btn btn-blue btn-effect">Enviar</button>
+                                <button type="submit" id="submit" class="btn btn-blue btn-effect button_index">Enviar</button>
                             </form>
                         </div>
 
@@ -591,7 +589,7 @@
         <!-- Custom Functions -->
         <script src="js/main.js"></script>
 
-        <script src="js/bootstrap.min.js" type="text/javascript"></script>
+        
         <script type="text/javascript">
             $(document).ready(function () {
                 // navigation click actions	
