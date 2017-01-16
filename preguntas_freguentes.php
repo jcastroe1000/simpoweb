@@ -74,7 +74,7 @@
 
                     <!-- logo -->
                     <h1 class="navbar-brand">
-                        <a href="#body">Inicio</a>
+                        <a href="index.php#body">Inicio</a>
                     </h1>
                     <!-- /logo -->
                 </div>
@@ -83,10 +83,10 @@
                 <nav class="collapse navbar-collapse navbar-right">
                     <ul  class="nav navbar-nav">
 
-                        <li><a href="#service">Servicios</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="www.google.com">Contacto</a></li>
-                        <li><a href="#footer">Suscríbete</a></li>
+                        <li><a href="index.php#service">Servicios</a></li>
+                        <li><a href="index.php#portfolio">Portfolio</a></li>
+                        <li><a href="index.php#contact">Contacto</a></li>
+                        <li><a href="index.php#footer">Suscríbete</a></li>
                         
                     </ul>
                 </nav>
