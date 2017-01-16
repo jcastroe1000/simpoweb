@@ -272,7 +272,10 @@
 
                                     <h4 style="color: white;padding:5px;line-height: 30px ">El objetivo del Simposium es propiciar un mayor intercambio de información entre profesores e investigadores de las diversas instituciones de educación en los ámbitos nacionales e internacionales, así como representantes del sector productivo.</h4>
                                 </div>
-                                <a href="" class="btn btn-border btn-effect col-md-offset-5  " data-toggle="modal" data-target="#QuienesSomos">Leer Más</a>
+                                <div class="col-md-offset-5 ">
+                                    <a href="" style="" class="btn btn-border btn-effect  " data-toggle="modal" data-target="#QuienesSomos">Leer Más</a>
+                                </div>
+                                
 
                             </div>
                         </div>

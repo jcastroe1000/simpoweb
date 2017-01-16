@@ -39,9 +39,8 @@
         <!--Contacto Form-->
 
         <link rel="stylesheet" href="css/form.css">
-        <link rel="stylesheet" href="css/styles.css">
-        <link rel="stylesheet" href="css/font-face.css"> 
-         <!-- Modernizer Script for old Browsers -->
+
+        <!-- Modernizer Script for old Browsers -->
         <script src="js/modernizr-2.6.2.min.js"></script>
 
 
@@ -60,7 +59,7 @@
         <!--
         Fixed Navigation
         ==================================== -->
-                <header id="navigation" class="navbar-inverse navbar-fixed-top animated-header">
+        <header id="navigation" class="navbar-inverse navbar-fixed-top animated-header">
             <div class="container">
                 <div class="navbar-header">
                     <!-- responsive nav button -->
@@ -74,7 +73,7 @@
 
                     <!-- logo -->
                     <h1 class="navbar-brand">
-                        <a href="index.php#body">Inicio</a>
+                        <a href="#body">Inicio</a>
                     </h1>
                     <!-- /logo -->
                 </div>
@@ -83,11 +82,11 @@
                 <nav class="collapse navbar-collapse navbar-right" role="navigation">
                     <ul  class="nav navbar-nav">
 
-                        <li><a href="index.php#service">Servicios</a></li>
-                        <li><a href="index.php#portafolio">Portfolio</a></li>
-                        <li><a href="index.php#contact">Contacto</a></li>
-                        <li><a href="index.php#footer">Suscríbete</a></li>
-                        
+                        <li><a class="scroll-link" data-id="service">Servicios</a></li>
+                        <li><a class="scroll-link" data-id="portfolio">Portfolio</a></li>
+                        <li><a class="scroll-link" data-id="contact">Contacto</a></li>
+                        <li><a class="scroll-link" data-id="footer">Suscríbete</a></li>
+                        <li><a href="preguntas_freguentes.php">FAQ'S</a></li>
                     </ul>
                 </nav>
                 <!-- /main nav -->
@@ -99,7 +98,7 @@
         ==================================== -->
 
         <main class="site-content" role="main">
-                    <section id="who" class="who2 section">
+            <section id="who" class="who2 section">
             <div class="container text-center">
                 <br>
                 <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35">PREGUNTAS FRECUENTES</h2>
@@ -260,19 +259,12 @@ Los ponentes:
 
             </div>
         </section>
-            
-
-
-
-
-
 
 
 
         </main>
 
        
-
         <!-- Essential jQuery Plugins
         ================================================== -->
         <!-- Main jQuery -->
@@ -296,5 +288,44 @@ Los ponentes:
         <script src="js/wow.min.js"></script>
         <!-- Custom Functions -->
         <script src="js/main.js"></script>
+
+        <script src="js/bootstrap.min.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                // navigation click actions	
+                $('.scroll-link').on('click', function (event) {
+                    event.preventDefault();
+                    var sectionID = $(this).attr("data-id");
+                    scrollToID('#' + sectionID, 750);
+                });
+                // scroll to top action
+                $('.scroll-top').on('click', function (event) {
+                    event.preventDefault();
+                    $('html, body').animate({scrollTop: 0}, 'slow');
+                });
+                // mobile nav toggle
+                $('#nav-toggle').on('click', function (event) {
+                    event.preventDefault();
+                    $('#main-nav').toggleClass("open");
+                });
+            });
+            // scroll function
+            function scrollToID(id, speed) {
+                var offSet = 50;
+                var targetOffset = $(id).offset().top - offSet;
+                var mainNav = $('#main-nav');
+                $('html,body').animate({scrollTop: targetOffset}, speed);
+                if (mainNav.hasClass("open")) {
+                    mainNav.css("height", "1px").removeClass("in").addClass("collapse");
+                    mainNav.removeClass("open");
+                }
+            }
+            if (typeof console === "undefined") {
+                console = {
+                    log: function () { }
+                };
+            }
+        </script>
+
     </body>
 </html>

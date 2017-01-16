@@ -56,7 +56,7 @@ a.btn-cta,
 }
 a.btn-cta-primary,
 .btn-cta-primary {
-  background: #198892; //color boton
+  background: #198892;
   border: none;
   color: #fff;
 }
@@ -66,7 +66,7 @@ a.btn-cta-primary:hover,
   border: none;
   color: #fff;
 }
-//aqui
+
 .btn2,
 a.btn2 {
   -webkit-transition: all 0.4s ease-in-out;
@@ -90,7 +90,7 @@ a.btn-cta2,
 }
 a.btn-cta-primary2,
 .btn-cta-primary2 {
-  background: #198892; //color boton
+  background: #198892; 
   border: none;
   color: #fff;
 }
@@ -2314,21 +2314,7 @@ body.no-header-wrapper {
     font-size: 20px;
     line-height: 2.4;
   }
-  .navbar-collapse {
-    border-top: none;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-    width: 100%;
-    left: 0;
-    top: 48px;
-    position: absolute;
-    background: #455061;
-    z-index: 45;
-  }
-  .navbar-collapse .nav {
-    margin: 0;
-  }
+ 
   body.no-header-wrapper {
     padding-top: 50px;
   }
