@@ -537,20 +537,20 @@
                             <p>¡Quédate con nosotros!</p>
                             <p>Suscríbete a nuestra lista para recibir noticias y publicaciones.</p>
                         </div>
-                        <form action="#" method="post" class="subscribe-form wow animated fadeInUp">
+                        <form action="model/newsletter.php" method="post" class="subscribe-form wow animated fadeInUp">
                             <div class="input-field">
-                                <input type="email" class="subscribe form-control_contact" placeholder="Ingresa tu correo electrónico">
+                                <input type="email" class="subscribe form-control_contact" placeholder="Ingresa tu correo electrónico" name="email">
                             </div>
                             <div class="form-group ">
 
                                 <div class=" selectContainer ">
-                                    <select class="form-control_contact subscribe " name="size">
+                                    <select class="form-control_contact subscribe " name="seccion">
                                         <option value="">Quiero Recibir Noticias De..</option>
-                                        <option value="s">Seminarios</option>
-                                        <option value="m">Cursos</option>
-                                        <option value="m">Talleres</option>
-                                        <option value="m">Diplomados</option>
-                                        <option value="m">Todos</option>
+                                        <option value="Seminarios">Seminarios</option>
+                                        <option value="Cursos">Cursos</option>
+                                        <option value="Talleres">Talleres</option>
+                                        <option value="Diplomados">Diplomados</option>
+                                        <option value="Todos">Todos</option>
                                     </select>
                                 </div>
                             </div> 
