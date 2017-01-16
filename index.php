@@ -175,44 +175,45 @@
                                             </div>
                                             <div class="x_content">
                                                 <br />
-                                                <form class="form-horizontal form-label-left input_mask">
+                                                <form class="form-horizontal form-label-left input_mask" action="model/register.php" method="post">
 
                                                     <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-                                                        <input type="text" class="form-control has-feedback-left" id="inputSuccess2" placeholder="Nombre (s)">
+                                                        <input type="text" class="form-control has-feedback-left" id="name" name="FullName" placeholder="Nombre (s)">
                                                         <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
                                                     </div>
 
                                                     <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-                                                        <input type="text" class="form-control" id="inputSuccess3" placeholder="Apellidos">
+                                                        <input type="text" class="form-control" id="LastName" name="LastName" placeholder="Apellidos">
                                                         <span class="fa fa-user form-control-feedback right" aria-hidden="true"></span>
                                                     </div>
 
                                                     <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-                                                        <input type="text" class="form-control has-feedback-left" id="inputSuccess4" placeholder="Correo Electrónico">
+                                                        <input type="text" class="form-control has-feedback-left" id="email_contact" name="email_contact" placeholder="Correo Electrónico">
                                                         <span class="fa fa-envelope form-control-feedback left" aria-hidden="true"></span>
                                                     </div>
 
                                                     <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-                                                        <input type="text" class="form-control" id="inputSuccess5" placeholder="Teléfono">
+                                                        <input type="text" class="form-control" id="telephone_contact" name="telephone_contact" placeholder="Teléfono">
                                                         <span class="fa fa-phone form-control-feedback right" aria-hidden="true"></span>
                                                     </div>
                                                     <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
 
                                                         <div class=" selectContainer">
-                                                            <select class="form-control" name="size">
+                                                            <select class="form-control" name="gender">
                                                                 <option value="">Genero</option>
-                                                                <option value="s">Masculino</option>
-                                                                <option value="m">Feminino</option>
+                                                                <option value="1">Masculino</option>
+                                                                <option value="2">Feminino</option>
                                                             </select>
                                                         </div>
                                                     </div> 
                                                     <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
 
                                                         <div class=" selectContainer">
-                                                            <select class="form-control" name="size">
+                                                            <select class="form-control" name="city">
                                                                 <option value="">Soy de....</option>
-                                                                <option value="s">Masculino</option>
-                                                                <option value="m">Feminino</option>
+                                                                <option value="1">Ciudad de México</option>
+                                                                <option value="2">Guadalajara</option>
+                                                                <option value="3">Monterrey</option>
                                                             </select>
                                                         </div>
                                                     </div>   
