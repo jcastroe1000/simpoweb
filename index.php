@@ -486,9 +486,9 @@
 
 
                         <div class="col-md-7 contact-form wow animated fadeInLeft">
-                            <form action="#" method="post">
+                            <form action="model/contacto_mail.php" method="post">
                                 <div class="input-field">
-                                    <input type="text" name="name" class="form-control_contact" placeholder="Nombre">
+                                    <input type="text" name="FullName" class="form-control_contact" placeholder="Nombre">
                                 </div>
                                 <div class="input-field">
                                     <input type="email" name="email" class="form-control_contact" placeholder="Correo Electrónico">
