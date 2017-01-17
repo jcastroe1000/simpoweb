@@ -1,6 +1,9 @@
 <?php
 //PROCESS NEWSLETTER FORM HERE
     include("../model/connection.php");
+    require '../vendor/autoload.php';
+    use Mailgun\Mailgun;
+
     
     $email= $_POST['email'];
     $seccion=$_POST['seccion'];
@@ -20,32 +23,24 @@
 //    return false;
 //}
 //
-// $email = $_POST['email'];
-////# Include the Autoloader (see "Libraries" for install instructions)
-//    require '../vendor/autoload.php';
-//    use Mailgun\Mailgun;
-//
-////# Instantiate the client.
-//    $mgClient = new Mailgun('key-eb656047b090ea091ef7c5d2fbd83dc5');
-//    $domain = "sandbox3bfa1334fbee4dcca5b08a9b34b46337.mailgun.org";
-//  
-////
-////# Make the call to the client.
-//    $result = $mgClient->sendMessage($domain, array(
-//        'from' => 'Javier Diaz Brassetti <postmaster@sandbox3bfa1334fbee4dcca5b08a9b34b46337.mailgun.org>',
-//        'to' => $email,
-//        'subject' => 'Gracias por registrate.',
-//        'text' => 'Hola.
-//
-//        ¡Gracias por registrarte con nosotros!
-//
-//        a través del correo electrónico te enviaremos nuestro newsletter para 
-//        mantenerte informado sobre nuestras promociones y eventos'
-//    ));
-//    
-   
 
- 
+ //# Instantiate the client.
+    $mgClient = new Mailgun('key-4e896b8110f1ceb63b180c87bc225c16');
+    $domain = "sandbox8128d26fd2464b42a6dc95e54a7cda2a.mailgun.org";
+  
+//
+//# Make the call to the client.
+    
+    $result = $mgClient->sendMessage($domain, array(
+        'from' => 'Simpoweb <postmaster@sandbox8128d26fd2464b42a6dc95e54a7cda2a.mailgun.org>',
+        'to' => $email,
+        'subject' => 'Gracias por registrate.',
+        'text' => 'Hola.
+        ¡Gracias por registrarte con nosotros!
+        a través del correo electrónico te enviaremos nuestro newsletter para 
+        mantenerte informado sobre nuestras promociones y eventos'
+    ));
+
 
 //Change database 
 mysqli_select_db($con, "$dbname");
