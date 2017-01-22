@@ -4,31 +4,29 @@
  * and open the template in the editor.
  */
 $(document).ready(function() {
-    $("#ok").hide();
+    $("#oknewsletter").hide();
 
-    $("#formid").validate({
+    $("#newsletterid").validate({
         rules: {
-            FullName: { required: true, minlength: 5},
-            email: { required:true, email: true},
-            subject: { required:true, minlength: 5},
-            message: { required:true, minlength: 10}
+            email_newsletter: { required:true, email: true},
+            seccion: { required:true, minlength:1}
+            
         },
         messages: {
-            FullName: "Por Favor introduce tu Nombre.",
-            email : "Introduce un correo electronico Correcto",
-            subject : "Ingresa el asunto del mensaje",
-            message : "El campo Mensaje es obligatorio.",
+            email_newsletter : "Introduce un correo electronico Correcto",
+            seccion : "Selecciona una sección",
+            
         },
         submitHandler: function(form){
-            var dataString = 'FullName='+$('#FullName').val()+'&email='+$('#email').val()+'&subject='+$('#subject').val()+'&message='+$('#message').val();
+            var dataString = 'email_newsletter='+$('#email_newsletter').val()+'&seccion='+$('#seccion').val();
             $.ajax({
                 type: "POST",
-                url:"model/contacto_mail.php",
+                url:"model/newsletter.php",
                 data: dataString,
                 success: function(data){
-                    $("#ok").html(data);
-                    $("#ok").show();
-                    document.getElementById('formid').reset();
+                    $("#oknewsletter").html(data);
+                    $("#oknewsletter").show();
+                    document.getElementById('newsletterid').reset();
                  
                 }
             });

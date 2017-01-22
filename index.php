@@ -539,14 +539,15 @@
                             <p>¡Quédate con nosotros!</p>
                             <p>Suscríbete a nuestra lista para recibir noticias y publicaciones.</p>
                         </div>
-                        <form action="model/newsletter.php" method="post" class="subscribe-form wow animated fadeInUp">
+                        <form id="newsletterid" method="post" class="subscribe-form wow animated fadeInUp">
+                            <div id="oknewsletter"></div>
                             <div class="input-field">
-                                <input type="email" class="subscribe form-control_contact" placeholder="Ingresa tu correo electrónico" name="email">
+                                <input type="email" class="subscribe form-control_contact" placeholder="Ingresa tu correo electrónico" id="email_newsletter" name="email_newsletter">
                             </div>
                             <div class="form-group ">
 
                                 <div class=" selectContainer ">
-                                    <select class="form-control_contact subscribe " name="seccion">
+                                    <select class="form-control_contact subscribe " id="seccion" name="seccion">
                                         <option value="">Quiero Recibir Noticias De..</option>
                                         <option value="Seminarios">Seminarios</option>
                                         <option value="Cursos">Cursos</option>
@@ -556,7 +557,7 @@
                                     </select>
                                 </div>
                             </div> 
-                            <button type="submit" id="submit" class="btn-primary btn-blue_2 btn-effect">Suscribirme</button>
+                            <button  class="btn-primary btn-blue_2 btn-effect">Suscribirme</button>
                         </form>
                         <div class="footer-social">
                             <ul>
@@ -592,13 +593,13 @@
         <script src="js/wow.min.js"></script>
         <!-- Custom Functions -->
         <script src="js/main.js"></script>
-        
         <!-- Contact validation-->
         <script src="js/contact_section.js"></script>
         <script src="http://jqueryvalidation.org/files/dist/jquery.validate.min.js"></script>
         <script src="http://jqueryvalidation.org/files/dist/additional-methods.min.js"></script>    
         <script src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
-
+        <!-- newsletter validation-->
+        <script src="js/newsletter_section.js"></script>
         
         <script type="text/javascript">
             $(document).ready(function () {
