@@ -645,6 +645,21 @@
                         });
                     });
                 </script>
+        <script type="text/javascript">
+		/*  Stellar for background scrolling  */
+		(function () {
 
+			if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+			 
+			} else {
+				$(window).stellar({
+					horizontalScrolling: false,
+					responsive: true
+				});
+			}
+
+		}());
+		/* End Stellar for background scrolling  */
+		</script>        
     </body>
 </html>
