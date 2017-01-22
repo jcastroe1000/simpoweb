@@ -637,6 +637,14 @@
                 };
             }
         </script>
+        
+        <script type="text/javascript">
+                    $(function() {
+                        $(document).on('click', function(){ 
+                        $('.navbar-collapse').removeClass('in')
+                        });
+                    });
+                </script>
 
     </body>
 </html>
