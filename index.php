@@ -486,20 +486,21 @@
 
 
                         <div class="col-md-7 contact-form wow animated fadeInLeft">
-                            <form action="model/contacto_mail.php" method="post">
+                            <form id="formid" method="post">
+                                 <div id="ok"></div>
                                 <div class="input-field">
-                                    <input type="text" name="FullName" class="form-control_contact" placeholder="Nombre">
+                                    <input type="text" name="FullName" id="FullName" class="form-control_contact" placeholder="Nombre">
                                 </div>
                                 <div class="input-field">
-                                    <input type="email" name="email" class="form-control_contact" placeholder="Correo Electrónico">
+                                    <input type="email" name="email" id="email" class="form-control_contact" placeholder="Correo Electrónico">
                                 </div>
                                 <div class="input-field">
-                                    <input type="text" name="subject" class="form-control_contact" placeholder="Asunto">
+                                    <input type="text" name="subject" id="subject" class="form-control_contact" placeholder="Asunto">
                                 </div>
                                 <div class="input-field">
-                                    <textarea name="message" class="form-control_contact" placeholder="Mensaje"></textarea>
+                                    <textarea name="message" id="message" class="form-control_contact" placeholder="Mensaje"></textarea>
                                 </div>
-                                <button type="submit" id="submit" class="btn btn-blue btn-effect button_index">Enviar</button>
+                                <button class="btn btn-blue btn-effect button_index">Enviar</button>
                             </form>
                         </div>
 
@@ -591,6 +592,12 @@
         <script src="js/wow.min.js"></script>
         <!-- Custom Functions -->
         <script src="js/main.js"></script>
+        
+        <!-- Contact validation-->
+        <script src="js/contact_section.js"></script>
+        <script src="http://jqueryvalidation.org/files/dist/jquery.validate.min.js"></script>
+        <script src="http://jqueryvalidation.org/files/dist/additional-methods.min.js"></script>    
+        <script src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
 
         
         <script type="text/javascript">

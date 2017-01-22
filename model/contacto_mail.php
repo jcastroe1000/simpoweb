@@ -53,14 +53,13 @@ curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, 0);
 curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
 curl_setopt($curl, CURLOPT_POST, true);
 curl_setopt($curl, CURLOPT_POSTFIELDS, $message);
-
 $result = curl_exec($curl);
 
 curl_close($curl);
+echo $result;
 
 
 
-//return $result;
-$success = true;
-echo json_encode(array("success" => $success));
+ $message = '<div class="alert alert-success" role="alert">Tu mensaje ha sido enviado!. Pronto nos pondremos en contacto contigo</div>';
+ echo $message;
 ?>
