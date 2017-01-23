@@ -1,15 +1,15 @@
 
 <?php
-//Conexion con mysql.
-$dbhost="127.0.0.1";
-$dbuser="root"; //user
-$dbpass=""; //
-$dbname="simpoweb"; //nombre de la base de datos
-$con=mysqli_connect("$dbhost","$dbuser","$dbpass","$dbname");
-
-
-if (mysqli_connect_errno())
-  {
-  echo "Failed to connect to MySQL: " . mysqli_connect_error();
-  }
+$mysqli = new mysqli("localhost", "root", "", "simpoweb");
+    if ($mysqli->connect_errno) {
+        echo "Failed to connect to MySQL: " . $mysqli->connect_error;   
+    }
+    $mysqli2 = new mysqli("localhost", "root", "", "simpoweb");
+    if ($mysqli2->connect_errno) {
+        echo "Failed to connect to MySQL: " . $mysqli2->connect_error;   
+    }
+    $mysqli3 = new mysqli("localhost", "root", "", "simpoweb");
+    if ($mysqli3->connect_errno) {
+        echo "Failed to connect to MySQL: " . $mysqli3->connect_error;   
+    }
 ?>

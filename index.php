@@ -42,6 +42,8 @@
 
         <!-- Modernizer Script for old Browsers -->
         <script src="js/modernizr-2.6.2.min.js"></script>
+        <script src="js/bootbox.js"></script>
+        <script src="js/bootbox.min.js"></script>
 
 
     </head>
