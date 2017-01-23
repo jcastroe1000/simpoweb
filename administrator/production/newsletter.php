@@ -189,14 +189,13 @@
                                                     <thead>
                                                         <tr class="headings">
                                                             
-                                                            <th class="column-title">Nombre</th>
-                                                            <th class="column-title">Apellidos</th>
+                                                           
                                                             <th class="column-title">Email</th>
-                                                            <th class="column-title"></th>
-                                                            <th class="column-title"></th>
+                                                            <th class="column-title">Sección</th>
+                                                            <th class="column-title">Opción</th>
                                                             
                                                             
-                                                            </th>
+                                                            
                                                             <th class="bulk-actions" colspan="7">
                                                                 <a class="antoo" style="color:#fff; font-weight:500;">Bulk Actions ( <span class="action-cnt"> </span> ) <i class="fa fa-chevron-down"></i></a>
                                                             </th>
@@ -204,55 +203,24 @@
                                                     </thead>
 
                                                     <tbody>
+                                                        <?php
+                                                        include "./model/conection.php";
+                                                        error_reporting(E_ALL);
+                                                        $res = $mysqli->query("SELECT * FROM newsletter");
+                                                        $mysqli->close();
+                                                        while ($row = $res->fetch_assoc()):
+                                                            ?>
                                                         <tr class="even pointer">
                                                             
-                                                            <td class=" ">121000040</td>
-                                                            <td class=" ">May 23, 2014 11:47:56 PM </td>
-                                                            <td class=" ">121000210 <i class="success fa fa-long-arrow-up"></i></td>
-                                                            
-                                                             <td class=" ">Eliminar</td>
-                                                            <td class=" ">Editar</td>
+                                                            <td class=" "><?php echo $row ['correo_electronico'] ?></td>
+                                                            <td class=" "><?php echo $row ['seccion'] ?></td>
+                                                            <td class=" " style="color: red">Eliminar</td>
                                                             
                                                         </tr>
-                                                        <tr class="odd pointer">
-                                                           
-                                                            <td class=" ">121000039</td>
-                                                            <td class=" ">May 23, 2014 11:30:12 PM</td>
-                                                            <td class=" ">121000208 <i class="success fa fa-long-arrow-up"></i>
-                                                            </td>
-                                                             <td class=" ">Eliminar</td>
-                                                            <td class=" ">Editar</td>
-                                                            
-                                                        </tr>
-                                                        <tr class="even pointer">
-                                                            
-                                                            <td class=" ">121000038</td>
-                                                            <td class=" ">May 24, 2014 10:55:33 PM</td>
-                                                            <td class=" ">121000203 <i class="success fa fa-long-arrow-up"></i>
-                                                            </td>
-                                                             <td class=" ">Eliminar</td>
-                                                            <td class=" ">Editar</td>
-                                                            
-                                                        </tr>
-                                                        <tr class="odd pointer">
-                                                            
-                                                            <td class=" ">121000037</td>
-                                                            <td class=" ">May 24, 2014 10:52:44 PM</td>
-                                                            <td class=" ">121000204</td>
-                                                             <td class=" ">Eliminar</td>
-                                                            <td class=" ">Editar</td>
-                                                            
-                                                        </tr>
-                                                        <tr class="even pointer">
-                                                            
-                                                            <td class=" ">121000040</td>
-                                                            <td class=" ">May 24, 2014 11:47:56 PM </td>
-                                                            <td class=" ">121000210</td>
-                                                            <td class=" ">Eliminar</td>
-                                                            <td class=" ">Editar</td>
-                                                            
-                                                            </td>
-                                                        </tr>
+                                                       <?php
+                                                        endwhile;
+                                                        ?>  
+                                                        
                                                         
                                                     </tbody>
                                                 </table>
