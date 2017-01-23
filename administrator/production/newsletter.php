@@ -67,24 +67,42 @@
 
                                     <li><a><i class="fa fa-group"></i> Usuarios <span class="fa fa-chevron-down"></span></a>
                                         <ul class="nav child_menu">
-                                            <li><a href="form.html">Registrados</a></li>
+                                            <li><a href="users_registers.php"><i class="fa fa-arrow-up"></i>Registrados</a></li>
+                                            <li>
+                                            <a href="newsletter.php"><i class="fa fa-check-circle"></i>NewsLetter</a></li>
+                                        </ul>
+                                        
+                                    </li>
+                                    <li><a><i class="fa fa-cogs"></i>Secciones <span class="fa fa-chevron-down"></span></a>
+                                        <ul class="nav child_menu">
+                                            
+                                    <li>
+                                        <a href="simposiums.html"><i class="fa fa-mortar-board"></i> Seminarios</a>
+                                    </li>
+                                    <li>
+                                        <a href="simposiums.html"><i class="fa fa-laptop"></i> Talleres </a>
+                                    </li>
+                                    <li>
+                                        <a href="simposiums.html"><i class="fa fa-briefcase"></i> Cursos </a>
+                                    </li>
+                                    <li>
+                                        <a href="simposiums.html"><i class="fa fa-university"></i> Diplomados </a>
+                                    </li>
 
                                         </ul>
                                     </li>
-                                    <li><a href="newsletter.html"><i class="fa fa-thumbs-o-up"></i>NewsLetter</a></li>
-                                    <li><a href="simposiums.html"><i class="fa fa-desktop"></i> Simposiums</a>
-                                    </li>
-                                    <li><a href="simposiums.html"><i class="fa fa-desktop"></i> Cursos </a>
-                                    </li>
-                                    <li><a href="simposiums.html"><i class="fa fa-desktop"></i> Talleres </a>
-                                    </li>
+                                    
+                                    <li><a><i class="fa fa-plus-square"></i> Extras<span class="fa fa-chevron-down"></span></a>
+                                        <ul class="nav child_menu">
+                                            <li><a href="form.html"><i class="fa fa-book"></i>Directorio</a></li>
 
+                                        </ul>
                                     </li>
-
 
 
                                 </ul>
                             </div>
+                            
 
                         </div>
                         <!-- /sidebar menu -->
