@@ -69,29 +69,29 @@
                                         <ul class="nav child_menu">
                                             <li><a href="users_registers.php"><i class="fa fa-arrow-up"></i>Registrados</a></li>
                                             <li>
-                                            <a href="newsletter.php"><i class="fa fa-check-circle"></i>NewsLetter</a></li>
+                                                <a href="newsletter.php"><i class="fa fa-check-circle"></i>NewsLetter</a></li>
                                         </ul>
-                                        
+
                                     </li>
                                     <li><a><i class="fa fa-cogs"></i>Secciones <span class="fa fa-chevron-down"></span></a>
                                         <ul class="nav child_menu">
-                                            
-                                    <li>
-                                        <a href="simposiums.html"><i class="fa fa-mortar-board"></i> Seminarios</a>
-                                    </li>
-                                    <li>
-                                        <a href="simposiums.html"><i class="fa fa-laptop"></i> Talleres </a>
-                                    </li>
-                                    <li>
-                                        <a href="simposiums.html"><i class="fa fa-briefcase"></i> Cursos </a>
-                                    </li>
-                                    <li>
-                                        <a href="simposiums.html"><i class="fa fa-university"></i> Diplomados </a>
-                                    </li>
+
+                                            <li>
+                                                <a href="simposiums.html"><i class="fa fa-mortar-board"></i> Seminarios</a>
+                                            </li>
+                                            <li>
+                                                <a href="simposiums.html"><i class="fa fa-laptop"></i> Talleres </a>
+                                            </li>
+                                            <li>
+                                                <a href="simposiums.html"><i class="fa fa-briefcase"></i> Cursos </a>
+                                            </li>
+                                            <li>
+                                                <a href="simposiums.html"><i class="fa fa-university"></i> Diplomados </a>
+                                            </li>
 
                                         </ul>
                                     </li>
-                                    
+
                                     <li><a><i class="fa fa-plus-square"></i> Extras<span class="fa fa-chevron-down"></span></a>
                                         <ul class="nav child_menu">
                                             <li><a href="form.html"><i class="fa fa-book"></i>Directorio</a></li>
@@ -102,7 +102,7 @@
 
                                 </ul>
                             </div>
-                            
+
 
                         </div>
                         <!-- /sidebar menu -->
@@ -167,12 +167,12 @@
                                 </div>
                             </div>
 
-                            <div class="clearfix"></div>
+                            
                             <div class="row" style="margin-top: 5%;">
                                 <div class="col-md-12 col-sm-12 col-xs-12">
                                     <div class="x_panel">
                                         <div class="x_title">
-                                            <h2>Usuarios Registrados a Newsletter</h2>
+                                            <h2>Usuarios Registrados en Newsletter</h2>
 
                                             <ul class="nav navbar-right panel_toolbox">
                                                 <li class="pull-right"><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
@@ -184,39 +184,76 @@
                                         </div>
                                         <div class="x_content">
                                             <br />
-                                            <div class="container">
-                                                <table class="table table-hover">
+                                            <div class="table-responsive">
+                                                <table class="table table-striped jambo_table bulk_action">
                                                     <thead>
-                                                        <tr>
-                                                            <th>Correo Electrónico</th>
-                                                            <th>Suscrito a:</th>
-                                                            <th style="text-align: center">Opciones</th>
+                                                        <tr class="headings">
+                                                            
+                                                            <th class="column-title">Nombre</th>
+                                                            <th class="column-title">Apellidos</th>
+                                                            <th class="column-title">Email</th>
+                                                            <th class="column-title"></th>
+                                                            <th class="column-title"></th>
+                                                            
+                                                            
+                                                            </th>
+                                                            <th class="bulk-actions" colspan="7">
+                                                                <a class="antoo" style="color:#fff; font-weight:500;">Bulk Actions ( <span class="action-cnt"> </span> ) <i class="fa fa-chevron-down"></i></a>
+                                                            </th>
                                                         </tr>
                                                     </thead>
+
                                                     <tbody>
-                                                        <?php
-                                                        include "./model/conection.php";
-                                                        error_reporting(E_ALL);
-                                                        $res = $mysqli->query("SELECT * FROM newsletter");
-                                                        $mysqli->close();
-                                                        while ($row = $res->fetch_assoc()):
-                                                            ?>
-                                                            <tr style="width: 100%">
-                                                                <td width="33%" ><?php echo $row ['correo_electronico'] ?></td>
-                                                                <td width="33%"><?php echo $row ['seccion'] ?></td>
-                                                                <td width="33%">
-                                                                    <button type="button" class="btn btn-danger pull-right">
-                                                                        <span  class="glyphicon glyphicon-trash">
-                                                                            Eliminar
-                                                                        </span>
-                                                                    </button>
-                                                                </td>
-
-
-                                                            </tr>
-                                                            <?php
-                                                        endwhile;
-                                                        ?>    
+                                                        <tr class="even pointer">
+                                                            
+                                                            <td class=" ">121000040</td>
+                                                            <td class=" ">May 23, 2014 11:47:56 PM </td>
+                                                            <td class=" ">121000210 <i class="success fa fa-long-arrow-up"></i></td>
+                                                            
+                                                             <td class=" ">Eliminar</td>
+                                                            <td class=" ">Editar</td>
+                                                            
+                                                        </tr>
+                                                        <tr class="odd pointer">
+                                                           
+                                                            <td class=" ">121000039</td>
+                                                            <td class=" ">May 23, 2014 11:30:12 PM</td>
+                                                            <td class=" ">121000208 <i class="success fa fa-long-arrow-up"></i>
+                                                            </td>
+                                                             <td class=" ">Eliminar</td>
+                                                            <td class=" ">Editar</td>
+                                                            
+                                                        </tr>
+                                                        <tr class="even pointer">
+                                                            
+                                                            <td class=" ">121000038</td>
+                                                            <td class=" ">May 24, 2014 10:55:33 PM</td>
+                                                            <td class=" ">121000203 <i class="success fa fa-long-arrow-up"></i>
+                                                            </td>
+                                                             <td class=" ">Eliminar</td>
+                                                            <td class=" ">Editar</td>
+                                                            
+                                                        </tr>
+                                                        <tr class="odd pointer">
+                                                            
+                                                            <td class=" ">121000037</td>
+                                                            <td class=" ">May 24, 2014 10:52:44 PM</td>
+                                                            <td class=" ">121000204</td>
+                                                             <td class=" ">Eliminar</td>
+                                                            <td class=" ">Editar</td>
+                                                            
+                                                        </tr>
+                                                        <tr class="even pointer">
+                                                            
+                                                            <td class=" ">121000040</td>
+                                                            <td class=" ">May 24, 2014 11:47:56 PM </td>
+                                                            <td class=" ">121000210</td>
+                                                            <td class=" ">Eliminar</td>
+                                                            <td class=" ">Editar</td>
+                                                            
+                                                            </td>
+                                                        </tr>
+                                                        
                                                     </tbody>
                                                 </table>
                                             </div>
