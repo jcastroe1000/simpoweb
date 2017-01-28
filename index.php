@@ -515,7 +515,7 @@
 
                                 </p><br>
                                 <h4>Telefono:</h4>
-                                <p>57-29-60-00</p>
+                                <a href="tel:+57296000">57-29-60-00</a>
                                 <p><i class="fa fa-phone"></i>Adelina Pérez Rosas (Ext.: 55107)</p>
                                 <p><i class="fa fa-phone"></i> Fabián D. Martínez Valdés (Ext.: 55107)</p>
 
