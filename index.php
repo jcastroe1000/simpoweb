@@ -341,7 +341,8 @@
                                     <div class="service-icon">
                                         <i class="fa fa-laptop fa-3x"></i>
                                     </div>
-                                    <h3>talleres</h3>
+                                    <h3>SIMPOSIUMS</h3>
+                                    
 <!--                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>-->
                                 </div>
                             </div>
@@ -350,7 +351,9 @@
                                     <div class="service-icon">
                                         <i class="fa fa-briefcase fa-3x"></i>
                                     </div>
-                                    <h3>CURSOS</h3>
+                                    <h3>Diplomados</h3>
+                                    <h3>Talleres</h3>
+                                    <h3>Cursos</h3>
 <!--                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>-->
                                 </div>
                             </div>
@@ -359,7 +362,7 @@
                                     <div class="service-icon">
                                         <i class="fa fa-university fa-3x"></i>
                                     </div>
-                                    <h3>DIPLOMADOS</h3>
+                                    <h3>SERVICIOS EMPRESARIALES</h3>
 <!--                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>-->
                                 </div>
                             </div>
@@ -528,7 +531,7 @@
                 </div>
             </section>
             <!-- end Contact section -->
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1880.4682578552238!2d-99.13538904205416!3d19.501366925053265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f9b82ba2efb5%3A0x9f579bd1562b6eaa!2sESIQIE!5e0!3m2!1ses-419!2smx!4v1485632528035" width=100% height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1880.4682578552238!2d-99.13538904205416!3d19.501366925053265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f9b82ba2efb5%3A0x9f579bd1562b6eaa!2sESIQIE!5e0!3m2!1ses-419!2smx!4v1485632528035" width=100% height="450" frameborder="0" style="border:0" allowfullscreen ></iframe>
 
 
         </main>
