@@ -70,6 +70,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
+                        
                     </button>
                     <!-- /responsive nav button -->
 
@@ -131,7 +132,7 @@
                             <div class="bg-img bg-img-2"></div>
                             <div class="slide-caption">
                                 <div class="caption-content">
-                                    <h2 class="animated fadeInDown">ACTIVIDADES ACADEMICAS</h2>
+                                    <h2 class="animated fadeInDown">ACTIVIDADES ACADEMICAS 1</h2>
                                     <span class="animated fadeInDown">ESIQIE-IPN</span>
                                     <a href="#" class="btn btn-blue btn-effect" data-toggle="modal" data-target="#gridSystemModal">REGISTRATE</a>
                                 </div>
@@ -144,7 +145,31 @@
                             <div class="bg-img bg-img-3"></div>
                             <div class="slide-caption">
                                 <div class="caption-content">
-                                    <h2 class="animated fadeInDown">ACTIVIDADES ACADEMICAS</h2>
+                                    <h2 class="animated fadeInDown">ACTIVIDADES ACADEMICAS 2</h2>
+                                    <span class="animated fadeInDown">ESIQIE-IPN</span>
+                                    <a href="#" class="btn btn-blue btn-effect">REGISTRATE</a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="3" data-slice2-rotation="3" data-slice1-scale="2" data-slice2-scale="1">
+
+                            <div class="bg-img bg-img-4"></div>
+                            <div class="slide-caption">
+                                <div class="caption-content">
+                                    <h2 class="animated fadeInDown">ACTIVIDADES ACADEMICAS 4</h2>
+                                    <span class="animated fadeInDown">ESIQIE-IPN</span>
+                                    <a href="#" class="btn btn-blue btn-effect">REGISTRATE</a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="3" data-slice2-rotation="3" data-slice1-scale="2" data-slice2-scale="1">
+
+                            <div class="bg-img bg-img-5"></div>
+                            <div class="slide-caption">
+                                <div class="caption-content">
+                                    <h2 class="animated fadeInDown">ACTIVIDADES ACADEMICAS 5</h2>
                                     <span class="animated fadeInDown">ESIQIE-IPN</span>
                                     <a href="#" class="btn btn-blue btn-effect">REGISTRATE</a>
                                 </div>
@@ -256,6 +281,8 @@
                     <span class="nav-dot-current"></span>
                     <span></span>
                     <span></span>
+                    <span></span>
+                    <span></span>
                 </nav>
 
                 </div><!-- /slider-wrapper -->
@@ -360,7 +387,7 @@
                             <div class="col-md-33   text-center wow animated zoomIn" data-wow-delay="0.3s">
                                 <a href="servicios_empresariales.php"><div class="service-item" style="padding-top: 60px;">
                                     <div class="service-icon">
-                                        <i class="fa fa-university fa-3x"></i>
+                                        <i class="fa fa-building fa-3x"></i>
                                     </div>
                                     <h3>SERVICIOS EMPRESARIALES</h3>
 <!--                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>-->
