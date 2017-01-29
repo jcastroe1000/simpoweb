@@ -328,26 +328,26 @@
 
                         <div class="container" >
                             <div class="col-md-33 text-center wow animated zoomIn" data-wow-delay="0.3s" >
-                                <div class="service-item" style="padding-top: 60px;">
+                                <a href="seminarios.php"><div class="service-item" style="padding-top: 60px;">
                                     <div class="service-icon">
                                         <i class="fa fa-mortar-board fa-3x"></i>
                                     </div>
                                     <h3>SEMINARIOS</h3>
 <!--                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>-->
-                                </div>
+                                </div></a>
                             </div>
                             <div class="col-md-33   text-center wow animated zoomIn" data-wow-delay="0.3s">
-                                <div class="service-item" style="padding-top: 60px;">
+                                <a  href="simposiums.php"><div class="service-item" style="padding-top: 60px;">
                                     <div class="service-icon">
                                         <i class="fa fa-laptop fa-3x"></i>
                                     </div>
                                     <h3>SIMPOSIUMS</h3>
                                     
 <!--                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>-->
-                                </div>
+                                </div></a>
                             </div>
                             <div class="col-md-33   text-center wow animated zoomIn" data-wow-delay="0.3s">
-                                <div class="service-item" style="padding-top: 60px;">
+                                <a href="cursos_talles_dimplomados.php"><div class="service-item" style="padding-top: 60px;">
                                     <div class="service-icon">
                                         <i class="fa fa-briefcase fa-3x"></i>
                                     </div>
@@ -355,16 +355,16 @@
                                     <h3>Talleres</h3>
                                     <h3>Cursos</h3>
 <!--                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>-->
-                                </div>
+                                </div></a>
                             </div>
                             <div class="col-md-33   text-center wow animated zoomIn" data-wow-delay="0.3s">
-                                <div class="service-item" style="padding-top: 60px;">
+                                <a href="servicios_empresariales.php"><div class="service-item" style="padding-top: 60px;">
                                     <div class="service-icon">
                                         <i class="fa fa-university fa-3x"></i>
                                     </div>
                                     <h3>SERVICIOS EMPRESARIALES</h3>
 <!--                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>-->
-                                </div>
+                                </div></a>
                             </div>
                             <div class="col-md-33 text-center wow animated zoomIn" data-wow-delay="0.3s">
                                 <div class="service-item" style="padding-top: 60px;">
