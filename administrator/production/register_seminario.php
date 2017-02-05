@@ -7,7 +7,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Servicios </title>
+        <title>Registrar Seminario</title>
 
         <!-- Bootstrap -->
         <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -153,113 +153,90 @@
                 <!-- page content -->
                 <div class="right_col" role="main">
                     <!-- top tiles -->
+                <div class="page-title">
+              <div class="title_left">
+                <h3>Registro de Seminario</h3>
+              </div>
 
+              
+            </div>
+            <div class="clearfix"></div>
+            <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>Ingresa los siguientes datos</h2>
+                    
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                    <br />
+                    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
 
-                    <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <div class="x_panel">
-                                        <div class="">
-                                            <h1 style="text-align: center;font-weight: bold;color: black">¿Qué deseas registrar?</h1>
-                                           
-                                            <div class="clearfix"></div>
-                                        </div>
-                                        <!--aqui-->   <div class="x_content">
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Nombre:</label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Dirigido a:</label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" id="last-name" name="last-name" required="required" class="form-control col-md-7 col-xs-12">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Objetivo:</label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <textarea id="middle-name" class="form-control col-md-7 col-xs-12" rows="6" type="text" name="middle-name"></textarea>
+                        </div>
+                      </div>
+                      
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-6">Duración:</label>
+                        <div class="col-md-2 col-sm-2 col-xs-2">
+                          <input id="birthday" class="date-picker form-control col-md-5 col-xs-6" required="required" type="text">
+                        </div>
+                        <label class="control-label col-md-1 col-sm-1 col-xs-1">Modalidad:</label>
+                        <div class="col-md-3 col-sm-3 col-xs-3">
+                          <input id="birthday" class="date-picker form-control col-md-5 col-xs-6" required="required" type="text">
+                        </div>
+                        
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-6">Inicio:</label>
+                        <div class="col-md-2 ">
+                          <input id="birthday" class="date-picker form-control col-md-2" required="required" type="text">
+                        </div>
+                        <label class="control-label col-md-1 col-sm-1 col-xs-1">Término:</label>
+                        <div class="col-md-2">
+                          <input id="birthday" class="date-picker form-control col-md-2" required="required" type="text">
+                        </div>
+                        
+                      </div> 
+                       <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-6">Costo:</label>
+                        <div class="col-md-2 ">
+                          <input id="birthday" class="date-picker form-control col-md-2" required="required" type="text">
+                        </div>
+                       
+                        
+                      </div> 
+                      <div class="ln_solid"></div>
+                      <div class="form-group">
+                        <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                          <button type="submit" class="btn btn-primary">Cancel</button>
+                          <button type="submit" class="btn btn-success">Submit</button>
+                        </div>
+                      </div>
 
-                                            <div class="row" style="padding-top: 30px">
-                                                
-                                                <div class="tile_count" >
-                                                <div class="animated flipInY col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                                                    <div class="tile-stats" style="height: 120px"> 
-                                                        <br>
-                                                        <h3 style="color: black;text-align: center">Seminario</h3>
-                                                        <br>
-                                                        <i class="fa fa-graduation-cap color blue fa-3x" style="padding-left:45%"></i>
-                                                    </div>
-                                                </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>    
 
-                                            </div>
-                                            <div class="tile_count">
-                                                <div class="animated flipInY col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                                                    <div class="tile-stats" style="height: 120px">
-                                                        <br>
-                                                        <h3  style="color: #000;text-align: center">Curso</h3>
-                                                        <br>
-                                                        <i class="fa fa-laptop color blue fa-3x" style="padding-left: 45%"></i>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-
-                                            <div class="tile_count">
-                                                <div class="animated flipInY col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                                                    <div class="tile-stats" style="height: 120px">
-                                                        <br>
-                                                        <h3  style="color: #000;text-align: center">Taller</h3>
-                                                        <br>
-                                                        <i class="fa fa-university color blue fa-3x" style="padding-left: 45%"></i>
-                                                        
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                            <div class="tile_count">
-                                                <div class="animated flipInY col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                                                    <div class="tile-stats" style="height: 120px">
-                                                        <br>
-                                                        <h3  style="color: #000;text-align: center">Diplomado</h3>
-                                                        <br>
-                                                        <i class="fa fa-briefcase color blue fa-3x" style="padding-left: 45%"></i>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                                
-                                            </div>
-
-                                            
-                                            <div class="row" style="padding-top: 80px">
-                                                <div class="tile_count">
-                                                <div class="animated flipInY col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                                                    <div class="tile-stats" style="height: 120px">
-                                                        
-                                                        
-                                                        <br>
-                                                        <h3 style="color: black;text-align: center">Publicación</h3>
-                                                        <br>
-                                                        <i class="fa fa-book color blue fa-3x" style="padding-left: 50%"></i>
-                                                        
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                            <div class="tile_count">
-                                                <div class="animated flipInY col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                                                    <div class="tile-stats" style="height: 120px">
-                                                        <br>
-                                                        <h3 style="color: black;text-align:center">Servicio Empresarial</h3>
-                                                        <br>
-                                                        <i class="fa fa-building color blue fa-3x" style="padding-left: 50%"></i>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                            <div class="tile_count">
-                                                <div class="animated flipInY col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                                                    <div class="tile-stats" style="height: 120px" class="color blue center-block">
-                                                        <br>
-                                                        <h3 style="color: black;text-align: center" >Simposium</h3>
-                                                        <br>
-                                                        <i class="fa fa-gavel color blue fa-3x" style="padding-left: 50%;"></i>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-                                </div>
+                    
                     
                 </div>
 

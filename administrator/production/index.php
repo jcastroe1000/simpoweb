@@ -66,6 +66,9 @@
                                         </ul>
                                         
                                     </li>
+                                    <li><a href="javascript:void(0)"><i class="fa fa-arrow-circle-up"></i> Registro </a></li>
+
+                                    
                                     <li><a><i class="fa fa-cogs"></i>Secciones <span class="fa fa-chevron-down"></span></a>
                                         <ul class="nav child_menu">
                                             
