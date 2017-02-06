@@ -7,7 +7,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Registrar Seminario</title>
+        <title>Registrar Curso</title>
 
         <!-- Bootstrap -->
         <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -27,7 +27,9 @@
         <link href="../vendors/switchery/dist/switchery.min.css" rel="stylesheet">
         <!-- Custom Theme Style -->
         <link href="../build/css/custom.min.css" rel="stylesheet">
-    </head>
+        <link href="../production/css/fileinput.css" media="all" rel="stylesheet" type="text/css">
+        
+            </head>
 
     <body class="nav-md">
         <div class="container body">
@@ -153,15 +155,15 @@
                 <!-- page content -->
                 <div class="right_col" role="main">
                     <!-- top tiles -->
-                <div class="page-title">
-              <div class="title_left">
-                <h3>Registro de Seminario</h3>
+                    <div >
+                        <div style="padding-top:2%;" >
+                        <h3 style="text-align: center">Registro de Seminario</h3>
               </div>
 
               
             </div>
             <div class="clearfix"></div>
-            <div class="row">
+            <div class="row"  style="padding-top: 1%">
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
@@ -182,7 +184,7 @@
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Dirigido a:</label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" id="last-name" name="last-name" required="required" class="form-control col-md-7 col-xs-12">
+                            <textarea type="text" id="last-name" name="last-name" required="required" class="form-control col-md-7 col-xs-12"></textarea>
                         </div>
                       </div>
                       <div class="form-group">
@@ -194,41 +196,51 @@
                       
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-6">Duración:</label>
-                        <div class="col-md-2 col-sm-2 col-xs-2">
-                          <input id="birthday" class="date-picker form-control col-md-5 col-xs-6" required="required" type="text">
+                        <div class="col-md-33 ">
+                          <input id="birthday" class="date-picker form-control col-md-33" required="required" type="text">
                         </div>
                         <label class="control-label col-md-1 col-sm-1 col-xs-1">Modalidad:</label>
-                        <div class="col-md-3 col-sm-3 col-xs-3">
-                          <input id="birthday" class="date-picker form-control col-md-5 col-xs-6" required="required" type="text">
+                        <div class="col-md-33 ">
+                          <input id="birthday" class="date-picker form-control col-md-33" required="required" type="text">
                         </div>
                         
                       </div>
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-6">Inicio:</label>
-                        <div class="col-md-2 ">
-                          <input id="birthday" class="date-picker form-control col-md-2" required="required" type="text">
+                        <div class="col-md-33 ">
+                            <input  id="birthday" class="date-picker form-control col-md-33" required="required" type="date">
                         </div>
                         <label class="control-label col-md-1 col-sm-1 col-xs-1">Término:</label>
-                        <div class="col-md-2">
-                          <input id="birthday" class="date-picker form-control col-md-2" required="required" type="text">
+                        <div class="col-md-33">
+                            <input id="birthday" class="date-picker form-control col-md-33" required="required" type="date">
                         </div>
                         
                       </div> 
                        <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-6">Costo:</label>
-                        <div class="col-md-2 ">
-                          <input id="birthday" class="date-picker form-control col-md-2" required="required" type="text">
-                        </div>
-                       
-                        
-                      </div> 
-                      <div class="ln_solid"></div>
-                      <div class="form-group">
-                        <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-                          <button type="submit" class="btn btn-primary">Cancel</button>
-                          <button type="submit" class="btn btn-success">Submit</button>
+                        <div class="col-md-33 ">
+                          <input id="birthday" class="date-picker form-control col-md-33" required="required" type="text">
                         </div>
                       </div>
+                      
+                        <div class="form-group">
+                            
+                             <label class="control-label col-md-3 col-sm-3 col-xs-6">Seleccionar archivo: </label>
+                             <div class="col-md-6">
+                                 <input id="file-0b" name="file-0b" class="file" type="file" data-show-preview="false">              
+                             </div>
+                             
+                        </div>
+                      <div class="ln_solid"></div>
+                      <div class="form-group">
+                        <div class="col-md-7 col-sm-7 col-xs-12 col-md-offset-4">
+                          <button type="submit" class="btn btn-danger">Cancel</button>
+                          <button type="submit" class="btn btn-success">Añadir</button>
+                        </div>
+                      </div>
+                            
+                        </div>  
+                     
 
                     </form>
                   </div>
@@ -280,6 +292,12 @@
 
                 <!-- Custom Theme Scripts -->
                 <script src="../build/js/custom.min.js"></script>
+                <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="../production/js/plugins/sortable.js" type="text/javascript"></script>
+        <script src="../production/js/fileinput.js" type="text/javascript"></script>
+        <script src="../production/js/fileinput_locale_fr.js" type="text/javascript"></script>
+        <script src="../production/js/fileinput_locale_es.js" type="text/javascript"></script>
+    
 
                 <!-- Flot -->
                 <script>

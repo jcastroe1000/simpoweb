@@ -7,7 +7,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Registrar Seminario</title>
+        <title>Registrar Curso</title>
 
         <!-- Bootstrap -->
         <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -155,7 +155,7 @@
                     <!-- top tiles -->
                 <div class="page-title">
               <div class="title_left">
-                <h3>Registro de Seminario</h3>
+                  <h3 style="text-align: center">Registro de Seminario</h3>
               </div>
 
               
@@ -194,30 +194,30 @@
                       
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-6">Duración:</label>
-                        <div class="col-md-2 col-sm-2 col-xs-2">
-                          <input id="birthday" class="date-picker form-control col-md-5 col-xs-6" required="required" type="text">
+                        <div class="col-md-33 ">
+                          <input id="birthday" class="date-picker form-control col-md-33" required="required" type="text">
                         </div>
                         <label class="control-label col-md-1 col-sm-1 col-xs-1">Modalidad:</label>
-                        <div class="col-md-3 col-sm-3 col-xs-3">
-                          <input id="birthday" class="date-picker form-control col-md-5 col-xs-6" required="required" type="text">
+                        <div class="col-md-33 ">
+                          <input id="birthday" class="date-picker form-control col-md-33" required="required" type="text">
                         </div>
                         
                       </div>
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-6">Inicio:</label>
-                        <div class="col-md-2 ">
-                          <input id="birthday" class="date-picker form-control col-md-2" required="required" type="text">
+                        <div class="col-md-33 ">
+                            <input  id="birthday" class="date-picker form-control col-md-33" required="required" type="date">
                         </div>
                         <label class="control-label col-md-1 col-sm-1 col-xs-1">Término:</label>
-                        <div class="col-md-2">
-                          <input id="birthday" class="date-picker form-control col-md-2" required="required" type="text">
+                        <div class="col-md-33">
+                            <input id="birthday" class="date-picker form-control col-md-33" required="required" type="date">
                         </div>
                         
                       </div> 
                        <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-6">Costo:</label>
-                        <div class="col-md-2 ">
-                          <input id="birthday" class="date-picker form-control col-md-2" required="required" type="text">
+                        <div class="col-md-33 ">
+                          <input id="birthday" class="date-picker form-control col-md-33" required="required" type="text">
                         </div>
                        
                         
