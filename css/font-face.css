@@ -44,3 +44,67 @@ and open the template in the editor.
   font-family: MediumItalic;
   }
   
+  @font-face{
+    font-family: Architects;
+    src: url("../font-face/ArchitectsDaughter.ttf");
+}
+
+.Architects{
+    font-family: Architects;
+}
+
+@font-face{
+    font-family: Sans;
+    src:url("../font-face/Material_Sans.ttf");
+}
+.Sans{
+    font-family: Sans;
+}
+
+@font-face{
+    font-family: Sansation_Regular;
+    src:url("../font_face/Sansation_Regular.ttf");
+}
+
+.Sansation_Regular{
+    font-family: Sansation_Regular;
+}
+
+@font-face{
+    font-family: Sansation_Light_Italic;
+    src:url("../font_face/Sansation_Light_Italic.ttf");
+}
+
+.Sansation_Light_Italic{
+    font-family: Sansation_Light_Italic;
+}
+
+@font-face{
+    font-family: tenby-five;
+    src:url("../font-face/tenby-five.otf");
+}
+
+.tenby_five{
+    font-family: tenby-five;
+}
+
+@font-face{
+    font-family: FolksDecoon;
+    src:url("../font-face/FolksDecoon.ttf");
+}
+
+.FolksDecoon{
+    font-family: FolksDecoon;
+}
+
+@font-face{
+    font-family: Sansumi;
+    src:url("../font-face/Sansumi-Bold.ttf");
+}
+
+.Sansumi{
+    font-family:Sansumi;
+}
+
+
+

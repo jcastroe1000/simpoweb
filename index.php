@@ -39,7 +39,7 @@
         <!--Contacto Form-->
 
         <link rel="stylesheet" href="css/form.css">
-
+        <link rel="stylesheet" type="text/css" href="css/font-face.css">
         <!-- Modernizer Script for old Browsers -->
         <script src="js/modernizr-2.6.2.min.js"></script>
         <script src="js/bootbox.js"></script>
@@ -205,7 +205,7 @@
                                                 <form class="form-horizontal form-label-left input_mask" action="model/register.php" method="post">
 
                                                     <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-                                                        <input type="text" class="form-control has-feedback-left" id="name" name="FullName" placeholder="Nombre (s)">
+                                                        <input type="text" class="form-control has-feedback-left " id="name" name="FullName" placeholder="Nombre (s)">
                                                         <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
                                                     </div>
 
@@ -348,27 +348,27 @@
                     <div class="row">
 
                         <div class="sec-title text-center">
-                            <h2 class="wow animated bounceInLeft">Servicios</h2>
-                            <h4 class="wow animated bounceInRight">Selecciona El Servicio De Tu Interes</h4>
+                            <h2 class="Sansumi">Servicios</h2>
+                            <h4 class="wow animated bounceInRight tenby_five" style="font-size: 18px">Selecciona El Servicio De Tu Interes</h4>
                         </div>
 
 
                         <div class="container" >
                             <div class="col-md-33 text-center wow animated zoomIn" data-wow-delay="0.3s" >
-                                <a href="seminarios.php"><div class="service-item" style="padding-top: 60px;">
+                                <div class="service-item" style="padding-top: 60px;">
                                     <div class="service-icon">
                                         <i class="fa fa-mortar-board fa-3x"></i>
                                     </div>
-                                    <h3>SEMINARIOS</h3>
+                                        <h3 class="FolksDecoon" style="font-weight: bold">SEMINARIOS</h3>
 <!--                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>-->
-                                </div></a>
+                                </div>
                             </div>
                             <div class="col-md-33   text-center wow animated zoomIn" data-wow-delay="0.3s">
                                 <a  href="simposiums.php"><div class="service-item" style="padding-top: 60px;">
                                     <div class="service-icon">
                                         <i class="fa fa-laptop fa-3x"></i>
                                     </div>
-                                    <h3>SIMPOSIUMS</h3>
+                                        <h3 class="FolksDecoon" style="font-weight: bold">SIMPOSIUMS</h3>
                                     
 <!--                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>-->
                                 </div></a>
@@ -378,9 +378,9 @@
                                     <div class="service-icon">
                                         <i class="fa fa-briefcase fa-3x"></i>
                                     </div>
-                                    <h3>Diplomados</h3>
-                                    <h3>Talleres</h3>
-                                    <h3>Cursos</h3>
+                                    <h3 class="FolksDecoon" style="font-weight: bold">Diplomados</h3>
+                                    <h3 class="FolksDecoon" style="font-weight: bold">Talleres</h3>
+                                    <h3 class="FolksDecoon" style="font-weight: bold">Cursos</h3>
 <!--                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>-->
                                 </div></a>
                             </div>
@@ -389,7 +389,7 @@
                                     <div class="service-icon">
                                         <i class="fa fa-building fa-3x"></i>
                                     </div>
-                                    <h3>SERVICIOS EMPRESARIALES</h3>
+                                    <h3 class="FolksDecoon" style="font-weight: bold">SERVICIOS EMPRESARIALES</h3>
 <!--                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>-->
                                 </div></a>
                             </div>
@@ -398,7 +398,7 @@
                                     <div class="service-icon">
                                         <i class="fa fa-book fa-3x"></i>
                                     </div>
-                                    <h3>REVISTA</h3>
+                                    <h3 class="FolksDecoon" style="font-weight: bold">REVISTA</h3>
 <!--                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>-->
                                 </div>
                             </div>
@@ -417,7 +417,7 @@
                     <div class="row">
 
                         <div class="sec-title text-center wow animated fadeInDown">
-                            <h2>NUESTROS PROYECTOS</h2>
+                            <h2 class="Sansumi">NUESTROS PROYECTOS</h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                         </div>
 
@@ -511,9 +511,9 @@
                     <div class="row">
 
                         <div class="sec-title text-center wow animated fadeInDown">
-                            <h2>ESCRÍBENOS</h2>
-                            <p>¿Tienes alguna duda?</p>
-                            <p>Mandanos un mensaje</p>
+                            <h2 class="Sansumi">ESCRÍBENOS</h2>
+                            <p class="tenby_five" style="color: #767170">¿Tienes alguna duda?</p>
+                            <p class="tenby_five" style="color: #767170">Mandanos un mensaje</p>
                         </div>
 
 
@@ -538,16 +538,16 @@
 
                         <div class="col-md-5 wow animated fadeInRight">
                             <address class="contact-details">
-                                <h3>Información de Contacto</h3>						
-                                <p><i class="fa fa-pencil"></i>Dr. Adelina Pérez Rosas<span>Edificio 7</span> 
+                                <h3 class="Sansumi">Información de Contacto</h3>						
+                                <p class="tenby_five" style="color: #767170"><i class="fa fa-pencil"></i>Dr. Adelina Pérez Rosas<span>Edificio 7</span> 
                                     <span>Primer Piso,Cubículo 7107</span><span>Unidad Profesional Adolfo López Mateos</span>
                                     <span>Zacatenco, Ciudad de México</span>
 
                                 </p><br>
-                                <h4>Telefono:</h4>
-                                <p><a href="tel:57296000"><i class="fa fa-phone"></i> 57-29-60-00</a>      (Ext.: 54237)</p>
-                                <p><i class="fa fa-user"></i>Adelina Pérez Rosas </p>
-                                <p><i class="fa fa-user"></i> Fabián D. Martínez Valdés </p>
+                                <h4 class="Sansumi">TELEFONO:</h4>
+                                <p class="tenby_five" style="color: #767170" ><a href="tel:57296000"><i class="fa fa-phone"></i> 57-29-60-00</a>      (Ext.: 54237)</p>
+                                <p class="tenby_five" style="color: #767170" ><i class="fa fa-user"></i>Adelina Pérez Rosas </p>
+                                <p class="tenby_five" style="color: #767170" ><i class="fa fa-user"></i> Fabián D. Martínez Valdés </p>
 
                             </address>
 
@@ -568,8 +568,8 @@
                 <div class="row text-center">
                     <div class="footer-content">
                         <div class="wow animated fadeInDown">
-                            <p>¡Quédate con nosotros!</p>
-                            <p>Suscríbete a nuestra lista para recibir noticias y publicaciones.</p>
+                            <p class="Sansumi">¡Quédate con nosotros!</p>
+                            <p class="Sansumi">Suscríbete a nuestra lista para recibir noticias y publicaciones.</p>
                         </div>
                         <form id="newsletterid" method="post" class="subscribe-form wow animated fadeInUp">
                             <div id="oknewsletter"></div>
