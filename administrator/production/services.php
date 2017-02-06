@@ -27,6 +27,7 @@
         <link href="../vendors/switchery/dist/switchery.min.css" rel="stylesheet">
         <!-- Custom Theme Style -->
         <link href="../build/css/custom.min.css" rel="stylesheet">
+        <link href="../production/css/font-face.css" rel="stylesheet" type="text/css">
     </head>
 
     <body class="nav-md">
@@ -153,26 +154,27 @@
                 <!-- page content -->
                 <div class="right_col" role="main">
                     <!-- top tiles -->
-
-
-                    <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="row">
+                               <div class="col-md-12 col-sm-12 col-xs-12">
                                     <div class="x_panel">
                                         <div class="">
-                                            <h1 style="text-align: center;font-weight: bold;color: black">¿Qué deseas registrar?</h1>
+                                            <h2 style="text-align: center;color: black;font-size: 25px" class="Sansation_Regular">¿Qué deseas registrar?</h2>
                                            
                                             <div class="clearfix"></div>
                                         </div>
-                                        <!--aqui-->   <div class="x_content">
+                                          <div class="x_content">
 
                                             <div class="row" style="padding-top: 30px">
                                                 
                                                 <div class="tile_count" >
                                                 <div class="animated flipInY col-lg-3 col-md-3 col-sm-3 col-xs-3">
                                                     <div class="tile-stats" style="height: 120px"> 
+                                                        <a href="registrar_seminario.php">
                                                         <br>
-                                                        <h3 style="color: black;text-align: center">Seminario</h3>
+                                                        <h3 style="color: black;text-align: center" class="Architects">Seminario</h3>
                                                         <br>
                                                         <i class="fa fa-graduation-cap color blue fa-3x" style="padding-left:45%"></i>
+                                                        </a>
                                                     </div>
                                                 </div>
 
@@ -180,10 +182,12 @@
                                             <div class="tile_count">
                                                 <div class="animated flipInY col-lg-3 col-md-3 col-sm-3 col-xs-3">
                                                     <div class="tile-stats" style="height: 120px">
+                                                        <a href="registrar_curso.php">
                                                         <br>
-                                                        <h3  style="color: #000;text-align: center">Curso</h3>
+                                                        <h3  style="color: #000;text-align: center" class="Architects">Curso</h3>
                                                         <br>
                                                         <i class="fa fa-laptop color blue fa-3x" style="padding-left: 45%"></i>
+                                                        </a>
                                                     </div>
                                                 </div>
 
@@ -192,11 +196,12 @@
                                             <div class="tile_count">
                                                 <div class="animated flipInY col-lg-3 col-md-3 col-sm-3 col-xs-3">
                                                     <div class="tile-stats" style="height: 120px">
+                                                        <a href="registrar_taller.php">
                                                         <br>
-                                                        <h3  style="color: #000;text-align: center">Taller</h3>
+                                                        <h3  style="color: #000;text-align: center" class="Architects">Taller</h3>
                                                         <br>
                                                         <i class="fa fa-university color blue fa-3x" style="padding-left: 45%"></i>
-                                                        
+                                                        </a>
                                                     </div>
                                                 </div>
 
@@ -204,10 +209,12 @@
                                             <div class="tile_count">
                                                 <div class="animated flipInY col-lg-3 col-md-3 col-sm-3 col-xs-3">
                                                     <div class="tile-stats" style="height: 120px">
+                                                        <a href="registrar_diplomado.php">
                                                         <br>
-                                                        <h3  style="color: #000;text-align: center">Diplomado</h3>
+                                                        <h3  style="color: #000;text-align: center" class="Architects">Diplomado</h3>
                                                         <br>
                                                         <i class="fa fa-briefcase color blue fa-3x" style="padding-left: 45%"></i>
+                                                        </a>
                                                     </div>
                                                 </div>
 
@@ -223,7 +230,7 @@
                                                         
                                                         
                                                         <br>
-                                                        <h3 style="color: black;text-align: center">Publicación</h3>
+                                                        <h3 style="color: black;text-align: center" class="Architects">Publicación</h3>
                                                         <br>
                                                         <i class="fa fa-book color blue fa-3x" style="padding-left: 50%"></i>
                                                         
@@ -235,7 +242,7 @@
                                                 <div class="animated flipInY col-lg-4 col-md-4 col-sm-4 col-xs-4">
                                                     <div class="tile-stats" style="height: 120px">
                                                         <br>
-                                                        <h3 style="color: black;text-align:center">Servicio Empresarial</h3>
+                                                        <h3 style="color: black;text-align:center" class="Architects">Servicio Empresarial</h3>
                                                         <br>
                                                         <i class="fa fa-building color blue fa-3x" style="padding-left: 50%"></i>
                                                     </div>
@@ -246,7 +253,7 @@
                                                 <div class="animated flipInY col-lg-4 col-md-4 col-sm-4 col-xs-4">
                                                     <div class="tile-stats" style="height: 120px" class="color blue center-block">
                                                         <br>
-                                                        <h3 style="color: black;text-align: center" >Simposium</h3>
+                                                        <h3 style="color: black;text-align: center" class="Architects">Simposium</h3>
                                                         <br>
                                                         <i class="fa fa-gavel color blue fa-3x" style="padding-left: 50%;"></i>
                                                     </div>
@@ -260,6 +267,10 @@
 
                                     </div>
                                 </div>
+                        
+                    </div>        
+
+
                     
                 </div>
 
