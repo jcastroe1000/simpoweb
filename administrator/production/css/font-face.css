@@ -61,4 +61,12 @@ and open the template in the editor.
 }
 
 
+@font-face{
+    font-family: Sansation_Bold;
+    src:url("../font_face/Sansation_Bold.ttf");
+}
+
+.Sansation_Bold{
+    font-family: Sansation_Bold ;
+}
 

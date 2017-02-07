@@ -7,7 +7,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Gentellela Alela! | </title>
+        <title>Usuarios Registrados</title>
 
         <!-- Bootstrap -->
         <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -31,10 +31,10 @@
         <!-- Custom Theme Style -->
         <link href="../build/css/custom.min.css" rel="stylesheet">
         <!--        <link rel="stylesheet" type="text/css" href="../production/css/dataTables.bootstrap.css">-->
-
-        <link rel="stylesheet" type="text/css" href="/DataTables/datatables.css">
-        <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.13/css/jquery.dataTables.css">
-        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.13/css/dataTables.bootstrap.min.css">
+        <link href="../production/css/font-face.css"  rel="stylesheet" type="text/css">
+        
+        <link rel="stylesheet" type="text/css" href="../production/css/dataTables.css">
+        <link rel="stylesheet" type="text/css" href="../production/css/dataTables.boostrap.min.css">
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/select/1.2.1/css/select.bootstrap.min.css">
 
     </head>
@@ -246,9 +246,9 @@
                                 <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
                                     <thead>
                                         <tr>
-                                            <th>Nombre</th>
-                                            <th>Apellidos</th>
-                                            <th>Email</th>
+                                            <th class="Sansation_Bold" style="color:black;text-align: center" >Nombre</th>
+                                            <th class="Sansation_Bold" style="color: black;text-align: center">Apellidos</th>
+                                            <th class="Sansation_Bold" style="color: black;text-align: center"s>Email</th>
                                             <th></th>
                                             <th></th>
                                         </tr>
@@ -263,11 +263,11 @@
                                                         while ($row = $res->fetch_assoc()):
                                                             ?>
                                         <tr>
-                                            <td><?php echo $row ['nombre'] ?></td>
-                                            <td><?php echo $row ['apellidos'] ?></td>
-                                            <td><?php echo $row ['email'] ?></td>
-                                            <td>Editar</td>
-                                            <td>Eliminar</td>
+                                            <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo $row ['nombre'] ?></td>
+                                            <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo $row ['apellidos'] ?></td>
+                                            <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo $row ['email'] ?></td>
+                                            <td class="Sans" style="color: #04B404;text-align: center">Detalles    <i class="fa fa-plus"></i></td>
+                                            <td class="Sans" style="color: #FF0000;text-align: center">Eliminar        <i class="fa fa-trash"></i></td>
                                             
                                         </tr>
                                         <?php
