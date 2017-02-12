@@ -228,8 +228,8 @@
                                                         <div class=" selectContainer">
                                                             <select class="form-control" name="gender">
                                                                 <option value="">Genero</option>
-                                                                <option value="1">Masculino</option>
-                                                                <option value="2">Feminino</option>
+                                                                <option value="Mujer">Feminino</option>
+                                                                <option value="Hombre">Masculino</option>
                                                             </select>
                                                         </div>
                                                     </div> 
@@ -238,9 +238,37 @@
                                                         <div class=" selectContainer">
                                                             <select class="form-control" name="city">
                                                                 <option value="">Soy de....</option>
-                                                                <option value="1">Ciudad de México</option>
-                                                                <option value="2">Guadalajara</option>
-                                                                <option value="3">Monterrey</option>
+                                                                <option value="Aguascalientes">Aguascalientes</option>
+                                                                <option value="Baja California">Baja California</option>
+                                                                <option value="Baja California Sur">Baja California Sur</option>
+                                                                <option value="Campeche">Campeche</option>
+                                                                <option value="Chiapas">Chiapas</option>
+                                                                <option value="Chihuahua">Chihuahua</option>
+                                                                <option value="Ciudad de México">Ciudad de México</option>
+                                                                <option value="Coahuila">Coahuila</option>
+                                                                <option value="Colima">Colima</option>
+                                                                <option value="Durango">Durango</option>
+                                                                <option value="Estado de México"></option>
+                                                                <option value="Guanajuato">Guadalajara</option>
+                                                                <option value="Guanajuato">Guanajuato</option>
+                                                                <option value="Hidalgo">Hidalgo</option>
+                                                                <option value="Michoacán">Michoacán</option>
+                                                                <option value="Morelos">Morelos</option>
+                                                                <option value="Monterrey">Monterrey</option>
+                                                                <option value="Nayarit">Nayarit</option>
+                                                                <option value="Oaxaca">Oaxaca</option>
+                                                                <option value="Puebla">Puebla</option>
+                                                                <option value="Querétaro">Querétaro</option>
+                                                                <option value="Quintana Roo">Quintana Roo</option>
+                                                                <option value="San Luis Potosí">San Luis Potosí</option>
+                                                                <option value="Sinaloa">Sinaloa</option>
+                                                                <option value="Sonora">Sonora</option>
+                                                                <option value="Tabasco">Tabasco</option>
+                                                                <option value="Tamaulipas">Tamaulipas</option>
+                                                                <option value="Tlaxcala">Tlaxcala</option>
+                                                                <option value="Veracruz">Veracruz</option>
+                                                                <option value="Yucatán">Yucatán</option>
+                                                                <option value="Zacatecas">Zacatecas</option>
                                                             </select>
                                                         </div>
                                                     </div>   

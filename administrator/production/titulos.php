@@ -7,7 +7,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Gentellela Alela! | </title>
+        <title>Titulos Pagina Principal</title>
 
         <!-- Bootstrap -->
         <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -30,6 +30,13 @@
 
         <!-- Custom Theme Style -->
         <link href="../build/css/custom.min.css" rel="stylesheet">
+        <!--        <link rel="stylesheet" type="text/css" href="../production/css/dataTables.bootstrap.css">-->
+        <link href="../production/css/font-face.css"  rel="stylesheet" type="text/css">
+        
+        <link rel="stylesheet" type="text/css" href="../production/css/dataTables.css">
+        <link rel="stylesheet" type="text/css" href="../production/css/dataTables.boostrap.min.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/select/1.2.1/css/select.bootstrap.min.css">
+
     </head>
 
     <body class="nav-md">
@@ -65,24 +72,42 @@
 
                                     <li><a><i class="fa fa-group"></i> Usuarios <span class="fa fa-chevron-down"></span></a>
                                         <ul class="nav child_menu">
-                                            <li><a href="form.html">Registrados</a></li>
+                                            <li><a href="users_registers.php"><i class="fa fa-arrow-up"></i>Registrados</a></li>
+                                            <li>
+                                                <a href="newsletter.php"><i class="fa fa-check-circle"></i>NewsLetter</a></li>
+                                        </ul>
+
+                                    </li>
+                                    <li><a><i class="fa fa-cogs"></i>Secciones <span class="fa fa-chevron-down"></span></a>
+                                        <ul class="nav child_menu">
+
+                                            <li>
+                                                <a href="simposiums.html"><i class="fa fa-mortar-board"></i> Seminarios</a>
+                                            </li>
+                                            <li>
+                                                <a href="simposiums.html"><i class="fa fa-laptop"></i> Talleres </a>
+                                            </li>
+                                            <li>
+                                                <a href="simposiums.html"><i class="fa fa-briefcase"></i> Cursos </a>
+                                            </li>
+                                            <li>
+                                                <a href="simposiums.html"><i class="fa fa-university"></i> Diplomados </a>
+                                            </li>
 
                                         </ul>
                                     </li>
-                                    <li><a href="newsletter.html"><i class="fa fa-thumbs-o-up"></i>NewsLetter</a></li>
-                                    <li><a href="simposiums.html"><i class="fa fa-desktop"></i> Simposiums</a>
-                                    </li>
-                                    <li><a href="simposiums.html"><i class="fa fa-desktop"></i> Cursos </a>
-                                    </li>
-                                    <li><a href="simposiums.html"><i class="fa fa-desktop"></i> Talleres </a>
-                                    </li>
 
-                                    </li>
+                                    <li><a><i class="fa fa-plus-square"></i> Extras<span class="fa fa-chevron-down"></span></a>
+                                        <ul class="nav child_menu">
+                                            <li><a href="form.html"><i class="fa fa-book"></i>Directorio</a></li>
 
+                                        </ul>
+                                    </li>
 
 
                                 </ul>
                             </div>
+
 
                         </div>
                         <!-- /sidebar menu -->
@@ -121,11 +146,82 @@
                                         <span class=" fa fa-angle-down"></span>
                                     </a>
                                     <ul class="dropdown-menu dropdown-usermenu pull-right">
-                                        <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Cerrar Sesión</a></li>
+                                        <li><a href="javascript:;"> Profile</a></li>
+                                        <li>
+                                            <a href="javascript:;">
+                                                <span class="badge bg-red pull-right">50%</span>
+                                                <span>Settings</span>
+                                            </a>
+                                        </li>
+                                        <li><a href="javascript:;">Help</a></li>
+                                        <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                                     </ul>
                                 </li>
 
-                                
+                                <li role="presentation" class="dropdown">
+                                    <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
+                                        <i class="fa fa-envelope-o"></i>
+                                        <span class="badge bg-green">6</span>
+                                    </a>
+                                    <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
+                                        <li>
+                                            <a>
+                                                <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                                                <span>
+                                                    <span>John Smith</span>
+                                                    <span class="time">3 mins ago</span>
+                                                </span>
+                                                <span class="message">
+                                                    Film festivals used to be do-or-die moments for movie makers. They were where...
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a>
+                                                <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                                                <span>
+                                                    <span>John Smith</span>
+                                                    <span class="time">3 mins ago</span>
+                                                </span>
+                                                <span class="message">
+                                                    Film festivals used to be do-or-die moments for movie makers. They were where...
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a>
+                                                <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                                                <span>
+                                                    <span>John Smith</span>
+                                                    <span class="time">3 mins ago</span>
+                                                </span>
+                                                <span class="message">
+                                                    Film festivals used to be do-or-die moments for movie makers. They were where...
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a>
+                                                <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                                                <span>
+                                                    <span>John Smith</span>
+                                                    <span class="time">3 mins ago</span>
+                                                </span>
+                                                <span class="message">
+                                                    Film festivals used to be do-or-die moments for movie makers. They were where...
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <div class="text-center">
+                                                <a>
+                                                    <strong>See All Alerts</strong>
+                                                    <i class="fa fa-angle-right"></i>
+                                                </a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
                             </ul>
                         </nav>
                     </div>
@@ -135,71 +231,78 @@
                 <!-- page content -->
                 <div class="right_col" role="main">
                     <div class="">
-                        <div class="page-title" style="padding-top: 7%">
+                        <div class="page-title">
                             <div class="title_left">
-                                <div class="col-md-12 col-sm-12 col-xs-12 form-group pull-right top_search">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" placeholder="Search for...">
-                                        <span class="input-group-btn">
-                                            <button class="btn btn-default" type="button">Buscar!</button>
-                                        </span>
-                                    </div>
-                                </div>
+
                             </div>
 
-                            
-                        <div class="clearfix"></div>
-                        <div class="row" style="margin-top: 5%;">
+                            <div class="title_right">
+                                
+                            </div>
+                        </div>
+                        <div class="clearfix"><h2 style="text-align: center;color: black;font-size: 25px" class="Sansation_Regular">Usuarios Newsletter</h2></div>
+                        <div class="row" style="margin-top: 2%;">
                             <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="x_panel">
-                                    <div class="x_title">
-                                        <h2>Usuarios Registrados a Newsletter</h2>
-                                        <ul class="nav navbar-right panel_toolbox">
-                                            <li class="pull-right"><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                                            </li>
-
-
-                                        </ul>
-                                        <div class="clearfix"></div>
-                                    </div>
-                                    <div class="x_content">
-                                        <br />
-                                        <div class="container">
-                                            <table class="table table-hover">
-                                                <thead>
-                                                    <tr>
-                                                        <th>Correo Electrónico</th>
-                                                        <th>Suscrito a:</th>
-                                                        <th style="text-align: center">Opciones</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr style="width: 100%">
-                                                        <td width="33%" >John</td>
-                                                        <td width="33%">Doe</td>
-                                                        <td width="33%">
-                                                            <button type="button" class="btn btn-danger pull-right">
-                                                                <span  class="glyphicon glyphicon-trash">
-                                                                    Eliminar
-                                                                </span>
-                                                            </button>
-                                                        </td>
-
-
-                                                    </tr>
-
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
+                                <table  class="table table-striped table-bordered" cellspacing="0" width="100%">
+                                    <thead>
+                                        <tr>
+                                            <th class="Sansation_Bold" style="color: black;text-align: center"s>Email</th>
+                                            <th class="Sansation_Bold" style="color: black;text-align: center"s>Sección</th>
+                                            <th class="Sansation_Bold" style="color: black;text-align: center"s></th>
+                                            
+                                            
+                                            
+                                        </tr>
+                                    </thead>
+                                    
+                                    <tbody>
+                                        <?php
+                                                        include "./model/conection.php";
+                                                        error_reporting(E_ALL);
+                                                        $res = $mysqli->query("SELECT id,titulo,seccion FROM titulos");
+                                                        $mysqli->close();
+                                                        while ($row = $res->fetch_assoc()):
+                                                            ?>
+                                        <tr>
+                                            <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo $row ['titulo'] ?></td>
+                                            <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo $row ['seccion'] ?></td>
+                                            <td class="Sans" style="color: #04B404;text-align: center"><a  href="#<?php echo $row['id'] ?>" data-toggle="modal" style="color: #04B404"> Editar       </a><i class="fa fa-pencil"></i></td>
+                                            
+                                            
+                                        </tr>
+                                              <div class="modal fade" id="<?php echo $row['id'] ?>" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true" >
+                                                                <div class="modal-dialog">
+                                                                    <div class="modal-content">
+                                                                        <div class="modal-header">
+                                                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                                                <h4 class="modal-title" id="myModalLabel"><h3><?php echo $row ['seccion']  ;?></h3></h4>
+                                                                        </div>
+                                                                        <div class="modal-body">
+                                                                            <form>
+                                                                                <input id="titulo" name="titulo" value="<?php echo $row ['titulo']  ;?>" >
+                                                                            </form>  
+                                                                                
+                                                                            
+                                                                        </div>
+                                                                        <div class="modal-footer">
+                                                                            <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="icon-ban-circle"></i>&nbsp;Cerrrar</button>
+                                                                            <a href="Delete_Photo.php?d=<?php echo $row2['id_content']?>&f=<?php echo $row2['route']?>"><button type="button" class="btn btn-success"><i class="icon-ok"></i>Aceptar</button></a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>  
+                                        <?php
+                                                        endwhile;
+                                                        ?> 
+                                    </tbody>
+                                </table>
                             </div>
                         </div> 
 
+                      
+                        <!-- footer content -->
                         
-                        <!-- /page content -->
-
-                        
+                        <!-- /footer content -->
                     </div>
 
                 </div>
@@ -240,6 +343,9 @@
 
                 <!-- Custom Theme Scripts -->
                 <script src="../build/js/custom.min.js"></script>
+
+                <script type="text/javascript" charset="utf8" src="/DataTables/datatables.js"></script>
+                <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.js"></script>
 
                 <!-- bootstrap-daterangepicker -->
                 <script>
@@ -320,7 +426,13 @@
                     });
                 </script>
                 <!-- /bootstrap-wysiwyg -->
-
+                <script>
+                    $(document).ready(function () {
+                        $('#example').DataTable({
+                            select: true
+                        });
+                    });
+                </script>
                 <!-- Select2 -->
                 <script>
                     $(document).ready(function () {

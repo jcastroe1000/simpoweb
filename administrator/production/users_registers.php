@@ -231,7 +231,7 @@
                 <!-- page content -->
                 <div class="right_col" role="main">
                     <div class="">
-                        <div class="page-title">
+                         <div class="page-title">
                             <div class="title_left">
 
                             </div>
@@ -240,7 +240,7 @@
                                 
                             </div>
                         </div>
-                        <div class="clearfix"></div>
+                        <div class="clearfix"><h2 style="text-align: center;color: black;font-size: 25px" class="Sansation_Regular">Usuarios Registrados</h2></div>
                         <div class="row" style="margin-top: 5%;">
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
@@ -266,8 +266,8 @@
                                             <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo $row ['nombre'] ?></td>
                                             <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo $row ['apellidos'] ?></td>
                                             <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo $row ['email'] ?></td>
-                                            <td class="Sans" style="color: #04B404;text-align: center">Detalles    <i class="fa fa-plus"></i></td>
-                                            <td class="Sans" style="color: #FF0000;text-align: center">Eliminar        <i class="fa fa-trash"></i></td>
+                                            <td class="Sans" style="color: #04B404;text-align: center">Detalles<i class="fa fa-plus"></i></td>
+                                            <td class="Sans" style="color: #FF0000;text-align: center">Eliminar<i class="fa fa-trash"></i></td>
                                             
                                         </tr>
                                         <?php

@@ -1,6 +1,6 @@
 <?php
 //PROCESS NEWSLETTER FORM HERE
-//    include("../model/connection.php");
+include("../model/connection.php");
     require '../vendor/autoload.php';
     use Mailgun\Mailgun;
 
@@ -43,11 +43,11 @@ if($_POST['email_newsletter'] == '')
 
 
 //Change database 
-//mysqli_select_db($con, "$dbname");
-//
-//$query = mysqli_query($con, "INSERT INTO newsletter (correo_electronico,seccion) VALUES ('$email','$seccion')");
-//mysqli_close($con);  
 
+$date=date("Y/d/m"); 
+$save = mysqli_query($mysqli,"INSERT INTO newsletter (correo_electronico,seccion,fecha_registro) "
+                   ."VALUES ('$email','$seccion','$date')" );
+$mysqli->close();
 
 //And send success message:
 $msg = '¡Gracias por Registrarte,estaremos en contacto contigo!';
