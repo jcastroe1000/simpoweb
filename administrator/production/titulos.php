@@ -278,7 +278,7 @@
                                                                                 <h4 class="modal-title" id="myModalLabel"><h3><?php echo $row ['seccion']  ;?></h3></h4>
                                                                         </div>
                                                                         <div class="modal-body">
-                                                                            <form>
+                                                                            <form >
                                                                                 <input id="titulo" name="titulo" value="<?php echo $row ['titulo']  ;?>" >
                                                                             </form>  
                                                                                 
