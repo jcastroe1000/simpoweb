@@ -11,7 +11,7 @@
     $cost=$_GET['cost'];
     $creation_date=$_GET['creation_date'];
     $foto = trim($_FILES['course_image']['name']);
-    $section='curso';
+    $section='diplomado';
     $filename = "";
     if ($_FILES['foto']['size'] <= 2097152) {
         while (true) {

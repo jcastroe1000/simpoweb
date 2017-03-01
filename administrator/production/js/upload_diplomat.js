@@ -1,5 +1,5 @@
 $(function() {
-  $('#subir_curso').submit(function() {
+  $('#upload_diplomat').submit(function() {
     var comprobar = $('#course_name').val().length * $('#addressed').val().length * $('#objetive').val().length * $('#time_duration').val().length*
                     $('#modality').val().length *$('#date_start').val().length *$('#date_finish').val().length*$('#cost').val().length*$('#creation_date').val().length*$('#course_image').val().length;
     if (comprobar > 0) {
@@ -14,10 +14,10 @@ $(function() {
           $('#cargando h3').text("El archivo " + imagen[0].name + " sobrepasa el peso permitido");
           return false;
         } else {
-          var formulario = $('#subir_curso');
+          var formulario = $('#upload_diplomat');
           var datos = formulario.serialize();
           var archivos = new FormData();
-          var url = 'gallery/upload_course.php';
+          var url = 'gallery/upload_diplomat.php';
           for (var i = 0; i < (formulario.find('input[type=file]').length); i++) {
             archivos.append((formulario.find('input[type="file"]:eq(' + i + ')').attr("name")), ((formulario.find('input[type="file"]:eq(' + i + ')')[0]).files[0]));
           }
@@ -33,7 +33,7 @@ $(function() {
             success: function (data) {
                 $('#cargando h3').text('Imagen subida correctamente.');
                 setTimeout(function () {
-                    $(location).attr('href', 'cursos.php');
+                    $(location).attr('href', 'diplomados.php');
                 }, 2000);
             },
             error: function(data) {

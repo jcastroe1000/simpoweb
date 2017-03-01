@@ -33,7 +33,7 @@ $(function() {
             success: function (data) {
                 $('#cargando h3').text('Imagen subida correctamente.');
                 setTimeout(function () {
-                    $(location).attr('href', 'cursos.php');
+                    $(location).attr('href', 'talleres.php');
                 }, 2000);
             },
             error: function(data) {
