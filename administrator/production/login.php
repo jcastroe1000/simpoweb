@@ -1,5 +1,5 @@
 <?php
-    include "./model/conection.php";
+    include "config.php";
     session_start();
      error_reporting(0);
     if (isset($_SESSION['user_name']) != "") {
@@ -18,7 +18,31 @@
             $_SESSION['user_name'] = $row['nombre'];
             header("Location:index.php");
         } else {
-           $result='<div class="alert alert-error">Lo sentimos! Usuario y/o constraseña son invalidos</div>';
+           $result='<div class="alert alert-error">Lo sentimos! Usuario y/o constraseña son invalidos, intentalo de nuevo</div>';
+        }
+    }
+        error_reporting(E_ALL);
+    if (isset($_POST['btn-login_restart'])) {
+        $email = $_POST['usuario'];
+        
+        $email = trim($email);
+        $query = "SELECT nombre,email FROM administrator WHERE email='$email' ";
+        $result = mysqli_query($mysqli, $query)or die(mysqli_error());
+        $num_row = mysqli_num_rows($result);
+        $row = mysqli_fetch_array($result);
+        if ($num_row >= 1) {
+            $user= $row['nombre'];
+            $email_reset= $row['email'];
+            
+             
+            require_once 'model/restart_password.php';
+            $result='<div class="alert alert-success">Por favor consulta tu correo electrónico, hemos enviado un enlace para poder reestabler la contraseña</div>';
+             
+            
+        } else {
+            $result='<div class="alert alert-error">Lo sentimos! el usuario ingresado no existe, intentalo de nuevo</div>';
+      
+        
         }
     }
 ?>
@@ -45,6 +69,8 @@
 
     <!-- Custom Theme Style -->
     <link href="../build/css/custom.min.css" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
   </head>
 
   <body class="login">
@@ -55,67 +81,43 @@
       <div class="login_wrapper">
         <div class="animate form login_form">
           <section class="login_content">
-              <form method="post">
+              <form method="post" name="login" id="login">
               <h1>Acceso al Sistema</h1>
+              <div><?php echo $result;?></div>
               <div>
-                  <input type="text"  class="form-control" placeholder="Correo Electrónico" required="" name="email" />
+                  <input type="text"  class="form-control" placeholder="Correo Electrónico" required="" name="email" id="email" />
               </div>
               <div>
-                  <input type="password" class="form-control" placeholder="Contraseña" required="" name="pass" />
+                  <input type="password" class="form-control" placeholder="Contraseña" required="" name="pass" id="pass"/>
               </div>
               <div>
-                   <button type="submit" class="btn btn-primary" name="btn-login">Iniciar Sesión</button>
-                <a class="reset_pass" href="#">Restaurar Contraseña</a>
+                  <button type="submit" class="btn btn-primary" name="btn-login" id="btn-login">Iniciar Sesión</button>
+                <a class="reset_pass" href="#signup">Restaurar Contraseña</a>
               </div>
 
               <div class="clearfix"></div>
 
-              <div class="separator">
-                <p class="change_link">New to site?
-                  <a href="#signup" class="to_register"> Create Account </a>
-                </p>
-
-                <div class="clearfix"></div>
-                <br />
-
-                
-              </div>
+              
             </form>
           </section>
         </div>
 
         <div id="register" class="animate form registration_form">
           <section class="login_content">
-            <form>
-              <h1>Create Account</h1>
+              <form  method="post">
+              <h1>Restaurar Contraseña</h1>
+              <div > <?php echo $result; ?></div>
               <div>
-                <input type="text" class="form-control" placeholder="Username" required="" />
+                  <input type="text" class="form-control" placeholder="Usuario" required="" name="usuario" id="usuario"/>
               </div>
+              
               <div>
-                <input type="email" class="form-control" placeholder="Email" required="" />
-              </div>
-              <div>
-                <input type="password" class="form-control" placeholder="Password" required="" />
-              </div>
-              <div>
-                <a class="btn btn-default submit" href="index4.html">Submit</a>
+                <button type="submit" class="btn btn-primary" name="btn-login_restart" id="btn-login_restart">Iniciar Sesión</button>
               </div>
 
               <div class="clearfix"></div>
 
-              <div class="separator">
-                <p class="change_link">Already a member ?
-                  <a href="#signin" class="to_register"> Log in </a>
-                </p>
-
-                <div class="clearfix"></div>
-                <br />
-
-                <div>
-                  <h1><i class="fa fa-paw"></i> Gentelella Alela!</h1>
-                  <p>©2016 All Rights Reserved. Gentelella Alela! is a Bootstrap 3 template. Privacy and Terms</p>
-                </div>
-              </div>
+              
             </form>
           </section>
         </div>

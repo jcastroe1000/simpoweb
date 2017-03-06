@@ -1,3 +1,6 @@
+<?php
+include "config.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -27,11 +30,16 @@
         <link href="../vendors/starrr/dist/starrr.css" rel="stylesheet">
         <!-- bootstrap-daterangepicker -->
         <link href="../vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+        
 
         <!-- Custom Theme Style -->
         <link href="../build/css/custom.min.css" rel="stylesheet">
         <!--        <link rel="stylesheet" type="text/css" href="../production/css/dataTables.bootstrap.css">-->
         <link href="../production/css/font-face.css"  rel="stylesheet" type="text/css">
+        <link href="../production/css/admin.css"  rel="stylesheet" type="text/css">
+        <link href="../production/css/style1.css"  rel="stylesheet" type="text/css">
+        <link href="../production/css/style_common.css"  rel="stylesheet" type="text/css">
+        
         
         <link rel="stylesheet" type="text/css" href="../production/css/dataTables.css">
         <link rel="stylesheet" type="text/css" href="../production/css/dataTables.boostrap.min.css">
@@ -243,63 +251,58 @@
                         <div class="clearfix"><h2 style="text-align: center;color: black;font-size: 25px" class="Sansation_Regular">Diplomados Registrados</h2></div>
                         <div class="row" style="margin-top: 2%;">
                             <div class="col-md-12 col-sm-12 col-xs-12">
-                                <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
-                                    <thead>
-                                        <tr>
-                                            <th class="Sansation_Bold" style="color: black;text-align: center"s>Nombre</th>
-                                            <th class="Sansation_Bold" style="color: black;text-align: center"s>Dirigido</th>
-                                            <th class="Sansation_Bold" style="color: black;text-align: center"s>Inicio</th>
-                                            <th class="Sansation_Bold" style="color: black;text-align: center"s>Termino</th>
-                                            <th class="Sansation_Bold" style="color: black;text-align: center"s>Fecha Creación</th>
-                                            <th></th>
-                                            
-                                            
-                                        </tr>
-                                    </thead>
-                                    
-                                    <tbody>
-                                        <?php
-                                                        include "./model/conection.php";
-                                                        error_reporting(E_ALL);
-                                                        $res = $mysqli->query("SELECT nombre,dirigido,inicio,termino,fecha_creacion from registro_eventos where seccion = 'diplomado'");
-                                                        $mysqli->close();
-                                                        while ($row = $res->fetch_assoc()):
-                                                            ?>
-                                        <tr>
-                                            <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo $row ['nombre'] ?></td>
-                                            <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo $row ['dirigido'] ?></td>
-                                            <td class="Sans" style="color: #6E6E6E;text-align: center"><?php 
-                                                                                                        $date_inicio=$row ['inicio'];
-                                                                                                        $objeto_DateTime_inicio = date_create_from_format('Y-m-d', $date_inicio);
-                                                                                                        $cadena_nuevo_formato_inicio = date_format($objeto_DateTime_inicio, "d/m/Y");
-                                                                                                        echo $cadena_nuevo_formato_inicio;
-                                                                                                        ?>
-                                            <td class="Sans" style="color: #6E6E6E;text-align: center"><?php 
-                                                                                                        $date_termino=$row ['termino'];
-                                                                                                        $objeto_DateTime_termino = date_create_from_format('Y-m-d', $date_termino);
-                                                                                                        $cadena_nuevo_formato_termino = date_format($objeto_DateTime_termino, "d/m/Y");
-                                                                                                        echo $cadena_nuevo_formato_termino;
-                                                                                                        ?>    
-                                            <td class="Sans" style="color: #6E6E6E;text-align: center"><?php 
-                                                                                                        $date_creation=$row ['fecha_creacion'];
-                                                                                                        $objeto_DateTime_creation = date_create_from_format('Y-m-d', $date_creation);
-                                                                                                        $cadena_nuevo_formato_creation= date_format($objeto_DateTime_creation, "d/m/Y");
-                                                                                                        echo $cadena_nuevo_formato_creation;
-                                                                                                        ?>        
-                                            
-                                            
-                                            </td>
-                                            
-                                                
-                                            <td class="Sans" style="color: #FF0000;text-align: center">Eliminar        <i class="fa fa-trash"></i></td>
-                                            
-                                            
-                                        </tr>
-                                        <?php
-                                                        endwhile;
-                                                        ?> 
-                                    </tbody>
-                                </table>
+                                <div class="masonry-gallery">
+          
+        <div class="row-fluid sortable">
+          <div class="box span12">
+            <div class="box-header" data-original-title>
+              <h2><i class="halflings-icon white picture"></i><span class="break"></span></h2>
+              <div class="box-icon">
+                <a href="#" class="btn-minimize"><i class="halflings-icon white chevron-up"></i></a>
+              </div>
+            </div>
+            <div class="box-content">
+              <div class="masonry-gallery">
+                <?php
+                  $res2 = $mysqli2->query("SELECT * FROM registro_eventos WHERE seccion='curso'");
+                  while ($row2 = $res2->fetch_assoc()) {
+                    $path2= 'gallery/album/' . $row2['ruta'];
+                  ?>
+                <div class="masonry-thumb view view-first">
+                  <img class="example-image" src="<?php echo $path2= 'gallery/album/' . $row2['ruta'];?>" />
+                  <div class="mask">
+                    <h2><?php echo $row2['nombre']?></h2>
+                    <p><?php echo $row2['id']?></p>
+                    <a button type="button" href="#<?php echo $row2['id'] ?>" data-toggle="modal" class="btn btn-danger"  > <i class="icon-trash"></i> Eliminar</a>
+                    <a button type="button" href="<?php echo $path2= 'php/album/' . $row2['file'];?>" class="example-image-link btn btn-primary"  data-lightbox="example-set" ><i class="icon-zoom-in"></i> Zoom</a>
+                    <a class="btn btn-lg btn-success mar-toptable" href="update_photo.php?u=<?php echo $row2['id'] ?>"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Editar</a>
+                  </div>
+                  <div class="modal fade" id="<?php echo $row2['id'] ?>" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true" >
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                          <h4 class="modal-title" id="myModalLabel">Atención</h4>
+                        </div>
+                        <div class="modal-body">
+                          <h3>¿Estas seguro de eliminar el contenido?</h3>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="icon-ban-circle"></i>&nbsp;Cerrrar</button>
+                          <a href="Delete_Photo.php?d=<?php echo $row2['id']?>&f=<?php echo $row2['file']?>"><button type="button" class="btn btn-success"><i class="icon-ok"></i>Aceptar</button></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <?php	}	?>
+                
+                               </div>            
                             </div>
                         </div> 
 

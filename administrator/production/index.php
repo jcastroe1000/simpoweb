@@ -1,3 +1,15 @@
+<?php
+header("Content-Type: text/html;charset=utf-8");
+  include "config.php";
+  error_reporting(E_ALL);
+  session_start();
+  if (!isset($_SESSION['user_name'])) {
+      header("Location:login.php");
+  }
+  $user_name = $_SESSION['user_name'];
+
+ 
+  ?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -45,7 +57,7 @@
 
                             <div class="profile_info">
                                 <span>Bienvenido (a)</span>
-                                <h2>Nombre Completo del Usuario</h2>
+                                <h2><?php echo utf8_encode($user_name); ?></h2>
                             </div>
                         </div>
                         <!-- /menu profile quick info -->
@@ -66,7 +78,7 @@
                                         </ul>
                                         
                                     </li>
-                                    <li><a href="javascript:void(0)"><i class="fa fa-arrow-circle-up"></i> Registro </a></li>
+                                    <li><a href="services.php"><i class="fa fa-arrow-circle-up"></i> Registro </a></li>
 
                                     
                                     <li><a><i class="fa fa-cogs"></i>Secciones <span class="fa fa-chevron-down"></span></a>
@@ -133,12 +145,12 @@
                             <ul class="nav navbar-nav navbar-right">
                                 <li class="">
                                     <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                        Nombre...
+                                        <?php echo utf8_encode($user_name);?>
                                         <span class=" fa fa-angle-down"></span>
                                     </a>
                                     <ul class="dropdown-menu dropdown-usermenu pull-right">
 
-                                        <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i>Cerrar Sesión</a></li>
+                                        <li><a href="logout.php?logout"><i class="fa fa-sign-out pull-right"></i>Cerrar Sesión</a></li>
                                     </ul>
                                 </li>
 
