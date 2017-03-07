@@ -1,4 +1,5 @@
 
+
 <?php
 $mysqli = new mysqli("localhost", "root", "", "simpoweb");
     if ($mysqli->connect_errno) {
