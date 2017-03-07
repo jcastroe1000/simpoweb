@@ -11,7 +11,7 @@
 if (isset($_POST['btn-login'])) {
         $email = base64_decode($_GET['user']);
         $new_pass = $_POST['pass1'];
-        $stmt = $mysqli->prepare("UPDATE Users SET password=? WHERE user=?");
+        $stmt = $mysqli->prepare("UPDATE administrator SET password=? WHERE email=?");
         $stmt->bind_param('ss', $new_pass, $email);
         
         if ($stmt->execute()):
@@ -89,7 +89,8 @@ if (isset($_POST['btn-login'])) {
                 }
                 if (p1 != p2) {
                       
-                $('#messages_content').html('<div class="alert alert-error">Las constraseñas no coniciden</div>');
+                $('#messages_content').html('<div class="alert alert-error">Las constraseñas no coniciden,intentalo de nuevo</div>');
+                  document.querySelector("form").reset();
                 
   return false;
 } else {
