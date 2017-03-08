@@ -1,5 +1,4 @@
-<?php
-header("Content-Type: text/html;charset=utf-8");
+<?php header("Content-Type: text/html;charset=utf-8");
   include "config.php";
   error_reporting(E_ALL);
   session_start();
@@ -186,13 +185,13 @@ header("Content-Type: text/html;charset=utf-8");
                         <div class="col-md-12 col-sm-12 col-xs-12">
                             <div class="x_panel">
                                 <div class="">
-                                    <h2 style="text-align: center;color: black;font-size: 20px;" class="Sansation_Regular">REGISTRO DE CURSO</h2>
+                                    <h2 style="text-align: center;color: black;font-size: 20px;" class="Sansation_Regular">REGISTRAR DIPLOMADO</h2>
 
                                     <div class="clearfix"></div>
                                 </div>
                                 <div class="x_content">
 
-                                    <form id="subir_curso" name="subir_curso"  class="form-horizontal form-label-left">
+                                    <form id="upload_diplomat" name="upload_diplomat"  class="form-horizontal form-label-left">
                                         <div class="form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="first-name" style="color: black">Nombre:</label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
@@ -235,7 +234,7 @@ header("Content-Type: text/html;charset=utf-8");
                                           <div class="form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-6 FolksDecoon" style="color: black">Inicio:</label>
                                             <div class="col-md-33 ">
-                                                <input  id="date_start"  name="date_start"  cladss="date-picker form-control col-md-33" type="date">
+                                                <input  id="date_start"  name="date_start"  class="date-picker form-control col-md-33" type="date">
                                             </div>
                                             <label class="control-label col-md-1 col-sm-1 col-xs-1 FolksDecoon" style="color: black">Término:</label>
                                             <div class="col-md-33">
@@ -328,7 +327,7 @@ header("Content-Type: text/html;charset=utf-8");
             <!-- bootstrap-daterangepicker -->
             <script src="../vendors/moment/min/moment.min.js"></script>
             <script src="../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
-            <script src="../production/js/upload_course.js" >
+            <script src="../production/js/upload_diplomat.js" >
             <script src="../production/js/bootbox.js"></script>
             <script src="../production/js/bootbox.min.js"></script>
             <!-- Custom Theme Scripts -->
