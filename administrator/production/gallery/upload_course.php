@@ -11,6 +11,7 @@
     $cost=$_GET['cost'];
     $creation_date=$_GET['creation_date'];
     $foto = trim($_FILES['course_image']['name']);
+    $created_by=$_GET['created_by'];
     $section='curso';
     $filename = "";
     if ($_FILES['course_image']['size'] <= 2097152) {
@@ -21,8 +22,8 @@
         error_log($filename, 0);
         error_log("Despues de cambiar el nombre", 0);
         // Guardamos la imagen (titulo, archivo, fecha de creacion)
-        $query1 = "INSERT INTO registro_eventos(nombre,dirigido, objetivo, duracion, modalidad,inicio,termino,costo,ruta,fecha_creacion,seccion) "
-                . "VALUES ('$course_name', '$addressed', '$objetive', '$duration', '$modality', '$date_start', '$date_finish', '$cost', '$filename', '$creation_date','$section')";
+        $query1 = "INSERT INTO registro_eventos(nombre,dirigido, objetivo, duracion, modalidad,inicio,termino,costo,ruta,fecha_creacion,seccion,usuario) "
+                . "VALUES ('$course_name', '$addressed', '$objetive', '$duration', '$modality', '$date_start', '$date_finish', '$cost', '$filename', '$creation_date','$section','$created_by')";
         mysqli_query($mysqli, $query1);
         error_log("Despues del primer insert", 0);
         // Movemos el archivo

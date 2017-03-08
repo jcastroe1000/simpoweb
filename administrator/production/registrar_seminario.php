@@ -1,3 +1,16 @@
+<?php
+header("Content-Type: text/html;charset=utf-8");
+  include "config.php";
+  error_reporting(E_ALL);
+  session_start();
+  if (!isset($_SESSION['user_name'])) {
+      header("Location:login.php");
+  }
+  $user_name = $_SESSION['user_name'];
+
+ 
+  ?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -59,7 +72,7 @@
 
                             <div class="profile_info">
                                 <span>Bienvenido (a)</span>
-                                <h2>Nombre Completo del Usuario</h2>
+                                <h2><?php echo utf8_encode($user_name);?></h2>
                             </div>
                         </div>
                         <!-- /menu profile quick info -->
@@ -148,12 +161,12 @@
                             <ul class="nav navbar-nav navbar-right">
                                 <li class="">
                                     <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                        Nombre...
+                                       <?php echo utf8_encode($user_name);?>
                                         <span class=" fa fa-angle-down"></span>
                                     </a>
                                     <ul class="dropdown-menu dropdown-usermenu pull-right">
 
-                                        <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i>Cerrar Sesión</a></li>
+                                        <li><a href="login.php?logout"><i class="fa fa-sign-out pull-right"></i>Cerrar Sesión</a></li>
                                     </ul>
                                 </li>
 
@@ -173,36 +186,40 @@
                         <div class="col-md-12 col-sm-12 col-xs-12">
                             <div class="x_panel">
                                 <div class="">
-                                    <h2 style="text-align: center;color: black;font-size: 20px;" class="Sansation_Regular">REGISTRAR SEMINARIO</h2>
+                                    <h2 style="text-align: center;color: black;font-size: 20px;" class="Sansation_Regular">REGISTRO DE CURSO</h2>
 
                                     <div class="clearfix"></div>
                                 </div>
                                 <div class="x_content">
 
-                                    <form id="upload_seminar" name="upload_seminar"  class="form-horizontal form-label-left">
+                                    <form id="subir_curso" name="subir_curso"  class="form-horizontal form-label-left">
                                         <div class="form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="first-name" style="color: black">Nombre:</label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <input type="text" id="course_name" name="course_name" class="form-control col-md-7 col-xs-12" title="ingresa el nombre del curso">
+                                                <input type="text" id="course_name" name="course_name" class="form-control col-md-7 col-xs-12" >
+<!--                                                        pattern="[A-Za-z]" title="Solo se permiten letras">-->
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="last-name" style="color: black">Dirigido a:</label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
                                                 <textarea type="text" id="addressed" name="addressed" class="form-control col-md-7 col-xs-12"></textarea>
+<!--                                                          pattern="[A-Za-z]" title="Solo se permiten letras"></textarea>-->
                                             </div>
                                         </div>
                                                             <div class="form-group">
                                               <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" style="color: black">Objetivo:</label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
                                                 <textarea id="objetive" name="objetive" class="form-control col-md-7 col-xs-12" rows="6" type="text" name="middle-name"></textarea>
+<!--                                                          pattern="[A-Za-z]" title="Solo se permiten letras"></textarea>-->
                                             </div>
                                           </div>
                                           
                                           <div class="form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-6 FolksDecoon" style="color: black">Duración:</label>
                                             <div class="col-md-33 ">
-                                                <input id="time_duration" name="time_duration" class="date-picker form-control col-md-33" type="text">
+                                                <input id="time_duration" name="time_duration" class="date-picker form-control col-md-33" type="text"
+                                                       pattern="[0-9]" title="Ingresa solo números">
                                             </div>
                                             <label class="control-label col-md-1 col-sm-1 col-xs-1 FolksDecoon" style="color: black">Modalidad:</label>
                                             <div class="col-md-33 ">
@@ -229,11 +246,15 @@
                                            <div class="form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-6 FolksDecoon" style="color: black">Costo:</label>
                                             <div class="col-md-33 ">
-                                                <input id="cost" name="cost" class="date-picker form-control col-md-33"  type="text">
+                                                <input id="cost" name="cost" class="date-picker form-control col-md-33"  type="text"
+                                                        pattern="[0-9]" title="Ingresa solo números">
                                             </div>
                                            </div>
                                             <div class="form-group">
                                                 <input type="hidden" type="text" class="form-control" name="creation_date" id="creation_date" value="<?php echo date("Y/m/d") ?>">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="hidden" type="text" class="form-control" name="created_by" id="created_by" value="<?php echo $user_name?>">
                                             </div>
                                             <div class="form-group">
                                                 
@@ -307,7 +328,7 @@
             <!-- bootstrap-daterangepicker -->
             <script src="../vendors/moment/min/moment.min.js"></script>
             <script src="../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
-            <script src="../production/js/upload_seminar.js" >
+            <script src="../production/js/upload_course.js" >
             <script src="../production/js/bootbox.js"></script>
             <script src="../production/js/bootbox.min.js"></script>
             <!-- Custom Theme Scripts -->

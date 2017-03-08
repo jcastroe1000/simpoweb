@@ -196,22 +196,22 @@ header("Content-Type: text/html;charset=utf-8");
                                         <div class="form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="first-name" style="color: black">Nombre:</label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <input type="text" id="course_name" name="course_name" class="form-control col-md-7 col-xs-12" 
-                                                        pattern="[A-Za-z]" title="Solo se permiten letras">
+                                                <input type="text" id="course_name" name="course_name" class="form-control col-md-7 col-xs-12" >
+<!--                                                        pattern="[A-Za-z]" title="Solo se permiten letras">-->
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="last-name" style="color: black">Dirigido a:</label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <textarea type="text" id="addressed" name="addressed" class="form-control col-md-7 col-xs-12"
-                                                          pattern="[A-Za-z]" title="Solo se permiten letras"></textarea>
+                                                <textarea type="text" id="addressed" name="addressed" class="form-control col-md-7 col-xs-12"></textarea>
+<!--                                                          pattern="[A-Za-z]" title="Solo se permiten letras"></textarea>-->
                                             </div>
                                         </div>
                                                             <div class="form-group">
                                               <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" style="color: black">Objetivo:</label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <textarea id="objetive" name="objetive" class="form-control col-md-7 col-xs-12" rows="6" type="text" name="middle-name"
-                                                          pattern="[A-Za-z]" title="Solo se permiten letras"></textarea>
+                                                <textarea id="objetive" name="objetive" class="form-control col-md-7 col-xs-12" rows="6" type="text" name="middle-name"></textarea>
+<!--                                                          pattern="[A-Za-z]" title="Solo se permiten letras"></textarea>-->
                                             </div>
                                           </div>
                                           
@@ -252,6 +252,9 @@ header("Content-Type: text/html;charset=utf-8");
                                            </div>
                                             <div class="form-group">
                                                 <input type="hidden" type="text" class="form-control" name="creation_date" id="creation_date" value="<?php echo date("Y/m/d") ?>">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="hidden" type="text" class="form-control" name="created_by" id="created_by" value="<?php echo $user_name?>">
                                             </div>
                                             <div class="form-group">
                                                 
