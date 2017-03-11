@@ -192,7 +192,7 @@ header("Content-Type: text/html;charset=utf-8");
                                 </div>
                                 <div class="x_content">
 
-                                    <form  class="form-horizontal form-label-left" action="model/register.php" method="post">
+                                    <form  id="create_admin" name="create_admin" class="form-horizontal form-label-left" >
                                         <div class="form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="first-name" style="color: black">Nombre:</label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
@@ -227,8 +227,7 @@ header("Content-Type: text/html;charset=utf-8");
                                                 
                                                  
                                                  
-                                            
-                                        <div class="ln_solid"></div>
+                                          
                                         <div class="form-group">
                                             <div class="col-md-7 col-sm-7 col-xs-12 col-md-offset-4">
                                                 <button class="btn btn-danger">Cancel</button>
@@ -292,7 +291,7 @@ header("Content-Type: text/html;charset=utf-8");
             <!-- bootstrap-daterangepicker -->
             <script src="../vendors/moment/min/moment.min.js"></script>
             <script src="../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
-            <script src="../production/js/upload_course.js" >
+            <script src="../production/js/create_admin.js" >
             <script src="../production/js/bootbox.js"></script>
             <script src="../production/js/bootbox.min.js"></script>
             <!-- Custom Theme Scripts -->
