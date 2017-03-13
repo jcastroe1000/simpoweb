@@ -52,7 +52,7 @@ header("Content-Type: text/html;charset=utf-8");
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-body" style="text-align: center;padding:20px">
-            <h3>Subiendo imagen...</h3>
+            <h3>Registrado Usuario</h3>
           </div>
         </div>
       </div>
