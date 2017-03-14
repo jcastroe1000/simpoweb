@@ -52,7 +52,7 @@ header("Content-Type: text/html;charset=utf-8");
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-body" style="text-align: center;padding:20px">
-            <h3>Registrado Usuario</h3>
+            <h3>Registrado Usuario......</h3>
           </div>
         </div>
       </div>
@@ -228,8 +228,8 @@ header("Content-Type: text/html;charset=utf-8");
                                                  
                                                  
                                           
-                                        <div class="form-group">
-                                            <div class="col-md-7 col-sm-7 col-xs-12 col-md-offset-4">
+                                        <div class="form-group"  style="padding-top: 50px">
+                                            <div class="col-md-8 col-sm-8 col-xs-12 col-md-offset-5">
                                                 <button class="btn btn-danger">Cancel</button>
                                                 <button type="submit" class="btn btn-success">Añadir</button>
                                             </div>

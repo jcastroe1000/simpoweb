@@ -19,10 +19,11 @@ $(function () {
                 },
                 success: function (data) {
                     if (data.status == 'success') {
-                        bootbox.alert({
-                            message: "Correcto",
-                            backdrop: false
-                        });
+                        $('#cargando h3').text('Operador Registrado Exitosamente.');
+                        setTimeout(function () {
+                    $(location).attr('href', 'administradores.php');
+                }, 2000);
+                        
                     } else if (data.status == 'error') {
                          setTimeout(function () {
                     $('#cargando').modal('hide');
@@ -43,7 +44,7 @@ $(function () {
 //});
 //                }).hide(300);
                     }
-                }
+                },
             });
             return false;
 
