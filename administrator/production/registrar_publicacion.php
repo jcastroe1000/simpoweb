@@ -1,12 +1,12 @@
 <?php
-header("Content-Type: text/html;charset=utf-8");
-  include "config.php";
-  error_reporting(E_ALL);
-  session_start();
-  if (!isset($_SESSION['user_name'])) {
-      header("Location:login.php");
-  }
-  $user_name = $_SESSION['user_name'];
+//header("Content-Type: text/html;charset=utf-8");
+//  include "config.php";
+  //error_reporting(E_ALL);
+  //session_start();
+  //if (!isset($_SESSION['user_name'])) {
+   //   header("Location:login.php");
+  //}
+  //$user_name = $_SESSION['user_name'];
 
  
   ?>
@@ -20,7 +20,7 @@ header("Content-Type: text/html;charset=utf-8");
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Registrar Administrador</title>
+        <title>Registrar Publicación</title>
 
         <!-- Bootstrap -->
         <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -72,7 +72,7 @@ header("Content-Type: text/html;charset=utf-8");
 
                             <div class="profile_info">
                                 <span>Bienvenido (a)</span>
-                                <h2><?php echo utf8_encode($user_name);?></h2>
+                                <h2><?php //echo utf8_encode($user_name);?></h2>
                             </div>
                         </div>
                         <!-- /menu profile quick info -->
@@ -186,41 +186,50 @@ header("Content-Type: text/html;charset=utf-8");
                         <div class="col-md-12 col-sm-12 col-xs-12">
                             <div class="x_panel">
                                 <div class="">
-                                    <h2 style="text-align: center;color: black;font-size: 20px;" class="Sansation_Regular">REGISTRO ADMINISTRADOR</h2>
+                                    <h2 style="text-align: center;color: black;font-size: 20px;" class="Sansation_Regular">REGISTRAR PUBLICACIÓN</h2>
 
                                     <div class="clearfix"></div>
                                 </div>
                                 <div class="x_content">
 
-                                    <form  id="create_admin" name="create_admin" class="form-horizontal form-label-left" >
+                                    <form  id="upload_publication" name="upload_publication" class="form-horizontal form-label-left" >
                                         <div class="form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="first-name" style="color: black">Nombre:</label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <input type="text" id="name" name="name" class="form-control col-md-7 col-xs-12" 
+                                                <input type="text" id="name" name="publication_name" class="form-control col-md-7 col-xs-12" 
                                                         >
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="first-name" style="color: black">Apellido Paterno:</label>
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="first-name" style="color: black">Dirigido:</label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <input type="text" id="apellido_paterno" name="apellido_paterno" class="form-control col-md-7 col-xs-12" 
-                                                        >
+                                                <textarea type="text" id="apellido_paterno" name="addressed" class="form-control col-md-7 col-xs-12" ></textarea>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="first-name" style="color: black">Apellido Materno:</label>
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="first-name" style="color: black">Objetivo:</label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <input type="text" id="apellido_materno" name="apellido_materno" class="form-control col-md-7 col-xs-12" 
-                                                       >
+                                                <textarea type="text" id="apellido_materno" name="objetive" class="form-control col-md-7 col-xs-12" ></textarea>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="first-name" style="color: black">Email:</label>
-                                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <input type="email" id="email_admin" name="email_admin" class="form-control col-md-7 col-xs-12" >
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-6 FolksDecoon" style="color: black">Periodicidad:</label>
+                                            <div class="col-md-33 ">
+                                                <input  id="date_start"  name="periodicity"  class="date-picker form-control col-md-33" type="number">
                                             </div>
+                                            <label class="control-label col-md-1 col-sm-1 col-xs-1 FolksDecoon" style="color: black">Costo:</label>
+                                            <div class="col-md-33">
+                                                <input id="date_finish" name="cost" class="date-picker form-control col-md-33" type="text">
+                                            </div>
+                                            
+                                        </div> 
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-6 FolksDecoon" style="color: black">Seleccionar archivo: </label>
+                                                <div class="col-md-6">
+                                                    <input type="file"  id="course_image" name="publication_image" class="file" data-show-preview="false">              
+                                                </div>
+                                                 
                                         </div>
-                                        
                                           
                                           
                                        
