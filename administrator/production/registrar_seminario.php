@@ -48,11 +48,11 @@ header("Content-Type: text/html;charset=utf-8");
     </head>
 
     <body class="nav-md">
-        <div id="cargando" class="modal fade" role="dialog">
+    <div id="cargando" class="modal fade" role="dialog">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-body" style="text-align: center;padding:20px">
-            <h3>Subiendo imagen...</h3>
+            <h3>Guardando Seminario</h3>
           </div>
         </div>
       </div>

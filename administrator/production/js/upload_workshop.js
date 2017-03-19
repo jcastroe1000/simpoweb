@@ -29,13 +29,18 @@ $(function() {
             data: archivos,
             processData: false,
             beforeSend: function() {
-              $('#cargando').modal('show');
+               setTimeout(function () {
+                    $('#cargando').modal('show');
+                }, 2000); 
             },
             success: function (data) {
+                setTimeout(function () {
+                    $('#cargando').modal('show');
+                }, 2000); 
                 $('#cargando h3').text('Imagen subida correctamente.');
                 setTimeout(function () {
                     $(location).attr('href', 'talleres.php');
-                }, 2000);
+                }, 8000);
             },
             error: function(data) {
                 $('#cargando h3').text('Ocurrio un error. Intentalo de nuevo.');

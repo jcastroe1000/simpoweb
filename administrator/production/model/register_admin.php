@@ -39,7 +39,7 @@ if ($admin_email == $row['email']) {
 
     $admin_status = 0;
     $query1 = "INSERT INTO administrator(nombre,apellido_paterno, apellido_materno, email,password,estatus) "
-            . "VALUES ('$admin_email', '$apellido_pat', '$apellido_mat', '$admin_email', '$tem_pass', '$admin_status')";
+            . "VALUES ('$admin_name', '$apellido_pat', '$apellido_mat', '$admin_email', '$tem_pass', '$admin_status')";
     mysqli_query($mysqli, $query1);
 
 //Cerramos la conexion

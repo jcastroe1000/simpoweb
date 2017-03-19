@@ -196,37 +196,42 @@
                                         <div class="form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="first-name" style="color: black">Nombre:</label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <input type="text" id="name" name="publication_name" class="form-control col-md-7 col-xs-12" 
-                                                        >
+                                                <input type="text" id="publication_name" name="publication_name" class="form-control col-md-7 col-xs-12">
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="first-name" style="color: black">Dirigido:</label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <textarea type="text" id="apellido_paterno" name="addressed" class="form-control col-md-7 col-xs-12" ></textarea>
+                                                <textarea type="text" id="addressed" name="addressed" class="form-control col-md-7 col-xs-12" ></textarea>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="first-name" style="color: black">Objetivo:</label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <textarea type="text" id="apellido_materno" name="objetive" class="form-control col-md-7 col-xs-12" ></textarea>
+                                                <textarea type="text" id="objetive" name="objetive" class="form-control col-md-7 col-xs-12" ></textarea>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-6 FolksDecoon" style="color: black">Periodicidad:</label>
                                             <div class="col-md-33 ">
-                                                <input  id="date_start"  name="periodicity"  class="date-picker form-control col-md-33" type="number">
+                                                <input  id="periodicity"  name="periodicity"  class="date-picker form-control col-md-33" type="number">
                                             </div>
                                             <label class="control-label col-md-1 col-sm-1 col-xs-1 FolksDecoon" style="color: black">Costo:</label>
                                             <div class="col-md-33">
-                                                <input id="date_finish" name="cost" class="date-picker form-control col-md-33" type="text">
+                                                <input id="cost" name="cost" class="date-picker form-control col-md-33" type="text">
                                             </div>
                                             
-                                        </div> 
+                                        </div>
+                                        <div class="form-group">
+                                                <input type="hidden" type="text" class="form-control" name="creation_date" id="creation_date" value="<?php echo date("Y/m/d") ?>">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="hidden" type="text" class="form-control" name="created_by" id="created_by" value="yos">
+                                            </div>
                                         <div class="form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-6 FolksDecoon" style="color: black">Seleccionar archivo: </label>
                                                 <div class="col-md-6">
-                                                    <input type="file"  id="course_image" name="publication_image" class="file" data-show-preview="false">              
+                                                    <input type="file"  id="publication_image" name="publication_image" class="file" data-show-preview="false">              
                                                 </div>
                                                  
                                         </div>
@@ -300,7 +305,7 @@
             <!-- bootstrap-daterangepicker -->
             <script src="../vendors/moment/min/moment.min.js"></script>
             <script src="../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
-            <script src="../production/js/create_admin.js" >
+            <script src="../production/js/upload_publication.js" >
             <script src="../production/js/bootbox.js"></script>
             <script src="../production/js/bootbox.min.js"></script>
             <!-- Custom Theme Scripts -->

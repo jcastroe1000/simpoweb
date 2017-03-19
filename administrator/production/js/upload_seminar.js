@@ -29,13 +29,20 @@ $(function() {
             data: archivos,
             processData: false,
             beforeSend: function() {
-              $('#cargando').modal('show');
+                setTimeout(function () {
+                    $('#cargando').modal('show');
+                }, 2000);
             },
             success: function (data) {
-                $('#cargando h3').text('Seminario creado de manera exitosa');
+                
                 setTimeout(function () {
+                    $('#cargando h3').text('Seminario creado de manera exitosa');
+                    
+                }, 8000);
+                setTimeout(function () {
+                    
                     $(location).attr('href', 'seminarios.php');
-                }, 2000);
+                }, 13000);
             },
             error: function(data) {
                 $('#cargando h3').text('Ocurrio un error. Intentalo de nuevo.');
