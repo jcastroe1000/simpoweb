@@ -295,7 +295,7 @@
             <!-- bootstrap-daterangepicker -->
             <script src="../vendors/moment/min/moment.min.js"></script>
             <script src="../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
-            <script src="../production/js/create_admin.js" >
+            <script src="../production/js/create_admin.js" ></script>
             <script src="../production/js/bootbox.js"></script>
             <script src="../production/js/bootbox.min.js"></script>
             <!-- Custom Theme Scripts -->
@@ -535,7 +535,7 @@ tickColor: "rgba(51, 51, 51, 0.06)",
                                                         <!-- gauge.js -->
                                                     <script>
                 var opts = {
-                                                                                                                                                                                   lines: 12,
+                           lines: 12,
                                                                                                                                                                                   angle: 0,
                                                                                                                                                                                         lineWidth: 0.4,
                                                                                                                                                                                    pointer: {
@@ -557,6 +557,7 @@ tickColor: "rgba(51, 51, 51, 0.06)",
                                 gauge.setTextFi                                                            eld(document.getElementById("gauge-text"))                                                            ;
                                 <                                                            /script>
                 <!-- Switchery -->
+                                                            </script>
                                                             <script src="../vendors/switchery/dist/switchery.min.js"></script>
                                                             <!-- /gauge.js -->
                                                     </body>

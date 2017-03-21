@@ -10,18 +10,17 @@ header("Content-Type: text/html;charset=utf-8");
 
  
   ?>
+
 <!DOCTYPE html>
 <html lang="en">
-    <hea
-        d>
-        
+    <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <!-- Meta, title, CSS, favicons, etc. -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Servicios </title>
+        <title>Publicaciones Registradas</title>
 
         <!-- Bootstrap -->
         <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -31,17 +30,26 @@ header("Content-Type: text/html;charset=utf-8");
         <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
         <!-- iCheck -->
         <link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
-        <!-- bootstrap-progressbar -->
-        <link href="../vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
-        <!-- JQVMap -->
-        <link href="../vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet"/>
-        <!-- bootstrap-daterangepicker -->
-        <link href="../vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+        <!-- bootstrap-wysiwyg -->
+        <link href="../vendors/google-code-prettify/bin/prettify.min.css" rel="stylesheet">
+        <!-- Select2 -->
+        <link href="../vendors/select2/dist/css/select2.min.css" rel="stylesheet">
         <!-- Switchery -->
         <link href="../vendors/switchery/dist/switchery.min.css" rel="stylesheet">
+        <!-- starrr -->
+        <link href="../vendors/starrr/dist/starrr.css" rel="stylesheet">
+        <!-- bootstrap-daterangepicker -->
+        <link href="../vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+
         <!-- Custom Theme Style -->
         <link href="../build/css/custom.min.css" rel="stylesheet">
-        <link href="../production/css/font-face.css" rel="stylesheet" type="text/css">
+        <!--        <link rel="stylesheet" type="text/css" href="../production/css/dataTables.bootstrap.css">-->
+        <link href="../production/css/font-face.css"  rel="stylesheet" type="text/css">
+        
+        <link rel="stylesheet" type="text/css" href="../production/css/dataTables.css">
+        <link rel="stylesheet" type="text/css" href="../production/css/dataTables.boostrap.min.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/select/1.2.1/css/select.bootstrap.min.css">
+
     </head>
 
     <body class="nav-md">
@@ -50,17 +58,19 @@ header("Content-Type: text/html;charset=utf-8");
                 <div class="col-md-3 left_col">
                     <div class="left_col scroll-view">
                         <div class="navbar nav_title" style="border: 0;">
-                            <a href="index4.html" class="site_title"><i class="fa fa-mortar-board"></i> <span>SimpoWeb!</span></a>
+                            <a href="index4.html" class="site_title"><i class="fa fa-paw"></i> <span>Gentellela Alela!</span></a>
                         </div>
 
                         <div class="clearfix"></div>
 
                         <!-- menu profile quick info -->
                         <div class="profile clearfix">
-
+                            <div class="profile_pic">
+                                <img src="images/img.jpg" alt="..." class="img-circle profile_img">
+                            </div>
                             <div class="profile_info">
                                 <span>Bienvenido (a)</span>
-                                <h2><?php echo utf8_encode($user_name);?></h2>
+                                <h2><?php echo utf8_encode($user_name); ?></h2>
                             </div>
                         </div>
                         <!-- /menu profile quick info -->
@@ -72,7 +82,6 @@ header("Content-Type: text/html;charset=utf-8");
                             <div class="menu_section">
                                 <h3>General</h3>
                                 <ul class="nav side-menu">
-                                    <li><a href="javascript:void(0)"><i class="fa fa-arrow-circle-up"></i> Registro </a></li>
 
                                     <li><a><i class="fa fa-group"></i> Usuarios <span class="fa fa-chevron-down"></span></a>
                                         <ul class="nav child_menu">
@@ -82,7 +91,7 @@ header("Content-Type: text/html;charset=utf-8");
                                         </ul>
                                         
                                     </li>
-                                    
+                                    <li><a href="services.php"><i class="fa fa-arrow-circle-up"></i> Registro </a></li>
 
                                     
                                     <li><a><i class="fa fa-cogs"></i>Secciones <span class="fa fa-chevron-down"></span></a>
@@ -149,16 +158,86 @@ header("Content-Type: text/html;charset=utf-8");
                             <ul class="nav navbar-nav navbar-right">
                                 <li class="">
                                     <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                        <?php echo utf8_encode($user_name);?>
+                                        <img src="images/img.jpg" alt="">John Doe
                                         <span class=" fa fa-angle-down"></span>
                                     </a>
                                     <ul class="dropdown-menu dropdown-usermenu pull-right">
-
-                                        <li><a href="logout.php?logout"><i class="fa fa-sign-out pull-right"></i>Cerrar Sesión</a></li>
+                                        <li><a href="javascript:;"> Profile</a></li>
+                                        <li>
+                                            <a href="javascript:;">
+                                                <span class="badge bg-red pull-right">50%</span>
+                                                <span>Settings</span>
+                                            </a>
+                                        </li>
+                                        <li><a href="javascript:;">Help</a></li>
+                                        <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                                     </ul>
                                 </li>
 
-
+                                <li role="presentation" class="dropdown">
+                                    <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
+                                        <i class="fa fa-envelope-o"></i>
+                                        <span class="badge bg-green">6</span>
+                                    </a>
+                                    <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
+                                        <li>
+                                            <a>
+                                                <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                                                <span>
+                                                    <span>John Smith</span>
+                                                    <span class="time">3 mins ago</span>
+                                                </span>
+                                                <span class="message">
+                                                    Film festivals used to be do-or-die moments for movie makers. They were where...
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a>
+                                                <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                                                <span>
+                                                    <span>John Smith</span>
+                                                    <span class="time">3 mins ago</span>
+                                                </span>
+                                                <span class="message">
+                                                    Film festivals used to be do-or-die moments for movie makers. They were where...
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a>
+                                                <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                                                <span>
+                                                    <span>John Smith</span>
+                                                    <span class="time">3 mins ago</span>
+                                                </span>
+                                                <span class="message">
+                                                    Film festivals used to be do-or-die moments for movie makers. They were where...
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a>
+                                                <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                                                <span>
+                                                    <span>John Smith</span>
+                                                    <span class="time">3 mins ago</span>
+                                                </span>
+                                                <span class="message">
+                                                    Film festivals used to be do-or-die moments for movie makers. They were where...
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <div class="text-center">
+                                                <a>
+                                                    <strong>See All Alerts</strong>
+                                                    <i class="fa fa-angle-right"></i>
+                                                </a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
                             </ul>
                         </nav>
                     </div>
@@ -167,125 +246,73 @@ header("Content-Type: text/html;charset=utf-8");
 
                 <!-- page content -->
                 <div class="right_col" role="main">
-                    <!-- top tiles -->
-                    <div class="row">
-                               <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <div class="x_panel">
-                                        <div class="">
-                                            <h2 style="text-align: center;color: black;font-size: 25px" class="Sansation_Regular">¿Qué deseas registrar?</h2>
-                                           
-                                            <div class="clearfix"></div>
-                                        </div>
-                                          <div class="x_content">
+                    <div class="">
+                        <div class="page-title">
+                            <div class="title_left">
 
-                                            <div class="row" style="padding-top: 30px">
-                                                
-                                                <div class="tile_count" >
-                                                <div class="animated flipInY col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                                                    <div class="tile-stats" style="height: 120px"> 
-                                                        <a href="registrar_seminario.php">
-                                                        <br>
-                                                        <h3 style="color: black;text-align: center" class="Architects">Seminario</h3>
-                                                        <br>
-                                                        <i class="fa fa-graduation-cap color blue fa-3x" style="padding-left:45%"></i>
-                                                        </a>
-                                                    </div>
-                                                </div>
+                            </div>
 
-                                            </div>
-                                            <div class="tile_count">
-                                                <div class="animated flipInY col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                                                    <div class="tile-stats" style="height: 120px">
-                                                        <a href="registrar_curso.php">
-                                                        <br>
-                                                        <h3  style="color: #000;text-align: center" class="Architects">Curso</h3>
-                                                        <br>
-                                                        <i class="fa fa-laptop color blue fa-3x" style="padding-left: 45%"></i>
-                                                        </a>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-
-                                            <div class="tile_count">
-                                                <div class="animated flipInY col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                                                    <div class="tile-stats" style="height: 120px">
-                                                        <a href="registrar_taller.php">
-                                                        <br>
-                                                        <h3  style="color: #000;text-align: center" class="Architects">Taller</h3>
-                                                        <br>
-                                                        <i class="fa fa-university color blue fa-3x" style="padding-left: 45%"></i>
-                                                        </a>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                            <div class="tile_count">
-                                                <div class="animated flipInY col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                                                    <div class="tile-stats" style="height: 120px">
-                                                        <a href="registrar_diplomado.php">
-                                                        <br>
-                                                        <h3  style="color: #000;text-align: center" class="Architects">Diplomado</h3>
-                                                        <br>
-                                                        <i class="fa fa-briefcase color blue fa-3x" style="padding-left: 45%"></i>
-                                                        </a>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                                
-                                            </div>
-
+                            <div class="title_right">
+                                
+                            </div>
+                        </div>
+                        <div class="clearfix"><h2 style="text-align: center;color: black;font-size: 25px" class="Sansation_Regular">Operadores  Registrados</h2></div>
+                        <div class="row" style="margin-top: 2%;">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                                    <thead>
+                                        <tr>
+                                            <th class="Sansation_Bold" style="color: black;text-align: center">Nombre del Operador</th>
+                                            <th class="Sansation_Bold" style="color: black;text-align: center">Email</th>
+                                            <th class="Sansation_Bold" style="color: black;text-align: center">Fecha de Creación</th>
+                                            <th class="Sansation_Bold" style="color: black;text-align: center">Estatus</th>
+                                            <th></th>
+                                            <th></th>
                                             
-                                            <div class="row" style="padding-top: 80px">
-                                                <div class="tile_count">
-                                                <div class="animated flipInY col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                                                    <div class="tile-stats" style="height: 120px">
-                                                        
-                                                        
-                                                        <br>
-                                                        <h3 style="color: black;text-align: center" class="Architects">Publicación</h3>
-                                                        <br>
-                                                        <i class="fa fa-book color blue fa-3x" style="padding-left: 50%"></i>
-                                                        
-                                                    </div>
-                                                </div>
+                                            
+                                        </tr>
+                                    </thead>
+                                    
+                                    <tbody>
+                                        <?php
+                                                        include "./model/conection.php";
+                                                        error_reporting(E_ALL);
+                                                        $res = $mysqli->query("SELECT nombre,apellido_paterno,apellido_materno,email,creation_date,estatus from administradores");
+                                                        $mysqli->close();
+                                                        while ($row = $res->fetch_assoc()):
+                                                            ?>
+                                        <tr>
+                                            <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo utf8_encode($row ['nombre']); ?></td>
+                                            <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo $row ['email'] ?></td>
+                                            <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo $row ['creation_date'] ?></td>
+                                            <td class="Sans" style="color: #6E6E6E;text-align: center">
+                                                <?php if ( $row ['estatus'] == 0){
+                                                      echo 'Pendiente';
+                                                } elseif ($row ['estatus'] == 1) {
+                                                    echo 'Activo';
+                                                } elseif ($row ['estatus'] == 2) {
+                                                    echo 'Bloqueado';    
+                                                }?>
+                                            </td>
+                                            <td class="Sans" style="color: #04B404;text-align: center">Detalles        <i class="fa fa-plus"></i></td>
+                                            <td class="Sans" style="color: #FF0000;text-align: center">Eliminar        <i class="fa fa-trash"></i></td>
+                                            
+                                            
+                                        </tr>
+                                        <?php
+                                                        endwhile;
+                                                        ?> 
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div> 
 
-                                            </div>
-                                            <div class="tile_count">
-                                                <div class="animated flipInY col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                                                    <div class="tile-stats" style="height: 120px">
-                                                        <br>
-                                                        <h3 style="color: black;text-align:center" class="Architects">Servicio Empresarial</h3>
-                                                        <br>
-                                                        <i class="fa fa-building color blue fa-3x" style="padding-left: 50%"></i>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                            <div class="tile_count">
-                                                <div class="animated flipInY col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                                                    <div class="tile-stats" style="height: 120px" class="color blue center-block">
-                                                        <br>
-                                                        <h3 style="color: black;text-align: center" class="Architects">Simposium</h3>
-                                                        <br>
-                                                        <i class="fa fa-gavel color blue fa-3x" style="padding-left: 50%;"></i>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-                                </div>
+                      
+                        <!-- footer content -->
                         
-                    </div>        
+                        <!-- /footer content -->
+                    </div>
 
-
-                    
                 </div>
 
                 <!-- jQuery -->
@@ -296,291 +323,255 @@ header("Content-Type: text/html;charset=utf-8");
                 <script src="../vendors/fastclick/lib/fastclick.js"></script>
                 <!-- NProgress -->
                 <script src="../vendors/nprogress/nprogress.js"></script>
-                <!-- Chart.js -->
-                <script src="../vendors/Chart.js/dist/Chart.min.js"></script>
-                <!-- gauge.js -->
-                <script src="../vendors/gauge.js/dist/gauge.min.js"></script>
                 <!-- bootstrap-progressbar -->
                 <script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
                 <!-- iCheck -->
                 <script src="../vendors/iCheck/icheck.min.js"></script>
-                <!-- Skycons -->
-                <script src="../vendors/skycons/skycons.js"></script>
-                <!-- Flot -->
-                <script src="../vendors/Flot/jquery.flot.js"></script>
-                <script src="../vendors/Flot/jquery.flot.pie.js"></script>
-                <script src="../vendors/Flot/jquery.flot.time.js"></script>
-                <script src="../vendors/Flot/jquery.flot.stack.js"></script>
-                <script src="../vendors/Flot/jquery.flot.resize.js"></script>
-                <!-- Flot plugins -->
-                <script src="../vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
-                <script src="../vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
-                <script src="../vendors/flot.curvedlines/curvedLines.js"></script>
-                <!-- DateJS -->
-                <script src="../vendors/DateJS/build/date.js"></script>
-                <!-- JQVMap -->
-                <script src="../vendors/jqvmap/dist/jquery.vmap.js"></script>
-                <script src="../vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
-                <script src="../vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
                 <!-- bootstrap-daterangepicker -->
                 <script src="../vendors/moment/min/moment.min.js"></script>
                 <script src="../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+                <!-- bootstrap-wysiwyg -->
+                <script src="../vendors/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js"></script>
+                <script src="../vendors/jquery.hotkeys/jquery.hotkeys.js"></script>
+                <script src="../vendors/google-code-prettify/src/prettify.js"></script>
+                <!-- jQuery Tags Input -->
+                <script src="../vendors/jquery.tagsinput/src/jquery.tagsinput.js"></script>
+                <!-- Switchery -->
+                <script src="../vendors/switchery/dist/switchery.min.js"></script>
+                <!-- Select2 -->
+                <script src="../vendors/select2/dist/js/select2.full.min.js"></script>
+                <!-- Parsley -->
+                <script src="../vendors/parsleyjs/dist/parsley.min.js"></script>
+                <!-- Autosize -->
+                <script src="../vendors/autosize/dist/autosize.min.js"></script>
+                <!-- jQuery autocomplete -->
+                <script src="../vendors/devbridge-autocomplete/dist/jquery.autocomplete.min.js"></script>
+                <!-- starrr -->
+                <script src="../vendors/starrr/dist/starrr.js"></script>
 
                 <!-- Custom Theme Scripts -->
                 <script src="../build/js/custom.min.js"></script>
 
-                <!-- Flot -->
-                <script>
-                    $(document).ready(function () {
-                        var data1 = [
-                            [gd(2012, 1, 1), 17],
-                            [gd(2012, 1, 2), 74],
-                            [gd(2012, 1, 3), 6],
-                            [gd(2012, 1, 4), 39],
-                            [gd(2012, 1, 5), 20],
-                            [gd(2012, 1, 6), 85],
-                            [gd(2012, 1, 7), 7]
-                        ];
-                        var data2 = [
-                            [gd(2012, 1, 1), 82],
-                            [gd(2012, 1, 2), 23],
-                            [gd(2012, 1, 3), 66],
-                            [gd(2012, 1, 4), 9],
-                            [gd(2012, 1, 5), 119],
-                            [gd(2012, 1, 6), 6],
-                            [gd(2012, 1, 7), 9]
-                        ];
-                        $("#canvas_dahs").length && $.plot($("#canvas_dahs"), [
-                            data1, data2
-                        ], {
-                            series: {
-                                lines: {
-                                    show: false,
-                                    fill: true
-                                },
-                                splines: {
-                                    show: true,
-                                    tension: 0.4,
-                                    lineWidth: 1,
-                                    fill: 0.4
-                                },
-                                points: {
-                                    radius: 0,
-                                    show: true
-                                },
-                                shadowSize: 2
-                            },
-                            grid: {
-                                verticalLines: true,
-                                hoverable: true,
-                                clickable: true,
-                                tickColor: "#d5d5d5",
-                                borderWidth: 1,
-                                color: '#fff'
-                            },
-                            colors: ["rgba(38, 185, 154, 0.38)", "rgba(3, 88, 106, 0.38)"],
-                            xaxis: {
-                                tickColor: "rgba(51, 51, 51, 0.06)",
-                                mode: "time",
-                                tickSize: [1, "day"],
-                                //tickLength: 10,
-                                axisLabel: "Date",
-                                axisLabelUseCanvas: true,
-                                axisLabelFontSizePixels: 12,
-                                axisLabelFontFamily: 'Verdana, Arial',
-                                axisLabelPadding: 10
-                            },
-                            yaxis: {
-                                ticks: 8,
-                                tickColor: "rgba(51, 51, 51, 0.06)",
-                            },
-                            tooltip: false
-                        });
-                        function gd(year, month, day) {
-                            return new Date(year, month - 1, day).getTime();
-                        }
-                    });
-                </script>
-                <!-- /Flot -->
-
-                <!-- JQVMap -->
-                <script>
-                    $(document).ready(function () {
-                        $('#world-map-gdp').vectorMap({
-                            map: 'world_en',
-                            backgroundColor: null,
-                            color: '#ffffff',
-                            hoverOpacity: 0.7,
-                            selectedColor: '#666666',
-                            enableZoom: true,
-                            showTooltip: true,
-                            values: sample_data,
-                            scaleColors: ['#E6F2F0', '#149B7E'],
-                            normalizeFunction: 'polynomial'
-                        });
-                    });
-                </script>
-                <!-- /JQVMap -->
-
-                <!-- Skycons -->
-                <script>
-                    $(document).ready(function () {
-                        var icons = new Skycons({
-                            "color": "#73879C"
-                        }),
-                                list = [
-                                    "clear-day", "clear-night", "partly-cloudy-day",
-                                    "partly-cloudy-night", "cloudy", "rain", "sleet", "snow", "wind",
-                                    "fog"
-                                ],
-                                i;
-                        for (i = list.length; i--; )
-                            icons.set(list[i], list[i]);
-                        icons.play();
-                    });
-                </script>
-                <!-- /Skycons -->
-
-                <!-- Doughnut Chart -->
-                <script>
-                    $(document).ready(function () {
-                        var options = {
-                            legend: false,
-                            responsive: false
-                        };
-                        new Chart(document.getElementById("canvas1"), {
-                            type: 'doughnut',
-                            tooltipFillColor: "rgba(51, 51, 51, 0.55)",
-                            data: {
-                                labels: [
-                                    "Symbian",
-                                    "Blackberry",
-                                    "Other",
-                                    "Android",
-                                    "IOS"
-                                ],
-                                datasets: [{
-                                        data: [15, 20, 30, 10, 30],
-                                        backgroundColor: [
-                                            "#BDC3C7",
-                                            "#9B59B6",
-                                            "#E74C3C",
-                                            "#26B99A",
-                                            "#3498DB"
-                                        ],
-                                        hoverBackgroundColor: [
-                                            "#CFD4D8",
-                                            "#B370CF",
-                                            "#E95E4F",
-                                            "#36CAAB",
-                                            "#49A9EA"
-                                        ]
-                                    }]
-                            },
-                            options: options
-                        });
-                    });
-                </script>
-                <!-- /Doughnut Chart -->
+                <script type="text/javascript" charset="utf8" src="/DataTables/datatables.js"></script>
+                <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.js"></script>
 
                 <!-- bootstrap-daterangepicker -->
                 <script>
                     $(document).ready(function () {
-                        var cb = function (start, end, label) {
+                        $('#birthday').daterangepicker({
+                            singleDatePicker: true,
+                            calender_style: "picker_4"
+                        }, function (start, end, label) {
                             console.log(start.toISOString(), end.toISOString(), label);
-                            $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
-                        };
-                        var optionSet1 = {
-                            startDate: moment().subtract(29, 'days'),
-                            endDate: moment(),
-                            minDate: '01/01/2012',
-                            maxDate: '12/31/2015',
-                            dateLimit: {
-                                days: 60
-                            },
-                            showDropdowns: true,
-                            showWeekNumbers: true,
-                            timePicker: false,
-                            timePickerIncrement: 1,
-                            timePicker12Hour: true,
-                            ranges: {
-                                'Today': [moment(), moment()],
-                                'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
-                                'Last 7 Days': [moment().subtract(6, 'days'), moment()],
-                                'Last 30 Days': [moment().subtract(29, 'days'), moment()],
-                                'This Month': [moment().startOf('month'), moment().endOf('month')],
-                                'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
-                            },
-                            opens: 'left',
-                            buttonClasses: ['btn btn-default'],
-                            applyClass: 'btn-small btn-primary',
-                            cancelClass: 'btn-small',
-                            format: 'MM/DD/YYYY',
-                            separator: ' to ',
-                            locale: {
-                                applyLabel: 'Submit',
-                                cancelLabel: 'Clear',
-                                fromLabel: 'From',
-                                toLabel: 'To',
-                                customRangeLabel: 'Custom',
-                                daysOfWeek: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
-                                monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-                                firstDay: 1
-                            }
-                        };
-                        $('#reportrange span').html(moment().subtract(29, 'days').format('MMMM D, YYYY') + ' - ' + moment().format('MMMM D, YYYY'));
-                        $('#reportrange').daterangepicker(optionSet1, cb);
-                        $('#reportrange').on('show.daterangepicker', function () {
-                            console.log("show event fired");
-                        });
-                        $('#reportrange').on('hide.daterangepicker', function () {
-                            console.log("hide event fired");
-                        });
-                        $('#reportrange').on('apply.daterangepicker', function (ev, picker) {
-                            console.log("apply event fired, start/end dates are " + picker.startDate.format('MMMM D, YYYY') + " to " + picker.endDate.format('MMMM D, YYYY'));
-                        });
-                        $('#reportrange').on('cancel.daterangepicker', function (ev, picker) {
-                            console.log("cancel event fired");
-                        });
-                        $('#options1').click(function () {
-                            $('#reportrange').data('daterangepicker').setOptions(optionSet1, cb);
-                        });
-                        $('#options2').click(function () {
-                            $('#reportrange').data('daterangepicker').setOptions(optionSet2, cb);
-                        });
-                        $('#destroy').click(function () {
-                            $('#reportrange').data('daterangepicker').remove();
                         });
                     });
                 </script>
                 <!-- /bootstrap-daterangepicker -->
 
-                <!-- gauge.js -->
+                <!-- bootstrap-wysiwyg -->
                 <script>
-                    var opts = {
-                        lines: 12,
-                        angle: 0,
-                        lineWidth: 0.4,
-                        pointer: {
-                            length: 0.75,
-                            strokeWidth: 0.042,
-                            color: '#1D212A'
-                        },
-                        limitMax: 'false',
-                        colorStart: '#1ABC9C',
-                        colorStop: '#1ABC9C',
-                        strokeColor: '#F0F3F3',
-                        generateGradient: true
-                    };
-                    var target = document.getElementById('foo'),
-                            gauge = new Gauge(target).setOptions(opts);
-                    gauge.maxValue = 6000;
-                    gauge.animationSpeed = 32;
-                    gauge.set(3200);
-                    gauge.setTextField(document.getElementById("gauge-text"));
+                    $(document).ready(function () {
+                        function initToolbarBootstrapBindings() {
+                            var fonts = ['Serif', 'Sans', 'Arial', 'Arial Black', 'Courier',
+                                'Courier New', 'Comic Sans MS', 'Helvetica', 'Impact', 'Lucida Grande', 'Lucida Sans', 'Tahoma', 'Times',
+                                'Times New Roman', 'Verdana'
+                            ],
+                                    fontTarget = $('[title=Font]').siblings('.dropdown-menu');
+                            $.each(fonts, function (idx, fontName) {
+                                fontTarget.append($('<li><a data-edit="fontName ' + fontName + '" style="font-family:\'' + fontName + '\'">' + fontName + '</a></li>'));
+                            });
+                            $('a[title]').tooltip({
+                                container: 'body'
+                            });
+                            $('.dropdown-menu input').click(function () {
+                                return false;
+                            })
+                                    .change(function () {
+                                        $(this).parent('.dropdown-menu').siblings('.dropdown-toggle').dropdown('toggle');
+                                    })
+                                    .keydown('esc', function () {
+                                        this.value = '';
+                                        $(this).change();
+                                    });
+
+                            $('[data-role=magic-overlay]').each(function () {
+                                var overlay = $(this),
+                                        target = $(overlay.data('target'));
+                                overlay.css('opacity', 0).css('position', 'absolute').offset(target.offset()).width(target.outerWidth()).height(target.outerHeight());
+                            });
+
+                            if ("onwebkitspeechchange" in document.createElement("input")) {
+                                var editorOffset = $('#editor').offset();
+
+                                $('.voiceBtn').css('position', 'absolute').offset({
+                                    top: editorOffset.top,
+                                    left: editorOffset.left + $('#editor').innerWidth() - 35
+                                });
+                            } else {
+                                $('.voiceBtn').hide();
+                            }
+                        }
+
+                        function showErrorAlert(reason, detail) {
+                            var msg = '';
+                            if (reason === 'unsupported-file-type') {
+                                msg = "Unsupported format " + detail;
+                            } else {
+                                console.log("error uploading file", reason, detail);
+                            }
+                            $('<div class="alert"> <button type="button" class="close" data-dismiss="alert">&times;</button>' +
+                                    '<strong>File upload error</strong> ' + msg + ' </div>').prependTo('#alerts');
+                        }
+
+                        initToolbarBootstrapBindings();
+
+                        $('#editor').wysiwyg({
+                            fileUploadError: showErrorAlert
+                        });
+
+                        window.prettyPrint;
+                        prettyPrint();
+                    });
                 </script>
-                <!-- Switchery -->
-                <script src="../vendors/switchery/dist/switchery.min.js"></script>
-                <!-- /gauge.js -->
+                <!-- /bootstrap-wysiwyg -->
+                <script>
+                    $(document).ready(function () {
+                        $('#example').DataTable({
+                            select: true
+                        });
+                    });
+                </script>
+                <!-- Select2 -->
+                <script>
+                    $(document).ready(function () {
+                        $(".select2_single").select2({
+                            placeholder: "Select a state",
+                            allowClear: true
+                        });
+                        $(".select2_group").select2({});
+                        $(".select2_multiple").select2({
+                            maximumSelectionLength: 4,
+                            placeholder: "With Max Selection limit 4",
+                            allowClear: true
+                        });
+                    });
+                </script>
+                <!-- /Select2 -->
+
+                <!-- jQuery Tags Input -->
+                <script>
+                    function onAddTag(tag) {
+                        alert("Added a tag: " + tag);
+                    }
+
+                    function onRemoveTag(tag) {
+                        alert("Removed a tag: " + tag);
+                    }
+
+                    function onChangeTag(input, tag) {
+                        alert("Changed a tag: " + tag);
+                    }
+
+                    $(document).ready(function () {
+                        $('#tags_1').tagsInput({
+                            width: 'auto'
+                        });
+                    });
+                </script>
+                <!-- /jQuery Tags Input -->
+
+                <!-- Parsley -->
+                <script>
+                    $(document).ready(function () {
+                        $.listen('parsley:field:validate', function () {
+                            validateFront();
+                        });
+                        $('#demo-form .btn').on('click', function () {
+                            $('#demo-form').parsley().validate();
+                            validateFront();
+                        });
+                        var validateFront = function () {
+                            if (true === $('#demo-form').parsley().isValid()) {
+                                $('.bs-callout-info').removeClass('hidden');
+                                $('.bs-callout-warning').addClass('hidden');
+                            } else {
+                                $('.bs-callout-info').addClass('hidden');
+                                $('.bs-callout-warning').removeClass('hidden');
+                            }
+                        };
+                    });
+
+                    $(document).ready(function () {
+                        $.listen('parsley:field:validate', function () {
+                            validateFront();
+                        });
+                        $('#demo-form2 .btn').on('click', function () {
+                            $('#demo-form2').parsley().validate();
+                            validateFront();
+                        });
+                        var validateFront = function () {
+                            if (true === $('#demo-form2').parsley().isValid()) {
+                                $('.bs-callout-info').removeClass('hidden');
+                                $('.bs-callout-warning').addClass('hidden');
+                            } else {
+                                $('.bs-callout-info').addClass('hidden');
+                                $('.bs-callout-warning').removeClass('hidden');
+                            }
+                        };
+                    });
+                    try {
+                        hljs.initHighlightingOnLoad();
+                    } catch (err) {
+                    }
+                </script>
+                <!-- /Parsley -->
+
+                <!-- Autosize -->
+                <script>
+                    $(document).ready(function () {
+                        autosize($('.resizable_textarea'));
+                    });
+                </script>
+                <!-- /Autosize -->
+
+                <!-- jQuery autocomplete -->
+                <script>
+                    $(document).ready(function () {
+                        var countries = {AD: "Andorra", A2: "Andorra Test", AE: "United Arab Emirates", AF: "Afghanistan", AG: "Antigua and Barbuda", AI: "Anguilla", AL: "Albania", AM: "Armenia", AN: "Netherlands Antilles", AO: "Angola", AQ: "Antarctica", AR: "Argentina", AS: "American Samoa", AT: "Austria", AU: "Australia", AW: "Aruba", AX: "Åland Islands", AZ: "Azerbaijan", BA: "Bosnia and Herzegovina", BB: "Barbados", BD: "Bangladesh", BE: "Belgium", BF: "Burkina Faso", BG: "Bulgaria", BH: "Bahrain", BI: "Burundi", BJ: "Benin", BL: "Saint Barthélemy", BM: "Bermuda", BN: "Brunei", BO: "Bolivia", BQ: "British Antarctic Territory", BR: "Brazil", BS: "Bahamas", BT: "Bhutan", BV: "Bouvet Island", BW: "Botswana", BY: "Belarus", BZ: "Belize", CA: "Canada", CC: "Cocos [Keeling] Islands", CD: "Congo - Kinshasa", CF: "Central African Republic", CG: "Congo - Brazzaville", CH: "Switzerland", CI: "Côte d’Ivoire", CK: "Cook Islands", CL: "Chile", CM: "Cameroon", CN: "China", CO: "Colombia", CR: "Costa Rica", CS: "Serbia and Montenegro", CT: "Canton and Enderbury Islands", CU: "Cuba", CV: "Cape Verde", CX: "Christmas Island", CY: "Cyprus", CZ: "Czech Republic", DD: "East Germany", DE: "Germany", DJ: "Djibouti", DK: "Denmark", DM: "Dominica", DO: "Dominican Republic", DZ: "Algeria", EC: "Ecuador", EE: "Estonia", EG: "Egypt", EH: "Western Sahara", ER: "Eritrea", ES: "Spain", ET: "Ethiopia", FI: "Finland", FJ: "Fiji", FK: "Falkland Islands", FM: "Micronesia", FO: "Faroe Islands", FQ: "French Southern and Antarctic Territories", FR: "France", FX: "Metropolitan France", GA: "Gabon", GB: "United Kingdom", GD: "Grenada", GE: "Georgia", GF: "French Guiana", GG: "Guernsey", GH: "Ghana", GI: "Gibraltar", GL: "Greenland", GM: "Gambia", GN: "Guinea", GP: "Guadeloupe", GQ: "Equatorial Guinea", GR: "Greece", GS: "South Georgia and the South Sandwich Islands", GT: "Guatemala", GU: "Guam", GW: "Guinea-Bissau", GY: "Guyana", HK: "Hong Kong SAR China", HM: "Heard Island and McDonald Islands", HN: "Honduras", HR: "Croatia", HT: "Haiti", HU: "Hungary", ID: "Indonesia", IE: "Ireland", IL: "Israel", IM: "Isle of Man", IN: "India", IO: "British Indian Ocean Territory", IQ: "Iraq", IR: "Iran", IS: "Iceland", IT: "Italy", JE: "Jersey", JM: "Jamaica", JO: "Jordan", JP: "Japan", JT: "Johnston Island", KE: "Kenya", KG: "Kyrgyzstan", KH: "Cambodia", KI: "Kiribati", KM: "Comoros", KN: "Saint Kitts and Nevis", KP: "North Korea", KR: "South Korea", KW: "Kuwait", KY: "Cayman Islands", KZ: "Kazakhstan", LA: "Laos", LB: "Lebanon", LC: "Saint Lucia", LI: "Liechtenstein", LK: "Sri Lanka", LR: "Liberia", LS: "Lesotho", LT: "Lithuania", LU: "Luxembourg", LV: "Latvia", LY: "Libya", MA: "Morocco", MC: "Monaco", MD: "Moldova", ME: "Montenegro", MF: "Saint Martin", MG: "Madagascar", MH: "Marshall Islands", MI: "Midway Islands", MK: "Macedonia", ML: "Mali", MM: "Myanmar [Burma]", MN: "Mongolia", MO: "Macau SAR China", MP: "Northern Mariana Islands", MQ: "Martinique", MR: "Mauritania", MS: "Montserrat", MT: "Malta", MU: "Mauritius", MV: "Maldives", MW: "Malawi", MX: "Mexico", MY: "Malaysia", MZ: "Mozambique", NA: "Namibia", NC: "New Caledonia", NE: "Niger", NF: "Norfolk Island", NG: "Nigeria", NI: "Nicaragua", NL: "Netherlands", NO: "Norway", NP: "Nepal", NQ: "Dronning Maud Land", NR: "Nauru", NT: "Neutral Zone", NU: "Niue", NZ: "New Zealand", OM: "Oman", PA: "Panama", PC: "Pacific Islands Trust Territory", PE: "Peru", PF: "French Polynesia", PG: "Papua New Guinea", PH: "Philippines", PK: "Pakistan", PL: "Poland", PM: "Saint Pierre and Miquelon", PN: "Pitcairn Islands", PR: "Puerto Rico", PS: "Palestinian Territories", PT: "Portugal", PU: "U.S. Miscellaneous Pacific Islands", PW: "Palau", PY: "Paraguay", PZ: "Panama Canal Zone", QA: "Qatar", RE: "Réunion", RO: "Romania", RS: "Serbia", RU: "Russia", RW: "Rwanda", SA: "Saudi Arabia", SB: "Solomon Islands", SC: "Seychelles", SD: "Sudan", SE: "Sweden", SG: "Singapore", SH: "Saint Helena", SI: "Slovenia", SJ: "Svalbard and Jan Mayen", SK: "Slovakia", SL: "Sierra Leone", SM: "San Marino", SN: "Senegal", SO: "Somalia", SR: "Suriname", ST: "São Tomé and Príncipe", SU: "Union of Soviet Socialist Republics", SV: "El Salvador", SY: "Syria", SZ: "Swaziland", TC: "Turks and Caicos Islands", TD: "Chad", TF: "French Southern Territories", TG: "Togo", TH: "Thailand", TJ: "Tajikistan", TK: "Tokelau", TL: "Timor-Leste", TM: "Turkmenistan", TN: "Tunisia", TO: "Tonga", TR: "Turkey", TT: "Trinidad and Tobago", TV: "Tuvalu", TW: "Taiwan", TZ: "Tanzania", UA: "Ukraine", UG: "Uganda", UM: "U.S. Minor Outlying Islands", US: "United States", UY: "Uruguay", UZ: "Uzbekistan", VA: "Vatican City", VC: "Saint Vincent and the Grenadines", VD: "North Vietnam", VE: "Venezuela", VG: "British Virgin Islands", VI: "U.S. Virgin Islands", VN: "Vietnam", VU: "Vanuatu", WF: "Wallis and Futuna", WK: "Wake Island", WS: "Samoa", YD: "People's Democratic Republic of Yemen", YE: "Yemen", YT: "Mayotte", ZA: "South Africa", ZM: "Zambia", ZW: "Zimbabwe", ZZ: "Unknown or Invalid Region"};
+
+                        var countriesArray = $.map(countries, function (value, key) {
+                            return {
+                                value: value,
+                                data: key
+                            };
+                        });
+
+                        // initialize autocomplete with custom appendTo
+                        $('#autocomplete-custom-append').autocomplete({
+                            lookup: countriesArray
+                        });
+                    });
+                </script>
+                <!-- /jQuery autocomplete -->
+
+                <!-- Starrr -->
+                <script>
+                    $(document).ready(function () {
+                        $(".stars").starrr();
+
+                        $('.stars-existing').starrr({
+                            rating: 4
+                        });
+
+                        $('.stars').on('starrr:change', function (e, value) {
+                            $('.stars-count').html(value);
+                        });
+
+                        $('.stars-existing').on('starrr:change', function (e, value) {
+                            $('.stars-count-existing').html(value);
+                        });
+                    });
+                </script>
+                <!-- /Starrr -->
                 </body>
                 </html>

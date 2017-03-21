@@ -1,6 +1,16 @@
 <?php
-include "config.php";
-?>
+header("Content-Type: text/html;charset=utf-8");
+  include "config.php";
+  error_reporting(E_ALL);
+  session_start();
+  if (!isset($_SESSION['user_name'])) {
+      header("Location:login.php");
+  }
+  $user_name = $_SESSION['user_name'];
+
+ 
+  ?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -10,7 +20,7 @@ include "config.php";
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Usuarios Newsletter</title>
+        <title>Publicaciones Registradas</title>
 
         <!-- Bootstrap -->
         <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -30,16 +40,11 @@ include "config.php";
         <link href="../vendors/starrr/dist/starrr.css" rel="stylesheet">
         <!-- bootstrap-daterangepicker -->
         <link href="../vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
-        
 
         <!-- Custom Theme Style -->
         <link href="../build/css/custom.min.css" rel="stylesheet">
         <!--        <link rel="stylesheet" type="text/css" href="../production/css/dataTables.bootstrap.css">-->
         <link href="../production/css/font-face.css"  rel="stylesheet" type="text/css">
-        <link href="../production/css/admin.css"  rel="stylesheet" type="text/css">
-        <link href="../production/css/style1.css"  rel="stylesheet" type="text/css">
-        <link href="../production/css/style_common.css"  rel="stylesheet" type="text/css">
-        
         
         <link rel="stylesheet" type="text/css" href="../production/css/dataTables.css">
         <link rel="stylesheet" type="text/css" href="../production/css/dataTables.boostrap.min.css">
@@ -64,8 +69,8 @@ include "config.php";
                                 <img src="images/img.jpg" alt="..." class="img-circle profile_img">
                             </div>
                             <div class="profile_info">
-                                <span>Welcome,</span>
-                                <h2>John Doe</h2>
+                                <span>Bienvenido (a)</span>
+                                <h2><?php echo utf8_encode($user_name); ?></h2>
                             </div>
                         </div>
                         <!-- /menu profile quick info -->
@@ -82,29 +87,32 @@ include "config.php";
                                         <ul class="nav child_menu">
                                             <li><a href="users_registers.php"><i class="fa fa-arrow-up"></i>Registrados</a></li>
                                             <li>
-                                                <a href="newsletter.php"><i class="fa fa-check-circle"></i>NewsLetter</a></li>
+                                            <a href="newsletter.php"><i class="fa fa-check-circle"></i>NewsLetter</a></li>
                                         </ul>
-
+                                        
                                     </li>
+                                    <li><a href="services.php"><i class="fa fa-arrow-circle-up"></i> Registro </a></li>
+
+                                    
                                     <li><a><i class="fa fa-cogs"></i>Secciones <span class="fa fa-chevron-down"></span></a>
                                         <ul class="nav child_menu">
-
-                                            <li>
-                                                <a href="simposiums.html"><i class="fa fa-mortar-board"></i> Seminarios</a>
-                                            </li>
-                                            <li>
-                                                <a href="simposiums.html"><i class="fa fa-laptop"></i> Talleres </a>
-                                            </li>
-                                            <li>
-                                                <a href="simposiums.html"><i class="fa fa-briefcase"></i> Cursos </a>
-                                            </li>
-                                            <li>
-                                                <a href="simposiums.html"><i class="fa fa-university"></i> Diplomados </a>
-                                            </li>
+                                            
+                                    <li>
+                                        <a href="simposiums.html"><i class="fa fa-mortar-board"></i> Seminarios</a>
+                                    </li>
+                                    <li>
+                                        <a href="simposiums.html"><i class="fa fa-laptop"></i> Talleres </a>
+                                    </li>
+                                    <li>
+                                        <a href="simposiums.html"><i class="fa fa-briefcase"></i> Cursos </a>
+                                    </li>
+                                    <li>
+                                        <a href="simposiums.html"><i class="fa fa-university"></i> Diplomados </a>
+                                    </li>
 
                                         </ul>
                                     </li>
-
+                                    
                                     <li><a><i class="fa fa-plus-square"></i> Extras<span class="fa fa-chevron-down"></span></a>
                                         <ul class="nav child_menu">
                                             <li><a href="form.html"><i class="fa fa-book"></i>Directorio</a></li>
@@ -115,7 +123,7 @@ include "config.php";
 
                                 </ul>
                             </div>
-
+                            
 
                         </div>
                         <!-- /sidebar menu -->
@@ -248,61 +256,54 @@ include "config.php";
                                 
                             </div>
                         </div>
-                        <div class="clearfix"><h2 style="text-align: center;color: black;font-size: 25px" class="Sansation_Regular">Diplomados Registrados</h2></div>
+                        <div class="clearfix"><h2 style="text-align: center;color: black;font-size: 25px" class="Sansation_Regular">Operadores  Registrados</h2></div>
                         <div class="row" style="margin-top: 2%;">
                             <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="masonry-gallery">
-          
-        <div class="row-fluid sortable">
-          <div class="box span12">
-            <div class="box-header" data-original-title>
-              <h2><i class="halflings-icon white picture"></i><span class="break"></span></h2>
-              <div class="box-icon">
-                <a href="#" class="btn-minimize"><i class="halflings-icon white chevron-up"></i></a>
-              </div>
-            </div>
-            <div class="box-content">
-              <div class="masonry-gallery">
-                <?php
-                  $res2 = $mysqli2->query("SELECT * FROM registro_eventos WHERE seccion='curso'");
-                  while ($row2 = $res2->fetch_assoc()) {
-                    $path2= 'gallery/album/' . $row2['ruta'];
-                  ?>
-                <div class="masonry-thumb view view-first">
-                  <img class="example-image" src="<?php echo $path2= 'gallery/album/' . $row2['ruta'];?>" />
-                  <div class="mask">
-                    <h2><?php echo $row2['nombre']?></h2>
-                    <p><?php echo $row2['id']?></p>
-                    <a button type="button" href="#<?php echo $row2['id'] ?>" data-toggle="modal" class="btn btn-danger"  > <i class="icon-trash"></i> Eliminar</a>
-                    <a button type="button" href="<?php echo $path2= 'php/album/' . $row2['file'];?>" class="example-image-link btn btn-primary"  data-lightbox="example-set" ><i class="icon-zoom-in"></i> Zoom</a>
-                    <a class="btn btn-lg btn-success mar-toptable" href="update_photo.php?u=<?php echo $row2['id'] ?>"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Editar</a>
-                  </div>
-                  <div class="modal fade" id="<?php echo $row2['id'] ?>" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true" >
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                          <h4 class="modal-title" id="myModalLabel">Atención</h4>
-                        </div>
-                        <div class="modal-body">
-                          <h3>¿Estas seguro de eliminar el contenido?</h3>
-                        </div>
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="icon-ban-circle"></i>&nbsp;Cerrrar</button>
-                          <a href="Delete_Photo.php?d=<?php echo $row2['id']?>&f=<?php echo $row2['file']?>"><button type="button" class="btn btn-success"><i class="icon-ok"></i>Aceptar</button></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                
-              </div>
-            </div>
-          </div>
-        </div>
-        <?php	}	?>
-                
-                               </div>            
+                                <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                                    <thead>
+                                        <tr>
+                                            <th class="Sansation_Bold" style="color: black;text-align: center">Nombre del Operador</th>
+                                            <th class="Sansation_Bold" style="color: black;text-align: center">Email</th>
+                                            <th class="Sansation_Bold" style="color: black;text-align: center">Fecha de Creación</th>
+                                            <th class="Sansation_Bold" style="color: black;text-align: center">Estatus</th>
+                                            <th></th>
+                                            <th></th>
+                                            
+                                            
+                                        </tr>
+                                    </thead>
+                                    
+                                    <tbody>
+                                        <?php
+                                                        include "./model/conection.php";
+                                                        error_reporting(E_ALL);
+                                                        $res = $mysqli->query("SELECT nombre,apellido_paterno,apellido_materno,email,creation_date,estatus from administradores");
+                                                        $mysqli->close();
+                                                        while ($row = $res->fetch_assoc()):
+                                                            ?>
+                                        <tr>
+                                            <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo utf8_encode($row ['nombre']); ?></td>
+                                            <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo $row ['email'] ?></td>
+                                            <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo $row ['creation_date'] ?></td>
+                                            <td class="Sans" style="color: #6E6E6E;text-align: center">
+                                                <?php if ( $row ['estatus'] == 0){
+                                                      echo 'Pendiente';
+                                                } elseif ($row ['estatus'] == 1) {
+                                                    echo 'Activo';
+                                                } elseif ($row ['estatus'] == 2) {
+                                                    echo 'Bloqueado';    
+                                                }?>
+                                            </td>
+                                            <td class="Sans" style="color: #04B404;text-align: center">Detalles        <i class="fa fa-plus"></i></td>
+                                            <td class="Sans" style="color: #FF0000;text-align: center">Eliminar        <i class="fa fa-trash"></i></td>
+                                            
+                                            
+                                        </tr>
+                                        <?php
+                                                        endwhile;
+                                                        ?> 
+                                    </tbody>
+                                </table>
                             </div>
                         </div> 
 

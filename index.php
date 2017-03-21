@@ -49,7 +49,37 @@
     </head>
 
     <body id="body">
+        <!--Modal ProgressBar-->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="myModalLabel"><i class="fa fa-clock-o"></i> Por favor espera</h4>
+                    </div>
+                    <div class="modal-body center-block">
+                        <p>Estamos guardando la información</p>
+                        <div class="progress">
+                            <div class="progress-bar bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
 
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
+
+        <!--Inicia modal exitoso-->
+        <div id="cargando" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body" style="text-align: center;padding:20px">
+                        <h3>Seminario Creado Exitosamente...</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Termina modal-->
         <!-- preloader -->
         <div id="preloader">
             <div class="loder-box">
@@ -70,7 +100,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
-                        
+
                     </button>
                     <!-- /responsive nav button -->
 
@@ -91,7 +121,7 @@
                         <li><a class="scroll-link" data-id="footer">Suscríbete</a></li>
                         <li><a href="directorio.php">Directorio</a></li>
                         <li><a href="preguntas_freguentes.php">FAQ'S</a></li>
-                        
+
                     </ul>
                 </nav>
                 <!-- /main nav -->
@@ -202,15 +232,16 @@
                                             </div>
                                             <div class="x_content">
                                                 <br />
-                                                <form class="form-horizontal form-label-left input_mask" action="model/register.php" method="post">
+                                                <form id="create_user"  name="create_user" class="form-horizontal form-label-left input_mask" >
 
                                                     <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-                                                        <input type="text" class="form-control has-feedback-left " id="name" name="FullName" placeholder="Nombre (s)">
+                                                        <input type="text" class="form-control has-feedback-left " id="name" name="name" placeholder="Nombre (s)"
+                                                               title="Ingresa tu Nombre">
                                                         <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
                                                     </div>
 
                                                     <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-                                                        <input type="text" class="form-control" id="LastName" name="LastName" placeholder="Apellidos">
+                                                        <input type="text" class="form-control" id="surnames" name="surnames" placeholder="Apellidos" >
                                                         <span class="fa fa-user form-control-feedback right" aria-hidden="true"></span>
                                                     </div>
 
@@ -224,6 +255,18 @@
                                                         <span class="fa fa-phone form-control-feedback right" aria-hidden="true"></span>
                                                     </div>
                                                     <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                                                        <input type="text" class="form-control has-feedback-left" id="password" name="password" placeholder="Contraseña">
+                                                        <span class="fa fa-lock form-control-feedback left" aria-hidden="true"></span>
+                                                    </div>
+
+                                                    <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                                                        <input type="text" class="form-control" id="confirm_password" name="confirm_password" placeholder="Confirmar Contraseña">
+                                                        <span class="fa fa-lock form-control-feedback right" aria-hidden="true"></span>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input type="hidden" type="text" class="form-control" name="creation_date" id="creation_date" value="<?php echo date("Y/m/d") ?>">
+                                                    </div>
+                                                    <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
 
                                                         <div class=" selectContainer">
                                                             <select class="form-control" name="gender">
@@ -233,10 +276,10 @@
                                                             </select>
                                                         </div>
                                                     </div> 
-                                                    <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                                                    <!--                                                    <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
 
                                                         <div class=" selectContainer">
-                                                            <select class="form-control" name="city">
+                                                            <select class="form-control" name="city" required>
                                                                 <option value="">Soy de....</option>
                                                                 <option value="Aguascalientes">Aguascalientes</option>
                                                                 <option value="Baja California">Baja California</option>
@@ -248,7 +291,7 @@
                                                                 <option value="Coahuila">Coahuila</option>
                                                                 <option value="Colima">Colima</option>
                                                                 <option value="Durango">Durango</option>
-                                                                <option value="Estado de México"></option>
+                                                                <option value="Estado de México">Estado de México</option>
                                                                 <option value="Guanajuato">Guadalajara</option>
                                                                 <option value="Guanajuato">Guanajuato</option>
                                                                 <option value="Hidalgo">Hidalgo</option>
@@ -271,7 +314,7 @@
                                                                 <option value="Zacatecas">Zacatecas</option>
                                                             </select>
                                                         </div>
-                                                    </div>   
+                                                    </div>   -->
 
 
                                                     <div class="ln_solid"></div>
@@ -293,7 +336,7 @@
 
                     </div>
                 </div>
-                </div>
+                
 
                 <nav id="nav-arrows" class="nav-arrows hidden-xs hidden-sm visible-md visible-lg">
                     <a href="javascript:;" class="sl-prev">
@@ -332,7 +375,7 @@
 
                                     <h4 style="color: white;padding:5px;line-height: 30px ">El objetivo del Simposium es propiciar un mayor intercambio de información entre profesores e investigadores de las diversas instituciones de educación en los ámbitos nacionales e internacionales, así como representantes del sector productivo.</h4>
                                 </div>
-                                
+
                                 <a  class="btn btn-border btn-effect col-md-offset-5 button_index" data-toggle="modal" data-target="#QuienesSomos">Leer Más</a>
 
                             </div>
@@ -387,39 +430,39 @@
                                     <div class="service-icon">
                                         <i class="fa fa-mortar-board fa-3x"></i>
                                     </div>
-                                        <h3 class="FolksDecoon" style="font-weight: bold">SEMINARIOS</h3>
+                                    <h3 class="FolksDecoon" style="font-weight: bold">SEMINARIOS</h3>
 <!--                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>-->
                                 </div>
                             </div>
                             <div class="col-md-33   text-center wow animated zoomIn" data-wow-delay="0.3s">
                                 <a  href="simposiums.php"><div class="service-item" style="padding-top: 60px;">
-                                    <div class="service-icon">
-                                        <i class="fa fa-laptop fa-3x"></i>
-                                    </div>
+                                        <div class="service-icon">
+                                            <i class="fa fa-laptop fa-3x"></i>
+                                        </div>
                                         <h3 class="FolksDecoon" style="font-weight: bold">SIMPOSIUMS</h3>
-                                    
+
 <!--                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>-->
-                                </div></a>
+                                    </div></a>
                             </div>
                             <div class="col-md-33   text-center wow animated zoomIn" data-wow-delay="0.3s">
                                 <a href="cursos_talles_dimplomados.php"><div class="service-item" style="padding-top: 60px;">
-                                    <div class="service-icon">
-                                        <i class="fa fa-briefcase fa-3x"></i>
-                                    </div>
-                                    <h3 class="FolksDecoon" style="font-weight: bold">Diplomados</h3>
-                                    <h3 class="FolksDecoon" style="font-weight: bold">Talleres</h3>
-                                    <h3 class="FolksDecoon" style="font-weight: bold">Cursos</h3>
-<!--                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>-->
-                                </div></a>
+                                        <div class="service-icon">
+                                            <i class="fa fa-briefcase fa-3x"></i>
+                                        </div>
+                                        <h3 class="FolksDecoon" style="font-weight: bold">Diplomados</h3>
+                                        <h3 class="FolksDecoon" style="font-weight: bold">Talleres</h3>
+                                        <h3 class="FolksDecoon" style="font-weight: bold">Cursos</h3>
+    <!--                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>-->
+                                    </div></a>
                             </div>
                             <div class="col-md-33   text-center wow animated zoomIn" data-wow-delay="0.3s">
                                 <a href="servicios_empresariales.php"><div class="service-item" style="padding-top: 60px;">
-                                    <div class="service-icon">
-                                        <i class="fa fa-building fa-3x"></i>
-                                    </div>
-                                    <h3 class="FolksDecoon" style="font-weight: bold">SERVICIOS EMPRESARIALES</h3>
-<!--                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>-->
-                                </div></a>
+                                        <div class="service-icon">
+                                            <i class="fa fa-building fa-3x"></i>
+                                        </div>
+                                        <h3 class="FolksDecoon" style="font-weight: bold">SERVICIOS EMPRESARIALES</h3>
+    <!--                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>-->
+                                    </div></a>
                             </div>
                             <div class="col-md-33 text-center wow animated zoomIn" data-wow-delay="0.3s">
                                 <div class="service-item" style="padding-top: 60px;">
@@ -547,7 +590,7 @@
 
                         <div class="col-md-7 contact-form wow animated fadeInLeft">
                             <form id="formid" method="post">
-                                 <div id="ok"></div>
+                                <div id="ok"></div>
                                 <div class="input-field">
                                     <input type="text" name="FullName" id="FullName" class="form-control_contact" placeholder="Nombre">
                                 </div>
@@ -658,10 +701,13 @@
         <script src="http://jqueryvalidation.org/files/dist/jquery.validate.min.js"></script>
         <script src="http://jqueryvalidation.org/files/dist/additional-methods.min.js"></script>    
         <script src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
+        <script src="http://jqueryvalidation.org/files/dist/jquery.validate.min.js"></script>
+        
+                <script src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
         <!-- newsletter validation-->
         <script src="js/newsletter_section.js"></script>
-        
-        <script type="text/javascript">
+        <script src="js/create_user.js" ></script>
+          <script type="text/javascript">
             $(document).ready(function () {
                 // navigation click actions	
                 $('.scroll-link').on('click', function (event) {
@@ -696,30 +742,59 @@
                     log: function () { }
                 };
             }
-        </script>
+        </script>    
         
+
         <script type="text/javascript">
-                    $(function() {
-                        $(document).on('click', function(){ 
-                        $('.navbar-collapse').removeClass('in')
-                        });
+            $(function () {
+                $(document).on('click', function () {
+                    $('.navbar-collapse').removeClass('in')
+                });
+            });
+        </script>
+        <script type="text/javascript">
+            /*  Stellar for background scrolling  */
+            (function () {
+
+                if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+
+                } else {
+                    $(window).stellar({
+                        horizontalScrolling: false,
+                        responsive: true
                     });
-                </script>
-        <script type="text/javascript">
-		/*  Stellar for background scrolling  */
-		(function () {
+                }
 
-			if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-			 
-			} else {
-				$(window).stellar({
-					horizontalScrolling: false,
-					responsive: true
-				});
-			}
+            }());
+            /* End Stellar for background scrolling  */
+        </script>       
+        <!--Scrpt ProgreesModal-->
+        rangepicker -->
+        <script>
+            $('#myModal').on('shown.bs.modal', function () {
 
-		}());
-		/* End Stellar for background scrolling  */
-		</script>        
+                var progress = setInterval(function () {
+                    var $bar = $('.bar');
+                    if ($bar.width() == 500) {
+
+                        // complete
+
+                        clearInterval(progress);
+                        $('.progress').removeClass('active');
+                        $('#myModal').modal('hide');
+                        $bar.width(0);
+                    } else {
+
+                        // perform processing logic here
+
+                        $bar.width($bar.width() + 50);
+                    }
+
+                    $bar.text($bar.width() / 5 + "%");
+                }, 800);
+
+
+            })
+        </script>
     </body>
 </html>

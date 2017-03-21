@@ -1,3 +1,16 @@
+<?php
+header("Content-Type: text/html;charset=utf-8");
+  include "config.php";
+  error_reporting(E_ALL);
+  session_start();
+  if (!isset($_SESSION['user_name'])) {
+      header("Location:login.php");
+  }
+  $user_name = $_SESSION['user_name'];
+
+ 
+  ?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -7,7 +20,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Usuarios Newsletter</title>
+        <title>Publicaciones Registradas</title>
 
         <!-- Bootstrap -->
         <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -56,8 +69,8 @@
                                 <img src="images/img.jpg" alt="..." class="img-circle profile_img">
                             </div>
                             <div class="profile_info">
-                                <span>Welcome,</span>
-                                <h2>John Doe</h2>
+                                <span>Bienvenido (a)</span>
+                                <h2><?php echo utf8_encode($user_name); ?></h2>
                             </div>
                         </div>
                         <!-- /menu profile quick info -->
@@ -74,29 +87,32 @@
                                         <ul class="nav child_menu">
                                             <li><a href="users_registers.php"><i class="fa fa-arrow-up"></i>Registrados</a></li>
                                             <li>
-                                                <a href="newsletter.php"><i class="fa fa-check-circle"></i>NewsLetter</a></li>
+                                            <a href="newsletter.php"><i class="fa fa-check-circle"></i>NewsLetter</a></li>
                                         </ul>
-
+                                        
                                     </li>
+                                    <li><a href="services.php"><i class="fa fa-arrow-circle-up"></i> Registro </a></li>
+
+                                    
                                     <li><a><i class="fa fa-cogs"></i>Secciones <span class="fa fa-chevron-down"></span></a>
                                         <ul class="nav child_menu">
-
-                                            <li>
-                                                <a href="simposiums.html"><i class="fa fa-mortar-board"></i> Seminarios</a>
-                                            </li>
-                                            <li>
-                                                <a href="simposiums.html"><i class="fa fa-laptop"></i> Talleres </a>
-                                            </li>
-                                            <li>
-                                                <a href="simposiums.html"><i class="fa fa-briefcase"></i> Cursos </a>
-                                            </li>
-                                            <li>
-                                                <a href="simposiums.html"><i class="fa fa-university"></i> Diplomados </a>
-                                            </li>
+                                            
+                                    <li>
+                                        <a href="simposiums.html"><i class="fa fa-mortar-board"></i> Seminarios</a>
+                                    </li>
+                                    <li>
+                                        <a href="simposiums.html"><i class="fa fa-laptop"></i> Talleres </a>
+                                    </li>
+                                    <li>
+                                        <a href="simposiums.html"><i class="fa fa-briefcase"></i> Cursos </a>
+                                    </li>
+                                    <li>
+                                        <a href="simposiums.html"><i class="fa fa-university"></i> Diplomados </a>
+                                    </li>
 
                                         </ul>
                                     </li>
-
+                                    
                                     <li><a><i class="fa fa-plus-square"></i> Extras<span class="fa fa-chevron-down"></span></a>
                                         <ul class="nav child_menu">
                                             <li><a href="form.html"><i class="fa fa-book"></i>Directorio</a></li>
@@ -107,7 +123,7 @@
 
                                 </ul>
                             </div>
-
+                            
 
                         </div>
                         <!-- /sidebar menu -->
@@ -240,17 +256,17 @@
                                 
                             </div>
                         </div>
-                        <div class="clearfix"><h2 style="text-align: center;color: black;font-size: 25px" class="Sansation_Regular">Diplomados Registrados</h2></div>
+                        <div class="clearfix"><h2 style="text-align: center;color: black;font-size: 25px" class="Sansation_Regular">Operadores  Registrados</h2></div>
                         <div class="row" style="margin-top: 2%;">
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
                                     <thead>
                                         <tr>
-                                            <th class="Sansation_Bold" style="color: black;text-align: center"s>Nombre</th>
-                                            <th class="Sansation_Bold" style="color: black;text-align: center"s>Dirigido</th>
-                                            <th class="Sansation_Bold" style="color: black;text-align: center"s>Inicio</th>
-                                            <th class="Sansation_Bold" style="color: black;text-align: center"s>Termino</th>
-                                            <th class="Sansation_Bold" style="color: black;text-align: center"s>Fecha Creación</th>
+                                            <th class="Sansation_Bold" style="color: black;text-align: center">Nombre del Operador</th>
+                                            <th class="Sansation_Bold" style="color: black;text-align: center">Email</th>
+                                            <th class="Sansation_Bold" style="color: black;text-align: center">Fecha de Creación</th>
+                                            <th class="Sansation_Bold" style="color: black;text-align: center">Estatus</th>
+                                            <th></th>
                                             <th></th>
                                             
                                             
@@ -261,36 +277,24 @@
                                         <?php
                                                         include "./model/conection.php";
                                                         error_reporting(E_ALL);
-                                                        $res = $mysqli->query("SELECT nombre,dirigido,inicio,termino,fecha_creacion from registro_eventos where seccion = 'diplomado'");
+                                                        $res = $mysqli->query("SELECT nombre,apellido_paterno,apellido_materno,email,creation_date,estatus from administradores");
                                                         $mysqli->close();
                                                         while ($row = $res->fetch_assoc()):
                                                             ?>
                                         <tr>
-                                            <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo $row ['nombre'] ?></td>
-                                            <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo $row ['dirigido'] ?></td>
-                                            <td class="Sans" style="color: #6E6E6E;text-align: center"><?php 
-                                                                                                        $date_inicio=$row ['inicio'];
-                                                                                                        $objeto_DateTime_inicio = date_create_from_format('Y-m-d', $date_inicio);
-                                                                                                        $cadena_nuevo_formato_inicio = date_format($objeto_DateTime_inicio, "d/m/Y");
-                                                                                                        echo $cadena_nuevo_formato_inicio;
-                                                                                                        ?>
-                                            <td class="Sans" style="color: #6E6E6E;text-align: center"><?php 
-                                                                                                        $date_termino=$row ['termino'];
-                                                                                                        $objeto_DateTime_termino = date_create_from_format('Y-m-d', $date_termino);
-                                                                                                        $cadena_nuevo_formato_termino = date_format($objeto_DateTime_termino, "d/m/Y");
-                                                                                                        echo $cadena_nuevo_formato_termino;
-                                                                                                        ?>    
-                                            <td class="Sans" style="color: #6E6E6E;text-align: center"><?php 
-                                                                                                        $date_creation=$row ['fecha_creacion'];
-                                                                                                        $objeto_DateTime_creation = date_create_from_format('Y-m-d', $date_creation);
-                                                                                                        $cadena_nuevo_formato_creation= date_format($objeto_DateTime_creation, "d/m/Y");
-                                                                                                        echo $cadena_nuevo_formato_creation;
-                                                                                                        ?>        
-                                            
-                                            
+                                            <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo utf8_encode($row ['nombre']); ?></td>
+                                            <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo $row ['email'] ?></td>
+                                            <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo $row ['creation_date'] ?></td>
+                                            <td class="Sans" style="color: #6E6E6E;text-align: center">
+                                                <?php if ( $row ['estatus'] == 0){
+                                                      echo 'Pendiente';
+                                                } elseif ($row ['estatus'] == 1) {
+                                                    echo 'Activo';
+                                                } elseif ($row ['estatus'] == 2) {
+                                                    echo 'Bloqueado';    
+                                                }?>
                                             </td>
-                                            
-                                                
+                                            <td class="Sans" style="color: #04B404;text-align: center">Detalles        <i class="fa fa-plus"></i></td>
                                             <td class="Sans" style="color: #FF0000;text-align: center">Eliminar        <i class="fa fa-trash"></i></td>
                                             
                                             

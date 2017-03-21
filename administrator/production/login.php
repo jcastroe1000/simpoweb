@@ -9,7 +9,7 @@
         $email = $_POST['email'];
         $pass =$_POST['pass'];
         $email = trim($email);
-        $query = "SELECT nombre FROM administrator WHERE email='$email' AND password='$pass'";
+        $query = "SELECT nombre FROM administradores WHERE email='$email' AND password='$pass'";
         $result = mysqli_query($mysqli, $query)or die(mysqli_error());
         $num_row = mysqli_num_rows($result);
         $row = mysqli_fetch_array($result);
@@ -21,12 +21,12 @@
            $result='<div class="alert alert-error">Lo sentimos! Usuario y/o constraseña son invalidos, intentalo de nuevo</div>';
         }
     }
-        error_reporting(E_ALL);
+        error_reporting(0);
     if (isset($_POST['btn-login_restart'])) {
         $email = $_POST['usuario'];
         
         $email = trim($email);
-        $query = "SELECT nombre,email FROM administrator WHERE email='$email' ";
+        $query = "SELECT nombre,email FROM administradores WHERE email='$email' ";
         $result = mysqli_query($mysqli, $query)or die(mysqli_error());
         $num_row = mysqli_num_rows($result);
         $row = mysqli_fetch_array($result);

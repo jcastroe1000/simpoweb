@@ -1,16 +1,3 @@
-<?php
-header("Content-Type: text/html;charset=utf-8");
-  include "config.php";
-  error_reporting(E_ALL);
-  session_start();
-  if (!isset($_SESSION['user_name'])) {
-      header("Location:login.php");
-  }
-  $user_name = $_SESSION['user_name'];
-
- 
-  ?>
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -69,8 +56,8 @@ header("Content-Type: text/html;charset=utf-8");
                                 <img src="images/img.jpg" alt="..." class="img-circle profile_img">
                             </div>
                             <div class="profile_info">
-                                <span>Bienvenido (a)</span>
-                                <h2><?php echo utf8_encode($user_name); ?></h2>
+                                <span>Welcome,</span>
+                                <h2>John Doe</h2>
                             </div>
                         </div>
                         <!-- /menu profile quick info -->
@@ -87,32 +74,29 @@ header("Content-Type: text/html;charset=utf-8");
                                         <ul class="nav child_menu">
                                             <li><a href="users_registers.php"><i class="fa fa-arrow-up"></i>Registrados</a></li>
                                             <li>
-                                            <a href="newsletter.php"><i class="fa fa-check-circle"></i>NewsLetter</a></li>
+                                                <a href="newsletter.php"><i class="fa fa-check-circle"></i>NewsLetter</a></li>
                                         </ul>
-                                        
-                                    </li>
-                                    <li><a href="services.php"><i class="fa fa-arrow-circle-up"></i> Registro </a></li>
 
-                                    
+                                    </li>
                                     <li><a><i class="fa fa-cogs"></i>Secciones <span class="fa fa-chevron-down"></span></a>
                                         <ul class="nav child_menu">
-                                            
-                                    <li>
-                                        <a href="simposiums.html"><i class="fa fa-mortar-board"></i> Seminarios</a>
-                                    </li>
-                                    <li>
-                                        <a href="simposiums.html"><i class="fa fa-laptop"></i> Talleres </a>
-                                    </li>
-                                    <li>
-                                        <a href="simposiums.html"><i class="fa fa-briefcase"></i> Cursos </a>
-                                    </li>
-                                    <li>
-                                        <a href="simposiums.html"><i class="fa fa-university"></i> Diplomados </a>
-                                    </li>
+
+                                            <li>
+                                                <a href="simposiums.html"><i class="fa fa-mortar-board"></i> Seminarios</a>
+                                            </li>
+                                            <li>
+                                                <a href="simposiums.html"><i class="fa fa-laptop"></i> Talleres </a>
+                                            </li>
+                                            <li>
+                                                <a href="simposiums.html"><i class="fa fa-briefcase"></i> Cursos </a>
+                                            </li>
+                                            <li>
+                                                <a href="simposiums.html"><i class="fa fa-university"></i> Diplomados </a>
+                                            </li>
 
                                         </ul>
                                     </li>
-                                    
+
                                     <li><a><i class="fa fa-plus-square"></i> Extras<span class="fa fa-chevron-down"></span></a>
                                         <ul class="nav child_menu">
                                             <li><a href="form.html"><i class="fa fa-book"></i>Directorio</a></li>
@@ -123,7 +107,7 @@ header("Content-Type: text/html;charset=utf-8");
 
                                 </ul>
                             </div>
-                            
+
 
                         </div>
                         <!-- /sidebar menu -->
@@ -256,54 +240,35 @@ header("Content-Type: text/html;charset=utf-8");
                                 
                             </div>
                         </div>
-                        <div class="clearfix"><h2 style="text-align: center;color: black;font-size: 25px" class="Sansation_Regular">Operadores  Registrados</h2></div>
+                        <div class="clearfix"><h2 style="text-align: center;color: black;font-size: 25px" class="Sansation_Regular">Publicaciones Registradas</h2></div>
                         <div class="row" style="margin-top: 2%;">
                             <div class="col-md-12 col-sm-12 col-xs-12">
-                                <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
-                                    <thead>
-                                        <tr>
-                                            <th class="Sansation_Bold" style="color: black;text-align: center">Nombre del Operador</th>
-                                            <th class="Sansation_Bold" style="color: black;text-align: center">Email</th>
-                                            <th class="Sansation_Bold" style="color: black;text-align: center">Fecha de Creación</th>
-                                            <th class="Sansation_Bold" style="color: black;text-align: center">Estatus</th>
-                                            <th></th>
-                                            <th></th>
-                                            
-                                            
-                                        </tr>
-                                    </thead>
-                                    
-                                    <tbody>
-                                        <?php
-                                                        include "./model/conection.php";
-                                                        error_reporting(E_ALL);
-                                                        $res = $mysqli->query("SELECT nombre,apellido_paterno,apellido_materno,email,creation_date,estatus from administradores");
-                                                        $mysqli->close();
-                                                        while ($row = $res->fetch_assoc()):
-                                                            ?>
-                                        <tr>
-                                            <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo utf8_encode($row ['nombre']); ?></td>
-                                            <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo $row ['email'] ?></td>
-                                            <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo $row ['creation_date'] ?></td>
-                                            <td class="Sans" style="color: #6E6E6E;text-align: center">
-                                                <?php if ( $row ['estatus'] == 0){
-                                                      echo 'Pendiente';
-                                                } elseif ($row ['estatus'] == 1) {
-                                                    echo 'Activo';
-                                                } elseif ($row ['estatus'] == 2) {
-                                                    echo 'Bloqueado';    
-                                                }?>
-                                            </td>
-                                            <td class="Sans" style="color: #04B404;text-align: center">Detalles        <i class="fa fa-plus"></i></td>
-                                            <td class="Sans" style="color: #FF0000;text-align: center">Eliminar        <i class="fa fa-trash"></i></td>
-                                            
-                                            
-                                        </tr>
-                                        <?php
-                                                        endwhile;
-                                                        ?> 
-                                    </tbody>
-                                </table>
+                                <div class="container">
+  <h1>Please Wait Modal Example</h1>
+  <p>Click button to run demo..</p>
+  <a href="#myModal" role="button" class="btn btn-primary" data-toggle="modal">Submit</a>
+</div>
+
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel"><i class="fa fa-clock-o"></i> Por favor espera</h4>
+      </div>
+      <div class="modal-body center-block">
+        <p>Estamos guardando la información</p>
+        <div class="progress">
+          <div class="progress-bar bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+            
+          </div>
+        </div>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
                             </div>
                         </div> 
 
@@ -365,6 +330,35 @@ header("Content-Type: text/html;charset=utf-8");
                             console.log(start.toISOString(), end.toISOString(), label);
                         });
                     });
+                </script>
+                
+                <script>
+                    $('#myModal').on('shown.bs.modal', function () {
+ 
+    var progress = setInterval(function() {
+    var $bar = $('.bar');
+
+    if ($bar.width()==500) {
+      
+        // complete
+      
+        clearInterval(progress);
+        $('.progress').removeClass('active');
+        $('#myModal').modal('hide');
+        $bar.width(0);
+        
+    } else {
+      
+        // perform processing logic here
+      
+        $bar.width($bar.width()+50);
+    }
+    
+    $bar.text($bar.width()/5 + "%");
+	}, 800);
+  
+  
+})
                 </script>
                 <!-- /bootstrap-daterangepicker -->
 
