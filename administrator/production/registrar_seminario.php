@@ -1,4 +1,15 @@
+<?php
+header("Content-Type: text/html;charset=utf-8");
+  include "config.php";
+  error_reporting(E_ALL);
+  session_start();
+  if (!isset($_SESSION['user_name'])) {
+      header("Location:login.php");
+  }
+  $user_name = $_SESSION['user_name'];
 
+ 
+  ?>
 
 <!DOCTYPE html>
 <html lang="en">

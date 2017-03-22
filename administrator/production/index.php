@@ -79,6 +79,7 @@ header("Content-Type: text/html;charset=utf-8");
                                         
                                     </li>
                                     <li><a href="services.php"><i class="fa fa-arrow-circle-up"></i> Registro </a></li>
+                                    <li><a href="services.php"><i class="fa fa-arrow-circle-up"></i> Galeria </a></li>
 
                                     
                                     <li><a><i class="fa fa-cogs"></i>Secciones <span class="fa fa-chevron-down"></span></a>

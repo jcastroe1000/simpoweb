@@ -62,13 +62,14 @@ $password = $_GET['password'];
 $date_registration = $_GET['creation_date'];
 $gender = $_GET['gender'];
 
-//require_once '../model/email_new_admin.php';
+require_once '../model/user_register.php';
+require_once '../model/user_register_admin.php';
 
-$admin_status = 0;
+
 $query1 = "INSERT INTO user_register(name,surnames,telephone, gender,email,password,creation_date) "
         . "VALUES ('$user__name', '$surnames', '$telephone_contact', '$gender', '$email_contact', '$password','$date_registration')";
 mysqli_query($mysqli, $query1);
 
 //Cerramos la conexion
-$mysqli->close();admin_status
+$mysqli->close();
 ?>
