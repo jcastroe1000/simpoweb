@@ -19,16 +19,35 @@
 
         <!-- CSS
         ================================================== -->
-        <link href="css_portafolio/bootstrap.min.css" rel="stylesheet" />
-<link href="css_portafolio/fancybox/jquery.fancybox.css" rel="stylesheet">
-<link href="css_portafolio/jcarousel.css" rel="stylesheet" />
-<link href="css_portafolio/flexslider.css" rel="stylesheet" />
-<link href="css_portafolio/style.css" rel="stylesheet" />
 
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
 
-<!-- Theme skin -->
-<link href="css_portafolio/default.css" rel="stylesheet" />
+        <!-- Fontawesome Icon font -->
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <!-- bootstrap.min -->
+        <link rel="stylesheet" href="css/jquery.fancybox.css">
+        <!-- bootstrap.min -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!-- bootstrap.min -->
+        <link rel="stylesheet" href="css/owl.carousel.css">
+        <!-- bootstrap.min -->
+        <link rel="stylesheet" href="css/slit-slider.css">
+        <!-- bootstrap.min -->
+        <link rel="stylesheet" href="css/animate.css">
+        <!-- Main Stylesheet -->
+        <link rel="stylesheet" href="css/main.css">
+        <!--Contacto Form-->
         
+        <link rel="stylesheet" href="css/form.css">
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/font-face.css"> 
+         <!-- Modernizer Script for old Browsers -->
+        <script src="js/modernizr-2.6.2.min.js"></script>
+         <!--Portafolio-->
+         <link rel="stylesheet" href="css/fancybox/jquery.fancybox.css">
+         <link rel="stylesheet" href="css/jcarousel.css">
+         <link rel="stylesheet" href="css/flexslider.css">
+         <link rel="stylesheet" href="css/style.css">
 
     </head>
 
@@ -97,7 +116,12 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12">
-				
+				<ul class="portfolio-categ filter">
+					<li class="all active"><a href="#">All</a></li>
+					<li class="web"><a href="#" title="">Web design</a></li>
+					<li class="icon"><a href="#" title="">Icons</a></li>
+					<li class="graphic"><a href="#" title="">Graphic design</a></li>
+				</ul>
 				<div class="clearfix">
 				</div>
 				<div class="row">
@@ -111,9 +135,7 @@
 						<span class="overlay-img-thumb font-icon-plus"></span>
 						</a>
 						<!-- Thumb Image and Description -->
-                                                <img src="img/works/1.jpg" 
-                                                     
-                                                     alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
+						<img src="img/works/1.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
 						</li>
 						<!-- End Item Project -->
 						<!-- Item Project and Filter Name -->
@@ -199,6 +221,7 @@
 		</div>
 	</div>
 	</section>    
+            
 
 
 
@@ -208,19 +231,31 @@
 
 
         </main>
-        <script src="js_portafolio/jquery.js"></script>
-<script src="js_portafolio/jquery.easing.1.3.js"></script>
-<script src="js_portafolio/bootstrap.min.js"></script>
-<script src="js_portafolio/jquery.fancybox.pack.js"></script>
-<script src="js_portafolio/jquery.fancybox-media.js"></script>
-<script src="js_portafolio/google-code-prettify/prettify.js"></script>
-<script src="js_portafolio/portfolio/jquery.quicksand.js"></script>
-<script src="js_portafolio/portfolio/setting.js"></script>
-<script src="js_portafolio/jquery.flexslider.js"></script>
-<script src="js_portafolio/animate.js"></script>
-<script src="js_portafolio/custom.js"></script>
+
        
 
-        
+        <!-- Essential jQuery Plugins
+        ================================================== -->
+        <!-- Main jQuery -->
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <!-- Twitter Bootstrap -->
+        <script src="js/bootstrap.min.js"></script>
+        <!-- Single Page Nav -->
+        <script src="js/jquery.singlePageNav.min.js"></script>
+        <!-- jquery.fancybox.pack -->
+        <script src="js/jquery.fancybox.pack.js"></script>
+        <!-- Google Map API -->
+        <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+        <!-- Owl Carousel -->
+        <script src="js/owl.carousel.min.js"></script>
+        <!-- jquery easing -->
+        <script src="js/jquery.easing.min.js"></script>
+        <!-- Fullscreen slider -->
+        <script src="js/jquery.slitslider.js"></script>
+        <script src="js/jquery.ba-cond.min.js"></script>
+        <!-- onscroll animation -->
+        <script src="js/wow.min.js"></script>
+        <!-- Custom Functions -->
+        <script src="js/main.js"></script>
     </body>
 </html>

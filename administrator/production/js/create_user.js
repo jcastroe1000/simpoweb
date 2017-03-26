@@ -16,18 +16,20 @@ $(function () {
                 data: archivos,
                 processData: false,
                 beforeSend: function () {
-                    $('#myModal').modal('show');
+//                    $('#myModal').modal('show');
+                    alert("primero");
                 },
                 success: function (data) {
+                    alert ("aqui");
                 
-                setTimeout(function () {
-                  $('#cargando').modal('show');
-                    
-                }, 9500);
-                setTimeout(function () {
-                    
-                    $(location).attr('href', 'index.php');
-                }, 12000);
+//                setTimeout(function () {
+//                  $('#cargando').modal('show');
+//                    
+//                }, 9500);
+//                setTimeout(function () {
+//                    
+//                    $(location).attr('href', 'index.php');
+//                }, 12000);
             },
             error: function(data) {
                 $('#cargando h2').text('Ocurrio un error. Intentalo de nuevo.');
@@ -42,6 +44,6 @@ $(function () {
       return false;
     }
   })
-})
+});
 
  
