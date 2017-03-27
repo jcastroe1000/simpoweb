@@ -20,20 +20,12 @@
         <!-- CSS
         ================================================== -->
 
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+        
 
-        <!-- Fontawesome Icon font -->
-        <link rel="stylesheet" href="css/font-awesome.min.css">
-        <!-- bootstrap.min -->
-        <link rel="stylesheet" href="css/jquery.fancybox.css">
-        <!-- bootstrap.min -->
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <!-- bootstrap.min -->
-        <link rel="stylesheet" href="css/owl.carousel.css">
-        <!-- bootstrap.min -->
-        <link rel="stylesheet" href="css/slit-slider.css">
-        <!-- bootstrap.min -->
-        <link rel="stylesheet" href="css/animate.css">
+        
+        
+        <link rel="stylesheet" href="css_portafolio/bootstrap.min.css">
+       
         <!-- Main Stylesheet -->
         <link rel="stylesheet" href="css/main.css">
         <!--Contacto Form-->
@@ -42,7 +34,7 @@
         <link rel="stylesheet" href="css/styles.css">
         <link rel="stylesheet" href="css/font-face.css"> 
          <!-- Modernizer Script for old Browsers -->
-        <script src="js/modernizr-2.6.2.min.js"></script>
+        
 
 
     </head>
