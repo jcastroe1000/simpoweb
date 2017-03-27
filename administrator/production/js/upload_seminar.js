@@ -1,10 +1,10 @@
 $(function() {
   $('#upload_seminar').submit(function() {
-    var comprobar = $('#course_name').val().length * $('#addressed').val().length * $('#objetive').val().length * $('#time_duration').val().length*
+    var comprobar = $('#course_name').val().length*$('#review').val().length  * $('#addressed').val().length * $('#objetive').val().length * $('#time_duration').val().length*
                     $('#modality').val().length *$('#date_start').val().length *$('#date_finish').val().length*$('#cost').val().length
-                    $('#creation_date').val().length*$('#created_by').val().length*$('#course_image').val().length;
+                    $('#creation_date').val().length*$('#created_by').val().length*$('#seminar_image').val().length;
     if (comprobar > 0) {
-      var imagen = document.getElementById("course_image").files;
+      var imagen = document.getElementById("seminar_image").files;
       if (imagen[0].type != "image/png" && imagen[0].type != "image/jpg" && imagen[0].type != "image/jpeg") {
         $('#cargando').modal('show');
         $('#cargando h3').text("El archivo " + imagen[0].name + " no es una imagen");

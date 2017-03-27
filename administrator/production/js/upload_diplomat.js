@@ -1,6 +1,6 @@
 $(function() {
   $('#upload_diplomat').submit(function() {
-    var comprobar = $('#course_name').val().length * $('#addressed').val().length * $('#objetive').val().length * $('#time_duration').val().length*
+    var comprobar = $('#course_name').val().length *$('#review').val().length * $('#addressed').val().length * $('#objetive').val().length * $('#time_duration').val().length*
                     $('#modality').val().length *$('#date_start').val().length *$('#date_finish').val().length*$('#cost').val().length
                     $('#creation_date').val().length*$('#created_by').val().length*$('#course_image').val().length;
     if (comprobar > 0) {

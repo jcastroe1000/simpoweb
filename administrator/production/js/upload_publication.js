@@ -1,6 +1,6 @@
 $(function() {
   $('#upload_publication').submit(function() {
-    var comprobar = $('#publication_name').val().length * $('#addressed').val().length * $('#objetive').val().length * $('#periodicity').val().length*
+    var comprobar = $('#publication_name').val().length *$('#review').val().length * $('#addressed').val().length * $('#objetive').val().length * $('#periodicity').val().length*
                     $('#cost').val().length *$('#creation_date').val().length*$('#created_by').val().length*$('#publication_image').val().length;
     if (comprobar > 0) {
       var imagen = document.getElementById("publication_image").files;

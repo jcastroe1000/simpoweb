@@ -288,7 +288,7 @@ header("Content-Type: text/html;charset=utf-8");
 
                                             <label class="control-label col-md-3 col-sm-3 col-xs-6 FolksDecoon" style="color: black">Seleccionar archivo: </label>
                                             <div class="col-md-6">
-                                                <input type="file"  id="course_image" name="course_image" class="file" data-show-preview="false">              
+                                                <input type="file"  id="seminar_image" name="seminar_image" class="file" data-show-preview="false">              
                                             </div>
 
                                         </div>
