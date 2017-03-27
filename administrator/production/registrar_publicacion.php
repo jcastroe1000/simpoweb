@@ -1,12 +1,12 @@
 <?php
-//header("Content-Type: text/html;charset=utf-8");
-//  include "config.php";
-  //error_reporting(E_ALL);
-  //session_start();
-  //if (!isset($_SESSION['user_name'])) {
-   //   header("Location:login.php");
-  //}
-  //$user_name = $_SESSION['user_name'];
+header("Content-Type: text/html;charset=utf-8");
+  include "config.php";
+  error_reporting(E_ALL);
+  session_start();
+  if (!isset($_SESSION['user_name'])) {
+      header("Location:login.php");
+  }
+  $user_name = $_SESSION['user_name'];
 
  
   ?>
@@ -197,6 +197,13 @@
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="first-name" style="color: black">Nombre:</label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
                                                 <input type="text" id="publication_name" name="publication_name" class="form-control col-md-7 col-xs-12">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="last-name" style="color: black">Resumen:</label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <textarea type="text" id="addressed" name="addressed" class="form-control col-md-7 col-xs-12"></textarea>
+                                                <!--                                                          pattern="[A-Za-z]" title="Solo se permiten letras"></textarea>-->
                                             </div>
                                         </div>
                                         <div class="form-group">

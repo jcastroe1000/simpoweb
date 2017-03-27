@@ -200,6 +200,13 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="last-name" style="color: black">Resumen:</label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <textarea type="text" id="addressed" name="addressed" class="form-control col-md-7 col-xs-12"></textarea>
+                                                <!--                                                          pattern="[A-Za-z]" title="Solo se permiten letras"></textarea>-->
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="last-name" style="color: black">Dirigido a:</label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
                                                 <textarea type="text" id="addressed" name="addressed" class="form-control col-md-7 col-xs-12"></textarea>
