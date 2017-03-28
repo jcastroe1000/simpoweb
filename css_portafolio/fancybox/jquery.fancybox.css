@@ -117,15 +117,7 @@
 		    transition: background 0.1s linear 0s, opacity 0.1s linear 0s;
 }
 
-.fancybox-close i {
-	left: 50%;
-	top: 50%;
-	margin: -11px 0 0 -11px;
-	font-size: 22px;
-	line-height: 1em;
-	position: absolute;
-	color: #FFFFFF;
-}
+
 
 .fancybox-close:hover {
 	opacity: 1;
@@ -171,26 +163,8 @@
 		    transition: background 0.1s linear 0s, opacity 0.1s linear 0s;
 }
 
-.fancybox-prev span i {
-	left: 50%;
-	top: 50%;
-	margin: -15px 0 0 -17px;
-	font-size: 30px;
-	line-height: 1em;
-	position: absolute;
-	color: #FFFFFF;
-}
 
 
-.fancybox-next span i {
-	left: 50%;
-	top: 50%;
-	margin: -15px 0 0 -15px;
-	font-size: 30px;
-	line-height: 1em;
-	position: absolute;
-	color: #FFFFFF;
-}
 
 .fancybox-nav:hover span {
 	opacity: 1;

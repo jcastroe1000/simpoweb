@@ -22,7 +22,7 @@
         <link href="css/bootstrap.min.css" rel="stylesheet" />
 
         <link href="css_portafolio/fancybox/jquery.fancybox.css" rel="stylesheet">
-        <link href="css_portafolio/jcarousel.css" rel="stylesheet" />
+        <link href="css_portafolio/jcarouse.css" rel="stylesheet" />
         <link href="css_portafolio/flexslider.css" rel="stylesheet" />
         <link href="css_portafolio/style.css" rel="stylesheet" />
         <link rel="stylesheet" href="css/main.css">
