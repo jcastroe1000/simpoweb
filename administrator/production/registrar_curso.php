@@ -26,7 +26,7 @@ header("Content-Type: text/html;charset=utf-8");
         <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
         <!-- Font Awesome -->
         <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-        <!-- NProgress -->
+        <!-- NP'rogress -->
         <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
         <!-- iCheck -->
         <link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
@@ -48,15 +48,35 @@ header("Content-Type: text/html;charset=utf-8");
     </head>
 
     <body class="nav-md">
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="myModalLabel"><i class="fa fa-clock-o"></i> Por favor espera</h4>
+                    </div>
+                    <div class="modal-body center-block">
+                        <p>Estamos guardando la información</p>
+                        <div class="progress">
+                            <div class="progress-bar bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
+        <!--Inicia modal exitoso-->
         <div id="cargando" class="modal fade" role="dialog">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-body" style="text-align: center;padding:20px">
-            <h3>Subiendo imagen...</h3>
-          </div>
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body" style="text-align: center;padding:20px">
+                        <h3>Curso Registrado Exitosamente...</h3>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
+
         <div class="container body">
             <div class="main_container">
                 <div class="col-md-3 left_col">
@@ -499,7 +519,35 @@ tickColor: "rgba(51, 51, 51, 0.06)",
                             });
                                                                     });
                                                                         </script>
+                                                                        
+                                                                        <script>
+                                            $('#myModal').on('shown.bs.modal', function () {
+
+                                                                            var progress = setInterval(function() {
+                                                                            var $bar = $('.bar');
+                                                                            if ($bar.width() == 500) {
+
+                                                                            // complete
+
+                                                                            clearInterval(progress);
+                                                                            $('.progress').removeClass('active');
+                                                                            $('#myModal').modal('hide');
+                                        $bar.width(0);
+                                        } else {
+
+                                            // perform processing logic here
+
+                                                $bar.width($bar.width() + 50);
+                                                }
+                                                
+                                                $bar.text($bar.width()/5 + "%");
+                                        }, 800);
+
+
+                                    })
+                                    </script>
                 <!--                                            /Doughnut Chart -->
+                
 
                 <!-- bootstra                                            p-daterangepicker -->
                                         <script>
