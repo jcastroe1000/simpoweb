@@ -111,7 +111,12 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12">
-
+                            <ul class="portfolio-categ filter">
+					<li class="all active"><a href="#"><button type="button" class="btn btn-success">Success</button></a></li>
+					<li class="web"><a href="#" title=""><button type="button" class="btn btn-success">Success</button></a></li>
+					<li class="icon"><a href="#" title=""><button type="button" class="btn btn-success">Success</button></a></li>
+					<li class="graphic"><a href="#" title=""><button type="button" class="btn btn-success">Success</button></a></li>
+				</ul>
                             <div class="clearfix">
                             </div>
                             <div class="row">
