@@ -30,13 +30,13 @@
 }
 .btn-default.disabled,
 .btn-primary.disabled,
-.btn-success.disabled,
+
 .btn-info.disabled,
 .btn-warning.disabled,
 .btn-danger.disabled,
 .btn-default[disabled],
 .btn-primary[disabled],
-.btn-success[disabled],
+
 .btn-info[disabled],
 .btn-warning[disabled],
 .btn-danger[disabled],

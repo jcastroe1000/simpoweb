@@ -22,7 +22,7 @@
         <link href="css/bootstrap.min.css" rel="stylesheet" />
 
         <link href="css_portafolio/fancybox/jquery.fancybox.css" rel="stylesheet">
-        <link href="css_portafolio/jcarousel.css" rel="stylesheet" />
+        <link href="css_portafolio/jcarouse.css" rel="stylesheet" />
         <link href="css_portafolio/flexslider.css" rel="stylesheet" />
         <link href="css_portafolio/style.css" rel="stylesheet" />
         <link rel="stylesheet" href="css/main.css">
@@ -111,7 +111,12 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12">
-
+                            <ul class="portfolio-categ filter">
+					<li class="all active"><a href="#"><button type="button" class="btn btn-success">Diplomados</button></a></li>
+					<li class="web"><a href="#" title=""><button type="button" class="btn btn-success">Cursos</button></a></li>
+					<li class="icon"><a href="#" title=""><button type="button" class="btn btn-success">Talleres</button></a></li>
+					<li class="graphic"><a href="#" title=""><button type="button" class="btn btn-success">Success</button></a></li>
+				</ul>
                             <div class="clearfix">
                             </div>
                             <div class="row">
