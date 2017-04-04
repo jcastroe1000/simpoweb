@@ -1,10 +1,10 @@
 $(function() {
-  $('#upload_workshop').submit(function() {
+  $('#upload_seminar').submit(function() {
     var comprobar = $('#course_name').val().length*$('#review').val().length  * $('#addressed').val().length * $('#objetive').val().length * $('#time_duration').val().length*
-                    $('#modality').val().length *$('#date_start').val().length *$('#date_finish').val().length*$('#cost').val().length*
-                    $('#creation_date').val().length*$('#created_by').val().length*$('#course_image').val().length;
+                    $('#modality').val().length *$('#date_start').val().length *$('#date_finish').val().length*$('#cost').val().length
+                    $('#creation_date').val().length*$('#created_by').val().length*$('#seminar_image').val().length;
     if (comprobar > 0) {
-      var imagen = document.getElementById("course_image").files;
+      var imagen = document.getElementById("seminar_image").files;
       if (imagen[0].type != "image/png" && imagen[0].type != "image/jpg" && imagen[0].type != "image/jpeg") {
         $('#cargando').modal('show');
         $('#cargando h3').text("El archivo " + imagen[0].name + " no es una imagen");
@@ -15,10 +15,10 @@ $(function() {
           $('#cargando h3').text("El archivo " + imagen[0].name + " sobrepasa el peso permitido");
           return false;
         } else {
-          var formulario = $('#subir_curso');
+          var formulario = $('#upload_seminar');
           var datos = formulario.serialize();
           var archivos = new FormData();
-          var url = 'gallery/upload_course.php';
+          var url = 'gallery/upload_seminar.php';
           for (var i = 0; i < (formulario.find('input[type=file]').length); i++) {
             archivos.append((formulario.find('input[type="file"]:eq(' + i + ')').attr("name")), ((formulario.find('input[type="file"]:eq(' + i + ')')[0]).files[0]));
           }
@@ -29,18 +29,20 @@ $(function() {
             data: archivos,
             processData: false,
             beforeSend: function() {
-               setTimeout(function () {
-                    $('#cargando').modal('show');
-                }, 2000); 
+                
+                    $('#myModal').modal('show');
+             
             },
             success: function (data) {
+                
                 setTimeout(function () {
-                    $('#cargando').modal('show');
-                }, 2000); 
-                $('#cargando h3').text('Imagen subida correctamente.');
+                  $('#cargando ').modal('show');
+                    
+                }, 9500);
                 setTimeout(function () {
-                    $(location).attr('href', 'talleres.php');
-                }, 8000);
+                    
+                    $(location).attr('href', 'seminarios.php');
+                }, 12000);
             },
             error: function(data) {
                 $('#cargando h3').text('Ocurrio un error. Intentalo de nuevo.');

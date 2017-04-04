@@ -1,9 +1,10 @@
 $(function() {
-  $('#upload_publication').submit(function() {
-    var comprobar = $('#publication_name').val().length *$('#review').val().length * $('#addressed').val().length * $('#objetive').val().length * $('#periodicity').val().length*
-                    $('#cost').val().length *$('#creation_date').val().length*$('#created_by').val().length*$('#publication_image').val().length;
+  $('#upload_seminar').submit(function() {
+    var comprobar = $('#course_name').val().length*$('#review').val().length  * $('#addressed').val().length * $('#objetive').val().length * $('#time_duration').val().length*
+                    $('#modality').val().length *$('#date_start').val().length *$('#date_finish').val().length*$('#cost').val().length
+                    $('#creation_date').val().length*$('#created_by').val().length*$('#seminar_image').val().length;
     if (comprobar > 0) {
-      var imagen = document.getElementById("publication_image").files;
+      var imagen = document.getElementById("seminar_image").files;
       if (imagen[0].type != "image/png" && imagen[0].type != "image/jpg" && imagen[0].type != "image/jpeg") {
         $('#cargando').modal('show');
         $('#cargando h3').text("El archivo " + imagen[0].name + " no es una imagen");
@@ -14,10 +15,10 @@ $(function() {
           $('#cargando h3').text("El archivo " + imagen[0].name + " sobrepasa el peso permitido");
           return false;
         } else {
-          var formulario = $('#upload_publication');
+          var formulario = $('#upload_seminar');
           var datos = formulario.serialize();
           var archivos = new FormData();
-          var url = 'gallery/upload_publication.php';
+          var url = 'gallery/upload_seminar.php';
           for (var i = 0; i < (formulario.find('input[type=file]').length); i++) {
             archivos.append((formulario.find('input[type="file"]:eq(' + i + ')').attr("name")), ((formulario.find('input[type="file"]:eq(' + i + ')')[0]).files[0]));
           }
@@ -28,19 +29,20 @@ $(function() {
             data: archivos,
             processData: false,
             beforeSend: function() {
-               setTimeout(function () {
-                    $('#cargando').modal('show');
-                }, 2000);
+                
+                    $('#myModal').modal('show');
+             
             },
             success: function (data) {
+                
                 setTimeout(function () {
-                    $('#cargando h3').text('Publicación creada de manera exitosa');
+                  $('#cargando ').modal('show');
                     
-                }, 8000);
+                }, 9500);
                 setTimeout(function () {
                     
-                    $(location).attr('href', 'publicaciones.php');
-                }, 13000);
+                    $(location).attr('href', 'seminarios.php');
+                }, 12000);
             },
             error: function(data) {
                 $('#cargando h3').text('Ocurrio un error. Intentalo de nuevo.');

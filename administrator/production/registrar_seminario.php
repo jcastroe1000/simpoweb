@@ -180,7 +180,7 @@ $user_name = $_SESSION['user_name'];
                             <ul class="nav navbar-nav navbar-right">
                                 <li class="">
                                     <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-<?php echo utf8_encode($user_name); ?>
+                                        <?php echo utf8_encode($user_name); ?>
                                         <span class=" fa fa-angle-down"></span>
                                     </a>
                                     <ul class="dropdown-menu dropdown-usermenu pull-right">
@@ -439,9 +439,9 @@ $user_name = $_SESSION['user_name'];
             </script>
             <!-- /Flot -->
 
-            <!--                        JQVMap -->
-                        <script>
-                        $(document).ready(function () {
+                        <!--                        JQVMap -->
+            <script>
+                $(document).ready(function () {
                 $('#world-map-gdp').vectorMa                            p({
                         map: 'world_e                            n',
                         backgroundColor: nu                                    ll,
@@ -452,196 +452,194 @@ $user_name = $_SESSION['user_name'];
                         showTooltip: tr                                            ue,
                         values: sample_da                                            ta,
                         scaleColors: ['#E6F2F0', '#149B7E                                            '],
-                        normalizeFunction: 'polynomi                                    al'
+        normalizeFunction: 'polynomi                                    al'
+                            });
                 });
-                        });
-                            </                                script>
-                <!-- /JQVM                               ap -->
-                                
-                    <!-- Skycons                                                             -->
-                                    <script>
-                                            $(document).read                              y(fu                            nction () {
-                                            var icons = ne                            w Skycons({
-                                            "co                                    lor"                                            : "#73879C"
-                                    }),
-                                        list = [
-                                    "clear-day", "clear-night", "part                                    ly-c                                               loudy-day",
-                                    "partly-cloudy-night", "cloudy", "rain", "sleet",                                   "sno                                                  w", "wind",
-                                        "fog"
-                                    ],
-                                i;
-                            for (i = list                                            .len                                    gth; i--; )
-                        icons.set(lis                                            t[i]                                            , list[i]);
-                                ic                                            ons.play();
-                                });
-                            </                                    script>
-            <!-- /S                                                   kyco                                    ns -->
+</script>
+        <!-- /JQVM                               ap -->
 
-            <!-- Doughnu         t Ch                                    art -->
-                            <script>
-                                                        $(document).ready(function () {
-                        var options = {
-                                                        legend: false,
-                                responsive: false
-    };
-                                                new Chart(document.getElementById("canvas1"), {
-                                                type: 'doughnut',
-                                        tooltipFillColor: "rgba(51, 51, 51, 0.55)",
-                                data: {
-                                                labels: [
-                                        "Symbian",
-                                        "Blackberry",
-                                        "Other",
-                                        "Android",
-                                        "IOS"
-                                ],
-                                        datasets: [{
-                                        data: [15, 20, 30, 10, 30],
-                                                backgroundColor: [
-                                        "#BDC3C7",
-                                                        "#9B59B6",
-                                                        "#E74C3C",
-                                                        "#26B99A",
-                                        "#3498DB"
-                                                ],
-                                                hoverBackgroundColor: [
-                                                        "#CFD4D8",
-                                                        "#B370CF",
-                                                        "#E95E4F",
-                                                        "#36CAAB",
-                                                        "#49A9EA"
-                                                ]
-                            }]
-                            },
-                                options: options
-                        });
-                        });
-                        </script>
-                                <!--                                            /Doughnut Chart -->
+<!-- Skycons                                                             -->
+                <script>
+                $(document).ready(function () {
+                    var icons = new Skycons({
+                                            "co                                    lor"                                            : "#73879C"
+                                            }),
+                                            list = [
+                "clear-day", "clear-night", "part                                    ly-c                                               loudy-day",
+                                    "partly-cloudy-night", "cloudy", "rain", "sleet",                                   "sno                                                  w", "wind",
+                                                "fog"
+                                    ],
+                                        i;
+                                    for (i = list                                            .len                                    gth; i--; )
+                                icons.set(lis                                            t[i]                                            , list[i]);
+                                        ic                                            ons.play();
+                                        });
+                                    </script>
+                    <!-- /S                                                   kyco                                    ns -->
+
+                    <!-- Doughnu         t Ch                                    art -->
+                                    <script>
+                                                                $(document).ready(function () {
+                                var options = {
+                                                                legend: false,
+                                        responsive: false
+            };
+                                                        new Chart(document.getElementById("canvas1"), {
+                                                        type: 'doughnut',
+                                                tooltipFillColor: "rgba(51, 51, 51, 0.55)",
+                                        data: {
+                                                        labels: [
+                                                "Symbian",
+                                                "Blackberry",
+                                                "Other",
+                                                "Android",
+                                                "IOS"
+                                        ],
+                                                datasets: [{
+                                                data: [15, 20, 30, 10, 30],
+                                                        backgroundColor: [
+                                                "#BDC3C7",
+                                                                "#9B59B6",
+                                                                "#E74C3C",
+                                                                "#26B99A",
+                                                "#3498DB"
+                                                        ],
+                                                        hoverBackgroundColor: [
+                                                                "#CFD4D8",
+                                                                "#B370CF",
+                                                                "#E95E4F",
+                                                                "#36CAAB",
+                                                                "#49A9EA"
+                                                        ]
+                                    }]
+                                    },
+                                        options: options
+                                });
+                                });
+                    </script>
+                            <!--                                            /Doughnut Chart -->
 
        <!-- bootstra                                            p-daterangepic                                            ker                                             -->
                             <script>
-                            $(document).ready(function () {
-                                                var cb = function (start, end, label) {
-                                                console.log(start.toISOString(), end.toISOString(), label);
+        $(document).ready(function () {
+        var cb = function (start, end, label) {
+                                            console.log(start.toISOString(), end.toISOString(), label);
                                                 $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
                         };
-                                        var optionSet1 = {
-                                        startDate: moment().subtract(29, 'days'),
-                                        endDate: moment(),
-                                        minDate: '01/01/2012',
-                                        maxDate: '12/31/2015',
-                                                        dateLimit: {
-                                                        days: 60
-                                        },
-                                        showDropdowns: true,
-                                            showWeekNumbers: true,
-                                            timePicker: false,
-                                            timePickerIncrement: 1,
-                                            timePicker12Hour: true,
-                                                ranges: {
-                                                                'Today': [moment(), moment()],
-                                        'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
-                                        'Last 7 Days': [moment().subtract(6, 'days'), moment()],
-                                        'Last 30 Days': [moment().subtract(29, 'days'), moment()],
-                                                                'This Month': [moment().startOf('month'), moment().endOf('month')],
-                                                                'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                        var optionSet1 = {
+        startDate: moment().subtract(29, 'days'),
+                                                    endDate: moment(),
+                                                    minDate: '01/01/2012',
+                                                    maxDate: '12/31/2015',
+                                        dateLimit: {                                                     days: 60
+                                    },
+                                    showDropdowns: true,
+        showWeekNumbers: true,
+        timePicker: false,
+        timePickerIncrement: 1,
+        timePicker12Hour: true,
+        ranges: {
+        'Today': [moment(), moment()],
+                                                'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                                                'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                                                'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                                                'This Month': [moment().startOf('month'), moment().endOf('month')],
+                                                            'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
                                                 },
-                                                opens: 'left',
-                                                buttonClasses: ['btn btn-default'],
-                                            applyClass: 'btn-small btn-primary',
-                                        cancelClass: 'btn-small',
-                                        format: 'MM/DD/YYYY',
-                                            separator: ' to ',
-                                locale: {                                                                                         applyLabel: 'Submit',
-                                cancelLabel: 'Clear',
-                                fromLabel: 'From',
-                                                                toLabel: 'To',
-                                                                customRangeLabel: 'Custom',
-                                daysOfWeek: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
-                                monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-                                                                firstDay: 1
-                                                }
-                                                };
-                                $('#reportrange span').html(moment().subtract(29, 'days').format('MMMM D, YYYY') + ' - ' + moment().format('MMMM D, YYYY'));
-                                                          $('#reportrange').daterangepicker(optionSet1, cb);
-                                $('#reportrange').on('show.daterangepicker', function () {
-                                                                console.log("show event fired");
+        opens: 'left',
+        buttonClasses: ['btn btn-default'],
+        applyClass: 'btn-small btn-primary',
+        cancelClass: 'btn-small',
+        format: 'MM/DD/YYYY',
+        separator: ' to ',
+        locale: {                                                                                         applyLabel: 'Submit',
+                                                            cancelLabel: 'Clear',
+                                                            fromLabel: 'From',
+                                                toLabel: 'To',
+                                                customRangeLabel: 'Custom',
+                                                daysOfWeek: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
+                                                monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+        firstDay: 1
+        }
+                                            };
+        $('#reportrange span').html(moment().subtract(29, 'days').format('MMMM D, YYYY') + ' - ' + moment().format('MMMM D, YYYY'));
+        $('#reportrange').daterangepicker(optionSet1, cb);
+                                                          $('#reportrange').on('show.daterangepicker', function () {
+        console.log("show event fired");
                                             });
                                             $('#reportrange').on('hide.daterangepicker', function () {
-                                console.log("hide event fired");
-                                                       });
-                                                       $('#reportrange').on('apply.daterangepicker', function (ev, picker) {
-                                console.log("apply event fired, start/end dates are " + picker.startDate.format('MMMM D, YYYY') + " to " + picker.endDate.format('MMMM D, YYYY'));
+        console.log("hide event fired");
                                                 });
-                                $('#reportrange').on('cancel.daterangepicker', function (ev, picker) {
-                                                                console.log("cancel event fired");
+                                                $('#reportrange').on('apply.daterangepicker', function (ev, picker) {
+                                        console.log("apply event fired, start/end dates are " + picker.startDate.format('MMMM D, YYYY') + " to " + picker.endDate.format('MMMM D, YYYY'));
+                                            });
+                                        $('#reportrange').on('cancel.daterangepicker', function (ev, picker) {
+                                        console.log("cancel event fired");
                                                     });
-                                $('#options1').click(function () {
-                                                                $('#reportrange').data('daterangepicker').setOptions(optionSet1, cb);
+                                                    $('#options1').click(function () {
+                                        $('#reportrange').data('daterangepicker').setOptions(optionSet1, cb);
+                                                    });
+                                                    $('#options2').click(function () {
+                                        $('#reportrange').data('daterangepicker').setOptions(optionSet2, cb);
                                             });
-                                            $('#options2').click(function () {
-                                                                $('#reportrange').data('daterangepicker').setOptions(optionSet2, cb);
-                                            });
-                                            $('#destroy').click(function () {
-                                                                $('#reportrange').data('daterangepicker').remove();
+        $('#destroy').click(function () {
+        $('#reportrange').data('daterangepicker').remove();
                                                 });
-                                            });
-                                            </script>
+                                                });
+                                                </script>
                 <!-- /bootstrap-date                                                                                                                                    rangepicker -->
-                                            <script>
-                                            $('#myModal').on('shown.bs.modal', function () {
+                            <script>
+                                                            $('#myModal').on('shown.bs.modal', function () {
 
-                                                var progress = setInterval(funct i on() {
-                                                var $bar = $('.bar');
-                            if ($bar.width() == 500) {
+                                                            var progress = setInterval(function() {
+            var $bar = $('.bar');
+                if ($bar.width() == 500) {
 
-                                                                // complete
+                                                            // complete
 
-                                                                clearInterval(progress);
-                                                        $('.progress').removeClass('active');
-                                                                $('#myModal').modal('hide');
-                                                                $bar.width(0);
-                                                       } else {
+            clearInterval(progress);
+                $('.progress').removeClass('active');
+                                                            $('#myModal').modal('hide');
+                                                            $bar.width(0);
+                                            } else {
 
-                                                                        // perform processing logic here
+                                                                    // perform processing logic here
 
-                                                                        $bar.width($bar.width() + 50);
-                                            }
+                                                            $bar.width($bar.width() + 50);
+                                                       }
                                             
-                                            $bar.text($bar.width()/5 + "%");
-                                            }, 800);
-                                        
-                                        
+                                        $bar.text($bar.width()/5 + "%");
+                }, 800);
+                                            
+                                                            
                                             })
-                                            </script>
+                        </script>
 
-                                                        <!                                                                    -- gauge.js                                             -->
-                                            <script>
-                                            var opts = {
-                                                                        lines: 12,
-                                                                        angle: 0,
-                                                                        lineWidth: 0.4,
-                                                                        pointer: {
-                                                        length: 0.75,
-                                                        strokeWidth: 0.042,
-                                                                                color: '#1D212A'
-                                                        },
-                                        limitM                                                                                                                           ax: 'false',
-                                                        colorStar                                                                                                                                                              t: '#1ABC9C',
-                                                        colorStop:                                                                                                                                                         '#1ABC9C',
-                                                strokeColor                                                                                                                                                                                                                                     : '#F0F3F3',
+       <!-- gauge.js                                             -->
+                                                <script>
+                        var opts = {
+                                                                    lines: 12,
+                                                                    angle: 0,
+                                                    lineWid t h: 0.4,       pointer: {
+                                                                    length: 0.75,
+                                                            strokeWidth: 0.042,
+            color: '#1D212A'
+                },
+                    limitM                                                                                                                           ax: 'false',
+            colorStar                                                                                                                                                              t: '#1ABC9C',
+                                                colorStop:                                                                                                                                                         '#1ABC9C',
+                                                            strokeColor                                                                                                                                                                                                                                     : '#F0F3F3',
             generateGradient:                                                                                                   true
-                                                        };
-                                                v                                                                ar target = document                                                                                                                                                    .get                        ElementById('foo'),
-                                                gauge = new Gauge(ta                                                                                                                                                               rget                        ).setOptions(opts);
-            gau                        ge.maxValue = 6000;
-            gau                                                                                                                                             ge.a                        nimationSpeed = 32;
+            };
+                                                            v                                                                ar target = document                                                                                                                                                    .get                        ElementById('foo'),
+            gauge = new Gauge(ta                                                                                                                                                               rget                        ).setOptions(opts);
+                                                            gau                        ge.maxValue = 6000;
+                                                    gau                                                                                                                                             ge.a                        nimationSpeed = 32;
             gauge.set(3200);
-            gauge.setTextFi                                                            eld(document.getElementById("gauge-text"))                                                                                                                                                                      ;
-            </script>                                                                                                             
-                                                               <!-- Switchery -->
-                                                    <script src="../vendors/switchery/dist/switchery.min.js"></script>
-                                                    <!-- /gauge.js -->
-                                            </body>
-                                        </html>
+                                                            gauge.setTextFi                                                            eld(document.getElementById("gauge-text"))                                                                                                                                                                                                                ;
+            </script>                                                                                                                                                      
+                                                               <!-- Switch                                                ery -->
+                                                <script src="../vendors/switchery/dist/switchery.min.js"></script>
+                                                <!-- /gauge.js -->
+                                        </body>
+                                    </html>
