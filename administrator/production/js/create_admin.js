@@ -29,20 +29,12 @@ $(function () {
                     $('#cargando').modal('hide');
                 }, 2000);
                 setTimeout(function () {
-                    bootbox.alert({
-                            message: "Usuario Duplicado,Verifica la información \n\
-                                        e Intentalo de nuevo",
-                            backdrop: false
-                        });
+                    $('#cargando').modal('show');
+                    $('#cargando h3').text("El Operador ya se encuentra registrado");
                 }, 2500);
                         
                         return false;
-//                        setTimeout(function () {
-//                    bootbox.alert({
-//    message: "This alert can be dismissed by clicking on the background!",
-//    backdrop: true
-//});
-//                }).hide(300);
+
                     }
                 },
             });
@@ -54,5 +46,5 @@ $(function () {
             $('#cargando h3').text("Llena todos los campos");
             return false;
         }
-    })
-})
+    });
+});
