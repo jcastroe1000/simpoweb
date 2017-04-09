@@ -1,12 +1,14 @@
 $(function () {
-    $('#create_admin').submit(function () {
-        var comprobar = $('#name').val().length * $('#apellido_paterno').val().length * $('#apellido_materno').val().length * $('#email_admin').val().length;
+    $('#create_user').submit(function () {
+        var comprobar = $('#name').val().length * $('#apellido_paterno').val().length * $('#surnames').val().length 
+                *$('#telephone_contact').val().length* $('#email_contact').val().length*$('#gender').val().length
+                *$('#password').val().length*$('#confirm_password').val().length;
         if (comprobar > 0) {
 
-            var formulario = $('#create_admin');
+            var formulario = $('#create_user');
             var datos = formulario.serialize();
             var archivos = new FormData();
-            var url = 'model/register_admin.php';
+            var url = 'model/register_user.php';
 
             $.ajax({
                 url: url + '?' + datos,
@@ -29,20 +31,13 @@ $(function () {
                     $('#cargando').modal('hide');
                 }, 2000);
                 setTimeout(function () {
-                    bootbox.alert({
-                            message: "Usuario Duplicado,Verifica la información \n\
-                                        e Intentalo de nuevo",
-                            backdrop: false
-                        });
+                    $('#cargando').modal('show');
+                    $('#cargando h3').text('Usuario Duplicado.');
+                    
                 }, 2500);
                         
                         return false;
-//                        setTimeout(function () {
-//                    bootbox.alert({
-//    message: "This alert can be dismissed by clicking on the background!",
-//    backdrop: true
-//});
-//                }).hide(300);
+
                     }
                 },
             });
@@ -54,5 +49,5 @@ $(function () {
             $('#cargando h3').text("Llena todos los campos");
             return false;
         }
-    })
-})
+    });
+});
