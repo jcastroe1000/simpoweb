@@ -254,7 +254,7 @@
             <!-- bootstrap-daterangepicker -->
             <script src="administrator/vendors/moment/min/moment.min.js"></script>
             <script src="administrator/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
-            <script src="administrator/production/js/create_user.js" ></script>
+            <script src="../production/js/create_user.js" ></script>
                 <script src="administrator/production/js/bootbox.js"></script>
                 <script src="administrator/production/js/bootbox.min.js"></script>
                 <!-- Custom Theme Scripts -->

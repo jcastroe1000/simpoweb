@@ -23,27 +23,27 @@ header("Content-Type: text/html;charset=utf-8");
         <title>Registrar Administrador</title>
 
         <!-- Bootstrap -->
-        <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="administrator/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
         <!-- Font Awesome -->
-        <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+        <link href="administrator/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
         <!-- NProgress -->
-        <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
+        <link href="administrator/vendors/nprogress/nprogress.css" rel="stylesheet">
         <!-- iCheck -->
-        <link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+        <link href="administrator/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
         <!-- bootstrap-progressbar -->
-        <link href="../vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+        <link href="administrator/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
         <!-- JQVMap -->
-        <link href="../vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet"/>
+        <link href="administrator/vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet"/>
         <!-- bootstrap-daterangepicker -->
-        <link href="../vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+        <link href="administrator/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
         <!-- Switchery -->
-        <link href="../vendors/switchery/dist/switchery.min.css" rel="stylesheet">
+        <link href="administrator/vendors/switchery/dist/switchery.min.css" rel="stylesheet">
         <!-- Custom Theme Style -->
-        <link href="../build/css/custom.min.css" rel="stylesheet">
-        <link href="../production/css/fileinput.css" media="all" rel="stylesheet" type="text/css">
-        <link href="../production/css/font-face.css" rel="stylesheet" type="text/css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script src="../production/js/jquery.js"></script>
+        <link href="administrator/build/css/custom.min.css" rel="stylesheet">
+        <link href="administrator/production/css/fileinput.css" media="all" rel="stylesheet" type="text/css">
+        <link href="administrator/production/css/font-face.css" rel="stylesheet" type="text/css">
+        
+        <script src="administrator/production/js/jquery.js"></script>
 
     </head>
 
@@ -192,54 +192,74 @@ header("Content-Type: text/html;charset=utf-8");
                                 </div>
                                 <div class="x_content">
 
-                                    <form  id="create_admin" name="create_admin" class="form-horizontal form-label-left" >
-                                        <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="first-name" style="color: black">Nombre:</label>
-                                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <input type="text" id="name" name="name" class="form-control col-md-7 col-xs-12" 
-                                                        >
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="first-name" style="color: black">Apellido Paterno:</label>
-                                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <input type="text" id="apellido_paterno" name="apellido_paterno" class="form-control col-md-7 col-xs-12" 
-                                                        >
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="first-name" style="color: black">Apellido Materno:</label>
-                                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <input type="text" id="apellido_materno" name="apellido_materno" class="form-control col-md-7 col-xs-12" 
-                                                       >
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="first-name" style="color: black">Email:</label>
-                                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <input type="email" id="email_admin" name="email_admin" class="form-control col-md-7 col-xs-12" >
-                                            </div>
-                                        </div>
-                                        
-                                          
-                                          
-                                       
-                                                
-                                                 
-                                                 
-                                          
-                                        <div class="form-group"  style="padding-top: 50px">
-                                            <div class="col-md-8 col-sm-8 col-xs-12 col-md-offset-5">
-                                                <button class="btn btn-danger">Cancel</button>
-                                                <button type="submit" class="btn btn-success">Añadir</button>
-                                            </div>
-                                        </div>
+                                    <form id="create_user" name="create_user" class="form-horizontal form-label-left" style="padding-top: 40px">
 
-                                
-                                
-                                
-                                
-                                    </form>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Nombre (s) : 
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <input type="text" id="name" name="name" class="form-control col-md-7 col-xs-12">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Apellidos : 
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" id="surnames" name="surnames"  class="form-control col-md-7 col-xs-12">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Telefono : </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <input id="telephone_contact" name="telephone_contact" class="form-control col-md-7 col-xs-12" type="text" name="middle-name">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Correo Electronico :  
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <input id="email_contact" name="email_contact" class="form-control col-md-7 col-xs-12" type="email" name="middle-name">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Genero :</label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <select class="form-control col-md-7 col-xs-12" id="gender" name="gender">
+                                    <option>Elije una opción</option>
+                                    <option value="1">Hombre</option>
+                                    <option value="2">Mujer</option>
+
+                                  </select>
+                                </div>
+                        
+                        
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Contraseña : 
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <input id="password" name="password" class="date-picker form-control col-md-7 col-xs-12" type="password">
+                        </div>
+                      </div>
+                       <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Confirmar contraseña : 
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <input id="confir_password" name="confirm_password" class="date-picker form-control col-md-7 col-xs-12"  type="password">
+                        </div>
+                      </div>
+                    <div class="form-group">
+                                            <input type="hidden" type="text" class="form-control" name="creation_date" id="creation_date" value="<?php echo date("Y/m/d") ?>">
+                                        </div>
+                      <div class="ln_solid"></div>
+                      <div class="form-group">
+                        <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                          <button type="submit" class="btn btn-danger">Cancelar</button>
+                          <button type="submit" class="btn btn-success">Registrarme</button>
+                        </div>
+                      </div>
+
+                    </form>
                                 </div>  
 
 
@@ -255,50 +275,48 @@ header("Content-Type: text/html;charset=utf-8");
             </div>
 
             <!-- jQuery -->
-            <script src="../vendors/jquery/dist/jquery.min.js"></script>
+            <script src="administrator/vendors/jquery/dist/jquery.min.js"></script>
             <!-- Bootstrap -->
-            <script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+            <script src="administrator/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
             <!-- FastClick -->
-            <script src="../vendors/fastclick/lib/fastclick.js"></script>
+            <script src="administrator/vendors/fastclick/lib/fastclick.js"></script>
             <!-- NProgress -->
-            <script src="../vendors/nprogress/nprogress.js"></script>
+            <script src="administrator/vendors/nprogress/nprogress.js"></script>
             <!-- Chart.js -->
-            <script src="../vendors/Chart.js/dist/Chart.min.js"></script>
+            <script src="administrator/vendors/Chart.js/dist/Chart.min.js"></script>
             <!-- gauge.js -->
-            <script src="../vendors/gauge.js/dist/gauge.min.js"></script>
+            <script src="administrator/vendors/gauge.js/dist/gauge.min.js"></script>
             <!-- bootstrap-progressbar -->
-            <script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+            <script src="administrator/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
             <!-- iCheck -->
-            <script src="../vendors/iCheck/icheck.min.js"></script>
+            <script src="administrator/vendors/iCheck/icheck.min.js"></script>
             <!-- Skycons -->
-            <script src="../vendors/skycons/skycons.js"></script>
+            <script src="administrator/vendors/skycons/skycons.js"></script>
             <!-- Flot -->
-            <script src="../vendors/Flot/jquery.flot.js"></script>
-            <script src="../vendors/Flot/jquery.flot.pie.js"></script>
-            <script src="../vendors/Flot/jquery.flot.time.js"></script>
-            <script src="../vendors/Flot/jquery.flot.stack.js"></script>
-            <script src="../vendors/Flot/jquery.flot.resize.js"></script>
+            <script src="administrator/vendors/Flot/jquery.flot.js"></script>
+            <script src="administrator/vendors/Flot/jquery.flot.pie.js"></script>
+            <script src="administrator/vendors/Flot/jquery.flot.time.js"></script>
+            <script src="administrator/vendors/Flot/jquery.flot.stack.js"></script>
+            <script src="administrator/vendors/Flot/jquery.flot.resize.js"></script>
             <!-- Flot plugins -->
-            <script src="../vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
-            <script src="../vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
-            <script src="../vendors/flot.curvedlines/curvedLines.js"></script>
+            <script src="administrator/vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
+            <script src="administrator/vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
+            <script src="administrator/vendors/flot.curvedlines/curvedLines.js"></script>
             <!-- DateJS -->
-            <script src="../vendors/DateJS/build/date.js"></script>
+            <script src="administrator/vendors/DateJS/build/date.js"></script>
             <!-- JQVMap -->
-            <script src="../vendors/jqvmap/dist/jquery.vmap.js"></script>
-            <script src="../vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
-            <script src="../vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
+            <script src="administrator/vendors/jqvmap/dist/jquery.vmap.js"></script>
+            <script src="administrator/vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+            <script src="administrator/vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
             <!-- bootstrap-daterangepicker -->
-            <script src="../vendors/moment/min/moment.min.js"></script>
-            <script src="../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
-            <script src="../production/js/create_admin.js" >
+            <script src="administrator/vendors/moment/min/moment.min.js"></script>
+            <script src="administrator/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+            <script src="administrator/production/js/create_user.js" >
             <script src="../production/js/bootbox.js"></script>
             <script src="../production/js/bootbox.min.js"></script>
             <!-- Custom Theme Scripts -->
             <script src="../build/js/custom.min.js"></script>
-            <script src="../production/js/plugins/sortable.js" type="text/javascript"></script>
-            <script src="../production/js/fileinput.js" type="text/javascript"></script>
-
+            
 
 
 
@@ -552,7 +570,7 @@ tickColor: "rgba(51, 51, 51, 0.06)",
                                 gauge.setTextFi                                                            eld(document.getElementById("gauge-text"))                                                            ;
                                 <                                                            /script>
                 <!-- Switchery -->
-                                                            <script src="../vendors/switchery/dist/switchery.min.js"></script>
+                                                            <script src="administrator/vendors/switchery/dist/switchery.min.js"></script>
                                                             <!-- /gauge.js -->
                                                     </body>
                                                 </html>

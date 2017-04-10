@@ -21,7 +21,28 @@
         ================================================== -->
 
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
-
+        <!-- Bootstrap -->
+        <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Font Awesome -->
+        <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+        <!-- NProgress -->
+        <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
+        <!-- iCheck -->
+        <link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+        <!-- bootstrap-progressbar -->
+        <link href="../vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+        <!-- JQVMap -->
+        <link href="../vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet"/>
+        <!-- bootstrap-daterangepicker -->
+        <link href="../vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+        <!-- Switchery -->
+        <link href="../vendors/switchery/dist/switchery.min.css" rel="stylesheet">
+        <!-- Custom Theme Style -->
+        <link href="../build/css/custom.min.css" rel="stylesheet">
+        <link href="../production/css/fileinput.css" media="all" rel="stylesheet" type="text/css">
+        <link href="../production/css/font-face.css" rel="stylesheet" type="text/css">
+        
+        <script src="../production/js/jquery.js"></script>
         <!-- Fontawesome Icon font -->
         <link rel="stylesheet" href="css/font-awesome.min.css">
         <!-- bootstrap.min -->
@@ -218,7 +239,7 @@
 
         </main>
 
-       <script src="administrator//vendors/jquery/dist/jquery.min.js"></script>
+       <script src="administrator/vendors/jquery/dist/jquery.min.js"></script>
             <!-- Bootstrap -->
             <script src="administrator/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
             <!-- FastClick -->
@@ -254,7 +275,7 @@
             <!-- bootstrap-daterangepicker -->
             <script src="administrator/vendors/moment/min/moment.min.js"></script>
             <script src="administrator/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
-            <script src="create_user.js" ></script>
+            <script src="../production/js/create_user.js" ></script>
                 <script src="administrator/production/js/bootbox.js"></script>
                 <script src="administrator/production/js/bootbox.min.js"></script>
                 <!-- Custom Theme Scripts -->
