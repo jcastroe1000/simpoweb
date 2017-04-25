@@ -1,7 +1,7 @@
 <?php
     include "../config.php";
     error_reporting(E_ALL);
-    $course_name = $_GET['course_name'];
+    $course_name = $_GET['diplomat_name'];
     $addressed = $_GET['addressed'];
     $objetive = $_GET['objetive'];
     $duration = $_GET['time_duration'];
@@ -10,11 +10,11 @@
     $date_finish=$_GET['date_finish'];
     $cost=$_GET['cost'];
     $creation_date=$_GET['creation_date'];
-    $foto = trim($_FILES['course_image']['name']);
+    $foto = trim($_FILES['diplomat_image']['name']);
     $created_by=$_GET['created_by'];
     $section='diplomado';
     $filename = "";
-    if ($_FILES['course_image']['size'] <= 2097152) {
+    if ($_FILES['diplomat_image']['size'] <= 2097152) {
         while (true) {
             $filename = uniqid(rand()) . '.' .pathinfo($foto, PATHINFO_EXTENSION);
             if (!file_exists('album/diplomat/' . $filename)) break;
@@ -27,7 +27,7 @@
         mysqli_query($mysqli, $query1);
         error_log("Despues del primer insert", 0);
         // Movemos el archivo
-        move_uploaded_file($_FILES['course_image']['tmp_name'], 'album/diplomat/' . $filename);
+        move_uploaded_file($_FILES['diplomat_image']['tmp_name'], 'album/diplomat/' . $filename);
         error_log("Despues del mover el archivo", 0);
         //Cerramos la conexion
         $mysqli->close();

@@ -2,6 +2,7 @@
     include "../config.php";
     error_reporting(E_ALL);
     $publication_name = $_GET['publication_name'];
+    $review = $_GET['review'];
     $addressed_publication = $_GET['addressed'];
     $publication_objetive = $_GET['objetive'];
     $periodicity = $_GET['periodicity'];
@@ -11,7 +12,7 @@
     $created_by=$_GET['created_by'];
     $section='publicacion';
     $filename = "";
-    if ($_FILES['course_image']['size'] <= 2097152) {
+    if ($_FILES['publication_image']['size'] <= 2097152) {
         while (true) {
             $filename = uniqid(rand()) . '.' .pathinfo($foto, PATHINFO_EXTENSION);
             if (!file_exists('gallery/publications/' . $filename)) break;
@@ -24,7 +25,7 @@
         mysqli_query($mysqli, $query1);
         error_log("Despues del primer insert", 0);
         // Movemos el archivo
-        move_uploaded_file($_FILES['course_image']['tmp_name'], 'gallery/publications/' . $filename);
+        move_uploaded_file($_FILES['publication_image']['tmp_name'], 'gallery/publications/' . $filename);
         error_log("Despues del mover el archivo", 0);
         //Cerramos la conexion
         $mysqli->close();

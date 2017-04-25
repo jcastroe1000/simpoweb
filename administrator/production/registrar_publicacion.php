@@ -18,7 +18,7 @@ $user_name = $_SESSION['user_name'];
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Registrar Seminario</title>
+        <title>Registrar Publicaciones</title>
 
         <!-- Bootstrap -->
         <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -205,17 +205,17 @@ $user_name = $_SESSION['user_name'];
                         <div class="col-md-12 col-sm-12 col-xs-12">
                             <div class="x_panel">
                                 <div class="">
-                                    <h2 style="text-align: center;color: black;font-size: 20px;" class="Sansation_Regular">REGISTRAR SEMINARIO</h2>
+                                    <h2 style="text-align: center;color: black;font-size: 20px;" class="Sansation_Regular">REGISTRAR PUBLICACIÓN</h2>
 
                                     <div class="clearfix"></div>
                                 </div>
                                 <div class="x_content">
 
-                                    <form id="upload_seminar" name="upload_seminar"  class="form-horizontal form-label-left">
+                                    <form id="upload_publication" name="upload_publication"  class="form-horizontal form-label-left">
                                         <div class="form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="first-name" style="color: black">Nombre:</label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <input type="text" id="course_name" name="course_name" class="form-control col-md-7 col-xs-12" >
+                                                <input type="text" id="publication_name" name="publication_name" class="form-control col-md-7 col-xs-12" >
                                                 <!--                                                        pattern="[A-Za-z]" title="Solo se permiten letras">-->
                                             </div>
                                         </div>
@@ -242,40 +242,20 @@ $user_name = $_SESSION['user_name'];
                                         </div>
 
                                         <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-6 FolksDecoon" style="color: black">Duración:</label>
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-6 FolksDecoon" style="color: black">Periodicidad:</label>
                                             <div class="col-md-33 ">
-                                                <input id="time_duration" name="time_duration" class="date-picker form-control col-md-33" type="text"
+                                                <input id="peridiocity" name="peridiocity" class="date-picker form-control col-md-33" type="text"
                                                        pattern="[0-9]{1,8}" title="Ingresa solo números">
                                             </div>
-                                            <label class="control-label col-md-1 col-sm-1 col-xs-1 FolksDecoon" style="color: black">Modalidad:</label>
+                                            <label class="control-label col-md-1 col-sm-1 col-xs-1 FolksDecoon" style="color: black">Costo:</label>
                                             <div class="col-md-33 ">
-                                                <select class="form-control" id="modality" name="modality">
-                                                    <option value="">Elije una opción</option>
-                                                    <option value="Presencial">Presencial</option>
-                                                    <option value="Distancia">Distancia</option>
-                                                    <option value="Presencial y/o Distancia">Presencial y/o Distancia</option>
-                                                </select>
+                                                <input id="cost" name="cost" class="date-picker form-control col-md-33" type="text"
+                                                       pattern="[0-9]{1,8}" title="Ingresa solo números">
                                             </div>
 
                                         </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-6 FolksDecoon" style="color: black">Inicio:</label>
-                                            <div class="col-md-33 ">
-                                                <input  id="date_start"  name="date_start"  class="date-picker form-control col-md-33" type="date">
-                                            </div>
-                                            <label class="control-label col-md-1 col-sm-1 col-xs-1 FolksDecoon" style="color: black">Término:</label>
-                                            <div class="col-md-33">
-                                                <input id="date_finish" name="date_finish" class="date-picker form-control col-md-33" type="date">
-                                            </div>
-
-                                        </div> 
-                                        <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-6 FolksDecoon" style="color: black">Costo:</label>
-                                            <div class="col-md-33 ">
-                                                <input id="cost" name="cost" class="date-picker form-control col-md-33"  type="text"
-                                                       pattern="[0-9.]{1,8}" title="Ingresa solo números">
-                                            </div>
-                                        </div>
+                                        
+                                        
                                         <div class="form-group">
                                             <input type="hidden" type="text" class="form-control" name="creation_date" id="creation_date" value="<?php echo date("Y/m/d") ?>">
                                         </div>
@@ -286,7 +266,7 @@ $user_name = $_SESSION['user_name'];
 
                                             <label class="control-label col-md-3 col-sm-3 col-xs-6 FolksDecoon" style="color: black">Seleccionar archivo: </label>
                                             <div class="col-md-6">
-                                                <input type="file"  id="seminar_image" name="seminar_image" class="file" data-show-preview="false">              
+                                                <input type="file"  id="publication_image" name="publication_image" class="file" data-show-preview="false">              
                                             </div>
 
                                         </div>
@@ -354,7 +334,7 @@ $user_name = $_SESSION['user_name'];
             <!-- bootstrap-daterangepicker -->
             <script src="../vendors/moment/min/moment.min.js"></script>
             <script src="../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
-            <script src="../production/js/upload_seminar.js" ></script>
+            <script src="../production/js/upload_publication.js" ></script>
             <script src="../production/js/bootbox.js"></script>
             <script src="../production/js/bootbox.min.js"></script>
             <!-- Custom Theme Scripts -->

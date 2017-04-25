@@ -256,16 +256,16 @@ header("Content-Type: text/html;charset=utf-8");
                                 
                             </div>
                         </div>
-                        <div class="clearfix"><h2 style="text-align: center;color: black;font-size: 25px" class="Sansation_Regular">Operadores  Registrados</h2></div>
+                        <div class="clearfix"><h2 style="text-align: center;color: black;font-size: 25px" class="Sansation_Regular">Seminarios Registrados</h2></div>
                         <div class="row" style="margin-top: 2%;">
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
                                     <thead>
                                         <tr>
-                                            <th class="Sansation_Bold" style="color: black;text-align: center">Nombre del Operador</th>
-                                            <th class="Sansation_Bold" style="color: black;text-align: center">Email</th>
+                                            <th class="Sansation_Bold" style="color: black;text-align: center">Nombre de la publicación</th>
+                                            <th class="Sansation_Bold" style="color: black;text-align: center">Resumen</th>
                                             <th class="Sansation_Bold" style="color: black;text-align: center">Fecha de Creación</th>
-                                            <th class="Sansation_Bold" style="color: black;text-align: center">Estatus</th>
+                                            <th class="Sansation_Bold" style="color: black;text-align: center">Creado por</th>
                                             <th></th>
                                             <th></th>
                                             
@@ -277,23 +277,16 @@ header("Content-Type: text/html;charset=utf-8");
                                         <?php
                                                         include "./model/conection.php";
                                                         error_reporting(E_ALL);
-                                                        $res = $mysqli->query("SELECT nombre,apellido_paterno,apellido_materno,email,creation_date,estatus from administradores");
+                                                        $seccion='seminario';
+                                                        $res = $mysqli->query("SELECT publication_name,review,creation_date,created_by from publicaciones");
                                                         $mysqli->close();
                                                         while ($row = $res->fetch_assoc()):
                                                             ?>
                                         <tr>
-                                            <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo utf8_encode($row ['nombre']); ?></td>
-                                            <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo $row ['email'] ?></td>
+                                            <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo $row ['publication_name']; ?></td>
+                                            <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo $row ['review'] ?></td>
                                             <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo $row ['creation_date'] ?></td>
-                                            <td class="Sans" style="color: #6E6E6E;text-align: center">
-                                                <?php if ( $row ['estatus'] == 0){
-                                                      echo 'Pendiente';
-                                                } elseif ($row ['estatus'] == 1) {
-                                                    echo 'Activo';
-                                                } elseif ($row ['estatus'] == 2) {
-                                                    echo 'Bloqueado';    
-                                                }?>
-                                            </td>
+                                            <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo $row ['created_by'] ?></td>
                                             <td class="Sans" style="color: #04B404;text-align: center">Detalles        <i class="fa fa-plus"></i></td>
                                             <td class="Sans" style="color: #FF0000;text-align: center">Eliminar        <i class="fa fa-trash"></i></td>
                                             

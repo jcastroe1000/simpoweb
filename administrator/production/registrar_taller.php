@@ -205,17 +205,17 @@ $user_name = $_SESSION['user_name'];
                         <div class="col-md-12 col-sm-12 col-xs-12">
                             <div class="x_panel">
                                 <div class="">
-                                    <h2 style="text-align: center;color: black;font-size: 20px;" class="Sansation_Regular">REGISTRAR SEMINARIO</h2>
+                                    <h2 style="text-align: center;color: black;font-size: 20px;" class="Sansation_Regular">REGISTRAR TALLER</h2>
 
                                     <div class="clearfix"></div>
                                 </div>
                                 <div class="x_content">
 
-                                    <form id="upload_seminar" name="upload_seminar"  class="form-horizontal form-label-left">
+                                    <form id="upload_workshop" name="upload_workshop"  class="form-horizontal form-label-left">
                                         <div class="form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="first-name" style="color: black">Nombre:</label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <input type="text" id="course_name" name="course_name" class="form-control col-md-7 col-xs-12" >
+                                                <input type="text" id="workshop_name" name="workshop_name" class="form-control col-md-7 col-xs-12" >
                                                 <!--                                                        pattern="[A-Za-z]" title="Solo se permiten letras">-->
                                             </div>
                                         </div>
@@ -286,7 +286,7 @@ $user_name = $_SESSION['user_name'];
 
                                             <label class="control-label col-md-3 col-sm-3 col-xs-6 FolksDecoon" style="color: black">Seleccionar archivo: </label>
                                             <div class="col-md-6">
-                                                <input type="file"  id="seminar_image" name="seminar_image" class="file" data-show-preview="false">              
+                                                <input type="file"  id="workshop_image" name="workshop_image" class="file" data-show-preview="false">              
                                             </div>
 
                                         </div>
@@ -354,7 +354,7 @@ $user_name = $_SESSION['user_name'];
             <!-- bootstrap-daterangepicker -->
             <script src="../vendors/moment/min/moment.min.js"></script>
             <script src="../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
-            <script src="../production/js/upload_seminar.js" ></script>
+            <script src="../production/js/upload_workshop.js" ></script>
             <script src="../production/js/bootbox.js"></script>
             <script src="../production/js/bootbox.min.js"></script>
             <!-- Custom Theme Scripts -->

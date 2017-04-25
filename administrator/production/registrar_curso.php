@@ -18,7 +18,7 @@ $user_name = $_SESSION['user_name'];
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Registrar Seminario</title>
+        <title>Registrar Curso</title>
 
         <!-- Bootstrap -->
         <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -205,13 +205,13 @@ $user_name = $_SESSION['user_name'];
                         <div class="col-md-12 col-sm-12 col-xs-12">
                             <div class="x_panel">
                                 <div class="">
-                                    <h2 style="text-align: center;color: black;font-size: 20px;" class="Sansation_Regular">REGISTRAR SEMINARIO</h2>
+                                    <h2 style="text-align: center;color: black;font-size: 20px;" class="Sansation_Regular">REGISTRAR CURSO</h2>
 
                                     <div class="clearfix"></div>
                                 </div>
                                 <div class="x_content">
 
-                                    <form id="upload_seminar" name="upload_seminar"  class="form-horizontal form-label-left">
+                                    <form id="upload_course" name="upload_course"  class="form-horizontal form-label-left">
                                         <div class="form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="first-name" style="color: black">Nombre:</label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
@@ -284,9 +284,9 @@ $user_name = $_SESSION['user_name'];
                                         </div>
                                         <div class="form-group">
 
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-6 FolksDecoon" style="color: black">Seleccionar archivo: </label>
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-6 FolksDecoon" styltambiene="color: black">Seleccionar archivo: </label>
                                             <div class="col-md-6">
-                                                <input type="file"  id="seminar_image" name="seminar_image" class="file" data-show-preview="false">              
+                                                <input type="file"  id="course_image" name="course_image" class="file" data-show-preview="false">              
                                             </div>
 
                                         </div>
@@ -354,7 +354,7 @@ $user_name = $_SESSION['user_name'];
             <!-- bootstrap-daterangepicker -->
             <script src="../vendors/moment/min/moment.min.js"></script>
             <script src="../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
-            <script src="../production/js/upload_seminar.js" ></script>
+            <script src="../production/js/upload_course.js"></script>
             <script src="../production/js/bootbox.js"></script>
             <script src="../production/js/bootbox.min.js"></script>
             <!-- Custom Theme Scripts -->
