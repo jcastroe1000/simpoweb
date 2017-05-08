@@ -18,7 +18,7 @@ $user_name = $_SESSION['user_name'];
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Registrar Seminario</title>
+        <title>Registrar Pregunta</title>
 
         <!-- Bootstrap -->
         <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -205,69 +205,39 @@ $user_name = $_SESSION['user_name'];
                         <div class="col-md-12 col-sm-12 col-xs-12">
                             <div class="x_panel">
                                 <div class="">
-                                    <h2 style="text-align: center;color: black;font-size: 20px;" class="Sansation_Regular">REGISTRAR SERVICIO EMPRESARIAL</h2>
+                                    <h2 style="text-align: center;color: black;font-size: 20px;" class="Sansation_Regular">REGISTRAR PREGUNTA</h2>
 
                                     <div class="clearfix"></div>
                                 </div>
                                 <div class="x_content">
 
-                                    <form id="upload_business_service" name="upload_business_service"  class="form-horizontal form-label-left">
+                                    <form id="upload_seminar" name="upload_seminar"  class="form-horizontal form-label-left">
                                         <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="first-name" style="color: black">Nombre:</label>
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="first-name" style="color: black">Pregunta:</label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <input type="text" id="business_service_name" name="business_service_name" class="form-control col-md-7 col-xs-12" >
-                                                <!--                                                        pattern="[A-Za-z]" title="Solo se permiten letras">-->
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="last-name" style="color: black">Resumen:</label>
-                                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <textarea type="text" id="review" name="review" class="form-control col-md-7 col-xs-12"></textarea>
+                                                <textarea type="text" id="review" name="review" class="form-control col-md-7 col-xs-12" rows="4"></textarea>
                                                 <!--                                                          pattern="[A-Za-z]" title="Solo se permiten letras"></textarea>-->
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="last-name" style="color: black">Dirigido a:</label>
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="last-name" style="color: black">Respuesta:</label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <textarea type="text" id="addressed" name="addressed" class="form-control col-md-7 col-xs-12"></textarea>
+                                                <textarea type="text" id="review" name="review" class="form-control col-md-7 col-xs-12" rows="7"></textarea>
                                                 <!--                                                          pattern="[A-Za-z]" title="Solo se permiten letras"></textarea>-->
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" style="color: black">Objetivo:</label>
-                                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <textarea id="objetive" name="objetive" class="form-control col-md-7 col-xs-12" rows="6" type="text" name="middle-name"
-                                                          pattern="[A-Za-z0-9.;,]{1,600}" title="Solo se permiten letras y n"></textarea>
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="last-name" style="color: black">Categoria:</label>
+                                            <div class="col-md-6 ">
+                                                <input type="text" id="review" name="review" class="form-control col-md-7 col-xs-12" placeholder="SIMPOSIUM"
+                                                       disabled="">
                                             </div>
                                         </div>
-
-                                        <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-6 FolksDecoon" style="color: black">Costo:</label>
-                                            <div class="col-md-33 ">
-                                                <input id="time_duration" name="time_duration" class="date-picker form-control col-md-33" type="text"
-                                                       pattern="[0-9]{1,8}" title="Ingresa solo números">
-                                            </div>
-                                           
-
-                                        </div>
-                                                                                <div class="form-group">
-                                            <input type="hidden" type="text" class="form-control" name="creation_date" id="creation_date" value="<?php echo date("Y/m/d") ?>">
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="hidden" type="text" class="form-control" name="created_by" id="created_by" value="<?php echo $user_name ?>">
-                                        </div>
-                                        <div class="form-group">
-
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-6 FolksDecoon" style="color: black">Seleccionar archivo: </label>
-                                            <div class="col-md-6">
-                                                <input type="file"  id="business_service_image" name="business_service_image" class="file" data-show-preview="false">              
-                                            </div>
-
-                                        </div>
+                                        
                                         <div class="ln_solid"></div>
                                         <div class="form-group">
                                             <div class="col-md-7 col-sm-7 col-xs-12 col-md-offset-4">
-                                                <button class="btn btn-danger">Cancel</button>
+                                                <button class="btn btn-danger">Cancelar</button>
                                                 <button type="submit" class="btn btn-success">Añadir</button>
                                             </div>
                                         </div>
@@ -328,7 +298,7 @@ $user_name = $_SESSION['user_name'];
             <!-- bootstrap-daterangepicker -->
             <script src="../vendors/moment/min/moment.min.js"></script>
             <script src="../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
-            <script src="../production/js/upload_business_service.js" ></script>
+            <script src="../production/js/upload_seminar.js" ></script>
             <script src="../production/js/bootbox.js"></script>
             <script src="../production/js/bootbox.min.js"></script>
             <!-- Custom Theme Scripts -->
