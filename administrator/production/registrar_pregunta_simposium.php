@@ -70,7 +70,7 @@ $user_name = $_SESSION['user_name'];
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-body" style="text-align: center;padding:20px">
-                        <h3>Seminario Creado Exitosamente...</h3>
+                        <h3>Pregunta creada exitosamnete.</h3>
                     </div>
                 </div>
             </div>
@@ -211,26 +211,26 @@ $user_name = $_SESSION['user_name'];
                                 </div>
                                 <div class="x_content">
 
-                                    <form id="upload_seminar" name="upload_seminar"  class="form-horizontal form-label-left">
+                                    <form id="create_answer" name="create_answer"  class="form-horizontal form-label-left">
                                         <div class="form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="first-name" style="color: black">Pregunta:</label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <textarea type="text" id="review" name="review" class="form-control col-md-7 col-xs-12" rows="4"></textarea>
+                                                <textarea type="text" id="question" name="question" class="form-control col-md-7 col-xs-12" rows="4"></textarea>
                                                 <!--                                                          pattern="[A-Za-z]" title="Solo se permiten letras"></textarea>-->
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="last-name" style="color: black">Respuesta:</label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <textarea type="text" id="review" name="review" class="form-control col-md-7 col-xs-12" rows="7"></textarea>
+                                                <textarea type="text" id="answer" name="answer" class="form-control col-md-7 col-xs-12" rows="7"></textarea>
                                                 <!--                                                          pattern="[A-Za-z]" title="Solo se permiten letras"></textarea>-->
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="last-name" style="color: black">Categoria:</label>
                                             <div class="col-md-6 ">
-                                                <input type="text" id="review" name="review" class="form-control col-md-7 col-xs-12" placeholder="SIMPOSIUM"
-                                                       disabled="">
+                                                <input type="text" id="category" name="category" value="simposium" class="form-control col-md-7 col-xs-12" 
+                                                      >
                                             </div>
                                         </div>
                                         
@@ -298,7 +298,7 @@ $user_name = $_SESSION['user_name'];
             <!-- bootstrap-daterangepicker -->
             <script src="../vendors/moment/min/moment.min.js"></script>
             <script src="../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
-            <script src="../production/js/upload_seminar.js" ></script>
+            <script src="../production/js/create_faq.js" ></script>
             <script src="../production/js/bootbox.js"></script>
             <script src="../production/js/bootbox.min.js"></script>
             <!-- Custom Theme Scripts -->

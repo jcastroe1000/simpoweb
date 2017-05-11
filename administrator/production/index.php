@@ -107,7 +107,7 @@ header("Content-Type: text/html;charset=utf-8");
 
                                         </ul>
                                     </li>
-                                    <li><a><i class="fa fa-question-circle"></i> FAQ'S</a>
+                                    <li><a href="faqs.php"><i class="fa fa-question-circle"></i> FAQ'S</a>
                                     </li>
 
 
