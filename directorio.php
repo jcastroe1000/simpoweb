@@ -36,12 +36,13 @@
         <link rel="stylesheet" href="css/animate.css">
         <!-- Main Stylesheet -->
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/theme.css">
         <!--Contacto Form-->
 
         <link rel="stylesheet" href="css/form.css">
         <link rel="stylesheet" href="css/styles.css">
         <link rel="stylesheet" href="css/font-face.css"> 
-         <!-- Modernizer Script for old Browsers -->
+        <!-- Modernizer Script for old Browsers -->
         <script src="js/modernizr-2.6.2.min.js"></script>
 
 
@@ -60,7 +61,7 @@
         <!--
         Fixed Navigation
         ==================================== -->
-                <header id="navigation" class="navbar-inverse navbar-fixed-top animated-header">
+        <header id="navigation" class="navbar-inverse navbar-fixed-top animated-header">
             <div class="container">
                 <div class="navbar-header">
                     <!-- responsive nav button -->
@@ -99,154 +100,121 @@
         ==================================== -->
 
         <main class="site-content" role="main">
-                    <section id="who" class="who2 section">
-            <div class="container text-center">
+            <section id="who" class="who2 section">
+
                 <br>
-                <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top: 75px;">DIRECTORIO</h2>
-                <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;">INSTITUTO POLITÉCNICO NACIONAL</h2>
-            </div>   
-            <br>
-            <br>
-            <div class="benefits text-center">
-                <div class="item  text-center">
-                    <div class="item-inner">
-                        <div >
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:20px;padding-top: 1px;text-align: center">Enrique Fernández Fassnacht.</p>
-                            <p class="MediumItalic" style="font-size: x-large;color: #2e2e35">Director General</p>
-                            
-                        </div>   
+                <br>
+                <div class="benefits text-center">
+                    <div class="item  text-center">
+                        <section class="aboutus" id="aboutus">
+                            <div class="container">
+                                <div class="heading text-center">
+                                    <h2>Acerca de Nosotros</h2>
+                                </div>			
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="papers text-center">
+                                            <img src="img/customer_person_people_woman_you_1627.png" alt=""><br/>
+                                            <h4 class="notopmarg nobotmarg">Adelina Rosas Mercado</h4>
+                                            <p style="text-align: justify">
+                                                Doctora en Clínica psicoanalítica, Maestra en psicología educativa de la
+
+                                                Universidad Nacional Autónoma de México y Master practitioner en Programación
+
+                                                Neurolingüística. Es profesora-investigadora de la Escuela Superior de Ingeniería Química e
+
+                                                Industrias Extractivas del Instituto Politécnico Nacional, docente de las asignaturas de Motivación,
+
+                                                trabajo en equipo y solución de conflictos, Desarrollo humano integral, y del seminario Coaching
+
+                                                ejecutivo estratégico en la industria. Es autora de tres libros y de numerosas ponencias
+
+                                                presentadas en congresos nacionales e internacionales y de artículos publicados en revistas
+
+                                                científicas y coordinadora o colaboradora en investigaciones con diferentes universidades y
+
+                                                organizaciones.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="papers text-center">
+                                            <img src="img/customer_person_people_woman_you_1627.png"  alt=""><br/>
+                                            <h4 class="notopmarg nobotmarg">Adelina Pérez Rosas</h4>
+                                            <p style="text-align: justify">
+                                                Coach, licenciada en Administración de empresas y maestra en ciencias con
+
+                                                especialidad en administración y desarrollo de la educación. Es coordinadora General del
+
+                                                Simposium Internacional: “Aportaciones de las universidades a la docencia, la investigación, la
+
+                                                tecnología y el desarrollo” que se lleva a cabo anualmente en el Instituto Politécnico Nacional, y es
+
+                                                coordinadora general del seminario de actualización profesional: “Coaching ejecutivo estratégico
+
+                                                en la industria” que se imparte en cuatro ocasiones al año. Es maestra de Capacitación y
+
+                                                adiestramiento, Desarrollo de habilidades de liderazgo y Redacción ejecutiva. Ha publicado
+
+                                                artículos en revistas científicas y presentado aportaciones en congresos nacionales e
+
+                                                internacionales. Proporciona servicios de detección de necesidades y capacitación a las empresas.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="papers text-center">
+                                            <img src="img/customer_person_people_man_you_1625.png" alt=""><br/>
+                                            <h4 class="notopmarg nobotmarg">Salvador Alejandro Pérez Rosas</h4>
+                                            <p style="text-align: justify">
+                                                Psicólogo de la Universidad del Valle de México donde obtuvo
+
+                                                el mejor promedio de su generación y es Master practitioner en PNL del Centro de Asesoría
+
+                                                Bertrand Russell. Posee un posgrado en psicoanálisis, es psicoterapeuta psicoanalítico y entrena y
+
+                                                da terapia en inglés y en español. Tiene numerosas publicaciones de artículos relacionados con su
+
+                                                campo del conocimiento y entrena en desarrollo de habilidades de Programación Neurolingüística.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="papers text-center">
+                                            <img src="img/customer_person_people_man_you_1625.png" alt=""><br/>
+                                            <h4 class="notopmarg nobotmarg">Fabián David Martínez Valdés</h4>
+                                            <p style="text-align: justify">
+                                                Licenciado en Economía de la Universidad Autónoma
+
+                                                Metropolitana y maestro en ciencias en matemáticas aplicadas. Es docente de Economía
+
+                                                Industrial, Matemáticas superiores, Liderazgo y Negociación. Obtuvo el mejor promedio de su
+
+                                                generación y se especializa en econometría para la evaluación de índices de calidad y
+
+                                                productividad en las empresas, así como la valoración de entornos socioeconómicos. Es coautor
+
+                                                del libro “Modelado de fenómenos económicos y financieros: una visión contemporánea” editado
+
+                                                por la Universidad de las Américas.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
                     </div><!--l//item-inner--> 
-                    <div class="item-inner">
-                        <div >
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:20px;padding-top: 1px;text-align: center">Miguel Ángel Álvarez Gómez</p>
-                            <p class="MediumItalic" style="font-size: x-large;color: #2e2e35"> Secretario Academico</p>
-                            
-                        </div>   
-                    </div><!--l//item-inner--> 
-                    <div class="item-inner">
-                        <div >
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:20px;padding-top: 1px;text-align:center">José Guadalupe Trujillo Ferrara</p>
-                            <p class="MediumItalic" style="font-size: x-large;color: #2e2e35">Secretario de Investigación y Posgrado</p>
-                        </div>   
-                    </div><!--l//item-inner--> 
-                    <div class="item-inner">
-                        <div >
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:20px;padding-top: 1px;text-align: center">Primo Alberto Calva Chavarría</p>
-                            <p class="MediumItalic" style="font-size:x-large;color: #2e2e35">Director de Investigación</p>
-                        </div>   
-                        
-                    </div><!--l//item-inner--> 
-                    <div class="item-inner">
-                        <div >
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:20px;padding-top: 1px;text-align: center">Emmanuel Alejandro Merchán Cruz </p>
-                            <p class="MediumItalic" style="font-size: x-large;color: #2e2e35">Director de Educación Superior</p>
-                        </div>   
-                        
-                    </div><!--l//item-inner--> 
-                    <div class="item-inner">
-                        <div >
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:20px;padding-top: 1px;text-align: center">Emmanuel Alejandro Merchán Cruz </p>
-                            <p class="MediumItalic" style="font-size: x-large;color: #2e2e35">Director de Educación Superior</p>
-                        </div>   
-                    </div><!--l//item-inner--> 
-                    <div class="item-inner">
-                        <div >
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:20px;padding-top: 1px;text-align: center">Dante Real Miranda </p>
-                            <p class="MediumItalic" style="font-size: x-large;color: #2e2e35">Director de la ESIQIE</p>
-                        </div>   
-                    </div><!--l//item-inner--> 
-                    <div class="item-inner">
-                        <div >
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:20px;padding-top: 1px;text-align: center">Victor Manuel Feregrino </p>
-                            <p class="MediumItalic" style="font-size: x-large;color: #2e2e35">Subdirector Académico de la ESIQIE</p>
-                        </div>   
-                    </div><!--l//item-inner-->
-                    <div class="item-inner">
-                        <div >
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:20px;padding-top: 1px;text-align: center">Juanita E. Cárdenas Rivas </p>
-                            <p class="MediumItalic" style="font-size: x-large;color: #2e2e35">Jefe del Depto. De Ingeniería Química Industrial-ESIQIE</p>
-                        </div>   
-                    </div><!--l//item-inner-->
-                    <div class="item-inner">
-                        <div >
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:20px;padding-top: 1px;text-align: center">Salvador Pérez Cárdenas</p>
-                            <p class="MediumItalic" style="font-size: x-large;color: #2e2e35">Presidente Ejecutivo del Simposium</p>
-                        </div>   
-                    </div><!--l//item-inner-->
-                    <div class="item-inner">
-                        <div >
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:20px;padding-top: 1px;text-align: center">Adelina Pérez Rosas </p>
-                            <p class="MediumItalic" style="font-size: x-large;color: #2e2e35">Coordinadora General del Simposium</p>
-                        </div>   
-                    </div><!--l//item-inner-->
-                    <div class="item-inner">
-                        <div >
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:10px;padding-top: 1px;text-align: center">Guillermo de la Torre Arteaga</p>
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:10px;padding-top: 1px;text-align: center">Sergio Flores Meza</p>
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:10px;padding-top: 1px;text-align: center">Anibal Quintana Mora.</p>
-                            <p class="MediumItalic" style="font-size: x-large;color: #2e2e35">Comité de Prensa y Propaganda</p>
-                        </div>   
-                    </div><!--l//item-inner-->
-                    <div class="item-inner">
-                        <div >
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:10px;padding-top: 1px;text-align: center">Adelina Rosas Mercado</p>
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:10px;padding-top: 1px;text-align: center">Mauricio Gaitán Espinosa</p>
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:10px;padding-top: 1px;text-align: center">Fernanda Y. Rivera Rosas</p>
-                            <p class="MediumItalic" style="font-size: x-large;color: #2e2e35">Comité Editor de Memorias</p>
-                        </div>   
-                    </div><!--l//item-inner-->
-                     <div class="item-inner">
-                        <div >
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:10px;padding-top: 1px;text-align: center">Lorena del Rocío Mayo Monroy</p>
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:10px;padding-top: 1px;text-align: center">Yahir Alejandro Martínez Nava</p>
-                            <p class="MediumItalic" style="font-size: x-large;color: #2e2e35">Coordinación de Apoyo Logístico e Informática</p>
-                        </div>   
-                    </div><!--l//item-inner-->
-                    <div class="item-inner">
-                        <div >
-                            
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:10px;padding-top: 1px;text-align: center">Adelina Rosas Mercado</p>
-                            <p class="MediumItalic" style="font-size: x-large;color: #2e2e35">Coordinación General de Mesas de Trabajo</p>
-                        </div>   
-                    </div><!--l//item-inner-->
-                    <div class="item-inner">
-                        <div >
-                            
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:10px;padding-top: 1px;text-align: center">Gerardo Ramos Serpa | Universidad “Camilo Cienfuegos”</p>
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:10px;padding-top: 1px;text-align: center">Cuba Manuel González Hernández  | UAEH</p>
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:10px;padding-top: 1px;text-align: center">Jorge Briones Chávez | UPN</p>
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:10px;padding-top: 1px;text-align: center">Rocío Echeverría González | UACH</p>
-                            <p class="MediumItalic" style="font-size: x-large;color: #2e2e35">Comité Técnico</p>
-                        </div>   
-                    </div><!--l//item-inner-->
-                    <div class="item-inner">
-                        <div >
-                            
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:10px;padding-top: 1px;text-align: center">Leticia A. Morales Sánchez</p>
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:10px;padding-top: 1px;text-align: center">Alma Trinidad Torres, Andrea De La Cruz Salomé</p>
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:10px;padding-top: 1px;text-align: center">Perla Eunice García García, Efrén Delgadillo Sánchez</p>
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:10px;padding-top: 1px;text-align: center">Víctor M. Guzmán Rojas, S. Farid Valladares Mendoza</p>
-                            <p class="MediumItalic" style="font-size: x-large;color: #2e2e35">Comité de Organización</p>
-                        </div>   
-                    </div><!--l//item-inner-->
-                    <div class="item-inner">
-                        <div >
-                            
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:10px;padding-top: 1px;text-align: center">Ana Karen Delgado Tellez</p>
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:10px;padding-top: 1px;text-align: center">S. Edith Abad Castillo , Mallely E. Hernández Venavides</p>
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:10px;padding-top: 1px;text-align: center">Gustavo Eduardo Gutiérrez Puebla, Diego Víctor A. Abreu Espino</p>
-                            <p class="MediumItalic" style="font-size: x-large;color: #2e2e35">Comité de Organización</p>
-                        </div>   
-                    </div><!--l//item-inner-->
-                </div><!--l//item-inner--> 
-  
-                    
+
+
                 </div>     
 
 
-            
-        </section>
-            
+
+            </section>
+
 
 
 
@@ -257,7 +225,7 @@
 
         </main>
 
-       
+
 
         <!-- Essential jQuery Plugins
         ================================================== -->
