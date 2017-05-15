@@ -256,8 +256,8 @@ header("Content-Type: text/html;charset=utf-8");
                                 
                             </div>
                         </div>
-                        <div class="clearfix"><h2 style="text-align: center;color: black;font-size: 25px" class="Sansation_Regular">Preguntas de Seminarios</h2></div>
-                        <div class="clearfix"><h2 style="text-align: center;color: black;font-size: 25px;padding-top:40px;" class="Sansation_Regular"><a href="registrar_pregunta_seminario.php"><button type="button"  class="btn btn-success"><i class="fa fa-plus"></i> Añadir Pregunta de Seminario</button></a></h2></div>
+                        <div class="clearfix"><h2 style="text-align: center;color: black;font-size: 25px" class="Sansation_Regular">Preguntas Servicios Empresariales</h2></div>
+                        <div class="clearfix"><h2 style="text-align: center;color: black;font-size: 25px;padding-top:40px;" class="Sansation_Regular"><a href="registrar_pregunta_servicios_empresariales.php"><button type="button"  class="btn btn-success"><i class="fa fa-plus"></i> Añadir Pregunta Servicio Empresarial</button></a></h2></div>
                         <div class="row" style="margin-top: 2%;">
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
@@ -283,9 +283,43 @@ header("Content-Type: text/html;charset=utf-8");
                                         <tr>
                                             <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo $row ['nombre']; ?></td>
                                             <td class="Sans" style="color: #04B404;text-align: center">Detalles        <i class="fa fa-plus"></i></td>
-                                            <td class="Sans" style="color: #04B404;text-align: center">Editar        <i class="fa fa-plus"></i></td>
-                                            <td class="Sans" style="color: #FF0000;text-align: center">Eliminar        <i class="fa fa-trash"></i></td>
+                                            <td class="Sans" style="color: #04B404;text-align: center"><a button type="button" href="#2" data-toggle="modal" class="btn btn-default"  > <i class="icon-trash"></i> Eliminar</a></td>
+                                            <td class="Sans" style="color: #FF0000;text-align: center"><a button type="button" href="#1" data-toggle="modal" class="btn btn-danger"  > <i class="icon-trash"></i> Eliminar</a></td>
                                         </tr>
+                                         <div class="modal fade" id="1" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true" >
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                          <h4 class="modal-title" id="myModalLabel">Atención</h4>
+                        </div>
+                        <div class="modal-body">
+                          <h3>¿Estas seguro de eliminar el contenido?</h3>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="icon-ban-circle"></i>&nbsp;Cerrrar</button>
+                         <!--<a href="Delete_Photo.php?d=<?php echo $row2['id']?>&f=<?php echo $row2['file']?>"><button type="button" class="btn btn-success"><i class="icon-ok"></i>Aceptar</button></a>-->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                                    <div class="modal fade" id="2" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true" >
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                          <h4 class="modal-title" id="myModalLabel">Atención</h4>
+                        </div>
+                        <div class="modal-body">
+                          
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="icon-ban-circle"></i>&nbsp;Cerrrar</button>
+                         <!--<a href="Delete_Photo.php?d=<?php echo $row2['id']?>&f=<?php echo $row2['file']?>"><button type="button" class="btn btn-success"><i class="icon-ok"></i>Aceptar</button></a>-->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                                         <?php
                                                         endwhile;
                                                         ?> 

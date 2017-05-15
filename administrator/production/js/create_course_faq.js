@@ -1,12 +1,12 @@
 $(function () {
-    $('#create_answer').submit(function () {
+    $('#create_course_question').submit(function () {
         var comprobar = $('#question').val().length * $('#answer').val().length* $('#category').val().length;
         if (comprobar > 0) {
 
-            var formulario = $('#create_answer');
+            var formulario = $('#create_course_question');
             var datos = formulario.serialize();
             var archivos = new FormData();
-            var url = 'model/register_answer.php';
+            var url = 'model/register_question.php';
 
             $.ajax({
                 url: url + '?' + datos,
@@ -21,7 +21,7 @@ $(function () {
                     if (data.status == 'success') {
                         $('#cargando h3').text('Pregunta creada exitosamente.');
                         setTimeout(function () {
-                    $(location).attr('href', 'preguntas_simposium.php');
+                    $(location).attr('href', 'preguntas_cursos.php');
                 }, 2000);
                         
                     } else if (data.status == 'error') {

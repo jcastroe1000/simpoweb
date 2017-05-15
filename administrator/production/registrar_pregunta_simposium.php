@@ -205,13 +205,13 @@ $user_name = $_SESSION['user_name'];
                         <div class="col-md-12 col-sm-12 col-xs-12">
                             <div class="x_panel">
                                 <div class="">
-                                    <h2 style="text-align: center;color: black;font-size: 20px;" class="Sansation_Regular">REGISTRAR PREGUNTA</h2>
+                                    <h2 style="text-align: center;color: black;font-size: 20px;" class="Sansation_Regular">REGISTRAR PREGUNTA DE SIMPOSIUM</h2>
 
                                     <div class="clearfix"></div>
                                 </div>
                                 <div class="x_content">
 
-                                    <form id="create_answer" name="create_answer"  class="form-horizontal form-label-left">
+                                    <form id="create_simposium_faq" name="create_simposium_faq"  class="form-horizontal form-label-left">
                                         <div class="form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="first-name" style="color: black">Pregunta:</label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
@@ -227,9 +227,9 @@ $user_name = $_SESSION['user_name'];
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="last-name" style="color: black">Categoria:</label>
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="last-name" style="color: black" hidden="">Categoria:</label>
                                             <div class="col-md-6 ">
-                                                <input type="text" id="category" name="category" value="simposium" class="form-control col-md-7 col-xs-12" 
+                                                <input type="hidden" id="category" name="category" value="simposium" class="form-control col-md-7 col-xs-12" 
                                                       >
                                             </div>
                                         </div>
@@ -298,7 +298,7 @@ $user_name = $_SESSION['user_name'];
             <!-- bootstrap-daterangepicker -->
             <script src="../vendors/moment/min/moment.min.js"></script>
             <script src="../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
-            <script src="../production/js/create_faq.js" ></script>
+            <script src="../production/js/create_simposium_faq.js" ></script>
             <script src="../production/js/bootbox.js"></script>
             <script src="../production/js/bootbox.min.js"></script>
             <!-- Custom Theme Scripts -->
