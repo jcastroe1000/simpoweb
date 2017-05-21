@@ -1,3 +1,8 @@
+<?php
+  include "config.php";
+  error_reporting(E_ALL);
+  
+  ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -128,26 +133,27 @@
                     <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:10px;  ">SEMINARIOS</h2>
                 </div> 
                     <div class="item  col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-3" style="padding-top: 5%">
-
+                        <?php
+                            $res = $mysqli->query("SELECT * FROM faqs WHERE category='seminario'");
+                            $mysqli->close();
+                             while ($row = $res->fetch_assoc()){
+                        ?>
                         <div class="panel-group">
-
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
-                                        <a data-toggle="collapse" href="#collapse1">Collapsible panel</a>
+                                        <a data-toggle="collapse" href="#collapse1"><?php echo utf8_encode( $row['question'])?></a>
                                     </h4>
                                 </div>
                                 <div id="collapse1" class="panel-collapse collapse in">
-                                    <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                                        minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                        commodo consequat.</div>
+                                    <div class="panel-body">
+                                        <?php echo utf8_encode( $row  ['answer'])?>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        <?php	}	?>
                     </div>     
-
-
                 </div>
                 <div id="2" >
                     <div class="who2 container text-center">
@@ -155,23 +161,25 @@
                     <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:10px;  ">SIMPOSIUM</h2>
                 </div> 
                     <div class="item  col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-3" style="padding-top: 5%">
-
-                        <div class="panel-group">
-
-                            <div class="panel panel-default">
+                        <?php
+                            $res2 = $mysqli2->query("SELECT * FROM faqs WHERE category='simposium'");
+                            $mysqli2->close();
+                             while ($row2 = $res2->fetch_assoc()){
+                       
+                        ?>
+                        <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
-                                        <a data-toggle="collapse" href="#collapse1">Collapsible panel</a>
+                                        <a data-toggle="collapse" href="#collapse1"><?php echo utf8_encode( $row2['question'])?></a>
                                     </h4>
                                 </div>
                                 <div id="collapse1" class="panel-collapse collapse in">
-                                    <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                                        minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                        commodo consequat.</div>
+                                    <div class="panel-body">
+                                        <?php echo utf8_encode( $row2  ['answer'])?>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        <?php	}	?>
                     </div>     
 
 
@@ -182,50 +190,54 @@
                     <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:10px;  ">DIPLOMADOS</h2>
                 </div> 
                     <div class="item  col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-3" style="padding-top: 5%">
-
-                        <div class="panel-group">
-
-                            <div class="panel panel-default">
+                        <?php
+                            $res3 = $mysqli3->query("SELECT * FROM faqs WHERE category='diplomados'");
+                            $mysqli3->close();
+                             while ($row3 = $res3->fetch_assoc()){
+                       
+                        ?>
+                        <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
-                                        <a data-toggle="collapse" href="#collapse1">Collapsible panel</a>
+                                        <a data-toggle="collapse" href="#collapse1"><?php echo utf8_encode( $row3['question'])?></a>
                                     </h4>
                                 </div>
                                 <div id="collapse1" class="panel-collapse collapse in">
-                                    <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                                        minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                        commodo consequat.</div>
+                                    <div class="panel-body">
+                                        <?php echo utf8_encode( $row3 ['answer'])?>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        <?php	}	?>
                     </div>     
 
 
-                </div> 
+                </div>
                 <div id="4" >
                     <div class="who2 container text-center">
                     <br>
                     <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:10px;  ">TALLERES</h2>
                 </div> 
                     <div class="item  col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-3" style="padding-top: 5%">
-
-                        <div class="panel-group">
-
-                            <div class="panel panel-default">
+                        <?php
+                            $res4 = $mysqli4->query("SELECT * FROM faqs WHERE category='taller'");
+                            $mysqli4->close();
+                             while ($row4 = $res4->fetch_assoc()){
+                       
+                        ?>
+                        <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
-                                        <a data-toggle="collapse" href="#collapse1">Collapsible panel</a>
+                                        <a data-toggle="collapse" href="#collapse1"><?php echo utf8_encode( $row4['question'])?></a>
                                     </h4>
                                 </div>
                                 <div id="collapse1" class="panel-collapse collapse in">
-                                    <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                                        minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                        commodo consequat.</div>
+                                    <div class="panel-body">
+                                        <?php echo utf8_encode( $row4 ['answer'])?>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        <?php	}	?>
                     </div>     
 
 
@@ -236,23 +248,25 @@
                     <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:10px;  ">CURSOS</h2>
                 </div> 
                     <div class="item  col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-3" style="padding-top: 5%">
-
-                        <div class="panel-group">
-
-                            <div class="panel panel-default">
+                        <?php
+                            $res5 = $mysqli5->query("SELECT * FROM faqs WHERE category='curso'");
+                            $mysqli5->close();
+                             while ($row5 = $res5->fetch_assoc()){
+                       
+                        ?>
+                        <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
-                                        <a data-toggle="collapse" href="#collapse1">Collapsible panel</a>
+                                        <a data-toggle="collapse" href="#collapse1"><?php echo utf8_encode( $row5['question'])?></a>
                                     </h4>
                                 </div>
                                 <div id="collapse1" class="panel-collapse collapse in">
-                                    <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                                        minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                        commodo consequat.</div>
+                                    <div class="panel-body">
+                                        <?php echo utf8_encode( $row5 ['answer'])?>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        <?php	}	?>
                     </div>     
 
 
@@ -263,23 +277,25 @@
                     <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:10px;  ">SERVICIOS EMPRESARIALES</h2>
                 </div> 
                     <div class="item  col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-3" style="padding-top: 5%">
-
-                        <div class="panel-group">
-
-                            <div class="panel panel-default">
+                        <?php
+                            $res6 = $mysqli6->query("SELECT * FROM faqs WHERE category='servicio_empresarial'");
+                            $mysqli6->close();
+                             while ($row6 = $res6->fetch_assoc()){
+                       
+                        ?>
+                        <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
-                                        <a data-toggle="collapse" href="#collapse1">Collapsible panel</a>
+                                        <a data-toggle="collapse" href="#collapse1"><?php echo utf8_encode( $row6['question'])?></a>
                                     </h4>
                                 </div>
                                 <div id="collapse1" class="panel-collapse collapse in">
-                                    <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                                        minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                        commodo consequat.</div>
+                                    <div class="panel-body">
+                                        <?php echo utf8_encode( $row6 ['answer'])?>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        <?php	}	?>
                     </div>     
 
 
@@ -290,27 +306,32 @@
                     <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:10px;  ">REVISTA</h2>
                 </div> 
                     <div class="item  col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-3" style="padding-top: 5%">
-
-                        <div class="panel-group">
-
-                            <div class="panel panel-default">
+                        <?php
+                            $res7 = $mysqli7->query("SELECT * FROM faqs WHERE category='revista'");
+                            $mysqli7->close();
+                             while ($row7 = $res7->fetch_assoc()){
+                       
+                        ?>
+                        <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
-                                        <a data-toggle="collapse" href="#collapse1">Collapsible panel</a>
+                                        <a data-toggle="collapse" href="#collapse1"><?php echo utf8_encode( $row7['question'])?></a>
                                     </h4>
                                 </div>
                                 <div id="collapse1" class="panel-collapse collapse in">
-                                    <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                                        minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                        commodo consequat.</div>
+                                    <div class="panel-body">
+                                        <?php echo utf8_encode( $row7 ['answer'])?>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        <?php	}	?>
                     </div>     
 
 
                 </div>
+                
+                
+               
             </section>
 
 
