@@ -20,12 +20,12 @@
         <!-- CSS
         ================================================== -->
 
-        
 
-        
-        
+
+
+
         <link rel="stylesheet" href="css_portafolio/bootstrap.min.css">
-       
+
         <!-- Main Stylesheet -->
         <link rel="stylesheet" href="css/main.css">
         <!--Contacto Form-->
@@ -33,13 +33,13 @@
         <link rel="stylesheet" href="css/form.css">
         <link rel="stylesheet" href="css/styles.css">
         <link rel="stylesheet" href="css/font-face.css"> 
-         <!-- Modernizer Script for old Browsers -->
-        
+        <!-- Modernizer Script for old Browsers -->
+
 
 
     </head>
 
-    <body id="body">
+    <body id="body" onload="hideDiv()">
 
         <!-- preloader -->
         <div id="preloader">
@@ -52,7 +52,7 @@
         <!--
         Fixed Navigation
         ==================================== -->
-                <header id="navigation" class="navbar-inverse navbar-fixed-top animated-header">
+        <header id="navigation" class="navbar-inverse navbar-fixed-top animated-header">
             <div class="container">
                 <div class="navbar-header">
                     <!-- responsive nav button -->
@@ -91,168 +91,165 @@
         ==================================== -->
 
         <main class="site-content" role="main">
-                    <section id="who" class="who2 section">
-            <div class="container text-center">
+            <section id="who" class="who2 section">
+                <div class=" container text-center">
+                    <br>
+                    <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:75px;  ">PREGUNTAS FRECUENTES</h2>
+                </div>   
                 <br>
-                <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:75px;  ">PREGUNTAS FRECUENTES</h2>
-            </div>   
-            <br>
-            <br>
-            <div class="benefits text-center">
-                <div class="item  text-center">
-                    <div class="item-inner">
-                        <div >
-                            <p class="MediumItalic" style="font-size: x-large;color: #2e2e35">¿Hasta cuándo puedo registrar mi trabajo?</p>
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:20px;padding-top: 1px;text-align: justify">Se recibirán los trabajos hasta el día 24 de junio de 2016. 
-                                La vía de recepción de los mismos será a través de este portal y una vez que se haya llenado la solicitud de registro en www.simpowebipn.org</p>
-                        </div>   
-                    </div><!--l//item-inner--> 
-                    <div class="item-inner">
-                        <div >
-                            <p class="MediumItalic" style="font-size: x-large;color: #2e2e35"> ¿Cuánto se tiene que pagar por cada trabajo registrado?</p>
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:20px;padding-top: 1px;text-align: justify">Cada trabajo registrado deberá pagar una cuota de recuperación de 
-                                $1, 468.00 (un mil cuatrocientos sesenta y ocho pesos 00/100 MN);sin embargo no se podrá hacer el depósito de dicha cantidad en la cuenta Bancomer hasta que se reciba 
-                                la carta de aceptación por correo electrónico.</p>
-                        </div>   
-                    </div><!--l//item-inner--> 
-                    <div class="item-inner">
-                        <div >
-                            <p class="MediumItalic" style="font-size: x-large;color: #2e2e35"> ¿Cuándo me avisarán si mi trabajo ha sido aceptado y por qué medio?</p>
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:20px;padding-top: 1px;text-align: justify">La semana del 8 al 12 de agosto se enviarán por correo electrónico, 
-                                las cartas de aceptación de los trabajos que hayan sido considerados para participar en el Simposium de este año.</p>
-                        </div>   
-                    </div><!--l//item-inner--> 
-                    <div class="item-inner">
-                        <div >
-                           <p class="MediumItalic" style="font-size: x-large;color: #2e2e35">¿En dónde se hace el depósito correspondiente a mi participación en el Simposium?</p>
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:20px;padding-top: 1px;text-align: justify">Deberá hacerse un depósito por $1, 468.00 (un mil cuatrocientos sesenta y ocho pesos 00/100 MN) 
-                                a la cuenta Bancomer 0105831016 a nombre de Fondo de Investigación Científica y Desarrollo Tecnológico del IPN. 
-                                La cantidad anteriormente indicada fue fijada atendiendo instrucciones expresas de la SHCP, por lo que agradeceremos que verifique en su baucher de depósito que se especifique precisamente esa cantidad. 
-                                Les recordamos que el original del baucher de depósito deberá ser entregado en las oficinas de ESIQIE en 
-                                la academia de integración ubicada en el primer piso, a la mayor brevedad posible después de hacer el depósito, anotando en el mismo el título del trabajo y el nombre del primer autor.</p>
-                        </div>   
-                        
-                    </div><!--l//item-inner--> 
-                    <div class="item-inner">
-                        <div >
-                            <p class="MediumItalic" style="font-size: x-large;color: #2e2e35">¿Pueden hacerme una factura?</p>
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:20px;padding-top: 1px;text-align: justify">Pueden tramitarse facturas de los depósitos que se realicen por participaciones en el Simposium, siempre y 
-                                cuando no se haga a nombre de alguna otra dependencia del politécnico. Para ello necesita llevar su Boucher a la caja de la ESIQIE ubicada en el edificio 7 primer piso con sus datos fiscales.</p>
-                        </div>   
-                        
-                    </div><!--l//item-inner--> 
-                    <div class="item-inner">
-                        <div >
-                            <p class="MediumItalic" style="font-size: x-large;color: #2e2e35">¿En qué modalidades puedo inscribir mi trabajo?</p>
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:20px;padding-top: 1px;text-align: justify">Nuestras modalidades son Presentación oral y Cartel. Cuando se inscribe el trabajo en nuestro portal, se le preguntará cuál modalidad sugiere, 
-                                sin embargo es posible que dicha modalidad sea cambiada por sugerencia del comité editor de memorias.</p>
-                        </div>   
-                        
-                    </div><!--l//item-inner--> 
-                    <div class="item-inner">
-                        <div >
-                            <p class="MediumItalic" style="font-size: x-large;color: #2e2e35">¿Cómo puedo saber cuándo me tocará presentar mi trabajo?</p>
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:20px;padding-top: 1px;text-align: justify">El XVII Simposium Internacional “Aportaciones de las Universidades a la Docencia, la Investigación, la Tecnología y el Desarrollo” se llevará a cabo los días 28, 29 y 30 de septiembre. Las participaciones y los horarios y lugares de las mismas se darán a conocer por correo electrónico 
-                                y también por medio de este portal en cuanto estén diseñados.</p>
-                        </div>   
-                        
-                    </div><!--l//item-inner--> 
-                    <div class="item-inner">
-                        <div >
-                            <p class="MediumItalic" style="font-size: x-large;color: #2e2e35">¿Qué tengo que hacer los días del Simposium cuando llegue a la ESIQIE?</p>
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:20px;padding-top: 1px;text-align: justify">Deberá presentarse por lo menos 15 minutos antes de la hora programada para su participación con el fin de registrarse en el vestíbulo del edificio 8 (planta baja) en la Unidad Profesional Adolfo López Mateos. 
-                                Ahí recibirá su gafete como ponente y su carpeta conmemorativa del evento.</p>
-                        </div>   
-                        
-                    </div><!--l//item-inner--> 
-                    <div class="item-inner">
-                        <div >
-                            <p class="MediumItalic" style="font-size: x-large;color: #2e2e35"> ¿Debo llevar algo el día que me toque presentar mi trabajo?</p>
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:20px;padding-top: 1px;text-align: justify">Si su trabajo fue aceptado en la modalidad de Cartel, tendrá que llevar su trabajo esquematizado en un póster o cartel de 90 cm x 120 cm mínimo y máximo 90cm x 200 cm.
+                <br>
+                <!--col-xs-4 col-md-4 col-md-offset-4-->
+                <div >
+                    <div class="col-sm-5 col-sm-offset-2 col-md-4 col-md-offset-4" style="padding-bottom: 5%">
+                        <select name="pago" onChange="pagoOnChange(this)"  style="text-align: center" class="form-control col-md-4 col-xs-12">
+                            <option VALUE="0" selected="selected">Elije una Opción</option>
+                            <option VALUE="1">Seminarios</option>
+                            <option VALUE="2">Simposium</option>
+                            <option VALUE="3">Diplomados</option>
+                            <option VALUE="4">Talleres</option>
+                            <option VALUE="5">Cursos</option>
+                            <option VALUE="6">Servicios Empresariales</option>
+                            <option VALUE="7">Revista</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="0"  style="display:none;" >
+                    <div class="item  col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-3" style="padding-top: 5%">
 
-Si su trabajo fue aceptado en la modalidad de Presentación oral, tendrá que llevar su presentación de PowerPoint en la que sintetice los resultados más importantes de su trabajo.
+                        <div class="panel-group">
+                            <h1 style="text-align: center">Elije Una Opción</h1>
+                        </div>
+                    </div>     
+                </div>    
+                <div id="1" >
+                    <div class="row"><h2  style="text-align: center" >Seminarios</h2></div>
+                    <div class="item  col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-3" style="padding-top: 5%">
 
-En ambas modalidades, le agradeceremos que lleve también una impresión de su Currículum resumido con el fin de que pueda ser presentado antes de su participación.                               <br>
-                                
-                                </p>
-                        </div>   
-                        
-                    </div><!--l//item-inner--> 
-                    <div class="item-inner">
-                        <div >
-                            <p class="MediumItalic" style="font-size: x-large;color: #2e2e35">¿Con cuánto tiempo cuento para presentar mi trabajo?</p>
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:20px;padding-top: 1px;text-align: justify">Se programan las participaciones de los trabajos en 15 minutos para cada miembro de la Mesa de Trabajo y 5 minutos para preguntas y respuestas.</p>
-                        </div>   
-                        
-                    </div><!--l//item-inner--> 
-                    <div class="item-inner">
-                        <div >
-                            <p class="MediumItalic" style="font-size: x-large;color: #2e2e35">¿Tiene algún costo participar como asistente al Simposium?</p>
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:20px;padding-top: 1px;text-align: justify">La asistencia al Simposium es libre, por lo cual le sugerimos invitar a sus colegas y alumnos.</p>
-                        </div>   
-                        
-                    </div><!--l//item-inner--> 
-                    <div class="item-inner">
-                        <div >
-                            <p class="MediumItalic" style="font-size: x-large;color: #2e2e35"> ¿Se pueden emitir constancias para los asistentes?</p>
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:20px;padding-top: 1px;text-align: justify">Los asistentes que quieran recibir una constancia con valor curricular deberán cubrir al menos tres jornadas comprobables con sellos de asistencia. Una jornada es considerada un turno completo, 
-                                mañana o tarde, de cada uno de los días del Simposium. Estarán a su disposición formatos de asistencia para que el participante pueda acumular los sellos de las conferencias a las que asista y así poder tramitar, con la presentación de dicho formato, su constancia.</p>
-                        </div>   
-                        
-                    </div><!--l//item-inner--> 
-                    <div class="item-inner">
-                        <div >
-                            <p class="MediumItalic" style="font-size: x-large;color: #2e2e35"> ¿Cuáles es el funcionamiento de las Mesas de Trabajo?</p>
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:20px;padding-top: 1px;text-align: justify">Las funciones del presidente de mesa son:
+                        <div class="panel-group">
 
-1.         Llegar 15 minutos antes del inicio de su mesa.
-
-2.         Recoger en la mesa de registro (vestíbulo del auditorio 8) el sobre rotulado con su nombre, en donde se encuentran los diplomas de los ponentes de su mesa.
-
-3.         Solicitar a los ponentes un currículo resumido para realizar su presentación.
-
-4.         Presentar al ponente y explicar a los asistentes que se dispone de 15 minutos para la presentación y cinco para preguntas y respuestas y que el tiempo deberá ser escrupulosamente respetado.
-
-5.         Entregar al final de la presentación el diploma correspondiente.
-
-6.         Cumplir las funciones del coordinador cuando sea necesario.
-                            
-                            Las funciones del coordinador de mesa son:
-
-1.         Solicitar las unidades de USB donde vienen las presentaciones.
-
-2.         Entregarlas al personal de audiovisual que se encontrará en los recintos.
-
-3.         Colaborar con el presidente de mesa.
-
-4.         Suplirlo cuando por alguna razón no se presente o tenga que ausentarse.
-
-5.         De acuerdo con el presidente de mesa, disponer  mayor tiempo de presentación o cambiar el orden cuando algún ponente no se presente.
-
-6.         Avisar al personal de organización cualquier circunstancia que deba ser atendida.
-
-7.         Comunicar al comité organizador los eventos relevantes en su mesa.
-
- 
-
-Los ponentes:
-
-1.         Entregarán copia de su currículo resumido y la unidad de USB de su presentación 15 minutos antes del inicio de su evento con el fin de que el encargado de audiovisual organice la presentación en el orden del programa.
-
-2.         Dispondrán de 15 minutos para su presentación y cinco para preguntas y respuestas.
-
-3.         Se dirigirán a la mesa de recepción para comentar cualquier situación a resolver.</p>
-                        </div>   
-                        
-                    </div><!--l//item-inner--> 
-  
-                    
-                </div>     
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" href="#collapse1">Collapsible panel</a>
+                                    </h4>
+                                </div>
+                                <div id="collapse1" class="panel-collapse collapse in">
+                                    <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                                        minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                        commodo consequat.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>     
 
 
-            </div>
-        </section>
-            
+                </div>
+                <div id="2" >
+                    <div class="item  col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-3" style="padding-top: 5%">
+
+                        <div class="panel-group">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" href="#collapse1">Collapsible panel  2</a>
+                                    </h4>
+                                </div>
+                                <div id="collapse1" class="panel-collapse collapse in">
+                                    <div class="panel-body">Hola soy 2</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>     
+                </div>
+                <div id="3" >
+                    <div class="item  col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-3" style="padding-top: 5%">
+
+                        <div class="panel-group">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" href="#collapse1">Collapsible panel  3</a>
+                                    </h4>
+                                </div>
+                                <div id="collapse1" class="panel-collapse collapse in">
+                                    <div class="panel-body">Hola soy 2</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>     
+                </div>
+                <div id="4" >
+                    <div class="item  col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-3" style="padding-top: 5%">
+
+                        <div class="panel-group">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" href="#collapse1">Collapsible panel  4</a>
+                                    </h4>
+                                </div>
+                                <div id="collapse1" class="panel-collapse collapse in">
+                                    <div class="panel-body">Hola soy 2</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>     
+                </div>
+                <div id="5" >
+                    <div class="item  col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-3" style="padding-top: 5%">
+
+                        <div class="panel-group">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" href="#collapse1">Collapsible panel  5</a>
+                                    </h4>
+                                </div>
+                                <div id="collapse1" class="panel-collapse collapse in">
+                                    <div class="panel-body">Hola soy 2</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>     
+                </div>
+                <div id="6" >
+                    <div class="item  col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-3" style="padding-top: 5%">
+
+                        <div class="panel-group">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" href="#collapse1">Collapsible panel  6</a>
+                                    </h4>
+                                </div>
+                                <div id="collapse1" class="panel-collapse collapse in">
+                                    <div class="panel-body">Hola soy 2</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>     
+                </div>
+                <div id="7" >
+                    <div class="item  col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-3" style="padding-top: 5%">
+
+                        <div class="panel-group">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" href="#collapse1">Collapsible panel  7</a>
+                                    </h4>
+                                </div>
+                                <div id="collapse1" class="panel-collapse collapse in">
+                                    <div class="panel-body">Hola soy 2</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>     
+                </div>
+                
+            </section>
+
 
 
 
@@ -262,8 +259,126 @@ Los ponentes:
 
 
         </main>
+        <script>
+            function hideDiv() {
+                $("#0").show();
+                $("#1").hide();
+                $("#2").hide();
+                $("#3").hide();
+                $("#4").hide();
+                $("#5").hide();
+                $("#6").hide();
+                $("#7").hide();
+            }
+        </script>
 
-       
+
+        <script>
+            function pagoOnChange(sel) {
+
+
+
+                if (sel.value == "0") {
+                    $("#0").show();
+                    $("#1").hide();
+                    $("#2").hide();
+                    $("#3").hide();
+                    $("#4").hide();
+                    $("#5").hide();
+                    $("#6").hide();
+                    $("#7").hide();
+
+                } else if (sel.value == "1") {
+                    $("#1").show();
+                    $("#0").hide();
+                    $("#2").hide();
+                    $("#3").hide();
+                    $("#4").hide();
+                    $("#5").hide();
+                    $("#6").hide();
+                    $("#7").hide();
+
+                } else if (sel.value == "2") {
+                    $("#2").show();
+                    $("#1").hide();
+                    $("#0").hide();
+                    $("#3").hide();
+                    $("#4").hide();
+                    $("#5").hide();
+                    $("#6").hide();
+                    $("#7").hide();
+
+                }
+                else if (sel.value == "3") {
+                    $("#3").show();
+                    $("#1").hide();
+                    $("#2").hide();
+                    $("#4").hide();
+                    $("#5").hide();
+                    $("#6").hide();
+                    $("#7").hide();
+
+                }
+                else if (sel.value == "4") {
+                    $("#4").show();
+                    $("#1").hide();
+                    $("#2").hide();
+                    $("#3").hide();
+                    $("#5").hide();
+                    $("#6").hide();
+                    $("#7").hide();
+                    $("#0").hide();
+
+                }
+                else if (sel.value == "5") {
+                    $("#5").show();
+                    $("#1").hide();
+                    $("#2").hide();
+                    $("#3").hide();
+                    $("#4").hide();
+                    $("#6").hide();
+                    $("#7").hide();
+                    $("#0").hide();
+
+                }
+                else if (sel.value == "6") {
+                    $("#6").show();
+                    $("#1").hide();
+                    $("#2").hide();
+                    $("#3").hide();
+                    $("#5").hide();
+                    $("#4").hide();
+                    $("#7").hide();
+                    $("#0").hide();
+
+                }
+                else if (sel.value == "7") {
+                    $("#7").show();
+                    $("#1").hide();
+                    $("#2").hide();
+                    $("#3").hide();
+                    $("#5").hide();
+                    $("#4").hide();
+                    $("#6").hide();
+                    $("#0").hide();
+
+                }
+                else {
+                    $("#0").show();
+                    $("#1").hide();
+                    $("#2").hide();
+                    $("#3").hide();
+                    $("#4").hide();
+                    $("#5").hide();
+                    $("#6").hide();
+                    $("#7").hide();
+                }
+
+            }
+
+        </script>
+
+
 
         <!-- Essential jQuery Plugins
         ================================================== -->
