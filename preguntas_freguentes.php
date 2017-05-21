@@ -99,7 +99,7 @@
                 <br>
                 <br>
                 <!--col-xs-4 col-md-4 col-md-offset-4-->
-                <div >
+                <div class="container">
                     <div class="col-sm-5 col-sm-offset-2 col-md-4 col-md-offset-4" style="padding-bottom: 5%">
                         <select name="pago" onChange="pagoOnChange(this)"  style="text-align: center" class="form-control col-md-4 col-xs-12">
                             <option VALUE="0" selected="selected">Elije una Opción</option>
@@ -113,6 +113,7 @@
                         </select>
                     </div>
                 </div>
+                
                 <div id="0"  style="display:none;" >
                     <div class="item  col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-3" style="padding-top: 5%">
 
@@ -122,7 +123,10 @@
                     </div>     
                 </div>    
                 <div id="1" >
-                    <div class="row"><h2  style="text-align: center" >Seminarios</h2></div>
+                    <div class="who2 container text-center">
+                    <br>
+                    <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:10px;  ">SEMINARIOS</h2>
+                </div> 
                     <div class="item  col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-3" style="padding-top: 5%">
 
                         <div class="panel-group">
@@ -146,108 +150,167 @@
 
                 </div>
                 <div id="2" >
+                    <div class="who2 container text-center">
+                    <br>
+                    <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:10px;  ">SIMPOSIUM</h2>
+                </div> 
                     <div class="item  col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-3" style="padding-top: 5%">
 
                         <div class="panel-group">
+
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
-                                        <a data-toggle="collapse" href="#collapse1">Collapsible panel  2</a>
+                                        <a data-toggle="collapse" href="#collapse1">Collapsible panel</a>
                                     </h4>
                                 </div>
                                 <div id="collapse1" class="panel-collapse collapse in">
-                                    <div class="panel-body">Hola soy 2</div>
+                                    <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                                        minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                        commodo consequat.</div>
                                 </div>
                             </div>
                         </div>
                     </div>     
+
+
                 </div>
                 <div id="3" >
+                    <div class="who2 container text-center">
+                    <br>
+                    <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:10px;  ">DIPLOMADOS</h2>
+                </div> 
                     <div class="item  col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-3" style="padding-top: 5%">
 
                         <div class="panel-group">
+
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
-                                        <a data-toggle="collapse" href="#collapse1">Collapsible panel  3</a>
+                                        <a data-toggle="collapse" href="#collapse1">Collapsible panel</a>
                                     </h4>
                                 </div>
                                 <div id="collapse1" class="panel-collapse collapse in">
-                                    <div class="panel-body">Hola soy 2</div>
+                                    <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                                        minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                        commodo consequat.</div>
                                 </div>
                             </div>
                         </div>
                     </div>     
-                </div>
+
+
+                </div> 
                 <div id="4" >
+                    <div class="who2 container text-center">
+                    <br>
+                    <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:10px;  ">TALLERES</h2>
+                </div> 
                     <div class="item  col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-3" style="padding-top: 5%">
 
                         <div class="panel-group">
+
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
-                                        <a data-toggle="collapse" href="#collapse1">Collapsible panel  4</a>
+                                        <a data-toggle="collapse" href="#collapse1">Collapsible panel</a>
                                     </h4>
                                 </div>
                                 <div id="collapse1" class="panel-collapse collapse in">
-                                    <div class="panel-body">Hola soy 2</div>
+                                    <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                                        minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                        commodo consequat.</div>
                                 </div>
                             </div>
                         </div>
                     </div>     
+
+
                 </div>
                 <div id="5" >
+                    <div class="who2 container text-center">
+                    <br>
+                    <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:10px;  ">CURSOS</h2>
+                </div> 
                     <div class="item  col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-3" style="padding-top: 5%">
 
                         <div class="panel-group">
+
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
-                                        <a data-toggle="collapse" href="#collapse1">Collapsible panel  5</a>
+                                        <a data-toggle="collapse" href="#collapse1">Collapsible panel</a>
                                     </h4>
                                 </div>
                                 <div id="collapse1" class="panel-collapse collapse in">
-                                    <div class="panel-body">Hola soy 2</div>
+                                    <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                                        minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                        commodo consequat.</div>
                                 </div>
                             </div>
                         </div>
                     </div>     
+
+
                 </div>
                 <div id="6" >
+                    <div class="who2 container text-center">
+                    <br>
+                    <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:10px;  ">SERVICIOS EMPRESARIALES</h2>
+                </div> 
                     <div class="item  col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-3" style="padding-top: 5%">
 
                         <div class="panel-group">
+
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
-                                        <a data-toggle="collapse" href="#collapse1">Collapsible panel  6</a>
+                                        <a data-toggle="collapse" href="#collapse1">Collapsible panel</a>
                                     </h4>
                                 </div>
                                 <div id="collapse1" class="panel-collapse collapse in">
-                                    <div class="panel-body">Hola soy 2</div>
+                                    <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                                        minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                        commodo consequat.</div>
                                 </div>
                             </div>
                         </div>
                     </div>     
+
+
                 </div>
                 <div id="7" >
+                    <div class="who2 container text-center">
+                    <br>
+                    <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:10px;  ">REVISTA</h2>
+                </div> 
                     <div class="item  col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-3" style="padding-top: 5%">
 
                         <div class="panel-group">
+
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
-                                        <a data-toggle="collapse" href="#collapse1">Collapsible panel  7</a>
+                                        <a data-toggle="collapse" href="#collapse1">Collapsible panel</a>
                                     </h4>
                                 </div>
                                 <div id="collapse1" class="panel-collapse collapse in">
-                                    <div class="panel-body">Hola soy 2</div>
+                                    <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                                        minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                        commodo consequat.</div>
                                 </div>
                             </div>
                         </div>
                     </div>     
+
+
                 </div>
-                
             </section>
 
 
