@@ -19,29 +19,28 @@
 
         <!-- CSS
         ================================================== -->
+        <link href="css/bootstrap.min.css" rel="stylesheet" />
 
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+        <link href="css_portafolio/fancybox/jquery.fancybox.css" rel="stylesheet">
+        <link href="css_portafolio/jcarousel.css" rel="stylesheet" />
+        <link href="css_portafolio/flexslider.css" rel="stylesheet" />
+        <link href="css_portafolio/style.css" rel="stylesheet" />
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/styles.css">
+
+        <!-- Theme skin -->
+        <link href="css_portafolio/default.css" rel="stylesheet" />
 
         <!-- Fontawesome Icon font -->
         <link rel="stylesheet" href="css/font-awesome.min.css">
-        <!-- bootstrap.min -->
-        <link rel="stylesheet" href="css/jquery.fancybox.css">
-        <!-- bootstrap.min -->
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <!-- bootstrap.min -->
-        <link rel="stylesheet" href="css/owl.carousel.css">
-        <!-- bootstrap.min -->
-        <link rel="stylesheet" href="css/slit-slider.css">
-        <!-- bootstrap.min -->
-        <link rel="stylesheet" href="css/animate.css">
-        <!-- Main Stylesheet -->
+
         <link rel="stylesheet" href="css/main.css">
         <!--Contacto Form-->
 
-        <link rel="stylesheet" href="css/form.css">
+
         <link rel="stylesheet" href="css/styles.css">
-        <link rel="stylesheet" href="css/font-face.css"> 
-         <!-- Modernizer Script for old Browsers -->
+
+        <!-- Modernizer Script for old Browsers -->
         <script src="js/modernizr-2.6.2.min.js"></script>
 
 
@@ -60,7 +59,7 @@
         <!--
         Fixed Navigation
         ==================================== -->
-                <header id="navigation" class="navbar-inverse navbar-fixed-top animated-header">
+        <header id="navigation" class="navbar-inverse navbar-fixed-top animated-header">
             <div class="container">
                 <div class="navbar-header">
                     <!-- responsive nav button -->
@@ -99,154 +98,134 @@
         ==================================== -->
 
         <main class="site-content" role="main">
-                    <section id="who" class="who2 section">
-            <div class="container text-center">
-                <br>
-                <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top: 75px;">DIRECTORIO</h2>
-                <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;">INSTITUTO POLITÉCNICO NACIONAL</h2>
-            </div>   
-            <br>
-            <br>
-            <div class="benefits text-center">
-                <div class="item  text-center">
-                    <div class="item-inner">
-                        <div >
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:20px;padding-top: 1px;text-align: center">Enrique Fernández Fassnacht.</p>
-                            <p class="MediumItalic" style="font-size: x-large;color: #2e2e35">Director General</p>
-                            
-                        </div>   
-                    </div><!--l//item-inner--> 
-                    <div class="item-inner">
-                        <div >
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:20px;padding-top: 1px;text-align: center">Miguel Ángel Álvarez Gómez</p>
-                            <p class="MediumItalic" style="font-size: x-large;color: #2e2e35"> Secretario Academico</p>
-                            
-                        </div>   
-                    </div><!--l//item-inner--> 
-                    <div class="item-inner">
-                        <div >
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:20px;padding-top: 1px;text-align:center">José Guadalupe Trujillo Ferrara</p>
-                            <p class="MediumItalic" style="font-size: x-large;color: #2e2e35">Secretario de Investigación y Posgrado</p>
-                        </div>   
-                    </div><!--l//item-inner--> 
-                    <div class="item-inner">
-                        <div >
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:20px;padding-top: 1px;text-align: center">Primo Alberto Calva Chavarría</p>
-                            <p class="MediumItalic" style="font-size:x-large;color: #2e2e35">Director de Investigación</p>
-                        </div>   
-                        
-                    </div><!--l//item-inner--> 
-                    <div class="item-inner">
-                        <div >
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:20px;padding-top: 1px;text-align: center">Emmanuel Alejandro Merchán Cruz </p>
-                            <p class="MediumItalic" style="font-size: x-large;color: #2e2e35">Director de Educación Superior</p>
-                        </div>   
-                        
-                    </div><!--l//item-inner--> 
-                    <div class="item-inner">
-                        <div >
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:20px;padding-top: 1px;text-align: center">Emmanuel Alejandro Merchán Cruz </p>
-                            <p class="MediumItalic" style="font-size: x-large;color: #2e2e35">Director de Educación Superior</p>
-                        </div>   
-                    </div><!--l//item-inner--> 
-                    <div class="item-inner">
-                        <div >
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:20px;padding-top: 1px;text-align: center">Dante Real Miranda </p>
-                            <p class="MediumItalic" style="font-size: x-large;color: #2e2e35">Director de la ESIQIE</p>
-                        </div>   
-                    </div><!--l//item-inner--> 
-                    <div class="item-inner">
-                        <div >
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:20px;padding-top: 1px;text-align: center">Victor Manuel Feregrino </p>
-                            <p class="MediumItalic" style="font-size: x-large;color: #2e2e35">Subdirector Académico de la ESIQIE</p>
-                        </div>   
-                    </div><!--l//item-inner-->
-                    <div class="item-inner">
-                        <div >
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:20px;padding-top: 1px;text-align: center">Juanita E. Cárdenas Rivas </p>
-                            <p class="MediumItalic" style="font-size: x-large;color: #2e2e35">Jefe del Depto. De Ingeniería Química Industrial-ESIQIE</p>
-                        </div>   
-                    </div><!--l//item-inner-->
-                    <div class="item-inner">
-                        <div >
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:20px;padding-top: 1px;text-align: center">Salvador Pérez Cárdenas</p>
-                            <p class="MediumItalic" style="font-size: x-large;color: #2e2e35">Presidente Ejecutivo del Simposium</p>
-                        </div>   
-                    </div><!--l//item-inner-->
-                    <div class="item-inner">
-                        <div >
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:20px;padding-top: 1px;text-align: center">Adelina Pérez Rosas </p>
-                            <p class="MediumItalic" style="font-size: x-large;color: #2e2e35">Coordinadora General del Simposium</p>
-                        </div>   
-                    </div><!--l//item-inner-->
-                    <div class="item-inner">
-                        <div >
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:10px;padding-top: 1px;text-align: center">Guillermo de la Torre Arteaga</p>
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:10px;padding-top: 1px;text-align: center">Sergio Flores Meza</p>
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:10px;padding-top: 1px;text-align: center">Anibal Quintana Mora.</p>
-                            <p class="MediumItalic" style="font-size: x-large;color: #2e2e35">Comité de Prensa y Propaganda</p>
-                        </div>   
-                    </div><!--l//item-inner-->
-                    <div class="item-inner">
-                        <div >
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:10px;padding-top: 1px;text-align: center">Adelina Rosas Mercado</p>
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:10px;padding-top: 1px;text-align: center">Mauricio Gaitán Espinosa</p>
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:10px;padding-top: 1px;text-align: center">Fernanda Y. Rivera Rosas</p>
-                            <p class="MediumItalic" style="font-size: x-large;color: #2e2e35">Comité Editor de Memorias</p>
-                        </div>   
-                    </div><!--l//item-inner-->
-                     <div class="item-inner">
-                        <div >
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:10px;padding-top: 1px;text-align: center">Lorena del Rocío Mayo Monroy</p>
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:10px;padding-top: 1px;text-align: center">Yahir Alejandro Martínez Nava</p>
-                            <p class="MediumItalic" style="font-size: x-large;color: #2e2e35">Coordinación de Apoyo Logístico e Informática</p>
-                        </div>   
-                    </div><!--l//item-inner-->
-                    <div class="item-inner">
-                        <div >
-                            
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:10px;padding-top: 1px;text-align: center">Adelina Rosas Mercado</p>
-                            <p class="MediumItalic" style="font-size: x-large;color: #2e2e35">Coordinación General de Mesas de Trabajo</p>
-                        </div>   
-                    </div><!--l//item-inner-->
-                    <div class="item-inner">
-                        <div >
-                            
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:10px;padding-top: 1px;text-align: center">Gerardo Ramos Serpa | Universidad “Camilo Cienfuegos”</p>
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:10px;padding-top: 1px;text-align: center">Cuba Manuel González Hernández  | UAEH</p>
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:10px;padding-top: 1px;text-align: center">Jorge Briones Chávez | UPN</p>
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:10px;padding-top: 1px;text-align: center">Rocío Echeverría González | UACH</p>
-                            <p class="MediumItalic" style="font-size: x-large;color: #2e2e35">Comité Técnico</p>
-                        </div>   
-                    </div><!--l//item-inner-->
-                    <div class="item-inner">
-                        <div >
-                            
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:10px;padding-top: 1px;text-align: center">Leticia A. Morales Sánchez</p>
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:10px;padding-top: 1px;text-align: center">Alma Trinidad Torres, Andrea De La Cruz Salomé</p>
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:10px;padding-top: 1px;text-align: center">Perla Eunice García García, Efrén Delgadillo Sánchez</p>
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:10px;padding-top: 1px;text-align: center">Víctor M. Guzmán Rojas, S. Farid Valladares Mendoza</p>
-                            <p class="MediumItalic" style="font-size: x-large;color: #2e2e35">Comité de Organización</p>
-                        </div>   
-                    </div><!--l//item-inner-->
-                    <div class="item-inner">
-                        <div >
-                            
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:10px;padding-top: 1px;text-align: center">Ana Karen Delgado Tellez</p>
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:10px;padding-top: 1px;text-align: center">S. Edith Abad Castillo , Mallely E. Hernández Venavides</p>
-                            <p class="Light" style="font-size:large;color: #2e2e35;padding:10px;padding-top: 1px;text-align: center">Gustavo Eduardo Gutiérrez Puebla, Diego Víctor A. Abreu Espino</p>
-                            <p class="MediumItalic" style="font-size: x-large;color: #2e2e35">Comité de Organización</p>
-                        </div>   
-                    </div><!--l//item-inner-->
-                </div><!--l//item-inner--> 
-  
+            <section id="who" class="who2 section">
+                <div class="container text-center">
                     
-                </div>     
+                    <div class="col-md-8 col-md-offset-2 wow animated fadeInRight " style="padding-top: 5%">
+                            <div class="welcome-block center-block">
+                                <h3 style="text-align: center">Objetivo</h3>								
+                                <div class="message-body" style="text-align: justify">
 
+                                    <h4 style="color: black;padding:5px;line-height: 30px ">El objetivo del Simposium es propiciar un mayor intercambio de información entre 
+                                        profesores e investigadores de las diversas instituciones de educación en los ámbitos nacionales e internacionales, 
+                                        así como representantes del sector productivo.</h4>
+                                </div>
 
-            
-        </section>
-            
+                                <a  class="btn btn-border btn-effect col-md-offset-1 button_index" data-toggle="modal" data-target="#QuienesSomos">Leer Más</a>
+
+                            </div>
+                        </div>
+                    
+                </div>   
+                <br>
+                <br>
+            </section>
+            <section id="content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+
+                            <div class="clearfix">
+                            </div>
+                            <div class="row">
+                                <section id="projects">
+                                    <ul id="thumbs" class="portfolio">
+                                        <!-- Item Project and Filter Name -->
+                                        <li class="item-thumbs col-lg-3" data-id="id-0" data-type="web">
+                                            <!-- Fancybox - Gallery Enabled - Title - Full Image -->
+                                            <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Portfolio name" href="img/works/1.jpg">
+                                                <span class="overlay-img"></span>
+                                                <span class="overlay-img-thumb font-icon-plus"></span>
+                                            </a>
+                                            <!-- Thumb Image and Description -->
+                                            <img src="img/works/1.jpg" 
+
+                                                 alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
+                                        </li>
+                                        <!-- End Item Project -->
+                                        <!-- Item Project and Filter Name -->
+                                        <li class="item-thumbs col-lg-3 design" data-id="id-1" data-type="icon">
+                                            <!-- Fancybox - Gallery Enabled - Title - Full Image -->
+                                            <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Portfolio name" href="img/works/2.jpg">
+                                                <span class="overlay-img"></span>
+                                                <span class="overlay-img-thumb font-icon-plus"></span>
+                                            </a>
+                                            <!-- Thumb Image and Description -->
+                                            <img src="img/works/2.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
+                                        </li>
+                                        <!-- End Item Project -->
+                                        <!-- Item Project and Filter Name -->
+                                        <li class="item-thumbs col-lg-3 photography" data-id="id-2" data-type="graphic">
+                                            <!-- Fancybox - Gallery Enabled - Title - Full Image -->
+                                            <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Portfolio name" href="img/works/3.jpg">
+                                                <span class="overlay-img"></span>
+                                                <span class="overlay-img-thumb font-icon-plus"></span>
+                                            </a>
+                                            <!-- Thumb Image and Description -->
+                                            <img src="img/works/3.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
+                                        </li>
+                                        <!-- End Item Project -->
+                                        <!-- Item Project and Filter Name -->
+                                        <li class="item-thumbs col-lg-3 design" data-id="id-0" data-type="web">
+                                            <!-- Fancybox - Gallery Enabled - Title - Full Image -->
+                                            <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Portfolio name" href="img/works/4.jpg">
+                                                <span class="overlay-img"></span>
+                                                <span class="overlay-img-thumb font-icon-plus"></span>
+                                            </a>
+                                            <!-- Thumb Image and Description -->
+                                            <img src="img/works/4.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
+                                        </li>
+                                        <!-- End Item Project -->
+                                        <!-- Item Project and Filter Name -->
+                                        <li class="item-thumbs col-lg-3 photography" data-id="id-4" data-type="web">
+                                            <!-- Fancybox - Gallery Enabled - Title - Full Image -->
+                                            <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Portfolio name" href="img/works/5.jpg">
+                                                <span class="overlay-img"></span>
+                                                <span class="overlay-img-thumb font-icon-plus"></span>
+                                            </a>
+                                            <!-- Thumb Image and Description -->
+                                            <img src="img/works/5.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
+                                        </li>
+                                        <!-- End Item Project -->
+                                        <!-- Item Project and Filter Name -->
+                                        <li class="item-thumbs col-lg-3 photography" data-id="id-5" data-type="icon">
+                                            <!-- Fancybox - Gallery Enabled - Title - Full Image -->
+                                            <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Portfolio name" href="img/works/6.jpg">
+                                                <span class="overlay-img"></span>
+                                                <span class="overlay-img-thumb font-icon-plus"></span>
+                                            </a>
+                                            <!-- Thumb Image and Description -->
+                                            <img src="img/works/6.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
+                                        </li>
+                                        <!-- End Item Project -->
+                                        <li class="item-thumbs col-lg-3 design" data-id="id-0" data-type="web">
+                                            <!-- Fancybox - Gallery Enabled - Title - Full Image -->
+                                            <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Portfolio name" href="img/works/7.jpg">
+                                                <span class="overlay-img"></span>
+                                                <span class="overlay-img-thumb font-icon-plus"></span>
+                                            </a>
+                                            <!-- Thumb Image and Description -->
+                                            <img src="img/works/7.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
+                                        </li>
+                                        <!-- End Item Project -->
+                                        <!-- Item Project and Filter Name -->
+                                        <li class="item-thumbs col-lg-3 design" data-id="id-0" data-type="graphic">
+                                            <!-- Fancybox - Gallery Enabled - Title - Full Image -->
+                                            <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Portfolio name" href="img/works/8.jpg">
+                                                <span class="overlay-img"></span>
+                                                <span class="overlay-img-thumb font-icon-plus"></span>
+                                            </a>
+                                            <!-- Thumb Image and Description -->
+                                            <img src="img/works/8.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
+                                        </li>
+                                        <!-- End Item Project -->
+                                    </ul>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>    
 
 
 
@@ -256,31 +235,19 @@
 
 
         </main>
-
-       
-
-        <!-- Essential jQuery Plugins
-        ================================================== -->
-        <!-- Main jQuery -->
-        <script src="js/jquery-1.11.1.min.js"></script>
-        <!-- Twitter Bootstrap -->
-        <script src="js/bootstrap.min.js"></script>
-        <!-- Single Page Nav -->
-        <script src="js/jquery.singlePageNav.min.js"></script>
-        <!-- jquery.fancybox.pack -->
-        <script src="js/jquery.fancybox.pack.js"></script>
-        <!-- Google Map API -->
-        <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
-        <!-- Owl Carousel -->
-        <script src="js/owl.carousel.min.js"></script>
-        <!-- jquery easing -->
-        <script src="js/jquery.easing.min.js"></script>
-        <!-- Fullscreen slider -->
-        <script src="js/jquery.slitslider.js"></script>
-        <script src="js/jquery.ba-cond.min.js"></script>
-        <!-- onscroll animation -->
-        <script src="js/wow.min.js"></script>
-        <!-- Custom Functions -->
+        <script src="js_portafolio/jquery.js"></script>
+        <script src="js_portafolio/jquery.easing.1.3.js"></script>
+        <script src="js_portafolio/bootstrap.min.js"></script>
+        <script src="js_portafolio/jquery.fancybox.pack.js"></script>
+        <script src="js_portafolio/jquery.fancybox-media.js"></script>
+        <script src="js_portafolio/google-code-prettify/prettify.js"></script>
+        <script src="js_portafolio/portfolio/jquery.quicksand.js"></script>
+        <script src="js_portafolio/portfolio/setting.js"></script>
+        <script src="js_portafolio/jquery.flexslider.js"></script>
+        <script src="js_portafolio/animate.js"></script>
+        <script src="js_portafolio/custom.js"></script>
         <script src="js/main.js"></script>
+
+
     </body>
 </html>

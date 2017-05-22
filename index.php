@@ -364,7 +364,7 @@
             ==================================== -->
 
             <!-- about section -->
-            <section id="about" >
+<!--            <section id="about" >
                 <div class="container">
                     <div class="row">
 
@@ -389,7 +389,7 @@
                                     </div>
                                     <div class="modal-body">
                                         <div class="container-fluid bd-example-row">
-                                            <!--form-->
+                                            form
                                             <h5 style="text-align: justify">El objetivo del Simposium es propiciar un mayor intercambio de información entre
                                                 profesores e investigadores de las diversas instituciones de educación en los ámbitos nacionales 
                                                 e internacionales, así como representantes del sector productivo.</h5>   
@@ -409,7 +409,7 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section>-->
             <!-- end about section -->
 
 
@@ -769,7 +769,7 @@
             /* End Stellar for background scrolling  */
         </script>       
         <!--Scrpt ProgreesModal-->
-        rangepicker -->
+        
         <script>
             $('#myModal').on('shown.bs.modal', function () {
 

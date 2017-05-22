@@ -78,8 +78,8 @@ main > section {
     color: #fff;
 }
 .btn-border {
-    border: 2px solid #fff;
-    color: #fff;
+    border: 2px solid #000;
+    color: #000;
     padding: 12px 35px;
 }
 

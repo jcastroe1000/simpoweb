@@ -22,7 +22,7 @@
         <link href="css/bootstrap.min.css" rel="stylesheet" />
 
         <link href="css_portafolio/fancybox/jquery.fancybox.css" rel="stylesheet">
-        <link href="css_portafolio/jcarouse.css" rel="stylesheet" />
+        <link href="css_portafolio/jcarousel.css" rel="stylesheet" />
         <link href="css_portafolio/flexslider.css" rel="stylesheet" />
         <link href="css_portafolio/style.css" rel="stylesheet" />
         <link rel="stylesheet" href="css/main.css">
@@ -98,11 +98,30 @@
         ==================================== -->
 
         <main class="site-content" role="main">
-            <section id="who" class="who2 section">
+             <section >
                 <div class="container text-center">
                     <br>
-                    <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top: 75px;">DIRECTORIO</h2>
-                    <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;">INSTITUTO POLITÉCNICO NACIONAL</h2>
+                    <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top: 75px;">SEMINARIOS</h2>
+                </div>   
+            </section>
+            <section id="who" >
+                <div class="container text-center">
+                    
+                    <div class="col-md-8 col-md-offset-2 wow animated fadeInRight" style="margin-top:  -95px">
+                            <div class="welcome-block center-block">
+                                <h3 style="text-align: center">Objetivo</h3>								
+                                <div class="message-body" style="text-align: justify">
+
+                                    <h4 style="color: black;padding:5px;line-height: 30px ">El objetivo del Simposium es propiciar un mayor intercambio de información entre 
+                                        profesores e investigadores de las diversas instituciones de educación en los ámbitos nacionales e internacionales, 
+                                        así como representantes del sector productivo.</h4>
+                                </div>
+
+                                <a  class="btn btn-border btn-effect col-md-offset-1 button_index" data-toggle="modal" data-target="#QuienesSomos">Leer Más</a>
+
+                            </div>
+                        </div>
+                    
                 </div>   
                 <br>
                 <br>
