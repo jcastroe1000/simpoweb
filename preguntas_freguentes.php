@@ -109,12 +109,12 @@
                         <select name="pago" onChange="pagoOnChange(this)"  style="text-align: center" class="form-control col-md-4 col-xs-12">
                             <option VALUE="0" selected="selected">Elije una Opción</option>
                             <option VALUE="1">Seminarios</option>
-                            <option VALUE="2">Simposium</option>
+                            <option VALUE="22">Simposium</option>
                             <option VALUE="3">Diplomados</option>
                             <option VALUE="4">Talleres</option>
                             <option VALUE="5">Cursos</option>
                             <option VALUE="6">Servicios Empresariales</option>
-                            <option VALUE="7">Revista</option>
+                            <option VALUE="77">Revista</option>
                         </select>
                     </div>
                 </div>
@@ -142,10 +142,10 @@
                             <div class="panel panel-default" >
                                 <div class="panel-heading" style="background-color: #D8D8D8">
                                     <h4 class="panel-title">
-                                        <a data-toggle="collapse" href="#collapse1" style="font-weight: bold"><?php echo utf8_encode( $row['question'])?></a>
+                                        <a data-toggle="collapse" href="#<?php echo $row['id_faqs']?>" style="font-weight: bold"><?php echo utf8_encode( $row['question'])?></a>
                                     </h4>
                                 </div>
-                                <div id="collapse1" class="panel-collapse collapse in" style="background-color: #E6E6E6">
+                                <div id="<?php echo $row['id_faqs']?>" class="panel-collapse collapse off" style="background-color: #E6E6E6">
                                     <div class="panel-body">
                                         <?php echo utf8_encode( $row  ['answer'])?>
                                     </div>
@@ -155,7 +155,7 @@
                         <?php	}	?>
                     </div>     
                 </div>
-                <div id="2" >
+                <div id="22" >
                     <div class="who2 container text-center">
                     <br>
                     <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:10px;  ">SIMPOSIUM</h2>
@@ -164,18 +164,19 @@
                         <?php
                             $res2 = $mysqli2->query("SELECT * FROM faqs WHERE category='simposium'");
                             $mysqli2->close();
-                             while ($row2 = $res2->fetch_assoc()){
+                             while ($row_sim = $res2->fetch_assoc()){
                        
                         ?>
                         <div class="panel panel-default">
                                 <div class="panel-heading" style="background-color: #D8D8D8">
                                     <h4 class="panel-title">
-                                        <a data-toggle="collapse" href="#collapse1" style="font-weight: bold"><?php echo utf8_encode( $row2['question'])?></a>
+                                        <a data-toggle="collapse" href="#<?php echo $row_sim['id_faqs']?>" style="font-weight: bold">
+                                            <?php echo utf8_encode( $row_sim['question'])?></a>
                                     </h4>
                                 </div>
-                                <div id="collapse1" class="panel-collapse collapse in" style="background-color: #E6E6E6">
+                                <div id="<?php echo $row_sim['id_faqs']?>" class="panel-collapse collapse off" style="background-color: #E6E6E6">
                                     <div class="panel-body">
-                                        <?php echo utf8_encode( $row2  ['answer'])?>
+                                        <?php echo utf8_encode( $row_sim ['answer'])?>
                                     </div>
                                 </div>
                             </div>
@@ -199,10 +200,10 @@
                         <div class="panel panel-default">
                             <div class="panel-heading" style="background-color: #D8D8D8">
                                     <h4 class="panel-title">
-                                        <a data-toggle="collapse" href="#collapse1" style="font-weight: bold"><?php echo utf8_encode( $row3['question'])?></a>
+                                        <a data-toggle="collapse" href="#<?php echo $row3['id_faqs']?>" style="font-weight: bold"><?php echo utf8_encode( $row3['question'])?></a>
                                     </h4>
                                 </div>
-                                <div id="collapse1" class="panel-collapse collapse in" style="background-color: #E6E6E6">
+                                <div id="<?php echo $row3['id_faqs']?>" class="panel-collapse collapse off" style="background-color: #E6E6E6">
                                     <div class="panel-body">
                                         <?php echo utf8_encode( $row3 ['answer'])?>
                                     </div>
@@ -228,10 +229,10 @@
                         <div class="panel panel-default">
                                 <div class="panel-heading" style="background-color: #D8D8D8">
                                     <h4 class="panel-title">
-                                        <a data-toggle="collapse" href="#collapse1" style="font-weight: bold"><?php echo utf8_encode( $row4['question'])?></a>
+                                        <a data-toggle="collapse" href="#<?php echo $row4['id_faqs']?>" style="font-weight: bold"><?php echo utf8_encode( $row4['question'])?></a>
                                     </h4>
                                 </div>
-                                <div id="collapse1" class="panel-collapse collapse in" style="background-color: #E6E6E6">
+                                <div id="<?php echo $row4['id_faqs']?>" class="panel-collapse collapse off" style="background-color: #E6E6E6">
                                     <div class="panel-body">
                                         <?php echo utf8_encode( $row4 ['answer'])?>
                                     </div>
@@ -300,7 +301,7 @@
 
 
                 </div>
-                <div id="7" >
+                <div id="77" >
                     <div class="who2 container text-center">
                     <br>
                     <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:10px;  ">REVISTA</h2>
@@ -347,12 +348,12 @@
             function hideDiv() {
                 $("#0").show();
                 $("#1").hide();
-                $("#2").hide();
+                $("#22").hide();
                 $("#3").hide();
                 $("#4").hide();
                 $("#5").hide();
                 $("#6").hide();
-                $("#7").hide();
+                $("#77").hide();
             }
         </script>
 
@@ -365,81 +366,81 @@
                 if (sel.value == "0") {
                     $("#0").show();
                     $("#1").hide();
-                    $("#2").hide();
+                    $("#22").hide();
                     $("#3").hide();
                     $("#4").hide();
                     $("#5").hide();
                     $("#6").hide();
-                    $("#7").hide();
+                    $("#77").hide();
 
                 } else if (sel.value == "1") {
                     $("#1").show();
                     $("#0").hide();
-                    $("#2").hide();
+                    $("#22").hide();
                     $("#3").hide();
                     $("#4").hide();
                     $("#5").hide();
                     $("#6").hide();
-                    $("#7").hide();
+                    $("#77").hide();
 
-                } else if (sel.value == "2") {
-                    $("#2").show();
+                } else if (sel.value == "22") {
+                    $("#22").show();
                     $("#1").hide();
                     $("#0").hide();
                     $("#3").hide();
                     $("#4").hide();
                     $("#5").hide();
                     $("#6").hide();
-                    $("#7").hide();
+                    $("#77").hide();
 
                 }
                 else if (sel.value == "3") {
                     $("#3").show();
                     $("#1").hide();
-                    $("#2").hide();
+                    $("#22").hide();
                     $("#4").hide();
                     $("#5").hide();
                     $("#6").hide();
-                    $("#7").hide();
+                    $("#77").hide();
 
                 }
                 else if (sel.value == "4") {
                     $("#4").show();
                     $("#1").hide();
-                    $("#2").hide();
+                    $("#22").hide();
                     $("#3").hide();
                     $("#5").hide();
                     $("#6").hide();
-                    $("#7").hide();
+                    $("#77").hide();
                     $("#0").hide();
 
                 }
                 else if (sel.value == "5") {
                     $("#5").show();
                     $("#1").hide();
-                    $("#2").hide();
+                    $("#22").hide();
                     $("#3").hide();
                     $("#4").hide();
                     $("#6").hide();
-                    $("#7").hide();
+                    $("#77").hide();
                     $("#0").hide();
 
                 }
                 else if (sel.value == "6") {
                     $("#6").show();
                     $("#1").hide();
-                    $("#2").hide();
+                    $("#22").hide();
                     $("#3").hide();
                     $("#5").hide();
                     $("#4").hide();
-                    $("#7").hide();
+                    $("#77").hide();
                     $("#0").hide();
 
                 }
-                else if (sel.value == "7") {
-                    $("#7").show();
+                else if (sel.value == "77") {
+                    $("#77").show();
                     $("#1").hide();
-                    $("#2").hide();
+                    $("#22").hide();
                     $("#3").hide();
                     $("#5").hide();
                     $("#4").hide();
@@ -450,12 +451,12 @@
                 else {
                     $("#0").show();
                     $("#1").hide();
-                    $("#2").hide();
+                    $("#22").hide();
                     $("#3").hide();
                     $("#4").hide();
                     $("#5").hide();
                     $("#6").hide();
-                    $("#7").hide();
+                    $("#77").hide();
                 }
 
             }
