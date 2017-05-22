@@ -257,10 +257,10 @@
                         <div class="panel panel-default">
                                 <div class="panel-heading" style="background-color: #D8D8D8">
                                     <h4 class="panel-title">
-                                        <a data-toggle="collapse" href="#collapse1" style="font-weight: bold"><?php echo utf8_encode( $row5['question'])?></a>
+                                        <a data-toggle="collapse" href="#<?php echo $row5['id_faqs']?>" style="font-weight: bold"><?php echo utf8_encode( $row5['question'])?></a>
                                     </h4>
                                 </div>
-                                <div id="collapse1" class="panel-collapse collapse in" style="background-color: #E6E6E6">
+                                <div id="<?php echo $row5['id_faqs']?>" class="panel-collapse collapse off" style="background-color: #E6E6E6">
                                     <div class="panel-body">
                                         <?php echo utf8_encode( $row5 ['answer'])?>
                                     </div>
@@ -286,10 +286,10 @@
                         <div class="panel panel-default">
                                 <div class="panel-heading" style="background-color: #D8D8D8">
                                     <h4 class="panel-title">
-                                        <a data-toggle="collapse" href="#collapse1" style="font-weight: bold"><?php echo utf8_encode( $row6['question'])?></a>
+                                        <a data-toggle="collapse" href="#<?php echo $row6['id_faqs']?>" style="font-weight: bold"><?php echo utf8_encode( $row6['question'])?></a>
                                     </h4>
                                 </div>
-                                <div id="collapse1" class="panel-collapse collapse in" style="background-color: #E6E6E6">
+                                <div id="<?php echo $row6['id_faqs']?>" class="panel-collapse collapse off" style="background-color: #E6E6E6">
                                     <div class="panel-body">
                                         <?php echo utf8_encode( $row6 ['answer'])?>
                                     </div>
@@ -315,10 +315,10 @@
                         <div class="panel panel-default">
                                 <div class="panel-heading" style="background-color: #D8D8D8">
                                     <h4 class="panel-title">
-                                        <a data-toggle="collapse" href="#collapse1" style="font-weight: bold"><?php echo utf8_encode( $row7['question'])?></a>
+                                        <a data-toggle="collapse" href="#<?php echo $row7['id_faqs']?>" style="font-weight: bold"><?php echo utf8_encode( $row7['question'])?></a>
                                     </h4>
                                 </div>
-                                <div id="collapse1" class="panel-collapse collapse in" style="background-color: #E6E6E6">
+                                <div id="<?php echo $row7['id_faqs']?>" class="panel-collapse collapse off" style="background-color: #E6E6E6">
                                     <div class="panel-body">
                                         <?php echo utf8_encode( $row7 ['answer'])?>
                                     </div>
