@@ -185,31 +185,50 @@
 
 
                 </div>
-                <div id="3" >
+                <div id="3"  >
                     <div class="who2 container text-center">
                     <br>
                     <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:10px;  ">DIPLOMADOS</h2>
                 </div> 
                     <div class="item  col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-3" style="padding-top: 5%">
                         <?php
-                            $res3 = $mysqli3->query("SELECT * FROM faqs WHERE category='diplomados'");
-                            $mysqli3->close();
-                             while ($row3 = $res3->fetch_assoc()){
+                            
+                               $query3 = "SELECT * from faqs WHERE category='diplomados'";
+                               $res3 = mysqli_query($mysqli3, $query3);
+                               $mysqli3->close(); //cerramos la conexió
+                                $num_row3 = mysqli_num_rows($res3);
+                                //echo $num_row3;
+                               if($num_row3==0){
+                                   echo '<div class=" text-center" style="text-align: center">';
+                                   echo  '    <br>';
+                                   echo ' <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:10px;text-align: center">Por el momento esta <br>sección no cuenta con preguntas</h2>';
+                                   echo '</div>';
+                                   
+                               }else{?>   
+                               <div class="item  col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-3" style="padding-top: 5%">
+                        <?php
+                            $res3 = $mysqli8->query("SELECT * FROM faqs WHERE category='diplomados'");
+                            $mysqli8->close();
+                             while ($row_dipl = $res3->fetch_assoc()){
                        
                         ?>
                         <div class="panel panel-default">
-                            <div class="panel-heading" style="background-color: #D8D8D8">
+                                <div class="panel-heading" style="background-color: #D8D8D8">
                                     <h4 class="panel-title">
-                                        <a data-toggle="collapse" href="#<?php echo $row3['id_faqs']?>" style="font-weight: bold"><?php echo utf8_encode( $row3['question'])?></a>
+                                        <a data-toggle="collapse" href="#<?php echo $row_dipl['id_faqs']?>" style="font-weight: bold;">
+                                            <?php echo utf8_encode( $row_dipl['question'])?></a>
                                     </h4>
                                 </div>
-                                <div id="<?php echo $row3['id_faqs']?>" class="panel-collapse collapse off" style="background-color: #E6E6E6">
+                                <div id="<?php echo $row_dipl['id_faqs']?>" class="panel-collapse collapse off" style="background-color: #E6E6E6">
                                     <div class="panel-body">
-                                        <?php echo utf8_encode( $row3 ['answer'])?>
+                                        <?php echo utf8_encode( $row_dipl ['answer'])?>
                                     </div>
                                 </div>
                             </div>
                         <?php	}	?>
+                    </div>     
+                               <?php	}	?> 
+                        
                     </div>     
 
 
