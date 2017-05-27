@@ -27,4 +27,8 @@
     if ($mysqli7->connect_errno) {
         echo "Failed to connect to MySQL: " . $mysqli7->connect_error;
     }
+    $mysqli8 = new mysqli("127.0.0.1", "root", "", "simpoweb");
+    if ($mysqli8->connect_errno) {
+        echo "Failed to connect to MySQL: " . $mysqli8->connect_error;
+    }
 ?>
