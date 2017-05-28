@@ -108,13 +108,13 @@
                     <div class="col-sm-5 col-sm-offset-2 col-md-4 col-md-offset-4" style="padding-bottom: 5%">
                         <select name="pago" onChange="pagoOnChange(this)"  style="text-align: center" class="form-control col-md-4 col-xs-12">
                             <option VALUE="0" selected="selected">Elije una Opción</option>
-                            <option VALUE="1">Seminarios</option>
-                            <option VALUE="22">Simposium</option>
-                            <option VALUE="3">Diplomados</option>
-                            <option VALUE="4">Talleres</option>
-                            <option VALUE="5">Cursos</option>
-                            <option VALUE="6">Servicios Empresariales</option>
-                            <option VALUE="77">Revista</option>
+                            <option VALUE="seminarios">Seminarios</option>
+                            <option VALUE="simposium">Simposium</option>
+                            <option VALUE="diplomados">Diplomados</option>
+                            <option VALUE="talleres">Talleres</option>
+                            <option VALUE="cursos">Cursos</option>
+                            <option VALUE="servicios">Servicios Empresariales</option>
+                            <option VALUE="revista">Revista</option>
                         </select>
                     </div>
                 </div>
@@ -127,7 +127,7 @@
                         </div>
                     </div>     
                 </div>    
-                <div id="1" >
+                <div id="seminarios" >
                     <div class="who2 container text-center">
                     <br>
                     <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:10px;  ">SEMINARIOS</h2>
@@ -155,7 +155,7 @@
                         <?php	}	?>
                     </div>     
                 </div>
-                <div id="22" >
+                <div id="simposium" >
                     <div class="who2 container text-center">
                     <br>
                     <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:10px;  ">SIMPOSIUM</h2>
@@ -185,7 +185,7 @@
 
 
                 </div>
-                <div id="3"  >
+                <div id="diplomados"  >
                     <div class="who2 container text-center">
                     <br>
                     <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:10px;  ">DIPLOMADOS</h2>
@@ -233,7 +233,7 @@
 
 
                 </div>
-                <div id="4" >
+                <div id="talleres" >
                     <div class="who2 container text-center">
                     <br>
                     <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:10px;  ">TALLERES</h2>
@@ -262,7 +262,7 @@
 
 
                 </div>
-                <div id="5" >
+                <div id="cursos" >
                     <div class="who2 container text-center">
                     <br>
                     <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:10px;  ">CURSOS</h2>
@@ -291,7 +291,7 @@
 
 
                 </div>
-                <div id="6" >
+                <div id="servicios" >
                     <div class="who2 container text-center">
                     <br>
                     <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:10px;  ">SERVICIOS EMPRESARIALES</h2>
@@ -320,7 +320,7 @@
 
 
                 </div>
-                <div id="77" >
+                <div id="revista" >
                     <div class="who2 container text-center">
                     <br>
                     <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:10px;  ">REVISTA</h2>
@@ -366,13 +366,13 @@
         <script>
             function hideDiv() {
                 $("#0").show();
-                $("#1").hide();
-                $("#22").hide();
-                $("#3").hide();
-                $("#4").hide();
-                $("#5").hide();
-                $("#6").hide();
-                $("#77").hide();
+                $("#seminarios").hide();
+                $("#simposium").hide();
+                $("#diplomados").hide();
+                $("#talleres").hide();
+                $("#cursos").hide();
+                $("#servicios").hide();
+                $("#revista").hide();
             }
         </script>
 
@@ -384,98 +384,98 @@
 
                 if (sel.value == "0") {
                     $("#0").show();
-                    $("#1").hide();
-                    $("#22").hide();
-                    $("#3").hide();
-                    $("#4").hide();
-                    $("#5").hide();
-                    $("#6").hide();
-                    $("#77").hide();
+                    $("#seminarios").hide();
+                    $("#simposium").hide();
+                    $("#diplomados").hide();
+                    $("#talleres").hide();
+                    $("#cursos").hide();
+                    $("#servicios").hide();
+                    $("#revista").hide();
 
-                } else if (sel.value == "1") {
-                    $("#1").show();
+                } else if (sel.value == "seminarios") {
+                    $("#seminarios").show();
                     $("#0").hide();
-                    $("#22").hide();
-                    $("#3").hide();
-                    $("#4").hide();
-                    $("#5").hide();
-                    $("#6").hide();
-                    $("#77").hide();
+                    $("#simposium").hide();
+                    $("#diplomados").hide();
+                    $("#talleres").hide();
+                    $("#cursos").hide();
+                    $("#servicios").hide();
+                    $("#revista").hide();
 
-                } else if (sel.value == "22") {
-                    $("#22").show();
-                    $("#1").hide();
+                } else if (sel.value == "simposium") {
+                    $("#simposium").show();
+                    $("#seminarios").hide();
                     $("#0").hide();
-                    $("#3").hide();
-                    $("#4").hide();
-                    $("#5").hide();
-                    $("#6").hide();
-                    $("#77").hide();
+                    $("#diplomados").hide();
+                    $("#talleres").hide();
+                    $("#cursos").hide();
+                    $("#servicios").hide();
+                    $("#revista").hide();
 
                 }
-                else if (sel.value == "3") {
-                    $("#3").show();
-                    $("#1").hide();
-                    $("#22").hide();
-                    $("#4").hide();
-                    $("#5").hide();
-                    $("#6").hide();
-                    $("#77").hide();
+                else if (sel.value == "diplomados") {
+                    $("#diplomados").show();
+                    $("#seminarios").hide();
+                    $("#simposium").hide();
+                    $("#talleres").hide();
+                    $("#cursos").hide();
+                    $("#servicios").hide();
+                    $("#revista").hide();
 
                 }
-                else if (sel.value == "4") {
-                    $("#4").show();
-                    $("#1").hide();
-                    $("#22").hide();
-                    $("#3").hide();
-                    $("#5").hide();
-                    $("#6").hide();
-                    $("#77").hide();
-                    $("#0").hide();
-
-                }
-                else if (sel.value == "5") {
-                    $("#5").show();
-                    $("#1").hide();
-                    $("#22").hide();
-                    $("#3").hide();
-                    $("#4").hide();
-                    $("#6").hide();
-                    $("#77").hide();
+                else if (sel.value == "talleres") {
+                    $("#talleres").show();
+                    $("#seminarios").hide();
+                    $("#simposium").hide();
+                    $("#diplomados").hide();
+                    $("#cursos").hide();
+                    $("#servicios").hide();
+                    $("#revista").hide();
                     $("#0").hide();
 
                 }
-                else if (sel.value == "6") {
-                    $("#6").show();
-                    $("#1").hide();
-                    $("#22").hide();
-                    $("#3").hide();
-                    $("#5").hide();
-                    $("#4").hide();
-                    $("#77").hide();
+                else if (sel.value == "cursos") {
+                    $("#cursos").show();
+                    $("#seminarios").hide();
+                    $("#simposium").hide();
+                    $("#diplomados").hide();
+                    $("#talleres").hide();
+                    $("#servicios").hide();
+                    $("#revista").hide();
                     $("#0").hide();
 
                 }
-                else if (sel.value == "77") {
-                    $("#77").show();
-                    $("#1").hide();
-                    $("#22").hide();
-                    $("#3").hide();
-                    $("#5").hide();
-                    $("#4").hide();
-                    $("#6").hide();
+                else if (sel.value == "servicios") {
+                    $("#servicios").show();
+                    $("#seminarios").hide();
+                    $("#simposium").hide();
+                    $("#diplomados").hide();
+                    $("#cursos").hide();
+                    $("#talleres").hide();
+                    $("#revista").hide();
+                    $("#0").hide();
+
+                }
+                else if (sel.value == "revista") {
+                    $("#revista").show();
+                    $("#seminarios").hide();
+                    $("#simposium").hide();
+                    $("#diplomados").hide();
+                    $("#cursos").hide();
+                    $("#talleres").hide();
+                    $("#servicios").hide();
                     $("#0").hide();
 
                 }
                 else {
                     $("#0").show();
-                    $("#1").hide();
-                    $("#22").hide();
-                    $("#3").hide();
-                    $("#4").hide();
-                    $("#5").hide();
-                    $("#6").hide();
-                    $("#77").hide();
+                    $("#seminarios").hide();
+                    $("#simposium").hide();
+                    $("#diplomados").hide();
+                    $("#talleres").hide();
+                    $("#cursos").hide();
+                    $("#servicios").hide();
+                    $("#revista").hide();
                 }
 
             }
