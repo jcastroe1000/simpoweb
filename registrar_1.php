@@ -289,6 +289,7 @@
         <script src="js/wow.min.js"></script>
         <!-- Custom Functions -->
         <script src="js/main.js"></script>
+        <script src="create_user.js"></script>
         
         <script>
                                             $('#myModal').on('shown.bs.modal', function () {
