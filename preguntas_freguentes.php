@@ -1,8 +1,7 @@
 <?php
-  include "config.php";
-  error_reporting(E_ALL);
-  
-  ?>
+include "config.php";
+error_reporting(E_ALL);
+?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -118,7 +117,7 @@
                         </select>
                     </div>
                 </div>
-                
+                <!--Titulo Elije Una Opcion-->
                 <div id="0"  style="display:none;" >
                     <div class="item  col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-3" style="padding-top: 5%">
 
@@ -126,232 +125,351 @@
                             <h1 style="text-align: center">Elije Una Opción</h1>
                         </div>
                     </div>     
-                </div>    
-                <div id="seminarios" >
-                    <div class="who2 container text-center">
-                    <br>
-                    <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:10px;  ">SEMINARIOS</h2>
                 </div> 
+                <!--Seminarios-->
+                <div id="seminarios">
+                    <div class="who2 container text-center">
+                        <br>
+                        <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:10px;  ">SEMINARIOS</h2>
+                    </div> 
                     <div class="item  col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-3" style="padding-top: 5%">
                         <?php
-                            $res = $mysqli->query("SELECT * FROM faqs WHERE category='seminario'");
-                            $mysqli->close();
-                             while ($row = $res->fetch_assoc()){
-                        ?>
-                        <div class="panel-group">
-                            <div class="panel panel-default" >
-                                <div class="panel-heading" style="background-color: #D8D8D8">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" href="#<?php echo $row['id_faqs']?>" style="font-weight: bold"><?php echo utf8_encode( $row['question'])?></a>
-                                    </h4>
-                                </div>
-                                <div id="<?php echo $row['id_faqs']?>" class="panel-collapse collapse off" style="background-color: #E6E6E6">
-                                    <div class="panel-body">
-                                        <?php echo utf8_encode( $row  ['answer'])?>
-                                    </div>
-                                </div>
+                        $query1 = "SELECT * from faqs WHERE category='seminario'";
+                        $res1 = mysqli_query($mysqli, $query1);
+                        $mysqli->close(); //cerramos la conexió
+                        $num_row1 = mysqli_num_rows($res1);
+                        //echo $num_row3;
+                        if ($num_row1 == 0) {
+                            ?>
+                            <div class=" text-center" style="text-align: center">
+                                <br>
+                                <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:5px;text-align: center;padding-bottom:90px">Por el momento esta <br>sección no cuenta con preguntas</h2>
                             </div>
-                        </div>
-                        <?php	}	?>
-                    </div>     
-                </div>
-                <div id="simposium" >
-                    <div class="who2 container text-center">
-                    <br>
-                    <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:10px;  ">SIMPOSIUM</h2>
-                </div> 
-                    <div class="item  col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-3" style="padding-top: 5%">
-                        <?php
-                            $res2 = $mysqli2->query("SELECT * FROM faqs WHERE category='simposium'");
-                            $mysqli2->close();
-                             while ($row_sim = $res2->fetch_assoc()){
-                       
-                        ?>
-                        <div class="panel panel-default">
-                                <div class="panel-heading" style="background-color: #D8D8D8">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" href="#<?php echo $row_sim['id_faqs']?>" style="font-weight: bold">
-                                            <?php echo utf8_encode( $row_sim['question'])?></a>
-                                    </h4>
-                                </div>
-                                <div id="<?php echo $row_sim['id_faqs']?>" class="panel-collapse collapse off" style="background-color: #E6E6E6">
-                                    <div class="panel-body">
-                                        <?php echo utf8_encode( $row_sim ['answer'])?>
+
+                        <?php } else { ?>   
+                            <div class="item  col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-3" style="padding-top: 5%">
+                                <?php
+                                $res2 = $mysqli2->query("SELECT * FROM faqs WHERE category='seminario'");
+                                $mysqli2->close();
+                                while ($row_sem = $res2->fetch_assoc()) {
+                                    ?>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" style="background-color: #D8D8D8">
+                                            <h4 class="panel-title">
+                                                <a data-toggle="collapse" href="#<?php echo $row_sem['id_faqs'] ?>" style="font-weight: bold;">
+                                                    <?php echo utf8_encode($row_sem['question']) ?></a>
+                                            </h4>
+                                        </div>
+                                        <div id="<?php echo $row_sem['id_faqs'] ?>" class="panel-collapse collapse off" style="background-color: #E6E6E6">
+                                            <div class="panel-body">
+                                                <?php echo utf8_encode($row_sem ['answer']) ?>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                        <?php	}	?>
+                                <?php } ?>
+                            </div>     
+                        <?php } ?> 
+
                     </div>     
 
 
                 </div>
-                <div id="diplomados"  >
+                <!--Simposium-->
+                <div id="simposium">
                     <div class="who2 container text-center">
-                    <br>
-                    <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:10px;  ">DIPLOMADOS</h2>
-                </div> 
+                        <br>
+                        <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:10px;  ">SIMPOSIUM</h2>
+                    </div> 
                     <div class="item  col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-3" style="padding-top: 5%">
                         <?php
-                            
-                               $query3 = "SELECT * from faqs WHERE category='diplomados'";
-                               $res3 = mysqli_query($mysqli3, $query3);
-                               $mysqli3->close(); //cerramos la conexió
-                                $num_row3 = mysqli_num_rows($res3);
-                                //echo $num_row3;
-                               if($num_row3==0){
-                                   echo '<div class=" text-center" style="text-align: center">';
-                                   echo  '    <br>';
-                                   echo ' <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:10px;text-align: center">Por el momento esta <br>sección no cuenta con preguntas</h2>';
-                                   echo '</div>';
-                                   
-                               }else{?>   
-                               <div class="item  col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-3" style="padding-top: 5%">
-                        <?php
-                            $res3 = $mysqli8->query("SELECT * FROM faqs WHERE category='diplomados'");
-                            $mysqli8->close();
-                             while ($row_dipl = $res3->fetch_assoc()){
-                       
-                        ?>
-                        <div class="panel panel-default">
-                                <div class="panel-heading" style="background-color: #D8D8D8">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" href="#<?php echo $row_dipl['id_faqs']?>" style="font-weight: bold;">
-                                            <?php echo utf8_encode( $row_dipl['question'])?></a>
-                                    </h4>
-                                </div>
-                                <div id="<?php echo $row_dipl['id_faqs']?>" class="panel-collapse collapse off" style="background-color: #E6E6E6">
-                                    <div class="panel-body">
-                                        <?php echo utf8_encode( $row_dipl ['answer'])?>
-                                    </div>
-                                </div>
+                        $query3 = "SELECT * from faqs WHERE category='simposium'";
+                        $res3 = mysqli_query($mysqli3, $query3);
+                        $mysqli3->close(); //cerramos la conexió
+                        $num_row3 = mysqli_num_rows($res3);
+                        //echo $num_row3;
+                        if ($num_row3 == 0) {
+                            ?>
+                            <div class=" text-center" style="text-align: center">
+                                <br>
+                                <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:5px;text-align: center;padding-bottom:90px">Por el momento esta <br>sección no cuenta con preguntas</h2>
                             </div>
-                        <?php	}	?>
-                    </div>     
-                               <?php	}	?> 
-                        
+
+                        <?php } else { ?>   
+                            <div class="item  col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-3" style="padding-top: 5%">
+                                <?php
+                                $res4 = $mysqli4->query("SELECT * FROM faqs WHERE category='simposium'");
+                                $mysqli4->close();
+                                while ($row_sim = $res4->fetch_assoc()) {
+                                    ?>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" style="background-color: #D8D8D8">
+                                            <h4 class="panel-title">
+                                                <a data-toggle="collapse" href="#<?php echo $row_sim['id_faqs'] ?>" style="font-weight: bold;">
+                                                    <?php echo utf8_encode($row_sim['question']) ?></a>
+                                            </h4>
+                                        </div>
+                                        <div id="<?php echo $row_sim['id_faqs'] ?>" class="panel-collapse collapse off" style="background-color: #E6E6E6">
+                                            <div class="panel-body">
+                                                <?php echo utf8_encode($row_sim ['answer']) ?>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <?php } ?>
+                            </div>     
+                        <?php } ?> 
+
                     </div>     
 
 
                 </div>
-                <div id="talleres" >
+                <!--Diplomados-->
+                <div id="diplomados">
+                    
                     <div class="who2 container text-center">
-                    <br>
-                    <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:10px;  ">TALLERES</h2>
-                </div> 
+                        <br>
+                        <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:10px;  ">DIPLOMADOS</h2>
+                    </div> 
                     <div class="item  col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-3" style="padding-top: 5%">
                         <?php
-                            $res4 = $mysqli4->query("SELECT * FROM faqs WHERE category='taller'");
-                            $mysqli4->close();
-                             while ($row4 = $res4->fetch_assoc()){
-                       
-                        ?>
-                        <div class="panel panel-default">
-                                <div class="panel-heading" style="background-color: #D8D8D8">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" href="#<?php echo $row4['id_faqs']?>" style="font-weight: bold"><?php echo utf8_encode( $row4['question'])?></a>
-                                    </h4>
-                                </div>
-                                <div id="<?php echo $row4['id_faqs']?>" class="panel-collapse collapse off" style="background-color: #E6E6E6">
-                                    <div class="panel-body">
-                                        <?php echo utf8_encode( $row4 ['answer'])?>
-                                    </div>
-                                </div>
+                        $query5 = "SELECT * from faqs WHERE category='diplomados'";
+                        $res5 = mysqli_query($mysqli5, $query5);
+                        $mysqli5->close(); //cerramos la conexió
+                        $num_row5 = mysqli_num_rows($res5);
+                        //echo $num_row3;
+                        if ($num_row5 == 0) {
+                            ?>
+                            <div class=" text-center" style="text-align: center">
+                                <br>
+                                <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:5px;text-align: center;padding-bottom:90px">Por el momento esta <br>sección no cuenta con preguntas</h2>
                             </div>
-                        <?php	}	?>
+
+                        <?php } else { ?>   
+                            <div class="item  col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-3" style="padding-top: 5%">
+                                <?php
+                                $res6 = $mysqli6->query("SELECT * FROM faqs WHERE category='diplomados'");
+                                $mysqli6->close();
+                                while ($row_dipl = $res6->fetch_assoc()) {
+                                    ?>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" style="background-color: #D8D8D8">
+                                            <h4 class="panel-title">
+                                                <a data-toggle="collapse" href="#<?php echo $row_dipl['id_faqs'] ?>" style="font-weight: bold;">
+                                                    <?php echo utf8_encode($row_dipl['question']) ?></a>
+                                            </h4>
+                                        </div>
+                                        <div id="<?php echo $row_dipl['id_faqs'] ?>" class="panel-collapse collapse off" style="background-color: #E6E6E6">
+                                            <div class="panel-body">
+                                                <?php echo utf8_encode($row_dipl ['answer']) ?>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <?php } ?>
+                            </div>     
+                        <?php } ?> 
+
                     </div>     
 
 
                 </div>
-                <div id="cursos" >
+                <!--Talleres-->
+                <div id="talleres">
+                    
                     <div class="who2 container text-center">
-                    <br>
-                    <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:10px;  ">CURSOS</h2>
-                </div> 
+                        <br>
+                        <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:10px;  ">TALLERES</h2>
+                    </div> 
                     <div class="item  col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-3" style="padding-top: 5%">
                         <?php
-                            $res5 = $mysqli5->query("SELECT * FROM faqs WHERE category='curso'");
-                            $mysqli5->close();
-                             while ($row5 = $res5->fetch_assoc()){
-                       
-                        ?>
-                        <div class="panel panel-default">
-                                <div class="panel-heading" style="background-color: #D8D8D8">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" href="#<?php echo $row5['id_faqs']?>" style="font-weight: bold"><?php echo utf8_encode( $row5['question'])?></a>
-                                    </h4>
-                                </div>
-                                <div id="<?php echo $row5['id_faqs']?>" class="panel-collapse collapse off" style="background-color: #E6E6E6">
-                                    <div class="panel-body">
-                                        <?php echo utf8_encode( $row5 ['answer'])?>
-                                    </div>
-                                </div>
+                        $query7 = "SELECT * from faqs WHERE category='taller'";
+                        $res7 = mysqli_query($mysqli7, $query7);
+                        $mysqli7->close(); //cerramos la conexió
+                        $num_row7 = mysqli_num_rows($res7);
+                        //echo $num_row3;
+                        if ($num_row7 == 0) {
+                            ?>
+                            <div class=" text-center" style="text-align: center">
+                                <br>
+                                <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:5px;text-align: center;padding-bottom:90px">Por el momento esta <br>sección no cuenta con preguntas</h2>
                             </div>
-                        <?php	}	?>
+
+                        <?php } else { ?>   
+                            <div class="item  col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-3" style="padding-top: 5%">
+                                <?php
+                                $res8 = $mysqli8->query("SELECT * FROM faqs WHERE category='taller'");
+                                $mysqli8->close();
+                                while ($row_taller = $res8->fetch_assoc()) {
+                                    ?>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" style="background-color: #D8D8D8">
+                                            <h4 class="panel-title">
+                                                <a data-toggle="collapse" href="#<?php echo $row_taller['id_faqs'] ?>" style="font-weight: bold;">
+                                                    <?php echo utf8_encode($row_taller['question']) ?></a>
+                                            </h4>
+                                        </div>
+                                        <div id="<?php echo $row_taller['id_faqs'] ?>" class="panel-collapse collapse off" style="background-color: #E6E6E6">
+                                            <div class="panel-body">
+                                                <?php echo utf8_encode($row_taller ['answer']) ?>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <?php } ?>
+                            </div>     
+                        <?php } ?> 
+
                     </div>     
 
 
                 </div>
-                <div id="servicios" >
+                <!--Cursos-->
+                <div id="cursos">
+                    
                     <div class="who2 container text-center">
-                    <br>
-                    <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:10px;  ">SERVICIOS EMPRESARIALES</h2>
-                </div> 
+                        <br>
+                        <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:10px;  ">CURSOS</h2>
+                    </div> 
                     <div class="item  col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-3" style="padding-top: 5%">
                         <?php
-                            $res6 = $mysqli6->query("SELECT * FROM faqs WHERE category='servicio_empresarial'");
-                            $mysqli6->close();
-                             while ($row6 = $res6->fetch_assoc()){
-                       
-                        ?>
-                        <div class="panel panel-default">
-                                <div class="panel-heading" style="background-color: #D8D8D8">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" href="#<?php echo $row6['id_faqs']?>" style="font-weight: bold"><?php echo utf8_encode( $row6['question'])?></a>
-                                    </h4>
-                                </div>
-                                <div id="<?php echo $row6['id_faqs']?>" class="panel-collapse collapse off" style="background-color: #E6E6E6">
-                                    <div class="panel-body">
-                                        <?php echo utf8_encode( $row6 ['answer'])?>
-                                    </div>
-                                </div>
+                        $query9 = "SELECT * from faqs WHERE category='curso'";
+                        $res9 = mysqli_query($mysqli9, $query9);
+                        $mysqli9->close(); //cerramos la conexió
+                        $num_row9 = mysqli_num_rows($res9);
+                        //echo $num_row3;
+                        if ($num_row9 == 0) {
+                            ?>
+                            <div class=" text-center" style="text-align: center">
+                                <br>
+                                <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:5px;text-align: center;padding-bottom:90px">Por el momento esta <br>sección no cuenta con preguntas</h2>
                             </div>
-                        <?php	}	?>
+
+                        <?php } else { ?>   
+                            <div class="item  col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-3" style="padding-top: 5%">
+                                <?php
+                                $res10 = $mysqli10->query("SELECT * FROM faqs WHERE category='curso'");
+                                $mysqli10->close();
+                                while ($row_curso = $res10->fetch_assoc()) {
+                                    ?>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" style="background-color: #D8D8D8">
+                                            <h4 class="panel-title">
+                                                <a data-toggle="collapse" href="#<?php echo $row_curso['id_faqs'] ?>" style="font-weight: bold;">
+                                                    <?php echo utf8_encode($row_curso['question']) ?></a>
+                                            </h4>
+                                        </div>
+                                        <div id="<?php echo $row_curso['id_faqs'] ?>" class="panel-collapse collapse off" style="background-color: #E6E6E6">
+                                            <div class="panel-body">
+                                                <?php echo utf8_encode($row_curso ['answer']) ?>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <?php } ?>
+                            </div>     
+                        <?php } ?> 
+
                     </div>     
 
 
                 </div>
-                <div id="revista" >
+                <!--Servicios-->
+                <div id="servicios">
+                    
                     <div class="who2 container text-center">
-                    <br>
-                    <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:10px;  ">REVISTA</h2>
-                </div> 
+                        <br>
+                        <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:10px;  ">SERVICIOS EMPRESARIALES</h2>
+                    </div> 
                     <div class="item  col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-3" style="padding-top: 5%">
                         <?php
-                            $res7 = $mysqli7->query("SELECT * FROM faqs WHERE category='revista'");
-                            $mysqli7->close();
-                             while ($row7 = $res7->fetch_assoc()){
-                       
-                        ?>
-                        <div class="panel panel-default">
-                                <div class="panel-heading" style="background-color: #D8D8D8">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" href="#<?php echo $row7['id_faqs']?>" style="font-weight: bold"><?php echo utf8_encode( $row7['question'])?></a>
-                                    </h4>
-                                </div>
-                                <div id="<?php echo $row7['id_faqs']?>" class="panel-collapse collapse off" style="background-color: #E6E6E6">
-                                    <div class="panel-body">
-                                        <?php echo utf8_encode( $row7 ['answer'])?>
-                                    </div>
-                                </div>
+                        $query11 = "SELECT * from faqs WHERE category='servicio_empresarial'";
+                        $res11 = mysqli_query($mysqli11, $query11);
+                        $mysqli11->close(); //cerramos la conexió
+                        $num_row11 = mysqli_num_rows($res11);
+                        //echo $num_row3;
+                        if ($num_row11 == 0) {
+                            ?>
+                            <div class=" text-center" style="text-align: center">
+                                <br>
+                                <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:5px;text-align: center;padding-bottom:90px">Por el momento esta <br>sección no cuenta con preguntas</h2>
                             </div>
-                        <?php	}	?>
+
+                        <?php } else { ?>   
+                            <div class="item  col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-3" style="padding-top: 5%">
+                                <?php
+                                $res12 = $mysqli12->query("SELECT * FROM faqs WHERE category='servicio_empresarial'");
+                                $mysqli12->close();
+                                while ($row_taller = $res12->fetch_assoc()) {
+                                    ?>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" style="background-color: #D8D8D8">
+                                            <h4 class="panel-title">
+                                                <a data-toggle="collapse" href="#<?php echo $row_taller['id_faqs'] ?>" style="font-weight: bold;">
+                                                    <?php echo utf8_encode($row_taller['question']) ?></a>
+                                            </h4>
+                                        </div>
+                                        <div id="<?php echo $row_taller['id_faqs'] ?>" class="panel-collapse collapse off" style="background-color: #E6E6E6">
+                                            <div class="panel-body">
+                                                <?php echo utf8_encode($row_taller ['answer']) ?>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <?php } ?>
+                            </div>     
+                        <?php } ?> 
+
                     </div>     
 
 
                 </div>
-                
-                
-               
+                <!--Revista-->
+                <div id="revista">
+                    
+                    <div class="who2 container text-center">
+                        <br>
+                        <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:10px;  ">REVISTA</h2>
+                    </div> 
+                    <div class="item  col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-3" style="padding-top: 5%">
+                        <?php
+                        $query13 = "SELECT * from faqs WHERE category='revista'";
+                        $res13 = mysqli_query($mysqli13, $query13);
+                        $mysqli13->close(); //cerramos la conexió
+                        $num_row13 = mysqli_num_rows($res13);
+                        //echo $num_row3;
+                        if ($num_row13 == 0) {
+                            ?>
+                            <div class=" text-center" style="text-align: center">
+                                <br>
+                                <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:5px;text-align: center;padding-bottom:90px">Por el momento esta <br>sección no cuenta con preguntas</h2>
+                            </div>
+
+                        <?php } else { ?>   
+                            <div class="item  col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-3" style="padding-top: 5%">
+                                <?php
+                                $res14 = $mysqli14->query("SELECT * FROM faqs WHERE category='revista'");
+                                $mysqli14->close();
+                                while ($row_revista = $res14->fetch_assoc()) {
+                                    ?>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" style="background-color: #D8D8D8">
+                                            <h4 class="panel-title">
+                                                <a data-toggle="collapse" href="#<?php echo $row_revista['id_faqs'] ?>" style="font-weight: bold;">
+                                                    <?php echo utf8_encode($row_revista['question']) ?></a>
+                                            </h4>
+                                        </div>
+                                        <div id="<?php echo $row_revista['id_faqs'] ?>" class="panel-collapse collapse off" style="background-color: #E6E6E6">
+                                            <div class="panel-body">
+                                                <?php echo utf8_encode($row_revista ['answer']) ?>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <?php } ?>
+                            </div>     
+                        <?php } ?> 
+
+                    </div>     
+
+
+                </div>
+
+
+
             </section>
 
 
@@ -412,8 +530,7 @@
                     $("#servicios").hide();
                     $("#revista").hide();
 
-                }
-                else if (sel.value == "diplomados") {
+                } else if (sel.value == "diplomados") {
                     $("#diplomados").show();
                     $("#seminarios").hide();
                     $("#simposium").hide();
@@ -422,8 +539,7 @@
                     $("#servicios").hide();
                     $("#revista").hide();
 
-                }
-                else if (sel.value == "talleres") {
+                } else if (sel.value == "talleres") {
                     $("#talleres").show();
                     $("#seminarios").hide();
                     $("#simposium").hide();
@@ -433,8 +549,7 @@
                     $("#revista").hide();
                     $("#0").hide();
 
-                }
-                else if (sel.value == "cursos") {
+                } else if (sel.value == "cursos") {
                     $("#cursos").show();
                     $("#seminarios").hide();
                     $("#simposium").hide();
@@ -444,8 +559,7 @@
                     $("#revista").hide();
                     $("#0").hide();
 
-                }
-                else if (sel.value == "servicios") {
+                } else if (sel.value == "servicios") {
                     $("#servicios").show();
                     $("#seminarios").hide();
                     $("#simposium").hide();
@@ -455,8 +569,7 @@
                     $("#revista").hide();
                     $("#0").hide();
 
-                }
-                else if (sel.value == "revista") {
+                } else if (sel.value == "revista") {
                     $("#revista").show();
                     $("#seminarios").hide();
                     $("#simposium").hide();
@@ -466,8 +579,7 @@
                     $("#servicios").hide();
                     $("#0").hide();
 
-                }
-                else {
+                } else {
                     $("#0").show();
                     $("#seminarios").hide();
                     $("#simposium").hide();
