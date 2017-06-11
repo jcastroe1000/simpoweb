@@ -1,15 +1,13 @@
 <?php
 header("Content-Type: text/html;charset=utf-8");
-  include "config.php";
-  error_reporting(E_ALL);
-  session_start();
-  if (!isset($_SESSION['user_name'])) {
-      header("Location:login.php");
-  }
-  $user_name = $_SESSION['user_name'];
-
- 
-  ?>
+include "config.php";
+error_reporting(E_ALL);
+session_start();
+if (!isset($_SESSION['user_name'])) {
+    header("Location:login.php");
+}
+$user_name = $_SESSION['user_name'];
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -45,7 +43,7 @@ header("Content-Type: text/html;charset=utf-8");
         <link href="../build/css/custom.min.css" rel="stylesheet">
         <!--        <link rel="stylesheet" type="text/css" href="../production/css/dataTables.bootstrap.css">-->
         <link href="../production/css/font-face.css"  rel="stylesheet" type="text/css">
-        
+
         <link rel="stylesheet" type="text/css" href="../production/css/dataTables.css">
         <link rel="stylesheet" type="text/css" href="../production/css/dataTables.boostrap.min.css">
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/select/1.2.1/css/select.bootstrap.min.css">
@@ -87,32 +85,32 @@ header("Content-Type: text/html;charset=utf-8");
                                         <ul class="nav child_menu">
                                             <li><a href="users_registers.php"><i class="fa fa-arrow-up"></i>Registrados</a></li>
                                             <li>
-                                            <a href="newsletter.php"><i class="fa fa-check-circle"></i>NewsLetter</a></li>
+                                                <a href="newsletter.php"><i class="fa fa-check-circle"></i>NewsLetter</a></li>
                                         </ul>
-                                        
+
                                     </li>
                                     <li><a href="services.php"><i class="fa fa-arrow-circle-up"></i> Registro </a></li>
 
-                                    
+
                                     <li><a><i class="fa fa-cogs"></i>Secciones <span class="fa fa-chevron-down"></span></a>
                                         <ul class="nav child_menu">
-                                            
-                                    <li>
-                                        <a href="simposiums.html"><i class="fa fa-mortar-board"></i> Seminarios</a>
-                                    </li>
-                                    <li>
-                                        <a href="simposiums.html"><i class="fa fa-laptop"></i> Talleres </a>
-                                    </li>
-                                    <li>
-                                        <a href="simposiums.html"><i class="fa fa-briefcase"></i> Cursos </a>
-                                    </li>
-                                    <li>
-                                        <a href="simposiums.html"><i class="fa fa-university"></i> Diplomados </a>
-                                    </li>
+
+                                            <li>
+                                                <a href="simposiums.html"><i class="fa fa-mortar-board"></i> Seminarios</a>
+                                            </li>
+                                            <li>
+                                                <a href="simposiums.html"><i class="fa fa-laptop"></i> Talleres </a>
+                                            </li>
+                                            <li>
+                                                <a href="simposiums.html"><i class="fa fa-briefcase"></i> Cursos </a>
+                                            </li>
+                                            <li>
+                                                <a href="simposiums.html"><i class="fa fa-university"></i> Diplomados </a>
+                                            </li>
 
                                         </ul>
                                     </li>
-                                    
+
                                     <li><a><i class="fa fa-plus-square"></i> Extras<span class="fa fa-chevron-down"></span></a>
                                         <ul class="nav child_menu">
                                             <li><a href="form.html"><i class="fa fa-book"></i>Directorio</a></li>
@@ -123,7 +121,7 @@ header("Content-Type: text/html;charset=utf-8");
 
                                 </ul>
                             </div>
-                            
+
 
                         </div>
                         <!-- /sidebar menu -->
@@ -253,7 +251,7 @@ header("Content-Type: text/html;charset=utf-8");
                             </div>
 
                             <div class="title_right">
-                                
+
                             </div>
                         </div>
                         <div class="clearfix"><h2 style="text-align: center;color: black;font-size: 25px" class="Sansation_Regular">Preguntas de Cursos</h2></div>
@@ -263,74 +261,83 @@ header("Content-Type: text/html;charset=utf-8");
                                 <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
                                     <thead>
                                         <tr>
-                                            <th class="Sansation_Bold" style="color: black;text-align: center">Pregunta</th>
-                                            <th class="Sansation_Bold" style="color: black;text-align: center">Modalidad</th>
-                                            <th class="Sansation_Bold" style="color: black;text-align: center">Duracion</th>
-                                            <th class="Sansation_Bold" style="color: black;text-align: center">Modalidad</th>
-                                            
+                                            <th class="Sansation_Bold" style="color: black;text-align: center;width: 5%"># Pregunta</th>
+                                            <th class="Sansation_Bold" style="color: black;text-align: center;width: 50%">Pregunta</th>
+                                            <th class="Sansation_Bold" style="color: black;text-align: center"></th>
+                                            <th class="Sansation_Bold" style="color: black;text-align: center"></th>
+
                                         </tr>
                                     </thead>
-                                    
+
                                     <tbody>
                                         <?php
-                                                        include "./model/conection.php";
-                                                        error_reporting(E_ALL);
-                                                        $seccion='seminario';
-                                                        $res = $mysqli->query("SELECT nombre,duracion,modalidad,fecha_creacion,usuario from registro_eventos WHERE seccion='curso' ");
-                                                        $mysqli->close();
-                                                        while ($row = $res->fetch_assoc()):
-                                                            ?>
-                                        <tr>
-                                            <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo $row ['nombre']; ?></td>
-                                            <td class="Sans" style="color: #04B404;text-align: center">Detalles        <i class="fa fa-plus"></i></td>
-                                            <td class="Sans" style="color: #04B404;text-align: center"><a button type="button" href="#2" data-toggle="modal" class="btn btn-default"  > <i class="icon-trash"></i> Eliminar</a></td>
-                                            <td class="Sans" style="color: #FF0000;text-align: center"><a button type="button" href="#1" data-toggle="modal" class="btn btn-danger"  > <i class="icon-trash"></i> Eliminar</a></td>
-                                        </tr>
-                                         <div class="modal fade" id="1" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true" >
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                          <h4 class="modal-title" id="myModalLabel">Atención</h4>
-                        </div>
-                        <div class="modal-body">
-                          <h3>¿Estas seguro de eliminar el contenido?</h3>
-                        </div>
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="icon-ban-circle"></i>&nbsp;Cerrrar</button>
-                         <!--<a href="Delete_Photo.php?d=<?php echo $row2['id']?>&f=<?php echo $row2['file']?>"><button type="button" class="btn btn-success"><i class="icon-ok"></i>Aceptar</button></a>-->
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                                    <div class="modal fade" id="2" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true" >
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                          <h4 class="modal-title" id="myModalLabel">Atención</h4>
-                        </div>
-                        <div class="modal-body">
-                          
-                        </div>
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="icon-ban-circle"></i>&nbsp;Cerrrar</button>
-                         <!--<a href="Delete_Photo.php?d=<?php echo $row2['id']?>&f=<?php echo $row2['file']?>"><button type="button" class="btn btn-success"><i class="icon-ok"></i>Aceptar</button></a>-->
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                                        include "./model/conection.php";
+                                        error_reporting(E_ALL);
+
+                                        $res = $mysqli->query("SELECT id_faqs,question,answer from faqs WHERE category='curso'");
+                                        $mysqli->close();
+                                        while ($row = $res->fetch_assoc()) {
+                                            
+                                            ?>
+                                            <tr>
+                                                <td class="Sansation_Regular" style="color: #6E6E6E;text-align: center"><h5><?php echo  utf8_encode($row['id_faqs']) ?></h5></td>
+                                                <td class="Sansation_Regular" style="color: #6E6E6E;text-align: center"><h5><?php echo  utf8_encode($row['question']) ?></h5></td>
+                                                <td class="Sans" style="color: #04B404;text-align: center"><a button type="button" href="#<?php echo $row['id_faqs'] ?>" data-toggle="modal" class="btn btn-default"  > <i class="icon-trash"></i> Ver Detalles</a></td>
+                                                <td class="Sans" style="color: #FF0000;text-align: center"><a button type="button" data-target="#<?php echo $row['id_faqs']. 000 ?>" data-toggle="modal" class="btn btn-danger"  > <i class="icon-trash"></i> Eliminar</a></td>
+                                            </tr>
+                                            <!--Modal Info-->
+                                        <div class="modal fade" id="<?php echo $row['id_faqs'] ?>" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true" >
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                        <h4 class="modal-title" id="myModalLabel" style="font-weight: bolder"><?php echo  utf8_encode($row['question']) ?></h4>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <h4 style="text-align: justify"><?php echo  utf8_encode($row['answer']) ?></h4> 
+                                                        
+                                                        
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        
+                                                        <button type="button" class="btn btn-primary">Modificar</button>
+                                                        <button type="button" class="btn btn-info" data-dismiss="modal">Cerrar</button>
+                                                       <!--<a href="Delete_Photo.php?d=<?php echo $row2['id'] ?>&f=<?php echo $row2['file'] ?>"><button type="button" class="btn btn-success"><i class="icon-ok"></i>Aceptar</button></a>-->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                         <!--Modal Eliminar-->
+                                        <div class="modal fade" id="<?php echo$row['id_faqs']. 000 ?>" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true" >
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                        <h4 class="modal-title" id="myModalLabel" style="text-align: center;font-weight: bold;color: red">Atención</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <h4 style="text-align: center;font-weight: bold">Estás apunto de eliminar la siguiente pregunta</h4>
+                                                        <h4 style="text-align: center"><?php echo  utf8_encode($row['question']) ?></h4> 
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="icon-ban-circle"></i>&nbsp;Cancelar</button>
+                                                        <a href="Delete_Photo.php?d=<?php echo $row2['id'] ?>&f=<?php echo $row2['file'] ?>"><button type="button" class="btn btn-success"><i class="icon-ok"></i>Aceptar</button></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
                                         <?php
-                                                        endwhile;
-                                                        ?> 
+                                    }
+                                    ?> 
                                     </tbody>
                                 </table>
                             </div>
                         </div> 
 
-                      
+
                         <!-- footer content -->
-                        
+
                         <!-- /footer content -->
                     </div>
 
@@ -596,4 +603,4 @@ header("Content-Type: text/html;charset=utf-8");
                 <!-- /Starrr -->
                 </body>
                 </html>
-s
+                s
