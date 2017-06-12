@@ -276,7 +276,7 @@ header("Content-Type: text/html;charset=utf-8");
                                                         include "./model/conection.php";
                                                         error_reporting(E_ALL);
                                                         $seccion='seminario';
-                                                        $res = $mysqli->query("SELECT nombre,duracion,modalidad,fecha_creacion,usuario from registro_eventos WHERE seccion='curso' ");
+                                                        $res = $mysqli->query("SELECT nombre,duracion,modalidad,fecha_creacion,usuario from registro_eventos WHERE seccion='taller' ");
                                                         $mysqli->close();
                                                         while ($row = $res->fetch_assoc()):
                                                             ?>

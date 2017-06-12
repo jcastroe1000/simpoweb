@@ -229,7 +229,7 @@ $user_name = $_SESSION['user_name'];
                                         <div class="form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="last-name" style="color: black" hidden="">Categoria:</label>
                                             <div class="col-md-6 ">
-                                                <input type="hidden" id="category" name="category" value="diplomados" class="form-control col-md-7 col-xs-12" 
+                                                <input type="hidden" id="category" name="category" value="diplomado" class="form-control col-md-7 col-xs-12" 
                                                       >
                                             </div>
                                         </div>
