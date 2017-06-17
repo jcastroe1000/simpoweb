@@ -44,7 +44,7 @@ if($_POST['email_newsletter'] == '')
 
 //Change database 
 
-$date=date("Y/d/m"); 
+$date=date("y/m/d"); 
 $save = mysqli_query($mysqli,"INSERT INTO newsletter (correo_electronico,seccion,fecha_registro) "
                    ."VALUES ('$email','$seccion','$date')" );
 $mysqli->close();
