@@ -220,7 +220,12 @@ header("Content-Type: text/html;charset=utf-8");
                                                 <input type="email" id="email_admin" name="email_admin" class="form-control col-md-7 col-xs-12" >
                                             </div>
                                         </div>
-                                        
+                                        <div class="form-group" >
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="first-name" style="color: black"> </label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <input type="hidden" id="creation_date_admin" name="creation_date_admin"  value="<?php echo $date=date("y-m-d"); ?>" class="form-control col-md-7 col-xs-12">
+                                            </div>
+                                        </div>
                                           
                                           
                                        

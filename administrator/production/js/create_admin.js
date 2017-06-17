@@ -1,6 +1,7 @@
 $(function () {
     $('#create_admin').submit(function () {
-        var comprobar = $('#name').val().length * $('#apellido_paterno').val().length * $('#apellido_materno').val().length * $('#email_admin').val().length;
+        var comprobar = $('#name').val().length * $('#apellido_paterno').val().length
+                * $('#apellido_materno').val().length * $('#email_admin').val().length * $('#creation_date_admin').val().length;
         if (comprobar > 0) {
 
             var formulario = $('#create_admin');

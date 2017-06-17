@@ -282,7 +282,7 @@ header("Content-Type: text/html;charset=utf-8");
                                                         while ($row = $res->fetch_assoc()):
                                                             ?>
                                         <tr>
-                                            <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo utf8_encode($row ['nombre']); ?></td>
+                                            <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo utf8_encode($row ['nombre'] . '&nbsp;'. $row ['apellido_paterno']. '&nbsp;'.    $row ['apellido_materno']); ?></td>
                                             <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo $row ['email'] ?></td>
                                             <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo $row ['creation_date'] ?></td>
                                             <td class="Sans" style="color: #6E6E6E;text-align: center">
@@ -294,11 +294,32 @@ header("Content-Type: text/html;charset=utf-8");
                                                     echo 'Bloqueado';    
                                                 }?>
                                             </td>
-                                            <td class="Sans" style="color: #04B404;text-align: center">Detalles        <i class="fa fa-plus"></i></td>
-                                            <td class="Sans" style="color: #FF0000;text-align: center">Eliminar        <i class="fa fa-trash"></i></td>
+                                            <td class="Sans" style="color: #04B404;text-align: center"><a button type="button" href="#<?php echo $row['id_faqs'] ?>" data-toggle="modal" class="btn btn-default"  > <i class="icon-trash"></i> Ver Detalles</td>
+                                            <td class="Sans" style="color: #FF0000;text-align: center"><a button type="button" data-target="#<?php echo $row['id_faqs']. 000 ?>" data-toggle="modal" class="btn btn-danger"  > <i class="icon-trash"></i> Eliminar</a></td>
                                             
                                             
                                         </tr>
+                                        <div class="modal fade" id="prueba" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true" >
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                        <h4 class="modal-title" id="myModalLabel" style="font-weight: bolder"><?php echo  utf8_encode($row['question']) ?></h4>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <h4 style="text-align: justify"><?php echo  utf8_encode($row['answer']) ?></h4> 
+                                                        
+                                                        
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        
+                                                        <button type="button" class="btn btn-primary">Modificar</button>
+                                                        <button type="button" class="btn btn-info" data-dismiss="modal">Cerrar</button>
+                                                       <!--<a href="Delete_Photo.php?d=<?php echo $row2['id'] ?>&f=<?php echo $row2['file'] ?>"><button type="button" class="btn btn-success"><i class="icon-ok"></i>Aceptar</button></a>-->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                         <?php
                                                         endwhile;
                                                         ?> 

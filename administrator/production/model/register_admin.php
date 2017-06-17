@@ -26,17 +26,17 @@ if ($admin_email == $row['email']) {
         return $randomString;
     }
 
-    $admin_name = $_GET['name'];
-    $apellido_pat = $_GET['apellido_paterno'];
-    $apellido_mat = $_GET['apellido_materno'];
+    $admin_name =  utf8_decode($_GET['name']);
+    $apellido_pat =  utf8_decode( $_GET['apellido_paterno']);
+    $apellido_mat =  utf8_decode($_GET['apellido_materno']);
     $admin_email = $_GET['email_admin'];
     $tem_pass = generateRandomString();
-    
+    $creation_date_admin= $_GET ['creation_date_admin'];
     require_once '../model/email_new_admin.php';
-
+    
     $admin_status = 0;
-    $query1 = "INSERT INTO administradores(nombre,apellido_paterno, apellido_materno, email,password,estatus) "
-            . "VALUES ('$admin_name', '$apellido_pat', '$apellido_mat', '$admin_email', '$tem_pass', '$admin_status')";
+    $query1 = "INSERT INTO administradores(nombre,apellido_paterno, apellido_materno, email,password,creation_date,estatus) "
+            . "VALUES ('$admin_name', '$apellido_pat', '$apellido_mat', '$admin_email', '$tem_pass', '$creation_date_admin','$admin_status')";
     mysqli_query($mysqli, $query1);
     $response_array['status'] = 'success';
     echo json_encode($response_array);
