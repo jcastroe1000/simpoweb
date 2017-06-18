@@ -263,9 +263,9 @@ header("Content-Type: text/html;charset=utf-8");
                                     <thead>
                                         <tr>
                                             <th class="Sansation_Bold" style="color: black;text-align: center">Nombre del Operador</th>
-                                            <th class="Sansation_Bold" style="color: black;text-align: center">Email</th>
+                                            <!--<th class="Sansation_Bold" style="color: black;text-align: center">Email</th>
                                             <th class="Sansation_Bold" style="color: black;text-align: center">Fecha de Creación</th>
-                                            <th class="Sansation_Bold" style="color: black;text-align: center">Estatus</th>
+                                            <th class="Sansation_Bold" style="color: black;text-align: center">Estatus</th>-->
                                             <th></th>
                                             <th></th>
                                             
@@ -277,13 +277,13 @@ header("Content-Type: text/html;charset=utf-8");
                                         <?php
                                                         include "./model/conection.php";
                                                         error_reporting(E_ALL);
-                                                        $res = $mysqli->query("SELECT nombre,apellido_paterno,apellido_materno,email,creation_date,estatus from administradores");
+                                                        $res = $mysqli->query("SELECT id_admin,nombre,apellido_paterno,apellido_materno,email,creation_date,estatus from administradores");
                                                         $mysqli->close();
                                                         while ($row = $res->fetch_assoc()):
                                                             ?>
                                         <tr>
-                                            <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo utf8_encode($row ['nombre'] . '&nbsp;'. $row ['apellido_paterno']. '&nbsp;'.    $row ['apellido_materno']); ?></td>
-                                            <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo $row ['email'] ?></td>
+                                            <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo utf8_encode($row ['apellido_paterno'] . '&nbsp;'. $row ['apellido_materno']. '&nbsp;'.    $row ['nombre']); ?></td>
+                                            <!--<td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo $row ['email'] ?></td>
                                             <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo $row ['creation_date'] ?></td>
                                             <td class="Sans" style="color: #6E6E6E;text-align: center">
                                                 <?php if ( $row ['estatus'] == 0){
@@ -293,22 +293,56 @@ header("Content-Type: text/html;charset=utf-8");
                                                 } elseif ($row ['estatus'] == 2) {
                                                     echo 'Bloqueado';    
                                                 }?>
-                                            </td>
-                                            <td class="Sans" style="color: #04B404;text-align: center"><a button type="button" href="#<?php echo $row['id_faqs'] ?>" data-toggle="modal" class="btn btn-default"  > <i class="icon-trash"></i> Ver Detalles</td>
-                                            <td class="Sans" style="color: #FF0000;text-align: center"><a button type="button" data-target="#<?php echo $row['id_faqs']. 000 ?>" data-toggle="modal" class="btn btn-danger"  > <i class="icon-trash"></i> Eliminar</a></td>
+                                            </td>-->
+                                            <td class="Sans" style="color: #04B404;text-align: center"><a button type="button" href="#<?php echo $row['id_admin'] ?>" data-toggle="modal" class="btn btn-default"  > <i class="icon-trash"></i> Ver Detalles</td>
+                                            <td class="Sans" style="color: #FF0000;text-align: center"><a button type="button" data-target="#<?php echo $row['id_admin']. 00 ?>" data-toggle="modal" class="btn btn-danger"  > <i class="icon-trash"></i> Eliminar</a></td>
                                             
                                             
                                         </tr>
-                                        <div class="modal fade" id="prueba" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true" >
+                                        <div class="modal fade" id="<?php echo $row['id_admin'] ?>" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true" >
                                             <div class="modal-dialog">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
                                                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                                        <h4 class="modal-title" id="myModalLabel" style="font-weight: bolder"><?php echo  utf8_encode($row['question']) ?></h4>
+                                                        <h4 class="modal-title" id="myModalLabel" style="font-weight: bolder;text-align: center">Datos del Operador</h4>
                                                     </div>
                                                     <div class="modal-body">
-                                                        <h4 style="text-align: justify"><?php echo  utf8_encode($row['answer']) ?></h4> 
+                                                        <h4 style="text-align: justify"><b>Nombre: </b><?php echo  utf8_encode($row['apellido_paterno']) . '&nbsp;'. utf8_encode($row['apellido_materno']) . '&nbsp;'. utf8_encode($row['nombre'])   ?></h4> 
+                                                        <h4 style="text-align: justify"><b>Email: </b><?php echo  utf8_encode($row['email']) ?></h4> 
+                                                        <h4 style="text-align: justify"><b>Estatus: </b>
+                                                            <?php 
+                                                            if ( $row ['estatus'] == 0){
+                                                      echo 'Pendiente';
+                                                } elseif ($row ['estatus'] == 1) {
+                                                    echo 'Activo';
+                                                } elseif ($row ['estatus'] == 2) {
+                                                    echo 'Bloqueado';    
+                                                }?>
+                                                        </h4>
+                                                        <h4 style="text-align: justify"><b>Fecha de Creación: </b><?php echo  utf8_encode($row['creation_date']) ?></h4> 
                                                         
+                                                        
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        
+                                                        <button type="button" class="btn btn-primary">Modificar</button>
+                                                        <button type="button" class="btn btn-info" data-dismiss="modal">Cerrar</button>
+                                                       <!--<a href="Delete_Photo.php?d=<?php echo $row2['id'] ?>&f=<?php echo $row2['file'] ?>"><button type="button" class="btn btn-success"><i class="icon-ok"></i>Aceptar</button></a>-->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal fade" id="<?php echo $row['id_admin']. 00 ?>" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true" >
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                        <h4 class="modal-title" id="myModalLabel" style="font-weight: bolder;text-align: center">Eliminar Operador</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        
+                                                        <h4 style="text-align: center">¿Estás seguro de querer eliminar al operador? </h4>
+                                                        <h4 style="text-align: center;font-weight: bold" ><?php echo  utf8_encode($row['apellido_paterno']) . '&nbsp;'. utf8_encode($row['apellido_materno']) . '&nbsp;'. utf8_encode($row['nombre'])   ?></h4> 
                                                         
                                                     </div>
                                                     <div class="modal-footer">
