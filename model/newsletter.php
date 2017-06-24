@@ -43,15 +43,28 @@ if($_POST['email_newsletter'] == '')
 
 
 //Change database 
+$email= $_POST['email_newsletter'];
 
-$date=date("y/m/d"); 
-$save = mysqli_query($mysqli,"INSERT INTO newsletter (correo_electronico,seccion,fecha_registro) "
-                   ."VALUES ('$email','$seccion','$date')" );
-$mysqli->close();
+$query = "SELECT correo_electronico FROM newsletter WHERE correo_electronico='$email' ";
+$result = mysqli_query($mysqli, $query)or die(mysqli_error());
+$num_row = mysqli_num_rows($result);
+$row = mysqli_fetch_array($result);
+if ($email == $row['correo_electronico']) {
+ $msg = '¡El correo electronico ingresado ya se encuentra registrado!';
+echo '<div class="alert alert-danger"><p><i class="fa fa-check"></i> '.$msg.'</p></div>';
+
+} else{
+//    $date=date("y/m/d"); 
+//$save = mysqli_query($mysqli,"INSERT INTO newsletter (correo_electronico,seccion,fecha_registro) "
+//                   ."VALUES ('$email','$seccion','$date')" );
+//$mysqli->close();
 
 //And send success message:
 $msg = '¡Gracias por Registrarte,estaremos en contacto contigo!';
 echo '<div class="alert alert-success"><p><i class="fa fa-check"></i> '.$msg.'</p></div>';
+
+}    
+
   
 
 
