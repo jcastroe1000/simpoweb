@@ -54,10 +54,10 @@ if ($email == $row['correo_electronico']) {
 echo '<div class="alert alert-danger"><p><i class="fa fa-check"></i> '.$msg.'</p></div>';
 
 } else{
-//    $date=date("y/m/d"); 
-//$save = mysqli_query($mysqli,"INSERT INTO newsletter (correo_electronico,seccion,fecha_registro) "
-//                   ."VALUES ('$email','$seccion','$date')" );
-//$mysqli->close();
+    $date=date("y/m/d"); 
+$save = mysqli_query($mysqli2,"INSERT INTO newsletter (correo_electronico,seccion,fecha_registro) "
+                   ."VALUES ('$email','$seccion','$date')" );
+$mysqli2->close();
 
 //And send success message:
 $msg = '¡Gracias por Registrarte,estaremos en contacto contigo!';
