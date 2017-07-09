@@ -9,16 +9,26 @@
         $email = $_POST['email'];
         $pass =$_POST['pass'];
         $email = trim($email);
-        $query = "SELECT nombre FROM administradores WHERE email='$email' AND password='$pass'";
+        $query = "SELECT nombre,estatus,email FROM administradores WHERE email='$email' AND password='$pass'";
         $result = mysqli_query($mysqli, $query)or die(mysqli_error());
         $num_row = mysqli_num_rows($result);
         $row = mysqli_fetch_array($result);
-        if ($num_row >= 1) {
+        if ($row['estatus']== 0 && $num_row >= 1) {
+            echo 'true';
+            
+            $send_email = base64_encode($_POST['email']);
+            header("Location:activacion.php?correo=$send_email");
+        } else if ($row['estatus']== 2 && $num_row >=1 ) {
+           $result='<div class="alert alert-error">Bloqueado</div>';
+           
+        } else if ($num_row >= 1) {
             echo 'true';
             $_SESSION['user_name'] = $row['nombre'];
             header("Location:index.php");
-        } else {
-           $result='<div class="alert alert-error">Lo sentimos! Usuario y/o constraseña son invalidos, intentalo de nuevo</div>';
+           
+        }
+        else{
+            $result='<div class="alert alert-error">error</div>';
         }
     }
         error_reporting(0);
@@ -66,7 +76,9 @@
     <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
     <!-- Animate.css -->
     <link href="../vendors/animate.css/animate.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- Custom Theme Style -->
     <link href="../build/css/custom.min.css" rel="stylesheet">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
