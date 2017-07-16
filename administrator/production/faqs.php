@@ -296,7 +296,7 @@ $user_name = $_SESSION['user_name'];
                                 <div class="animated flipInY col-lg-4 col-md-4 col-sm-6 col-xs-12">
                                     <div class="tile-stats">
                                         <div class="icon"><i class="fa fa-mortar-board "></i></div>
-                                        <div class="count">Seminarios</div>
+                                        <div class="count">Cursos</div>
                                         <h3>New Sign ups</h3>
                                         <p>Lorem ipsum psdea itgum rixt.</p>
                                     </div>
@@ -304,7 +304,7 @@ $user_name = $_SESSION['user_name'];
                                 <div class="animated flipInY col-lg-4 col-md-4 col-sm-6 col-xs-12">
                                     <div class="tile-stats">
                                         <div class="icon"><i class="fa fa-laptop"></i></div>
-                                        <div class="count">Simposiums</div>
+                                        <div class="count">Diplomados</div>
                                         <h3>New Sign ups</h3>
                                         <p>Lorem ipsum psdea itgum rixt.</p>
                                     </div>
@@ -312,7 +312,7 @@ $user_name = $_SESSION['user_name'];
                                 <div class="animated flipInY col-lg-4 col-md-4 col-sm-6 col-xs-12" >
                                     <div class="tile-stats">
                                         <div class="icon"><i class="fa fa-book"></i></div>
-                                        <div class="count">Revista</div>
+                                        <div class="count">Talleres</div>
                                         <h3>New Sign ups</h3>
                                         <p>Lorem ipsum psdea itgum rixt.</p>
                                     </div>

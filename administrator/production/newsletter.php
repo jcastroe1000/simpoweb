@@ -263,7 +263,7 @@ header("Content-Type: text/html;charset=utf-8");
                                     <thead>
                                         <tr>
                                             <th class="Sansation_Bold" style="color: black;text-align: center">Correo de Usuario</th>
-                                            <th class="Sansation_Bold" style="color: black;text-align: center">Email</th>
+                                            <th class="Sansation_Bold" style="color: black;text-align: center">Sección</th>
                                             <th class="Sansation_Bold" style="color: black;text-align: center">Fecha de Creación</th>
                                             <th class="Sansation_Bold" style="color: black;text-align: center"></th>
                                             

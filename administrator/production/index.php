@@ -1,15 +1,13 @@
 <?php
 header("Content-Type: text/html;charset=utf-8");
-  include "config.php";
-  error_reporting(E_ALL);
-  session_start();
-  if (!isset($_SESSION['user_name'])) {
-      header("Location:login.php");
-  }
-  $user_name = $_SESSION['user_name'];
-
- 
-  ?>
+include "config.php";
+error_reporting(E_ALL);
+session_start();
+if (!isset($_SESSION['user_name'])) {
+    header("Location:login.php");
+}
+$user_name = $_SESSION['user_name'];
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -33,12 +31,20 @@ header("Content-Type: text/html;charset=utf-8");
         <link href="../vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
         <!-- JQVMap -->
         <link href="../vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet"/>
+        <link href="../vendors/switchery/dist/switchery.min.css" rel="stylesheet">
+        <!-- Custom Theme Style -->
+        <link href="../build/css/custom.min.css" rel="stylesheet">
         <!-- bootstrap-daterangepicker -->
         <link href="../vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
         <!-- Switchery -->
         <link href="../vendors/switchery/dist/switchery.min.css" rel="stylesheet">
         <!-- Custom Theme Style -->
         <link href="../build/css/custom.min.css" rel="stylesheet">
+        <link href="../vendors/switchery/dist/switchery.min.css" rel="stylesheet">
+        <!-- Custom Theme Style -->
+        <link href="../build/css/custom.min.css" rel="stylesheet">
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
 
     <body class="nav-md">
@@ -54,7 +60,9 @@ header("Content-Type: text/html;charset=utf-8");
 
                         <!-- menu profile quick info -->
                         <div class="profile clearfix">
-
+                            <div class="profile_pic">
+                                <img src="images/img.jpg" alt="..." class="img-circle profile_img">
+                            </div>
                             <div class="profile_info">
                                 <span>Bienvenido (a)</span>
                                 <h2><?php echo utf8_encode($user_name); ?></h2>
@@ -73,47 +81,42 @@ header("Content-Type: text/html;charset=utf-8");
                                     <li><a><i class="fa fa-group"></i> Usuarios <span class="fa fa-chevron-down"></span></a>
                                         <ul class="nav child_menu">
                                             <li><a href="users_registers.php"><i class="fa fa-arrow-up"></i>Registrados</a></li>
-                                            <li>
-                                            <a href="newsletter.php"><i class="fa fa-check-circle"></i>NewsLetter</a></li>
+                                            <li><a href="newsletter.php"><i class="fa fa-envelope"></i>NewsLetter</a></li>
+                                            <li><a href="operadores.php"><i class="fa fa-users"></i>Operadores</a></li>
                                         </ul>
-                                        
-                                    </li>
-                                    <li><a href="services.php"><i class="fa fa-arrow-circle-up"></i> Registro </a></li>
-                                    <li><a href="services.php"><i class="fa fa-arrow-circle-up"></i> Galeria </a></li>
 
-                                    
+                                    </li>
                                     <li><a><i class="fa fa-cogs"></i>Secciones <span class="fa fa-chevron-down"></span></a>
                                         <ul class="nav child_menu">
-                                            
-                                    <li>
-                                        <a href="simposiums.html"><i class="fa fa-mortar-board"></i> Seminarios</a>
-                                    </li>
-                                    <li>
-                                        <a href="simposiums.html"><i class="fa fa-laptop"></i> Talleres </a>
-                                    </li>
-                                    <li>
-                                        <a href="simposiums.html"><i class="fa fa-briefcase"></i> Cursos </a>
-                                    </li>
-                                    <li>
-                                        <a href="simposiums.html"><i class="fa fa-university"></i> Diplomados </a>
-                                    </li>
+
+                                            <li>
+                                                <a href="simposiums.html"><i class="fa fa-mortar-board"></i> Seminarios</a>
+                                            </li>
+                                            <li>
+                                                <a href="simposiums.html"><i class="fa fa-laptop"></i> Talleres </a>
+                                            </li>
+                                            <li>
+                                                <a href="simposiums.html"><i class="fa fa-briefcase"></i> Cursos </a>
+                                            </li>
+                                            <li>
+                                                <a href="simposiums.html"><i class="fa fa-university"></i> Diplomados </a>
+                                            </li>
 
                                         </ul>
                                     </li>
-                                    
+
                                     <li><a><i class="fa fa-plus-square"></i> Extras<span class="fa fa-chevron-down"></span></a>
                                         <ul class="nav child_menu">
                                             <li><a href="form.html"><i class="fa fa-book"></i>Directorio</a></li>
-
+                                            <li><a href="faqs.php"><i class="fa fa-question-circle"></i> FAQ'S</a></li>        
                                         </ul>
                                     </li>
-                                    <li><a href="faqs.php"><i class="fa fa-question-circle"></i> FAQ'S</a>
-                                    </li>
+
 
 
                                 </ul>
                             </div>
-                            
+
 
                         </div>
                         <!-- /sidebar menu -->
@@ -148,10 +151,15 @@ header("Content-Type: text/html;charset=utf-8");
                             <ul class="nav navbar-nav navbar-right">
                                 <li class="">
                                     <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                        <?php echo utf8_encode($user_name);?>
+                                        <img src="images/img.jpg" alt="">
+                                        <?php echo utf8_encode($user_name); ?>
                                         <span class=" fa fa-angle-down"></span>
                                     </a>
                                     <ul class="dropdown-menu dropdown-usermenu pull-right">
+                                        <li><a data-toggle="modal" data-target="#myProfile">Mi Perfil</a></li>
+                                        <li><a data-toggle="modal" data-target="#myPass">Cambiar Contraseña</a></li>
+
+
 
                                         <li><a href="logout.php?logout"><i class="fa fa-sign-out pull-right"></i>Cerrar Sesión</a></li>
                                     </ul>
@@ -160,6 +168,109 @@ header("Content-Type: text/html;charset=utf-8");
 
                             </ul>
                         </nav>
+                    </div>
+
+                    <!-- Modal Perfil-->
+                    <div class="modal fade" id="myProfile" role="dialog">
+                        <div class="modal-dialog modal-sm">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title" style="text-align: center;font-weight: bold">Mi Perfil</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <form class="form-horizontal" role="form">
+                  <div class="form-group">
+                    <label  class="col-sm-2 control-label"
+                              for="inputEmail3">Email</label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control" 
+                        id="inputEmail3" placeholder="Email"/>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label"
+                          for="inputPassword3" >Password</label>
+                    <div class="col-sm-10">
+                        <input type="password" class="form-control"
+                            id="inputPassword3" placeholder="Password"/>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                      <div class="checkbox">
+                        <label>
+                            <input type="checkbox"/> Remember me
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                      <button type="submit" class="btn btn-default">Sign in</button>
+                    </div>
+                  </div>
+                </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- Modal Password-->
+                    <div class="modal fade" id="myPass" role="dialog">
+                        <div class="modal-dialog modal-sm">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title" style="text-align: center;font-weight: bold">Cambiar Contraseña</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <form class="form-horizontal" role="form">
+                  <div class="form-group">
+                    <label  class="col-sm-2 control-label"
+                              for="inputEmail3">Email</label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control" 
+                        id="inputEmail3" placeholder="Email"/>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label"
+                          for="inputPassword3" >Password</label>
+                    <div class="col-sm-10">
+                        <input type="password" class="form-control"
+                            id="inputPassword3" placeholder="Password"/>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                      <div class="checkbox">
+                        <label>
+                            <input type="checkbox"/> Remember me
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                      <button type="submit" class="btn btn-default">Sign in</button>
+                    </div>
+                  </div>
+                </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
                 <!-- /top navigation -->
@@ -248,7 +359,7 @@ header("Content-Type: text/html;charset=utf-8");
                                     <div class="">
 
                                         <div class="form-group">
-                                                <label class="control-label col-md-3 col-sm-3 col-xs-12">Simposiums</label>
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Simposiums</label>
                                             <div class="col-md-9 col-sm-9 col-xs-12">
                                                 <div class="pull-right">
                                                     <label>
