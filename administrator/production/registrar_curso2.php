@@ -108,48 +108,7 @@
                   </li>
                 </ul>
               </div>
-              <div class="menu_section">
-                <h3>Live On</h3>
-                <ul class="nav side-menu">
-                  <li><a><i class="fa fa-bug"></i> Additional Pages <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="e_commerce.html">E-commerce</a></li>
-                      <li><a href="projects.html">Projects</a></li>
-                      <li><a href="project_detail.html">Project Detail</a></li>
-                      <li><a href="contacts.html">Contacts</a></li>
-                      <li><a href="profile.html">Profile</a></li>
-                    </ul>
-                  </li>
-                  <li><a><i class="fa fa-windows"></i> Extras <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="page_403.html">403 Error</a></li>
-                      <li><a href="page_404.html">404 Error</a></li>
-                      <li><a href="page_500.html">500 Error</a></li>
-                      <li><a href="plain_page.html">Plain Page</a></li>
-                      <li><a href="login.html">Login Page</a></li>
-                      <li><a href="pricing_tables.html">Pricing Tables</a></li>
-                    </ul>
-                  </li>
-                  <li><a><i class="fa fa-sitemap"></i> Multilevel Menu <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                        <li><a href="#level1_1">Level One</a>
-                        <li><a>Level One<span class="fa fa-chevron-down"></span></a>
-                          <ul class="nav child_menu">
-                            <li class="sub_menu"><a href="level2.html">Level Two</a>
-                            </li>
-                            <li><a href="#level2_1">Level Two</a>
-                            </li>
-                            <li><a href="#level2_2">Level Two</a>
-                            </li>
-                          </ul>
-                        </li>
-                        <li><a href="#level1_2">Level One</a>
-                        </li>
-                    </ul>
-                  </li>                  
-                  <li><a href="javascript:void(0)"><i class="fa fa-laptop"></i> Landing Page <span class="label label-success pull-right">Coming Soon</span></a></li>
-                </ul>
-              </div>
+              
 
             </div>
             <!-- /sidebar menu -->
@@ -273,20 +232,9 @@
         <!-- page content -->
         <div class="right_col" role="main">
           <div class="">
-            <div class="page-title">
-              <div class="title_left">
-                <h3>Form Wizards</h3>
-              </div>
-
-              
-            </div>
-            <div class="clearfix"></div>
-
-            <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 form-box">
-                    	<form role="form" action="" method="post" class="f1">
-
-                    		<h3>Register To Our App</h3>
-                    		<p>Fill in the form to get instant access</p>
+              <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 form-box" >
+                    	<form role="form" action="" method="post" class="f1" style="margin-top: -35px;">
+                            <h3 style="text-align: center">Register To Our App</h3>
                     		<div class="f1-steps">
                     			<div class="f1-progress">
                     			    <div class="f1-progress-line" data-now-value="16.66" data-number-of-steps="3" style="width: 16.66%;"></div>
@@ -308,27 +256,33 @@
                     		<fieldset>
                     		    <h4>Tell us who you are:</h4>
                     			<div class="form-group">
-                    			    <label class="sr-only" for="f1-first-name">First name</label>
-                                    <input type="text" name="f1-first-name" placeholder="First name..." class="f1-first-name form-control" id="f1-first-name">
+                    			    <label class="sr-only" for="f1-first-name">Nombre:</label>
+                                    <input type="text" name="f1-first-name" placeholder="Nombre" class="f1-first-name form-control" id="f1-first-name">
                                 </div>
                                 <div class="form-group">
-                                    <label class="sr-only" for="f1-last-name">Last name</label>
-                                    <input type="text" name="f1-last-name" placeholder="Last name..." class="f1-last-name form-control" id="f1-last-name">
+                                    <label class="sr-only" for="f1-last-name">Resumen</label>
+                                    <textarea name="f1-about-yourself" placeholder="Resumen..." style="height: 100px;"
+                                    	                 class="f1-about-yourself form-control" id="f1-about-yourself"></textarea>
                                 </div>
                                 <div class="form-group">
-                                    <label class="sr-only" for="f1-about-yourself">About yourself</label>
-                                    <textarea name="f1-about-yourself" placeholder="About yourself..." 
+                                    <label class="sr-only" for="f1-about-yourself">Dirigido</label>
+                                    <textarea name="f1-about-yourself" placeholder="Dirigido..." style="height: 80px;"
+                                    	                 class="f1-about-yourself form-control" id="f1-about-yourself"></textarea>
+                                </div>
+                                     <div class="form-group">
+                                    <label class="sr-only" for="f1-about-yourself">Objetio</label>
+                                    <textarea name="f1-about-yourself" placeholder="Objetivo" style="height: 120px;"
                                     	                 class="f1-about-yourself form-control" id="f1-about-yourself"></textarea>
                                 </div>
                                 <div class="f1-buttons">
-                                    <button type="button" class="btn btn-next">Next</button>
+                                    <button type="button" class="btn btn-next">Siguiente</button>
                                 </div>
                             </fieldset>
 
                             <fieldset>
                                 <h4>Set up your account:</h4>
                                 <div class="form-group">
-                                    <label class="sr-only" for="f1-email">Email</label>
+                                    <label class="sr-only" for="f1-email">Nombre</label>
                                     <input type="text" name="f1-email" placeholder="Email..." class="f1-email form-control" id="f1-email">
                                 </div>
                                 <div class="form-group">
@@ -341,8 +295,8 @@
                                                         class="f1-repeat-password form-control" id="f1-repeat-password">
                                 </div>
                                 <div class="f1-buttons">
-                                    <button type="button" class="btn btn-previous">Previous</button>
-                                    <button type="button" class="btn btn-next">Next</button>
+                                    <button type="button" class="btn btn-previous">Anterior</button>
+                                    <button type="button" class="btn btn-next">Siguiente</button>
                                 </div>
                             </fieldset>
 
@@ -361,7 +315,7 @@
                                     <input type="text" name="f1-google-plus" placeholder="Google plus..." class="f1-google-plus form-control" id="f1-google-plus">
                                 </div>
                                 <div class="f1-buttons">
-                                    <button type="button" class="btn btn-previous">Previous</button>
+                                    <button type="button" class="btn btn-previous">Anterior</button>
                                     <button type="submit" class="btn btn-submit">Submit</button>
                                 </div>
                             </fieldset>
@@ -374,9 +328,7 @@
 
         <!-- footer content -->
         <footer>
-          <div class="pull-right">
-            Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
-          </div>
+          
           <div class="clearfix"></div>
         </footer>
         <!-- /footer content -->
@@ -410,8 +362,8 @@
           transitionEffect: 'slide'
         });
 
-        $('.buttonNext').addClass('btn btn-success');
-        $('.buttonPrevious').addClass('btn btn-primary');
+        $('.buttonSiguiente').addClass('btn btn-success');
+        $('.buttonAnterior').addClass('btn btn-primary');
         $('.buttonFinish').addClass('btn btn-default');
       });
     </script>
