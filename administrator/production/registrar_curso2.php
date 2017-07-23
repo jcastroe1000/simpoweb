@@ -23,6 +23,7 @@
      <link rel="stylesheet" href="form-wizard/font-awesome/css/font-awesome.min.css">
      <link rel="stylesheet" href="form-wizard/css/form-elements.css">
      <link rel="stylesheet" href="form-wizard/css/style.css">
+     
   </head>
 
   <body class="nav-md">
@@ -241,7 +242,7 @@
                     			</div>
                     			<div class="f1-step active" style="text-align: center">
                                             <div class="f1-step-icon"><i class="fa fa-user"></i></div>
-                    				<p>about</p>
+                    				<p>Primer Paso</p>
                     			</div>
                     			<div class="f1-step" style="text-align: center">
                     				<div class="f1-step-icon"><i class="fa fa-key"></i></div>
@@ -254,25 +255,25 @@
                     		</div>
                     		
                     		<fieldset>
-                    		    <h4>Tell us who you are:</h4>
-                    			<div class="form-group">
-                    			    <label class="sr-only" for="f1-first-name">Nombre:</label>
-                                    <input type="text" name="f1-first-name" placeholder="Nombre" class="f1-first-name form-control" id="f1-first-name">
+                    		    
+                                <div class="form-group">
+                                    <label class="" for="f1-first-name">Duración:</label>
+                                    <input type="text" name="f1-first-name" placeholder="Nombre" class="f1-first-name form-control3" id="f1-first-name" style="margin-left: 3%;">
                                 </div>
                                 <div class="form-group">
-                                    <label class="sr-only" for="f1-last-name">Resumen</label>
-                                    <textarea name="f1-about-yourself" placeholder="Resumen..." style="height: 100px;"
-                                    	                 class="f1-about-yourself form-control" id="f1-about-yourself"></textarea>
+                                    <label class="" for="f1-last-name">Resumen</label>
+                                    <textarea name="f1-about-yourself" placeholder="Resumen..." style="height: 110px;margin-left: 3%;"
+                                    	                 class="f1-about-yourself form-control3" id="f1-about-yourself" ></textarea>
                                 </div>
                                 <div class="form-group">
-                                    <label class="sr-only" for="f1-about-yourself">Dirigido</label>
-                                    <textarea name="f1-about-yourself" placeholder="Dirigido..." style="height: 80px;"
-                                    	                 class="f1-about-yourself form-control" id="f1-about-yourself"></textarea>
+                                    <label class="" for="f1-about-yourself">Dirigido</label>
+                                    <textarea name="f1-about-yourself" placeholder="Dirigido..." style="height: 100px;margin-left: 5%;"
+                                    	                 class="f1-about-yourself form-control3" id="f1-about-yourself"></textarea>
                                 </div>
                                      <div class="form-group">
-                                    <label class="sr-only" for="f1-about-yourself">Objetio</label>
-                                    <textarea name="f1-about-yourself" placeholder="Objetivo" style="height: 120px;"
-                                    	                 class="f1-about-yourself form-control" id="f1-about-yourself"></textarea>
+                                    <label class="" for="f1-about-yourself">Objetio</label>
+                                    <textarea name="f1-about-yourself" placeholder="Objetivo" style="height: 130px;margin-left: 5%;"
+                                    	                 class="f1-about-yourself form-control3" id="f1-about-yourself"></textarea>
                                 </div>
                                 <div class="f1-buttons">
                                     <button type="button" class="btn btn-next">Siguiente</button>
@@ -280,20 +281,42 @@
                             </fieldset>
 
                             <fieldset>
-                                <h4>Set up your account:</h4>
+                                
+                                <div class="form-group ">
+                                    <label class="sr-only" for="f1-first-name">Duración:</label>
+                                    <input type="text" name="f1-first-name" placeholder="Duración" class="f1-first-name form-control2" id="f1-first-name">
+<!--                                    <input type="text" name="f1-first-name" placeholder="Nombre" class="f1-first-name form-control2" id="f1-first-name" style="margin-left: 1%">-->
+                                    <select class="f1-first-name form-control2" id="modality" name="modality">
+                                                    <option value="">Modalidad</option>
+                                                    <option value="Presencial">Presencial</option>
+                                                    <option value="Distancia">Distancia</option>
+                                                    <option value="Presencial y/o Distancia">Presencial y/o Distancia</option>
+                                                </select>
+
+                                </div>
+                                <div class="form-group ">
+                                    <label class="sr-only" for="f1-first-name">Duración:</label>
+                                    <input type="time" name="f1-first-name" placeholder="Duración" class="f1-first-name form-control2" id="f1-first-name">
+                                    <input type="date" name="f1-first-name" placeholder="Nombre" class="f1-first-name form-control2" id="f1-first-name" style="margin-left: 1%">
+                                    
+
+                                </div> 
                                 <div class="form-group">
-                                    <label class="sr-only" for="f1-email">Nombre</label>
-                                    <input type="text" name="f1-email" placeholder="Email..." class="f1-email form-control" id="f1-email">
+                                    <label class="sr-only" for="f1-last-name">Resumen</label>
+                                    <textarea name="f1-about-yourself" placeholder="Resumen..." style="height: 110px;"
+                                    	                 class="f1-about-yourself form-control" id="f1-about-yourself"></textarea>
                                 </div>
                                 <div class="form-group">
-                                    <label class="sr-only" for="f1-password">Password</label>
-                                    <input type="password" name="f1-password" placeholder="Password..." class="f1-password form-control" id="f1-password">
+                                    <label class="sr-only" for="f1-about-yourself">Dirigido</label>
+                                    <textarea name="f1-about-yourself" placeholder="Dirigido..." style="height: 100px;"
+                                    	                 class="f1-about-yourself form-control" id="f1-about-yourself"></textarea>
                                 </div>
-                                <div class="form-group">
-                                    <label class="sr-only" for="f1-repeat-password">Repeat password</label>
-                                    <input type="password" name="f1-repeat-password" placeholder="Repeat password..." 
-                                                        class="f1-repeat-password form-control" id="f1-repeat-password">
+                                     <div class="form-group">
+                                    <label class="sr-only" for="f1-about-yourself">Objetio</label>
+                                    <textarea name="f1-about-yourself" placeholder="Objetivo" style="height: 130px;"
+                                    	                 class="f1-about-yourself form-control" id="f1-about-yourself"></textarea>
                                 </div>
+                                
                                 <div class="f1-buttons">
                                     <button type="button" class="btn btn-previous">Anterior</button>
                                     <button type="button" class="btn btn-next">Siguiente</button>
