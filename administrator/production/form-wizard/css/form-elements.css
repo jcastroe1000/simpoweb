@@ -24,6 +24,7 @@
 
 input[type="text"], 
 input[type="date"],
+input[type="time"],
 input[type="password"], 
 textarea, 
 textarea.form-control3 {
@@ -34,7 +35,7 @@ textarea.form-control3 {
     background: #fff;
     border: 1px solid #ddd;
     font-family: 'Roboto', sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 300;
     line-height: 44px;
     color: #888;
