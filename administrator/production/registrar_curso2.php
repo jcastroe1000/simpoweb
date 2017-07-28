@@ -23,6 +23,7 @@
      <link rel="stylesheet" href="form-wizard/font-awesome/css/font-awesome.min.css">
      <link rel="stylesheet" href="form-wizard/css/form-elements.css">
      <link rel="stylesheet" href="form-wizard/css/style.css">
+     <link href="../production/css/fileinput.css" media="all" rel="stylesheet" type="text/css">
      
   </head>
 
@@ -257,21 +258,21 @@
                     		<fieldset>
                     		    
                                 <div class="form-group">
-                                    <label class="" for="f1-first-name">Nombre:</label>
+                                    <label class="etiquetas" for="f1-first-name">Nombre:</label>
                                     <input type="text" name="f1-first-name" placeholder="Nombre" class="f1-first-name form-control3" id="f1-first-name" style="margin-left: 3%;">
                                 </div>
                                 <div class="form-group">
-                                    <label class="" for="f1-last-name">Resumen</label>
+                                    <label class="etiquetas" for="f1-last-name">Resumen</label>
                                     <textarea name="f1-about-yourself" placeholder="Resumen..." style="height: 110px;margin-left: 3%;"
                                     	                 class="f1-about-yourself form-control3" id="f1-about-yourself" ></textarea>
                                 </div>
                                 <div class="form-group">
-                                    <label class="" for="f1-about-yourself">Dirigido</label>
+                                    <label class="etiquetas" for="f1-about-yourself">Dirigido</label>
                                     <textarea name="f1-about-yourself" placeholder="Dirigido..." style="height: 100px;margin-left: 5%;"
                                     	                 class="f1-about-yourself form-control3" id="f1-about-yourself"></textarea>
                                 </div>
                                      <div class="form-group">
-                                    <label class="" for="f1-about-yourself">Objetivo</label>
+                                    <label class="etiquetas" for="f1-about-yourself">Objetivo</label>
                                     <textarea name="f1-about-yourself" placeholder="Objetivo" style="height: 130px;margin-left: 4%;"
                                     	                 class="f1-about-yourself form-control3" id="f1-about-yourself"></textarea>
                                 </div>
@@ -283,37 +284,41 @@
                             <fieldset>
                                 
                                 <div class="form-group ">
-                                    <label class="" for="f1-first-name">Duración:</label>
-                                    <input type="text" name="f1-first-name" placeholder="Duración" class="f1-first-name form-control2" id="f1-first-name" style="margin-left: 2px;">
+                                    <label class="etiquetas" for="f1-first-name">Duración:</label>
+                                    <input type="text" name="f1-first-name" placeholder="Duración" class="f1-first-name form-control3" id="f1-first-name" style="margin-left: 2px;">
 <!--                                    <input type="text" name="f1-first-name" placeholder="Nombre" class="f1-first-name form-control2" id="f1-first-name" style="margin-left: 1%">-->
-                                    <label class="" for="f1-first-name">Periodo:</label>
-                                    <select class="f1-first-name form-control2" id="modality" name="modality" style="margin-left: 2px;">
+                                </div>
+                                <div class="form-group">
+                                    <label class="etiquetas" for="f1-first-name">Periodo:</label>
+                                    <select class="f1-first-name combo" id="modality" name="modality" style="margin-left: 2px;">
                                                     <option value="">Selecciona</option>
                                                     <option value="Presencial">Presencial</option>
                                                     <option value="Distancia">Distancia</option>
                                                     <option value="Presencial y/o Distancia">Presencial y/o Distancia</option>
                                     </select>
-
+                                    
+                                </div>
+                                <h2>Fecha</h2>
+                                <div class="form-group ">
+                                    <label class="etiquetas" for="f1-first-name">Inicio:</label>
+                                    <input type="date" name="f1-first-name" placeholder="Nombre" class="f1-first-name form-control3" id="f1-first-name" style="margin-left: 4%">
                                 </div>
                                 <div class="form-group ">
-                                    <h2>Fecha</h2>
-                                    <label class="" for="f1-first-name">Inicio:</label>
-                                    <input type="date" name="f1-first-name" placeholder="Nombre" class="f1-first-name form-control2" id="f1-first-name" style="margin-left: 4%">
-                                    <label class="" for="f1-first-name">Termino:</label>
-                                    <input type="date" name="f1-first-name" placeholder="Nombre" class="f1-first-name form-control2" id="f1-first-name" style="margin-left: 4%">
-                                    
-
-                                </div> 
+                                    <label class="etiquetas" for="f1-first-name">Inicio:</label>
+                                    <input type="date" name="f1-first-name" placeholder="Nombre" class="f1-first-name form-control3" id="f1-first-name" style="margin-left: 4%">
+                                </div>
+                                <h2>Horario</h2>
                                 <div class="form-group">
-                                    <h2>Horario</h2>
-                                    <label class="" for="f1-first-name">Inicio:</label>
-                                    <input type="time" name="f1-first-name" placeholder="Nombre" class="f1-first-name form-control2" id="f1-first-name" style="margin-left: 4%">
-                                    <label class="" for="f1-first-name">Termino:</label>
-                                    <input type="time" name="f1-first-name" placeholder="Nombre" class="f1-first-name form-control2" id="f1-first-name" style="margin-left: 4%">
+                                    <label class="etiquetas" for="f1-first-name">Inicio:</label>
+                                    <input type="time" name="f1-first-name" placeholder="Nombre" class="f1-first-name form-control3" id="f1-first-name" style="margin-left: 4%">
                                 </div>
                                 <div class="form-group">
-                                    <label class="" for="f1-first-name">Periodo:</label>
-                                    <select class="f1-first-name form-control3" id="modality" name="modality" style="margin-left: 2px;">
+                                    <label class="etiquetas" for="f1-first-name">Inicio:</label>
+                                    <input type="time" name="f1-first-name" placeholder="Nombre" class="f1-first-name form-control3" id="f1-first-name" style="margin-left: 4%">
+                                </div>
+                                <div class="form-group">
+                                    <label class="etiquetas" for="f1-first-name">Modalidad:</label>
+                                    <select class="f1-first-name combo" id="modality" name="modality" style="margin-left: 2px;">
                                                     <option value="">Selecciona</option>
                                                     <option value="Presencial">Presencial</option>
                                                     <option value="Distancia">Distancia</option>
@@ -329,26 +334,33 @@
                             <fieldset>
                                 <h4>Social media profiles:</h4>
                                 <div class="form-group">
-                                    <label class="" for="f1-last-name">Requisitos:</label>
+                                    <label class="etiquetas" for="f1-last-name">Requisitos:</label>
                                     <textarea name="f1-about-yourself" placeholder="Resumen..." style="height: 110px;margin-left: 1%;"
                                     	                 class="f1-about-yourself form-control3" id="f1-about-yourself" ></textarea>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label col-md-1 col-sm-1 col-xs-1 FolksDecoon" for="f1-about-yourself">Infomación Adicional</label>
+                                    <label class="control-label col-md-1 col-sm-1 FolksDecoon" for="f1-about-yourself">Inf. Adicional</label>
                                     <textarea name="f1-about-yourself" placeholder="Dirigido..." style="height: 100px;margin-left: 5%;"
                                     	                 class="f1-about-yourself form-control3" id="f1-about-yourself"></textarea>
                                 </div>
                                 <div class="form-group">
-                                    <label class="" for="f1-first-name">Forma de Pago:</label>
-                                    <select class="f1-first-name form-control2" id="modality" name="modality" style="margin-left: 2px;">
+                                    <label class="etiquetas" for="f1-first-name">Mét. Pago:</label>
+                                    <select class="f1-first-name combo" id="modality" name="modality" style="margin-left: 2px;">
                                                     <option value="">Selecciona</option>
                                                     <option value="Presencial">Presencial</option>
                                                     <option value="Distancia">Distancia</option>
                                                     <option value="Presencial y/o Distancia">Presencial y/o Distancia</option>
                                     </select>
-                                    <label class="" for="f1-first-name">Termino:</label>
-                                    <input type="time" name="f1-first-name" placeholder="Nombre" class="f1-first-name form-control2" id="f1-first-name" style="margin-left: 4%">
-                                </div>     
+                                </div>
+                                <div class="form-group">
+                                    <label class="etiquetas" for="f1-first-name">Costo:</label>
+                                    <input type="text" name="f1-first-name" placeholder="Nombre" class="f1-first-name form-control3" id="f1-first-name" style="margin-left: 3%;">
+                                </div>
+                                <div class="form-group">
+                                    <label class="etiquetas" for="f1-first-name" style="">Costo:</label>
+                                    <input type="file"  id="course_image" name="course_image" class="f1-first-name form-control3" data-show-preview="false">
+                                </div>
+                                
                                 <div class="f1-buttons">
                                     <button type="button" class="btn btn-previous">Anterior</button>
                                     <button type="submit" class="btn btn-submit">Submit</button>
@@ -388,6 +400,7 @@
         <script src="form-wizard/js/jquery.backstretch.min.js"></script>
         <script src="form-wizard/js/retina-1.1.0.min.js"></script>
         <script src="form-wizard/js/scripts.js"></script>
+        <script src="../production/js/fileinput.js" type="text/javascript"></script>
     <!-- jQuery Smart Wizard -->
     <script>
       $(document).ready(function() {

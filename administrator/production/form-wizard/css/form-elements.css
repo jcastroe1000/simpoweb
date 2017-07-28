@@ -1,3 +1,22 @@
+.combo {
+    height: 44px;
+    margin: 0;
+    width: 86%;
+    padding: 0 20px;
+    vertical-align: middle;
+    background: #fff;
+    border: 1px solid #ddd;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 44px;
+    color: #888;
+    -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;
+    -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none;
+    -o-transition: all .3s; -moz-transition: all .3s; -webkit-transition: all .3s; -ms-transition: all .3s; transition: all .3s;
+}
+
+
 .form-control3 {
     
     width: 86%;
@@ -25,8 +44,25 @@
 input[type="text"], 
 input[type="date"],
 input[type="time"],
+input[type="file"],
 input[type="password"], 
-textarea, 
+textarea,
+textarea.form-control3 {
+    height: 44px;
+    margin: 0;
+    padding: 0 20px;
+    vertical-align: middle;
+    background: #fff;
+    border: 1px solid #ddd;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 44px;
+    color: #888;
+    -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;
+    -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none;
+    -o-transition: all .3s; -moz-transition: all .3s; -webkit-transition: all .3s; -ms-transition: all .3s; transition: all .3s;
+}
 textarea.form-control3 {
     height: 44px;
     margin: 0;
@@ -44,8 +80,7 @@ textarea.form-control3 {
     -o-transition: all .3s; -moz-transition: all .3s; -webkit-transition: all .3s; -ms-transition: all .3s; transition: all .3s;
 }
 
-textarea, 
-textarea.form-control3 {
+select.form-control3 {
 	
 	padding-top: 8px;
 	padding-bottom: 8px;
