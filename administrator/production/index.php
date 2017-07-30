@@ -17,7 +17,7 @@ $user_name = $_SESSION['user_name'];
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Gentellela Alela! | </title>
+        <title>Pagina Principal </title>
 
         <!-- Bootstrap -->
         <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -86,7 +86,7 @@ $user_name = $_SESSION['user_name'];
                                         </ul>
 
                                     </li>
-                                    <li><a><i class="fa fa-cogs"></i>Secciones <span class="fa fa-chevron-down"></span></a>
+<!--                                    <li><a><i class="fa fa-cogs"></i>Secciones <span class="fa fa-chevron-down"></span></a>
                                         <ul class="nav child_menu">
 
                                             <li>
@@ -103,7 +103,7 @@ $user_name = $_SESSION['user_name'];
                                             </li>
 
                                         </ul>
-                                    </li>
+                                    </li>-->
 
                                     <li><a><i class="fa fa-plus-square"></i> Extras<span class="fa fa-chevron-down"></span></a>
                                         <ul class="nav child_menu">
@@ -181,42 +181,28 @@ $user_name = $_SESSION['user_name'];
                                     <h4 class="modal-title" style="text-align: center;font-weight: bold">Mi Perfil</h4>
                                 </div>
                                 <div class="modal-body">
-                                    <form class="form-horizontal" role="form">
-                  <div class="form-group">
-                    <label  class="col-sm-2 control-label"
-                              for="inputEmail3">Email</label>
-                    <div class="col-sm-10">
-                        <input type="email" class="form-control" 
-                        id="inputEmail3" placeholder="Email"/>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label"
-                          for="inputPassword3" >Password</label>
-                    <div class="col-sm-10">
-                        <input type="password" class="form-control"
-                            id="inputPassword3" placeholder="Password"/>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-10">
-                      <div class="checkbox">
-                        <label>
-                            <input type="checkbox"/> Remember me
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-10">
-                      <button type="submit" class="btn btn-default">Sign in</button>
-                    </div>
-                  </div>
-                </form>
+                                    <form class="form-horizontal form-label-left input_mask">
+
+                                        <label for="fullname" style="margin-top: 0px">Nombre:</label>
+                                        <input type="text" id="fullname" class="form-control" name="fullname" required />
+                                        <label for="fullname" style="margin-top: 10px">Apellido Paterno:</label>
+                                        <input type="text" id="fullname" class="form-control" name="fullname" required />
+                                        <label for="fullname" style="margin-top: 10px">Apellido Materno:</label>
+                                        <input type="text" id="fullname" class="form-control" name="fullname" required />
+                                        <label for="fullname" style="margin-top: 10px">Correo Electrónico:</label>
+                                        <input type="text" id="fullname" class="form-control" name="fullname" required />
+
+                                        <div class="ln_solid"></div>
+                                        <div class="form-group">
+                                            <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-2">
+                                                <button type="submit" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                                                <button type="submit" class="btn btn-success">Aceptar</button>
+                                            </div>
+                                        </div>
+
+                                    </form>
                                 </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                </div>
+                                
                             </div>
 
                         </div>
@@ -232,42 +218,27 @@ $user_name = $_SESSION['user_name'];
                                     <h4 class="modal-title" style="text-align: center;font-weight: bold">Cambiar Contraseña</h4>
                                 </div>
                                 <div class="modal-body">
-                                    <form class="form-horizontal" role="form">
-                  <div class="form-group">
-                    <label  class="col-sm-2 control-label"
-                              for="inputEmail3">Email</label>
-                    <div class="col-sm-10">
-                        <input type="email" class="form-control" 
-                        id="inputEmail3" placeholder="Email"/>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-2 control-label"
-                          for="inputPassword3" >Password</label>
-                    <div class="col-sm-10">
-                        <input type="password" class="form-control"
-                            id="inputPassword3" placeholder="Password"/>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-10">
-                      <div class="checkbox">
-                        <label>
-                            <input type="checkbox"/> Remember me
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-10">
-                      <button type="submit" class="btn btn-default">Sign in</button>
-                    </div>
-                  </div>
-                </form>
+                                    <form class="form-horizontal form-label-left input_mask">
+
+                                        <label for="fullname" style="margin-top: 0px">Contraseña Actual:</label>
+                                        <input type="password" id="fullname" class="form-control" name="fullname" required />
+                                        <label for="fullname" style="margin-top: 10px">Nueva Contraseña:</label>
+                                        <input type="password" id="fullname" class="form-control" name="fullname" required />
+                                        <label for="fullname" style="margin-top: 10px">Repetir Contraseña:</label>
+                                        <input type="password" id="fullname" class="form-control" name="fullname" required />
+
+
+                                        <div class="ln_solid"></div>
+                                        <div class="form-group">
+                                            <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-2">
+                                                <button type="submit" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                                                <button type="submit" class="btn btn-success">Guardar</button>
+                                            </div>
+                                        </div>
+
+                                    </form>
                                 </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                </div>
+                                
                             </div>
 
                         </div>
@@ -280,7 +251,7 @@ $user_name = $_SESSION['user_name'];
                     <!-- top tiles -->
 
 
-                    <div class="col-md-8 col-sm-8 col-xs-12">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
 
 
 
@@ -299,7 +270,7 @@ $user_name = $_SESSION['user_name'];
                                     <!--aqui-->   <div class="x_content">
 
                                         <div class="tile_count">
-                                            <div class="animated flipInY col-lg-5 col-md-5 col-sm-5 col-xs-5 ">
+                                            <div class="animated flipInY col-lg-4 col-md-4 col-sm-5 col-xs-4 ">
                                                 <div class="tile-stats">
                                                     <div class="icon"><i class="fa fa-users color blue"></i></div>
                                                     <div class="count">179</div>
@@ -311,7 +282,7 @@ $user_name = $_SESSION['user_name'];
 
                                         </div>
                                         <div class=" tile_count">
-                                            <div class="animated flipInY col-lg-5 col-md-5 col-sm-5 col-xs-5">
+                                            <div class="animated flipInY col-lg-4 col-md-5 col-sm-4 col-xs-4">
                                                 <div class="tile-stats">
                                                     <div class="icon"><i class="fa fa-female color blue"></i></div>
                                                     <div class="count">179</div>
@@ -322,7 +293,7 @@ $user_name = $_SESSION['user_name'];
 
                                         </div>
                                         <div class="tile_count">
-                                            <div class="animated flipInY col-lg-5 col-md-5 col-sm-5 col-xs-5">
+                                            <div class="animated flipInY col-lg-4 col-md-4 col-sm-5 col-xs-4">
                                                 <div class="tile-stats">
                                                     <div class="icon"><i class="fa fa-male color blue"></i></div>
                                                     <div class="count">179</div>
@@ -342,52 +313,52 @@ $user_name = $_SESSION['user_name'];
 
                     </div> 
                     <div class="row">
-                        <div class="col-md-4 col-sm-4 col-xs-12">
-                            <div class="x_panel">
-                                <div class="x_title">
-                                    <h2>Secciones</h2>
-                                    <ul class="nav navbar-right panel_toolbox">
-                                        <li class="pull-right"><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                                        </li>
-
-
-                                    </ul>
-                                    <div class="clearfix"></div>
-                                </div>
-                                <div class="x_content">
-
-                                    <div class="">
-
-                                        <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Simposiums</label>
-                                            <div class="col-md-9 col-sm-9 col-xs-12">
-                                                <div class="pull-right">
-                                                    <label>
-                                                        <input type="checkbox" class="js-switch" checked />
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Cursos</label>
-                                            <div class="col-md-9 col-sm-9 col-xs-12">
-                                                <div class="pull-right">
-                                                    <label>
-                                                        <input type="checkbox" class="js-switch" checked />
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Talleres</label>
-                                            <div class="col-md-9 col-sm-9 col-xs-12">
-                                                <div class="pull-right">
-                                                    <label>
-                                                        <input type="checkbox" class="js-switch" checked />
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <!--                        <div class="col-md-4 col-sm-4 col-xs-12">
+                                                    <div class="x_panel">
+                                                        <div class="x_title">
+                                                            <h2>Secciones</h2>
+                                                            <ul class="nav navbar-right panel_toolbox">
+                                                                <li class="pull-right"><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                                                </li>
+                        
+                        
+                                                            </ul>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                        <div class="x_content">
+                        
+                                                            <div class="">
+                        
+                                                                <div class="form-group">
+                                                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Simposiums</label>
+                                                                    <div class="col-md-9 col-sm-9 col-xs-12">
+                                                                        <div class="pull-right">
+                                                                            <label>
+                                                                                <input type="checkbox" class="js-switch" checked />
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Cursos</label>
+                                                                    <div class="col-md-9 col-sm-9 col-xs-12">
+                                                                        <div class="pull-right">
+                                                                            <label>
+                                                                                <input type="checkbox" class="js-switch" checked />
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Talleres</label>
+                                                                    <div class="col-md-9 col-sm-9 col-xs-12">
+                                                                        <div class="pull-right">
+                                                                            <label>
+                                                                                <input type="checkbox" class="js-switch" checked />
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>-->
                         <!--seegundo bloque-->
                         <div class="col-md-6 col-sm-6 col-xs-12">
 
