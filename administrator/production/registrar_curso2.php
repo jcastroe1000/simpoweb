@@ -242,16 +242,16 @@
                     			    <div class="f1-progress-line" data-now-value="16.66" data-number-of-steps="3" style="width: 16.66%;"></div>
                     			</div>
                     			<div class="f1-step active" style="text-align: center">
-                                            <div class="f1-step-icon"><i class="fa fa-user"></i></div>
+                                            <div class="f1-step-icon"><i class="fa fa-book"></i></div>
                     				<p>Primer Paso</p>
                     			</div>
                     			<div class="f1-step" style="text-align: center">
-                    				<div class="f1-step-icon"><i class="fa fa-key"></i></div>
-                    				<p>account</p>
+                    				<div class="f1-step-icon"><i class="fa fa-calendar"></i></div>
+                    				<p>Segundo Paso</p>
                     			</div>
                     		    <div class="f1-step" style="text-align: center">
-                    				<div class="f1-step-icon"><i class="fa fa-twitter"></i></div>
-                    				<p>social</p>
+                    				<div class="f1-step-icon"><i class="fa fa-file"></i></div>
+                    				<p>Tercer Paso</p>
                     			</div>
                     		</div>
                     		
@@ -259,7 +259,7 @@
                     		    
                                 <div class="form-group">
                                     <label class="etiquetas" for="f1-first-name">Nombre:</label>
-                                    <input type="text" name="f1-first-name" placeholder="Nombre" class="f1-first-name form-control3" id="f1-first-name" style="margin-left: 3%;">
+                                    <input type="text" name="f1-first-name" placeholder="Nombre" class="f1-first-name form-control3" id="f1-first-name" style="margin-left: 4%;">
                                 </div>
                                 <div class="form-group">
                                     <label class="etiquetas" for="f1-last-name">Resumen</label>
@@ -285,12 +285,12 @@
                                 
                                 <div class="form-group ">
                                     <label class="etiquetas" for="f1-first-name">Duración:</label>
-                                    <input type="text" name="f1-first-name" placeholder="Duración" class="f1-first-name form-control3" id="f1-first-name" style="margin-left: 2px;">
-<!--                                    <input type="text" name="f1-first-name" placeholder="Nombre" class="f1-first-name form-control2" id="f1-first-name" style="margin-left: 1%">-->
+                                    <input type="text" name="f1-first-name" placeholder="Duración" class="f1-first-name form-control3" id="f1-first-name" style="margin-left: 3%;">
+
                                 </div>
                                 <div class="form-group">
                                     <label class="etiquetas" for="f1-first-name">Periodo:</label>
-                                    <select class="f1-first-name combo" id="modality" name="modality" style="margin-left: 2px;">
+                                    <select class="f1-first-name combo" id="modality" name="modality" style="margin-left: 4%;">
                                                     <option value="">Selecciona</option>
                                                     <option value="Presencial">Presencial</option>
                                                     <option value="Distancia">Distancia</option>
@@ -301,20 +301,20 @@
                                 <h2>Fecha</h2>
                                 <div class="form-group ">
                                     <label class="etiquetas" for="f1-first-name">Inicio:</label>
-                                    <input type="date" name="f1-first-name" placeholder="Nombre" class="f1-first-name form-control3" id="f1-first-name" style="margin-left: 4%">
+                                    <input type="date" name="f1-first-name" placeholder="Nombre" class="f1-first-name form-control3" id="f1-first-name" style="margin-left: 6%">
                                 </div>
                                 <div class="form-group ">
                                     <label class="etiquetas" for="f1-first-name">Inicio:</label>
-                                    <input type="date" name="f1-first-name" placeholder="Nombre" class="f1-first-name form-control3" id="f1-first-name" style="margin-left: 4%">
+                                    <input type="date" name="f1-first-name" placeholder="Nombre" class="f1-first-name form-control3" id="f1-first-name" style="margin-left: 6%">
                                 </div>
                                 <h2>Horario</h2>
                                 <div class="form-group">
                                     <label class="etiquetas" for="f1-first-name">Inicio:</label>
-                                    <input type="time" name="f1-first-name" placeholder="Nombre" class="f1-first-name form-control3" id="f1-first-name" style="margin-left: 4%">
+                                    <input type="time" name="f1-first-name" placeholder="Nombre" class="f1-first-name form-control3" id="f1-first-name" style="margin-left: 6%">
                                 </div>
                                 <div class="form-group">
                                     <label class="etiquetas" for="f1-first-name">Inicio:</label>
-                                    <input type="time" name="f1-first-name" placeholder="Nombre" class="f1-first-name form-control3" id="f1-first-name" style="margin-left: 4%">
+                                    <input type="time" name="f1-first-name" placeholder="Nombre" class="f1-first-name form-control3" id="f1-first-name" style="margin-left: 6%">
                                 </div>
                                 <div class="form-group">
                                     <label class="etiquetas" for="f1-first-name">Modalidad:</label>
@@ -332,20 +332,23 @@
                             </fieldset>
 
                             <fieldset>
-                                <h4>Social media profiles:</h4>
                                 <div class="form-group">
                                     <label class="etiquetas" for="f1-last-name">Requisitos:</label>
-                                    <textarea name="f1-about-yourself" placeholder="Resumen..." style="height: 110px;margin-left: 1%;"
+                                    <textarea name="f1-about-yourself" placeholder="Resumen..." style="height: 123px;margin-left: 1%;"
                                     	                 class="f1-about-yourself form-control3" id="f1-about-yourself" ></textarea>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label col-md-1 col-sm-1 FolksDecoon" for="f1-about-yourself">Inf. Adicional</label>
-                                    <textarea name="f1-about-yourself" placeholder="Dirigido..." style="height: 100px;margin-left: 5%;"
+                                    <label class="control-label col-md-1 col-sm-1 FolksDecoon etiquetas" for="f1-about-yourself">Inf. Adicional</label>
+                                    <textarea name="f1-about-yourself" placeholder="Dirigido..." style="height: 123px;margin-left: 5%;"
                                     	                 class="f1-about-yourself form-control3" id="f1-about-yourself"></textarea>
                                 </div>
                                 <div class="form-group">
+                                    <label class="etiquetas" for="f1-first-name">Costo:</label>
+                                    <input type="text" name="f1-first-name" placeholder="Nombre" class="f1-first-name form-control3" id="f1-first-name" style="margin-left: 6%;">
+                                </div>
+                                <div class="form-group">
                                     <label class="etiquetas" for="f1-first-name">Mét. Pago:</label>
-                                    <select class="f1-first-name combo" id="modality" name="modality" style="margin-left: 2px;">
+                                    <select class="f1-first-name combo" id="modality" name="modality" style="margin-left: 4px;">
                                                     <option value="">Selecciona</option>
                                                     <option value="Presencial">Presencial</option>
                                                     <option value="Distancia">Distancia</option>
@@ -353,17 +356,14 @@
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label class="etiquetas" for="f1-first-name">Costo:</label>
-                                    <input type="text" name="f1-first-name" placeholder="Nombre" class="f1-first-name form-control3" id="f1-first-name" style="margin-left: 3%;">
-                                </div>
-                                <div class="form-group">
-                                    <label class="etiquetas" for="f1-first-name" style="">Costo:</label>
-                                    <input type="file"  id="course_image" name="course_image" class="f1-first-name form-control3" data-show-preview="false">
+<!--                                    <label class="etiquetas" for="f1-first-name" style="">Archivo:</label>-->
+                                    <input type="file"  id="course_image" name="course_image" class="f1-first-name file" data-show-preview="false"
+                                           style="display: inline-table;">
                                 </div>
                                 
                                 <div class="f1-buttons">
                                     <button type="button" class="btn btn-previous">Anterior</button>
-                                    <button type="submit" class="btn btn-submit">Submit</button>
+                                    <button type="submit" class="btn btn-submit">Guardar</button>
                                 </div>
                             </fieldset>
                     	

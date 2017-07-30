@@ -55,6 +55,9 @@
 .input-group-lg .file-caption-name {
     height: 25px;
 }
+.input-group-lg .file-caption-name {
+    height: 25px;
+}
 
 .file-zoom-dialog {
     text-align: left;
@@ -267,7 +270,8 @@
 }
 
 .file-caption-main {
-    width: 80%;
+    width: 100%;
+    
 }
 
 .file-input-ajax-new .no-browse .input-group-btn,
