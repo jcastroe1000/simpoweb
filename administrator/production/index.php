@@ -86,24 +86,34 @@ $user_name = $_SESSION['user_name'];
                                         </ul>
 
                                     </li>
-<!--                                    <li><a><i class="fa fa-cogs"></i>Secciones <span class="fa fa-chevron-down"></span></a>
+                                    <li><a><i class="fa fa-cogs"></i>Servicios <span class="fa fa-chevron-down"></span></a>
                                         <ul class="nav child_menu">
-
-                                            <li>
-                                                <a href="simposiums.html"><i class="fa fa-mortar-board"></i> Seminarios</a>
-                                            </li>
-                                            <li>
-                                                <a href="simposiums.html"><i class="fa fa-laptop"></i> Talleres </a>
-                                            </li>
-                                            <li>
-                                                <a href="simposiums.html"><i class="fa fa-briefcase"></i> Cursos </a>
-                                            </li>
-                                            <li>
-                                                <a href="simposiums.html"><i class="fa fa-university"></i> Diplomados </a>
-                                            </li>
+                                            
+                                    <li>
+                                        <a href="seminarios.php"><i class="fa fa-mortar-board"></i> Seminarios</a>
+                                    </li>
+                                    <li>
+                                        <a href="simposiums.php"><i class="fa fa-mortar-board"></i> Simposium</a>
+                                    </li>
+                                    <li>
+                                        <a href="talleres.php"><i class="fa fa-laptop"></i> Talleres </a>
+                                    </li>
+                                    <li>
+                                        <a href="cursos.php"><i class="fa fa-briefcase"></i> Cursos </a>
+                                    </li>
+                                    <li>
+                                        <a href="diplomados.php"><i class="fa fa-university"></i> Diplomados </a>
+                                    </li>
+                                    <li>
+                                        <a href="servicios_empresariales.php"><i class="fa fa-mortar-board"></i> Servicios Empresariales</a>
+                                    </li>
+                                    <li>
+                                        <a href="publicaciones.php"><i class="fa fa-mortar-board"></i> Publicaciones</a>
+                                    </li>
 
                                         </ul>
-                                    </li>-->
+                                    </li>
+
 
                                     <li><a><i class="fa fa-plus-square"></i> Extras<span class="fa fa-chevron-down"></span></a>
                                         <ul class="nav child_menu">
