@@ -84,39 +84,75 @@ $user_name = $_SESSION['user_name'];
                                     <li><a><i class="fa fa-group"></i> Usuarios <span class="fa fa-chevron-down"></span></a>
                                         <ul class="nav child_menu">
                                             <li><a href="users_registers.php"><i class="fa fa-arrow-up"></i>Registrados</a></li>
-                                            <li>
-                                                <a href="newsletter.php"><i class="fa fa-check-circle"></i>NewsLetter</a></li>
+                                            <li><a href="newsletter.php"><i class="fa fa-envelope"></i>NewsLetter</a></li>
+                                            <li><a href="operadores.php"><i class="fa fa-users"></i>Operadores</a></li>
                                         </ul>
 
                                     </li>
-                                    <li><a href="services.php"><i class="fa fa-arrow-circle-up"></i> Registro </a></li>
-
-
-                                    <li><a><i class="fa fa-cogs"></i>Secciones <span class="fa fa-chevron-down"></span></a>
+                                    <li><a><i class="fa fa-cogs"></i>Servicios <span class="fa fa-chevron-down"></span></a>
                                         <ul class="nav child_menu">
-
-                                            <li>
-                                                <a href="simposiums.html"><i class="fa fa-mortar-board"></i> Seminarios</a>
-                                            </li>
-                                            <li>
-                                                <a href="simposiums.html"><i class="fa fa-laptop"></i> Talleres </a>
-                                            </li>
-                                            <li>
-                                                <a href="simposiums.html"><i class="fa fa-briefcase"></i> Cursos </a>
-                                            </li>
-                                            <li>
-                                                <a href="simposiums.html"><i class="fa fa-university"></i> Diplomados </a>
-                                            </li>
+                                            
+                                    <li>
+                                        <a href="seminarios.php"><i class="fa fa-mortar-board"></i> Seminarios</a>
+                                    </li>
+                                    <li>
+                                        <a href="simposiums.php"><i class="fa fa-mortar-board"></i> Simposium</a>
+                                    </li>
+                                    <li>
+                                        <a href="talleres.php"><i class="fa fa-laptop"></i> Talleres </a>
+                                    </li>
+                                    <li>
+                                        <a href="cursos.php"><i class="fa fa-briefcase"></i> Cursos </a>
+                                    </li>
+                                    <li>
+                                        <a href="diplomados.php"><i class="fa fa-university"></i> Diplomados </a>
+                                    </li>
+                                    <li>
+                                        <a href="servicios_empresariales.php"><i class="fa fa-mortar-board"></i> Servicios Empresariales</a>
+                                    </li>
+                                    <li>
+                                        <a href="publicaciones.php"><i class="fa fa-mortar-board"></i> Publicaciones</a>
+                                    </li>
 
                                         </ul>
                                     </li>
+                                    <li><a><i class="fa fa-question-circle"></i>Preguntas Frecuentes<span class="fa fa-chevron-down"></span></a>
+                                        <ul class="nav child_menu">
+                                            
+                                    <li>
+                                        <a href="preguntas_seminario.php"><i class="fa fa-mortar-board"></i> Seminarios</a>
+                                    </li>
+                                    <li>
+                                        <a href="simposiums.php"><i class="fa fa-mortar-board"></i> Simposium</a>
+                                    </li>
+                                    <li>
+                                        <a href="talleres.php"><i class="fa fa-laptop"></i> Talleres </a>
+                                    </li>
+                                    <li>
+                                        <a href="cursos.php"><i class="fa fa-briefcase"></i> Cursos </a>
+                                    </li>
+                                    <li>
+                                        <a href="diplomados.php"><i class="fa fa-university"></i> Diplomados </a>
+                                    </li>
+                                    <li>
+                                        <a href="servicios_empresariales.php"><i class="fa fa-mortar-board"></i> Servicios Empresariales</a>
+                                    </li>
+                                    <li>
+                                        <a href="publicaciones.php"><i class="fa fa-mortar-board"></i> Publicaciones</a>
+                                    </li>
+
+                                        </ul>
+                                    </li>
+
 
                                     <li><a><i class="fa fa-plus-square"></i> Extras<span class="fa fa-chevron-down"></span></a>
                                         <ul class="nav child_menu">
                                             <li><a href="form.html"><i class="fa fa-book"></i>Directorio</a></li>
-
+                                            
+                                            <li><a href="faqs.php"><i class="fa fa-home"></i> HOME</a></li>  
                                         </ul>
                                     </li>
+
 
 
                                 </ul>
@@ -137,7 +173,7 @@ $user_name = $_SESSION['user_name'];
                             <a data-toggle="tooltip" data-placement="top" title="Lock">
                                 <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
                             </a>
-                            <a data-toggle="tooltip" data-placement="top" title="Logout">
+                            <a data-toggle="modal" data-target="#myProfile"  data-placement="top" title="Logout">
                                 <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
                             </a>
                         </div>
@@ -153,92 +189,30 @@ $user_name = $_SESSION['user_name'];
                                 <a id="menu_toggle"><i class="fa fa-bars"></i></a>
                             </div>
 
-                            <ul class="nav navbar-nav navbar-right">
-                                <li class="">
-                                    <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                        <img src="images/img.jpg" alt="">John Doe
-                                        <span class=" fa fa-angle-down"></span>
-                                    </a>
-                                    <ul class="dropdown-menu dropdown-usermenu pull-right">
-                                        <li><a href="javascript:;"> Profile</a></li>
-                                        <li>
-                                            <a href="javascript:;">
-                                                <span class="badge bg-red pull-right">50%</span>
-                                                <span>Settings</span>
-                                            </a>
-                                        </li>
-                                        <li><a href="javascript:;">Help</a></li>
-                                        <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
-                                    </ul>
-                                </li>
 
-                                <li role="presentation" class="dropdown">
-                                    <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
-                                        <i class="fa fa-envelope-o"></i>
-                                        <span class="badge bg-green">6</span>
-                                    </a>
-                                    <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
-                                        <li>
-                                            <a>
-                                                <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                                                <span>
-                                                    <span>John Smith</span>
-                                                    <span class="time">3 mins ago</span>
-                                                </span>
-                                                <span class="message">
-                                                    Film festivals used to be do-or-die moments for movie makers. They were where...
-                                                </span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a>
-                                                <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                                                <span>
-                                                    <span>John Smith</span>
-                                                    <span class="time">3 mins ago</span>
-                                                </span>
-                                                <span class="message">
-                                                    Film festivals used to be do-or-die moments for movie makers. They were where...
-                                                </span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a>
-                                                <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                                                <span>
-                                                    <span>John Smith</span>
-                                                    <span class="time">3 mins ago</span>
-                                                </span>
-                                                <span class="message">
-                                                    Film festivals used to be do-or-die moments for movie makers. They were where...
-                                                </span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a>
-                                                <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                                                <span>
-                                                    <span>John Smith</span>
-                                                    <span class="time">3 mins ago</span>
-                                                </span>
-                                                <span class="message">
-                                                    Film festivals used to be do-or-die moments for movie makers. They were where...
-                                                </span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <div class="text-center">
-                                                <a>
-                                                    <strong>See All Alerts</strong>
-                                                    <i class="fa fa-angle-right"></i>
-                                                </a>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
                         </nav>
                     </div>
+
+                    <!-- Modal Perfil-->
+                    <div class="modal fade" id="myProfile" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+
+                                <div class="modal-header">
+                                    <h4 class="modal-title" style="text-align: center">CIERRE DE SESIÓN</h4>  
+
+                                </div>
+                                <div class="modal-body">
+                                    <h2 style="text-align: center">¿Estás seguro de querer cerrar la sesión?</h2>
+                                </div>
+                                <div class="modal-footer">
+
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Cancelar</button>
+                                    <button type="button" class="btn btn-success">Aceptar</button>
+                                </div>
+                            </div>
+                        </div>                    </div>
+                    <!-- Modal Password-->
                 </div>
                 <!-- /top navigation -->
 
@@ -254,9 +228,9 @@ $user_name = $_SESSION['user_name'];
 
                             </div>
                         </div>
-                        <div class="clearfix"><h2 style="text-align: center;color: black;font-size: 25px" class="Sansation_Regular">Preguntas de Cursos</h2></div>
-                        <div class="clearfix"><h2 style="text-align: center;color: black;font-size: 25px;padding-top:40px;" class="Sansation_Regular"><a href="registrar_pregunta_curso.php"><button type="button"  class="btn btn-success"><i class="fa fa-plus"></i> Añadir Pregunta a Curso</button></a></h2></div>
-                        <div class="row" style="margin-top: 2%;">
+                        <div class="clearfix"><h2 style="text-align: center;color: black;font-size: 25px" class="Sansation_Regular">Preguntas Cursos</h2></div>
+                        <div class="clearfix"><h2 style="text-align: center;color: black;font-size: 25px;padding-top:40px;" class="Sansation_Regular"><a href="registrar_pregunta_curso.php"><button type="button"  class="btn btn-success"><i class="fa fa-plus"></i> Añadir Pregunta </button></a></h2></div>
+                        <div class="row" >
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
                                     <thead>
@@ -277,13 +251,12 @@ $user_name = $_SESSION['user_name'];
                                         $res = $mysqli->query("SELECT id_faqs,question,answer from faqs WHERE category='curso'");
                                         $mysqli->close();
                                         while ($row = $res->fetch_assoc()) {
-                                            
                                             ?>
                                             <tr>
-                                                <td class="Sansation_Regular" style="color: #6E6E6E;text-align: center"><h5><?php echo  utf8_encode($row['id_faqs']) ?></h5></td>
-                                                <td class="Sansation_Regular" style="color: #6E6E6E;text-align: center"><h5><?php echo  utf8_encode($row['question']) ?></h5></td>
+                                                <td class="Sansation_Regular" style="color: #6E6E6E;text-align: center"><h5><?php echo utf8_encode($row['id_faqs']) ?></h5></td>
+                                                <td class="Sansation_Regular" style="color: #6E6E6E;text-align: center"><h5><?php echo utf8_encode($row['question']) ?></h5></td>
                                                 <td class="Sans" style="color: #04B404;text-align: center"><a button type="button" href="#<?php echo $row['id_faqs'] ?>" data-toggle="modal" class="btn btn-default"  > <i class="icon-trash"></i> Ver Detalles</a></td>
-                                                <td class="Sans" style="color: #FF0000;text-align: center"><a button type="button" data-target="#<?php echo $row['id_faqs']. 000 ?>" data-toggle="modal" class="btn btn-danger"  > <i class="icon-trash"></i> Eliminar</a></td>
+                                                <td class="Sans" style="color: #FF0000;text-align: center"><a button type="button" data-target="#<?php echo $row['id_faqs'] . 000 ?>" data-toggle="modal" class="btn btn-danger"  > <i class="icon-trash"></i> Eliminar</a></td>
                                             </tr>
                                             <!--Modal Info-->
                                         <div class="modal fade" id="<?php echo $row['id_faqs'] ?>" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true" >
@@ -291,15 +264,15 @@ $user_name = $_SESSION['user_name'];
                                                 <div class="modal-content">
                                                     <div class="modal-header">
                                                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                                        <h4 class="modal-title" id="myModalLabel" style="font-weight: bolder"><?php echo  utf8_encode($row['question']) ?></h4>
+                                                        <h4 class="modal-title" id="myModalLabel" style="font-weight: bolder"><?php echo utf8_encode($row['question']) ?></h4>
                                                     </div>
                                                     <div class="modal-body">
-                                                        <h4 style="text-align: justify"><?php echo  utf8_encode($row['answer']) ?></h4> 
-                                                        
-                                                        
+                                                        <h4 style="text-align: justify"><?php echo utf8_encode($row['answer']) ?></h4> 
+
+
                                                     </div>
                                                     <div class="modal-footer">
-                                                        
+
                                                         <button type="button" class="btn btn-primary">Modificar</button>
                                                         <button type="button" class="btn btn-info" data-dismiss="modal">Cerrar</button>
                                                        <!--<a href="Delete_Photo.php?d=<?php echo $row2['id'] ?>&f=<?php echo $row2['file'] ?>"><button type="button" class="btn btn-success"><i class="icon-ok"></i>Aceptar</button></a>-->
@@ -307,8 +280,8 @@ $user_name = $_SESSION['user_name'];
                                                 </div>
                                             </div>
                                         </div>
-                                         <!--Modal Eliminar-->
-                                        <div class="modal fade" id="<?php echo$row['id_faqs']. 000 ?>" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true" >
+                                        <!--Modal Eliminar-->
+                                        <div class="modal fade" id="<?php echo$row['id_faqs'] . 000 ?>" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true" >
                                             <div class="modal-dialog">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
@@ -317,7 +290,7 @@ $user_name = $_SESSION['user_name'];
                                                     </div>
                                                     <div class="modal-body">
                                                         <h4 style="text-align: center;font-weight: bold">Estás apunto de eliminar la siguiente pregunta</h4>
-                                                        <h4 style="text-align: center"><?php echo  utf8_encode($row['question']) ?></h4> 
+                                                        <h4 style="text-align: center"><?php echo utf8_encode($row['question']) ?></h4> 
                                                     </div>
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="icon-ban-circle"></i>&nbsp;Cancelar</button>
@@ -603,4 +576,3 @@ $user_name = $_SESSION['user_name'];
                 <!-- /Starrr -->
                 </body>
                 </html>
-                
