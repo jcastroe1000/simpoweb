@@ -21,7 +21,7 @@ $(function () {
                     if (data.status == 'success') {
                         $('#cargando h3').text('Pregunta creada exitosamente.');
                         setTimeout(function () {
-                    $(location).attr('href', 'preguntas_seminarios.php');
+                    $(location).attr('href', 'preguntas_seminario.php');
                 }, 2000);
                         
                     } else if (data.status == 'error') {
