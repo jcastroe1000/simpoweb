@@ -18,7 +18,7 @@ $user_name = $_SESSION['user_name'];
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Publicaciones Registradas</title>
+        <title>Preguntas de Cursos</title>
 
         <!-- Bootstrap -->
         <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -228,7 +228,7 @@ $user_name = $_SESSION['user_name'];
 
                             </div>
                         </div>
-                        <div class="clearfix"><h2 style="text-align: center;color: black;font-size: 25px" class="Sansation_Regular">Preguntas Cursos</h2></div>
+                        <div class="clearfix"><h2 style="text-align: center;color: black;font-size: 25px" class="Sansation_Regular">Preguntas de Cursos</h2></div>
                         <div class="clearfix"><h2 style="text-align: center;color: black;font-size: 25px;padding-top:40px;" class="Sansation_Regular"><a href="registrar_pregunta_curso.php"><button type="button"  class="btn btn-success"><i class="fa fa-plus"></i> Añadir Pregunta </button></a></h2></div>
                         <div class="row" >
                             <div class="col-md-12 col-sm-12 col-xs-12">
