@@ -1,12 +1,14 @@
 $(function () {
     $('#create_workshop_question').submit(function () {
-        var comprobar = $('#question').val().length * $('#answer').val().length* $('#category').val().length;
+        var comprobar = $('#question').val().length * $('#answer').val().length 
+                * $('#category').val().length;
         if (comprobar > 0) {
 
             var formulario = $('#create_workshop_question');
             var datos = formulario.serialize();
             var archivos = new FormData();
             var url = 'model/register_question.php';
+            
 
             $.ajax({
                 url: url + '?' + datos,
@@ -14,25 +16,36 @@ $(function () {
                 contentType: false,
                 data: archivos,
                 processData: false,
+
                 beforeSend: function () {
-                    $('#cargando').modal('show');
+
+                    setInterval(function () {
+                        $('#guardando').modal('show');
+                    }, 2000);
                 },
                 success: function (data) {
                     if (data.status == 'success') {
-                        $('#cargando h3').text('Pregunta creada exitosamente.');
+                        setInterval(function () {
+                            $('#guardando').modal('hide');
+                            $('#cargando').modal('show');
+                        }, 4000);
+
+
                         setTimeout(function () {
-                    $(location).attr('href', 'preguntas_taller.php');
-                }, 2000);
-                        
+                            $('#guardando').modal('hide');
+                            $('#cargando').modal('hide');
+                            $(location).attr('href', 'preguntas_taller.php');
+                        }, 6000);
+                
                     } else if (data.status == 'error') {
-                         setTimeout(function () {
-                    $('#cargando').modal('hide');
-                }, 2000);
-                setTimeout(function () {
-                    $('#cargando').modal('show');
-                    $('#cargando h3').text("El Operador ya se encuentra registrado");
-                }, 2500);
-                        
+                        setTimeout(function () {
+                            $('#cargando').modal('hide');
+                        }, 2000);
+                        setTimeout(function () {
+                            $('#cargando').modal('show');
+                            $('#cargando h3').text("El Operador ya se encuentra registrado");
+                        }, 2500);
+
                         return false;
 
                     }
