@@ -229,7 +229,7 @@ $user_name = $_SESSION['user_name'];
                             </div>
                         </div>
                         <div class="clearfix"><h2 style="text-align: center;color: black;font-size: 25px" class="Sansation_Regular">Preguntas Seminario</h2></div>
-                        <div class="clearfix"><h2 style="text-align: center;color: black;font-size: 25px;padding-top:40px;" class="Sansation_Regular"><a href="registrar_pregunta_curso.php"><button type="button"  class="btn btn-success"><i class="fa fa-plus"></i> Añadir Pregunta </button></a></h2></div>
+                        <div class="clearfix"><h2 style="text-align: center;color: black;font-size: 25px;padding-top:40px;" class="Sansation_Regular"><a href="registrar_pregunta_seminario.php"><button type="button"  class="btn btn-success"><i class="fa fa-plus"></i> Añadir Pregunta </button></a></h2></div>
                         <div class="row" >
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
@@ -248,7 +248,7 @@ $user_name = $_SESSION['user_name'];
                                         include "./model/conection.php";
                                         error_reporting(E_ALL);
 
-                                        $res = $mysqli->query("SELECT id_faqs,question,answer from faqs WHERE category='seminario'");
+                                        $res = $mysqli->query("SELECT id_faqs,question,answer from faqs WHERE category='seminarios'");
                                         $mysqli->close();
                                         while ($row = $res->fetch_assoc()) {
                                             ?>

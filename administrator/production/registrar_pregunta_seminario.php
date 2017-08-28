@@ -208,11 +208,21 @@ $user_name = $_SESSION['user_name'];
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-body" style="text-align: center;padding:20px">
-                        <h3>Pregunta creada exitosamnete.</h3>
+                        <h3>Pregunta creada exitosamente.</h3>
+                        <h2>Camiando de pagina.....</h2>
                     </div>
                 </div>
             </div>
         </div>
+        <div id="guardando" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body" style="text-align: center;padding:20px">
+                        <h3>Por favor espera,registrando pregunta...</h3>
+                    </div>
+                </div>
+            </div>
+        </div>        
         <!--Termina modal-->
         <!--Progress Modal-->
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -240,7 +250,7 @@ $user_name = $_SESSION['user_name'];
                         <div class="col-md-12">
                             <div class="x_panel" style="padding-top: 3%" >
                              <div class="">
-                                    <h2 style="text-align: center;color: black;font-size: 20px;" class="Sansation_Regular">REGISTRAR PREGUNTA EN SEMINARIO</h2>
+                                    <h2 style="text-align: center;color: black;font-size: 20px;" class="Sansation_Regular">REGISTRAR PREGUNTA EN SEMIARIOS</h2>
 
                                     <div class="clearfix"></div>
                                 </div>
@@ -264,7 +274,7 @@ $user_name = $_SESSION['user_name'];
                                         <div class="form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="last-name" style="color: black" hidden="">Categoria:</label>
                                             <div class="col-md-6 ">
-                                                <input type="hidden" id="category" name="category" value="seminario" class="form-control col-md-7 col-xs-12">
+                                                <input type="hidden" id="category" name="category" value="seminarios" class="form-control col-md-7 col-xs-12">
                                             </div>
                                         </div>
                                         
