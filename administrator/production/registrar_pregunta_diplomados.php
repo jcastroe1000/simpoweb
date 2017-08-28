@@ -208,11 +208,21 @@ $user_name = $_SESSION['user_name'];
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-body" style="text-align: center;padding:20px">
-                        <h3>Pregunta creada exitosamnete.</h3>
+                        <h3>Pregunta creada exitosamente.</h3>
+                        <h2>Camiando de pagina.....</h2>
                     </div>
                 </div>
             </div>
         </div>
+        <div id="guardando" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body" style="text-align: center;padding:20px">
+                        <h3>Por favor espera,registrando pregunta...</h3>
+                    </div>
+                </div>
+            </div>
+        </div>        
         <!--Termina modal-->
         <!--Progress Modal-->
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -240,13 +250,13 @@ $user_name = $_SESSION['user_name'];
                         <div class="col-md-12">
                             <div class="x_panel" style="padding-top: 3%" >
                              <div class="">
-                                    <h2 style="text-align: center;color: black;font-size: 20px;" class="Sansation_Regular">REGISTRAR PREGUNTA EN CURSOS</h2>
+                                    <h2 style="text-align: center;color: black;font-size: 20px;" class="Sansation_Regular">REGISTRAR PREGUNTA EN DIPLOMADOS</h2>
 
                                     <div class="clearfix"></div>
                                 </div>
                                 <div class="x_content" style="padding-top: 3%">
 
-                                    <form id="create_diplomat_faq" name="create_diplomat_faq"  class="form-horizontal form-label-left">
+                                    <form id="create_diplomat_question" name="create_diplomat_question"  class="form-horizontal form-label-left">
                                         <div class="form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="first-name" style="color: black">Pregunta:</label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
@@ -264,7 +274,7 @@ $user_name = $_SESSION['user_name'];
                                         <div class="form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="last-name" style="color: black" hidden="">Categoria:</label>
                                             <div class="col-md-6 ">
-                                                <input type="hidden" id="category" name="category" value="diplomado" class="form-control col-md-7 col-xs-12">
+                                                <input type="hidden" id="category" name="category" value="diplomados" class="form-control col-md-7 col-xs-12">
                                             </div>
                                         </div>
                                         
