@@ -17,7 +17,7 @@ $user_name = $_SESSION['user_name'];
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Sistema de Administración </title>
+        <title>Sistema de Administración - Registrar Pregunta en Revista </title>
 
         <!-- Bootstrap -->
         <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -208,11 +208,21 @@ $user_name = $_SESSION['user_name'];
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-body" style="text-align: center;padding:20px">
-                        <h3>Pregunta creada exitosamnete.</h3>
+                        <h3>Pregunta creada exitosamente.</h3>
+                        <h2>Camiando de pagina.....</h2>
                     </div>
                 </div>
             </div>
         </div>
+        <div id="guardando" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body" style="text-align: center;padding:20px">
+                        <h3>Por favor espera,registrando pregunta...</h3>
+                    </div>
+                </div>
+            </div>
+        </div>        
         <!--Termina modal-->
         <!--Progress Modal-->
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
