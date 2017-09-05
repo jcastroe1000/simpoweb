@@ -1,34 +1,44 @@
 <?php
     include "../config.php";
     error_reporting(E_ALL);
-    $course_name = $_GET['course_name'];
-    $review_seminar = $_GET['review'];
+    $course_name = $_GET['name'];
+    $review = $_GET['review'];
     $addressed = $_GET['addressed'];
     $objetive = $_GET['objetive'];
-    $duration = $_GET['time_duration'];
+    $period = $_GET['period'];
+    $duration = $_GET['duration'];
+    $d_start=$_GET['date_start'];
+    $d_finish=$_GET['date_finish'];
+    $time_start=$_GET['time_start'];
+    $time_finish=$_GET['time_finish'];
     $modality=$_GET['modality'];
-    $date_start=$_GET['date_start'];
-    $date_finish=$_GET['date_finish'];
+    $requiriments=$_GET['requirements'];
+    $aditional_information=$_GET['aditional_information'];
     $cost=$_GET['cost'];
+    $pay_method=$_GET['pay_method'];
+    $foto = trim($_FILES['file_image']['name']);
     $creation_date=$_GET['creation_date'];
-    $foto = trim($_FILES['seminar_image']['name']);
-    $created_by=$_GET['created_by'];
+    $created_by=$_GET['admin'];
     $section='seminario';
     $filename = "";
-    if ($_FILES['seminar_image']['size'] <= 2097152) {
+    if ($_FILES['file_image']['size'] <= 2097152) {
         while (true) {
             $filename = uniqid(rand()) . '.' .pathinfo($foto, PATHINFO_EXTENSION);
-            if (!file_exists('album/seminar/' . $filename)) break;
+            if (!file_exists('album/course/' . $filename)) break;
         }
         error_log($filename, 0);
         error_log("Despues de cambiar el nombre", 0);
         // Guardamos la imagen (titulo, archivo, fecha de creacion)
-        $query1 = "INSERT INTO registro_eventos(nombre,resumen,dirigido, objetivo, duracion, modalidad,inicio,termino,costo,ruta,fecha_creacion,seccion,usuario) "
-                . "VALUES ('$course_name', '$review_seminar',  '$addressed', '$objetive', '$duration', '$modality', '$date_start', '$date_finish', '$cost', '$filename', '$creation_date','$section','$created_by')";
+    $query1 = "INSERT INTO registro_eventos(nombre,resumen,dirigido, objetivo,periodo, duracion,"
+            . "fecha_inicio,fecha_final,hora_inicio,hora_final,modalidad,requisitos,informacion_adicional,costo,"
+            . "metodo_pago,ruta,fecha_creacion,seccion,usuario) "
+            . "VALUES ('$course_name', '$review','$addressed', '$objetive','$period' ,'$duration', '$d_start','$d_finish',"
+            . "'$time_start','$time_finish','$modality','$requiriments','$aditional_information','$cost','$pay_method','$foto',"
+            . "'$creation_date','$section','$created_by')";
         mysqli_query($mysqli, $query1);
         error_log("Despues del primer insert", 0);
         // Movemos el archivo
-        move_uploaded_file($_FILES['seminar_image']['tmp_name'], 'album/seminar/' . $filename);
+        move_uploaded_file($_FILES['file_image']['tmp_name'], 'album/course/' . $filename);
         error_log("Despues del mover el archivo", 0);
         //Cerramos la conexion
         $mysqli->close();
