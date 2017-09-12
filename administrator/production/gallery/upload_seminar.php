@@ -18,13 +18,13 @@
     $pay_method=$_GET['pay_method'];
     $foto = trim($_FILES['file_image']['name']);
     $creation_date=$_GET['creation_date'];
-    $created_by=$_GET['admin'];
+    $created_by= utf8_decode($_GET['admin']);
     $section='seminario';
     $filename = "";
     if ($_FILES['file_image']['size'] <= 2097152) {
         while (true) {
             $filename = uniqid(rand()) . '.' .pathinfo($foto, PATHINFO_EXTENSION);
-            if (!file_exists('album/course/' . $filename)) break;
+            if (!file_exists('album/seminar/' . $filename)) break;
         }
         error_log($filename, 0);
         error_log("Despues de cambiar el nombre", 0);
@@ -38,7 +38,7 @@
         mysqli_query($mysqli, $query1);
         error_log("Despues del primer insert", 0);
         // Movemos el archivo
-        move_uploaded_file($_FILES['file_image']['tmp_name'], 'album/course/' . $filename);
+        move_uploaded_file($_FILES['file_image']['tmp_name'], 'album/seminar/' . $filename);
         error_log("Despues del mover el archivo", 0);
         //Cerramos la conexion
         $mysqli->close();

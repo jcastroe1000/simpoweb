@@ -18,8 +18,8 @@
     $pay_method=$_GET['pay_method'];
     $foto = trim($_FILES['file_image']['name']);
     $creation_date=$_GET['creation_date'];
-    $created_by=$_GET['admin'];
-    $section='seminario';
+    $created_by= utf8_decode($_GET['admin']);
+    $section='curso';
     $filename = "";
     if ($_FILES['file_image']['size'] <= 2097152) {
         while (true) {
