@@ -6,7 +6,7 @@ session_start();
 if (!isset($_SESSION['user_name'])) {
     header("Location:login.php");
 }
-$user_name = $_SESSION['user_name'];
+$user_name = utf8_encode($_SESSION['user_name']);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -58,12 +58,12 @@ $user_name = $_SESSION['user_name'];
 
                         <!-- menu profile quick info -->
                         <div class="profile clearfix">
-                            <div class="profile_pic">
+                            <div class="profile_pic center-block">
                                 <img src="images/img.jpg" alt="..." class="img-circle profile_img">
                             </div>
                             <div class="profile_info">
                                 <span>Bienvenido</span>
-                                <h2><?php echo utf8_encode($user_name) ?></h2>
+                                <h2><?php echo $user_name ?></h2>
                             </div>
                         </div>
                         <!-- /menu profile quick info -->
@@ -201,7 +201,7 @@ $user_name = $_SESSION['user_name'];
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-body" style="text-align: center;padding:20px">
-                                    <h3>Seminario Creado Exitosamente...</h3>
+                                    <h3>Curso Creado Exitosamente...</h3>
                                 </div>
                             </div>
                         </div>
@@ -212,8 +212,8 @@ $user_name = $_SESSION['user_name'];
                 <!-- page content -->
                 <div class="right_col" role="main">
                     <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 form-box" >
-                        <form role="form" id="upload_seminar" name="upload_seminar" class="f1" style="margin-top: -35px;">
-                            <h3 style="text-align: center">Registrar Simposium</h3>
+                        <form role="form" id="upload_course" name="upload_course" class="f1" style="margin-top: -35px;">
+                            <h3 style="text-align: center">Registrar Curso</h3>
                             <div class="f1-steps">
                                 <div class="f1-progress">
                                     <div class="f1-progress-line" data-now-value="16.66" data-number-of-steps="3" style="width: 16.66%;"></div>
@@ -262,27 +262,27 @@ $user_name = $_SESSION['user_name'];
 
                                 <div class="form-group ">
                                     <label class="etiquetas" for="f1-first-name">Duración:</label>
-                                    <input type="text" name="duration" id="duration" placeholder="Duración" class="f1-first-name form-control3" id="f1-first-name" style="margin-left: 3%;">
+                                    <input type="number" name="duration" min="1" max="500" id="duration" placeholder="Duración" class="f1-first-name form-control3" id="f1-first-name" style="margin-left: 3%;">
 
                                 </div>
                                 <div class="form-group">
                                     <label class="etiquetas" for="f1-first-name">Periodo:</label>
                                     <select class="combo" id="period" name="period" style="margin-left: 4%;">
                                         <option value="">Selecciona</option>
-                                        <option value="Presencial">Presencial</option>
-                                        <option value="Distancia">Distancia</option>
-                                        <option value="Presencial y/o Distancia">Presencial y/o Distancia</option>
+                                        <option value="Dias">Dias</option>
+                                        <option value="Semanas">Semanas</option>
+                                        <option value="Meses">Meses</option>
                                     </select>
 
                                 </div>
                                 <h2>Fecha</h2>
                                 <div class="form-group ">
                                     <label class="etiquetas" for="f1-first-name">Inicio:</label>
-                                    <input type="date" name="date_start" id="date_start" placeholder="Nombre" class="f1-first-name form-control3" id="f1-first-name" style="margin-left: 6%">
+                                    <input type="date" name="date_start" min="2017-01-01" max="2030-12-31" id="date_start" placeholder="Nombre" class="f1-first-name form-control3" id="f1-first-name" style="margin-left: 6%">
                                 </div>
                                 <div class="form-group ">
-                                    <label class="etiquetas" for="f1-first-name">Inicio:</label>
-                                    <input type="date" name="date_finish" id="date_finish" placeholder="Nombre" class="f1-first-name form-control3" id="f1-first-name" style="margin-left: 6%">
+                                    <label class="etiquetas" for="f1-first-name">Final:</label>
+                                    <input type="date" name="date_finish" min="2017-01-01" max="2030-12-31" id="date_finish" placeholder="Nombre" class="f1-first-name form-control3" id="f1-first-name" style="margin-left: 6%">
                                 </div>
                                 <h2>Horario</h2>
                                 <div class="form-group">
@@ -321,15 +321,15 @@ $user_name = $_SESSION['user_name'];
                                 </div>
                                 <div class="form-group">
                                     <label class="etiquetas" for="f1-first-name">Costo:</label>
-                                    <input type="text" name="cost" id="cost" placeholder="Nombre" class="f1-first-name form-control3" id="f1-first-name" style="margin-left: 6%;">
+                                    <input type="number" name="cost" id="cost" min="1" max="1000000" placeholder="Nombre" class="f1-first-name form-control3" id="f1-first-name" style="margin-left: 6%;">
                                 </div>
                                 <div class="form-group">
                                     <label class="etiquetas" for="f1-first-name">Mét. Pago:</label>
                                     <select class="f1-first-name combo" id="pay_method" name="pay_method" style="margin-left: 4px;">
                                         <option value="">Selecciona</option>
-                                        <option value="Presencial">Presencial</option>
-                                        <option value="Distancia">Distancia</option>
-                                        <option value="Presencial y/o Distancia">Presencial y/o Distancia</option>
+                                        <option value="Depósito Bancario">Depósito Bancario</option>
+                                        <option value="Efectivo">Efectivo</option>
+                                        <option value="Pago en línea">Pago en línea</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
@@ -362,7 +362,7 @@ $user_name = $_SESSION['user_name'];
 
                 </div>
                 <!-- /page content -->
-
+                        
                 <!-- footer content -->
                 <footer>
 
@@ -420,7 +420,7 @@ $user_name = $_SESSION['user_name'];
         <script src="form-wizard/js/retina-1.1.0.min.js"></script>
         <script src="form-wizard/js/scripts.js"></script>
         <script src="../production/js/fileinput.js" type="text/javascript"></script>
-        <script src="../production/js/upload_seminar.js"></script>
+        <script src="../production/js/upload_course.js"></script>
         <!-- bootstrap-progressbar -->
         <script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
         <!-- Flot -->
