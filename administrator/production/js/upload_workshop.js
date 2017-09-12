@@ -1,10 +1,12 @@
 $(function() {
   $('#upload_workshop').submit(function() {
-    var comprobar = $('#workshop_name').val().length*$('#review').val().length  * $('#addressed').val().length * $('#objetive').val().length * $('#time_duration').val().length*
-                    $('#modality').val().length *$('#date_start').val().length *$('#date_finish').val().length*$('#cost').val().length
-                    $('#creation_date').val().length*$('#created_by').val().length*$('#workshop_image').val().length;
+    var comprobar = $('#name').val().length*$('#review').val().length*$('#addressed').val().length * $('#objetive').val().length * 
+                    $('#duration').val().length*$('#period').val().length*$('#date_start').val().length *$('#date_finish').val().length*
+                    $('#time_start').val().length*$('#time_finish').val().length*$('#modality').val().length*$('#requirements').val().length*
+                    $('#aditional_information').val().length*$('#cost').val().length*$('#pay_method').val().length*$('#file_image').val().length*
+                    $('#creation_date').val().length*$('#admin').val().length;
     if (comprobar > 0) {
-      var imagen = document.getElementById("workshop_image").files;
+      var imagen = document.getElementById("file_image").files;
       if (imagen[0].type != "image/png" && imagen[0].type != "image/jpg" && imagen[0].type != "image/jpeg") {
         $('#cargando').modal('show');
         $('#cargando h3').text("El archivo " + imagen[0].name + " no es una imagen");
@@ -41,7 +43,7 @@ $(function() {
                 }, 9500);
                 setTimeout(function () {
                     
-                    $(location).attr('href', 'talleres.php');
+                    $(location).attr('href', 'seminarios.php');
                 }, 12000);
             },
             error: function(data) {
