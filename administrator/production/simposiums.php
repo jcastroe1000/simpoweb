@@ -256,15 +256,14 @@ header("Content-Type: text/html;charset=utf-8");
                                 
                             </div>
                         </div>
-                        <div class="clearfix"><h2 style="text-align: center;color: black;font-size: 25px" class="Sansation_Regular">Operadores  Registrados</h2></div>
-                        <div class="clearfix"><h2 style="text-align: center;color: black;font-size: 25px;padding-top:40px;" class="Sansation_Regular"><a href="registrar_pregunta.php"><button type="button"  class="btn btn-success"><i class="fa fa-plus"></i> Añadir Pregunta</button></a></h2></div>
+                        <div class="clearfix"><h2 style="text-align: center;color: black;font-size: 25px" class="Sansation_Regular">Simposiums Registrados</h2></div>
+                        <div class="clearfix"><h2 style="text-align: center;color: black;font-size: 25px;padding-top:40px;" class="Sansation_Regular"><a href="registrar_pregunta.php"><button type="button"  class="btn btn-success"><i class="fa fa-plus"></i> Añadir Simposium</button></a></h2></div>
                         <div class="row" style="margin-top: 2%;">
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
                                     <thead>
                                         <tr>
-                                            <th class="Sansation_Bold" style="color: black;text-align: center">Nombre del Operador</th>
-                                            <th class="Sansation_Bold" style="color: black;text-align: center">Email</th>
+                                            <th class="Sansation_Bold" style="color: black;text-align: center">Nombre</th>
                                             <th class="Sansation_Bold" style="color: black;text-align: center">Fecha de Creación</th>
                                             <th class="Sansation_Bold" style="color: black;text-align: center">Estatus</th>
                                             <th></th>
@@ -284,7 +283,6 @@ header("Content-Type: text/html;charset=utf-8");
                                                             ?>
                                         <tr>
                                             <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo utf8_encode($row ['nombre']); ?></td>
-                                            <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo $row ['email'] ?></td>
                                             <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo $row ['creation_date'] ?></td>
                                             <td class="Sans" style="color: #6E6E6E;text-align: center">
                                                 <?php if ( $row ['estatus'] == 0){
