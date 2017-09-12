@@ -9,7 +9,7 @@
         $email = $_POST['email'];
         $pass =$_POST['pass'];
         $email = trim($email);
-        $query = "SELECT nombre,estatus,email FROM administradores WHERE email='$email' AND password='$pass'";
+        $query = "SELECT nombre,apellido_paterno,apellido_materno,estatus,email FROM administradores WHERE email='$email' AND password='$pass'";
         $result = mysqli_query($mysqli, $query)or die(mysqli_error());
         $num_row = mysqli_num_rows($result);
         $row = mysqli_fetch_array($result);
@@ -23,7 +23,8 @@
            
         } else if ($num_row >= 1) {
             echo 'true';
-            $_SESSION['user_name'] = $row['nombre'];
+//            $_SESSION['user_name'] = $row['nombre']. '&nbsp;' .$row['apellido_paterno'] . '&nbsp;'.$row['apellido_materno'] ;
+            $_SESSION['user_name'] = $row['apellido_paterno'] . '&nbsp;' .$row['apellido_materno'].'&nbsp;' . $row['nombre'];
             header("Location:index.php");
            
         }
