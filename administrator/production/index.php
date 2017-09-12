@@ -51,11 +51,12 @@ $user_name = $_SESSION['user_name'];
 
             <!-- menu profile quick info -->
             <div class="profile clearfix">
-              <div class="profile_pic">
+              <div class="profile_pic center-block">
                 <img src="images/img.jpg" alt="..." class="img-circle profile_img">
               </div>
+                
               <div class="profile_info">
-                <span>Bienvenido</span>
+                  <span>Bienvenido</span>
                 <h2><?php echo utf8_encode($user_name)?></h2>
               </div>
             </div>
@@ -196,7 +197,7 @@ $user_name = $_SESSION['user_name'];
       <div class="modal-footer">
        
         <button type="button" class="btn btn-primary" data-dismiss="modal">Cancelar</button>
-         <button type="button" class="btn btn-success">Aceptar</button>
+        <a href="logout.php?logout"><button type="button"  class="btn btn-success">Aceptar</button></a>
       </div>
     </div>
   </div>                    </div>
