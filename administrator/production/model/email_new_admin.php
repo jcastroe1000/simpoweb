@@ -15,8 +15,8 @@ $api_domain = 'sandbox8128d26fd2464b42a6dc95e54a7cda2a.mailgun.org';
 $send_to = $email;
 
 ////# Include the Autoloader (see "Libraries" for install instructions)
-//    require '../vendor/autoload.php';
-//    use Mailgun\Mailgun;
+   // require '../vendor/autoload.php';
+ //   use Mailgun\Mailgun;
 
 //# Instantiate the client.
     $mgClient = new Mailgun('key-4e896b8110f1ceb63b180c87bc225c16');

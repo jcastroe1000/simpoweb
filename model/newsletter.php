@@ -31,15 +31,15 @@ if($_POST['email_newsletter'] == '')
 //
 //# Make the call to the client.
     
-//    $result = $mgClient->sendMessage($domain, array(
-//        'from' => 'Simpoweb <postmaster@sandbox8128d26fd2464b42a6dc95e54a7cda2a.mailgun.org>',
-//        'to' => $email,
-//        'subject' => 'Gracias por registrate.',
-//        'text' => 'Hola.
-//        ¡Gracias por registrarte con nosotros!
-//        a través del correo electrónico te enviaremos nuestro newsletter para 
-//        mantenerte informado sobre nuestras promociones y eventos'
-//    ));
+    $result = $mgClient->sendMessage($domain, array(
+        'from' => 'Simpoweb <postmaster@sandbox8128d26fd2464b42a6dc95e54a7cda2a.mailgun.org>',
+        'to' => $email,
+        'subject' => 'Gracias por registrate.',
+        'text' => 'Hola.
+        ¡Gracias por registrarte con nosotros!
+        a través del correo electrónico te enviaremos nuestro newsletter para 
+        mantenerte informado sobre nuestras promociones y eventos'
+    ));
 
 
 //Change database 

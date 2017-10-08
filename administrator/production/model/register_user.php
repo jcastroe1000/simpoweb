@@ -23,6 +23,7 @@ $surnames = $_GET['surnames'];
 $email_contact = $_GET['email_contact'];
 $telephone_contact = $_GET['telephone_contact'];
 $password = $_GET['password'];
+$hash_pass= crypt($password,'$1$somethin$');
 $date_registration = $_GET['creation_date'];
 $gender = $_GET['gender'];
 
@@ -31,7 +32,7 @@ require_once '../model/user_register_admin.php';
 
 
 $query1 = "INSERT INTO user_register(name,surnames,telephone, gender,email,password,creation_date) "
-        . "VALUES ('$user__name', '$surnames', '$telephone_contact', '$gender', '$email_contact', '$password','$date_registration')";
+        . "VALUES ('$user__name', '$surnames', '$telephone_contact', '$gender', '$email_contact', '$hash_pass','$date_registration')";
 mysqli_query($mysqli, $query1);
 
     $response_array['status'] = 'success';
