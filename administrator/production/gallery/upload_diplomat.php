@@ -15,7 +15,7 @@
     $requiriments=$_GET['requirements'];
     $aditional_information=$_GET['aditional_information'];
     $cost=$_GET['cost'];
-    $pay_method=$_GET['pay_method'];
+    $pay_method= utf8_decode($_GET['pay_method']);
     $foto = trim($_FILES['file_image']['name']);
     $creation_date=$_GET['creation_date'];
     $created_by= utf8_decode($_GET['admin']);
@@ -33,7 +33,7 @@
             . "fecha_inicio,fecha_final,hora_inicio,hora_final,modalidad,requisitos,informacion_adicional,costo,"
             . "metodo_pago,ruta,fecha_creacion,seccion,usuario) "
             . "VALUES ('$course_name', '$review','$addressed', '$objetive','$period' ,'$duration', '$d_start','$d_finish',"
-            . "'$time_start','$time_finish','$modality','$requiriments','$aditional_information','$cost','$pay_method','$foto',"
+            . "'$time_start','$time_finish','$modality','$requiriments','$aditional_information','$cost','$pay_method','$filename',"
             . "'$creation_date','$section','$created_by')";
         mysqli_query($mysqli, $query1);
         error_log("Despues del primer insert", 0);
