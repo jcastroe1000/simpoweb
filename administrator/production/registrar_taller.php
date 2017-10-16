@@ -212,7 +212,7 @@ $user_name = utf8_encode($_SESSION['user_name']);
                 <!-- page content -->
                 <div class="right_col" role="main">
                     <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 form-box" >
-                        <form role="form" id="upload_workshop" name="upload_workshop" class="f1" style="margin-top: -35px;">
+                        <form role="form" id="upload_course" name="upload_course" class="f1" style="margin-top: -35px;">
                             <h3 style="text-align: center">Registrar Taller</h3>
                             <div class="f1-steps">
                                 <div class="f1-progress">
@@ -240,12 +240,12 @@ $user_name = utf8_encode($_SESSION['user_name']);
                                 </div>
                                 <div class="form-group">
                                     <label class="etiquetas" for="f1-last-name">Resumen</label>
-                                    <textarea name="review" id="review" placeholder="Resumen..." style="height: 110px;margin-left: 3%;"
+                                    <textarea name="review" id="review" placeholder="Resumen..." style="height: 110px;margin-left: 2%;"
                                               class="f1-about-yourself form-control3" id="f1-about-yourself" ></textarea>
                                 </div>
                                 <div class="form-group">
                                     <label class="etiquetas" for="f1-about-yourself">Dirigido</label>
-                                    <textarea name="addressed" id="addressed" placeholder="Dirigido..." style="height: 100px;margin-left: 5%;"
+                                    <textarea name="addressed" id="addressed" placeholder="Dirigido..." style="height: 100px;margin-left: 4%;"
                                               class="f1-about-yourself form-control3" id="f1-about-yourself"></textarea>
                                 </div>
                                 <div class="form-group">
@@ -321,7 +321,7 @@ $user_name = utf8_encode($_SESSION['user_name']);
                                 </div>
                                 <div class="form-group">
                                     <label class="etiquetas" for="f1-first-name">Costo:</label>
-                                    <input type="number" name="cost" id="cost" min="1" max="1000000" placeholder="Nombre" class="f1-first-name form-control3" id="f1-first-name" style="margin-left: 6%;">
+                                    <input type="number" name="cost" id="cost" min="1" max="1000000"  class="f1-first-name form-control3" id="f1-first-name" style="margin-left: 6%;">
                                 </div>
                                 <div class="form-group">
                                     <label class="etiquetas" for="f1-first-name">Mét. Pago:</label>
@@ -420,7 +420,7 @@ $user_name = utf8_encode($_SESSION['user_name']);
         <script src="form-wizard/js/retina-1.1.0.min.js"></script>
         <script src="form-wizard/js/scripts.js"></script>
         <script src="../production/js/fileinput.js" type="text/javascript"></script>
-        <script src="../production/js/upload_workshop.js"></script>
+        <script src="../production/js/upload_course.js"></script>
         <!-- bootstrap-progressbar -->
         <script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
         <!-- Flot -->
