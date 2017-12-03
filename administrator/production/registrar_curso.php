@@ -43,6 +43,21 @@ $user_name = utf8_encode($_SESSION['user_name']);
         <link rel="stylesheet" href="form-wizard/css/form-elements.css">
         <link rel="stylesheet" href="form-wizard/css/style.css">
         <link href="../production/css/fileinput.css" media="all" rel="stylesheet" type="text/css">
+        <!-- Latest compiled and minified CSS -->
+        <link href="../vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+        
+        <!--Multiselect -->
+        
+        
+ 
+
+        <script type="text/javascript" src="../production/docs/js/jquery-2.1.3.min.js"></script>
+        
+        <script type="text/javascript" src="../production/docs/js/prettify.js"></script>
+  <script type="text/javascript" src="docs/js/bootstrap-3.3.2.min.js"></script>
+        <link rel="stylesheet" href="../production/dist/css/bootstrap-multiselect.css" type="text/css">
+        <script type="text/javascript" src="../production/dist/js/bootstrap-multiselect.js"></script>
+
     </head>
 
     <body class="nav-md">
@@ -233,7 +248,27 @@ $user_name = utf8_encode($_SESSION['user_name']);
                             </div>
 
                             <fieldset>
-
+                                <div class="form-group">
+                                    <label class="etiquetas" for="f1-first-name">Días:</label>
+                                    
+                            <div class="example form-group">
+                                <script type="text/javascript">
+                                    $(document).ready(function() {
+                                        $('#example-getting-started').multiselect();
+                                    });
+                                </script>
+                                <select id="example-getting-started" multiple="multiple" class="f1-first-name form-control3">
+                                    <option value="cheese">Lunes</option>
+                                    <option value="tomatoes">Martes</option>
+                                    <option value="Mozzarella">Miercoles</option>
+                                    <option value="Mushrooms">Jueves</option>
+                                    <option value="Pepperoni">Viernes</option>
+                                    <option value="Onions">Sábado</option>
+                                </select>
+                            </div>
+                            
+                            
+                                </div>    
                                 <div class="form-group">
                                     <label class="etiquetas" for="f1-first-name">Nombre:</label>
                                     <input type="text" name="name" id="name" placeholder="Nombre" class="f1-first-name form-control3" id="f1-first-name" style="margin-left: 3.5%;">
@@ -293,10 +328,11 @@ $user_name = utf8_encode($_SESSION['user_name']);
                                     <label class="etiquetas" for="f1-first-name">Inicio:</label>
                                     <input type="time" name="time_finish" id="time_finish" placeholder="Nombre" class="f1-first-name form-control3" id="f1-first-name" style="margin-left: 6%">
                                 </div>
+                                <h2>Días</h2>
                                 <div class="form-group">
-                                    <label class="etiquetas" for="f1-first-name">Modalidad:</label>
-                                    <select class="f1-first-name combo" id="modality" name="modality" style="margin-left: 2px;">
-                                        <option value="">Selecciona</option>
+                                    <label class="etiquetas" for="f1-first-name">Días:</label>
+                                    <select class=" selectpicker" id="modality"  name="modality" style="margin-left: 2px;" multiple>
+                                     
                                         <option value="Presencial">Presencial</option>
                                         <option value="Distancia">Distancia</option>
                                         <option value="Presencial y/o Distancia">Presencial y/o Distancia</option>
@@ -422,6 +458,8 @@ $user_name = utf8_encode($_SESSION['user_name']);
         <script src="../production/js/fileinput.js" type="text/javascript"></script>
         <script src="../production/js/upload_course.js"></script>
         <!-- bootstrap-progressbar -->
+        <script src="../production/js/bootstrap-multiselect.js"></script>
+        
         <script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
         <!-- Flot -->
 
@@ -721,6 +759,7 @@ $user_name = utf8_encode($_SESSION['user_name']);
 
         </script>
         <!--/ Process Bar-->
-
+        
+       
     </body>
 </html>
