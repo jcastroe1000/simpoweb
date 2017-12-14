@@ -48,6 +48,7 @@ input[type="file"],
 input[type="number"],
 input[type="password"], 
 textarea,
+
 textarea.form-control3 {
     height: 44px;
     margin: 0;

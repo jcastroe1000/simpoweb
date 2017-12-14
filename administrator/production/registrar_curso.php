@@ -246,7 +246,7 @@ $user_name = utf8_encode($_SESSION['user_name']);
                             </div>
 
                             <fieldset style="display: initial;width: 100%">
-                                 
+                            
                             
                             
                                   
@@ -316,7 +316,7 @@ $user_name = utf8_encode($_SESSION['user_name']);
                                 </div>
                                 <div class="form-group">
                                     <label class="etiquetas" for="f1-first-name">Dias:</label>
-                                    <select class="selectpicker" id="period" name="period" style="width: 100%" multiple="">
+                                    <select class="selectpicker"  id="period" name="period" style="width: 100%" multiple="">
                                         <option value="Dias">Lunes</option>
                                         <option value="Semanas">Martes</option>
                                         <option value="Meses">Miercoles</option>
