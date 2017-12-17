@@ -1,8 +1,8 @@
 $(function() {
   $('#upload_course').submit(function() {
-    var comprobar = $('#name').val().length*$('#review').val().length*$('#addressed').val().length * $('#objetive').val().length * 
-                    $('#duration').val().length*$('#period').val().length*$('#date_start').val().length *$('#date_finish').val().length*
-                    $('#time_start').val().length*$('#time_finish').val().length*$('#modality').val().length*$('#requirements').val().length*
+    var comprobar = $('#name').val().length*$('#review').val().length*$('#addressed').val().length*$('#objetive').val().length * 
+                    $('#duration').val().length*$('#period').val().length*$('#date_start').val().length*$('#date_finish').val().length*
+                    $('#time_start').val().length*$('#time_finish').val().length*$('#days').val().length*$('#modality').val().length*$('#requirements').val().length*
                     $('#aditional_information').val().length*$('#cost').val().length*$('#pay_method').val().length*$('#file_image').val().length*
                     $('#creation_date').val().length*$('#admin').val().length;
     if (comprobar > 0) {

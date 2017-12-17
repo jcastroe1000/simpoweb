@@ -1,4 +1,5 @@
 <?php
+    header("Content-Type: text/html;charset=utf-8");
     include "../config.php";
     error_reporting(E_ALL);
     $course_name = $_GET['name'];
@@ -11,6 +12,8 @@
     $d_finish=$_GET['date_finish'];
     $time_start=$_GET['time_start'];
     $time_finish=$_GET['time_finish'];
+    $days= json_encode(implode('|',$_GET['days']));
+    $days_converts=utf8_decode($days);
     $modality=$_GET['modality'];
     $requiriments=$_GET['requirements'];
     $aditional_information=$_GET['aditional_information'];
@@ -29,10 +32,10 @@
         error_log($filename, 0);
         error_log("Despues de cambiar el nombre", 0);
         // Guardamos la imagen (titulo, archivo, fecha de creacion)
-    $query1 = "INSERT INTO registro_eventos(nombre,resumen,dirigido, objetivo,periodo, duracion,"
+    $query1 = "INSERT INTO registro_eventos(nombre,resumen,dirigido, objetivo,periodo, duracion,dias,"
             . "fecha_inicio,fecha_final,hora_inicio,hora_final,modalidad,requisitos,informacion_adicional,costo,"
             . "metodo_pago,ruta,fecha_creacion,seccion,usuario) "
-            . "VALUES ('$course_name', '$review','$addressed', '$objetive','$period' ,'$duration', '$d_start','$d_finish',"
+            . "VALUES ('$course_name', '$review','$addressed', '$objetive','$period' ,'$duration','$days_converts', '$d_start','$d_finish',"
             . "'$time_start','$time_finish','$modality','$requiriments','$aditional_information','$cost','$pay_method','$filename',"
             . "'$creation_date','$section','$created_by')";
         mysqli_query($mysqli, $query1);

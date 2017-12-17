@@ -48,12 +48,12 @@ $user_name = utf8_encode($_SESSION['user_name']);
         <!--Multiselect-->
         <link rel="stylesheet" href="../production/dist/css/bootstrap-select.css">
         <script src="../production/dist/js/bootstrap-select.js" defer></script>
-        
-      
-  
-        
-  
-       
+
+
+
+
+
+
 
     </head>
 
@@ -242,14 +242,14 @@ $user_name = utf8_encode($_SESSION['user_name']);
                                     <div class="f1-step-icon"><i class="fa fa-file"></i></div>
                                     <p>Tercer Paso</p>
                                 </div>
-                                
+
                             </div>
 
                             <fieldset style="display: initial;width: 100%">
-                            
-                            
-                            
-                                  
+
+
+
+
                                 <div class="form-group">
                                     <label class="etiquetas" for="f1-first-name">Nombre:</label>
                                     <input type="text" name="name" id="name" placeholder="Nombre" class="f1-first-name form-control3" id="f1-first-name" style="width: 100%">
@@ -292,7 +292,15 @@ $user_name = utf8_encode($_SESSION['user_name']);
                                     </select>
 
                                 </div>
-                                
+                                <div class="form-group">
+                                    <label class="etiquetas" for="f1-first-name">Modalidad:</label>
+                                    <select class="f1-first-name combo" id="modality" name="modality" style="width:100%">
+                                        <option value="">Selecciona</option>
+                                        <option value="Presencial">Presencial</option>
+                                        <option value="Distancia">Distancia</option>
+                                        <option value="Presencial y/o Distancia">Presencial y/o Distancia</option>
+                                    </select>
+                                </div>
                                 <div class="form-group ">
                                     <label class="etiquetas" for="f1-first-name">Fecha Inicio:</label>
                                     <input type="date" name="date_start" min="2017-01-01" max="2030-12-31" 
@@ -316,13 +324,13 @@ $user_name = utf8_encode($_SESSION['user_name']);
                                 </div>
                                 <div class="form-group">
                                     <label class="etiquetas" for="f1-first-name">Dias:</label>
-                                    <select class="selectpicker"  id="period" name="period" style="width: 100%" multiple="">
-                                        <option value="Dias">Lunes</option>
-                                        <option value="Semanas">Martes</option>
-                                        <option value="Meses">Miercoles</option>
-                                        <option value="Meses">Jueves</option>
-                                        <option value="Meses">Viernes</option>
-                                        
+                                    <select class="selectpicker"  id="days" name="days[]" style="width: 100%" multiple="">
+                                        <option value="Lunes">Lunes</option>
+                                        <option value="Martes">Martes</option>
+                                        <option value="Miércoles">Miércoles</option>
+                                        <option value="Jueves">Jueves</option>
+                                        <option value="Viernes">Viernes</option>
+
                                     </select>
 
                                 </div>
@@ -387,7 +395,7 @@ $user_name = utf8_encode($_SESSION['user_name']);
 
                 </div>
                 <!-- /page content -->
-                        
+
                 <!-- footer content -->
                 <footer>
 
@@ -398,8 +406,8 @@ $user_name = utf8_encode($_SESSION['user_name']);
         </div>
 
         <!-- jQuery -->
-         
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.js" defer></script>  
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.js" defer></script>  
         <script src="../vendors/jquery/dist/jquery.min.js"></script>
         <!-- Bootstrap -->
         <script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -441,7 +449,7 @@ $user_name = utf8_encode($_SESSION['user_name']);
         <script src="../build/js/custom.min.js"></script>
         <script src="../production/js/fileinput.js" type="text/javascript"></script>
         <!--form wizard-->
-        <script src="form-wizard/js/jquery-1.11.1.min.js"></script>
+
         <script src="form-wizard/bootstrap/js/bootstrap.min.js"></script>
         <script src="form-wizard/js/jquery.backstretch.min.js"></script>
         <script src="form-wizard/js/retina-1.1.0.min.js"></script>
@@ -520,9 +528,8 @@ $user_name = utf8_encode($_SESSION['user_name']);
                     tooltip: false
                 });
 
-                function gd(year, month, day) {
-                    return new Date(year, month - 1, day).getTime();
-                }
+
+            }
             });
         </script>
         <!-- /Flot -->
@@ -748,7 +755,7 @@ $user_name = utf8_encode($_SESSION['user_name']);
 
         </script>
         <!--/ Process Bar-->
-        
-       
+
+
     </body>
 </html>
