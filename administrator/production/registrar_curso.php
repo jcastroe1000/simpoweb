@@ -245,7 +245,7 @@ $user_name = utf8_encode($_SESSION['user_name']);
 
                             </div>
 
-                            <fieldset style="display: initial;width: 100%">
+                            <fieldset style="display: block;width: 100%">
 
 
 
@@ -276,13 +276,13 @@ $user_name = utf8_encode($_SESSION['user_name']);
 
                             <fieldset>
 
-                                <div class="form-group ">
+                                <div class="form-group" style="width: 40%">
                                     <label class="etiquetas" for="f1-first-name">Duración:</label>
                                     <input type="number" name="duration" min="1" max="500" id="duration" placeholder="Duración" 
                                            class="f1-first-name form-control3 " id="f1-first-name" style="width: 100%" >
 
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group" style="width: 40%">
                                     <label class="etiquetas" for="f1-first-name">Periodo:</label>
                                     <select class="combo" id="period" name="period" style="width: 100%">
                                         <option value="">Selecciona</option>
