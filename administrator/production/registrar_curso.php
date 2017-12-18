@@ -276,13 +276,13 @@ $user_name = utf8_encode($_SESSION['user_name']);
 
                             <fieldset>
 
-                                <div class="form-group" style="width: 40%">
+                                <div class="form-group" style="width: 45%;display: inline-block;">
                                     <label class="etiquetas" for="f1-first-name">Duración:</label>
                                     <input type="number" name="duration" min="1" max="500" id="duration" placeholder="Duración" 
                                            class="f1-first-name form-control3 " id="f1-first-name" style="width: 100%" >
 
                                 </div>
-                                <div class="form-group" style="width: 40%">
+                                <div class="form-group" style="width: 45%;display: inline-block;float: right">
                                     <label class="etiquetas" for="f1-first-name">Periodo:</label>
                                     <select class="combo" id="period" name="period" style="width: 100%">
                                         <option value="">Selecciona</option>
@@ -301,23 +301,23 @@ $user_name = utf8_encode($_SESSION['user_name']);
                                         <option value="Presencial y/o Distancia">Presencial y/o Distancia</option>
                                     </select>
                                 </div>
-                                <div class="form-group ">
+                                <div class="form-group" style="width: 45%;display: inline-block;">
                                     <label class="etiquetas" for="f1-first-name">Fecha Inicio:</label>
                                     <input type="date" name="date_start" min="2017-01-01" max="2030-12-31" 
                                            id="date_start" placeholder="Nombre" class="f1-first-name form-control3" id="f1-first-name" style="width: 100%">
                                 </div>
-                                <div class="form-group ">
+                                <div class="form-group" style="width: 45%;display: inline-block;float: right">
                                     <label class="etiquetas" for="f1-first-name">Fecha Final:</label>
                                     <input type="date" name="date_finish" min="2017-01-01" max="2030-12-31" 
                                            id="date_finish" placeholder="Nombre" class="f1-first-name form-control3"
                                            id="f1-first-name" style="width: 100%">
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group" style="width: 45%;display: inline-block;">
                                     <label class="etiquetas" for="f1-first-name">Hora Inicio:</label>
                                     <input type="time" name="time_start" id="time_start" placeholder="Nombre" 
                                            class="f1-first-name form-control3" id="f1-first-name" style="width: 100%">
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group" style="width: 45%;display: inline-block;float: right">
                                     <label class="etiquetas" for="f1-first-name">Hora Termino:</label>
                                     <input type="time" name="time_finish" id="time_finish" placeholder="Nombre" 
                                            class="f1-first-name form-control3" id="f1-first-name" style="width: 100%">
