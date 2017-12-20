@@ -223,8 +223,11 @@ $user_name = utf8_encode($_SESSION['user_name']);
 
                 <!-- page content -->
                 <div class="right_col" role="main">
-                    <div class="col-sm-11 col-sm-offset-1 col-md-9 col-md-offset-3 col-lg-6 col-lg-offset-3 form-box" >
-                        <form role="form" id="upload_course" name="upload_course" class="f1" style="margin-top: -35px;">
+
+                 <div class="row">
+              <div class="col-md-12">
+                                <div class="col-sm-11 col-sm-offset-1 col-md-9 col-md-offset-3 col-lg-6 col-lg-offset-3 form-box" style="height: 100%" >
+                        <form role="form" id="upload_course" name="upload_course" class="f1" style="margin-top: -15px;">
                             <h3 style="text-align: center">Registrar Curso</h3>
                             <div class="f1-steps">
                                 <div class="f1-progress">
@@ -390,7 +393,10 @@ $user_name = utf8_encode($_SESSION['user_name']);
 
                         </form>
                     </div>
-
+              </div>
+            </div>
+          <!-- /top tiles -->
+          <br />       
 
 
                 </div>
