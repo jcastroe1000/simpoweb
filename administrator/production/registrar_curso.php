@@ -465,7 +465,9 @@ $user_name = utf8_encode($_SESSION['user_name']);
         <!-- bootstrap-progressbar -->
         <script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
         <!-- Flot -->
-
+        <script src="../production/js/bootbox.js" type="text/javascript"></script>
+        <script src="../production/js/bootbox.min.js" type="text/javascript">
+            
         <script>
             $(document).ready(function () {
                 var data1 = [

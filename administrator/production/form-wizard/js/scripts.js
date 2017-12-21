@@ -38,7 +38,9 @@ jQuery(document).ready(function() {
     */
     $('.f1 fieldset:first').fadeIn('slow');
     
-    $('.f1 input[type="text"], .f1 input[type="password"], .f1 textarea').on('focus', function() {
+    $('.f1 input[type="text"], .f1 input[type="password"], .f1 textarea,\n\
+            .f1 input[type="number"], .f1 input[type="date"], .f1 input[type="time"],\n\
+            .f1 select, .f1 input[type="file"]').on('focus', function() {
     	$(this).removeClass('input-error');
     });
     
@@ -51,10 +53,15 @@ jQuery(document).ready(function() {
     	var progress_line = $(this).parents('.f1').find('.f1-progress-line');
     	
     	// fields validation
-    	parent_fieldset.find('input[type="text"], input[type="password"], textarea').each(function() {
-    		if( $(this).val() == "" ) {
-    			$(this).addClass('input-error');
-    			next_step = false;
+    	parent_fieldset.find('input[type="text"], input[type="password"], textarea,\n\
+                input[type="number"],input[type="date"],input[type="time"],select,selectpicker, input[type="file"]').each(function(){
+                if( $(this).val() == "" ) {
+                        $(this).addClass('input-error');
+                        bootbox.alert({
+                        message: "Por favor llena el siguiente Campo",
+                        size: 'small'
+                        }).$(this).val();
+                        next_step = false;
     		}
     		else {
     			$(this).removeClass('input-error');
@@ -99,10 +106,14 @@ jQuery(document).ready(function() {
     $('.f1').on('submit', function(e) {
     	
     	// fields validation
-    	$(this).find('input[type="text"], input[type="password"], textarea').each(function() {
+    	$(this).find('input[type="text"], input[type="password"], textarea,\n\
+                    input[type="number"],input[type="date"],input[type="time"],select,\n\
+                    input[type="file"]').each(function() {
     		if( $(this).val() == "" ) {
     			e.preventDefault();
+                        
     			$(this).addClass('input-error');
+                        
     		}
     		else {
     			$(this).removeClass('input-error');
