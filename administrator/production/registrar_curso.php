@@ -165,7 +165,7 @@ $user_name = utf8_encode($_SESSION['user_name']);
                     <div class="nav_menu" >
                         <nav>
                             <div class="nav toggle">
-                                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                                <a id="menu_toggle" ><i class="fa fa-bars" style="padding-bottom: 10px;" ></i></a>
                             </div>
 
 
