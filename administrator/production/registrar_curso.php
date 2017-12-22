@@ -307,13 +307,14 @@ $user_name = utf8_encode($_SESSION['user_name']);
                                 <div class="form-group" style="width: 45%;display: inline-block;">
                                     <label class="etiquetas" for="f1-first-name">Fecha Inicio:</label>
                                     <input type="date" name="date_start" min="2017-01-01" max="2030-12-31" 
-                                           id="date_start" placeholder="Nombre" class="f1-first-name form-control3" id="f1-first-name" style="width: 100%">
+                                           id="date_start" placeholder="Nombre" class="f1-first-name form-control3" 
+                                           id="f1-first-name" style="width: 100%" >
                                 </div>
                                 <div class="form-group" style="width: 45%;display: inline-block;float: right">
                                     <label class="etiquetas" for="f1-first-name">Fecha Final:</label>
                                     <input type="date" name="date_finish" min="2017-01-01" max="2030-12-31" 
                                            id="date_finish" placeholder="Nombre" class="f1-first-name form-control3"
-                                           id="f1-first-name" style="width: 100%">
+                                           id="f1-first-name" style="width: 100%" onchange="myFunction()">
                                 </div>
                                 <div class="form-group" style="width: 45%;display: inline-block;">
                                     <label class="etiquetas" for="f1-first-name">Hora Inicio:</label>
@@ -763,6 +764,23 @@ $user_name = utf8_encode($_SESSION['user_name']);
 
         </script>
         <!--/ Process Bar-->
+        
+        <script>
+            function myFunction() {
+            var x = document.getElementById("date_start");
+            var y = document.getElementById("date_finish");
+            if(x.value > y.value ){
+                alert("La fecha de Incio no puede ser mayor a la de termino");
+            }else if (x.value < y.value){
+            alert("La fecha de Incio no puede ser mayor a la de termino");
+            }
+            }
+            
+            
+    
+           
+        </script>
+
 
 
     </body>
