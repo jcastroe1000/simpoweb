@@ -290,8 +290,8 @@ $user_name = utf8_encode($_SESSION['user_name']);
                                     <select class="combo" id="period" name="period" style="width: 100%">
                                         <option value="">Selecciona</option>
                                         <option value="Dias">Dias</option>
-                                        <option value="Semanas">Semanas</option>
-                                        <option value="Meses">Meses</option>
+                                        <option value="Semanal">Semanal</option>
+                                        <option value="Mensual">Mensual</option>
                                     </select>
 
                                 </div>
@@ -324,7 +324,7 @@ $user_name = utf8_encode($_SESSION['user_name']);
                                 <div class="form-group" style="width: 45%;display: inline-block;float: right">
                                     <label class="etiquetas" for="f1-first-name">Hora Termino:</label>
                                     <input type="time" name="time_finish" id="time_finish" placeholder="Nombre" 
-                                           class="f1-first-name form-control3" id="f1-first-name" style="width: 100%">
+                                           class="f1-first-name form-control3" id="f1-first-name" style="width: 100%" onchange="getHour()">
                                 </div>
                                 <div class="form-group">
                                     <label class="etiquetas" for="f1-first-name">Dias:</label>
@@ -770,10 +770,36 @@ $user_name = utf8_encode($_SESSION['user_name']);
             var x = document.getElementById("date_start");
             var y = document.getElementById("date_finish");
             if(x.value > y.value ){
-                alert("La fecha de Incio no puede ser mayor a la de termino");
-            }else if (x.value < y.value){
-            alert("La fecha de Incio no puede ser mayor a la de termino");
+                 bootbox.alert({ 
+                 size: "small",
+                 title: "Cuidado!!",
+                 message: "La Fecha de termino no puede ser menor a la de inicio", 
+                callback: function(){ /* your callback code */ }
+                }).find('.modal-content').css({'font-weight' : 'bold', 'font-size': '16px', 'font-weight' : 'bold'} );  
+                
             }
+           
+            }
+             
+            
+    
+           
+        </script>
+        <script>
+            function getHour() {
+            var x = document.getElementById("time_start");
+            var y = document.getElementById("time_finish");
+               if(x.value > y.value ){
+                 bootbox.alert({ 
+                 size: "small",
+                 title: "Cuidado!!",
+                 message: "La hora de finalización no puede ser menor a la de incio", 
+                callback: function(){ /* your callback code */ }
+                }).find('.modal-content').css({'font-weight' : 'bold', 'font-size': '16px', 'font-weight' : 'bold'} );  
+                
+            }
+           
+            
             }
             
             
