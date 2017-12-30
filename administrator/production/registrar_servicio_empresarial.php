@@ -43,6 +43,18 @@ $user_name = utf8_encode($_SESSION['user_name']);
         <link rel="stylesheet" href="form-wizard/css/form-elements.css">
         <link rel="stylesheet" href="form-wizard/css/style.css">
         <link href="../production/css/fileinput.css" media="all" rel="stylesheet" type="text/css">
+        <!-- Latest compiled and minified CSS -->
+        <link href="../vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+        <!--Multiselect-->
+        <link rel="stylesheet" href="../production/dist/css/bootstrap-select.css">
+        <script src="../production/dist/js/bootstrap-select.js" defer></script>
+
+
+
+
+
+
+
     </head>
 
     <body class="nav-md">
@@ -153,7 +165,7 @@ $user_name = utf8_encode($_SESSION['user_name']);
                     <div class="nav_menu" >
                         <nav>
                             <div class="nav toggle">
-                                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                                <a id="menu_toggle" ><i class="fa fa-bars" style="padding-bottom: 10px;" ></i></a>
                             </div>
 
 
@@ -201,7 +213,7 @@ $user_name = utf8_encode($_SESSION['user_name']);
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-body" style="text-align: center;padding:20px">
-                                    <h3>Servicio Empresarial Creado Exitosamente...</h3>
+                                    <h3>Curso Creado Exitosamente...</h3>
                                 </div>
                             </div>
                         </div>
@@ -211,9 +223,12 @@ $user_name = utf8_encode($_SESSION['user_name']);
 
                 <!-- page content -->
                 <div class="right_col" role="main">
-                    <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 form-box" >
-                        <form role="form" id="upload_course" name="upload_course" class="f1" style="margin-top: -35px;">
-                            <h3 style="text-align: center">Registrar Servicio Empresarial</h3>
+
+                 <div class="row">
+              <div class="col-md-12">
+                                <div class="col-sm-11 col-sm-offset-1 col-md-9 col-md-offset-3 col-lg-6 col-lg-offset-3 form-box" style="height: 100%" >
+                        <form role="form" id="upload_course" name="upload_course" class="f1" style="margin-top: -15px;">
+                            <h3 style="text-align: center">Registrar Curso</h3>
                             <div class="f1-steps">
                                 <div class="f1-progress">
                                     <div class="f1-progress-line" data-now-value="16.66" data-number-of-steps="3" style="width: 16.66%;"></div>
@@ -230,102 +245,124 @@ $user_name = utf8_encode($_SESSION['user_name']);
                                     <div class="f1-step-icon"><i class="fa fa-file"></i></div>
                                     <p>Tercer Paso</p>
                                 </div>
+
                             </div>
 
-                            <fieldset>
+                            <fieldset style="display: block;width: 100%">
+
+
+
 
                                 <div class="form-group">
                                     <label class="etiquetas" for="f1-first-name">Nombre:</label>
-                                    <input type="text" name="name" id="name" placeholder="Nombre" class="f1-first-name form-control3" id="f1-first-name" style="margin-left: 3.5%;">
+                                    <input type="text" name="name" id="name" placeholder="Nombre" class="f1-first-name form-control3" id="f1-first-name" style="width: 100%">
                                 </div>
                                 <div class="form-group">
-                                    <label class="etiquetas" for="f1-last-name">Resumen</label>
-                                    <textarea name="review" id="review" placeholder="Resumen..." style="height: 110px;margin-left: 2%;"
+                                    <label class="etiquetas" for="f1-last-name">Resumen:</label>
+                                    <textarea name="review" id="review" placeholder="Resumen..." style="height: 110px;width: 100%"
                                               class="f1-about-yourself form-control3" id="f1-about-yourself" ></textarea>
                                 </div>
                                 <div class="form-group">
-                                    <label class="etiquetas" for="f1-about-yourself">Dirigido</label>
-                                    <textarea name="addressed" id="addressed" placeholder="Dirigido..." style="height: 100px;margin-left: 4%;"
-                                              class="f1-about-yourself form-control3" id="f1-about-yourself"></textarea>
+                                    <label class="etiquetas" for="f1-about-yourself">Dirigido:</label>
+                                    <textarea name="addressed" id="addressed" placeholder="Dirigido..." style="height: 100px;width: 100%"
+                                              class="f1-about-yourself form-control3 " id="f1-about-yourself"></textarea>
                                 </div>
                                 <div class="form-group">
-                                    <label class="etiquetas" for="f1-about-yourself">Objetivo</label>
-                                    <textarea name="objetive" id="objetive" placeholder="Objetivo" style="height: 140px;margin-left: 4%;"
-                                              class="f1-about-yourself form-control3" id="f1-about-yourself"></textarea>
+                                    <label class="etiquetas" for="f1-about-yourself">Objetivo:</label>
+                                    <textarea name="objetive" id="objetive" placeholder="Objetivo" style="height: 140px;width: 100%"
+                                              class="f1-about-yourself form-control3 " id="f1-about-yourself"></textarea>
                                 </div>
                                 <div class="f1-buttons">
-                                    <button type="button" class="btn btn-next">Siguiente</button>
+                                    <button type="button" class="btn btn-next" style="color: white;">Siguiente</button>
                                 </div>
                             </fieldset>
 
                             <fieldset>
 
-                                <div class="form-group ">
+                                <div class="form-group" style="width: 45%;display: inline-block;">
                                     <label class="etiquetas" for="f1-first-name">Duración:</label>
-                                    <input type="number" name="duration" min="1" max="500" id="duration" placeholder="Duración" class="f1-first-name form-control3" id="f1-first-name" style="margin-left: 3%;">
+                                    <input type="number" name="duration" min="1" max="500" id="duration" placeholder="Duración" 
+                                           class="f1-first-name form-control3 " id="f1-first-name" style="width: 100%" >
 
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group" style="width: 45%;display: inline-block;float: right">
                                     <label class="etiquetas" for="f1-first-name">Periodo:</label>
-                                    <select class="combo" id="period" name="period" style="margin-left: 4%;">
+                                    <select class="combo" id="period" name="period" style="width: 100%">
                                         <option value="">Selecciona</option>
                                         <option value="Dias">Dias</option>
-                                        <option value="Semanas">Semanas</option>
-                                        <option value="Meses">Meses</option>
+                                        <option value="Semanal">Semanal</option>
+                                        <option value="Mensual">Mensual</option>
                                     </select>
 
                                 </div>
-                                <h2>Fecha</h2>
-                                <div class="form-group ">
-                                    <label class="etiquetas" for="f1-first-name">Inicio:</label>
-                                    <input type="date" name="date_start" min="2017-01-01" max="2030-12-31" id="date_start" placeholder="Nombre" class="f1-first-name form-control3" id="f1-first-name" style="margin-left: 6%">
-                                </div>
-                                <div class="form-group ">
-                                    <label class="etiquetas" for="f1-first-name">Final:</label>
-                                    <input type="date" name="date_finish" min="2017-01-01" max="2030-12-31" id="date_finish" placeholder="Nombre" class="f1-first-name form-control3" id="f1-first-name" style="margin-left: 6%">
-                                </div>
-                                <h2>Horario</h2>
-                                <div class="form-group">
-                                    <label class="etiquetas" for="f1-first-name">Inicio:</label>
-                                    <input type="time" name="time_start" id="time_start" placeholder="Nombre" class="f1-first-name form-control3" id="f1-first-name" style="margin-left: 6%">
-                                </div>
-                                <div class="form-group">
-                                    <label class="etiquetas" for="f1-first-name">Inicio:</label>
-                                    <input type="time" name="time_finish" id="time_finish" placeholder="Nombre" class="f1-first-name form-control3" id="f1-first-name" style="margin-left: 6%">
-                                </div>
                                 <div class="form-group">
                                     <label class="etiquetas" for="f1-first-name">Modalidad:</label>
-                                    <select class="f1-first-name combo" id="modality" name="modality" style="margin-left: 2px;">
+                                    <select class="f1-first-name combo" id="modality" name="modality" style="width:100%">
                                         <option value="">Selecciona</option>
                                         <option value="Presencial">Presencial</option>
                                         <option value="Distancia">Distancia</option>
                                         <option value="Presencial y/o Distancia">Presencial y/o Distancia</option>
                                     </select>
                                 </div>
+                                <div class="form-group" style="width: 45%;display: inline-block;">
+                                    <label class="etiquetas" for="f1-first-name">Fecha Inicio:</label>
+                                    <input type="date" name="date_start" min="2017-01-01" max="2030-12-31" 
+                                           id="date_start" placeholder="Nombre" class="f1-first-name form-control3" 
+                                           id="f1-first-name" style="width: 100%" >
+                                </div>
+                                <div class="form-group" style="width: 45%;display: inline-block;float: right">
+                                    <label class="etiquetas" for="f1-first-name">Fecha Final:</label>
+                                    <input type="date" name="date_finish" min="2017-01-01" max="2030-12-31" 
+                                           id="date_finish" placeholder="Nombre" class="f1-first-name form-control3"
+                                           id="f1-first-name" style="width: 100%" onchange="myFunction()">
+                                </div>
+                                <div class="form-group" style="width: 45%;display: inline-block;">
+                                    <label class="etiquetas" for="f1-first-name">Hora Inicio:</label>
+                                    <input type="time" name="time_start" id="time_start" placeholder="Nombre" 
+                                           class="f1-first-name form-control3" id="f1-first-name" style="width: 100%">
+                                </div>
+                                <div class="form-group" style="width: 45%;display: inline-block;float: right">
+                                    <label class="etiquetas" for="f1-first-name">Hora Termino:</label>
+                                    <input type="time" name="time_finish" id="time_finish" placeholder="Nombre" 
+                                           class="f1-first-name form-control3" id="f1-first-name" style="width: 100%" onchange="getHour()">
+                                </div>
+                                <div class="form-group">
+                                    <label class="etiquetas" for="f1-first-name">Dias:</label>
+                                    <select class="selectpicker"  id="days" name="days[]" style="width: 100%" multiple="">
+                                        <option value="Lunes">Lunes</option>
+                                        <option value="Martes">Martes</option>
+                                        <option value="Miércoles">Miércoles</option>
+                                        <option value="Jueves">Jueves</option>
+                                        <option value="Viernes">Viernes</option>
+
+                                    </select>
+
+                                </div>
                                 <div class="f1-buttons">
                                     <button type="button" class="btn btn-previous">Anterior</button>
-                                    <button type="button" class="btn btn-next">Siguiente</button>
+                                    <button type="button" class="btn btn-next" style="color:#fff;">Siguiente</button>
                                 </div>
                             </fieldset>
 
                             <fieldset>
                                 <div class="form-group">
                                     <label class="etiquetas" for="f1-last-name">Requisitos:</label>
-                                    <textarea name="requirements" id="requirements" placeholder="Resumen..." style="height: 123px;margin-left: 1%;"
+                                    <textarea name="requirements" id="requirements" placeholder="Resumen..." style="height: 123px;width:100%;"
                                               class="f1-about-yourself form-control3" id="f1-about-yourself" ></textarea>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label col-md-1 col-sm-1 FolksDecoon etiquetas" for="f1-about-yourself">Inf. Adicional</label>
-                                    <textarea name="aditional_information" id="aditional_information" placeholder="Dirigido..." style="height: 123px;margin-left: 5%;"
+                                    <label class="control-label etiquetas FolksDecoon" for="f1-about-yourself">Información Adicional</label>
+                                    <textarea name="aditional_information" id="aditional_information" placeholder="Dirigido..." style="height: 123px;width: 100%"
                                               class="f1-about-yourself form-control3" id="f1-about-yourself"></textarea>
                                 </div>
                                 <div class="form-group">
                                     <label class="etiquetas" for="f1-first-name">Costo:</label>
-                                    <input type="number" name="cost" id="cost" min="1" max="1000000"  class="f1-first-name form-control3" id="f1-first-name" style="margin-left: 6%;">
+                                    <input type="number" name="cost" id="cost" min="1" max="1000000"  class="f1-first-name form-control3" 
+                                           id="f1-first-name" style="width: 100%" placeholder="Ingresa un monto">
                                 </div>
                                 <div class="form-group">
-                                    <label class="etiquetas" for="f1-first-name">Mét. Pago:</label>
-                                    <select class="f1-first-name combo" id="pay_method" name="pay_method" style="margin-left: 4px;">
+                                    <label class="etiquetas" for="f1-first-name">Método de Pago:</label>
+                                    <select class="f1-first-name combo" id="pay_method" name="pay_method" style="width: 100%">
                                         <option value="">Selecciona</option>
                                         <option value="Depósito Bancario">Depósito Bancario</option>
                                         <option value="Efectivo">Efectivo</option>
@@ -333,9 +370,9 @@ $user_name = utf8_encode($_SESSION['user_name']);
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <!--                                    <label class="etiquetas" for="f1-first-name" style="">Archivo:</label>-->
+                                    <label class="etiquetas" for="f1-first-name">Selecciona una imagen:</label>
                                     <input type="file"  id="file_image" name="file_image" class="f1-first-name file" data-show-preview="false"
-                                           style="display: inline-table;">
+                                           style="display: inline-table;width: 100%" placeholder="Selecciona una imagen">
                                 </div>
                                 <div class="form-group" >
                                     <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="first-name" style="color: black"> </label>
@@ -357,12 +394,15 @@ $user_name = utf8_encode($_SESSION['user_name']);
 
                         </form>
                     </div>
-
+              </div>
+            </div>
+          <!-- /top tiles -->
+          <br />       
 
 
                 </div>
                 <!-- /page content -->
-                        
+
                 <!-- footer content -->
                 <footer>
 
@@ -373,6 +413,8 @@ $user_name = utf8_encode($_SESSION['user_name']);
         </div>
 
         <!-- jQuery -->
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.js" defer></script>  
         <script src="../vendors/jquery/dist/jquery.min.js"></script>
         <!-- Bootstrap -->
         <script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -414,7 +456,7 @@ $user_name = utf8_encode($_SESSION['user_name']);
         <script src="../build/js/custom.min.js"></script>
         <script src="../production/js/fileinput.js" type="text/javascript"></script>
         <!--form wizard-->
-        <script src="form-wizard/js/jquery-1.11.1.min.js"></script>
+
         <script src="form-wizard/bootstrap/js/bootstrap.min.js"></script>
         <script src="form-wizard/js/jquery.backstretch.min.js"></script>
         <script src="form-wizard/js/retina-1.1.0.min.js"></script>
@@ -424,7 +466,9 @@ $user_name = utf8_encode($_SESSION['user_name']);
         <!-- bootstrap-progressbar -->
         <script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
         <!-- Flot -->
-
+        <script src="../production/js/bootbox.js" type="text/javascript"></script>
+        <script src="../production/js/bootbox.min.js" type="text/javascript">
+            
         <script>
             $(document).ready(function () {
                 var data1 = [
@@ -493,9 +537,8 @@ $user_name = utf8_encode($_SESSION['user_name']);
                     tooltip: false
                 });
 
-                function gd(year, month, day) {
-                    return new Date(year, month - 1, day).getTime();
-                }
+
+            }
             });
         </script>
         <!-- /Flot -->
@@ -721,6 +764,50 @@ $user_name = utf8_encode($_SESSION['user_name']);
 
         </script>
         <!--/ Process Bar-->
+        
+        <script>
+            function myFunction() {
+            var x = document.getElementById("date_start");
+            var y = document.getElementById("date_finish");
+            if(x.value > y.value ){
+                 bootbox.alert({ 
+                 size: "small",
+                 title: "Cuidado!!",
+                 message: "La Fecha de termino no puede ser menor a la de inicio", 
+                callback: function(){ /* your callback code */ }
+                }).find('.modal-content').css({'font-weight' : 'bold', 'font-size': '16px', 'font-weight' : 'bold'} );  
+                
+            }
+           
+            }
+             
+            
+    
+           
+        </script>
+        <script>
+            function getHour() {
+            var x = document.getElementById("time_start");
+            var y = document.getElementById("time_finish");
+               if(x.value > y.value ){
+                 bootbox.alert({ 
+                 size: "small",
+                 title: "Cuidado!!",
+                 message: "La hora de finalización no puede ser menor a la de incio", 
+                callback: function(){ /* your callback code */ }
+                }).find('.modal-content').css({'font-weight' : 'bold', 'font-size': '16px', 'font-weight' : 'bold'} );  
+                
+            }
+           
+            
+            }
+            
+            
+    
+           
+        </script>
+
+
 
     </body>
 </html>

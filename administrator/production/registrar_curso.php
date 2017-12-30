@@ -227,7 +227,7 @@ $user_name = utf8_encode($_SESSION['user_name']);
                  <div class="row">
               <div class="col-md-12">
                                 <div class="col-sm-11 col-sm-offset-1 col-md-9 col-md-offset-3 col-lg-6 col-lg-offset-3 form-box" style="height: 100%" >
-                        <form role="form" id="upload_course" name="upload_course" class="f1" style="margin-top: -15px;">
+                        <form role="form" id="create_course" name="create_course" class="f1" style="margin-top: -15px;">
                             <h3 style="text-align: center">Registrar Curso</h3>
                             <div class="f1-steps">
                                 <div class="f1-progress">
@@ -462,7 +462,7 @@ $user_name = utf8_encode($_SESSION['user_name']);
         <script src="form-wizard/js/retina-1.1.0.min.js"></script>
         <script src="form-wizard/js/scripts.js"></script>
         <script src="../production/js/fileinput.js" type="text/javascript"></script>
-        <script src="../production/js/upload_course.js"></script>
+        <script src="../production/js/create/create_course.js"></script>
         <!-- bootstrap-progressbar -->
         <script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
         <!-- Flot -->
@@ -747,7 +747,7 @@ $user_name = utf8_encode($_SESSION['user_name']);
             $('#myModal').on('shown.bs.modal', function () {
                 var progress = setInterval(function () {
                     var $bar = $('.bar');
-                    if ($bar.width() == 500) {
+                    if ($bar.width() == 550) {
                         // complete
                         clearInterval(progress);
                         $('.progress').removeClass('active');
@@ -759,7 +759,7 @@ $user_name = utf8_encode($_SESSION['user_name']);
                     }
 
                     $bar.text($bar.width() / 5 + "%");
-                }, 800);
+                }, 720);
             })
 
         </script>
