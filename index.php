@@ -8,7 +8,7 @@
         <meta charset="utf-8">
         <!-- Always force latest IE rendering engine or request Chrome Frame -->
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Blue One Page HTML Template</title>		
+        <title>SimpoWeb</title>		
         <!-- Meta Description -->
         <meta name="description" content="Blue One Page Creative HTML5 Template">
         <meta name="keywords" content="one page, single page, onepage, responsive, parallax, creative, business, html5, css3, css3 animation">
@@ -36,15 +36,50 @@
         <link rel="stylesheet" href="css/animate.css">
         <!-- Main Stylesheet -->
         <link rel="stylesheet" href="css/main.css">
+        <!--Contacto Form-->
 
+        <link rel="stylesheet" href="css/form.css">
+        <link rel="stylesheet" type="text/css" href="css/font-face.css">
         <!-- Modernizer Script for old Browsers -->
         <script src="js/modernizr-2.6.2.min.js"></script>
+        <script src="js/bootbox.js"></script>
+        <script src="js/bootbox.min.js"></script>
 
 
     </head>
 
     <body id="body">
+        <!--Modal ProgressBar-->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="myModalLabel"><i class="fa fa-clock-o"></i> Por favor espera</h4>
+                    </div>
+                    <div class="modal-body center-block">
+                        <p>Estamos guardando la información</p>
+                        <div class="progress">
+                            <div class="progress-bar bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
 
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
+
+        <!--Inicia modal exitoso-->
+        <div id="cargando" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body" style="text-align: center;padding:20px">
+                        <h3>Seminario Creado Exitosamente...</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Termina modal-->
         <!-- preloader -->
         <div id="preloader">
             <div class="loder-box">
@@ -65,24 +100,28 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
+
                     </button>
                     <!-- /responsive nav button -->
 
                     <!-- logo -->
                     <h1 class="navbar-brand">
-                        <a href="#body">Blue</a>
+                        <a href="#body">Inicio</a>
                     </h1>
                     <!-- /logo -->
                 </div>
 
                 <!-- main nav -->
                 <nav class="collapse navbar-collapse navbar-right" role="navigation">
-                    <ul id="nav" class="nav navbar-nav">
-                        <li><a href="#body">Home</a></li>
-                        <li><a href="#service">Servicios</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#contact">Contacto</a></li>
-                        <li><a href="#footer">Suscríbete</a></li>
+                    <ul  class="nav navbar-nav">
+
+                        <li><a class="scroll-link" data-id="service">Servicios</a></li>
+                        <li><a class="scroll-link" data-id="portfolio">Portfolio</a></li>
+                        <li><a class="scroll-link" data-id="contact">Contacto</a></li>
+                        <li><a class="scroll-link" data-id="footer">Suscríbete</a></li>
+                        <li><a href="directorio.php">Directorio</a></li>
+                        <li><a href="preguntas_freguentes.php">FAQ'S</a></li>
+
                     </ul>
                 </nav>
                 <!-- /main nav -->
@@ -112,7 +151,7 @@
                                 <div class="caption-content">
                                     <h2 class="animated fadeInDown">ACTIVIDADES ACADEMICAS</h2>
                                     <span class="animated fadeInDown">ESIQIE-IPN</span>
-                                    <a  class="btn btn-blue btn-effect" data-toggle="modal" data-target="#gridSystemModal">REGISTRATE</a>
+                                    <a href="" class="btn btn-blue btn-effect" data-toggle="modal" data-target="#gridSystemModal">REGISTRATE</a>
                                 </div>
                             </div>
 
@@ -123,7 +162,7 @@
                             <div class="bg-img bg-img-2"></div>
                             <div class="slide-caption">
                                 <div class="caption-content">
-                                    <h2 class="animated fadeInDown">ACTIVIDADES ACADEMICAS</h2>
+                                    <h2 class="animated fadeInDown">ACTIVIDADES ACADEMICAS 1</h2>
                                     <span class="animated fadeInDown">ESIQIE-IPN</span>
                                     <a href="#" class="btn btn-blue btn-effect" data-toggle="modal" data-target="#gridSystemModal">REGISTRATE</a>
                                 </div>
@@ -136,7 +175,31 @@
                             <div class="bg-img bg-img-3"></div>
                             <div class="slide-caption">
                                 <div class="caption-content">
-                                    <h2 class="animated fadeInDown">ACTIVIDADES ACADEMICAS</h2>
+                                    <h2 class="animated fadeInDown">ACTIVIDADES ACADEMICAS 2</h2>
+                                    <span class="animated fadeInDown">ESIQIE-IPN</span>
+                                    <a href="#" class="btn btn-blue btn-effect">REGISTRATE</a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="3" data-slice2-rotation="3" data-slice1-scale="2" data-slice2-scale="1">
+
+                            <div class="bg-img bg-img-4"></div>
+                            <div class="slide-caption">
+                                <div class="caption-content">
+                                    <h2 class="animated fadeInDown">ACTIVIDADES ACADEMICAS 4</h2>
+                                    <span class="animated fadeInDown">ESIQIE-IPN</span>
+                                    <a href="#" class="btn btn-blue btn-effect">REGISTRATE</a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="3" data-slice2-rotation="3" data-slice1-scale="2" data-slice2-scale="1">
+
+                            <div class="bg-img bg-img-5"></div>
+                            <div class="slide-caption">
+                                <div class="caption-content">
+                                    <h2 class="animated fadeInDown">ACTIVIDADES ACADEMICAS 5</h2>
                                     <span class="animated fadeInDown">ESIQIE-IPN</span>
                                     <a href="#" class="btn btn-blue btn-effect">REGISTRATE</a>
                                 </div>
@@ -153,7 +216,7 @@
                     </nav>
                     -->
                     <div id="gridSystemModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
+                        <div class="modal-dialog"> 
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -161,30 +224,137 @@
                                 </div>
                                 <div class="modal-body">
                                     <div class="container-fluid bd-example-row">
-                                        <!--form-->
+                                        <div class="x_panel">
+                                            <div class="x_title">
+
+
+                                                <div class="clearfix"></div>
+                                            </div>
+                                            <div class="x_content">
+                                                <br />
+                                                <form id="create_user"  name="create_user" class="form-horizontal form-label-left input_mask" >
+
+                                                    <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                                                        <input type="text" class="form-control has-feedback-left " id="name" name="name" placeholder="Nombre (s)"
+                                                               title="Ingresa tu Nombre">
+                                                        <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
+                                                    </div>
+
+                                                    <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                                                        <input type="text" class="form-control" id="surnames" name="surnames" placeholder="Apellidos" >
+                                                        <span class="fa fa-user form-control-feedback right" aria-hidden="true"></span>
+                                                    </div>
+
+                                                    <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                                                        <input type="text" class="form-control has-feedback-left" id="email_contact" name="email_contact" placeholder="Correo Electrónico">
+                                                        <span class="fa fa-envelope form-control-feedback left" aria-hidden="true"></span>
+                                                    </div>
+
+                                                    <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                                                        <input type="text" class="form-control" id="telephone_contact" name="telephone_contact" placeholder="Teléfono">
+                                                        <span class="fa fa-phone form-control-feedback right" aria-hidden="true"></span>
+                                                    </div>
+                                                    <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                                                        <input type="text" class="form-control has-feedback-left" id="password" name="password" placeholder="Contraseña">
+                                                        <span class="fa fa-lock form-control-feedback left" aria-hidden="true"></span>
+                                                    </div>
+
+                                                    <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                                                        <input type="text" class="form-control" id="confirm_password" name="confirm_password" placeholder="Confirmar Contraseña">
+                                                        <span class="fa fa-lock form-control-feedback right" aria-hidden="true"></span>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input type="hidden" type="text" class="form-control" name="creation_date" id="creation_date" value="<?php echo date("Y/m/d") ?>">
+                                                    </div>
+                                                    <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+
+                                                        <div class=" selectContainer">
+                                                            <select class="form-control" name="gender">
+                                                                <option value="">Genero</option>
+                                                                <option value="Mujer">Feminino</option>
+                                                                <option value="Hombre">Masculino</option>
+                                                            </select>
+                                                        </div>
+                                                    </div> 
+                                                    <!--                                                    <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+
+                                                        <div class=" selectContainer">
+                                                            <select class="form-control" name="city" required>
+                                                                <option value="">Soy de....</option>
+                                                                <option value="Aguascalientes">Aguascalientes</option>
+                                                                <option value="Baja California">Baja California</option>
+                                                                <option value="Baja California Sur">Baja California Sur</option>
+                                                                <option value="Campeche">Campeche</option>
+                                                                <option value="Chiapas">Chiapas</option>
+                                                                <option value="Chihuahua">Chihuahua</option>
+                                                                <option value="Ciudad de México">Ciudad de México</option>
+                                                                <option value="Coahuila">Coahuila</option>
+                                                                <option value="Colima">Colima</option>
+                                                                <option value="Durango">Durango</option>
+                                                                <option value="Estado de México">Estado de México</option>
+                                                                <option value="Guanajuato">Guadalajara</option>
+                                                                <option value="Guanajuato">Guanajuato</option>
+                                                                <option value="Hidalgo">Hidalgo</option>
+                                                                <option value="Michoacán">Michoacán</option>
+                                                                <option value="Morelos">Morelos</option>
+                                                                <option value="Monterrey">Monterrey</option>
+                                                                <option value="Nayarit">Nayarit</option>
+                                                                <option value="Oaxaca">Oaxaca</option>
+                                                                <option value="Puebla">Puebla</option>
+                                                                <option value="Querétaro">Querétaro</option>
+                                                                <option value="Quintana Roo">Quintana Roo</option>
+                                                                <option value="San Luis Potosí">San Luis Potosí</option>
+                                                                <option value="Sinaloa">Sinaloa</option>
+                                                                <option value="Sonora">Sonora</option>
+                                                                <option value="Tabasco">Tabasco</option>
+                                                                <option value="Tamaulipas">Tamaulipas</option>
+                                                                <option value="Tlaxcala">Tlaxcala</option>
+                                                                <option value="Veracruz">Veracruz</option>
+                                                                <option value="Yucatán">Yucatán</option>
+                                                                <option value="Zacatecas">Zacatecas</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>   -->
+
+
+                                                    <div class="ln_solid"></div>
+                                                    <div class="form-group">
+                                                        <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-4" style="margin-top: 25px">
+                                                            <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
+                                                            <button type="submit" class="btn btn-success">Registrarme</button>
+                                                        </div>
+                                                    </div>
+
+                                                </form>
+                                            </div>
+                                        </div>
 
                                     </div>
-                                </div>
-
+                                </div>    
                             </div>
                         </div>
+
                     </div>
+                </div>
+                
 
-                    <nav id="nav-arrows" class="nav-arrows hidden-xs hidden-sm visible-md visible-lg">
-                        <a href="javascript:;" class="sl-prev">
-                            <i class="fa fa-angle-left fa-3x"></i>
-                        </a>
-                        <a href="javascript:;" class="sl-next">
-                            <i class="fa fa-angle-right fa-3x"></i>
-                        </a>
-                    </nav>
+                <nav id="nav-arrows" class="nav-arrows hidden-xs hidden-sm visible-md visible-lg">
+                    <a href="javascript:;" class="sl-prev">
+                        <i class="fa fa-angle-left fa-3x"></i>
+                    </a>
+                    <a href="javascript:;" class="sl-next">
+                        <i class="fa fa-angle-right fa-3x"></i>
+                    </a>
+                </nav>
 
 
-                    <nav id="nav-dots" class="nav-dots visible-xs visible-sm hidden-md hidden-lg">
-                        <span class="nav-dot-current"></span>
-                        <span></span>
-                        <span></span>
-                    </nav>
+                <nav id="nav-dots" class="nav-dots visible-xs visible-sm hidden-md hidden-lg">
+                    <span class="nav-dot-current"></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </nav>
 
                 </div><!-- /slider-wrapper -->
             </section>
@@ -194,39 +364,19 @@
             ==================================== -->
 
             <!-- about section -->
-            <section id="about" >
+<!--            <section id="about" >
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-5 wow animated fadeInLeft">
-                            <div class="recent-works">
-                                <h3>DIRECTORIO</h3>
-                                <div id="works">
-                                    <div class="work-item">
-                                        <p>1</p>
-                                        <BR>
-                                        <p>2</p>
-                                    </div>
-                                    <div class="work-item">
-                                        <p>3</p>
-                                        <br>
-                                        <p>4</p>
-                                    </div>
-                                    <div class="work-item">
-                                        <p>5</p>
-                                        <br>
-                                        <p>6</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-md-offset-1 wow animated fadeInRight">
-                            <div class="welcome-block">
-                                <h3>¿Quiénes Somos?</h3>								
-                                <div class="message-body">
 
-                                    <p>El objetivo del Simposium es propiciar un mayor intercambio de información entre profesores e investigadores de las diversas instituciones de educación en los ámbitos nacionales e internacionales, así como representantes del sector productivo.   </p>
+                        <div class="col-md-8 col-md-offset-2 wow animated fadeInRight ">
+                            <div class="welcome-block center-block">
+                                <h3 style="text-align: center">¿Quiénes Somos?</h3>								
+                                <div class="message-body" style="text-align: justify">
+
+                                    <h4 style="color: white;padding:5px;line-height: 30px ">El objetivo del Simposium es propiciar un mayor intercambio de información entre profesores e investigadores de las diversas instituciones de educación en los ámbitos nacionales e internacionales, así como representantes del sector productivo.</h4>
                                 </div>
-                                <a href="" class="btn btn-border btn-effect center-block" data-toggle="modal" data-target="#QuienesSomos">Leer Más</a>
+
+                                <a  class="btn btn-border btn-effect col-md-offset-5 button_index" data-toggle="modal" data-target="#QuienesSomos">Leer Más</a>
 
                             </div>
                         </div>
@@ -239,7 +389,7 @@
                                     </div>
                                     <div class="modal-body">
                                         <div class="container-fluid bd-example-row">
-                                            <!--form-->
+                                            form
                                             <h5 style="text-align: justify">El objetivo del Simposium es propiciar un mayor intercambio de información entre
                                                 profesores e investigadores de las diversas instituciones de educación en los ámbitos nacionales 
                                                 e internacionales, así como representantes del sector productivo.</h5>   
@@ -250,7 +400,7 @@
                                         </div>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary center-block" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary center-block" data-dismiss="modal">Cerrar</button>
 
                                     </div>
 
@@ -259,7 +409,7 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section>-->
             <!-- end about section -->
 
 
@@ -269,93 +419,63 @@
                     <div class="row">
 
                         <div class="sec-title text-center">
-                            <h2 class="wow animated bounceInLeft">Servicios</h2>
-                            <p class="wow animated bounceInRight">The Key Features of our Job</p>
+                            <h2 class="Sansumi">Servicios</h2>
+                            <h4 class="wow animated bounceInRight tenby_five" style="font-size: 18px">Selecciona El Servicio De Tu Interes</h4>
                         </div>
 
 
-                        <div class="container">
-                            <br>
-                            <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                                <!-- Indicators -->
-                                <ol class="carousel-indicators">
-                                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                                    <li data-target="#myCarousel" data-slide-to="1"></li>
-
-                                </ol>
-
-                                <!-- Wrapper for slides -->
-                                <div class="carousel-inner" role="listbox">
-
-                                    <div class="item active">
-                                        <div class="col-md-3 col-sm-6 col-xs-12 col-md-offset-1 text-center wow animated zoomIn">
-                                            <div class="service-item">
-                                                <div class="service-icon">
-                                                    <i class="fa fa-home fa-3x"></i>
-                                                </div>
-                                                <h3>Support</h3>
-                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3 col-sm-6 col-xs-12 text-center wow animated zoomIn" data-wow-delay="0.3s">
-                                            <div class="service-item">
-                                                <div class="service-icon">
-                                                    <i class="fa fa-tasks fa-3x"></i>
-                                                </div>
-                                                <h3>Well Documented</h3>
-                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3 col-sm-6 col-xs-12 text-center wow animated zoomIn" data-wow-delay="0.6s">
-                                            <div class="service-item">
-                                                <div class="service-icon">
-                                                    <i class="fa fa-clock-o fa-3x"></i>
-                                                </div>
-                                                <h3>Design UI/UX</h3>
-                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                                            </div>
-                                        </div>
+                        <div class="container" >
+                            <div class="col-md-33 text-center wow animated zoomIn" data-wow-delay="0.3s" >
+                                <div class="service-item" style="padding-top: 60px;">
+                                    <div class="service-icon">
+                                        <i class="fa fa-mortar-board fa-3x"></i>
                                     </div>
-
-                                    <div class="item">
-                                        <div class="col-md-4 col-sm-6 col-xs-12 col-md-offset-3 text-center wow animated zoomIn" data-wow-delay="0.6s">
-                                            <div class="service-item">
-                                                <div class="service-icon">
-                                                    <i class="fa fa-clock-o fa-3x"></i>
-                                                </div>
-                                                <h3>Design UI/UX</h3>
-                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3 col-sm-6 col-xs-12 text-center wow animated zoomIn" data-wow-delay="0.6s">
-                                            <div class="service-item">
-                                                <div class="service-icon">
-                                                    <i class="fa fa-tasks fa-3x"></i>
-                                                </div>
-                                                <h3>Well Documented</h3>
-                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                                            </div>
-                                        </div>
-                                        
-
-
-                                    </div>
-
-
-
+                                    <h3 class="FolksDecoon" style="font-weight: bold">SEMINARIOS</h3>
+<!--                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>-->
                                 </div>
-
-
-                                <!-- Left and right controls -->
-                                <a class="left carousel-control " href="#myCarousel" role="button" data-slide="prev" >
-                                    <span class="fa fa-angle-left fa-3x" aria-hidden="true"></span>
-                                    <span class="sr-only">Previous</span>
-                                </a>
-                                <a class="right carousel-control " href="#myCarousel" role="button" data-slide="next">
-                                    <span class="fa fa-angle-right fa-3x" aria-hidden="true"></span>
-                                    <span class="sr-only">Next</span>
-                                </a>
                             </div>
+                            <div class="col-md-33   text-center wow animated zoomIn" data-wow-delay="0.3s">
+                                <a  href="simposiums.php"><div class="service-item" style="padding-top: 60px;">
+                                        <div class="service-icon">
+                                            <i class="fa fa-laptop fa-3x"></i>
+                                        </div>
+                                        <h3 class="FolksDecoon" style="font-weight: bold">SIMPOSIUMS</h3>
+
+<!--                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>-->
+                                    </div></a>
+                            </div>
+                            <div class="col-md-33   text-center wow animated zoomIn" data-wow-delay="0.3s">
+                                <a href="cursos_talles_dimplomados.php"><div class="service-item" style="padding-top: 60px;">
+                                        <div class="service-icon">
+                                            <i class="fa fa-briefcase fa-3x"></i>
+                                        </div>
+                                        <h3 class="FolksDecoon" style="font-weight: bold">Diplomados</h3>
+                                        <h3 class="FolksDecoon" style="font-weight: bold">Talleres</h3>
+                                        <h3 class="FolksDecoon" style="font-weight: bold">Cursos</h3>
+    <!--                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>-->
+                                    </div></a>
+                            </div>
+                            <div class="col-md-33   text-center wow animated zoomIn" data-wow-delay="0.3s">
+                                <a href="servicios_empresariales.php"><div class="service-item" style="padding-top: 60px;">
+                                        <div class="service-icon">
+                                            <i class="fa fa-building fa-3x"></i>
+                                        </div>
+                                        <h3 class="FolksDecoon" style="font-weight: bold">SERVICIOS EMPRESARIALES</h3>
+    <!--                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>-->
+                                    </div></a>
+                            </div>
+                            <div class="col-md-33 text-center wow animated zoomIn" data-wow-delay="0.3s">
+                                <div class="service-item" style="padding-top: 60px;">
+                                    <div class="service-icon">
+                                        <i class="fa fa-book fa-3x"></i>
+                                    </div>
+                                    <h3 class="FolksDecoon" style="font-weight: bold">REVISTA</h3>
+<!--                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>-->
+                                </div>
+                            </div>
+
+
+
                         </div>
                     </div>    
                 </div>    
@@ -368,7 +488,7 @@
                     <div class="row">
 
                         <div class="sec-title text-center wow animated fadeInDown">
-                            <h2>FEATURED PROJECTS</h2>
+                            <h2 class="Sansumi">NUESTROS PROYECTOS</h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                         </div>
 
@@ -457,47 +577,48 @@
 
 
             <!-- Contact section -->
-            <section id="contact" >
+            <section id="contact" style="background-color: #E6E6E6">
                 <div class="container">
                     <div class="row">
 
                         <div class="sec-title text-center wow animated fadeInDown">
-                            <h2>ESCRÍBENOS</h2>
-                            <p>¿Tienes alguna duda?</p>
-                            <p>Mandanos un mensaje</p>
+                            <h2 class="Sansumi">ESCRÍBENOS</h2>
+                            <p class="tenby_five" style="color: #767170">¿Tienes alguna duda?</p>
+                            <p class="tenby_five" style="color: #767170">Mandanos un mensaje</p>
                         </div>
 
 
                         <div class="col-md-7 contact-form wow animated fadeInLeft">
-                            <form action="#" method="post">
+                            <form id="formid" method="post">
+                                <div id="ok"></div>
                                 <div class="input-field">
-                                    <input type="text" name="name" class="form-control" placeholder="Nombre">
+                                    <input type="text" name="FullName" id="FullName" class="form-control_contact" placeholder="Nombre">
                                 </div>
                                 <div class="input-field">
-                                    <input type="email" name="email" class="form-control" placeholder="Correo Electrónico">
+                                    <input type="email" name="email" id="email" class="form-control_contact" placeholder="Correo Electrónico">
                                 </div>
                                 <div class="input-field">
-                                    <input type="text" name="subject" class="form-control" placeholder="Asunto">
+                                    <input type="text" name="subject" id="subject" class="form-control_contact" placeholder="Asunto">
                                 </div>
                                 <div class="input-field">
-                                    <textarea name="message" class="form-control" placeholder="Mensaje"></textarea>
+                                    <textarea name="message" id="message" class="form-control_contact" placeholder="Mensaje"></textarea>
                                 </div>
-                                <button type="submit" id="submit" class="btn btn-blue btn-effect">Enviar</button>
+                                <button class="btn btn-blue btn-effect button_index">Enviar</button>
                             </form>
                         </div>
 
                         <div class="col-md-5 wow animated fadeInRight">
                             <address class="contact-details">
-                                <h3>Información de Contacto</h3>						
-                                <p><i class="fa fa-pencil"></i>Dr. Adelina Pérez Rosas<span>Edificio 7</span> 
+                                <h3 class="Sansumi">Información de Contacto</h3>						
+                                <p class="tenby_five" style="color: #767170"><i class="fa fa-pencil"></i>Dr. Adelina Pérez Rosas<span>Edificio 7</span> 
                                     <span>Primer Piso,Cubículo 7107</span><span>Unidad Profesional Adolfo López Mateos</span>
                                     <span>Zacatenco, Ciudad de México</span>
 
                                 </p><br>
-                                <h4>Telefono:</h4>
-                                <p>57-29-60-00</p>
-                                <p><i class="fa fa-phone"></i>Adelina Pérez Rosas (Ext.: 55107)</p>
-                                <p><i class="fa fa-phone"></i> Fabián D. Martínez Valdés (Ext.: 55107></p>
+                                <h4 class="Sansumi">TELEFONO:</h4>
+                                <p class="tenby_five" style="color: #767170" ><a href="tel:57296000"><i class="fa fa-phone"></i> 57-29-60-00</a>      (Ext.: 54237)</p>
+                                <p class="tenby_five" style="color: #767170" ><i class="fa fa-user"></i>Adelina Pérez Rosas </p>
+                                <p class="tenby_five" style="color: #767170" ><i class="fa fa-user"></i> Fabián D. Martínez Valdés </p>
 
                             </address>
 
@@ -508,7 +629,7 @@
                 </div>
             </section>
             <!-- end Contact section -->
-
+            <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1880.4682578552238!2d-99.13538904205416!3d19.501366925053265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f9b82ba2efb5%3A0x9f579bd1562b6eaa!2sESIQIE!5e0!3m2!1ses-419!2smx!4v1485632528035" width=100% height="450" frameborder="0" style="border:0" allowfullscreen ></iframe>
 
 
         </main>
@@ -518,16 +639,28 @@
                 <div class="row text-center">
                     <div class="footer-content">
                         <div class="wow animated fadeInDown">
-                            <p>¡Quédate con nosotros!</p>
-                            <p>Suscríbete a nuestra lista para recibir noticias y publicaciones.</p>
+                            <p class="Sansumi">¡Quédate con nosotros!</p>
+                            <p class="Sansumi">Suscríbete a nuestra lista para recibir noticias y publicaciones.</p>
                         </div>
-                        <form action="#" method="post" class="subscribe-form wow animated fadeInUp">
+                        <form id="newsletterid" method="post" class="subscribe-form wow animated fadeInUp">
+                            <div id="oknewsletter"></div>
                             <div class="input-field">
-                                <input type="email" class="subscribe form-control" placeholder="Enter Your Email...">
-                                <button type="submit" class="submit-icon">
-                                    <i class="fa fa-paper-plane fa-lg"></i>
-                                </button>
+                                <input type="email" class="subscribe form-control_contact" placeholder="Ingresa tu correo electrónico" id="email_newsletter" name="email_newsletter">
                             </div>
+                            <div class="form-group ">
+
+                                <div class=" selectContainer ">
+                                    <select class="form-control_contact subscribe " id="seccion" name="seccion">
+                                        <option value="">Quiero Recibir Noticias De..</option>
+                                        <option value="Seminarios">Seminarios</option>
+                                        <option value="Cursos">Cursos</option>
+                                        <option value="Talleres">Talleres</option>
+                                        <option value="Diplomados">Diplomados</option>
+                                        <option value="Todos">Todos</option>
+                                    </select>
+                                </div>
+                            </div> 
+                            <button  class="btn-primary btn-blue_2 btn-effect">Suscribirme</button>
                         </form>
                         <div class="footer-social">
                             <ul>
@@ -535,8 +668,6 @@
 
                             </ul>
                         </div>
-
-                        <p>Design And developed By <a href="http://themefisher.com/">Themefisher</a>. All rights Reserved</p>
                     </div>
                 </div>
             </div>
@@ -565,5 +696,105 @@
         <script src="js/wow.min.js"></script>
         <!-- Custom Functions -->
         <script src="js/main.js"></script>
+        <!-- Contact validation-->
+        <script src="js/contact_section.js"></script>
+        <script src="http://jqueryvalidation.org/files/dist/jquery.validate.min.js"></script>
+        <script src="http://jqueryvalidation.org/files/dist/additional-methods.min.js"></script>    
+        <script src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
+        <script src="http://jqueryvalidation.org/files/dist/jquery.validate.min.js"></script>
+        
+                <script src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
+        <!-- newsletter validation-->
+        <script src="js/newsletter_section.js"></script>
+        <script src="js/create_user.js" ></script>
+          <script type="text/javascript">
+            $(document).ready(function () {
+                // navigation click actions	
+                $('.scroll-link').on('click', function (event) {
+                    event.preventDefault();
+                    var sectionID = $(this).attr("data-id");
+                    scrollToID('#' + sectionID, 750);
+                });
+                // scroll to top action
+                $('.scroll-top').on('click', function (event) {
+                    event.preventDefault();
+                    $('html, body').animate({scrollTop: 0}, 'slow');
+                });
+                // mobile nav toggle
+                $('#nav-toggle').on('click', function (event) {
+                    event.preventDefault();
+                    $('#main-nav').toggleClass("open");
+                });
+            });
+            // scroll function
+            function scrollToID(id, speed) {
+                var offSet = 50;
+                var targetOffset = $(id).offset().top - offSet;
+                var mainNav = $('#main-nav');
+                $('html,body').animate({scrollTop: targetOffset}, speed);
+                if (mainNav.hasClass("open")) {
+                    mainNav.css("height", "1px").removeClass("in").addClass("collapse");
+                    mainNav.removeClass("open");
+                }
+            }
+            if (typeof console === "undefined") {
+                console = {
+                    log: function () { }
+                };
+            }
+        </script>    
+        
+
+        <script type="text/javascript">
+            $(function () {
+                $(document).on('click', function () {
+                    $('.navbar-collapse').removeClass('in')
+                });
+            });
+        </script>
+        <script type="text/javascript">
+            /*  Stellar for background scrolling  */
+            (function () {
+
+                if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+
+                } else {
+                    $(window).stellar({
+                        horizontalScrolling: false,
+                        responsive: true
+                    });
+                }
+
+            }());
+            /* End Stellar for background scrolling  */
+        </script>       
+        <!--Scrpt ProgreesModal-->
+        
+        <script>
+            $('#myModal').on('shown.bs.modal', function () {
+
+                var progress = setInterval(function () {
+                    var $bar = $('.bar');
+                    if ($bar.width() == 500) {
+
+                        // complete
+
+                        clearInterval(progress);
+                        $('.progress').removeClass('active');
+                        $('#myModal').modal('hide');
+                        $bar.width(0);
+                    } else {
+
+                        // perform processing logic here
+
+                        $bar.width($bar.width() + 50);
+                    }
+
+                    $bar.text($bar.width() / 5 + "%");
+                }, 800);
+
+
+            })
+        </script>
     </body>
 </html>

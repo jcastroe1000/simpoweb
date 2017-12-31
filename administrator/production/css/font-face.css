@@ -1,0 +1,72 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 6/02/2017, 10:23:45 AM
+    Author     : tono
+*/
+@font-face{
+    font-family: Architects;
+    src: url("../font_face/ArchitectsDaughter.ttf");
+}
+
+.Architects{
+    font-family: Architects;
+}
+
+@font-face{
+    font-family: Sans;
+    src:url("../font_face/Material_Sans.ttf");
+}
+.Sans{
+    font-family: Sans;
+}
+
+@font-face{
+    font-family: Sansation_Regular;
+    src:url("../font_face/Sansation_Regular.ttf");
+}
+
+.Sansation_Regular{
+    font-family: Sansation_Regular;
+}
+
+@font-face{
+    font-family: Sansation_Light_Italic;
+    src:url("../font_face/Sansation_Light_Italic.ttf");
+}
+
+.Sansation_Light_Italic{
+    font-family: Sansation_Light_Italic;
+}
+
+@font-face{
+    font-family: tenby-five;
+    src:url("../font_face/tenby-five.otf");
+}
+
+.tenby_five{
+    font-family: tenby-five;
+}
+
+@font-face{
+    font-family: FolksDecoon;
+    src:url("../font_face/FolksDecoon.ttf");
+}
+
+.FolksDecoon{
+    font-family: FolksDecoon;
+}
+
+
+@font-face{
+    font-family: Sansation_Bold;
+    src:url("../font_face/Sansation_Bold.ttf");
+}
+
+.Sansation_Bold{
+    font-family: Sansation_Bold ;
+}
+

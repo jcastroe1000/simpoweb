@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script type="text/javascript" src="https://conektaapi.s3.amazonaws.com/v0.3.2/js/conekta.js"></script>
+    </head>
+    <body>
+        <div>TODO write content</div>
+        <form action="" method="POST" id="card-form">
+  <span class="card-errors"></span>
+  <div>
+    <label>
+      <span>Nombre del tarjetahabiente</span>
+      <input type="text" size="20" data-conekta="card[name]">
+    </label>
+  </div>
+  <div>
+    <label>
+      <span>Número de tarjeta de crédito</span>
+      <input type="text" size="20" data-conekta="card[number]">
+    </label>
+  </div>
+  <div>
+    <label>
+      <span>CVC</span>
+      <input type="text" size="4" data-conekta="card[cvc]">
+    </label>
+  </div>
+  <div>
+    <label>
+      <span>Fecha de expiración (MM/AAAA)</span>
+      <input type="text" size="2" data-conekta="card[exp_month]">
+    </label>
+    <span>/</span>
+    <input type="text" size="4" data-conekta="card[exp_year]">
+  </div>
+  <button type="submit">Crear token</button>
+</form>
+        <script type="text/javascript">
+  Conekta&#46;setPublishableKey('key_KJysdbf6PotS2ut2');
+
+  var conektaSuccessResponseHandler = function(token) {
+    var $form = $("#card-form");
+    //Inserta el token_id en la forma para que se envíe al servidor
+    $form&#46;append($("<input type='hidden' id='conektaTokenId'>")&#46;val(token&#46;id));
+    $form&#46;get(0)&#46;submit(); //Hace submit
+  };
+  var conektaErrorResponseHandler = function(response) {
+    var $form = $("#card-form");
+    $form&#46;find("&#46;card-errors")&#46;text(response&#46;message_to_purchaser);
+    $form&#46;find("button")&#46;prop("disabled", false);
+  };
+
+  //jQuery para que genere el token después de dar click en submit
+  $(function () {
+    $("#card-form")&#46;submit(function(event) {
+      var $form = $(this);
+      // Previene hacer submit más de una vez
+      $form&#46;find("button")&#46;prop("disabled", true);
+      Conekta&#46;token&#46;create($form, conektaSuccessResponseHandler, conektaErrorResponseHandler);
+      return false;
+    });
+  });
+</script>
+    </body>
+</html>
