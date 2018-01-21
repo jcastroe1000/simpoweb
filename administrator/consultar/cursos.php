@@ -4,7 +4,7 @@ header("Content-Type: text/html;charset=utf-8");
   error_reporting(E_ALL);
   session_start();
   if (!isset($_SESSION['user_name'])) {
-      header("Location:login.php");
+      header("Location:/simpoweb/administrator/login.php");
   }
   $user_name = $_SESSION['user_name'];
 
@@ -65,7 +65,7 @@ header("Content-Type: text/html;charset=utf-8");
 
                         <!-- menu profile quick info -->
                         <div class="profile clearfix">
-                            <div class="profile_pic">
+                            <div class="profile_pic center-block">
                                 <img src="../images/img.jpg" alt="..." class="img-circle profile_img">
                             </div>
                             <div class="profile_info">

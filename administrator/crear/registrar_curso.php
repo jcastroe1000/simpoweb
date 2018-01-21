@@ -4,7 +4,7 @@ include "../config.php";
 error_reporting(E_ALL);
 session_start();
 if (!isset($_SESSION['user_name'])) {
-    header("Location:login.php");
+    header("Location:/simpoweb/administrator/login.php");
 }
 $user_name = utf8_encode($_SESSION['user_name']);
 ?>

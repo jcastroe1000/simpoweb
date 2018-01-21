@@ -1,10 +1,10 @@
 <?php
 header("Content-Type: text/html;charset=utf-8");
-include "config.php";
+include "../config.php";
 error_reporting(E_ALL);
 session_start();
 if (!isset($_SESSION['user_name'])) {
-    header("Location:login.php");
+    header("Location:/simpoweb/administrator/login.php");
 }
 $user_name = utf8_encode($_SESSION['user_name']);
 ?>
@@ -21,6 +21,7 @@ $user_name = utf8_encode($_SESSION['user_name']);
 
         <!-- Bootstrap -->
         <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+       
         <!-- Font Awesome -->
         <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
         <!-- NProgress -->
@@ -39,15 +40,15 @@ $user_name = utf8_encode($_SESSION['user_name']);
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
         <!-- bootstrap-progressbar -->
         <link href="../vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="form-wizard/font-awesome/css/font-awesome.min.css">
-        <link rel="stylesheet" href="form-wizard/css/form-elements.css">
-        <link rel="stylesheet" href="form-wizard/css/style.css">
-        <link href="../production/css/fileinput.css" media="all" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="../form-wizard/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../form-wizard/css/form-elements.css">
+        <link rel="stylesheet" href="../form-wizard/css/style.css">
+        <link href="../css/fileinput.css" media="all" rel="stylesheet" type="text/css">
         <!-- Latest compiled and minified CSS -->
         <link href="../vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
         <!--Multiselect-->
-        <link rel="stylesheet" href="../production/dist/css/bootstrap-select.css">
-        <script src="../production/dist/js/bootstrap-select.js" defer></script>
+        <link rel="stylesheet" href="../dist/css/bootstrap-select.css">
+        <script src="../dist/js/bootstrap-select.js" defer></script>
 
 
 
@@ -71,7 +72,7 @@ $user_name = utf8_encode($_SESSION['user_name']);
                         <!-- menu profile quick info -->
                         <div class="profile clearfix">
                             <div class="profile_pic center-block">
-                                <img src="images/img.jpg" alt="..." class="img-circle profile_img">
+                                <img src="../images/img.jpg" alt="..." class="img-circle profile_img">
                             </div>
                             <div class="profile_info">
                                 <span>Bienvenido</span>
@@ -227,8 +228,8 @@ $user_name = utf8_encode($_SESSION['user_name']);
                  <div class="row">
               <div class="col-md-12">
                                 <div class="col-sm-11 col-sm-offset-1 col-md-9 col-md-offset-3 col-lg-6 col-lg-offset-3 form-box" style="height: 100%" >
-                        <form role="form" id="upload_course" name="upload_course" class="f1" style="margin-top: -15px;">
-                            <h3 style="text-align: center">Registrar Curso</h3>
+                        <form role="form" id="create_course" name="create_course" class="f1" style="margin-top: -15px;">
+                            <h3 style="text-align: center">Registrar Diplomado</h3>
                             <div class="f1-steps">
                                 <div class="f1-progress">
                                     <div class="f1-progress-line" data-now-value="16.66" data-number-of-steps="3" style="width: 16.66%;"></div>
@@ -454,20 +455,20 @@ $user_name = utf8_encode($_SESSION['user_name']);
 
         <!-- Custom Theme Scripts -->
         <script src="../build/js/custom.min.js"></script>
-        <script src="../production/js/fileinput.js" type="text/javascript"></script>
+        <script src="../js/fileinput.js" type="text/javascript"></script>
         <!--form wizard-->
 
-        <script src="form-wizard/bootstrap/js/bootstrap.min.js"></script>
-        <script src="form-wizard/js/jquery.backstretch.min.js"></script>
-        <script src="form-wizard/js/retina-1.1.0.min.js"></script>
-        <script src="form-wizard/js/scripts.js"></script>
-        <script src="../production/js/fileinput.js" type="text/javascript"></script>
-        <script src="../production/js/upload_course.js"></script>
+        <script src="../form-wizard/bootstrap/js/bootstrap.min.js"></script>
+        <script src="../form-wizard/js/jquery.backstretch.min.js"></script>
+        <script src="../form-wizard/js/retina-1.1.0.min.js"></script>
+        <script src="../form-wizard/js/scripts.js"></script>
+        <script src="../js/fileinput.js" type="text/javascript"></script>
+        <script src="../js/create/create_course.js"></script>
         <!-- bootstrap-progressbar -->
         <script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
         <!-- Flot -->
-        <script src="../production/js/bootbox.js" type="text/javascript"></script>
-        <script src="../production/js/bootbox.min.js" type="text/javascript">
+        <script src="../js/bootbox.js" type="text/javascript"></script>
+        <script src="../js/bootbox.min.js" type="text/javascript">
             
         <script>
             $(document).ready(function () {
@@ -747,7 +748,7 @@ $user_name = utf8_encode($_SESSION['user_name']);
             $('#myModal').on('shown.bs.modal', function () {
                 var progress = setInterval(function () {
                     var $bar = $('.bar');
-                    if ($bar.width() == 500) {
+                    if ($bar.width() == 550) {
                         // complete
                         clearInterval(progress);
                         $('.progress').removeClass('active');
@@ -759,7 +760,7 @@ $user_name = utf8_encode($_SESSION['user_name']);
                     }
 
                     $bar.text($bar.width() / 5 + "%");
-                }, 800);
+                }, 720);
             })
 
         </script>
