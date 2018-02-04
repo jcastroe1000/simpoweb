@@ -1,10 +1,10 @@
 <?php
 header("Content-Type: text/html;charset=utf-8");
-  include "config.php";
+  include "../config.php";
   error_reporting(E_ALL);
   session_start();
   if (!isset($_SESSION['user_name'])) {
-      header("Location:login.php");
+      header("Location:/simpoweb/administrator/login.php");
   }
   $user_name = $_SESSION['user_name'];
 
@@ -44,10 +44,10 @@ header("Content-Type: text/html;charset=utf-8");
         <!-- Custom Theme Style -->
         <link href="../build/css/custom.min.css" rel="stylesheet">
         <!--        <link rel="stylesheet" type="text/css" href="../production/css/dataTables.bootstrap.css">-->
-        <link href="../production/css/font-face.css"  rel="stylesheet" type="text/css">
+        <link href="../css/font-face.css"  rel="stylesheet" type="text/css">
         
-        <link rel="stylesheet" type="text/css" href="../production/css/dataTables.css">
-        <link rel="stylesheet" type="text/css" href="../production/css/dataTables.boostrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/dataTables.css">
+        <link rel="stylesheet" type="text/css" href="../css/dataTables.boostrap.min.css">
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/select/1.2.1/css/select.bootstrap.min.css">
 
     </head>
@@ -65,8 +65,8 @@ header("Content-Type: text/html;charset=utf-8");
 
                         <!-- menu profile quick info -->
                         <div class="profile clearfix">
-                            <div class="profile_pic">
-                                <img src="images/img.jpg" alt="..." class="img-circle profile_img">
+                            <div class="profile_pic center-block">
+                                <img src="../images/img.jpg" alt="..." class="img-circle profile_img">
                             </div>
                             <div class="profile_info">
                                 <span>Bienvenido (a)</span>
@@ -158,7 +158,7 @@ header("Content-Type: text/html;charset=utf-8");
                             <ul class="nav navbar-nav navbar-right">
                                 <li class="">
                                     <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                        <img src="images/img.jpg" alt="">John Doe
+                                        <img src="../images/img.jpg" alt="">John Doe
                                         <span class=" fa fa-angle-down"></span>
                                     </a>
                                     <ul class="dropdown-menu dropdown-usermenu pull-right">
@@ -256,17 +256,18 @@ header("Content-Type: text/html;charset=utf-8");
                                 
                             </div>
                         </div>
-                        <div class="clearfix"><h2 style="text-align: center;color: black;font-size: 25px" class="Sansation_Regular">Seminarios Registrados</h2></div>
-                        <div class="clearfix"><h2 style="text-align: center;color: black;font-size: 25px;padding-top:40px;" class="Sansation_Regular"><a href="registrar_pregunta.php"><button type="button"  class="btn btn-success"><i class="fa fa-plus"></i> Añadir Pregunta</button></a></h2></div>
+                        <div class="clearfix"><h2 style="text-align: center;color: black;font-size: 25px" class="Sansation_Regular">Publicaciones Registradas</h2></div>
+                        <div class="clearfix"><h2 style="text-align: center;color: black;font-size: 25px;padding-top:40px;" class="Sansation_Regular"><a href="../crear/registrar_publicacion.php"><button type="button"  class="btn btn-success"><i class="fa fa-plus"></i> Añadir Publicación</button></a></h2></div>
                         <div class="row" style="margin-top: 2%;">
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
                                     <thead>
                                         <tr>
-                                            <th class="Sansation_Bold" style="color: black;text-align: center">Nombre de la publicación</th>
-                                            <th class="Sansation_Bold" style="color: black;text-align: center">Resumen</th>
-                                            <th class="Sansation_Bold" style="color: black;text-align: center">Fecha de Creación</th>
-                                            <th class="Sansation_Bold" style="color: black;text-align: center">Creado por</th>
+                                            <th class="Sansation_Bold" style="color: black;text-align: center">Nombre del Curso</th>
+                                            <th class="Sansation_Bold" style="color: black;text-align: center">Duracion</th>
+                                            <th class="Sansation_Bold" style="color: black;text-align: center">Modalidad</th>
+                                            <th class="Sansation_Bold" style="color: black;text-align: center">Fecha Creación</th>
+                                            <th class="Sansation_Bold" style="color: black;text-align: center">Usuario</th>
                                             <th></th>
                                             <th></th>
                                             
@@ -276,18 +277,18 @@ header("Content-Type: text/html;charset=utf-8");
                                     
                                     <tbody>
                                         <?php
-                                                        include "./model/conection.php";
+                                                        include "../model/conection.php";
                                                         error_reporting(E_ALL);
-                                                        $seccion='seminario';
-                                                        $res = $mysqli->query("SELECT publication_name,review,creation_date,created_by from publicaciones");
+                                                        $res = $mysqli->query("SELECT nombre,duracion,modalidad,fecha_creacion,usuario from registro_eventos WHERE seccion='publicacion'");
                                                         $mysqli->close();
                                                         while ($row = $res->fetch_assoc()):
                                                             ?>
                                         <tr>
-                                            <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo $row ['publication_name']; ?></td>
-                                            <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo $row ['review'] ?></td>
-                                            <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo $row ['creation_date'] ?></td>
-                                            <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo $row ['created_by'] ?></td>
+                                            <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo $row ['nombre']; ?></td>
+                                            <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo $row ['duracion'] ?></td>
+                                            <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo $row ['modalidad'] ?></td>
+                                            <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo $row ['fecha_creacion'] ?></td>
+                                            <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo utf8_encode($row ['usuario']) ?></td>
                                             <td class="Sans" style="color: #04B404;text-align: center">Detalles        <i class="fa fa-plus"></i></td>
                                             <td class="Sans" style="color: #FF0000;text-align: center">Eliminar        <i class="fa fa-trash"></i></td>
                                             

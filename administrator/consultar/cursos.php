@@ -257,7 +257,7 @@ header("Content-Type: text/html;charset=utf-8");
                             </div>
                         </div>
                         <div class="clearfix"><h2 style="text-align: center;color: black;font-size: 25px" class="Sansation_Regular">Cursos Registrados</h2></div>
-                        <div class="clearfix"><h2 style="text-align: center;color: black;font-size: 25px;padding-top:40px;" class="Sansation_Regular"><a href="registrar_pregunta.php"><button type="button"  class="btn btn-success"><i class="fa fa-plus"></i> Añadir Pregunta</button></a></h2></div>s
+                        <div class="clearfix"><h2 style="text-align: center;color: black;font-size: 25px;padding-top:40px;" class="Sansation_Regular"><a href="../crear/registrar_curso.php"><button type="button"  class="btn btn-success"><i class="fa fa-plus"></i> Registrar Curso</button></a></h2></div>
                         <div class="row" style="margin-top: 2%;">
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
@@ -279,7 +279,6 @@ header("Content-Type: text/html;charset=utf-8");
                                         <?php
                                                         include "../model/conection.php";
                                                         error_reporting(E_ALL);
-                                                        $seccion='seminario';
                                                         $res = $mysqli->query("SELECT nombre,duracion,modalidad,fecha_creacion,usuario from registro_eventos WHERE seccion='curso' ");
                                                         $mysqli->close();
                                                         while ($row = $res->fetch_assoc()):
@@ -571,4 +570,3 @@ header("Content-Type: text/html;charset=utf-8");
                 <!-- /Starrr -->
                 </body>
                 </html>
-s

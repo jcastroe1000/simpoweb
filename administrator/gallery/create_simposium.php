@@ -22,12 +22,12 @@
     $foto = trim($_FILES['file_image']['name']);
     $creation_date=$_GET['creation_date'];
     $created_by= utf8_decode($_GET['admin']);
-    $section='curso';
+    $section='simposium';
     $filename = "";
     if ($_FILES['file_image']['size'] <= 2097152) {
         while (true) {
             $filename = uniqid(rand()) . '.' .pathinfo($foto, PATHINFO_EXTENSION);
-            if (!file_exists('../gallery/album/course/' . $filename)) break;
+            if (!file_exists('../gallery/album/simposium/' . $filename)) break;
         }
         error_log($filename, 0);
         error_log("Despues de cambiar el nombre", 0);
@@ -41,7 +41,7 @@
         mysqli_query($mysqli, $query1);
         error_log("Despues del primer insert", 0);
         // Movemos el archivo
-        move_uploaded_file($_FILES['file_image']['tmp_name'], '../gallery/album/course/' . $filename);
+        move_uploaded_file($_FILES['file_image']['tmp_name'], '../gallery/album/simposium/' . $filename);
         error_log("Despues del mover el archivo", 0);
         //Cerramos la conexion
         $mysqli->close();
