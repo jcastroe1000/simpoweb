@@ -1,13 +1,13 @@
 <?php
 header("Content-Type: text/html;charset=utf-8");
   include "../config.php";
-  error_reporting(E_ALL);
+  error_reporting(E_ERROR | E_WARNING | E_PARSE);
   session_start();
   if (!isset($_SESSION['user_name'])) {
       header("Location:/simpoweb/administrator/login.php");
   }
   $user_name = $_SESSION['user_name'];
-
+  
  
   ?>
 
@@ -256,7 +256,27 @@ header("Content-Type: text/html;charset=utf-8");
                                 
                             </div>
                         </div>
+                        
                         <div class="clearfix"><h2 style="text-align: center;color: black;font-size: 25px" class="Sansation_Regular">Cursos Registrados</h2></div>
+                        <div >
+                            <?php
+                            $m = $_GET['m'];
+                            
+                            if ($m==true) {
+                                $modal = '<div class="alert alert-success alert-dismissible " role="alert">
+                                            <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                            </button>
+                                          </div>';
+                            }
+                            ?>
+                            
+                            
+                            
+                            
+                            <?php echo $modal; ?>    
+                            </div>
                         <div class="clearfix"><h2 style="text-align: center;color: black;font-size: 25px;padding-top:40px;" class="Sansation_Regular"><a href="../crear/registrar_curso.php"><button type="button"  class="btn btn-success"><i class="fa fa-plus"></i> Registrar Curso</button></a></h2></div>
                         <div class="row" style="margin-top: 2%;">
                             <div class="col-md-12 col-sm-12 col-xs-12">
@@ -279,7 +299,7 @@ header("Content-Type: text/html;charset=utf-8");
                                         <?php
                                                         include "../model/conection.php";
                                                         error_reporting(E_ALL);
-                                                        $res = $mysqli->query("SELECT nombre,duracion,modalidad,fecha_creacion,usuario from registro_eventos WHERE seccion='curso' ");
+                                                        $res = $mysqli->query("SELECT id,nombre,duracion,modalidad,fecha_creacion,usuario,ruta from registro_eventos WHERE seccion='curso' ");
                                                         $mysqli->close();
                                                         while ($row = $res->fetch_assoc()):
                                                             ?>
@@ -290,13 +310,31 @@ header("Content-Type: text/html;charset=utf-8");
                                             <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo $row ['fecha_creacion'] ?></td>
                                             <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo utf8_encode($row ['usuario']) ?></td>
                                             <td class="Sans" style="color: #04B404;text-align: center">Detalles        <i class="fa fa-plus"></i></td>
-                                            <td class="Sans" style="color: #FF0000;text-align: center">Eliminar        <i class="fa fa-trash"></i></td>
+                                            <td class="Sans" style="color: #FF0000;text-align: center"><a href="#<?php echo $row['id'] ?>" data-toggle="modal" > <i class="icon-trash">Eliminar</i> </a><i class="fa fa-trash"></i></td>
                                             
                                             
                                         </tr>
+                                        <div class="modal fade" id="<?php echo $row['id'] ?>" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true" >
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                          <h4 class="modal-title" id="myModalLabel">Atención</h4>
+                        </div>
+                        <div class="modal-body">
+                            <h3>¿Estas seguro de eliminar el contenido? <?php echo $row['ruta']?> </h3>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="icon-ban-circle"></i>&nbsp;Cerrrar</button>
+                          <a href="../delete/delete_course.php?d=<?php echo $row['id']?>&f=<?php echo $row['ruta']?>"><button type="button" class="btn btn-success"><i class="icon-ok"></i>Aceptar</button></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                                         <?php
                                                         endwhile;
                                                         ?> 
+                                         
                                     </tbody>
                                 </table>
                             </div>
