@@ -13,10 +13,10 @@ include "../config.php";
             $mysqli->close();
             unlink('../gallery/album/course/'.$file);
             
-            echo "<script>location.href='../consultar/cursos.php?m=true'</script>";
+            echo "<script>location.href='../consultar/cursos.php?m=1'</script>";
             
         else:
-            echo "<script>alert('" . $stmt->error . "')</script>";
+            echo "<script>location.href='../consultar/cursos.php?m=2'</script>";
         endif;
     endif;
 

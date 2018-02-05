@@ -265,22 +265,30 @@ header("Content-Type: text/html;charset=utf-8");
                             
                             $m = $_GET['m'];
                             
-                            if ($m==true) {
-                                $modal = '<div class="alert alert-success alert-dismissible " role="alert" style="text-align:center">
+                            if ($m==1) {
+                                
+                                $modal = '<div class="alert alert-success alert-dismissible " role="alert" style="text-align:center" id="ok">
                                             <strong style="font-weight: 900;">Bien! El curso ha sido eliminado exitosamente.</strong>
                                             <button type="button" class="close" data-dismiss="alert" aria-label="Close" style="opacity: 1;">
                                             <span aria-hidden="true">&times;</span>
                                             </button>
                                           </div>';
-                            }elseif($m==0){
-                                $modal = '<div class="alert alert-danger alert-dismissible " role="alert" style="text-align:center">
+                            }elseif($m==2){
+                                
+                                $modal = '<div class="alert alert-danger alert-dismissible " role="alert" style="text-align:center" id="error">
                                             <strong style="font-weight: 900;">A ocurrido un error, por favor intentalo más tarde</strong>
                                             <button type="button" class="close" data-dismiss="alert" aria-label="Close" style="opacity: 1;">
                                             <span aria-hidden="true">&times;</span>
                                             </button>
                                           </div>';
-                            }else{
+                            }elseif($m!=1 && $m!=2){
                                 
+                                $modal = '<div class="alert alert-danger alert-dismissible hide " role="alert" style="text-align:center" id="error">
+                                            <strong style="font-weight: 900;">no</strong>
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close" style="opacity: 1;">
+                                            <span aria-hidden="true">&times;</span>
+                                            </button>
+                                          </div>';
                             }
                             ?>
                             <?php echo $modal; ?>    
