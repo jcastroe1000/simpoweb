@@ -291,8 +291,8 @@ $user_name = utf8_encode($_SESSION['user_name']);
                                     <select class="combo" id="period" name="period" style="width: 100%">
                                         <option value="">Selecciona</option>
                                         <option value="Dias">Dias</option>
-                                        <option value="Semanal">Semanal</option>
-                                        <option value="Mensual">Mensual</option>
+                                        <option value="Semanas">Semanas</option>
+                                        <option value="Meses">Meses</option>
                                     </select>
 
                                 </div>

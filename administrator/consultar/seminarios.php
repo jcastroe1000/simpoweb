@@ -320,7 +320,7 @@ $user_name = $_SESSION['user_name'];
                                                 <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo $row ['fecha_creacion'] ?></td>
                                                 <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo utf8_encode($row ['usuario']) ?></td>
                                                 <td class="Sans" style="color: #04B404;text-align: center">Detalles        <i class="fa fa-plus"></i></td>
-                                                <td class="Sans" style="color: #FF0000;text-align: center"><a href="#<?php echo $row['id'] ?>" data-toggle="modal" > <i class="icon-trash">Eliminar</i> </a><i class="fa fa-trash"></i></td>
+                                                <td class="Sans" style="color: #FF0000;text-align: center"><a href="#<?php echo $row['id'] ?>" data-toggle="modal" style="color:red"> Eliminar </a><i class="fa fa-trash"></i></td>
 
 
                                             </tr>
@@ -329,10 +329,10 @@ $user_name = $_SESSION['user_name'];
                                                 <div class="modal-content">
                                                     <div class="modal-header">
                                                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                                        <h4 class="modal-title" id="myModalLabel">Atención</h4>
+                                                        <h4 class="modal-title" id="myModalLabel" style="font-weight: bold;text-align: center">Atención</h4>
                                                     </div>
                                                     <div class="modal-body">
-                                                        <h3>¿Estas seguro de eliminar el contenido? <?php echo $row['ruta'] ?> </h3>
+                                                         <h3 style="text-align: center">¿Estas seguro de eliminar la publicación con el nombre, <strong><?php echo $row['nombre'] ?></strong>?</h3>
                                                     </div>
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="icon-ban-circle"></i>&nbsp;Cerrrar</button>
