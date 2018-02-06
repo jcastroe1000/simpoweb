@@ -1,10 +1,10 @@
 <?php
 header("Content-Type: text/html;charset=utf-8");
-include "config.php";
+include "../config.php";
 error_reporting(E_ALL);
 session_start();
 if (!isset($_SESSION['user_name'])) {
-    header("Location:login.php");
+    header("Location:/simpoweb/administrator/login.php");
 }
 $user_name = $_SESSION['user_name'];
 ?>
@@ -245,7 +245,7 @@ $user_name = $_SESSION['user_name'];
 
                                     <tbody>
                                         <?php
-                                        include "./model/conection.php";
+                                        include "../model/conection.php";
                                         error_reporting(E_ALL);
 
                                         $res = $mysqli->query("SELECT id_faqs,question,answer from faqs WHERE category='curso'");

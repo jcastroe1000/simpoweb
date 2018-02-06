@@ -311,7 +311,7 @@ $user_name = $_SESSION['user_name'];
                                         <?php
                                         include "../model/conection.php";
                                         error_reporting(E_ALL);
-                                        $res = $mysqli->query("SELECT id,nombre,duracion,modalidad,fecha_creacion,usuario,ruta from registro_eventos WHERE seccion='curso' ");
+                                        $res = $mysqli->query("SELECT id,nombre,dirigido,resumen,duracion,modalidad,fecha_creacion,usuario,ruta from registro_eventos WHERE seccion='curso' ");
                                         $mysqli->close();
                                         while ($row = $res->fetch_assoc()):
                                             ?>
@@ -321,7 +321,7 @@ $user_name = $_SESSION['user_name'];
                                                 <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo $row ['modalidad'] ?></td>
                                                 <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo $row ['fecha_creacion'] ?></td>
                                                 <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo utf8_encode($row ['usuario']) ?></td>
-                                                <td class="Sans" style="color: #04B404;text-align: center">Detalles        <i class="fa fa-plus"></i></td>
+                                                <td class="Sans" style="color: #FF0000;text-align: center"><a href="#<?php echo $row['nombre'] ?>" data-toggle="modal" style="color:green"> Detalles </a><i class="fa fa-plus"></i></td>
                                                 <td class="Sans" style="color: #FF0000;text-align: center"><a href="#<?php echo $row['id'] ?>" data-toggle="modal" style="color:red"> Eliminar </a><i class="fa fa-trash"></i></td>
 
 
@@ -339,6 +339,30 @@ $user_name = $_SESSION['user_name'];
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="icon-ban-circle"></i>&nbsp;Cerrrar</button>
                                                         <a href="../delete/delete_course.php?d=<?php echo $row['id'] ?>&f=<?php echo $row['ruta'] ?>"><button type="button" class="btn btn-success"><i class="icon-ok"></i>Aceptar</button></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--Editar-->
+                                        <div class="modal fade" id="<?php echo $row['nombre'] ?>" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true" >
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                        <h4 class="modal-title" id="myModalLabel" style="text-align: center"><strong>Curso</strong></br> <?php echo utf8_encode($row['nombre']) ?></h4>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        
+                                                        <h5 style="text-align: left"><strong style="text-align: justify">Resumen:  </strong><?php echo utf8_encode($row['resumen']) ?></h5> 
+                                                        <h5 style="text-align: left"><strong style="text-align: justify">Dirigido:  </strong><?php echo utf8_encode($row['dirigido']) ?></h5> 
+
+
+                                                    </div>
+                                                    <div class="modal-footer">
+
+                                                        <button type="button" class="btn btn-primary">Modificar</button>
+                                                        <button type="button" class="btn btn-info" data-dismiss="modal">Cerrar</button>
+                                                       <!--<a href="Delete_Photo.php?d=<?php echo $row2['id'] ?>&f=<?php echo $row2['file'] ?>"><button type="button" class="btn btn-success"><i class="icon-ok"></i>Aceptar</button></a>-->
                                                     </div>
                                                 </div>
                                             </div>
