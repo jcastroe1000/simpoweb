@@ -1,15 +1,13 @@
 <?php
 header("Content-Type: text/html;charset=utf-8");
-  include "../config.php";
-  error_reporting(E_ALL);
-  session_start();
-  if (!isset($_SESSION['user_name'])) {
-      header("Location:/simpoweb/administrator/login.php");
-  }
-  $user_name = $_SESSION['user_name'];
-
- 
-  ?>
+include "../config.php";
+error_reporting(E_ERROR | E_WARNING | E_PARSE);
+session_start();
+if (!isset($_SESSION['user_name'])) {
+    header("Location:/simpoweb/administrator/login.php");
+}
+$user_name = $_SESSION['user_name'];
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -45,7 +43,7 @@ header("Content-Type: text/html;charset=utf-8");
         <link href="../build/css/custom.min.css" rel="stylesheet">
         <!--        <link rel="stylesheet" type="text/css" href="../production/css/dataTables.bootstrap.css">-->
         <link href="../css/font-face.css"  rel="stylesheet" type="text/css">
-        
+
         <link rel="stylesheet" type="text/css" href="../css/dataTables.css">
         <link rel="stylesheet" type="text/css" href="../css/dataTables.boostrap.min.css">
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/select/1.2.1/css/select.bootstrap.min.css">
@@ -87,32 +85,32 @@ header("Content-Type: text/html;charset=utf-8");
                                         <ul class="nav child_menu">
                                             <li><a href="users_registers.php"><i class="fa fa-arrow-up"></i>Registrados</a></li>
                                             <li>
-                                            <a href="newsletter.php"><i class="fa fa-check-circle"></i>NewsLetter</a></li>
+                                                <a href="newsletter.php"><i class="fa fa-check-circle"></i>NewsLetter</a></li>
                                         </ul>
-                                        
+
                                     </li>
                                     <li><a href="services.php"><i class="fa fa-arrow-circle-up"></i> Registro </a></li>
 
-                                    
+
                                     <li><a><i class="fa fa-cogs"></i>Secciones <span class="fa fa-chevron-down"></span></a>
                                         <ul class="nav child_menu">
-                                            
-                                    <li>
-                                        <a href="simposiums.html"><i class="fa fa-mortar-board"></i> Seminarios</a>
-                                    </li>
-                                    <li>
-                                        <a href="simposiums.html"><i class="fa fa-laptop"></i> Talleres </a>
-                                    </li>
-                                    <li>
-                                        <a href="simposiums.html"><i class="fa fa-briefcase"></i> Cursos </a>
-                                    </li>
-                                    <li>
-                                        <a href="simposiums.html"><i class="fa fa-university"></i> Diplomados </a>
-                                    </li>
+
+                                            <li>
+                                                <a href="simposiums.html"><i class="fa fa-mortar-board"></i> Seminarios</a>
+                                            </li>
+                                            <li>
+                                                <a href="simposiums.html"><i class="fa fa-laptop"></i> Talleres </a>
+                                            </li>
+                                            <li>
+                                                <a href="simposiums.html"><i class="fa fa-briefcase"></i> Cursos </a>
+                                            </li>
+                                            <li>
+                                                <a href="simposiums.html"><i class="fa fa-university"></i> Diplomados </a>
+                                            </li>
 
                                         </ul>
                                     </li>
-                                    
+
                                     <li><a><i class="fa fa-plus-square"></i> Extras<span class="fa fa-chevron-down"></span></a>
                                         <ul class="nav child_menu">
                                             <li><a href="form.html"><i class="fa fa-book"></i>Directorio</a></li>
@@ -123,7 +121,7 @@ header("Content-Type: text/html;charset=utf-8");
 
                                 </ul>
                             </div>
-                            
+
 
                         </div>
                         <!-- /sidebar menu -->
@@ -253,58 +251,107 @@ header("Content-Type: text/html;charset=utf-8");
                             </div>
 
                             <div class="title_right">
-                                
+
                             </div>
                         </div>
                         <div class="clearfix"><h2 style="text-align: center;color: black;font-size: 25px" class="Sansation_Regular">Diplomados Registrados</h2></div>
                         <div class="clearfix"><h2 style="text-align: center;color: black;font-size: 25px;padding-top:40px;" class="Sansation_Regular"><a href="../crear/registrar_diplomado.php"><button type="button"  class="btn btn-success"><i class="fa fa-plus"></i> Registrar Diplomado</button></a></h2></div>
+                        <div style="width: 50%" class="center-block">
+                            <?php
+                            $m = $_GET['m'];
+
+                            if ($m == 1) {
+
+                                $modal = '<div class="alert alert-success alert-dismissible " role="alert" style="text-align:center" id="ok">
+                                            <strong style="font-weight: 900;">Bien! El curso ha sido eliminado exitosamente.</strong>
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close" style="opacity: 1;">
+                                            <span aria-hidden="true">&times;</span>
+                                            </button>
+                                          </div>';
+                            } elseif ($m == 2) {
+
+                                $modal = '<div class="alert alert-danger alert-dismissible " role="alert" style="text-align:center" id="error">
+                                            <strong style="font-weight: 900;">A ocurrido un error, por favor intentalo más tarde</strong>
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close" style="opacity: 1;">
+                                            <span aria-hidden="true">&times;</span>
+                                            </button>
+                                          </div>';
+                            } elseif ($m != 1 && $m != 2) {
+
+                                $modal = '<div class="alert alert-danger alert-dismissible hide " role="alert" style="text-align:center" id="error">
+                                            <strong style="font-weight: 900;">no</strong>
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close" style="opacity: 1;">
+                                            <span aria-hidden="true">&times;</span>
+                                            </button>
+                                          </div>';
+                            }
+                            ?>
+                            <?php echo $modal; ?>    
+                        </div>
                         <div class="row" style="margin-top: 2%;">
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
                                     <thead>
                                         <tr>
-                                            <th class="Sansation_Bold" style="color: black;text-align: center">Nombre del Curso</th>
+                                            <th class="Sansation_Bold" style="color: black;text-align: center">Nombre del Diplomado</th>
                                             <th class="Sansation_Bold" style="color: black;text-align: center">Duracion</th>
                                             <th class="Sansation_Bold" style="color: black;text-align: center">Modalidad</th>
                                             <th class="Sansation_Bold" style="color: black;text-align: center">Fecha Creación</th>
                                             <th class="Sansation_Bold" style="color: black;text-align: center">Usuario</th>
                                             <th></th>
                                             <th></th>
-                                            
-                                            
+
+
                                         </tr>
                                     </thead>
-                                    
+
                                     <tbody>
                                         <?php
-                                                        include "../model/conection.php";
-                                                        error_reporting(E_ALL);
-                                                        $res = $mysqli->query("SELECT nombre,duracion,modalidad,fecha_creacion,usuario from registro_eventos WHERE seccion='diplomado' ");
-                                                        $mysqli->close();
-                                                        while ($row = $res->fetch_assoc()):
-                                                            ?>
-                                        <tr>
-                                            <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo $row ['nombre']; ?></td>
-                                            <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo $row ['duracion'] ?></td>
-                                            <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo $row ['modalidad'] ?></td>
-                                            <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo $row ['fecha_creacion'] ?></td>
-                                            <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo utf8_encode($row ['usuario']) ?></td>
-                                            <td class="Sans" style="color: #04B404;text-align: center">Detalles        <i class="fa fa-plus"></i></td>
-                                            <td class="Sans" style="color: #FF0000;text-align: center">Eliminar        <i class="fa fa-trash"></i></td>
-                                            
-                                            
-                                        </tr>
+                                        include "../model/conection.php";
+                                        error_reporting(E_ALL);
+                                        $res = $mysqli->query("SELECT id,nombre,duracion,modalidad,fecha_creacion,usuario,ruta from registro_eventos WHERE seccion='diplomado' ");
+                                        $mysqli->close();
+                                        while ($row = $res->fetch_assoc()):
+                                            ?>
+                                            <tr>
+                                                <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo $row ['nombre']; ?></td>
+                                                <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo $row ['duracion'] ?></td>
+                                                <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo $row ['modalidad'] ?></td>
+                                                <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo $row ['fecha_creacion'] ?></td>
+                                                <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo utf8_encode($row ['usuario']) ?></td>
+                                                <td class="Sans" style="color: #04B404;text-align: center">Detalles        <i class="fa fa-plus"></i></td>
+                                                <td class="Sans" style="color: #FF0000;text-align: center"><a href="#<?php echo $row['id'] ?>" data-toggle="modal" > <i class="icon-trash">Eliminar</i> </a><i class="fa fa-trash"></i></td>
+
+
+                                            </tr>
+                                        <div class="modal fade" id="<?php echo $row['id'] ?>" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true" >
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                        <h4 class="modal-title" id="myModalLabel">Atención</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <h3>¿Estas seguro de eliminar el contenido? <?php echo $row['ruta'] ?> </h3>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="icon-ban-circle"></i>&nbsp;Cerrrar</button>
+                                                        <a href="../delete/delete_diplomat.php?d=<?php echo $row['id'] ?>&f=<?php echo $row['ruta'] ?>"><button type="button" class="btn btn-success"><i class="icon-ok"></i>Aceptar</button></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                         <?php
-                                                        endwhile;
-                                                        ?> 
+                                    endwhile;
+                                    ?> 
                                     </tbody>
                                 </table>
                             </div>
                         </div> 
 
-                      
+
                         <!-- footer content -->
-                        
+
                         <!-- /footer content -->
                     </div>
 
