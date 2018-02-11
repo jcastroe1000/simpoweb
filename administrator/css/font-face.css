@@ -18,7 +18,7 @@ and open the template in the editor.
 
 @font-face{
     font-family: Sans;
-    src:url("../font_face/Material_Sans.ttf");
+    src:url("font_face/Material_Sans.ttf");
 }
 .Sans{
     font-family: Sans;
