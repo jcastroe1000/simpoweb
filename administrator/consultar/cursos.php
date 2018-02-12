@@ -149,9 +149,7 @@ $user_name = $_SESSION['user_name'];
                 <div class="top_nav">
                     <div class="nav_menu">
                         <nav>
-                            <div class="nav toggle">
-                                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
-                            </div>
+                            
 
                             <ul class="nav navbar-nav navbar-right">
                                 <li class="">
@@ -172,70 +170,7 @@ $user_name = $_SESSION['user_name'];
                                     </ul>
                                 </li>
 
-                                <li role="presentation" class="dropdown">
-                                    <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
-                                        <i class="fa fa-envelope-o"></i>
-                                        <span class="badge bg-green">6</span>
-                                    </a>
-                                    <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
-                                        <li>
-                                            <a>
-                                                <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                                                <span>
-                                                    <span>John Smith</span>
-                                                    <span class="time">3 mins ago</span>
-                                                </span>
-                                                <span class="message">
-                                                    Film festivals used to be do-or-die moments for movie makers. They were where...
-                                                </span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a>
-                                                <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                                                <span>
-                                                    <span>John Smith</span>
-                                                    <span class="time">3 mins ago</span>
-                                                </span>
-                                                <span class="message">
-                                                    Film festivals used to be do-or-die moments for movie makers. They were where...
-                                                </span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a>
-                                                <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                                                <span>
-                                                    <span>John Smith</span>
-                                                    <span class="time">3 mins ago</span>
-                                                </span>
-                                                <span class="message">
-                                                    Film festivals used to be do-or-die moments for movie makers. They were where...
-                                                </span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a>
-                                                <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                                                <span>
-                                                    <span>John Smith</span>
-                                                    <span class="time">3 mins ago</span>
-                                                </span>
-                                                <span class="message">
-                                                    Film festivals used to be do-or-die moments for movie makers. They were where...
-                                                </span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <div class="text-center">
-                                                <a>
-                                                    <strong>See All Alerts</strong>
-                                                    <i class="fa fa-angle-right"></i>
-                                                </a>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </li>
+                              
                             </ul>
                         </nav>
                     </div>
@@ -315,11 +250,11 @@ $user_name = $_SESSION['user_name'];
                                         while ($row = $res->fetch_assoc()):
                                             ?>
                                             <tr>
-                                                <td class="Sansation_Light_Italic" style="color: #013ADF;text-align: center;font-size: 14px"><?php echo $row ['nombre']; ?></td>
-                                                <td class="Sansation_Light_Italic" style="color: #013ADF;text-align: center;font-size: 14px"><?php echo $row ['fecha_creacion'] ?></td>
-                                                <td class="Sansation_Light_Italic" style="color: #013ADF;text-align: center;font-size: 14px"><?php echo utf8_encode($row ['usuario']) ?></td>
-                                                <td class="Sansation_Light_Italic" style="color: #013ADF;text-align: center;font-size: 14px"><a href=""  data-toggle="modal" data-target="#myModal" style="color:green"><i class="fa fa-eye" style="font-size: 25px"></i></td></a>
-                                                <td class="Sansation_Light_Italic" style="color: #013ADF;text-align: center;font-size: 14px"><a href="#<?php echo $row['id'] ?>" data-toggle="modal" style="color:red"><i class="fa fa-trash" style="font-size: 25px"></i></td></a>
+                                                <td class="Sansation_Light_Italic" style="color: #013ADF;text-align: center;font-size: 12px"><?php echo $row ['nombre']; ?></td>
+                                                <td class="Sansation_Light_Italic" style="color: #013ADF;text-align: center;font-size: 12px"><?php echo $row ['fecha_creacion'] ?></td>
+                                                <td class="Sansation_Light_Italic" style="color: #013ADF;text-align: center;font-size: 12px"><?php echo utf8_encode($row ['usuario']) ?></td>
+                                                <td class="Sansation_Light_Italic" style="color: #013ADF;text-align: center;font-size: 12px"><a href=""  data-toggle="modal" data-target="#myModal" style="color:green"><i class="fa fa-eye" style="font-size: 25px"></i></td></a>
+                                                <td class="Sansation_Light_Italic" style="color: #013ADF;text-align: center;font-size: 12px"><a href="#<?php echo $row['id'] ?>" data-toggle="modal" style="color:red"><i class="fa fa-trash" style="font-size: 25px"></i></td></a>
 
                                             </tr>
                                         <div class="modal fade" id="<?php echo $row['id'] ?>" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true" >

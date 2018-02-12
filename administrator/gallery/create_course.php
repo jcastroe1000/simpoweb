@@ -12,7 +12,7 @@
     $d_finish=$_GET['date_finish'];
     $time_start=$_GET['time_start'];
     $time_finish=$_GET['time_finish'];
-    $days= implode('|',$_GET['days']);
+    $days= implode(',',$_GET['days']);
     $days_converts=utf8_decode($days);
     $modality=$_GET['modality'];
     $requiriments=$_GET['requirements'];
