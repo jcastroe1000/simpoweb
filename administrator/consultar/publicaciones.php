@@ -149,14 +149,12 @@ $user_name = $_SESSION['user_name'];
                 <div class="top_nav">
                     <div class="nav_menu">
                         <nav>
-                            <div class="nav toggle">
-                                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
-                            </div>
+                            
 
                             <ul class="nav navbar-nav navbar-right">
                                 <li class="">
                                     <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                        <img src="../images/img.jpg" alt="">John Doe
+                                        <img src="../images/img.jpg" alt=""><?php echo utf8_encode($user_name)?>
                                         <span class=" fa fa-angle-down"></span>
                                     </a>
                                     <ul class="dropdown-menu dropdown-usermenu pull-right">
@@ -172,70 +170,7 @@ $user_name = $_SESSION['user_name'];
                                     </ul>
                                 </li>
 
-                                <li role="presentation" class="dropdown">
-                                    <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
-                                        <i class="fa fa-envelope-o"></i>
-                                        <span class="badge bg-green">6</span>
-                                    </a>
-                                    <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
-                                        <li>
-                                            <a>
-                                                <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                                                <span>
-                                                    <span>John Smith</span>
-                                                    <span class="time">3 mins ago</span>
-                                                </span>
-                                                <span class="message">
-                                                    Film festivals used to be do-or-die moments for movie makers. They were where...
-                                                </span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a>
-                                                <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                                                <span>
-                                                    <span>John Smith</span>
-                                                    <span class="time">3 mins ago</span>
-                                                </span>
-                                                <span class="message">
-                                                    Film festivals used to be do-or-die moments for movie makers. They were where...
-                                                </span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a>
-                                                <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                                                <span>
-                                                    <span>John Smith</span>
-                                                    <span class="time">3 mins ago</span>
-                                                </span>
-                                                <span class="message">
-                                                    Film festivals used to be do-or-die moments for movie makers. They were where...
-                                                </span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a>
-                                                <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                                                <span>
-                                                    <span>John Smith</span>
-                                                    <span class="time">3 mins ago</span>
-                                                </span>
-                                                <span class="message">
-                                                    Film festivals used to be do-or-die moments for movie makers. They were where...
-                                                </span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <div class="text-center">
-                                                <a>
-                                                    <strong>See All Alerts</strong>
-                                                    <i class="fa fa-angle-right"></i>
-                                                </a>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </li>
+                              
                             </ul>
                         </nav>
                     </div>
@@ -254,8 +189,10 @@ $user_name = $_SESSION['user_name'];
 
                             </div>
                         </div>
-                        <div class="clearfix"><h2 style="text-align: center;color: black;font-size: 25px" class="Sansation_Regular">Publicaciones Registrados</h2></div>
-                        <div class="clearfix"><h2 style="text-align: center;color: black;font-size: 25px;padding-top:40px;" class="Sansation_Regular"><a href="../crear/registrar_publicacion.php"><button type="button"  class="btn btn-success"><i class="fa fa-plus"></i> Registrar Publicación</button></a></h2></div>
+
+                        <div class="clearfix"><h2 style="text-align: center;color: black;font-size: 25px" class="Sansation_Regular">Publicaciones Registradas</h2></div>
+
+                        <div class="clearfix"><h2 style="text-align: center;color: black;font-size: 25px;padding-top:40px;" class="Sansation_Regular"><a href="../crear/registrar_diplomado.php"><button type="button"  class="btn btn-success"><i class="fa fa-plus"></i> Registrar Diplomado</button></a></h2></div>
                         <div style="width: 50%" class="center-block">
                             <?php
                             $m = $_GET['m'];
@@ -263,7 +200,7 @@ $user_name = $_SESSION['user_name'];
                             if ($m == 1) {
 
                                 $modal = '<div class="alert alert-success alert-dismissible " role="alert" style="text-align:center" id="ok">
-                                            <strong style="font-weight: 900;">Bien! La publicación ha sido eliminado exitosamente.</strong>
+                                            <strong style="font-weight: 900;">Bien! El curso ha sido eliminado exitosamente.</strong>
                                             <button type="button" class="close" data-dismiss="alert" aria-label="Close" style="opacity: 1;">
                                             <span aria-hidden="true">&times;</span>
                                             </button>
@@ -293,13 +230,11 @@ $user_name = $_SESSION['user_name'];
                                 <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
                                     <thead>
                                         <tr>
-                                            <th class="Sansation_Bold" style="color: black;text-align: center">Nombre de la publicación</th>
-                                            <th class="Sansation_Bold" style="color: black;text-align: center">Duracion</th>
-                                            <th class="Sansation_Bold" style="color: black;text-align: center">Modalidad</th>
+                                            <th class="Sansation_Bold" style="color: black;text-align: center">Nombre del Diplomado</th>
                                             <th class="Sansation_Bold" style="color: black;text-align: center">Fecha Creación</th>
-                                            <th class="Sansation_Bold" style="color: black;text-align: center">Usuario</th>
-                                            <th></th>
-                                            <th></th>
+                                            <th class="Sansation_Bold" style="color: black;text-align: center">Registrado por</th>
+                                            <th class="Sansation_Bold" style="color: black;text-align: center">Detalles</th>
+                                            <th class="Sansation_Bold" style="color: black;text-align: center">Eliminar</th>
 
 
                                         </tr>
@@ -309,19 +244,18 @@ $user_name = $_SESSION['user_name'];
                                         <?php
                                         include "../model/conection.php";
                                         error_reporting(E_ALL);
-                                        $res = $mysqli->query("SELECT id,nombre,duracion,modalidad,fecha_creacion,usuario,ruta from registro_eventos WHERE seccion='publicacion' ");
+                                        $res = $mysqli->query("SELECT * from registro_eventos WHERE seccion='publicacion' ");
                                         $mysqli->close();
+
                                         while ($row = $res->fetch_assoc()):
+                                            $path = '../gallery/album/publication/' . $row ['ruta'];
                                             ?>
                                             <tr>
-                                                <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo $row ['nombre']; ?></td>
-                                                <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo $row ['duracion'] ?></td>
-                                                <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo $row ['modalidad'] ?></td>
-                                                <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo $row ['fecha_creacion'] ?></td>
-                                                <td class="Sans" style="color: #6E6E6E;text-align: center"><?php echo utf8_encode($row ['usuario']) ?></td>
-                                                <td class="Sans" style="color: #04B404;text-align: center">Detalles        <i class="fa fa-plus"></i></td>
-                                                <td class="Sans" style="color: #FF0000;text-align: center"><a href="#<?php echo $row['id'] ?>" data-toggle="modal" style="color:red"> Eliminar </a><i class="fa fa-trash"></i></td>
-
+                                                <td class="Sansation_Light_Italic" style="color: #013ADF;text-align: center;font-size: 12px"><?php echo $row ['nombre']; ?></td>
+                                                <td class="Sansation_Light_Italic" style="color: #013ADF;text-align: center;font-size: 12px"><?php echo $row ['fecha_creacion'] ?></td>
+                                                <td class="Sansation_Light_Italic" style="color: #013ADF;text-align: center;font-size: 12px"><?php echo utf8_encode($row ['usuario']) ?></td>
+                                                <td class="Sansation_Light_Italic" style="color: #013ADF;text-align: center;font-size: 12px"><a href=""  data-toggle="modal" data-target="#myModal" style="color:green"><i class="fa fa-eye" style="font-size: 25px"></i></td></a>
+                                                <td class="Sansation_Light_Italic" style="color: #013ADF;text-align: center;font-size: 12px"><a href="#<?php echo $row['id'] ?>" data-toggle="modal" style="color:red"><i class="fa fa-trash" style="font-size: 25px"></i></td></a>
 
                                             </tr>
                                         <div class="modal fade" id="<?php echo $row['id'] ?>" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true" >
@@ -329,14 +263,127 @@ $user_name = $_SESSION['user_name'];
                                                 <div class="modal-content">
                                                     <div class="modal-header">
                                                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                                        <h4 class="modal-title" id="myModalLabel" style="text-align: center;font-weight: bolder">Atención</h4>
+                                                        <h4 class="modal-title" id="myModalLabel" style="text-align: center;font-weight: bold">Atención</h4>
                                                     </div>
                                                     <div class="modal-body">
                                                         <h3 style="text-align: center">¿Estas seguro de eliminar la publicación con el nombre, <strong><?php echo $row['nombre'] ?></strong>?</h3>
                                                     </div>
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="icon-ban-circle"></i>&nbsp;Cerrrar</button>
-                                                        <a href="../delete/delete_publication.php?d=<?php echo $row['id'] ?>&f=<?php echo $row['ruta'] ?>"><button type="button" class="btn btn-success"><i class="icon-ok"></i>Aceptar</button></a>
+                                                        <a href="../delete/delete_course.php?d=<?php echo $row['id'] ?>&f=<?php echo $row['ruta'] ?>"><button type="button" class="btn btn-success"><i class="icon-ok"></i>Aceptar</button></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--Editar-->
+                                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+
+                                                        </button>
+                                                        <h4 class="modal-title" id="myModalLabel" style="text-align: center">
+                                                            <strong ><?php echo $row['nombre'] ?> </strong>
+                                                        </h4>
+
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div role="tabpanel">
+                                                            <!-- Nav tabs -->
+                                                            <ul class="nav nav-tabs" role="tablist">
+                                                                <li role="presentation" class="active"><a href="#uploadTab" aria-controls="uploadTab" role="tab" data-toggle="tab">Sección 1</a>
+
+                                                                </li>
+                                                                <li role="presentation"><a href="#browseTab" aria-controls="browseTab" role="tab" data-toggle="tab">Sección 2</a>
+
+                                                                </li>
+                                                                <li role="presentation"><a href="#imageTab" aria-controls="imageTab" role="tab" data-toggle="tab">Sección 3</a>
+
+                                                                </li>
+                                                            </ul>
+                                                            <!-- Tab panes -->
+                                                            <div class="tab-content">
+                                                                <div role="tabpanel" class="tab-pane active" id="uploadTab">
+                                                                    <h5 style="text-align: justify"><strong >Resumen:  </strong><?php echo utf8_encode($row['resumen']) ?></h5> 
+                                                                    <h5 style="text-align: justify"><strong >Dirigido:  </strong><?php echo utf8_encode($row['dirigido']) ?></h5>
+                                                                    <h5 style="text-align: left"><strong style="text-align: justify">Objetivo:  </strong><?php echo utf8_encode($row['objetivo']) ?></h5>
+                                                                    <div class="row">
+                                                                        <div class="col-md-6"><h5 style="text-align: left"><strong style="text-align: justify">Periodo:  </strong><?php echo utf8_encode($row['periodo']) ?></h5></div>
+                                                                        <div class="col-md-6"><h5 style="text-align: left"><strong style="text-align: justify">Duración:  </strong><?php echo utf8_encode($row['duracion']) ?></h5></div>
+                                                                    </div>
+                                                                    <h5 style="text-align: left"><strong style="text-align: justify">Días:  </strong><?php echo utf8_encode($row['dias']) ?></h5>
+                                                                    <div class="row">
+                                                                        <div class="col-md-6"><h5 style="text-align: left"><strong style="text-align: justify">Fecha Inicio:  </strong><?php echo utf8_encode($row['fecha_inicio']) ?></h5></div>
+                                                                        <div class="col-md-6"><h5 style="text-align: left"><strong style="text-align: justify">Fecha Final:  </strong><?php echo utf8_encode($row['fecha_final']) ?></h5></div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-md-6"><h5 style="text-align: left"><strong style="text-align: justify">Hora Inicio:  </strong><?php echo utf8_encode($row['hora_inicio']) ?></h5></div>
+                                                                        <div class="col-md-6"><h5 style="text-align: left"><strong style="text-align: justify">Hora Final:  </strong><?php echo utf8_encode($row['hora_final']) ?></h5></div>
+                                                                    </div>
+
+                                                                </div>
+                                                                <div role="tabpanel" class="tab-pane" id="browseTab">
+                                                                    <div class="row">
+                                                                        <div class="col-md-5"><h5 style="text-align: left"><strong style="text-align: justify">Modalidad:  </strong><?php echo utf8_encode($row['modalidad']) ?></h5></div>
+                                                                        <div class="col-md-5"><h5 style="text-align: left"><strong style="text-align: justify">Costo:  </strong><?php echo "$" . $row['costo'] ?></h5></div>
+                                                                    </div>
+                                                                    <h5 style="text-align: left"><strong style="text-align: justify">Método de Pago:  </strong><?php echo utf8_encode($row['metodo_pago']) ?></h5>
+                                                                    <h5 style="text-align: justify"> <strong >Requisitos:  </strong><?php echo utf8_encode($row['requisitos']) ?></h5>  
+                                                                    <h5 style="text-align: justify;"> <strong >Información adicional:  </strong><?php echo utf8_encode($row['informacion_adicional']) ?></h5>    
+
+                                                                </div>
+                                                                <div role="tabpanel" class="tab-pane" id="imageTab">
+                                                                    <img  src="<?php echo $path ?>" height="300 px" width="550 px">
+                                                                     
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                                                        <button type="button" class="btn btn-primary save">Editar</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+                                        <!--Editar-->
+                                        <div class="modal fade" id="<?php echo $row['nombre'] ?>" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true" >
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                        <h4 class="modal-title" id="myModalLabel" style="text-align: center"><strong>Curso</strong></br> <?php echo utf8_encode($row['nombre']) ?></h4>
+                                                    </div>
+                                                    <div class="modal-body">
+
+                                                        <h5 style="text-align: left"><strong style="text-align: justify">Resumen:  </strong><?php echo utf8_encode($row['resumen']) ?></h5> 
+                                                        <h5 style="text-align: left"><strong style="text-align: justify">Dirigido:  </strong><?php echo utf8_encode($row['dirigido']) ?></h5>
+                                                        <h5 style="text-align: left"><strong style="text-align: justify">Dirigido:  </strong><?php echo utf8_encode($row['objetivo']) ?></h5>
+                                                        <div class="row">
+                                                            <div class="col-md-6"><h5 style="text-align: left"><strong style="text-align: justify">Periodo:  </strong><?php echo utf8_encode($row['periodo']) ?></h5></div>
+                                                            <div class="col-md-6"><h5 style="text-align: left"><strong style="text-align: justify">Duración:  </strong><?php echo utf8_encode($row['duracion']) ?></h5></div>
+                                                        </div>
+                                                        <h5 style="text-align: left"><strong style="text-align: justify">Días:  </strong><?php echo utf8_encode($row['dias']) ?></h5>
+                                                        <div class="row">
+                                                            <div class="col-md-6"><h5 style="text-align: left"><strong style="text-align: justify">Fecha Inicio:  </strong><?php echo utf8_encode($row['fecha_inicio']) ?></h5></div>
+                                                            <div class="col-md-6"><h5 style="text-align: left"><strong style="text-align: justify">Fecha Final:  </strong><?php echo utf8_encode($row['fecha_final']) ?></h5></div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-6"><h5 style="text-align: left"><strong style="text-align: justify">Hora Inicio:  </strong><?php echo utf8_encode($row['hora_inicio']) ?></h5></div>
+                                                            <div class="col-md-6"><h5 style="text-align: left"><strong style="text-align: justify">Hora Final:  </strong><?php echo utf8_encode($row['hora_final']) ?></h5></div>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="modal-footer">
+
+                                                        <button type="button" class="btn btn-primary">Modificar</button>
+                                                        <button type="button" class="btn btn-info" data-dismiss="modal">Cerrar</button>
+                                                       <!--<a href="Delete_Photo.php?d=<?php echo $row2['id'] ?>&f=<?php echo $row2['file'] ?>"><button type="button" class="btn btn-success"><i class="icon-ok"></i>Aceptar</button></a>-->
                                                     </div>
                                                 </div>
                                             </div>
@@ -344,6 +391,7 @@ $user_name = $_SESSION['user_name'];
                                         <?php
                                     endwhile;
                                     ?> 
+
                                     </tbody>
                                 </table>
                             </div>
@@ -614,6 +662,22 @@ $user_name = $_SESSION['user_name'];
                         });
                     });
                 </script>
+
+                <script id="ajax" type="text/javascript">
+
+                    function addImage(pk) {
+                        alert("addImage: " + pk);
+                    }
+
+                    $('#myModal .save').click(function (e) {
+                        e.preventDefault();
+                        addImage(5);
+                        $('#myModal').modal('hide');
+                        //$(this).tab('show')
+                        return false;
+                    });
+
+                </script> 
                 <!-- /Starrr -->
                 </body>
                 </html>
