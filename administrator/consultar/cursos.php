@@ -246,18 +246,19 @@ $user_name = $_SESSION['user_name'];
                                         error_reporting(E_ALL);
                                         $res = $mysqli->query("SELECT * from registro_eventos WHERE seccion='curso' ");
                                         $mysqli->close();
-
+                                         
                                         while ($row = $res->fetch_assoc()):
+                                           $id = $row ['id'];
                                             ?>
                                             <tr>
                                                 <td class="Sansation_Light_Italic" style="color: #013ADF;text-align: center;font-size: 12px"><?php echo $row ['nombre']; ?></td>
                                                 <td class="Sansation_Light_Italic" style="color: #013ADF;text-align: center;font-size: 12px"><?php echo $row ['fecha_creacion'] ?></td>
                                                 <td class="Sansation_Light_Italic" style="color: #013ADF;text-align: center;font-size: 12px"><?php echo utf8_encode($row ['usuario']) ?></td>
-                                                <td class="Sansation_Light_Italic" style="color: #013ADF;text-align: center;font-size: 12px"><a href="#<?php echo $row['id'] ?>"  data-toggle="modal" data-target="#<?php echo $row['id'] ?>" style="color:green"><i class="fa fa-eye" style="font-size: 25px"></i></td></a>
-                                                <td class="Sansation_Light_Italic" style="color: #013ADF;text-align: center;font-size: 12px"><a href="#<?php echo $row['id'] ?>" data-toggle="modal" style="color:red"><i class="fa fa-trash" style="font-size: 25px"></i></td></a>
+                                                <td class="Sansation_Light_Italic" style="color: #013ADF;text-align: center;font-size: 12px"><a href="#prueba"  data-toggle="modal" data-target="#prueba" style="color:green"><i class="fa fa-eye" style="font-size: 25px"></i></td></a>
+                                                <td class="Sansation_Light_Italic" style="color: #013ADF;text-align: center;font-size: 12px"><a href="#<?php echo $row['id']  ?>" data-toggle="modal" style="color:red"><i class="fa fa-trash" style="font-size: 25px"></i></td></a>
 
                                             </tr>
-                                            <!--                                        <div class="modal fade" id="<?php echo $row['id'] ?>" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true" >
+<!--                                            <div class="modal fade" id="prueba" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true" >
                                             <div class="modal-dialog">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
@@ -275,7 +276,7 @@ $user_name = $_SESSION['user_name'];
                                             </div>
                                         </div>-->
                                         <!--Editar-->
-                                        <div class="modal fade" id="<?php echo $row['id'] ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                        <div class="modal fade" id="prueba" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                             <div class="modal-dialog">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
@@ -620,10 +621,11 @@ $user_name = $_SESSION['user_name'];
                 </script>
 
                 <script  type="text/javascript">
-                    
-                    $('#<?php echo $row['id'] ?>').on('hide.bs.modal', function () {
-   $('#<?php echo $row['id'] ?>').removeData();
-});
+//                    var modal = '<?php echo $id ?>';
+//                    console.log (modal);
+//                    $('#prueba').on('hide.bs.modal', function () {
+//   $('#prueba').removeData();
+//});
     </script> 
                 <!-- /Starrr -->
                 </body>
