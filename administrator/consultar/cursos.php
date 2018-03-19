@@ -230,9 +230,9 @@ $user_name = $_SESSION['user_name'];
                                 <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
                                     <thead>
                                         <tr>
+                                            
                                             <th class="Sansation_Bold" style="color: black;text-align: center">Nombre del Curso</th>
                                             <th class="Sansation_Bold" style="color: black;text-align: center">Fecha Creación</th>
-                                            <th class="Sansation_Bold" style="color: black;text-align: center">Registrado por</th>
                                             <th class="Sansation_Bold" style="color: black;text-align: center">Detalles</th>
                                             <th class="Sansation_Bold" style="color: black;text-align: center">Eliminar</th>
 
@@ -241,164 +241,37 @@ $user_name = $_SESSION['user_name'];
                                     </thead>
 
                                     <tbody>
-                                        <?php
+                                        
+                                            <tr>
+                                                <?php
                                         include "../model/conection.php";
                                         error_reporting(E_ALL);
                                         $res = $mysqli->query("SELECT * from registro_eventos WHERE seccion='curso' ");
                                         $mysqli->close();
 
-                                        while ($row = $res->fetch_assoc()):
+                                        while ($row = $res->fetch_assoc()){
                                             $id = $row ['id'];
+                                            $nombre = $row ['nombre'];
+                                            $fecha_creacion = $row ['fecha_creacion'];
+                                            
                                             ?>
-                                            <tr>
-                                                <td class="Sansation_Light_Italic" style="color: #013ADF;text-align: center;font-size: 12px"><?php echo $row ['nombre']; ?></td>
-                                                <td class="Sansation_Light_Italic" style="color: #013ADF;text-align: center;font-size: 12px"><?php echo $row ['fecha_creacion'] ?></td>
-                                                <td class="Sansation_Light_Italic" style="color: #013ADF;text-align: center;font-size: 12px"><?php echo utf8_encode($row ['usuario']) ?></td>
+                                               
+                                                <td class="Sansation_Light_Italic" style="color: #013ADF;text-align: center;font-size: 12px"><?php echo $nombre?></td>
+                                                <td class="Sansation_Light_Italic" style="color: #013ADF;text-align: center;font-size: 12px"><?php echo $fecha_creacion?></td>
+                                                
                                                 <td class="Sansation_Light_Italic" style="color: #013ADF;text-align: center;font-size: 12px"><a href="#<?php echo $row['id'] ?>"  data-toggle="modal" data-target="#<?php echo $row['id'] ?>" style="color:green"><i class="fa fa-eye" style="font-size: 25px"></i></td></a>
                                                 <td class="Sansation_Light_Italic" style="color: #013ADF;text-align: center;font-size: 12px"><a href="#<?php echo $row['id'] . 00 ?>" data-toggle="modal" style="color:red"><i class="fa fa-trash" style="font-size: 25px"></i></td></a>
-
+                                                  
                                             </tr>
-                                                                                     <div class="modal fade" id="<?php echo $row['id'] . 00 ?>" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true" >
-                                                                                        <div class="modal-dialog">
-                                                                                            <div class="modal-content">
-                                                                                                <div class="modal-header">
-                                                                                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                                                                                    <h4 class="modal-title" id="myModalLabel" style="text-align: center;font-weight: bold">Atención</h4>
-                                                                                                </div>
-                                                                                                <div class="modal-body">
-                                                                                                    <h3 style="text-align: center">¿Estas seguro de eliminar la publicación con el nombre, <strong><?php echo $row['nombre'] ?></strong>?</h3>
-                                                                                                </div>
-                                                                                                <div class="modal-footer">
-                                                                                                    <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="icon-ban-circle"></i>&nbsp;Cerrrar</button>
-                                                                                                    <a href="../delete/delete_course.php?d=<?php echo $row['id'] ?>&f=<?php echo $row['ruta'] ?>"><button type="button" class="btn btn-success"><i class="icon-ok"></i>Aceptar</button></a>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                            <!--Editar-->
-                                        <div class="modal fade" id="prueba" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
-
-                                                        </button>
-                                                        <h4 class="modal-title" id="myModalLabel" style="text-align: center">
-                                                            <strong ><?php echo utf8_encode($row['nombre']) ?> </strong>
-                                                        </h4>
-
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        <div role="tabpanel">
-                                                            <!-- Nav tabs -->
-                                                            <ul class="nav nav-tabs" role="tablist">
-                                                                <li role="presentation" class="active"><a href="#uploadTab" aria-controls="uploadTab" role="tab" data-toggle="tab">Sección 1</a>
-
-                                                                </li>
-                                                                <li role="presentation"><a href="#browseTab" aria-controls="browseTab" role="tab" data-toggle="tab">Sección 2</a>
-
-                                                                </li>
-                                                            </ul>
-                                                            <!-- Tab panes -->
-                                                          
-                                                        </div>
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                                                        <button type="button" class="btn btn-primary save">Editar</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="container">
-
-
-                                            <script type="text/javascript"
-                                                    src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
-                                            </script></div>
-
-                                </div>
-                                <!-- Modal -->
-                                <div class="modal fade" id="<?php echo $row['id'] ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                                <h5 style="text-align: justify;text-transform: uppercase;text-align: center;font-weight: bold"><strong ></strong><?php echo utf8_encode($row['nombre']) ?></h5> 
-                                            </div>
-                                            <div class="modal-body" style="margin-left: 10px;margin-right: 10px">
-                                                <div class="row hide" data-step="1" data-title="This is the first step!">
-                                                    <h5 style="text-align: justify"><strong >Resumen:  </strong><?php echo utf8_encode($row['resumen']) ?></h5> 
-                                                    <h5 style="text-align: justify"><strong >Dirigido:  </strong><?php echo utf8_encode($row['dirigido']) ?></h5>
-                                                    <h5 style="text-align: left"><strong style="text-align: justify">Objetivo:  </strong><?php echo utf8_encode($row['objetivo']) ?></h5>
-                                                    <div class="row">
-                                                        <div class="col-md-6"><h5 style="text-align: left"><strong style="text-align: justify">Periodo:  </strong><?php echo utf8_encode($row['periodo']) ?></h5></div>
-                                                        <div class="col-md-6"><h5 style="text-align: left"><strong style="text-align: justify">Duración:  </strong><?php echo utf8_encode($row['duracion']) ?></h5></div>
-                                                    </div>
-                                                    <h5 style="text-align: left"><strong style="text-align: justify">Días:  </strong><?php echo utf8_encode($row['dias']) ?></h5>
-                                                    <div class="row">
-                                                        <div class="col-md-6"><h5 style="text-align: left"><strong style="text-align: justify">Fecha Inicio:  </strong><?php echo utf8_encode($row['fecha_inicio']) ?></h5></div>
-                                                        <div class="col-md-6"><h5 style="text-align: left"><strong style="text-align: justify">Fecha Final:  </strong><?php echo utf8_encode($row['fecha_final']) ?></h5></div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-md-6"><h5 style="text-align: left"><strong style="text-align: justify">Hora Inicio:  </strong><?php echo utf8_encode($row['hora_inicio']) ?></h5></div>
-                                                        <div class="col-md-6"><h5 style="text-align: left"><strong style="text-align: justify">Hora Final:  </strong><?php echo utf8_encode($row['hora_final']) ?></h5></div>
-                                                    </div>
-                                                </div>
-                                                <div class="row hide" data-step="2" data-title="This is the second step!">
-                                                    <div class="row">
-                                                        <div class="col-md-4"><h5 style="text-align: left"><strong style="text-align: justify">Modalidad:  </strong><?php echo utf8_encode($row['modalidad']) ?></h5></div>
-                                                        <div class="col-md-2"><h5 style="text-align: left"><strong style="text-align: justify">Costo:  </strong><?php echo "$" . $row['costo'] ?></h5></div>
-                                                        <div class="col-md-6"><h5 style="text-align: left"><strong style="text-align: justify">Método de Pago:  </strong><?php echo utf8_encode($row['metodo_pago']) ?></h5></div>
-                                                    </div>
-                                                    <h5 style="text-align: justify"> <strong >Requisitos:  </strong><?php echo utf8_encode($row['requisitos']) ?></h5>  
-                                                    <h5 style="text-align: justify;"> <strong >Información adicional:  </strong><?php echo utf8_encode($row['informacion_adicional']) ?></h5>    
-                                                </div>
-                                                <div class="row hide" data-step="3" data-title="This is the last step!">
-                                                    <img  src="<?php echo $path= '../gallery/album/course/' . $row['ruta'];?> "  style="height: 300px; width: 300px" class="center-block">
-                                                </div>
-                                            </div>
-                                            <div class="modal-footer">
-
-                                                <button type="button" class="btn btn-warning js-btn-step" data-orientation="previous"></button>
-                                                <button type="button" class="btn btn-success js-btn-step" data-orientation="next"></button>
-                                                <button type="button" class="btn btn-info" data-orientation="next">Editar</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
-                                <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-                                <script src="../js/modal-steps.min.js"></script>
-                                <script>
-                                        $('#<?php echo $row['id'] ?>').modalSteps();
-                                </script>
-                                <script type="text/javascript">
-
-                                    var _gaq = _gaq || [];
-                                    _gaq.push(['_setAccount', 'UA-36251023-1']);
-                                    _gaq.push(['_setDomainName', 'jqueryscript.net']);
-                                    _gaq.push(['_trackPageview']);
-
-                                    (function () {
-                                        var ga = document.createElement('script');
-                                        ga.type = 'text/javascript';
-                                        ga.async = true;
-                                        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-                                        var s = document.getElementsByTagName('script')[0];
-                                        s.parentNode.insertBefore(ga, s);
-                                    })();
-
-                                </script>
-
-
-
-
-
-                                </tbody>
-                                <?php
-                            endwhile;
+                                      
+          <?php
+                                        };
                             ?> 
+
+
+                            
+                                </tbody>
+                           
                             </table>
                         </div>
                     </div> 
