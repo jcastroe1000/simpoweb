@@ -56,7 +56,7 @@ $user_name = $_SESSION['user_name'];
                 <div class="col-md-3 left_col">
                     <div class="left_col scroll-view">
                         <div class="navbar nav_title" style="border: 0;">
-                            <a href="index4.html" class="site_title"><i class="fa fa-paw"></i> <span>Gentellela Alela!</span></a>
+                            <a href="index4.html" class="site_title"><i class="fa fa-flask "></i> <span>Sistema de Administración!</span></a>
                         </div>
 
                         <div class="clearfix"></div>
@@ -192,9 +192,9 @@ $user_name = $_SESSION['user_name'];
                             </div>
                         </div>
 
-                        <div class="clearfix"><h2 style="text-align: center;color: black;font-size: 25px" class="Sansation_Regular">Cursos Registrados</h2></div>
+                        <div class="clearfix"><h2 style="text-align: center;color: black;font-size: 25px" class="SourceSansPro-Bold">Cursos Registrados</h2></div>
 
-                        <div class="clearfix"><h2 style="text-align: center;color: black;font-size: 25px;padding-top:40px;" class="Sansation_Regular"><a href="../crear/registrar_curso.php"><button type="button"  class="btn btn-success"><i class="fa fa-plus"></i> Registrar Curso</button></a></h2></div>
+                        <div class="clearfix"><h2 style="text-align: center;color: black;font-size: 25px;padding-top:0px;" class="Sansation_Regular"><a href="../crear/registrar_curso.php"><button type="button"  class="btn btn-success"><i class="fa fa-plus"></i> Registrar Curso</button></a></h2></div>
                         <div style="width: 50%" class="center-block">
                             <?php
                             $m = $_GET['m'];
@@ -233,10 +233,10 @@ $user_name = $_SESSION['user_name'];
                                     <thead>
                                         <tr>
                                             
-                                            <th class="Sansation_Bold" style="color: black;text-align: center">Nombre del Curso</th>
-                                            <th class="Sansation_Bold" style="color: black;text-align: center">Fecha Creación</th>
-                                            <th class="Sansation_Bold" style="color: black;text-align: center">Detalles</th>
-                                            <th class="Sansation_Bold" style="color: black;text-align: center">Eliminar</th>
+                                            <th class="SSansPro-Regular" style="color: black;text-align: center">Nombre del Curso</th>
+                                            <th class="SSansPro-Regular" style="color: black;text-align: center">Fecha Creación</th>
+                                            <th class="SSansPro-Regular" style="color: black;text-align: center">Detalles</th>
+                                            <th class="SSansPro-Regular" style="color: black;text-align: center">Eliminar</th>
 
 
                                         </tr>
@@ -258,11 +258,11 @@ $user_name = $_SESSION['user_name'];
                                             
                                             ?>
                                                
-                                                <td class="Sansation_Light_Italic" style="color: #013ADF;text-align: center;font-size: 12px"><?php echo $nombre?></td>
-                                                <td class="Sansation_Light_Italic" style="color: #013ADF;text-align: center;font-size: 12px"><?php echo $fecha_creacion?></td>
+                                                <td class="SourceSansPro-Semibold" style="color: #013ADF;text-align: center;font-size: 14px"><?php echo $nombre?></td>
+                                                <td class="SourceSansPro-Semibold" style="color: #013ADF;text-align: center;font-size: 14px"><?php echo $fecha_creacion?></td>
                                                 
-                                                <td class="Sansation_Light_Italic" style="color: #013ADF;text-align: center;font-size: 12px"><a href="#<?php echo $row['id'] ?>"  data-toggle="modal" data-target="#<?php echo $row['id'] ?>" style="color:green"><i class="fa fa-eye" style="font-size: 25px"></i></td></a>
-                                                <td class="Sansation_Light_Italic" style="color: #013ADF;text-align: center;font-size: 12px"><a href="#<?php echo $row['id'] . 00 ?>" data-toggle="modal" style="color:red"><i class="fa fa-trash" style="font-size: 25px"></i></td></a>
+                                                <td style="text-align: center"><a href="#<?php echo $row['id'] ?>"  data-toggle="modal" data-target="#<?php echo $row['id'] ?>" style="color:green"><i class="fa fa-eye" style="font-size: 25px"></i></td></a>
+                                                <td style="text-align: center"><a href="#<?php echo $row['id'] . 00 ?>" data-toggle="modal" style="color:red"><i class="fa fa-trash" style="font-size: 25px"></i></td></a>
                                                   
                                             </tr>
                                             

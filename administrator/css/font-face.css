@@ -70,3 +70,25 @@ and open the template in the editor.
     font-family: Sansation_Bold ;
 }
 
+@font-face{
+    font-family: SourceSansPro-Bold;
+    src:url("../font_face/SourceSansPro-Bold.otf");
+}
+
+.SourceSansPro-Bold{
+    font-family: SourceSansPro-Bold ;
+}
+
+
+
+@font-face{
+    font-family: SourceSansPro-Semibold;
+    src:url("../font_face/SourceSansPro-Semibold.otf");
+}
+
+.SourceSansPro-Semibold{
+    font-family: SourceSansPro-Semibold ;
+}
+
+
+
