@@ -56,7 +56,7 @@ $user_name = $_SESSION['user_name'];
                 <div class="col-md-3 left_col">
                     <div class="left_col scroll-view">
                         <div class="navbar nav_title" style="border: 0;">
-                            <a href="index4.html" class="site_title"><i class="fa fa-flask "></i> <span>Sistema de Administración!</span></a>
+                            <a href="index4.html" class="site_title"><i class="fa fa-flask "></i> <span>Sistema de Administración</span></a>
                         </div>
 
                         <div class="clearfix"></div>
@@ -232,7 +232,7 @@ $user_name = $_SESSION['user_name'];
                                 <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
                                     <thead>
                                         <tr>
-                                            
+
                                             <th class="SSansPro-Regular" style="color: black;text-align: center">Nombre del Curso</th>
                                             <th class="SSansPro-Regular" style="color: black;text-align: center">Fecha Creación</th>
                                             <th class="SSansPro-Regular" style="color: black;text-align: center">Detalles</th>
@@ -243,47 +243,46 @@ $user_name = $_SESSION['user_name'];
                                     </thead>
 
                                     <tbody>
-                                        
-                                            <tr>
-                                                <?php
-                                        include "../model/conection.php";
-                                        error_reporting(E_ALL);
-                                        $res = $mysqli->query("SELECT * from registro_eventos WHERE seccion='curso' ");
-                                        $mysqli->close();
 
-                                        while ($row = $res->fetch_assoc()):
-                                            $id = $row ['id'];
-                                            $nombre = $row ['nombre'];
-                                            $fecha_creacion = $row ['fecha_creacion'];
-                                            
-                                            ?>
-                                               
-                                                <td class="SourceSansPro-Semibold" style="color: #013ADF;text-align: center;font-size: 14px"><?php echo $nombre?></td>
-                                                <td class="SourceSansPro-Semibold" style="color: #013ADF;text-align: center;font-size: 14px"><?php echo $fecha_creacion?></td>
-                                                
+                                        <tr>
+                                            <?php
+                                            include "../model/conection.php";
+                                            error_reporting(E_ALL);
+                                            $res = $mysqli->query("SELECT * from registro_eventos WHERE seccion='curso' ");
+                                            $mysqli->close();
+
+                                            while ($row = $res->fetch_assoc()):
+                                                $id = $row ['id'];
+                                                $nombre = $row ['nombre'];
+                                                $fecha_creacion = $row ['fecha_creacion'];
+                                                ?>
+
+                                                <td class="SourceSansPro-Semibold" style="color: #013ADF;text-align: center;font-size: 14px"><?php echo $nombre ?></td>
+                                                <td class="SourceSansPro-Semibold" style="color: #013ADF;text-align: center;font-size: 14px"><?php echo $fecha_creacion ?></td>
+
                                                 <td style="text-align: center"><a href="#<?php echo $row['id'] ?>"  data-toggle="modal" data-target="#<?php echo $row['id'] ?>" style="color:green"><i class="fa fa-eye" style="font-size: 25px"></i></td></a>
                                                 <td style="text-align: center"><a href="#<?php echo $row['id'] . 00 ?>" data-toggle="modal" style="color:red"><i class="fa fa-trash" style="font-size: 25px"></i></td></a>
-                                                  
+
                                             </tr>
-                                            
-                                                                                           <div class="modal fade" id="<?php echo $row['id'] . 00 ?>" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true" >
-                                                                                        <div class="modal-dialog">
-                                                                                            <div class="modal-content">
-                                                                                                <div class="modal-header">
-                                                                                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                                                                                    <h4 class="modal-title" id="myModalLabel" style="text-align: center;font-weight: bold">Atención</h4>
-                                                                                                </div>
-                                                                                                <div class="modal-body">
-                                                                                                    <h3 style="text-align: center">¿Estas seguro de eliminar la publicación con el nombre, <strong><?php echo $row['nombre'] ?></strong>?</h3>
-                                                                                                </div>
-                                                                                                <div class="modal-footer">
-                                                                                                    <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="icon-ban-circle"></i>&nbsp;Cerrrar</button>
-                                                                                                    <a href="../delete/delete_course.php?d=<?php echo $row['id'] ?>&f=<?php echo $row['ruta'] ?>"><button type="button" class="btn btn-success"><i class="icon-ok"></i>Aceptar</button></a>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                            <!--Editar-->
+
+                                        <div class="modal fade" id="<?php echo $row['id'] . 00 ?>" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true" >
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                        <h4 class="modal-title" id="myModalLabel" style="text-align: center;font-weight: bold">Atención</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <h3 style="text-align: center">¿Estas seguro de eliminar la publicación con el nombre, <strong><?php echo $row['nombre'] ?></strong>?</h3>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="icon-ban-circle"></i>&nbsp;Cerrrar</button>
+                                                        <a href="../delete/delete_course.php?d=<?php echo $row['id'] ?>&f=<?php echo $row['ruta'] ?>"><button type="button" class="btn btn-success"><i class="icon-ok"></i>Aceptar</button></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--Editar-->
                                         <div class="modal fade" id="prueba" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                             <div class="modal-dialog">
                                                 <div class="modal-content">
@@ -308,7 +307,7 @@ $user_name = $_SESSION['user_name'];
                                                                 </li>
                                                             </ul>
                                                             <!-- Tab panes -->
-                                                          
+
                                                         </div>
                                                     </div>
                                                     <div class="modal-footer">
@@ -363,14 +362,14 @@ $user_name = $_SESSION['user_name'];
                                                     <h5 style="text-align: justify;"> <strong >Información adicional:  </strong><?php echo utf8_encode($row['informacion_adicional']) ?></h5>    
                                                 </div>
                                                 <div class="row hide" data-step="3" data-title="This is the last step!">
-                                                    <img  src="<?php echo $path= '../gallery/album/course/' . $row['ruta'];?> "  style="height: 300px; width: 300px" class="center-block">
+                                                    <img  src="<?php echo $path = '../gallery/album/course/' . $row['ruta']; ?> "  style="height: 300px; width: 300px" class="center-block">
                                                 </div>
                                             </div>
                                             <div class="modal-footer">
 
                                                 <button type="button" class="btn btn-warning js-btn-step" data-orientation="previous"></button>
                                                 <button type="button" class="btn btn-success js-btn-step" data-orientation="next"></button>
-                                                <button type="button" class="btn btn-info" data-orientation="next">Editar</button>
+                                                <button type="button" class="btn btn-info" data-orientation="next"><a href="../editar/modificar_curso.php?u=<?php echo $row['id'] ?>">Editar</a></button>
                                             </div>
                                         </div>
                                     </div>
@@ -379,7 +378,7 @@ $user_name = $_SESSION['user_name'];
                                 <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
                                 <script src="../js/modal-steps.min.js"></script>
                                 <script>
-                                        $('#<?php echo $row['id'] ?>').modalSteps();
+                                                        $('#<?php echo $row['id'] ?>').modalSteps();
                                 </script>
                                 <script type="text/javascript">
 
@@ -399,14 +398,14 @@ $user_name = $_SESSION['user_name'];
 
                                 </script>
 
-                                                  <?php
-                                    endwhile;
-                                    ?>
+                                <?php
+                            endwhile;
+                            ?>
 
 
-                            
-                                </tbody>
-                           
+
+                            </tbody>
+
                             </table>
                         </div>
                     </div> 
@@ -541,7 +540,7 @@ $user_name = $_SESSION['user_name'];
             <script>
                 $(document).ready(function () {
                     $('#example').DataTable({
-                       "lengthMenu": [[5 ,10, 25, 50, -1], [5 ,10, 25, 50, "All"]]
+                        "lengthMenu": [[5, 10, 25, 50, -1], [5, 10, 25, 50, "All"]]
                     });
                 });
             </script>
@@ -677,7 +676,7 @@ $user_name = $_SESSION['user_name'];
                 });
             </script>
 
-     
+
             <!-- /Starrr -->
     </body>
 </html>
