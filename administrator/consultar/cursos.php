@@ -234,7 +234,7 @@ $user_name = $_SESSION['user_name'];
                                         <tr>
 
                                             <th class="SSansPro-Regular" style="color: black;text-align: center">Nombre del Curso</th>
-                                            <th class="SSansPro-Regular" style="color: black;text-align: center">Fecha Creación</th>
+                                            <th class="SSansPro-Regular" style="color: black;text-align: center">Imagen</th>
                                             <th class="SSansPro-Regular" style="color: black;text-align: center">Detalles</th>
                                             <th class="SSansPro-Regular" style="color: black;text-align: center">Eliminar</th>
 
@@ -258,13 +258,30 @@ $user_name = $_SESSION['user_name'];
                                                 ?>
 
                                                 <td class="SourceSansPro-Semibold" style="color: #013ADF;text-align: center;font-size: 14px"><?php echo $nombre ?></td>
-                                                <td class="SourceSansPro-Semibold" style="color: #013ADF;text-align: center;font-size: 14px"><?php echo $fecha_creacion ?></td>
-
-                                                <td style="text-align: center"><a href="#<?php echo $row['id'] ?>"  data-toggle="modal" data-target="#<?php echo $row['id'] ?>" style="color:green"><i class="fa fa-eye" style="font-size: 25px"></i></td></a>
-                                                <td style="text-align: center"><a href="#<?php echo $row['id'] . 00 ?>" data-toggle="modal" style="color:red"><i class="fa fa-trash" style="font-size: 25px"></i></td></a>
+                                                <td style="text-align: center"><a href="#<?php echo $row['id'] . 000 ?>"  data-toggle="modal" data-target="#<?php echo $row['id'] . 000 ?>" style="color:green"><i class="fa fa-picture-o fa-2x" aria-hidden="true"></i></a></td>
+                                                <td style="text-align: center"><a href="#<?php echo $row['id'] ?>"  data-toggle="modal" data-target="#<?php echo $row['id'] ?>" style="color:green"><i class="fa fa-eye fa-2x" style="font-size: 25px"></i></a></td>
+                                                <td style="text-align: center"><a href="#<?php echo $row['id'] . 00 ?>" data-toggle="modal" style="color:red"><i class="fa fa-trash fa-2x" style="font-size: 25px"></i></a></td>
 
                                             </tr>
-
+                                        <!-- modal imagen-->
+                                        <div class="modal fade" id="<?php echo $row['id'] . 000 ?>" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true" >
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                        <h4 class="modal-title" id="myModalLabel" style="text-align: center;font-weight: bold">Atención</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <h3 style="text-align: center">Imagen</h3>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="icon-ban-circle"></i>&nbsp;Cerrrar</button>
+                                                        <a href="../delete/delete_course.php?d=<?php echo $row['id'] ?>&f=<?php echo $row['ruta'] ?>"><button type="button" class="btn btn-success"><i class="icon-ok"></i>Aceptar</button></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>    
+                                        <!-- modal eliminar-->
                                         <div class="modal fade" id="<?php echo $row['id'] . 00 ?>" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true" >
                                             <div class="modal-dialog">
                                                 <div class="modal-content">
@@ -282,47 +299,8 @@ $user_name = $_SESSION['user_name'];
                                                 </div>
                                             </div>
                                         </div>
-                                        <!--Editar-->
-                                        <div class="modal fade" id="prueba" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
-
-                                                        </button>
-                                                        <h4 class="modal-title" id="myModalLabel" style="text-align: center">
-                                                            <strong ><?php echo utf8_encode($row['nombre']) ?> </strong>
-                                                        </h4>
-
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        <div role="tabpanel">
-                                                            <!-- Nav tabs -->
-                                                            <ul class="nav nav-tabs" role="tablist">
-                                                                <li role="presentation" class="active"><a href="#uploadTab" aria-controls="uploadTab" role="tab" data-toggle="tab">Sección 1</a>
-
-                                                                </li>
-                                                                <li role="presentation"><a href="#browseTab" aria-controls="browseTab" role="tab" data-toggle="tab">Sección 2</a>
-
-                                                                </li>
-                                                            </ul>
-                                                            <!-- Tab panes -->
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                                                        <button type="button" class="btn btn-primary save">Editar</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="container">
-
-
-                                            <script type="text/javascript"
-                                                    src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
-                                            </script></div>
+                                      
+                                        
 
                                 </div>
                                 <!-- Modal -->
