@@ -10,23 +10,20 @@ $user_name = utf8_encode($_SESSION['user_name']);
 
 if (isset($_GET['u'])):
     if (isset($_POST['bts'])):
-        $stmt = $mysqli->prepare("UPDATE galery SET title_galery=?, short_description=?, long_description=?, status=?,modification_date=?,section=? WHERE id_galery=?");
-        $stmt->bind_param('sssssss', $title, $short_decription, $long_description, $status_galery, $modification_date, $section_galery, $id_galery);
-        $title = $_POST['title_galery'];
-        $short_decription = $_POST['short_desc'];
-        $long_description = $_POST['long_desc'];
-        $status_galery = $_POST['status'];
-        $modification_date = $_POST['modification_date'];
-        $section_galery = $_POST['section'];
-        $id_galery = $_POST['id_galery'];
+        $stmt = $mysqli->prepare("UPDATE registro_eventos  SET kv-explorer=? WHERE id=?");
+        $stmt->bind_param('ss', $new_image, $id);
+        $new_image = $_POST['kv-explorer'];
+        $id = $_GET['u'];
         if ($stmt->execute()):
             echo "<script>location.href='Galery.php'</script>";
         else:
             echo "<script>alert('" . $stmt->error . "')</script>";
         endif;
     endif;
-    $res = $mysqli->query("SELECT * FROM registro_eventos WHERE id =" . $_GET['u']);
+    $res = $mysqli->query("SELECT nombre ,ruta FROM registro_eventos WHERE id =" . $_GET['u']);
     $row = $res->fetch_assoc();
+    $path = '../gallery/album/course/' . $row['ruta'];
+    
     $mysqli->close();
 endif;
 ?>
@@ -263,9 +260,7 @@ endif;
                                 <div class="col-sm-11 col-sm-offset-1 col-md-9 col-md-offset-3 col-lg-6 col-lg-offset-3 form-box" style="height: 100%" >
                         <div class="container kv-main">
     <div class="page-header">
-        <h1>Bootstrap File Input Example
-            <small><a href="https://github.com/kartik-v/bootstrap-fileinput-samples"><i
-                    class="glyphicon glyphicon-download"></i> Download Sample Files</a></small>
+        <h1>Reemplazar Imagen
         </h1>
     </div>
     <form enctype="multipart/form-data">
@@ -275,8 +270,8 @@ endif;
         <br>
         
         <br>
-        <button type="submit" class="btn btn-primary">Submit</button>
-        <button type="reset" class="btn btn-default">Reset</button>
+        <button type="submit" class="btn btn-primary">Guardar</button>
+        <button type="reset" class="btn btn-default">Recargar</button>
     </form>
     
 </div>
@@ -358,7 +353,7 @@ endif;
         <script src="../js/plugins/sortable.min.js"></script>
 <!-- purify plugin for safe rendering HTML content in preview -->
 <script src="../js/plugins/purify.min.js"></script>
-<script src="../js/fileinput_2.js"></script>
+
        
 
        
@@ -427,7 +422,7 @@ endif;
         fileType: "any",
         previewFileIcon: "<i class='glyphicon glyphicon-king'></i>",
         overwriteInitial: false,
-        initialPreviewAsData: true,
+        initialPreviewAsData: false,
         initialPreview: [
             "../img/invex.jpg"
             
@@ -463,7 +458,7 @@ endif;
     $(document).ready(function () {
         $("#test-upload").fileinput({
             'theme': 'fa',
-            'showPreview': true,
+            'showPreview': false,
             'allowedFileExtensions': ['jpg', 'png', 'gif'],
             'elErrorContainer': '#errorBlock'
         });
@@ -473,11 +468,11 @@ endif;
             overwriteInitial: true,
             initialPreviewAsData: true,
             initialPreview: [
-                "../invex.jpg?image=1"
+                "<?php echo $path = '../gallery/album/course/' . $row['ruta']; ?> "
                 
             ],
             initialPreviewConfig: [
-                {caption: "invex.jpg", url: "{/examples/invex.jpg}", key: 1}
+                {caption: "<?php echo $row['nombre']; ?> ", url: "{<?php echo $path = '../gallery/album/course/' . $row['ruta']; ?> }", key: 1}
                
             ]
         });

@@ -24,7 +24,7 @@ $user_name = $_SESSION['user_name'];
         
     <link href="../file_input/css/fileinput.css" media="all" rel="stylesheet" type="text/css"/>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" media="all" rel="stylesheet" type="text/css"/>
-    <link href="file_input/themes/explorer-fa/theme.css" media="all" rel="stylesheet" type="text/css"/>
+    <link href="../file_input/themes/explorer-fa/theme.css" media="all" rel="stylesheet" type="text/css"/>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="../file_input/js/plugins/sortable.js" type="text/javascript"></script>
     <script src="../file_input/js/fileinput.js" type="text/javascript"></script>
@@ -289,30 +289,12 @@ $user_name = $_SESSION['user_name'];
                                                         <h4 class="modal-title" id="myModalLabel" style="text-align: center;font-weight: bold">Atención</h4>
                                                     </div>
                                                     <div class="modal-body">
-                                                      <div class="container kv-main">
-    <div class="page-header">
-        <h1>Bootstrap File Input Example
-            <small><a href="https://github.com/kartik-v/bootstrap-fileinput-samples"><i
-                    class="glyphicon glyphicon-download"></i> Download Sample Files</a></small>
-        </h1>
-    </div>
-    <form enctype="multipart/form-data">
-        <div class="file-loading">
-            <input id="kv-explorer" type="file" multiple>
-        </div>
-        <br>
-        
-        <br>
-        <button type="submit" class="btn btn-primary">Submit</button>
-        <button type="reset" class="btn btn-default">Reset</button>
-    </form>
-    
-</div>
+                                                         <img  src="<?php echo $path = '../gallery/album/course/' . $row['ruta']; ?> "  style="height: 300px; width: 300px" class="center-block">
                                                         
                                                     </div>
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="icon-ban-circle"></i>&nbsp;Cerrrar</button>
-                                                        <a href="../delete/delete_course.php?d=<?php echo $row['id'] ?>&f=<?php echo $row['ruta'] ?>"><button type="button" class="btn btn-success"><i class="icon-ok"></i>Aceptar</button></a>
+                                                        <a href="../editar/modificar_curso_1.php?u=<?php echo $row['id'] ?>"><button type="button" class="btn btn-success"><i class="icon-ok"></i>Edtiar Imagen</button></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -376,7 +358,11 @@ $user_name = $_SESSION['user_name'];
                                                     <h5 style="text-align: justify;"> <strong >Información adicional:  </strong><?php echo utf8_encode($row['informacion_adicional']) ?></h5>    
                                                 </div>
                                                 <div class="row hide" data-step="3" data-title="This is the last step!">
-                                                    <img  src="<?php echo $path = '../gallery/album/course/' . $row['ruta']; ?> "  style="height: 300px; width: 300px" class="center-block">
+                                                    <div class="row">
+                                                        <h5 style="text-align: justify"><strong style="text-align: justify">Fecha de Creación:  </strong><?php echo utf8_encode($row['fecha_creacion']) ?></h5>
+                                                        <h5 style="text-align: justify"><strong style="text-align: justify">Usuario quien registro:  </strong><?php echo utf8_encode( $row['usuario'] ) ?></h5>
+                                                        
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="modal-footer">
