@@ -19,6 +19,23 @@ $user_name = $_SESSION['user_name'];
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Publicaciones Registradas</title>
+        <!---->
+        
+        
+    <link href="../file_input/css/fileinput.css" media="all" rel="stylesheet" type="text/css"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" media="all" rel="stylesheet" type="text/css"/>
+    <link href="../file_input/themes/explorer-fa/theme.css" media="all" rel="stylesheet" type="text/css"/>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="../file_input/js/plugins/sortable.js" type="text/javascript"></script>
+    <script src="../file_input/js/fileinput.js" type="text/javascript"></script>
+    <script src="../file_input/js/locales/fr.js" type="text/javascript"></script>
+    <script src="../file_input/js/locales/es.js" type="text/javascript"></script>
+    <script src="../file_input/themes/explorer-fa/theme.js" type="text/javascript"></script>
+    <script src="../file_input/themes/fa/theme.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" type="text/javascript"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" type="text/javascript"></script>
+        
+        <!----->
 
         <!-- Bootstrap -->
         <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -258,13 +275,13 @@ $user_name = $_SESSION['user_name'];
                                                 ?>
 
                                                 <td class="SourceSansPro-Semibold" style="color: #013ADF;text-align: center;font-size: 14px"><?php echo $nombre ?></td>
-                                                <td style="text-align: center"><a href="#<?php echo $row['id'] . 000 ?>"  data-toggle="modal" data-target="#<?php echo $row['id'] . 000 ?>" style="color:green"><i class="fa fa-picture-o fa-2x" aria-hidden="true"></i></a></td>
+                                                <td style="text-align: center"><a href="#<?php echo $row['id'] . 1 ?>"  data-toggle="modal" data-target="#<?php echo $row['id'] . 1 ?>" style="color:green"><i class="fa fa-picture-o fa-2x" aria-hidden="true"></i></a></td>
                                                 <td style="text-align: center"><a href="#<?php echo $row['id'] ?>"  data-toggle="modal" data-target="#<?php echo $row['id'] ?>" style="color:green"><i class="fa fa-eye fa-2x" style="font-size: 25px"></i></a></td>
-                                                <td style="text-align: center"><a href="#<?php echo $row['id'] . 00 ?>" data-toggle="modal" style="color:red"><i class="fa fa-trash fa-2x" style="font-size: 25px"></i></a></td>
+                                                <td style="text-align: center"><a href="#<?php echo $row['id'] . 11 ?>" data-toggle="modal" data-target="#<?php echo $row['id'] . 11 ?>" style="color:red"><i class="fa fa-trash fa-2x" style="font-size: 25px"></i></a></td>
 
                                             </tr>
                                         <!-- modal imagen-->
-                                        <div class="modal fade" id="<?php echo $row['id'] . 000 ?>" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true" >
+                                        <div class="modal fade" id="<?php echo $row['id'] . 1 ?>" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true" >
                                             <div class="modal-dialog">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
@@ -272,17 +289,18 @@ $user_name = $_SESSION['user_name'];
                                                         <h4 class="modal-title" id="myModalLabel" style="text-align: center;font-weight: bold">Atención</h4>
                                                     </div>
                                                     <div class="modal-body">
-                                                        <h3 style="text-align: center">Imagen</h3>
+                                                         <img  src="<?php echo $path = '../gallery/album/course/' . $row['ruta']; ?> "  style="height: 300px; width: 300px" class="center-block">
+                                                        
                                                     </div>
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="icon-ban-circle"></i>&nbsp;Cerrrar</button>
-                                                        <a href="../delete/delete_course.php?d=<?php echo $row['id'] ?>&f=<?php echo $row['ruta'] ?>"><button type="button" class="btn btn-success"><i class="icon-ok"></i>Aceptar</button></a>
+                                                        <a href="../editar/modificar_imagen_curso.php?u=<?php echo $row['id'] ?>"><button type="button" class="btn btn-success"><i class="icon-ok"></i>Edtiar Imagen</button></a>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>    
                                         <!-- modal eliminar-->
-                                        <div class="modal fade" id="<?php echo $row['id'] . 00 ?>" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true" >
+                                        <div class="modal fade" id="<?php echo $row['id'] . 11 ?>" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true" >
                                             <div class="modal-dialog">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
@@ -340,7 +358,11 @@ $user_name = $_SESSION['user_name'];
                                                     <h5 style="text-align: justify;"> <strong >Información adicional:  </strong><?php echo utf8_encode($row['informacion_adicional']) ?></h5>    
                                                 </div>
                                                 <div class="row hide" data-step="3" data-title="This is the last step!">
-                                                    <img  src="<?php echo $path = '../gallery/album/course/' . $row['ruta']; ?> "  style="height: 300px; width: 300px" class="center-block">
+                                                    <div class="row">
+                                                        <h5 style="text-align: justify"><strong style="text-align: justify">Fecha de Creación:  </strong><?php echo utf8_encode($row['fecha_creacion']) ?></h5>
+                                                        <h5 style="text-align: justify"><strong style="text-align: justify">Usuario quien registro:  </strong><?php echo utf8_encode( $row['usuario'] ) ?></h5>
+                                                        
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="modal-footer">

@@ -1,6 +1,7 @@
 <?php
 header("Content-Type: text/html;charset=utf-8");
 include "../config.php";
+$id_course= $_GET['u'];
 error_reporting(E_ALL);
 session_start();
 if (!isset($_SESSION['user_name'])) {
@@ -8,24 +9,8 @@ if (!isset($_SESSION['user_name'])) {
 }
 $user_name = utf8_encode($_SESSION['user_name']);
 
-if (isset($_GET['u'])):
-    if (isset($_POST['bts'])):
-        $stmt = $mysqli->prepare("UPDATE registro_eventos  SET kv-explorer=? WHERE id=?");
-        $stmt->bind_param('ss', $new_image, $id);
-        $new_image = $_POST['kv-explorer'];
-        $id = $_GET['u'];
-        if ($stmt->execute()):
-            echo "<script>location.href='Galery.php'</script>";
-        else:
-            echo "<script>alert('" . $stmt->error . "')</script>";
-        endif;
-    endif;
-    $res = $mysqli->query("SELECT nombre ,ruta FROM registro_eventos WHERE id =" . $_GET['u']);
-    $row = $res->fetch_assoc();
-    $path = '../gallery/album/course/' . $row['ruta'];
-    
-    $mysqli->close();
-endif;
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -37,22 +22,22 @@ endif;
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Sistema de Administración </title>
-        
-    <link href="../file_input/css/fileinput.css" media="all" rel="stylesheet" type="text/css"/>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" media="all" rel="stylesheet" type="text/css"/>
-    <link href="../file_input/themes/explorer-fa/theme.css" media="all" rel="stylesheet" type="text/css"/>
-     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-    <script src="../file_input/js/plugins/sortable.js" type="text/javascript"></script>
-    <script src="../file_input/js/fileinput.js" type="text/javascript"></script>
-    <script src="../file_input/js/locales/fr.js" type="text/javascript"></script>
-    <script src="../file_input/js/locales/es.js" type="text/javascript"></script>
-    <script src="../file_input/themes/explorer-fa/theme.js" type="text/javascript"></script>
-    <script src="../file_input/themes/fa/theme.js" type="text/javascript"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" type="text/javascript"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" type="text/javascript"></script>
+
+        <link href="../file_input/css/fileinput.css" media="all" rel="stylesheet" type="text/css"/>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" media="all" rel="stylesheet" type="text/css"/>
+        <link href="../file_input/themes/explorer-fa/theme.css" media="all" rel="stylesheet" type="text/css"/>
+        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+        <script src="../file_input/js/plugins/sortable.js" type="text/javascript"></script>
+        <script src="../file_input/js/fileinput.js" type="text/javascript"></script>
+        <script src="../file_input/js/locales/fr.js" type="text/javascript"></script>
+        <script src="../file_input/js/locales/es.js" type="text/javascript"></script>
+        <script src="../file_input/themes/explorer-fa/theme.js" type="text/javascript"></script>
+        <script src="../file_input/themes/fa/theme.js" type="text/javascript"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" type="text/javascript"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" type="text/javascript"></script>
         <!-- Bootstrap -->
         <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-       
+
         <!-- Font Awesome -->
         <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
         <!-- NProgress -->
@@ -74,7 +59,7 @@ endif;
         <link rel="stylesheet" href="../form-wizard/font-awesome/css/font-awesome.min.css">
         <link rel="stylesheet" href="../form-wizard/css/form-elements.css">
         <link rel="stylesheet" href="../form-wizard/css/style.css">
-                <!-- Latest compiled and minified CSS -->
+        <!-- Latest compiled and minified CSS -->
         <link href="../vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
         <!--Multiselect-->
         <link rel="stylesheet" href="../dist/css/bootstrap-select.css">
@@ -230,7 +215,7 @@ endif;
                                     <h4 class="modal-title" id="myModalLabel"><i class="fa fa-clock-o"></i> Por favor espera</h4>
                                 </div>
                                 <div class="modal-body center-block">
-                                    <p>Estamos guardando la información</p>
+                                    <p>Reemplazando imagen ...</p>
                                     <div class="progress">
                                         <div class="progress-bar bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
 
@@ -244,7 +229,7 @@ endif;
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-body" style="text-align: center;padding:20px">
-                                    <h3>Curso Registrado Exitosamente...</h3>
+                                    <h3>La imagen se reemplazo con éxito </h3>
                                 </div>
                             </div>
                         </div>
@@ -255,31 +240,38 @@ endif;
                 <!-- page content -->
                 <div class="right_col" role="main">
 
-                 <div class="row">
-              <div class="col-md-12">
-                                <div class="col-sm-11 col-sm-offset-1 col-md-9 col-md-offset-3 col-lg-6 col-lg-offset-3 form-box" style="height: 100%" >
-                        <div class="container kv-main">
-    <div class="page-header">
-        <h1>Reemplazar Imagen
-        </h1>
-    </div>
-    <form enctype="multipart/form-data">
-        <div class="file-loading">
-            <input id="kv-explorer" type="file" multiple>
-        </div>
-        <br>
-        
-        <br>
-        <button type="submit" class="btn btn-primary">Guardar</button>
-        <button type="reset" class="btn btn-default">Recargar</button>
-    </form>
-    
-</div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="col-sm-11 col-sm-offset-1 col-md-9 col-md-offset-3 col-lg-6 col-lg-offset-3 form-box" style="height: 100%" >
+                                <div class="container kv-main">
+                                    <div class="page-header">
+                                        <h1 style="text-align: center">Reemplazar Imagen</h1>
+                                    </div>
+                                    <form  id="update_image_course" name="update_image_course">
+                                        <div class="form-group">
+                                            <label class="etiquetas" for="f1-first-name">Selecciona una imagen:</label>
+                                            <input type="file"  id="file_image" name="file_image" class="f1-first-name file" data-show-preview="false"
+                                                   style="display: inline-table;width: 100%" placeholder="Selecciona una imagen">
+                                            
+                                        </div>
+                                      
+                                        <button type="submit" class="btn btn-primary">Guardar</button>
+                                        <button type="reset" class="btn btn-default">Recargar</button>
+                                        
+                                          <div class="form-group" >
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="first-name" style="color: black"> </label>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <input type="hidden" id="id_course" name="id_course"  value="<?php echo $id_course ?>" class="form-control col-md-7 col-xs-12">
+                                    </div>
+                                </div>
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
                     </div>
-              </div>
-            </div>
-          <!-- /top tiles -->
-          <br />       
+                    <!-- /top tiles -->
+                    <br />       
 
 
                 </div>
@@ -297,7 +289,7 @@ endif;
         <!-- jQuery -->
 
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.js" defer></script>  
-        
+
         <!-- Bootstrap -->
         <script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
         <!-- FastClick -->
@@ -336,153 +328,150 @@ endif;
 
         <!-- Custom Theme Scripts -->
         <script src="../build/js/custom.min.js"></script>
-        
+
 
         <script src="../form-wizard/bootstrap/js/bootstrap.min.js"></script>
         <script src="../form-wizard/js/jquery.backstretch.min.js"></script>
         <script src="../form-wizard/js/retina-1.1.0.min.js"></script>
         <script src="../form-wizard/js/scripts.js"></script>
-        
-        <script src="../js/create/create_course.js"></script>
+
+        <script src="../js/update/update_image_course.js"></script>
         <!-- bootstrap-progressbar -->
         <script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
         <!-- Flot -->
         <script src="../js/bootbox.js" type="text/javascript"></script>
         <script src="../js/bootbox.min.js" type="text/javascript">
-        <!--fileinput-->
-        <script src="../js/plugins/sortable.min.js"></script>
-<!-- purify plugin for safe rendering HTML content in preview -->
-<script src="../js/plugins/purify.min.js"></script>
+<!--fileinput-->
+            <script src="../js/plugins/sortable.min.js"></script>
+            <!-- purify plugin for safe rendering HTML content in preview -->
+            <script src="../js/plugins/purify.min.js"></script>
 
-       
 
-       
 
-        <!-- Process Bar-->
-        <script>
+
+
+            <!-- Process Bar-->
+            <script>
             $('#myModal').on('shown.bs.modal', function () {
-                var progress = setInterval(function () {
-                    var $bar = $('.bar');
-                    if ($bar.width() == 550) {
-                        // complete
-                        clearInterval(progress);
-                        $('.progress').removeClass('active');
-                        $('#myModal').modal('hide');
-                        $bar.width(0);
-                    } else {
-                        // perform processing logic here
-                        $bar.width($bar.width() + 50);
-                    }
-
-                    $bar.text($bar.width() / 5 + "%");
-                }, 720);
-            })
-
-        </script>
-        
-<script>
-    $('#file-fr').fileinput({
-        theme: 'fa',
-        language: 'fr',
-        uploadUrl: '#',
-        allowedFileExtensions: ['jpg', 'png', 'gif']
-    });
-    $('#file-es').fileinput({
-        theme: 'fa',
-        language: 'es',
-        uploadUrl: '#',
-        allowedFileExtensions: ['jpg', 'png', 'gif']
-    });
-    $("#file-0").fileinput({
-        theme: 'fa',
-        'allowedFileExtensions': ['jpg', 'png', 'gif']
-    });
-    $("#file-1").fileinput({
-        theme: 'fa',
-        uploadUrl: '#', // you must set a valid URL here else you will get an error
-        allowedFileExtensions: ['jpg', 'png', 'gif'],
-        overwriteInitial: false,
-        maxFileSize: 1000,
-        maxFilesNum: 10,
-        allowedFileTypes: ['image', 'video', 'flash'],
-        slugCallback: function (filename) {
-            return filename.replace('(', '_').replace(']', '_');
-        }
-    });
-    
-     $(".file").on('fileselect', function(event, n, l) {
-     alert('File Selected. Name: ' + l + ', Num: ' + n);
-     });
-     
-    $("#file-3").fileinput({
-        theme: 'fa',
-        showUpload: false,
-        showCaption: false,
-        browseClass: "btn btn-primary btn-lg",
-        fileType: "any",
-        previewFileIcon: "<i class='glyphicon glyphicon-king'></i>",
-        overwriteInitial: false,
-        initialPreviewAsData: false,
-        initialPreview: [
-            "../img/invex.jpg"
-            
-        ],
-        initialPreviewConfig: [
-            {caption: "transport-1.jpg", size: 329892, width: "120px", url: "{$url}", key: 1},
-          
-        ]
-    });
-    $("#file-4").fileinput({
-        theme: 'fa',
-        uploadExtraData: {kvId: '10'}
-    });
-    $(".btn-warning").on('click', function () {
-        var $el = $("#file-4");
-        if ($el.attr('disabled')) {
-            $el.fileinput('enable');
+            var progress = setInterval(function () {
+            var $bar = $('.bar');
+            if ($bar.width() == 550) {
+            // complete
+            clearInterval(progress);
+            $('.progress').removeClass('active');
+            $('#myModal').modal('hide');
+            $bar.width(0);
         } else {
-            $el.fileinput('disable');
+                    // perform processing logic here
+                    $bar.width($bar.width() + 50);
         }
-    });
-    $(".btn-info").on('click', function () {
-        $("#file-4").fileinput('refresh', {previewClass: 'bg-info'});
-    });
-    
-     $('#file-4').on('fileselectnone', function() {
-     alert('Huh! You selected no files.');
-     });
-     $('#file-4').on('filebrowse', function() {
-     alert('File browse clicked for #file-4');
-     });
-     
-    $(document).ready(function () {
-        $("#test-upload").fileinput({
-            'theme': 'fa',
-            'showPreview': false,
-            'allowedFileExtensions': ['jpg', 'png', 'gif'],
-            'elErrorContainer': '#errorBlock'
-        });
-        $("#kv-explorer").fileinput({
-            'theme': 'explorer-fa',
-            'uploadUrl': '#',
-            overwriteInitial: true,
-            initialPreviewAsData: true,
-            initialPreview: [
-                "<?php echo $path = '../gallery/album/course/' . $row['ruta']; ?> "
-                
-            ],
-            initialPreviewConfig: [
-                {caption: "<?php echo $row['nombre']; ?> ", url: "{<?php echo $path = '../gallery/album/course/' . $row['ruta']; ?> }", key: 1}
-               
-            ]
-        });
         
-         $("#test-upload").on('fileloaded', function(event, file, previewId, index) {
-         alert('i = ' + index + ', id = ' + previewId + ', file = ' + file.name);
-         });
-         
-    });
-</script>
+        $bar.text($bar.width() / 5 + "%");
+        }, 720);
+        })
+        
+  </script>
+        
+        <script>
+                                $('#file-fr').fileinput({
+                                    theme: 'fa',
+                                    language: 'fr',
+                                            uploadUrl: '#',
+                                            allowedFileExtensions: ['jpg', 'png', 'gif']
+                                });
+                                $('#file-es').fileinput({
+                                            theme: 'fa',
+                                    language: 'es',
+                                            uploadUrl: '#',
+                                            allowedFileExtensions: ['jpg', 'png', 'gif']
+                                });
+                                    $("#file-0").fileinput({
+                                            theme: 'fa',
+                                    'allowedFileExtensions': ['jpg', 'png', 'gif']
+                                });
+                                $("#file-1").fileinput({
+                                            theme: 'fa',
+                                            uploadUrl: '#', // you must set a valid URL here else you will get an error
+                                            allowedFileExtensions: ['jpg', 'png', 'gif'],
+                                            overwriteInitial: false,
+                                            maxFileSize: 1000,
+                                            maxFilesNum: 10,
+                                            allowedFileTypes: ['image', 'video', 'flash'],
+                                    slugCallback: function (filename) {
+                                            return filename.replace('(', '_').replace(']', '_');
+                                    }
+                                                    });
+                            
+                                                    $(".file").on('fileselect', function(event, n, l) {
+                                                    // alert('File Selected. Name: ' + l + ', Num: ' + n);
+                                                });
+                        
+                                                $("#file-3").fileinput({
+                                                    theme: 'fa',
+                                                    showUpload: false,
+                                                    showCaption: false,
+                                                    browseClass: "btn btn-primary btn-lg",
+                                    fileType: "any",
+                                                        previewFileIcon: "<i class='glyphicon glyphicon-king'></i>",
+                                                    overwriteInitial: false,
+                                                    initialPreviewAsData: false,
+                                                    initialPreview: [
+                                                        "../img/invex.jpg"
 
-    </body>
-</html>
+                                                    ],
+                                                    initialPreviewConfig: [
+                                                        //  {caption: "transport-1.jpg", size: 329892, width: "120px", url: "{$url}", key: 1},
+
+                                                        ]
+                                                        });
+                                                        $("#file-4").fileinput({                       theme: 'fa',
+                                                    uploadExtraData: {kvId: '10'}
+                                                                });
+                                                                    $(".btn-warning").on('click', function () {
+                                                        var $el = $("#file-4");
+                                                    if ($el.attr('disabled')) {
+                                                    $el.fileinput('enable');
+                                                                    } else {
+                                                            $el.fileinput('disable');
+                                                                }
+                                                            });
+                                                            $(".btn-info").on('click', function () {
+                                                            $("#file-4").fileinput('refresh', {previewClass: 'bg-info'});
+                                                                    });
+                                
+                                                                        $('#file-4').on('fileselectnone', function() {
+                                                            alert('Huh! You selected no files.');
+                                                                        });
+                                                                        $('#file-4').on('filebrowse', function() {
+                                                            alert('File browse clicked for #file-4');
+                                                                        });
+                                                
+                                                                        $(document).ready(function () {
+                                                            $("#test-upload").fileinput({
+                                                    'theme': 'fa',
+                                                            'showPreview': false,
+                                                            'allowedFileExtensions': ['jpg', 'png', 'gif'],
+                                                            'elErrorContainer': '#errorBlock'
+                                                                        });
+                                                                    $("#kv-explorer").fileinput({
+                                                            'theme': 'explorer-fa',
+                                                            'uploadUrl': '#',
+                                                            overwriteInitial: true,
+                                                            initialPreviewAsData: true,
+                                                            initialPreview: [
+                                                                    "<?php echo $path = '../gallery/album/course/' . $row['ruta']; ?> "
+
+                                                            ],
+                                                            initialPreviewConfig: [
+                                                                    // {caption: "<?php echo $row['nombre']; ?> ", url: "{<?php echo $path = '../gallery/album/course/' . $row['ruta']; ?> }", key: 1}
+
+                                                            ]
+                                                            });
+                                    
+                                        
+                                        
+                                                                    });
+                            </script>
+
+                        </body>
+                    </html>
