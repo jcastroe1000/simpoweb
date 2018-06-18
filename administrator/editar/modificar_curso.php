@@ -27,6 +27,7 @@ if (isset($_GET['u'])):
     endif;
     $res = $mysqli->query("SELECT * FROM registro_eventos WHERE id =" . $_GET['u']);
     $row = $res->fetch_assoc();
+    mysqli_fetch_array($res);
     $mysqli->close();
 endif;
 ?>
@@ -361,12 +362,37 @@ endif;
                                 <div class="form-group">
                                     <label class="etiquetas" for="f1-first-name">Dias:</label>
                                     <select class="selectpicker"  id="days" name="days[]" style="width: 100%" multiple="">
-                                        <option value="<?php echo $row['dias'] ?>" selected=""><?php echo $row['dias'] ?></option>
-                                        <option value="Lunes">Lunes</option>
-                                        <option value="Martes">Martes</option>
-                                        <option value="Miércoles">Miércoles</option>
-                                        <option value="Jueves" >Jueves</option>
-                                        <option value="Viernes">Viernes</option>
+                                        <option value="<?php echo $row['dias'] ?>" ></option>
+                                        <?php
+                                         $dias=($row['dias']);
+                                         $sep=  explode( ',', $row['dias']);
+                                         if ( in_array('Lunes', $sep)){
+                                                    echo '<option value="Lunes" selected="">Lunes</option>';
+                                                }else{
+                                                    echo '<option value="Lunes" >Lunes</option>';
+                                                }
+                                        if ( in_array('Martes', $sep)){
+                                                    echo '<option value="Martes" selected="">Martes</option>';
+                                                }else{
+                                                    echo '<option value="Martes" >Martes</option>';
+                                                }
+                                        if ( in_array('Miercoles', $sep)){
+                                                    echo '<option value="Miércoles" selected="">Miércoles</option>';
+                                                }else{
+                                                    echo '<option value="Miércoles" >Miércoles</option>';
+                                                }
+                                        if ( in_array('Jueves', $sep)){
+                                                    echo '<option value="Jueves" selected="">Jueves</option>';
+                                                }else{
+                                                    echo '<option value="Jueves" >Jueves</option>';
+                                                }
+                                        if ( in_array('Viernes', $sep)){
+                                                    echo '<option value="Viernes" selected="">Viernes</option>';
+                                                }else{
+                                                    echo '<option value="Viernes" >Viernes</option>';
+                                                }        
+                                        ?>
+                                       
 
                                     </select>
 
@@ -396,51 +422,25 @@ endif;
                                 </div>
                                 <div class="form-group">
                                     <label class="etiquetas" for="f1-first-name">Método de Pago:</label>
-                                    <select class="f1-first-name combo" id="pay_method" name="pay_method" style="width: 100%">
-                                        <option value="<?php echo $row['metodo_pago'] ?>"><?php echo utf8_encode($row['metodo_pago']) ?></option>
+                                    
+                                        <?php
+                                        if($row['metodo_pago'] == 'Efectivo'){ ?>
+                                    <select class="selectpicker"  id="pay_method" name="pay_method" style="width: 100%" multiple="">
+                                        <option value="<?php echo $row['metodo_pago']?>" selected=""><?php echo utf8_encode($row['metodo_pago']) ?></option>
                                         <option value="Depósito Bancario">Depósito Bancario</option>
-                                        <option value="Efectivo">Efectivo</option>
-                                        <option value="Pago en línea">Pago en línea</option>
-                                    </select>
+                                        <option value="Pago en línea">Pago en línea</option> 
+                                        </select>
+                                        <?php } else{
+                                            
+                                        }
+                                        
+                                        
+                                        ?>
+                                         
+                                        
+                                    
                                 </div>
-                                <div class="form-group">
-                                    <div class="file-loading">
-    <input id="input-pr" name="input-pr[]" type="file" multiple>
-</div>
-<script>
-$("#input-pr").fileinput({
-    uploadUrl: "/file-upload-batch/1",
-    uploadAsync: false,
-    minFileCount: 2,
-    maxFileCount: 5,
-    overwriteInitial: false,
-    initialPreview: [
-        // IMAGE RAW MARKUP
-        '<img src="https://picsum.photos/800/460?image=239" class="kv-preview-data file-preview-image">',
-        // IMAGE RAW MARKUP
-        '<img src="https://picsum.photos/800/460?image=259" class="kv-preview-data file-preview-image">',
-        // TEXT RAW MARKUP
-        '<textarea class="kv-preview-data file-preview-text" readonly>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut mauris ut libero fermentum feugiat eu et dui. Mauris condimentum rhoncus enim, sed semper neque vestibulum id. Nulla semper, turpis ut consequat imperdiet, enim turpis aliquet orci, eget venenatis elit sapien non ante. Aliquam neque ipsum, rhoncus id ipsum et, volutpat tincidunt augue. Maecenas dolor libero, gravida nec est at, commodo tempor massa. Sed id feugiat massa. Pellentesque at est eu ante aliquam viverra ac sed est.</textarea>'
-    ],
-    initialPreviewAsData: false, // allows you to set a raw markup
-    initialPreviewFileType: 'image', // image is the default and can be overridden in config below
-    initialPreviewDownloadUrl: 'https://picsum.photos/800/460?image={key}', // includes the dynamic key tag to be replaced for each config
-    initialPreviewConfig: [
-        {type: "image", caption: "Image-1.jpg", size: 847000, url: "/site/file-delete", key: 1},
-        {type: "image", caption: "Image-2.jpg", size: 817000, url: "/site/file-delete", key: 2},  // set as raw markup
-        {type: "text", size: 1430, caption: "LoremIpsum.txt", url: "/site/file-delete", key: 3, downloadUrl: false} // do not show download
-    ],
-    uploadExtraData: {
-        img_key: "1000",
-        img_keywords: "happy, nature"
-    }
-}).on('filesorted', function(e, params) {
-    console.log('File sorted params', params);
-}).on('fileuploaded', function(e, params) {
-    console.log('File uploaded params', params);
-});
-</script>
-                                </div>
+                               
                                 <div class="form-group" >
                                     <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="first-name" style="color: black"> </label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
