@@ -364,8 +364,9 @@ endif;
                                     <select class="selectpicker"  id="days" name="days[]" style="width: 100%" multiple="">
                                         <option value="<?php echo $row['dias'] ?>" ></option>
                                         <?php
-                                         $dias=($row['dias']);
-                                         $sep=  explode( ',', $row['dias']);
+                                         
+                                         $sep=  explode( ',', utf8_encode($row['dias']));
+                                         print_r($sep);
                                          if ( in_array('Lunes', $sep)){
                                                     echo '<option value="Lunes" selected="">Lunes</option>';
                                                 }else{
@@ -376,7 +377,7 @@ endif;
                                                 }else{
                                                     echo '<option value="Martes" >Martes</option>';
                                                 }
-                                        if ( in_array('Miercoles', $sep)){
+                                        if ( in_array('Miércoles', $sep)){
                                                     echo '<option value="Miércoles" selected="">Miércoles</option>';
                                                 }else{
                                                     echo '<option value="Miércoles" >Miércoles</option>';
@@ -392,8 +393,6 @@ endif;
                                                     echo '<option value="Viernes" >Viernes</option>';
                                                 }        
                                         ?>
-                                       
-
                                     </select>
 
                                 </div>
