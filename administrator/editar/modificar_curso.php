@@ -44,7 +44,7 @@ endif;
 
         <!-- Bootstrap -->
         <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-       
+
         <!-- Font Awesome -->
         <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
         <!-- NProgress -->
@@ -248,222 +248,229 @@ endif;
                 <!-- page content -->
                 <div class="right_col" role="main">
 
-                 <div class="row">
-              <div class="col-md-12">
-                                <div class="col-sm-11 col-sm-offset-1 col-md-9 col-md-offset-3 col-lg-6 col-lg-offset-3 form-box" style="height: 100%" >
-                        <form role="form" id="create_course" name="create_course" class="f1" style="margin-top: -15px;">
-                            <h3 style="text-align: center">Registrar Curso</h3>
-                            <div class="f1-steps">
-                                <div class="f1-progress">
-                                    <div class="f1-progress-line" data-now-value="16.66" data-number-of-steps="3" style="width: 16.66%;"></div>
-                                </div>
-                                <div class="f1-step active" style="text-align: center">
-                                    <div class="f1-step-icon"><i class="fa fa-book"></i></div>
-                                    <p>Primer Paso</p>
-                                </div>
-                                <div class="f1-step" style="text-align: center">
-                                    <div class="f1-step-icon"><i class="fa fa-calendar"></i></div>
-                                    <p>Segundo Paso</p>
-                                </div>
-                                <div class="f1-step" style="text-align: center">
-                                    <div class="f1-step-icon"><i class="fa fa-file"></i></div>
-                                    <p>Tercer Paso</p>
-                                </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="col-sm-11 col-sm-offset-1 col-md-9 col-md-offset-3 col-lg-6 col-lg-offset-3 form-box" style="height: 100%" >
+                                <form role="form" id="create_course" name="create_course" class="f1" style="margin-top: -15px;">
+                                    <h3 style="text-align: center">Registrar Curso</h3>
+                                    <div class="f1-steps">
+                                        <div class="f1-progress">
+                                            <div class="f1-progress-line" data-now-value="16.66" data-number-of-steps="3" style="width: 16.66%;"></div>
+                                        </div>
+                                        <div class="f1-step active" style="text-align: center">
+                                            <div class="f1-step-icon"><i class="fa fa-book"></i></div>
+                                            <p>Primer Paso</p>
+                                        </div>
+                                        <div class="f1-step" style="text-align: center">
+                                            <div class="f1-step-icon"><i class="fa fa-calendar"></i></div>
+                                            <p>Segundo Paso</p>
+                                        </div>
+                                        <div class="f1-step" style="text-align: center">
+                                            <div class="f1-step-icon"><i class="fa fa-file"></i></div>
+                                            <p>Tercer Paso</p>
+                                        </div>
 
-                            </div>
+                                    </div>
 
-                            <fieldset style="display: block;width: 100%">
-
-
+                                    <fieldset style="display: block;width: 100%">
 
 
-                                <div class="form-group">
-                                    <label class="etiquetas" for="f1-first-name">Nombre:</label>
-                                    <input type="text" name="name" id="name" placeholder="Nombre" class="f1-first-name form-control3" 
-                                           id="f1-first-name" style="width: 100%" value="<?php echo $row['nombre'] ?>">
-                                </div>
-                                <div class="form-group">
-                                    <label class="etiquetas" for="f1-last-name">Resumen:</label>
-                                    <textarea name="review" id="review" placeholder="" style="height: 110px;width: 100%"
-                                              class="f1-about-yourself form-control3" id="f1-about-yourself" >
-                                                  <?php echo $row['resumen'] ?>
-                                    </textarea>
-                                </div>
-                                <div class="form-group">
-                                    <label class="etiquetas" for="f1-about-yourself">Dirigido:</label>
-                                    <textarea name="addressed" id="addressed" placeholder="<?php echo $row['dirigido'] ?>" style="height: 100px;width: 100%"
-                                              class="f1-about-yourself form-control3 " id="f1-about-yourself">
-                                    <?php echo $row['dirigido'] ?>
-                                    </textarea>
-                                </div>
-                                <div class="form-group">
-                                    <label class="etiquetas" for="f1-about-yourself">Objetivo:</label>
-                                    <textarea name="objetive" id="objetive" placeholder="Objetivo" style="height: 140px;width: 100%"
-                                              class="f1-about-yourself form-control3 " id="f1-about-yourself">
-                                                  <?php echo $row['objetivo'] ?>
-                                    </textarea>
-                                </div>
-                                <div class="f1-buttons">
-                                    <button type="button" class="btn btn-next" style="color: white;">Siguiente</button>
-                                </div>
-                            </fieldset>
 
-                            <fieldset>
 
-                                <div class="form-group" style="width: 45%;display: inline-block;">
-                                    <label class="etiquetas" for="f1-first-name">Duración:</label>
-                                    <input type="number" name="duration" min="1" max="500" id="duration" placeholder="Duración" 
-                                           class="f1-first-name form-control3 " id="f1-first-name" style="width: 100%" value="<?php echo $row['duracion'] ?>" >
+                                        <div class="form-group">
+                                            <label class="etiquetas" for="f1-first-name">Nombre:</label>
+                                            <input type="text" name="name" id="name" placeholder="Nombre" class="f1-first-name form-control3" 
+                                                   id="f1-first-name" style="width: 100%" value="<?php echo $row['nombre'] ?>">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="etiquetas" for="f1-last-name">Resumen:</label>
+                                            <textarea name="review" id="review" placeholder="" style="height: 110px;width: 100%"
+                                                      class="f1-about-yourself form-control3" id="f1-about-yourself" >
+                                                          <?php echo $row['resumen'] ?>
+                                            </textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="etiquetas" for="f1-about-yourself">Dirigido:</label>
+                                            <textarea name="addressed" id="addressed" placeholder="<?php echo $row['dirigido'] ?>" style="height: 100px;width: 100%"
+                                                      class="f1-about-yourself form-control3 " id="f1-about-yourself">
+                                                          <?php echo $row['dirigido'] ?>
+                                            </textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="etiquetas" for="f1-about-yourself">Objetivo:</label>
+                                            <textarea name="objetive" id="objetive" placeholder="Objetivo" style="height: 140px;width: 100%"
+                                                      class="f1-about-yourself form-control3 " id="f1-about-yourself">
+                                                          <?php echo $row['objetivo'] ?>
+                                            </textarea>
+                                        </div>
+                                        <div class="f1-buttons">
+                                            <button type="button" class="btn btn-next" style="color: white;">Siguiente</button>
+                                        </div>
+                                    </fieldset>
 
-                                </div>
-                                <div class="form-group" style="width: 45%;display: inline-block;float: right">
-                                    <label class="etiquetas" for="f1-first-name">Periodo:</label>
-                                    <select class="combo" id="period" name="period" style="width: 100%">
-                                        <option value="<?php echo $row['periodo'] ?>"><?php echo $row['periodo'] ?></option>
-                                        <option value="Dias">Dias</option>
-                                        <option value="Semanas">Semanas</option>
-                                        <option value="Meses">Meses</option>
-                                    </select>
+                                    <fieldset>
 
-                                </div>
-                                <div class="form-group">
-                                    <label class="etiquetas" for="f1-first-name">Modalidad:</label>
-                                    <select class="f1-first-name combo" id="modality" name="modality" style="width:100%">
-                                        <option value="<?php echo $row['modalidad'] ?>"><?php echo $row['modalidad'] ?></option>
-                                        <option value="Presencial">Presencial</option>
-                                        <option value="Distancia">Distancia</option>
-                                        <option value="Presencial y/o Distancia">Presencial y/o Distancia</option>
-                                    </select>
-                                </div>
-                                <div class="form-group" style="width: 45%;display: inline-block;">
-                                    <label class="etiquetas" for="f1-first-name">Fecha Inicio:</label>
-                                    <input type="date" name="date_start" min="2017-01-01" max="2030-12-31" 
-                                           id="date_start" placeholder="Nombre" class="f1-first-name form-control3" 
-                                           id="f1-first-name" style="width: 100%" value="<?php echo $row['fecha_inicio'] ?>">
-                                </div>
-                                <div class="form-group" style="width: 45%;display: inline-block;float: right">
-                                    <label class="etiquetas" for="f1-first-name">Fecha Final:</label>
-                                    <input type="date" name="date_finish" min="2017-01-01" max="2030-12-31" 
-                                           id="date_finish" placeholder="Nombre" class="f1-first-name form-control3"
-                                           id="f1-first-name" style="width: 100%" onchange="myFunction()" value="<?php echo $row['fecha_final'] ?>">
-                                </div>
-                                <div class="form-group" style="width: 45%;display: inline-block;">
-                                    <label class="etiquetas" for="f1-first-name">Hora Inicio:</label>
-                                    <input type="time" name="time_start" id="time_start" placeholder="Nombre" 
-                                           class="f1-first-name form-control3" id="f1-first-name" style="width: 100%"
-                                           value="<?php echo $row['hora_inicio'] ?>">
-                                </div>
-                                <div class="form-group" style="width: 45%;display: inline-block;float: right">
-                                    <label class="etiquetas" for="f1-first-name">Hora Termino:</label>
-                                    <input type="time" name="time_finish" id="time_finish" placeholder="Nombre" 
-                                           class="f1-first-name form-control3" id="f1-first-name" style="width: 100%" onchange="getHour()"
-                                           value="<?php echo $row['hora_final'] ?>">
-                                </div>
-                                <div class="form-group">
-                                    <label class="etiquetas" for="f1-first-name">Dias:</label>
-                                    <select class="selectpicker"  id="days" name="days[]" style="width: 100%" multiple="">
-                                        <option value="<?php echo $row['dias'] ?>" ></option>
-                                        <?php
-                                         
-                                         $sep=  explode( ',', utf8_encode($row['dias']));
-                                         print_r($sep);
-                                         if ( in_array('Lunes', $sep)){
+                                        <div class="form-group" style="width: 45%;display: inline-block;">
+                                            <label class="etiquetas" for="f1-first-name">Duración:</label>
+                                            <input type="number" name="duration" min="1" max="500" id="duration" placeholder="Duración" 
+                                                   class="f1-first-name form-control3 " id="f1-first-name" style="width: 100%" value="<?php echo $row['duracion'] ?>" >
+
+                                        </div>
+                                        <div class="form-group" style="width: 45%;display: inline-block;float: right">
+                                            <label class="etiquetas" for="f1-first-name">Periodo:</label>
+                                            <select class="combo" id="period" name="period" style="width: 100%">
+                                                <option value="<?php echo $row['periodo'] ?>"><?php echo $row['periodo'] ?></option>
+                                                <option value="Dias">Dias</option>
+                                                <option value="Semanas">Semanas</option>
+                                                <option value="Meses">Meses</option>
+                                            </select>
+
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="etiquetas" for="f1-first-name">Modalidad:</label>
+                                            <select class="f1-first-name combo" id="modality" name="modality" style="width:100%">
+                                                <option value="<?php echo $row['modalidad'] ?>"><?php echo $row['modalidad'] ?></option>
+                                                <option value="Presencial">Presencial</option>
+                                                <option value="Distancia">Distancia</option>
+                                                <option value="Presencial y/o Distancia">Presencial y/o Distancia</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group" style="width: 45%;display: inline-block;">
+                                            <label class="etiquetas" for="f1-first-name">Fecha Inicio:</label>
+                                            <input type="date" name="date_start" min="2017-01-01" max="2030-12-31" 
+                                                   id="date_start" placeholder="Nombre" class="f1-first-name form-control3" 
+                                                   id="f1-first-name" style="width: 100%" value="<?php echo $row['fecha_inicio'] ?>">
+                                        </div>
+                                        <div class="form-group" style="width: 45%;display: inline-block;float: right">
+                                            <label class="etiquetas" for="f1-first-name">Fecha Final:</label>
+                                            <input type="date" name="date_finish" min="2017-01-01" max="2030-12-31" 
+                                                   id="date_finish" placeholder="Nombre" class="f1-first-name form-control3"
+                                                   id="f1-first-name" style="width: 100%" onchange="myFunction()" value="<?php echo $row['fecha_final'] ?>">
+                                        </div>
+                                        <div class="form-group" style="width: 45%;display: inline-block;">
+                                            <label class="etiquetas" for="f1-first-name">Hora Inicio:</label>
+                                            <input type="time" name="time_start" id="time_start" placeholder="Nombre" 
+                                                   class="f1-first-name form-control3" id="f1-first-name" style="width: 100%"
+                                                   value="<?php echo $row['hora_inicio'] ?>">
+                                        </div>
+                                        <div class="form-group" style="width: 45%;display: inline-block;float: right">
+                                            <label class="etiquetas" for="f1-first-name">Hora Termino:</label>
+                                            <input type="time" name="time_finish" id="time_finish" placeholder="Nombre" 
+                                                   class="f1-first-name form-control3" id="f1-first-name" style="width: 100%" onchange="getHour()"
+                                                   value="<?php echo $row['hora_final'] ?>">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="etiquetas" for="f1-first-name">Dias:</label>
+                                            <select class="selectpicker"  id="days" name="days[]" style="width: 100%" multiple="">
+                                                <option value="<?php echo $row['dias'] ?>" ></option>
+                                                <?php
+                                                $sep = explode(',', utf8_encode($row['dias']));
+                                                print_r($sep);
+                                                if (in_array('Lunes', $sep)) {
                                                     echo '<option value="Lunes" selected="">Lunes</option>';
-                                                }else{
+                                                } else {
                                                     echo '<option value="Lunes" >Lunes</option>';
                                                 }
-                                        if ( in_array('Martes', $sep)){
+                                                if (in_array('Martes', $sep)) {
                                                     echo '<option value="Martes" selected="">Martes</option>';
-                                                }else{
+                                                } else {
                                                     echo '<option value="Martes" >Martes</option>';
                                                 }
-                                        if ( in_array('Miércoles', $sep)){
+                                                if (in_array('Miércoles', $sep)) {
                                                     echo '<option value="Miércoles" selected="">Miércoles</option>';
-                                                }else{
+                                                } else {
                                                     echo '<option value="Miércoles" >Miércoles</option>';
                                                 }
-                                        if ( in_array('Jueves', $sep)){
+                                                if (in_array('Jueves', $sep)) {
                                                     echo '<option value="Jueves" selected="">Jueves</option>';
-                                                }else{
+                                                } else {
                                                     echo '<option value="Jueves" >Jueves</option>';
                                                 }
-                                        if ( in_array('Viernes', $sep)){
+                                                if (in_array('Viernes', $sep)) {
                                                     echo '<option value="Viernes" selected="">Viernes</option>';
-                                                }else{
+                                                } else {
                                                     echo '<option value="Viernes" >Viernes</option>';
-                                                }        
-                                        ?>
-                                    </select>
+                                                }
+                                                ?>
+                                            </select>
 
-                                </div>
-                                <div class="f1-buttons">
-                                    <button type="button" class="btn btn-previous">Anterior</button>
-                                    <button type="button" class="btn btn-next" style="color:#fff;">Siguiente</button>
-                                </div>
-                            </fieldset>
+                                        </div>
+                                        <div class="f1-buttons">
+                                            <button type="button" class="btn btn-previous">Anterior</button>
+                                            <button type="button" class="btn btn-next" style="color:#fff;">Siguiente</button>
+                                        </div>
+                                    </fieldset>
 
-                            <fieldset>
-                                <div class="form-group">
-                                    <label class="etiquetas" for="f1-last-name">Requisitos:</label>
-                                    <textarea name="requirements" id="requirements" placeholder="Resumen..." style="height: 123px;width:100%;"
-                                              class="f1-about-yourself form-control3" id="f1-about-yourself" ><?php echo $row['requisitos'] ?></textarea>
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label etiquetas FolksDecoon" for="f1-about-yourself">Información Adicional</label>
-                                    <textarea name="aditional_information" id="aditional_information" placeholder="Dirigido..." style="height: 123px;width: 100%"
-                                              class="f1-about-yourself form-control3" id="f1-about-yourself"><?php echo $row['informacion_adicional'] ?></textarea>
-                                </div>
-                                <div class="form-group">
-                                    <label class="etiquetas" for="f1-first-name">Costo:</label>
-                                    <input type="number" name="cost" id="cost" min="1" max="1000000"  class="f1-first-name form-control3" 
-                                           id="f1-first-name" style="width: 100%" placeholder="Ingresa un monto" 
-                                           value="<?php echo $row['costo'] ?>">
-                                </div>
-                                <div class="form-group">
-                                    <label class="etiquetas" for="f1-first-name">Método de Pago:</label>
-                                    
-                                        <?php
-                                        if($row['metodo_pago'] == 'Efectivo'){ ?>
-                                    <select class="selectpicker"  id="pay_method" name="pay_method" style="width: 100%" multiple="">
-                                        <option value="<?php echo $row['metodo_pago']?>" selected=""><?php echo utf8_encode($row['metodo_pago']) ?></option>
-                                        <option value="Depósito Bancario">Depósito Bancario</option>
-                                        <option value="Pago en línea">Pago en línea</option> 
-                                        </select>
-                                        <?php } else{
-                                            
-                                        }
-                                        
-                                        
-                                        ?>
-                                         
-                                        
-                                    
-                                </div>
-                               
-                                <div class="form-group" >
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="first-name" style="color: black"> </label>
-                                    <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <input type="hidden" id="creation_date" name="creation_date"  value="<?php echo $date = date("y-m-d"); ?>" class="form-control col-md-7 col-xs-12">
-                                    </div>
-                                </div>
-                                <div class="form-group" >
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="first-name" style="color: black"> </label>
-                                    <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <input type="hidden" id="admin" name="admin"  value="<?php echo $user_name; ?>" class="form-control col-md-7 col-xs-12">
-                                    </div>
-                                </div>
-                                <div class="f1-buttons">
-                                    <button type="button" class="btn btn-previous">Anterior</button>
-                                    <button type="submit" class="btn btn-submit">Guardar</button>
-                                </div>
-                            </fieldset>
+                                    <fieldset>
+                                        <div class="form-group">
+                                            <label class="etiquetas" for="f1-last-name">Requisitos:</label>
+                                            <textarea name="requirements" id="requirements" placeholder="Resumen..." style="height: 123px;width:100%;"
+                                                      class="f1-about-yourself form-control3" id="f1-about-yourself" ><?php echo $row['requisitos'] ?></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label etiquetas FolksDecoon" for="f1-about-yourself">Información Adicional</label>
+                                            <textarea name="aditional_information" id="aditional_information" placeholder="Dirigido..." style="height: 123px;width: 100%"
+                                                      class="f1-about-yourself form-control3" id="f1-about-yourself"><?php echo $row['informacion_adicional'] ?></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="etiquetas" for="f1-first-name">Costo:</label>
+                                            <input type="number" name="cost" id="cost" min="1" max="1000000"  class="f1-first-name form-control3" 
+                                                   id="f1-first-name" style="width: 100%" placeholder="Ingresa un monto" 
+                                                   value="<?php echo $row['costo'] ?>">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="etiquetas" for="f1-first-name">Método de Pago:</label>
+                                            <?php if (utf8_encode($row['metodo_pago']) == 'Depósito Bancario') { ?>
+                                                   <select class="selectpicker"  id="pay_method" name="pay_method" style="width: 100%" multiple="">
+                                                    <option value="<?php echo utf8_encode($row['metodo_pago']) ?>" selected=""><?php echo utf8_encode($row['metodo_pago']) ?></option>
+                                                    <option value="Efectivo">Efectivo</option>
+                                                    <option value="Pago en línea">Pago en línea</option> 
+                                                </select>
+                                            <?php } elseif (utf8_encode($row['metodo_pago']) == 'Efectivo') { ?>
+                                               <select class="selectpicker"  id="pay_method" name="pay_method" style="width: 100%" multiple="">
+                                                        <option value="<?php echo utf8_encode($row['metodo_pago']) ?>" selected=""><?php echo utf8_encode($row['metodo_pago']) ?></option>
+                                                        <option value="Efectivo">Efectivo</option>
+                                                        <option value="Pago en línea">Pago en línea</option> 
+                                                    </select> 
+                                            <?php } elseif (utf8_encode($row['metodo_pago']) == 'Depósito Bancario') { ?>
+                                                  <select class="selectpicker"  id="pay_method" name="pay_method" style="width: 100%" multiple="">
+                                                        <option value="<?php echo utf8_encode($row['metodo_pago']) ?>" selected=""><?php echo utf8_encode($row['metodo_pago']) ?></option>
+                                                        <option value="Efectivo">Efectivo</option>
+                                                        <option value="Pago en línea">Pago en línea</option> 
+                                                    </select> 
+                                          
+                                                
+                                            <?php } else { ?>
+                                               
+                                            <?php } ?>
 
-                        </form>
+
+                                            </div>
+
+                                            <div class="form-group" >
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="first-name" style="color: black"> </label>
+                                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                                    <input type="hidden" id="creation_date" name="creation_date"  value="<?php echo $date = date("y-m-d"); ?>" class="form-control col-md-7 col-xs-12">
+                                                </div>
+                                            </div>
+                                            <div class="form-group" >
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="first-name" style="color: black"> </label>
+                                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                                    <input type="hidden" id="admin" name="admin"  value="<?php echo $user_name; ?>" class="form-control col-md-7 col-xs-12">
+                                            </div>
+                                        </div>
+                                        <div class="f1-buttons">
+                                            <button type="button" class="btn btn-previous">Anterior</button>
+                                            <button type="submit" class="btn btn-submit">Guardar</button>
+                                        </div>
+                                    </fieldset>
+
+                                </form>
+                            </div>
+                        </div>
                     </div>
-              </div>
-            </div>
-          <!-- /top tiles -->
-          <br />       
+                    <!-- /top tiles -->
+                    <br />       
 
 
                 </div>
@@ -520,354 +527,351 @@ endif;
 
         <!-- Custom Theme Scripts -->
         <script src="../build/js/custom.min.js"></script>
-        
+
 
         <script src="../form-wizard/bootstrap/js/bootstrap.min.js"></script>
         <script src="../form-wizard/js/jquery.backstretch.min.js"></script>
         <script src="../form-wizard/js/retina-1.1.0.min.js"></script>
         <script src="../form-wizard/js/scripts.js"></script>
-        
+
         <script src="../js/create/create_course.js"></script>
         <!-- bootstrap-progressbar -->
         <script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
         <!-- Flot -->
         <script src="../js/bootbox.js" type="text/javascript"></script>
         <script src="../js/bootbox.min.js" type="text/javascript">
-        <!--fileinput-->
-        <script src="../js/plugins/sortable.min.js"></script>
-<!-- purify plugin for safe rendering HTML content in preview -->
-<script src="../js/plugins/purify.min.js"></script>
-<script src="../js/fileinput_2.js"></script>
+<!--fileinput-->
+            <script src="../js/plugins/sortable.min.js"></scri            pt>
+<!-- purify plugin for safe rendering HTML content in preview             -->
+            <script src="../js/plugins/purify.min.js"></script>
+            <script src="../js/fileinput_2.js"></script>
         <script>
             $(document).ready(function () {
-                var data1 = [
-                    [gd(2012, 1, 1), 17],
-                    [gd(2012, 1, 2), 74],
-                    [gd(2012, 1, 3), 6],
-                    [gd(2012, 1, 4), 39],
-                    [gd(2012, 1, 5), 20],
-                    [gd(2012, 1, 6), 85],
-                    [gd(2012, 1, 7), 7]
-                ];
-
-                var data2 = [
-                    [gd(2012, 1, 1), 82],
-                    [gd(2012, 1, 2), 23],
-                    [gd(2012, 1, 3), 66],
-                    [gd(2012, 1, 4), 9],
-                    [gd(2012, 1, 5), 119],
-                    [gd(2012, 1, 6), 6],
-                    [gd(2012, 1, 7), 9]
-                ];
-                $("#canvas_dahs").length && $.plot($("#canvas_dahs"), [
+            var data1 = [
+            [gd(2012, 1, 1), 17],
+            [gd(2012, 1, 2), 74],
+            [gd(2012, 1, 3), 6],
+            [gd(2012, 1, 4), 39],
+            [gd(2012, 1, 5), 20],
+            [gd(2012, 1, 6), 85],
+            [gd(2012, 1, 7), 7]
+            ];
+            var data2 = [
+            [gd(2012, 1, 1), 82],
+            [gd(2012, 1, 2), 23],
+            [gd(2012, 1, 3), 66],
+            [gd(2012, 1, 4), 9],
+            [gd(2012, 1, 5), 119],
+            [gd(2012, 1, 6), 6],
+            [gd(2012, 1, 7), 9]
+            ];
+            $("#canvas_dahs").length && $.plot($("#canvas_dahs"), [
                     data1, data2
-                ], {
-                    series: {
-                        lines: {
-                            show: false,
-                            fill: true
+            ], {
+            series: {
+            lines: {
+            show: false,
+                    fill: true
+        },
+        splines: {
+                    show: true,
+                    tension: 0.4,
+                    lineWidth: 1,
+                    fill: 0.4
+        },
+        points: {
+                    radius: 0,
+                    show: true
+        },
+        shadowSize: 2
+        },
+        grid: {
+                    verticalLines: true,
+                    hoverable: true,
+                    clickable: true,
+                    tickColor: "#d5d5d5",
+                    borderWidth: 1,
+                    color: '#fff'
                         },
-                        splines: {
-                            show: true,
-                            tension: 0.4,
-                            lineWidth: 1,
-                            fill: 0.4
-                        },
-                        points: {
-                            radius: 0,
-                            show: true
-                        },
-                        shadowSize: 2
-                    },
-                    grid: {
-                        verticalLines: true,
-                        hoverable: true,
-                        clickable: true,
-                        tickColor: "#d5d5d5",
-                        borderWidth: 1,
-                        color: '#fff'
-                    },
                     colors: ["rgba(38, 185, 154, 0.38)", "rgba(3, 88, 106, 0.38)"],
-                    xaxis: {
-                        tickColor: "rgba(51, 51, 51, 0.06)",
-                        mode: "time",
-                        tickSize: [1, "day"],
-                        //tickLength: 10,
-                        axisLabel: "Date",
-                        axisLabelUseCanvas: true,
-                        axisLabelFontSizePixels: 12,
-                        axisLabelFontFamily: 'Verdana, Arial',
-                        axisLabelPadding: 10
-                    },
-                    yaxis: {
-                        ticks: 8,
-                        tickColor: "rgba(51, 51, 51, 0.06)",
-                    },
-                    tooltip: false
-                });
-
-
-            }
-            });
-        </script>
+                            xaxis: {
+                    tickColor: "rgba(51, 51, 51, 0.06)",
+                    mode: "time",
+                    tickSize: [1, "day"],
+                    //tickLength: 10,
+                    axisLabel: "Date",
+                    axisLabelUseCanvas: true,
+                    axisLabelFontSizePixels: 12,
+                    axisLabelFontFamily: 'Verdana, Arial',
+                    axisLabelPadding: 10
+                            },
+                            yaxis: {
+                    ticks: 8,
+                    tickColor: "rgba(51, 51, 51, 0.06)",
+                                },
+                                tooltip: false
+                            });
+                        
+                        
+                        }
+                        });
+                        </script>
         <!-- /Flot -->
 
-        <!-- JQVMap -->
-        <script>
-            $(document).ready(function () {
-                $('#world-map-gdp').vectorMap({
-                    map: 'world_en',
-                    backgroundColor: null,
+        <!--                    JQVMap -->
+                        <script>
+                        $(document).ready(function () {
+                            $('#world-map-gdp').vectorMap({
+                            map: 'world_en',
+                            backgroundColor: null,
                     color: '#ffffff',
                     hoverOpacity: 0.7,
-                    selectedColor: '#666666',
+                            selectedColor: '#666666',
                     enableZoom: true,
                     showTooltip: true,
                     values: sample_data,
                     scaleColors: ['#E6F2F0', '#149B7E'],
                     normalizeFunction: 'polynomial'
-                });
-            });
-        </script>
-        <!-- /JQVMap -->
+                                            });
+                                            });
+                                            </script>
+ <!-- /JQVMap -->
 
-        <!-- Skycons -->
-        <script>
-            $(document).ready(function () {
-                var icons = new Skycons({
-                    "color": "#73879C"
-                }),
-                        list = [
-                            "clear-day", "clear-night", "partly-cloudy-day",
-                            "partly-cloudy-night", "cloudy", "rain", "sleet", "snow", "wind",
-                            "fog"
-                        ],
-                        i;
-
-                for (i = list.length; i--; )
-                    icons.set(list[i], list[i]);
-
-                icons.play();
-            });
-        </script>
+                                 <!-- Skycons -->
+                                            <script>
+                                      $(document).ready(function () {
+                    var icons = new Skycons({
+                                                "color"                                                : "#73879C"
+                                    }),
+                                    list = [
+                                    "clear-day", "cle                                                    ar-night", "partly-cloudy-day",
+                                                                "partly-cloudy-night", "cloudy", "                                                    rain", "sleet", "snow", "wind",
+                                                                "                                                fog"
+                                            ],
+                                                i;
+                                                                
+                                                        for (i = list.length; i--; )
+                                                icons.set(list[i], list[i]);                                   
+                                                
+                                                        icons.play();
+                                            });
+                                                </script>                                        
         <!-- /Skycons -->
 
         <!-- Doughnut Chart -->
-        <script>
-            $(document).ready(function () {
-                var options = {
-                    legend: false,
-                    responsive: false
-                };
-
-                new Chart(document.getElementById("canvas1"), {
-                    type: 'doughnut',
-                    tooltipFillColor: "rgba(51, 51, 51, 0.55)",
-                    data: {
-                        labels: [
-                            "Symbian",
-                            "Blackberry",
-                            "Other",
-                            "Android",
-                            "IOS"
-                        ],
-                        datasets: [{
-                                data: [15, 20, 30, 10, 30],
-                                backgroundColor: [
-                                    "#BDC3C7",
-                                    "#9B59B6",
-                                    "#E74C3C",
-                                    "#26B99A",
-                                    "#3498DB"
-                                ],
-                                hoverBackgroundColor: [
-                                    "#CFD4D8",
-                                    "#B370CF",
-                                    "#E95E4F",
-                                    "#36CAAB",
-                                    "#49A9EA"
-                                ]
-                            }]
-                    },
-                    options: options
-                });
-            });
-        </script>
+                                                <script>
+                                                $(document).ready(function () {
+                                                    var options = {
+                            legend: false,
+                                    responsive: false
+                                                    };
+                                            
+                                            new Chart(document.getElementById("canvas1"), {
+                                    type: 'doughnut',
+                                    tooltipFillColor: "rgba(51, 51, 51, 0.55)",
+                                    data: {
+                                    labels: [
+                                            "Symbian",
+                                            "Blackberry",
+                                            "Other",
+                                            "Android",
+                                            "IOS"
+                                    ],
+                                            datasets: [{
+                                            data: [15, 20, 30, 10, 30],
+                                                    backgroundColor: [
+                                                            "#BDC3C7",
+                                                            "#9B59B6",
+                                                            "#E74C3C",
+                                                            "#26B99A",
+                                                    "#3498DB"
+                                                    ],
+                                          hoverBackgroundColor: [
+                                                            "#CFD4D8",
+                                                    "#B370CF",
+                                                            "#E95E4F",
+                                                            "#36CAAB",
+                                                            "#49A9EA"
+                                                    ]
+                                }]
+                                                    },
+                            options: options
+                            });
+                            });
+                                </script>
         <!-- /Doughnut Chart -->
 
-        <!-- bootstrap-daterangepicker -->
-        <script>
-            $(document).ready(function () {
+                                                   <!-- bootstrap-daterangepicker -->
+                                <script>
+                                            $(document).ready(function () {
 
-                var cb = function (start, end, label) {
-                    console.log(start.toISOString(), end.toISOString(), label);
-                    $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
-                };
-
-                var optionSet1 = {
-                    startDate: moment().subtract(29, 'days'),
-                    endDate: moment(),
-                    minDate: '01/01/2012',
-                    maxDate: '12/31/2015',
-                    dateLimit: {
-                        days: 60
+                                            var cb = function (start, end, label) {
+                                            console.log(start.toISOString(), end.toISOString(), label);
+                                                    $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+                        };
+                    
+                    var optionSet1 = {
+                                                            startDate: moment().subtract(29, 'days'),
+                                                            endDate: moment(),
+                                                            minDate: '01/01/2012',
+                                            maxDate: '12/31/2015',
+                                            dateLimit: {
+                                            days: 60
                     },
-                    showDropdowns: true,
-                    showWeekNumbers: true,
-                    timePicker: false,
-                    timePickerIncrement: 1,
-                    timePicker12Hour: true,
-                    ranges: {
-                        'Today': [moment(), moment()],
-                        'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
-                        'Last 7 Days': [moment().subtract(6, 'days'), moment()],
-                        'Last 30 Days': [moment().subtract(29, 'days'), moment()],
-                        'This Month': [moment().startOf('month'), moment().endOf('month')],
-                        'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
-                    },
+                                            showDropdowns: true,
+                                            showWeekNumbers: true,
+                            timePicker: false,
+                                timePickerIncrement: 1,
+                                timePicker12Hour: true,
+                                    ranges: {
+                                                                    'Today': [moment(), moment()],
+                                                                    'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                                    'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                                    'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                                    'This Month': [moment().startOf('month'), moment().endOf('month')],
+                                    'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                                    },
                     opens: 'left',
-                    buttonClasses: ['btn btn-default'],
-                    applyClass: 'btn-small btn-primary',
-                    cancelClass: 'btn-small',
-                    format: 'MM/DD/YYYY',
-                    separator: ' to ',
-                    locale: {
-                        applyLabel: 'Submit',
-                        cancelLabel: 'Clear',
-                        fromLabel: 'From',
-                        toLabel: 'To',
-                        customRangeLabel: 'Custom',
-                        daysOfWeek: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
-                        monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-                        firstDay: 1
-                    }
-                };
-                $('#reportrange span').html(moment().subtract(29, 'days').format('MMMM D, YYYY') + ' - ' + moment().format('MMMM D, YYYY'));
-                $('#reportrange').daterangepicker(optionSet1, cb);
-                $('#reportrange').on('show.daterangepicker', function () {
-                    console.log("show event fired");
-                });
-                $('#reportrange').on('hide.daterangepicker', function () {
-                    console.log("hide event fired");
-                });
-                $('#reportrange').on('apply.daterangepicker', function (ev, picker) {
-                    console.log("apply event fired, start/end dates are " + picker.startDate.format('MMMM D, YYYY') + " to " + picker.endDate.format('MMMM D, YYYY'));
-                });
-                $('#reportrange').on('cancel.daterangepicker', function (ev, picker) {
-                    console.log("cancel event fired");
-                });
-                $('#options1').click(function () {
-                    $('#reportrange').data('daterangepicker').setOptions(optionSet1, cb);
-                });
-                $('#options2').click(function () {
-                    $('#reportrange').data('daterangepicker').setOptions(optionSet2, cb);
-                });
-                $('#destroy').click(function () {
-                    $('#reportrange').data('daterangepicker').remove();
-                });
-            });
-        </script>
-        <!-- /bootstrap-daterangepicker -->
+                        buttonClasses: ['btn btn-default'],
+                            applyClass: 'btn-small btn-primary',
+                                cancelClass: 'btn-small',
+                                    format: 'MM/DD/YYYY',
+                                    separator: ' to ',                                 locale: {
+                                    applyLabel: 'Submit',
+                                                                    cancelLabel: 'Clear',
+                                    fromLabel: 'From',
+                                                                    toLabel: 'To',
+                                    customRangeLabel: 'Custom',
+                                    daysOfWeek: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
+                                    monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+                                                                    firstDay: 1
+                                }
+                                };
+                                            $('#reportrange span').html(moment().subtract(29, 'days').format('MMMM D, YYYY') + ' - ' + moment().format('MMMM D, YYYY'));
+                                            $('#reportrange').daterangepicker(optionSet1, cb);
+                                    $('#reportrange').on('show.daterangepicker', function () {
+                                            console.log("show event fired");
+                                    });
+                                    $('#reportrange').on('hide.daterangepicker', function () {
+                                    console.log("hide event fired");
+                                });
+                                $('#reportrange').on('apply.daterangepicker', function (ev, picker) {
+                                    console.log("apply event fired, start/end dates are " + picker.startDate.format('MMMM D, YYYY') + " to " + picker.endDate.format('MMMM D, YYYY'));
+                                            });
+                                            $('#reportrange').on('cancel.daterangepicker', function (ev, picker) {
+                                                                    console.log("cancel event fired");
+                                            });
+                                            $('#options1').click(function () {
+                                    $('#reportrange').data('daterangepicker').setOptions(optionSet1, cb);
+                                            });
+                                    $('#options2').click(function () {
+                                    $('#reportrange').data('daterangepicker').setOptions(optionSet2, cb);
+                                        });
+                                        $('#destroy').click(function () {
+                                    $('#reportrange').data('daterangepicker').remove();
+                                        });
+                                    });
+                                    </script>
+        <!-- /boots                                                            trap-daterangepicker -->
 
         <!-- gauge.js -->
-        <script>
-            var opts = {
-                lines: 12,
-                angle: 0,
-                lineWidth: 0.4,
-                pointer: {
-                    length: 0.75,
-                    strokeWidth: 0.042,
-                    color: '#1D212A'
-                },
-                limitMax: 'false',
-                colorStart: '#1ABC9C',
-                colorStop: '#1ABC9C',
-                strokeColor: '#F0F3F3',
-                generateGradient: true
-            };
-            var target = document.getElementById('foo'),
-                    gauge = new Gauge(target).setOptions(opts);
-
-            gauge.maxValue = 6000;
-            gauge.animationSpeed = 32;
-            gauge.set(3200);
-            gauge.setTextField(document.getElementById("gauge-text"));
-        </script>
-        <!-- /gauge.js -->
+                                    <script>
+                                    var opts = {
+                                                                    lines: 12,
+                                                                    angle: 0,
+                                                                    lineWidth: 0.4,
+                                                                    pointer: {
+                                                                    length: 0.75,
+                                        strokeWidth: 0.042,
+                                        color: '#1D212A'
+                                },
+                                            limitMax: 'false',
+                                            colorStart: '#1ABC9C',
+                                                colorStop: '#1ABC9C',
+                                                      strokeColor: '#F0F3F3',
+                                                      generateGradient: true
+                                                  };
+                                            var target = document.getElementById('foo'),
+                                        gauge = new Gauge(target).setOptions(opts);
+                                        
+                                            gauge.maxValue = 6000;
+                                        gauge.animationSpeed = 32;
+                                            gauge.set(3200);
+                           gauge.setTextField(document.getElementById("gauge-text"));
+                                    </script>
+                                                                        <!-- /gauge.js -->
         <!-- jQuery Smart Wizard -->
-        <script>
-            $(document).ready(function () {
-                $('#wizard').smartWizard();
-
-                $('#wizard_verticle').smartWizard({
-                    transitionEffect: 'slide'
-                });
-
-                $('.buttonSiguiente').addClass('btn btn-success');
-                $('.buttonAnterior').addClass('btn btn-primary');
-                $('.buttonFinish').addClass('btn btn-default');
-            });
-        </script>
+                                    <script>
+                                    $(doc                                                                                ument).ready(function () {
+                                                                            $('#wizar                                                                                    d').smartWizard();
+                                                                    $('#wizard                                                                                _verticle').smartWiza                                                                                rd({
+                                                                    transitionEffect: 'slide'
+                                        });
+                                        
+                                        $('.buttonSiguiente').addClass('btn btn-succe                                                                                ss');
+                                            $('.buttonAnterior').addClass('btn btn-pri                                                                            mary');
+                                        $('.button                                                                                Finish').addClass('btn btn-default');
+                                            });
+                                            </script>
         <!-- /jQuery Smart Wizard -->
 
         <!-- Process Bar-->
-        <script>
-            $('#myModal').on('shown.bs.modal', function () {
-                var progress = setInterval(function () {
-                    var $bar = $('.bar');
-                    if ($bar.width() == 550) {
-                        // complete
-                        clearInterval(progress);
-                        $('.progress').removeClass('active');
-                        $('#myModal').modal('hide');
-                        $bar.width(0);
-                    } else {
-                        // perform processing logic here
-                        $bar.width($bar.width() + 50);
-                    }
-
-                    $bar.text($bar.width() / 5 + "%");
-                }, 720);
-            })
-
-        </script>
+                                            <script>
+                                            $('#myModal').on('shown.bs.modal', function () {
+                                                                            var progress = setInterval(function () {
+                                                                            var $bar = $('.bar');
+                                                                            if ($bar.width() == 550) {
+                                                                            // complete
+                                                                            clearInterval(progress);
+                                                                            $('.progress').removeClass('active');
+                                                                            $('#myModal').modal('hide');
+                                                                            $bar.width(0);
+                                                } else {
+                                                                                    // perform processing logic here
+                                                                                    $bar.width($bar.width() + 50);
+                                        }
+                                            
+                                            $bar.text($bar.width() / 5 + "%");
+                                            }                                                                                        , 720);
+                                                })
+                                                
+                                                </script>
         <!--/ Process Bar-->
         
-        <script>
-            function myFunction() {
-            var x = document.getElementById("date_start");
-            var y = document.getElementById("date_finish");
-            if(x.value > y.value ){
-                 bootbox.alert({ 
-                 size: "small",
-                 title: "Cuidado!!",
-                 message: "La Fecha de termino no puede ser menor a la de inicio", 
-                callback: function(){ /* your callback code */ }
-                }).find('.modal-content').css({'font-weight' : 'bold', 'font-size': '16px', 'font-weight' : 'bold'} );  
-                
-            }
-           
-            }
-             
-            
-    
-           
-        </script>
-        <script>
+                                                <script>
+                                                function myFunction() {
+                                                                                    var x = document.getElementById("date_start");
+                                                                            var y = document.getElementById("date_finish");
+                                                                            if (x.value > y.value){
+                                                                            bootbox.alert({
+                                                                            size: "small",
+                                                                                    title: "Cuidado!!",
+                                                                                    message: "La Fecha de termino no puede ser menor a la de inicio",
+                                                                                    callback: function(){ /* your callback code */ }
+                                        }).find('.modal-content').css({'font-weight' : 'bold', 'font-size': '16px', 'font-weight' : 'bold'} );  
+                                        
+                                            }
+                                            
+                                            }
+                                            
+                                            
+                                                   
+                                                   
+                                                   </script>
+                                                                                                    <scri                                                                                                        pt>
             function getHour() {
-            var x = document.getElementById("time_start");
-            var y = document.getElementById("time_finish");
-               if(x.value > y.value ){
-                 bootbox.alert({ 
+            var x = doc                                                                                                           ument.getElementById("time_start");
+                                                                                                                var y = document.getEleme                                                                                                             ntById("time_finish");
+                                                                                                                      if(x.value > y.value ){
+                                                                                                                    bootbox.alert({ 
                  size: "small",
-                 title: "Cuidado!!",
-                 message: "La hora de finalización no puede ser menor a la de incio", 
+                 title: "Cui                                                                                                            dado!!",
+                 message: "La hora de finalización no pu                                                                                                            ede ser menor a la de incio", 
                 callback: function(){ /* your callback code */ }
-                }).find('.modal-content').css({'font-weight' : 'bold', 'font-size': '16px', 'font-weight' : 'bold'} );  
+                }).find('.modal-content').                                                                                                        css({'font-weight' : 'bold', 'font-size                                                                                                        ': '16px', 'font-weight' : 'bold'} );  
                 
-            }
-           
+                                                                                                            }
+    
             
             }
             
