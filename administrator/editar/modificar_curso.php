@@ -3,28 +3,14 @@ header("Content-Type: text/html;charset=utf-8");
 include "../config.php";
 error_reporting(E_ALL);
 session_start();
+$id= $_GET['u'];
 if (!isset($_SESSION['user_name'])) {
     header("Location:/simpoweb/administrator/login.php");
 }
 $user_name = utf8_encode($_SESSION['user_name']);
 
 if (isset($_GET['u'])):
-    if (isset($_POST['bts'])):
-        $stmt = $mysqli->prepare("UPDATE galery SET title_galery=?, short_description=?, long_description=?, status=?,modification_date=?,section=? WHERE id_galery=?");
-        $stmt->bind_param('sssssss', $title, $short_decription, $long_description, $status_galery, $modification_date, $section_galery, $id_galery);
-        $title = $_POST['title_galery'];
-        $short_decription = $_POST['short_desc'];
-        $long_description = $_POST['long_desc'];
-        $status_galery = $_POST['status'];
-        $modification_date = $_POST['modification_date'];
-        $section_galery = $_POST['section'];
-        $id_galery = $_POST['id_galery'];
-        if ($stmt->execute()):
-            echo "<script>location.href='Galery.php'</script>";
-        else:
-            echo "<script>alert('" . $stmt->error . "')</script>";
-        endif;
-    endif;
+  
     $res = $mysqli->query("SELECT * FROM registro_eventos WHERE id =" . $_GET['u']);
     $row = $res->fetch_assoc();
     mysqli_fetch_array($res);
@@ -251,8 +237,8 @@ endif;
                     <div class="row">
                         <div class="col-md-12">
                             <div class="col-sm-11 col-sm-offset-1 col-md-9 col-md-offset-3 col-lg-6 col-lg-offset-3 form-box" style="height: 100%" >
-                                <form role="form" id="create_course" name="create_course" class="f1" style="margin-top: -15px;">
-                                    <h3 style="text-align: center">Registrar Curso</h3>
+                                <form role="form" id="update_course" name="update_course" class="f1" style="margin-top: -15px;">
+                                    <h3 style="text-align: center">Modificar Curso</h3>
                                     <div class="f1-steps">
                                         <div class="f1-progress">
                                             <div class="f1-progress-line" data-now-value="16.66" data-number-of-steps="3" style="width: 16.66%;"></div>
@@ -284,7 +270,7 @@ endif;
                                         </div>
                                         <div class="form-group">
                                             <label class="etiquetas" for="f1-last-name">Resumen:</label>
-                                            <textarea name="review" id="review" placeholder="" style="height: 110px;width: 100%"
+                                            <textarea name="review" id="review" placeholder="" style="height: 110px;width: 100%;text-align: left"
                                                       class="f1-about-yourself form-control3" id="f1-about-yourself" >
                                                           <?php echo $row['resumen'] ?>
                                             </textarea>
@@ -318,22 +304,57 @@ endif;
                                         </div>
                                         <div class="form-group" style="width: 45%;display: inline-block;float: right">
                                             <label class="etiquetas" for="f1-first-name">Periodo:</label>
-                                            <select class="combo" id="period" name="period" style="width: 100%">
-                                                <option value="<?php echo $row['periodo'] ?>"><?php echo $row['periodo'] ?></option>
-                                                <option value="Dias">Dias</option>
-                                                <option value="Semanas">Semanas</option>
-                                                <option value="Meses">Meses</option>
-                                            </select>
+                                            <?php if (utf8_encode($row['periodo']) == 'Dias') { ?>
+                                                <select class="selectpicker"  id="period" name="period" style="width: 100%" >
+                                                    <option value="<?php echo utf8_encode($row['periodo']) ?>" selected=""><?php echo utf8_encode($row['periodo']) ?></option>
+                                                    <option value="Semanas">Semanas</option>
+                                                    <option value="Meses">Meses</option> 
+                                                </select>
+                                            <?php } elseif (utf8_encode($row['periodo']) == 'Semanas') { ?>
+                                                <select class="selectpicker"  id="period" name="period" style="width: 100%" >
+                                                    <option value="<?php echo utf8_encode($row['periodo']) ?>" selected=""><?php echo utf8_encode($row['periodo']) ?></option>
+                                                    <option value="Dias">Dias</option>
+                                                    <option value="Meses">Meses</option> 
+                                                </select> 
+                                            <?php } elseif (utf8_encode($row['periodo']) == 'Meses') { ?>
+                                                <select class="selectpicker"  id="period" name="period" style="width: 100%" >
+                                                    <option value="<?php echo utf8_encode($row['periodo']) ?>" selected=""><?php echo utf8_encode($row['periodo']) ?></option>
+                                                    <option value="Dias">Dias</option>
+                                                    <option value="Semanas">Semanas</option> 
+                                                </select> 
 
+
+                                            <?php } else { ?>
+
+                                            <?php } ?>
                                         </div>
                                         <div class="form-group">
                                             <label class="etiquetas" for="f1-first-name">Modalidad:</label>
-                                            <select class="f1-first-name combo" id="modality" name="modality" style="width:100%">
-                                                <option value="<?php echo $row['modalidad'] ?>"><?php echo $row['modalidad'] ?></option>
-                                                <option value="Presencial">Presencial</option>
-                                                <option value="Distancia">Distancia</option>
-                                                <option value="Presencial y/o Distancia">Presencial y/o Distancia</option>
-                                            </select>
+
+
+                                            <?php if (utf8_encode($row['modalidad']) == 'Presencial') { ?>
+                                                <select class="selectpicker"  id="modality" name="modality" style="width: 100%" >
+                                                    <option value="<?php echo utf8_encode($row['modalidad']) ?>" selected=""><?php echo utf8_encode($row['modalidad']) ?></option>
+                                                    <option value="Distancia">Distancia</option>
+                                                    <option value="Presencial y/o Distancia">Presencial y/o Distancia</option> 
+                                                </select>
+                                            <?php } elseif (utf8_encode($row['modalidad']) == 'Distancia') { ?>
+                                                <select class="selectpicker"  id="modality" name="modality" style="width: 100%" >
+                                                    <option value="<?php echo utf8_encode($row['modalidad']) ?>" selected=""><?php echo utf8_encode($row['modalidad']) ?></option>
+                                                    <option value="Presencial">Presencial</option>
+                                                    <option value="Presencial y/o Distancia">Presencial y/o Distancia</option> 
+                                                </select> 
+                                            <?php } elseif (utf8_encode($row['modalidad']) == 'Presencial y/o Distancia') { ?>
+                                                <select class="selectpicker"  id="modality" name="modality" style="width: 100%" >
+                                                    <option value="<?php echo utf8_encode($row['modalidad']) ?>" selected=""><?php echo utf8_encode($row['modalidad']) ?></option>
+                                                    <option value="Presencial">Presencial</option>
+                                                    <option value="Distancia">Distancia</option> 
+                                                </select> 
+
+
+                                            <?php } else { ?>
+
+                                            <?php } ?>
                                         </div>
                                         <div class="form-group" style="width: 45%;display: inline-block;">
                                             <label class="etiquetas" for="f1-first-name">Fecha Inicio:</label>
@@ -421,43 +442,46 @@ endif;
                                         <div class="form-group">
                                             <label class="etiquetas" for="f1-first-name">Método de Pago:</label>
                                             <?php if (utf8_encode($row['metodo_pago']) == 'Depósito Bancario') { ?>
-                                                   <select class="selectpicker"  id="pay_method" name="pay_method" style="width: 100%" multiple="">
+                                                <select class="selectpicker"  id="pay_method" name="pay_method" style="width: 100%" multiple="">
                                                     <option value="<?php echo utf8_encode($row['metodo_pago']) ?>" selected=""><?php echo utf8_encode($row['metodo_pago']) ?></option>
                                                     <option value="Efectivo">Efectivo</option>
                                                     <option value="Pago en línea">Pago en línea</option> 
                                                 </select>
                                             <?php } elseif (utf8_encode($row['metodo_pago']) == 'Efectivo') { ?>
-                                               <select class="selectpicker"  id="pay_method" name="pay_method" style="width: 100%" multiple="">
-                                                        <option value="<?php echo utf8_encode($row['metodo_pago']) ?>" selected=""><?php echo utf8_encode($row['metodo_pago']) ?></option>
-                                                        <option value="Efectivo">Efectivo</option>
-                                                        <option value="Pago en línea">Pago en línea</option> 
-                                                    </select> 
+                                                <select class="selectpicker"  id="pay_method" name="pay_method" style="width: 100%" multiple="">
+                                                    <option value="<?php echo utf8_encode($row['metodo_pago']) ?>" selected=""><?php echo utf8_encode($row['metodo_pago']) ?></option>
+                                                    <option value="Depósito Bancario">Depósito Bancario</option>
+                                                    <option value="Pago en línea">Pago en línea</option> 
+                                                </select> 
                                             <?php } elseif (utf8_encode($row['metodo_pago']) == 'Depósito Bancario') { ?>
-                                                  <select class="selectpicker"  id="pay_method" name="pay_method" style="width: 100%" multiple="">
-                                                        <option value="<?php echo utf8_encode($row['metodo_pago']) ?>" selected=""><?php echo utf8_encode($row['metodo_pago']) ?></option>
-                                                        <option value="Efectivo">Efectivo</option>
-                                                        <option value="Pago en línea">Pago en línea</option> 
-                                                    </select> 
-                                          
-                                                
+                                                <select class="selectpicker"  id="pay_method" name="pay_method" style="width: 100%" multiple="">
+                                                    <option value="<?php echo utf8_encode($row['metodo_pago']) ?>" selected=""><?php echo utf8_encode($row['metodo_pago']) ?></option>
+                                                    <option value="Efectivo">Efectivo</option>
+                                                    <option value="Pago en línea">Pago en línea</option> 
+                                                </select> 
+
+
                                             <?php } else { ?>
-                                               
+
                                             <?php } ?>
 
 
-                                            </div>
+                                        </div>
 
-                                            <div class="form-group" >
-                                                <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="first-name" style="color: black"> </label>
-                                                <div class="col-md-6 col-sm-6 col-xs-12">
-                                                    <input type="hidden" id="creation_date" name="creation_date"  value="<?php echo $date = date("y-m-d"); ?>" class="form-control col-md-7 col-xs-12">
-                                                </div>
+                                        <div class="form-group" >
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="first-name" style="color: black"> </label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <input type="hidden" id="update_date" name="update_date"  value="<?php echo $date = date("y-m-d"); ?>" class="form-control col-md-7 col-xs-12">
                                             </div>
-                                            <div class="form-group" >
-                                                <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="first-name" style="color: black"> </label>
-                                                <div class="col-md-6 col-sm-6 col-xs-12">
-                                                    <input type="hidden" id="admin" name="admin"  value="<?php echo $user_name; ?>" class="form-control col-md-7 col-xs-12">
+                                        </div>
+                                        <div class="form-group" >
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="first-name" style="color: black"> </label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <input type="hidden" id="admin" name="admin"  value="<?php echo $user_name; ?>" class="form-control col-md-7 col-xs-12">
                                             </div>
+                                        </div>
+                                         <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <input type="hidden" id="id" name="id"  value="<?php echo $id?>" class="form-control col-md-7 col-xs-12">
                                         </div>
                                         <div class="f1-buttons">
                                             <button type="button" class="btn btn-previous">Anterior</button>
@@ -534,17 +558,17 @@ endif;
         <script src="../form-wizard/js/retina-1.1.0.min.js"></script>
         <script src="../form-wizard/js/scripts.js"></script>
 
-        <script src="../js/create/create_course.js"></script>
+        <script src="../js/update/update_course.js"></script>
         <!-- bootstrap-progressbar -->
         <script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
         <!-- Flot -->
         <script src="../js/bootbox.js" type="text/javascript"></script>
-        <script src="../js/bootbox.min.js" type="text/javascript">
+            <script src="../js/bootbox.min.js" type="text/javascript">
 <!--fileinput-->
-            <script src="../js/plugins/sortable.min.js"></scri            pt>
-<!-- purify plugin for safe rendering HTML content in preview             -->
-            <script src="../js/plugins/purify.min.js"></script>
-            <script src="../js/fileinput_2.js"></script>
+                        <script src="../js/plugins/sortable.min.js"></script>
+<!--   purify plugin for safe rendering HTML content in preview             -->
+            <scrip t  src="../j s /plugins/purify.min.js"></script>
+                <script src="../js/fileinput_2.js"></script>
         <script>
             $(document).ready(function () {
             var data1 = [
@@ -561,31 +585,31 @@ endif;
             [gd(2012, 1, 2), 23],
             [gd(2012, 1, 3), 66],
             [gd(2012, 1, 4), 9],
-            [gd(2012, 1, 5), 119],
+                    [gd(2012, 1, 5), 119],
             [gd(2012, 1, 6), 6],
             [gd(2012, 1, 7), 9]
             ];
-            $("#canvas_dahs").length && $.plot($("#canvas_dahs"), [
+                    $("#canvas_dahs").length && $.plot($("#canvas_dahs"), [
                     data1, data2
             ], {
             series: {
-            lines: {
-            show: false,
+                    lines: {
+                    show: false,
                     fill: true
         },
-        splines: {
+                    splines: {
                     show: true,
                     tension: 0.4,
                     lineWidth: 1,
                     fill: 0.4
         },
-        points: {
+                    points: {
                     radius: 0,
                     show: true
         },
-        shadowSize: 2
-        },
-        grid: {
+                    shadowSize: 2
+            },
+                    grid: {
                     verticalLines: true,
                     hoverable: true,
                     clickable: true,
@@ -594,156 +618,160 @@ endif;
                     color: '#fff'
                         },
                     colors: ["rgba(38, 185, 154, 0.38)", "rgba(3, 88, 106, 0.38)"],
-                            xaxis: {
+                    xaxis: {
                     tickColor: "rgba(51, 51, 51, 0.06)",
                     mode: "time",
                     tickSize: [1, "day"],
                     //tickLength: 10,
                     axisLabel: "Date",
                     axisLabelUseCanvas: true,
-                    axisLabelFontSizePixels: 12,
-                    axisLabelFontFamily: 'Verdana, Arial',
-                    axisLabelPadding: 10
+            axisLabelFontSizePixels: 12,
+            axisLabelFontFamily: 'Verdana, Arial',
+            axisLabelPadding: 10
                             },
-                            yaxis: {
+                    yaxis: {
                     ticks: 8,
                     tickColor: "rgba(51, 51, 51, 0.06)",
                                 },
-                                tooltip: false
-                            });
-                        
-                        
-                        }
-                        });
-                        </script>
+                    tooltip: false
+            });
+            }
+            });
+   </script>
         <!-- /Flot -->
 
-        <!--                    JQVMap -->
-                        <script>
-                        $(document).ready(function () {
-                            $('#world-map-gdp').vectorMap({
-                            map: 'world_en',
-                            backgroundColor: null,
-                    color: '#ffffff',
-                    hoverOpacity: 0.7,
-                            selectedColor: '#666666',
-                    enableZoom: true,
-                    showTooltip: true,
-                    values: sample_data,
-                    scaleColors: ['#E6F2F0', '#149B7E'],
-                    normalizeFunction: 'polynomial'
-                                            });
-                                            });
-                                            </script>
- <!-- /JQVMap -->
+        <!--                                       JQVMap -->
+                    <script>
+                        $(document).ready(function (                        ) {
+                            $('#world-map-gdp').vectorMa                        p({
+                            map: 'world_e                        n',
+                            backgroundColor: nu                ll,
+                    color: '#fffff                f',
+                    hoverOpacity: 0                        .7,
+                            selectedColor: '#66666                6',
+                    enableZoom: tr                ue,
+                    showTooltip: tr                ue,
+                    values: sample_da                ta,
+                    scaleColors: ['#E6F2F0', '#149B7E                '],
+                    normalizeFunction: 'polynomi                                        al'
+                            });
+                                                                        });
+                        </script>
+ <!-- /JQVMap --                            >
 
-                                 <!-- Skycons -->
-                                            <script>
-                                      $(document).ready(function () {
-                    var icons = new Skycons({
-                                                "color"                                                : "#73879C"
-                                    }),
-                                    list = [
-                                    "clear-day", "cle                                                    ar-night", "partly-cloudy-day",
-                                                                "partly-cloudy-night", "cloudy", "                                                    rain", "sleet", "snow", "wind",
-                                                                "                                                fog"
-                                            ],
-                                                i;
-                                                                
-                                                        for (i = list.length; i--; )
-                                                icons.set(list[i], list[i]);                                   
-                                                
-                                                        icons.play();
-                                            });
-                                                </script>                                        
+               <!-- Skycons -->
+                        <script>
+                                    $(document).ready(function () {
+                                            var icons = new Skycons({
+                    "color"                                                : "#73879C"
+                                            }),
+                                list = [
+                                            "clear-day", "cle                                                    ar-night", "partly-cloudy-day",
+                                    "partly-cloudy-night", "cloudy", "                                                    rain", "sleet", "snow", "wind",
+                            "                                                fog"                                             ],
+                                            i;
+                                    
+                                    for (i = list.length; i--; )
+                            icons.set(list[i], list[i]);                                   
+                                    
+                                    icons.play();
+                                    });
+                                                        bueno                                             </script>                                        
         <!-- /Skycons -->
 
-        <!-- Doughnut Chart -->
-                                                <script>
-                                                $(document).ready(function () {
-                                                    var options = {
-                            legend: false,
-                                    responsive: false
-                                                    };
-                                            
-                                            new Chart(document.getElementById("canvas1"), {
-                                    type: 'doughnut',
-                                    tooltipFillColor: "rgba(51, 51, 51, 0.55)",
-                                    data: {
-                                    labels: [
+                                                        <!-- Doughnut Chart -->
+                                            <script>
+                                                        $(document).ready(function () {
+                            var options = {
+                                                legend: false,
+                                                responsive: false
+                                                };
+                            
+                                                new Chart(document.getElementById("canvas1"), {
+                                                    type: 'doughnut',
+                                                tooltipFillColor: "rgba(51, 51, 51, 0.55)",
+                            data: {
+                                labels: [
                                             "Symbian",
-                                            "Blackberry",
+                                                            "Blackberry",
                                             "Other",
-                                            "Android",
-                                            "IOS"
-                                    ],
-                                            datasets: [{
-                                            data: [15, 20, 30, 10, 30],
-                                                    backgroundColor: [
-                                                            "#BDC3C7",
-                                                            "#9B59B6",
-                                                            "#E74C3C",
-                                                            "#26B99A",
-                                                    "#3498DB"
-                                                    ],
-                                          hoverBackgroundColor: [
-                                                            "#CFD4D8",
-                                                    "#B370CF",
-                                                            "#E95E4F",
-                                                            "#36CAAB",
-                                                            "#49A9EA"
-                                                    ]
-                                }]
-                                                    },
-                            options: options
-                            });
-                            });
-                                </script>
-        <!-- /Doughnut Chart -->
-
-                                                   <!-- bootstrap-daterangepicker -->
-                                <script>
-                                            $(document).ready(function () {
-
-                                            var cb = function (start, end, label) {
-                                            console.log(start.toISOString(), end.toISOString(), label);
-                                                    $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
-                        };
-                    
-                    var optionSet1 = {
-                                                            startDate: moment().subtract(29, 'days'),
-                                                            endDate: moment(),
-                                                            minDate: '01/01/2012',
-                                            maxDate: '12/31/2015',
-                                            dateLimit: {
-                                            days: 60
-                    },
-                                            showDropdowns: true,
-                                            showWeekNumbers: true,
-                            timePicker: false,
-                                timePickerIncrement: 1,
-                                timePicker12Hour: true,
-                                    ranges: {
-                                                                    'Today': [moment(), moment()],
-                                                                    'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
-                                    'Last 7 Days': [moment().subtract(6, 'days'), moment()],
-                                    'Last 30 Days': [moment().subtract(29, 'days'), moment()],
-                                    'This Month': [moment().startOf('month'), moment().endOf('month')],
-                                    'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                                                            "Android",
+                                                                    "IOS"
+                                                                    ],
+                                                                    datasets: [{
+                                                                    data: [15, 20, 30, 10, 30],
+                                                                    backgroundColor: [
+                                                                    "#BDC3C7",
+                                                                            "#9B59B6",
+                                                                                    "#E74C3C",
+                                                "#26B99A",
+                                                "#3498DB"
+                                            ],
+                                hoverBackgroundColor: [
+        "#CFD4D8",
+                                                "#B370CF",
+        "#E95E4F",
+                                    "#36CAAB",
+                                                                                    "#49A9EA"
+                                    ]
+                                        }]
                                     },
-                    opens: 'left',
-                        buttonClasses: ['btn btn-default'],
+                                      option s :   options
+                                        });
+                                    });
+                        </script>
+                      <!--   /Doughnut Chart -                                            - >
+        
+                                                <!-- bootstrap-daterangepicker                                             -
+                                                    ->
+                        <script>
+                        $(document).ready(function () {
+
+                                                                                            var cb = function (start, end, label) {
+        console.log(start.toISOString(), end.toISOString(), label);
+                                                $('#reportrange span'
+                                                )
+                            .html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+                                            };
+                                            
+                                                var optionSet1 = {
+                                                startDate: moment().subtract(29, 'days'),
+        endDate: moment(),
+        minDate: '01/01/2012',
+        maxDate: '12/31/2015',
+        dateLimit: {
+                                                                                           
+                                    days: 60
+                    },
+                                    showDropdowns: true,
+                                    showWeekNumbers: true,
+                            timePicker: false,
+                                    timePickerIncrement: 1,
+                                    timePicker12Hour: true,
+              
+                                        ranges: {
+                                                'Today': [moment(), moment()],
+        'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+        'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+            'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                                                                                                            'This Month': [moment().startOf('month'), moment().endOf('month')],
+                                                                                                            'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').e
+                                    n
+                            dOf('month')]
+                                    },
+                                    opens: 'left',
+                                    buttonClasses: ['btn btn-default'],
                             applyClass: 'btn-small btn-primary',
-                                cancelClass: 'btn-small',
-                                    format: 'MM/DD/YYYY',
-                                    separator: ' to ',                                 locale: {
-                                    applyLabel: 'Submit',
-                                                                    cancelLabel: 'Clear',
-                                    fromLabel: 'From',
-                                                                    toLabel: 'To',
-                                    customRangeLabel: 'Custom',
-                                    daysOfWeek: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
-                                    monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+                                    cancelClass: 'btn-small',
+                                        format: 'MM/DD/YYYY',
+                                            separator: ' to ',                                 locale: {
+                                                                                                            applyLabel: 'Submit',
+                                                                                                            cancelLabel: 'Clear',
+                                                                                                            fromLabel: 'From',
+                                                                                                            toLabel: 'To',
+                                                                                                            customRangeLabel: 'Custom',
+                                                                                                            daysOfWeek: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
+                                                                                                            monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
                                                                     firstDay: 1
                                 }
                                 };
@@ -759,128 +787,129 @@ endif;
                                     console.log("apply event fired, start/end dates are " + picker.startDate.format('MMMM D, YYYY') + " to " + picker.endDate.format('MMMM D, YYYY'));
                                             });
                                             $('#reportrange').on('cancel.daterangepicker', function (ev, picker) {
-                                                                    console.log("cancel event fired");
+                                            console.log("cancel event fired");
+                                                });
+                                                $('#options1').click(function () {
+                                                $('#reportrange').data('daterangepicker').setOptions(optionSet1, cb);
                                             });
-                                            $('#options1').click(function () {
-                                    $('#reportrange').data('daterangepicker').setOptions(optionSet1, cb);
-                                            });
-                                    $('#options2').click(function () {
-                                    $('#reportrange').data('daterangepicker').setOptions(optionSet2, cb);
-                                        });
-                                        $('#destroy').click(function () {
+            $('#options2').click(function () {
+                                                $('#reportrange').data('daterangepicker').setOptions(optionSet2, cb);
+                                                });
+                                            $('#destroy').click(function () {
                                     $('#reportrange').data('daterangepicker').remove();
                                         });
                                     });
                                     </script>
         <!-- /boots                                                            trap-daterangepicker -->
 
-        <!-- gauge.js -->
-                                    <script>
-                                    var opts = {
-                                                                    lines: 12,
-                                                                    angle: 0,
-                                                                    lineWidth: 0.4,
-                                                                    pointer: {
-                                                                    length: 0.75,
-                                        strokeWidth: 0.042,
-                                        color: '#1D212A'
-                                },
+                                                          <!-- gauge.js -->
+                                                    <script>
+                                  
+                                                        var opts = {
+                                                                                                                    lines: 12,
+                                                                                                                            angle: 0,
+                                                                                                                            lineWidth: 0.4,
+                                                                                                                            pointer: {
+                                                                                                                            length: 0.75,
+                                                                                                                                    strokeWidth: 0.042,
+                                                                                                                                    color: '#1D212A'
+                                            },
                                             limitMax: 'false',
                                             colorStart: '#1ABC9C',
-                                                colorStop: '#1ABC9C',
+                                            colorStop: '#1ABC9C',
                                                       strokeColor: '#F0F3F3',
                                                       generateGradient: true
-                                                  };
+                                                          };
                                             var target = document.getElementById('foo'),
                                         gauge = new Gauge(target).setOptions(opts);
-                                        
+                                            
                                             gauge.maxValue = 6000;
                                         gauge.animationSpeed = 32;
-                                            gauge.set(3200);
-                           gauge.setTextField(document.getElementById("gauge-text"));
-                                    </script>
+                                    gauge.set(3200);
+                                        gauge.setTextField(document.getElementById("gauge-text"));
+                                        </script>
                                                                         <!-- /gauge.js -->
-        <!-- jQuery Smart Wizard -->
-                                    <script>
-                                    $(doc                                                                                ument).ready(function () {
-                                                                            $('#wizar                                                                                    d').smartWizard();
-                                                                    $('#wizard                                                                                _verticle').smartWiza                                                                                rd({
-                                                                    transitionEffect: 'slide'
-                                        });
-                                        
-                                        $('.buttonSiguiente').addClass('btn btn-succe                                                                                ss');
-                                            $('.buttonAnterior').addClass('btn btn-pri                                                                            mary');
-                                        $('.button                                                                                Finish').addClass('btn btn-default');
+        <                                                                !-- jQuery Smart Wizard -->
+                                            <script>
+                                            $(doc                                                                                                                                                                               ument).ready(function () {
+                                                                                                                                    $('#wizar                                                                                                                                                                   d').smartWizard();
+                                                                                                                            $('#wizard                                                                                _verticle').smartWiza                                                                                                                                                 rd({
+                                                                                                                            transitionEffect: 'slide'
+                                                });
+                                                
+                                                $('.buttonSiguiente').addClass('btn btn-succe                                                                                                                          ss');
+                                            $('.buttonAnterior').addClass('btn btn-pri                                                                                                                    mary');
+                                                $('.button                                                                                Fi                                                                        nish').addClass('btn btn-default');
                                             });
                                             </script>
-        <!-- /jQuery Smart Wizard -->
+                                                                               <!-- /jQuery Smart Wizard -->
 
         <!-- Process Bar-->
-                                            <script>
-                                            $('#myModal').on('shown.bs.modal', function () {
-                                                                            var progress = setInterval(function () {
-                                                                            var $bar = $('.bar');
-                                                                            if ($bar.width() == 550) {
-                                                                            // complete
-                                                                            clearInterval(progress);
-                                                                            $('.progress').removeClass('active');
-                                                                            $('#myModal').modal('hide');
-                                                                            $bar.width(0);
-                                                } else {
-                                                                                    // perform processing logic here
-                                                                                    $bar.width($bar.width() + 50);
-                                        }
-                                            
-                                            $bar.text($bar.width() / 5 + "%");
-                                            }                                                                                        , 720);
-                                                })
-                                                
-                                                </script>
+        <script>
+            $('#myModal').on('shown.bs.modal', function () {
+                var progress = setInterval(function () {
+                    var $bar = $('.bar');
+                    if ($bar.width() == 550) {
+                        // complete
+                        clearInterval(progress);
+                        $('.progress').removeClass('active');
+                        $('#myModal').modal('hide');
+                        $bar.width(0);
+                    } else {
+                        // perform processing logic here
+                        $bar.width($bar.width() + 50);
+                    }
+
+                    $bar.text($bar.width() / 5 + "%");
+                }, 720);
+            })
+
+        </script>
         <!--/ Process Bar-->
         
                                                 <script>
                                                 function myFunction() {
-                                                                                    var x = document.getElementById("date_start");
-                                                                            var y = document.getElementById("date_finish");
-                                                                            if (x.value > y.value){
-                                                                            bootbox.alert({
-                                                                            size: "small",
-                                                                                    title: "Cuidado!!",
-                                                                                    message: "La Fecha de termino no puede ser menor a la de inicio",
-                                                                                    callback: function(){ /* your callback code */ }
-                                        }).find('.modal-content').css({'font-weight' : 'bold', 'font-size': '16px', 'font-weight' : 'bold'} );  
+                                                                                                                                            var x = document.getElementById("date_start");
+                                                                                                                                    var y = document.getElementById("date_finish");
+                                                                                                                                    if (x.value > y.value){
+                                                                                                                                    bootbox.alert({
+                                                                                                                                    size: "small",
+                                                                                                                                            title: "Cuidado!!",
+                                                                                                                                            message: "La Fecha de termino no puede ser menor a la de inicio",
+                                                                                                                                            callback: function(){ /* your callback code */ }
+                                                   }).find('.modal-content').css({'font-weight' : 'bold', 'font-size': '16px', 'font-weight' : 'bold'} );  
+                                                   
+                                        }
                                         
-                                            }
+                                        }
+                                        
                                             
-                                            }
                                             
                                             
-                                                   
-                                                   
-                                                   </script>
-                                                                                                    <scri                                                                                                        pt>
-            function getHour() {
-            var x = doc                                                                                                           ument.getElementById("time_start");
-                                                                                                                var y = document.getEleme                                                                                                             ntById("time_finish");
-                                                                                                                      if(x.value > y.value ){
-                                                                                                                    bootbox.alert({ 
-                 size: "small",
-                 title: "Cui                                                                                                            dado!!",
-                 message: "La hora de finalización no pu                                                                                                            ede ser menor a la de incio", 
-                callback: function(){ /* your callback code */ }
-                }).find('.modal-content').                                                                                                        css({'font-weight' : 'bold', 'font-size                                                                                                        ': '16px', 'font-weight' : 'bold'} );  
+                                                        </script>
+                                                        <script>
+                                                        function getHour() {
+                                                        var x = document.getElementById("time_start");
+                                                        var y = document.getElementById("time_finish");
+                                                        if(x.value > y.value ){
+                                                        bootbox.alert({ 
+                                                        size: "small",
+                                                        title: "Cui                                                                                                            dado!!",
+                                                        message: "La hora de finalización no pu                                                                                                            ede ser menor a la de incio", 
+                                                        callback: function(){ /* your callback code */ }
+                                                        }).find('.modal-content').                                                                                                        css({'font-weight' : 'bold', 'font-size                                                                                                        ': '16px', 'font-weight' : 'bold'} );  
                 
-                                                                                                            }
+                                                        }
     
             
-            }
+                                                        }
             
             
     
            
-        </script>
+                                                        </script>
 
 
 
-    </body>
-</html>
+                                                                                    </body>
+                                                                                    </html>
