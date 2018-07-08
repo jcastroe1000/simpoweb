@@ -360,6 +360,16 @@ $user_name = $_SESSION['user_name'];
                                                 <div class="row hide" data-step="3" data-title="This is the last step!">
                                                     <div class="row">
                                                         <h5 style="text-align: justify"><strong style="text-align: justify">Fecha de Creación:  </strong><?php echo utf8_encode($row['fecha_creacion']) ?></h5>
+                                                        <h5 style="text-align: justify"><strong style="text-align: justify">Fecha de Modificación:  </strong>
+                                                            <?php 
+                                                            if(empty($row['fecha_modificacion'])){
+                                                                echo 'No se ha modificado'; 
+                                                            }elseif($row['fecha_modificacion']!==null){
+                                                                echo $row['fecha_modificacion'];
+                                                            }else{
+                                                            }
+                                                            ?>
+                                                        </h5>
                                                         <h5 style="text-align: justify"><strong style="text-align: justify">Usuario quien registro:  </strong><?php echo utf8_encode( $row['usuario'] ) ?></h5>
                                                         
                                                     </div>

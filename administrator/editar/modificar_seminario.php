@@ -223,7 +223,7 @@ endif;
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-body" style="text-align: center;padding:20px">
-                                    <h3>El Curso ha sido modificado exitosamente</h3>
+                                    <h3>Curso Registrado Exitosamente...</h3>
                                 </div>
                             </div>
                         </div>
@@ -266,25 +266,29 @@ endif;
                                         <div class="form-group">
                                             <label class="etiquetas" for="f1-first-name">Nombre:</label>
                                             <input type="text" name="name" id="name" placeholder="Nombre" class="f1-first-name form-control3" 
-                                                   id="f1-first-name" style="width: 100%" value="<?php echo utf8_encode($row['nombre']) ?>">
+                                                   id="f1-first-name" style="width: 100%" value="<?php echo $row['nombre'] ?>">
                                         </div>
-
                                         <div class="form-group">
                                             <label class="etiquetas" for="f1-last-name">Resumen:</label>
-                                            <textarea name="review" id="review" placeholder="Resumen..." style="height: 123px;width:100%;"
-                                                      class="f1-about-yourself form-control3" id="f1-about-yourself" ><?php echo utf8_encode($row['resumen']) ?></textarea>
+                                            <textarea name="review" id="review" placeholder="" style="height: 110px;width: 100%;text-align: left"
+                                                      class="f1-about-yourself form-control3" id="f1-about-yourself" >
+                                                          <?php echo $row['resumen'] ?>
+                                            </textarea>
                                         </div>
                                         <div class="form-group">
-                                            <label class="etiquetas" for="f1-last-name">Dirigido:</label>
-                                            <textarea name="addressed" id="addressed" placeholder="Resumen..." style="height: 123px;width:100%;"
-                                                      class="f1-about-yourself form-control3" id="f1-about-yourself" ><?php echo utf8_encode($row['dirigido']) ?></textarea>
+                                            <label class="etiquetas" for="f1-about-yourself">Dirigido:</label>
+                                            <textarea name="addressed" id="addressed" placeholder="<?php echo $row['dirigido'] ?>" style="height: 100px;width: 100%"
+                                                      class="f1-about-yourself form-control3 " id="f1-about-yourself">
+                                                          <?php echo $row['dirigido'] ?>
+                                            </textarea>
                                         </div>
                                         <div class="form-group">
-                                            <label class="etiquetas" for="f1-last-name">Objetivo:</label>
-                                            <textarea name="objetive" id="objetive" placeholder="Resumen..." style="height: 123px;width:100%;"
-                                                      class="f1-about-yourself form-control3" id="f1-about-yourself" ><?php echo utf8_encode($row['objetivo']) ?></textarea>
+                                            <label class="etiquetas" for="f1-about-yourself">Objetivo:</label>
+                                            <textarea name="objetive" id="objetive" placeholder="Objetivo" style="height: 140px;width: 100%"
+                                                      class="f1-about-yourself form-control3 " id="f1-about-yourself">
+                                                          <?php echo $row['objetivo'] ?>
+                                            </textarea>
                                         </div>
-                                        
                                         <div class="f1-buttons">
                                             <button type="button" class="btn btn-next" style="color: white;">Siguiente</button>
                                         </div>
@@ -422,12 +426,12 @@ endif;
                                         <div class="form-group">
                                             <label class="etiquetas" for="f1-last-name">Requisitos:</label>
                                             <textarea name="requirements" id="requirements" placeholder="Resumen..." style="height: 123px;width:100%;"
-                                                      class="f1-about-yourself form-control3" id="f1-about-yourself" ><?php echo utf8_encode($row['requisitos']) ?></textarea>
+                                                      class="f1-about-yourself form-control3" id="f1-about-yourself" ><?php echo $row['requisitos'] ?></textarea>
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label etiquetas FolksDecoon" for="f1-about-yourself">Información Adicional</label>
                                             <textarea name="aditional_information" id="aditional_information" placeholder="Dirigido..." style="height: 123px;width: 100%"
-                                                      class="f1-about-yourself form-control3" id="f1-about-yourself"><?php echo utf8_encode($row['informacion_adicional']) ?></textarea>
+                                                      class="f1-about-yourself form-control3" id="f1-about-yourself"><?php echo $row['informacion_adicional'] ?></textarea>
                                         </div>
                                         <div class="form-group">
                                             <label class="etiquetas" for="f1-first-name">Costo:</label>

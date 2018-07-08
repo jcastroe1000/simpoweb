@@ -223,7 +223,7 @@ endif;
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-body" style="text-align: center;padding:20px">
-                                    <h3>El Curso ha sido modificado exitosamente</h3>
+                                    <h3>Diplomado Modificado Exitosamente...</h3>
                                 </div>
                             </div>
                         </div>
@@ -237,8 +237,8 @@ endif;
                     <div class="row">
                         <div class="col-md-12">
                             <div class="col-sm-11 col-sm-offset-1 col-md-9 col-md-offset-3 col-lg-6 col-lg-offset-3 form-box" style="height: 100%" >
-                                <form role="form" id="update_course" name="update_course" class="f1" style="margin-top: -15px;">
-                                    <h3 style="text-align: center">Modificar Curso</h3>
+                                <form role="form" id="update_diplomat" name="update_diplomat" class="f1" style="margin-top: -15px;">
+                                    <h3 style="text-align: center">Modificar Diplomado</h3>
                                     <div class="f1-steps">
                                         <div class="f1-progress">
                                             <div class="f1-progress-line" data-now-value="16.66" data-number-of-steps="3" style="width: 16.66%;"></div>
@@ -266,7 +266,7 @@ endif;
                                         <div class="form-group">
                                             <label class="etiquetas" for="f1-first-name">Nombre:</label>
                                             <input type="text" name="name" id="name" placeholder="Nombre" class="f1-first-name form-control3" 
-                                                   id="f1-first-name" style="width: 100%" value="<?php echo utf8_encode($row['nombre']) ?>">
+                                                   id="f1-first-name" style="width: 100%" value="<?php echo $row['nombre'] ?>">
                                         </div>
 
                                         <div class="form-group">
@@ -275,7 +275,7 @@ endif;
                                                       class="f1-about-yourself form-control3" id="f1-about-yourself" ><?php echo utf8_encode($row['resumen']) ?></textarea>
                                         </div>
                                         <div class="form-group">
-                                            <label class="etiquetas" for="f1-last-name">Dirigido:</label>
+                                            <label class="etiquetas" for="f1-last-name">Dirigido :</label>
                                             <textarea name="addressed" id="addressed" placeholder="Resumen..." style="height: 123px;width:100%;"
                                                       class="f1-about-yourself form-control3" id="f1-about-yourself" ><?php echo utf8_encode($row['dirigido']) ?></textarea>
                                         </div>
@@ -284,7 +284,6 @@ endif;
                                             <textarea name="objetive" id="objetive" placeholder="Resumen..." style="height: 123px;width:100%;"
                                                       class="f1-about-yourself form-control3" id="f1-about-yourself" ><?php echo utf8_encode($row['objetivo']) ?></textarea>
                                         </div>
-                                        
                                         <div class="f1-buttons">
                                             <button type="button" class="btn btn-next" style="color: white;">Siguiente</button>
                                         </div>
@@ -422,12 +421,12 @@ endif;
                                         <div class="form-group">
                                             <label class="etiquetas" for="f1-last-name">Requisitos:</label>
                                             <textarea name="requirements" id="requirements" placeholder="Resumen..." style="height: 123px;width:100%;"
-                                                      class="f1-about-yourself form-control3" id="f1-about-yourself" ><?php echo utf8_encode($row['requisitos']) ?></textarea>
+                                                      class="f1-about-yourself form-control3" id="f1-about-yourself" ><?php echo $row['requisitos'] ?></textarea>
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label etiquetas FolksDecoon" for="f1-about-yourself">Información Adicional</label>
                                             <textarea name="aditional_information" id="aditional_information" placeholder="Dirigido..." style="height: 123px;width: 100%"
-                                                      class="f1-about-yourself form-control3" id="f1-about-yourself"><?php echo utf8_encode($row['informacion_adicional']) ?></textarea>
+                                                      class="f1-about-yourself form-control3" id="f1-about-yourself"><?php echo $row['informacion_adicional'] ?></textarea>
                                         </div>
                                         <div class="form-group">
                                             <label class="etiquetas" for="f1-first-name">Costo:</label>
@@ -554,7 +553,7 @@ endif;
         <script src="../form-wizard/js/retina-1.1.0.min.js"></script>
         <script src="../form-wizard/js/scripts.js"></script>
 
-        <script src="../js/update/update_course.js"></script>
+        <script src="../js/update/update_diplomat.js"></script>
         <!-- bootstrap-progressbar -->
         <script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
         <!-- Flot -->

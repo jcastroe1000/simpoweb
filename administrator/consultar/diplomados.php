@@ -18,7 +18,24 @@ $user_name = $_SESSION['user_name'];
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Diplomados Registrados</title>
+        <title>Publicaciones Registradas</title>
+        <!---->
+        
+        
+    <link href="../file_input/css/fileinput.css" media="all" rel="stylesheet" type="text/css"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" media="all" rel="stylesheet" type="text/css"/>
+    <link href="../file_input/themes/explorer-fa/theme.css" media="all" rel="stylesheet" type="text/css"/>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="../file_input/js/plugins/sortable.js" type="text/javascript"></script>
+    <script src="../file_input/js/fileinput.js" type="text/javascript"></script>
+    <script src="../file_input/js/locales/fr.js" type="text/javascript"></script>
+    <script src="../file_input/js/locales/es.js" type="text/javascript"></script>
+    <script src="../file_input/themes/explorer-fa/theme.js" type="text/javascript"></script>
+    <script src="../file_input/themes/fa/theme.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" type="text/javascript"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" type="text/javascript"></script>
+        
+        <!----->
 
         <!-- Bootstrap -->
         <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -78,7 +95,7 @@ $user_name = $_SESSION['user_name'];
                         <!-- sidebar menu -->
                         <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
                             <div class="menu_section">
-                                <h3>Menu</h3>
+                                <h3>General</h3>
                                 <ul class="nav side-menu">
 
                                     <li><a><i class="fa fa-group"></i> Usuarios <span class="fa fa-chevron-down"></span></a>
@@ -234,7 +251,7 @@ $user_name = $_SESSION['user_name'];
                                         <tr>
 
                                             <th class="SSansPro-Regular" style="color: black;text-align: center">Nombre del Diplomado</th>
-                                            <th class="SSansPro-Regular" style="color: black;text-align: center">Fecha Creación</th>
+                                            <th class="SSansPro-Regular" style="color: black;text-align: center">Imagen</th>
                                             <th class="SSansPro-Regular" style="color: black;text-align: center">Detalles</th>
                                             <th class="SSansPro-Regular" style="color: black;text-align: center">Eliminar</th>
 
@@ -258,14 +275,32 @@ $user_name = $_SESSION['user_name'];
                                                 ?>
 
                                                 <td class="SourceSansPro-Semibold" style="color: #013ADF;text-align: center;font-size: 14px"><?php echo $nombre ?></td>
-                                                <td class="SourceSansPro-Semibold" style="color: #013ADF;text-align: center;font-size: 14px"><?php echo $fecha_creacion ?></td>
-
-                                                <td style="text-align: center"><a href="#<?php echo $row['id'] ?>"  data-toggle="modal" data-target="#<?php echo $row['id'] ?>" style="color:green"><i class="fa fa-eye" style="font-size: 25px"></i></td></a>
-                                                <td style="text-align: center"><a href="#<?php echo $row['id'] . 00 ?>" data-toggle="modal" style="color:red"><i class="fa fa-trash" style="font-size: 25px"></i></td></a>
+                                                <td style="text-align: center"><a href="#<?php echo $row['id'] . 1 ?>"  data-toggle="modal" data-target="#<?php echo $row['id'] . 1 ?>" style="color:green"><i class="fa fa-picture-o fa-2x" aria-hidden="true"></i></a></td>
+                                                <td style="text-align: center"><a href="#<?php echo $row['id'] ?>"  data-toggle="modal" data-target="#<?php echo $row['id'] ?>" style="color:green"><i class="fa fa-eye fa-2x" style="font-size: 25px"></i></a></td>
+                                                <td style="text-align: center"><a href="#<?php echo $row['id'] . 11 ?>" data-toggle="modal" data-target="#<?php echo $row['id'] . 11 ?>" style="color:red"><i class="fa fa-trash fa-2x" style="font-size: 25px"></i></a></td>
 
                                             </tr>
-
-                                        <div class="modal fade" id="<?php echo $row['id'] . 00 ?>" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true" >
+                                        <!-- modal imagen-->
+                                        <div class="modal fade" id="<?php echo $row['id'] . 1 ?>" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true" >
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                        <h4 class="modal-title" id="myModalLabel" style="text-align: center;font-weight: bold">Atención</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                         <img  src="<?php echo $path = '../gallery/album/diplomat/' . $row['ruta']; ?> "  style="height: 300px; width: 300px" class="center-block">
+                                                        
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="icon-ban-circle"></i>&nbsp;Cerrrar</button>
+                                                        <a href="../editar/modificar_imagen_diplomado.php?u=<?php echo $row['id'] ?>"><button type="button" class="btn btn-success"><i class="icon-ok"></i>Edtiar Imagen</button></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>    
+                                        <!-- modal eliminar-->
+                                        <div class="modal fade" id="<?php echo $row['id'] . 11 ?>" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true" >
                                             <div class="modal-dialog">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
@@ -277,52 +312,13 @@ $user_name = $_SESSION['user_name'];
                                                     </div>
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="icon-ban-circle"></i>&nbsp;Cerrrar</button>
-                                                        <a href="../delete/delete_course.php?d=<?php echo $row['id'] ?>&f=<?php echo $row['ruta'] ?>"><button type="button" class="btn btn-success"><i class="icon-ok"></i>Aceptar</button></a>
+                                                        <a href="../delete/delete_diplomat.php?d=<?php echo $row['id'] ?>&f=<?php echo $row['ruta'] ?>"><button type="button" class="btn btn-success"><i class="icon-ok"></i>Aceptar</button></a>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <!--Editar-->
-                                        <div class="modal fade" id="prueba" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
-
-                                                        </button>
-                                                        <h4 class="modal-title" id="myModalLabel" style="text-align: center">
-                                                            <strong ><?php echo utf8_encode($row['nombre']) ?> </strong>
-                                                        </h4>
-
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        <div role="tabpanel">
-                                                            <!-- Nav tabs -->
-                                                            <ul class="nav nav-tabs" role="tablist">
-                                                                <li role="presentation" class="active"><a href="#uploadTab" aria-controls="uploadTab" role="tab" data-toggle="tab">Sección 1</a>
-
-                                                                </li>
-                                                                <li role="presentation"><a href="#browseTab" aria-controls="browseTab" role="tab" data-toggle="tab">Sección 2</a>
-
-                                                                </li>
-                                                            </ul>
-                                                            <!-- Tab panes -->
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                                                        <button type="button" class="btn btn-primary save">Editar</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="container">
-
-
-                                            <script type="text/javascript"
-                                                    src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
-                                            </script></div>
+                                      
+                                        
 
                                 </div>
                                 <!-- Modal -->
@@ -362,14 +358,28 @@ $user_name = $_SESSION['user_name'];
                                                     <h5 style="text-align: justify;"> <strong >Información adicional:  </strong><?php echo utf8_encode($row['informacion_adicional']) ?></h5>    
                                                 </div>
                                                 <div class="row hide" data-step="3" data-title="This is the last step!">
-                                                    <img  src="<?php echo $path = '../gallery/album/diplomat/' . $row['ruta']; ?> "  style="height: 300px; width: 300px" class="center-block">
+                                                    <div class="row">
+                                                        <h5 style="text-align: justify"><strong style="text-align: justify">Fecha de Creación:  </strong><?php echo utf8_encode($row['fecha_creacion']) ?></h5>
+                                                        <h5 style="text-align: justify"><strong style="text-align: justify">Fecha de Modificación:  </strong>
+                                                            <?php 
+                                                            if(empty($row['fecha_modificacion'])){
+                                                                echo 'No se ha modificado'; 
+                                                            }elseif($row['fecha_modificacion']!==null){
+                                                                echo $row['fecha_modificacion'];
+                                                            }else{
+                                                            }
+                                                            ?>
+                                                        </h5>
+                                                        <h5 style="text-align: justify"><strong style="text-align: justify">Usuario quien registro:  </strong><?php echo utf8_encode( $row['usuario'] ) ?></h5>
+                                                        
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="modal-footer">
 
                                                 <button type="button" class="btn btn-warning js-btn-step" data-orientation="previous"></button>
                                                 <button type="button" class="btn btn-success js-btn-step" data-orientation="next"></button>
-                                                <button type="button" class="btn btn-info" data-orientation="next">Editar</button>
+                                                <button type="button" class="btn btn-info" data-orientation="next"><a href="../editar/modificar_diplomado.php?u=<?php echo $row['id'] ?>">Editar</a></button>
                                             </div>
                                         </div>
                                     </div>

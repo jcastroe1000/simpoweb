@@ -22,7 +22,7 @@
     $pay_method= utf8_decode($_GET['pay_method']);
     $update_date=$_GET['update_date'];
     $created_by= utf8_decode($_GET['admin']);
-    $section='curso';
+    $section='diplomado';
    
     if ($course_name == !null & $review == !null & $addressed == !null &  $objetive == !null &
             $period == !null & $duration == !null & $d_start == !null) {
@@ -54,7 +54,7 @@
     $pay_method= utf8_decode($_GET['pay_method']);
     $update_date=$_GET['update_date'];
     $created_by= utf8_decode($_GET['admin']);
-    $section='curso';
+    $section='diplomado';
     if ($stmt->execute()):
        
        

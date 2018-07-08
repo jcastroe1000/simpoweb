@@ -3,7 +3,8 @@
     include "../config.php";
     error_reporting(E_ALL);
     $course_name = $_GET['name'];
-    $review = $_GET['review'];
+    $review2 = $_GET['review'];
+    $review = utf8_decode($review2);
     $addressed = $_GET['addressed'];
     $objetive = $_GET['objetive'];
     $period = $_GET['period'];
@@ -12,7 +13,7 @@
     $d_finish=$_GET['date_finish'];
     $time_start=$_GET['time_start'];
     $time_finish=$_GET['time_finish'];
-    $days= implode('|',$_GET['days']);
+    $days= implode(',',$_GET['days']);
     $days_converts=utf8_decode($days);
     $modality=$_GET['modality'];
     $requiriments=$_GET['requirements'];
