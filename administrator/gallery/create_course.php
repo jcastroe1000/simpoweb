@@ -3,9 +3,9 @@
     include "../config.php";
     error_reporting(E_ALL);
     $course_name = $_GET['name'];
-    $review = $_GET['review'];
-    $addressed = $_GET['addressed'];
-    $objetive = $_GET['objetive'];
+    $review = utf8_decode($_GET['review']);
+    $addressed = utf8_decode($_GET['addressed']);
+    $objetive = utf8_decode($_GET['objetive']);
     $period = $_GET['period'];
     $duration = $_GET['duration'];
     $d_start=$_GET['date_start'];
@@ -14,9 +14,9 @@
     $time_finish=$_GET['time_finish'];
     $days= implode(',',$_GET['days']);
     $days_converts=utf8_decode($days);
-    $modality=$_GET['modality'];
-    $requiriments=$_GET['requirements'];
-    $aditional_information=$_GET['aditional_information'];
+    $modality= utf8_decode($_GET['modality']);
+    $requiriments= utf8_decode($_GET['requirements']);
+    $aditional_information=utf8_decode($_GET['aditional_information']);
     $cost=$_GET['cost'];
     $pay_method= utf8_decode($_GET['pay_method']);
     $foto = trim($_FILES['file_image']['name']);
