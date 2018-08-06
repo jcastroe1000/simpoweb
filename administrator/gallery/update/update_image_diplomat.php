@@ -4,7 +4,6 @@ header("Content-Type: text/html;charset=utf-8");
 include("config.php");
 error_reporting(E_ALL);
 $foto = trim($_FILES['file_image']['name']);
-$section = 'curso';
 $id_image_course = $_GET['id_course'];
 $id_image_d=$_GET['id_image_d'];
 
