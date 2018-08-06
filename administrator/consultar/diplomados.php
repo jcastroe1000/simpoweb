@@ -294,7 +294,7 @@ $user_name = $_SESSION['user_name'];
                                                     </div>
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="icon-ban-circle"></i>&nbsp;Cerrrar</button>
-                                                        <a href="../editar/modificar_imagen_diplomado.php?u=<?php echo $row['id'] ?>"><button type="button" class="btn btn-success"><i class="icon-ok"></i>Edtiar Imagen</button></a>
+                                                        <a href="../editar/modificar_imagen_diplomado.php?u=<?php echo $row['id']?>&i=<?php echo $row ['ruta'];?>"><button type="button" class="btn btn-success"><i class="icon-ok"></i>Edtiar Imagen</button></a>
                                                     </div>
                                                 </div>
                                             </div>

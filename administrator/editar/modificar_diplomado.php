@@ -421,12 +421,12 @@ endif;
                                         <div class="form-group">
                                             <label class="etiquetas" for="f1-last-name">Requisitos:</label>
                                             <textarea name="requirements" id="requirements" placeholder="Resumen..." style="height: 123px;width:100%;"
-                                                      class="f1-about-yourself form-control3" id="f1-about-yourself" ><?php echo $row['requisitos'] ?></textarea>
+                                                      class="f1-about-yourself form-control3" id="f1-about-yourself" ><?php echo utf8_encode($row['requisitos']) ?></textarea>
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label etiquetas FolksDecoon" for="f1-about-yourself">Información Adicional</label>
                                             <textarea name="aditional_information" id="aditional_information" placeholder="Dirigido..." style="height: 123px;width: 100%"
-                                                      class="f1-about-yourself form-control3" id="f1-about-yourself"><?php echo $row['informacion_adicional'] ?></textarea>
+                                                      class="f1-about-yourself form-control3" id="f1-about-yourself"><?php echo utf8_encode($row['informacion_adicional']) ?></textarea>
                                         </div>
                                         <div class="form-group">
                                             <label class="etiquetas" for="f1-first-name">Costo:</label>

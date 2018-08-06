@@ -214,7 +214,7 @@ $user_name = utf8_encode($_SESSION['user_name']);
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-body" style="text-align: center;padding:20px">
-                                    <h3>Diplomado Registrado Exitosamente...</h3>
+                                    <h3>Curso Registrado Exitosamente...</h3>
                                 </div>
                             </div>
                         </div>
