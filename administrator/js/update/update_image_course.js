@@ -36,7 +36,7 @@ $(function() {
                     
                 }, 9500);
                 setTimeout(function () {
-                    $(location).attr('href', '../consultar/cursos_1.php');
+                    $(location).attr('href', '../consultar/cursos.php');
                 }, 12000);
             },
             error: function(data) {

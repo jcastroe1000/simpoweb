@@ -2,6 +2,7 @@
 header("Content-Type: text/html;charset=utf-8");
 include "../config.php";
 $id_course= $_GET['u'];
+$id_image_c= $_GET['i'];
 error_reporting(E_ALL);
 session_start();
 if (!isset($_SESSION['user_name'])) {
@@ -262,6 +263,12 @@ $user_name = utf8_encode($_SESSION['user_name']);
                                     <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="first-name" style="color: black"> </label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
                                         <input type="hidden" id="id_course" name="id_course"  value="<?php echo $id_course ?>" class="form-control col-md-7 col-xs-12">
+                                    </div>
+                                </div>
+                                               <div class="form-group" >
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="first-name" style="color: black"> </label>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <input type="hidden" id="id_image_c" name="id_image_c"  value="<?php echo $id_image_c ?>" class="form-control col-md-7 col-xs-12">
                                     </div>
                                 </div>
                                     </form>
