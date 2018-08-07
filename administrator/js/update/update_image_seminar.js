@@ -1,5 +1,5 @@
 $(function() {
-  $('#update_image_diplomat').submit(function() {
+  $('#update_image_seminar').submit(function() {
     var comprobar = $('#file_image').val().length*$('#id_course').val().length;
     if (comprobar > 0) {
       var imagen = document.getElementById("file_image").files;
@@ -13,7 +13,7 @@ $(function() {
           $('#cargando h3').text("El archivo " + imagen[0].name + " sobrepasa el peso permitido");
           return false;
         } else {
-          var formulario = $('#update_image_diplomat');
+          var formulario = $('#update_image_seminar');
           var datos = formulario.serialize();
           var archivos = new FormData();
           var url = '../gallery/update/update_image_seminar.php';
