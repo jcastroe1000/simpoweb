@@ -209,9 +209,9 @@ $user_name = $_SESSION['user_name'];
                             </div>
                         </div>
 
-                        <div class="clearfix"><h2 style="text-align: center;color: black;font-size: 25px" class="SourceSansPro-Bold">Cursos Registrados</h2></div>
+                        <div class="clearfix"><h2 style="text-align: center;color: black;font-size: 25px" class="SourceSansPro-Bold">Talleres Registrados</h2></div>
 
-                        <div class="clearfix"><h2 style="text-align: center;color: black;font-size: 25px;padding-top:0px;" class="Sansation_Regular"><a href="../crear/registrar_curso.php"><button type="button"  class="btn btn-success"><i class="fa fa-plus"></i> Registrar Curso</button></a></h2></div>
+                        <div class="clearfix"><h2 style="text-align: center;color: black;font-size: 25px;padding-top:0px;" class="Sansation_Regular"><a href="../crear/registrar_taller.php"><button type="button"  class="btn btn-success"><i class="fa fa-plus"></i> Registrar Taller</button></a></h2></div>
                         <div style="width: 50%" class="center-block">
                             <?php
                             $m = $_GET['m'];
@@ -250,7 +250,7 @@ $user_name = $_SESSION['user_name'];
                                     <thead>
                                         <tr>
 
-                                            <th class="SSansPro-Regular" style="color: black;text-align: center">Nombre del Curso</th>
+                                            <th class="SSansPro-Regular" style="color: black;text-align: center">Nombre del Taller</th>
                                             <th class="SSansPro-Regular" style="color: black;text-align: center">Imagen</th>
                                             <th class="SSansPro-Regular" style="color: black;text-align: center">Detalles</th>
                                             <th class="SSansPro-Regular" style="color: black;text-align: center">Eliminar</th>
@@ -265,7 +265,7 @@ $user_name = $_SESSION['user_name'];
                                             <?php
                                             include "../model/conection.php";
                                             error_reporting(E_ALL);
-                                            $res = $mysqli->query("SELECT * from registro_eventos WHERE seccion='curso' ");
+                                            $res = $mysqli->query("SELECT * from registro_eventos WHERE seccion='taller' ");
                                             $mysqli->close();
 
                                             while ($row = $res->fetch_assoc()):
@@ -289,12 +289,12 @@ $user_name = $_SESSION['user_name'];
                                                         <h4 class="modal-title" id="myModalLabel" style="text-align: center;font-weight: bold">Atención</h4>
                                                     </div>
                                                     <div class="modal-body">
-                                                         <img  src="<?php echo $path = '../gallery/album/course/' . $row['ruta']; ?> "  style="height: 300px; width: 300px" class="center-block">
+                                                         <img  src="<?php echo $path = '../gallery/album/workshop/' . $row['ruta']; ?> "  style="height: 300px; width: 300px" class="center-block">
                                                         
                                                     </div>
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="icon-ban-circle"></i>&nbsp;Cerrrar</button>
-                                                        <a href="../editar/modificar_imagen_curso.php?u=<?php echo $row['id'] ?>"><button type="button" class="btn btn-success"><i class="icon-ok"></i>Edtiar Imagen</button></a>
+                                                        <a href="../editar/modificar_imagen_taller.php?u=<?php echo $row['id']?>&i=<?php echo $row ['ruta'];?>"><button type="button" class="btn btn-success"><i class="icon-ok"></i>Edtiar Imagen</button></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -312,7 +312,7 @@ $user_name = $_SESSION['user_name'];
                                                     </div>
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="icon-ban-circle"></i>&nbsp;Cerrrar</button>
-                                                        <a href="../delete/delete_course.php?d=<?php echo $row['id'] ?>&f=<?php echo $row['ruta'] ?>"><button type="button" class="btn btn-success"><i class="icon-ok"></i>Aceptar</button></a>
+                                                        <a href="../delete/delete_workshop.php?d=<?php echo $row['id'] ?>&f=<?php echo $row['ruta'] ?>"><button type="button" class="btn btn-success"><i class="icon-ok"></i>Aceptar</button></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -379,7 +379,7 @@ $user_name = $_SESSION['user_name'];
 
                                                 <button type="button" class="btn btn-warning js-btn-step" data-orientation="previous"></button>
                                                 <button type="button" class="btn btn-success js-btn-step" data-orientation="next"></button>
-                                                <button type="button" class="btn btn-info" data-orientation="next"><a href="../editar/modificar_curso.php?u=<?php echo $row['id'] ?>">Editar</a></button>
+                                                <button type="button" class="btn btn-info" data-orientation="next"><a href="../editar/modificar_taller.php?u=<?php echo $row['id'] ?>">Editar</a></button>
                                             </div>
                                         </div>
                                     </div>

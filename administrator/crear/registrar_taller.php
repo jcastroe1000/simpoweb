@@ -220,7 +220,7 @@ $user_name = utf8_encode($_SESSION['user_name']);
                         </div>
                     </div>
                 </div>
-                <!-- /top navigation -->
+                <!-- /top al -->
 
                 <!-- page content -->
                 <div class="right_col" role="main">
