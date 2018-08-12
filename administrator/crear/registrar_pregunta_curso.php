@@ -1,10 +1,10 @@
 <?php
 header("Content-Type: text/html;charset=utf-8");
-include "config.php";
+//include "../config.php";
 error_reporting(E_ALL);
 session_start();
 if (!isset($_SESSION['user_name'])) {
-    header("Location:login.php");
+    header("Location:/simpoweb/administrator/login.php");
 }
 $user_name = $_SESSION['user_name'];
 ?>
@@ -41,22 +41,22 @@ $user_name = $_SESSION['user_name'];
     <body class="nav-md">
         <div class="container body">
             <div class="main_container">
-                <div class="col-md-3 left_col">
+                   <div class="col-md-3 left_col">
                     <div class="left_col scroll-view">
                         <div class="navbar nav_title" style="border: 0;">
-                            <a href="index4.html" class="site_title"><i class="fa fa-mortar-board"></i> <span>SimpoWeb!</span></a>
+                            <a href="index4.html" class="site_title"><i class="fa fa-flask "></i> <span>Sistema de Administración</span></a>
                         </div>
 
                         <div class="clearfix"></div>
 
                         <!-- menu profile quick info -->
                         <div class="profile clearfix">
-                            <div class="profile_pic">
-                                <img src="images/img.jpg" alt="..." class="img-circle profile_img">
+                            <div class="profile_pic center-block">
+                                <img src="../images/img.jpg" alt="..." class="img-circle profile_img">
                             </div>
                             <div class="profile_info">
-                                <span>Bienvenido</span>
-                                <h2><?php echo utf8_encode($user_name) ?></h2>
+                                <span>Bienvenido (a)</span>
+                                <h2><?php echo utf8_encode($user_name); ?></h2>
                             </div>
                         </div>
                         <!-- /menu profile quick info -->
@@ -72,75 +72,39 @@ $user_name = $_SESSION['user_name'];
                                     <li><a><i class="fa fa-group"></i> Usuarios <span class="fa fa-chevron-down"></span></a>
                                         <ul class="nav child_menu">
                                             <li><a href="users_registers.php"><i class="fa fa-arrow-up"></i>Registrados</a></li>
-                                            <li><a href="newsletter.php"><i class="fa fa-envelope"></i>NewsLetter</a></li>
-                                            <li><a href="operadores.php"><i class="fa fa-users"></i>Operadores</a></li>
+                                            <li>
+                                                <a href="newsletter.php"><i class="fa fa-check-circle"></i>NewsLetter</a></li>
                                         </ul>
 
                                     </li>
-                                    <li><a><i class="fa fa-cogs"></i>Servicios <span class="fa fa-chevron-down"></span></a>
+                                    <li><a href="services.php"><i class="fa fa-arrow-circle-up"></i> Registro </a></li>
+
+
+                                    <li><a><i class="fa fa-cogs"></i>Secciones <span class="fa fa-chevron-down"></span></a>
                                         <ul class="nav child_menu">
 
                                             <li>
-                                                <a href="seminarios.php"><i class="fa fa-mortar-board"></i> Seminarios</a>
+                                                <a href="simposiums.html"><i class="fa fa-mortar-board"></i> Seminarios</a>
                                             </li>
                                             <li>
-                                                <a href="simposiums.php"><i class="fa fa-mortar-board"></i> Simposium</a>
+                                                <a href="simposiums.html"><i class="fa fa-laptop"></i> Talleres </a>
                                             </li>
                                             <li>
-                                                <a href="talleres.php"><i class="fa fa-laptop"></i> Talleres </a>
+                                                <a href="simposiums.html"><i class="fa fa-briefcase"></i> Cursos </a>
                                             </li>
                                             <li>
-                                                <a href="cursos.php"><i class="fa fa-briefcase"></i> Cursos </a>
-                                            </li>
-                                            <li>
-                                                <a href="diplomados.php"><i class="fa fa-university"></i> Diplomados </a>
-                                            </li>
-                                            <li>
-                                                <a href="servicios_empresariales.php"><i class="fa fa-mortar-board"></i> Servicios Empresariales</a>
-                                            </li>
-                                            <li>
-                                                <a href="publicaciones.php"><i class="fa fa-mortar-board"></i> Publicaciones</a>
+                                                <a href="simposiums.html"><i class="fa fa-university"></i> Diplomados </a>
                                             </li>
 
                                         </ul>
                                     </li>
-                                    <li><a><i class="fa fa-question-circle"></i>Preguntas Frecuentes<span class="fa fa-chevron-down"></span></a>
-                                        <ul class="nav child_menu">
-
-                                            <li>
-                                                <a href="preguntas_seminario.php"><i class="fa fa-mortar-board"></i> Seminarios</a>
-                                            </li>
-                                            <li>
-                                                <a href="simposiums.php"><i class="fa fa-mortar-board"></i> Simposium</a>
-                                            </li>
-                                            <li>
-                                                <a href="talleres.php"><i class="fa fa-laptop"></i> Talleres </a>
-                                            </li>
-                                            <li>
-                                                <a href="cursos.php"><i class="fa fa-briefcase"></i> Cursos </a>
-                                            </li>
-                                            <li>
-                                                <a href="diplomados.php"><i class="fa fa-university"></i> Diplomados </a>
-                                            </li>
-                                            <li>
-                                                <a href="servicios_empresariales.php"><i class="fa fa-mortar-board"></i> Servicios Empresariales</a>
-                                            </li>
-                                            <li>
-                                                <a href="publicaciones.php"><i class="fa fa-mortar-board"></i> Publicaciones</a>
-                                            </li>
-
-                                        </ul>
-                                    </li>
-
 
                                     <li><a><i class="fa fa-plus-square"></i> Extras<span class="fa fa-chevron-down"></span></a>
                                         <ul class="nav child_menu">
                                             <li><a href="form.html"><i class="fa fa-book"></i>Directorio</a></li>
 
-                                            <li><a href="faqs.php"><i class="fa fa-home"></i> HOME</a></li>  
                                         </ul>
                                     </li>
-
 
 
                                 </ul>
@@ -161,7 +125,7 @@ $user_name = $_SESSION['user_name'];
                             <a data-toggle="tooltip" data-placement="top" title="Lock">
                                 <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
                             </a>
-                            <a data-toggle="modal" data-target="#myProfile"  data-placement="top" title="Logout">
+                            <a data-toggle="tooltip" data-placement="top" title="Logout">
                                 <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
                             </a>
                         </div>
@@ -204,7 +168,7 @@ $user_name = $_SESSION['user_name'];
                 </div>
                 <!-- /top navigation -->
                 <!--Inicia modal exitoso-->
-        <div id="cargando" class="modal fade" role="dialog">
+                <div id="cargando" class="modal fade" role="dialog">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-body" style="text-align: center;padding:20px">
@@ -214,7 +178,7 @@ $user_name = $_SESSION['user_name'];
                 </div>
             </div>
         </div>
-        <div id="guardando" class="modal fade" role="dialog">
+                <div id="guardando" class="modal fade" role="dialog">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-body" style="text-align: center;padding:20px">
@@ -250,7 +214,7 @@ $user_name = $_SESSION['user_name'];
                         <div class="col-md-12">
                             <div class="x_panel" style="padding-top: 3%" >
                              <div class="">
-                                    <h2 style="text-align: center;color: black;font-size: 20px;" class="Sansation_Regular">REGISTRAR PREGUNTA EN CURSOS</h2>
+                                    <h2 style="text-align: center;color: black;font-size: 20px;" class="Sansation_Regular">REGISTRAR PREGUNTA FRECUENTE  EN CURSOS</h2>
 
                                     <div class="clearfix"></div>
                                 </div>

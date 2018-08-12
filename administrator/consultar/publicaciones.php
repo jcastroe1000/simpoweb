@@ -427,7 +427,8 @@ $user_name = $_SESSION['user_name'];
                 </div>
 
             </div>
-
+            </div>
+        </div>
             <!-- jQuery -->
             <script src="../vendors/jquery/dist/jquery.min.js"></script>
             <!-- Bootstrap -->
