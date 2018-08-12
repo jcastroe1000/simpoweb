@@ -219,7 +219,7 @@ $user_name = $_SESSION['user_name'];
                             if ($m == 1) {
 
                                 $modal = '<div class="alert alert-success alert-dismissible " role="alert" style="text-align:center" id="ok">
-                                            <strong style="font-weight: 900;">Bien! El curso ha sido eliminado exitosamente.</strong>
+                                            <strong style="font-weight: 900;">Bien! El Servicio Empresarial ha sido eliminado exitosamente.</strong>
                                             <button type="button" class="close" data-dismiss="alert" aria-label="Close" style="opacity: 1;">
                                             <span aria-hidden="true">&times;</span>
                                             </button>
@@ -312,7 +312,7 @@ $user_name = $_SESSION['user_name'];
                                                     </div>
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="icon-ban-circle"></i>&nbsp;Cerrrar</button>
-                                                        <a href="../delete/delete_servicio_empresarial.php?d=<?php echo $row['id'] ?>&f=<?php echo $row['ruta'] ?>"><button type="button" class="btn btn-success"><i class="icon-ok"></i>Aceptar</button></a>
+                                                        <a href="../delete/delete_business_service.php?d=<?php echo $row['id'] ?>&f=<?php echo $row['ruta'] ?>"><button type="button" class="btn btn-success"><i class="icon-ok"></i>Aceptar</button></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -379,7 +379,7 @@ $user_name = $_SESSION['user_name'];
 
                                                 <button type="button" class="btn btn-warning js-btn-step" data-orientation="previous"></button>
                                                 <button type="button" class="btn btn-success js-btn-step" data-orientation="next"></button>
-                                                <button type="button" class="btn btn-info" data-orientation="next"><a href="../editar/modificar_diplomado.php?u=<?php echo $row['id'] ?>">Editar</a></button>
+                                                <button type="button" class="btn btn-info" data-orientation="next"><a href="../editar/modificar_servicio_empresarial.php?u=<?php echo $row['id'] ?>">Editar</a></button>
                                             </div>
                                         </div>
                                     </div>

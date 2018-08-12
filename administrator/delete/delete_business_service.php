@@ -11,7 +11,7 @@ include "../config.php";
         
         if ($stmt->execute()):
             $mysqli->close();
-            unlink('../gallery/album/business_service/'.$file);
+            unlink('../gallery/album/bs/'.$file);
             
             echo "<script>location.href='../consultar/servicios_empresariales.php?m=1'</script>";
             
