@@ -256,23 +256,23 @@ $user_name = $_SESSION['user_name'];
                         </div>
                         <div class="clearfix"><h2 style="text-align: center;color: black;font-size: 25px" class="Sansation_Regular">Preguntas Frecuentes</h2></div>
                         
-                        <div style="margin-top: 2%">
-                            <div class=" row top_tiles"  >
+                        <div style="margin-top: 2%;">
+                            <div class=" row top_tiles" style="padding-bottom: 4%" >
                                 <div class="animated flipInY col-lg-offset-2 col-sm-offset-2 col-xs-offset-2 col-lg-8 col-md-8 col-sm-8 col-xs-8">
-                                    <a href="../consultar/preguntas_seminarios.php">
+                                    <a href="../consultar/preguntas_cursos.php">
                                     <div class="tile-stats">
                                         <div class="icon"><i class="fa fa-mortar-board "></i></div>
-                                        <div class="count">Seminarios</div>
+                                        <div class="count">Cursos</div>
                                         <h3>New Sign ups</h3>
                                         <p>Lorem ipsum psdea itgum rixt.</p>
                                     </div>
                                     </a>
                                 </div>
                                 <div class="animated flipInY col-lg-offset-2 col-sm-offset-2 col-xs-offset-2 col-lg-8 col-md-8 col-sm-8 col-xs-8">
-                                    <a href="../consultar/preguntas_simposiums.php">
+                                    <a href="../consultar/preguntas_diplomados.php">
                                     <div class="tile-stats">
                                         <div class="icon"><i class="fa fa-laptop"></i></div>
-                                        <div class="count">Simposiums</div>
+                                        <div class="count">Diplomados</div>
                                         <h3>New Sign ups</h3>
                                         <p>Lorem ipsum psdea itgum rixt.</p>
                                     </div>
@@ -288,8 +288,8 @@ $user_name = $_SESSION['user_name'];
                                     </div>
                                     </a>    
                                 </div>
-                                            <div class="animated flipInY col-lg-offset-2 col-sm-offset-2 col-xs-offset-2 col-lg-8 col-md-8 col-sm-8 col-xs-8" >
-                                    <a href="../consultar/preguntas_revista.php">
+                                <div class="animated flipInY col-lg-offset-2 col-sm-offset-2 col-xs-offset-2 col-lg-8 col-md-8 col-sm-8 col-xs-8" >
+                                    <a href="../consultar/preguntas_servicios_empresariales.php">
                                     <div class="tile-stats">
                                         <div class="icon"><i class="fa fa-book"></i></div>
                                         <div class="count">Servicios Empresariales</div>
@@ -298,35 +298,37 @@ $user_name = $_SESSION['user_name'];
                                     </div>
                                     </a>    
                                 </div>
-
-                            </div>
-                        </div> 
-                        <div>
-                            <div class=" row top_tiles"  >
                                 <div class="animated flipInY col-lg-offset-2 col-sm-offset-2 col-xs-offset-2 col-lg-8 col-md-8 col-sm-8 col-xs-8">
-                                    <div class="tile-stats">
-                                        <div class="icon"><i class="fa fa-mortar-board "></i></div>
-                                        <div class="count">Cursos</div>
-                                        <h3>New Sign ups</h3>
-                                        <p>Lorem ipsum psdea itgum rixt.</p>
-                                    </div>
-                                </div>
-                                <div class="animated flipInY col-lg-offset-2 col-sm-offset-2 col-xs-offset-2 col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                                    <a href="../consultar/preguntas_seminarios.php">
                                     <div class="tile-stats">
                                         <div class="icon"><i class="fa fa-laptop"></i></div>
-                                        <div class="count">Diplomados</div>
+                                        <div class="count">Seminarios</div>
                                         <h3>New Sign ups</h3>
                                         <p>Lorem ipsum psdea itgum rixt.</p>
                                     </div>
+                                    </a>    
                                 </div>
-                                <div class="animated flipInY ccol-lg-offset-2 col-sm-offset-2 col-xs-offset-2 col-lg-8 col-md-8 col-sm-8 col-xs-8" >
+                                <div class="animated flipInY col-lg-offset-2 col-sm-offset-2 col-xs-offset-2 col-lg-8 col-md-8 col-sm-8 col-xs-8" >
+                                    <a href="../consultar/preguntas_simposiums.php">
+                                    <div class="tile-stats">
+                                        <div class="icon"><i class="fa fa-book"></i></div>
+                                        <div class="count">Simposiums</div>
+                                        <h3>New Sign ups</h3>
+                                        <p>Lorem ipsum psdea itgum rixt.</p>
+                                    </div>
+                                    </a>    
+                                </div>
+                                <div class="animated flipInY col-lg-offset-2 col-sm-offset-2 col-xs-offset-2 col-lg-8 col-md-8 col-sm-8 col-xs-8" >
+                                    <a href="../consultar/preguntas_talleres.php">
                                     <div class="tile-stats">
                                         <div class="icon"><i class="fa fa-book"></i></div>
                                         <div class="count">Talleres</div>
                                         <h3>New Sign ups</h3>
                                         <p>Lorem ipsum psdea itgum rixt.</p>
                                     </div>
+                                    </a>    
                                 </div>
+                                
 
                             </div>
                         </div> 
