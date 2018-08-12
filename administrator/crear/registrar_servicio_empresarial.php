@@ -228,8 +228,8 @@ $user_name = utf8_encode($_SESSION['user_name']);
                  <div class="row">
               <div class="col-md-12">
                                 <div class="col-sm-11 col-sm-offset-1 col-md-9 col-md-offset-3 col-lg-6 col-lg-offset-3 form-box" style="height: 100%" >
-                        <form role="form" id="create_business_service" name="create_business_service" class="f1" style="margin-top: -15px;">
-                            <h3 style="text-align: center">Registrar Servicio Empresarial</h3>
+                        <form role="form" id="create_bs" name="create_bs" class="f1" style="margin-top: -15px;">
+                            <h3 style="text-align: center">Registrar Diplomado</h3>
                             <div class="f1-steps">
                                 <div class="f1-progress">
                                     <div class="f1-progress-line" data-now-value="16.66" data-number-of-steps="3" style="width: 16.66%;"></div>
@@ -289,7 +289,7 @@ $user_name = utf8_encode($_SESSION['user_name']);
                                 <div class="form-group" style="width: 45%;display: inline-block;float: right">
                                     <label class="etiquetas" for="f1-first-name">Periodo:</label>
                                     <select class="combo" id="period" name="period" style="width: 100%">
-                                       <option value="">Selecciona</option>
+                                        <option value="">Selecciona</option>
                                         <option value="Dias">Dias</option>
                                         <option value="Semanas">Semanas</option>
                                         <option value="Meses">Meses</option>
@@ -463,7 +463,7 @@ $user_name = utf8_encode($_SESSION['user_name']);
         <script src="../form-wizard/js/retina-1.1.0.min.js"></script>
         <script src="../form-wizard/js/scripts.js"></script>
         <script src="../js/fileinput.js" type="text/javascript"></script>
-        <script src="../js/create/create_business_service.js"></script>
+        <script src="../js/create/create_bs.js"></script>
         <!-- bootstrap-progressbar -->
         <script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
         <!-- Flot -->

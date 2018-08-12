@@ -1,5 +1,5 @@
 $(function() {
-  $('#create_business_service').submit(function() {
+  $('#create_bs').submit(function() {
     var comprobar = $('#name').val().length*$('#review').val().length*$('#addressed').val().length*$('#objetive').val().length * 
                     $('#duration').val().length*$('#period').val().length*$('#date_start').val().length*$('#date_finish').val().length*
                     $('#time_start').val().length*$('#time_finish').val().length*$('#days').val().length*$('#modality').val().length*$('#requirements').val().length*
@@ -17,10 +17,10 @@ $(function() {
           $('#cargando h3').text("El archivo " + imagen[0].name + " sobrepasa el peso permitido");
           return false;
         } else {
-          var formulario = $('#create_business_service');
+          var formulario = $('#create_bs');
           var datos = formulario.serialize();
           var archivos = new FormData();
-          var url = '../gallery/create_business_service.php';
+          var url = '../gallery/create_bs.php';
           for (var i = 0; i < (formulario.find('input[type=file]').length); i++) {
             archivos.append((formulario.find('input[type="file"]:eq(' + i + ')').attr("name")), ((formulario.find('input[type="file"]:eq(' + i + ')')[0]).files[0]));
           }
