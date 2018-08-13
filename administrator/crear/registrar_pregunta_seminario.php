@@ -220,7 +220,7 @@ $user_name = $_SESSION['user_name'];
                                 </div>
                                 <div class="x_content" style="padding-top: 3%">
 
-                                    <form id="create_course_question" name="create_course_question"  class="form-horizontal form-label-left">
+                                    <form id="create_seminar_question" name="create_seminar_question"  class="form-horizontal form-label-left">
                                         <div class="form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="first-name" style="color: black">Pregunta:</label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
@@ -238,7 +238,7 @@ $user_name = $_SESSION['user_name'];
                                         <div class="form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="last-name" style="color: black" hidden="">Categoria:</label>
                                             <div class="col-md-6 ">
-                                                <input type="hidden" id="category" name="category" value="curso" class="form-control col-md-7 col-xs-12">
+                                                <input type="hidden" id="category" name="category" value="seminario" class="form-control col-md-7 col-xs-12">
                                             </div>
                                         </div>
                                         
@@ -310,7 +310,7 @@ $user_name = $_SESSION['user_name'];
 
         <!-- Custom Theme Scripts -->
         <script src="../build/js/custom.min.js"></script>
-        <script src="../production/js/create_course_faq.js" ></script>
+        <script src="../js/create/create_seminar_faq.js" ></script>
         <!--progress bar-->
         <script src="../production/js/bootbox.js"></script>
         <script src="../production/js/bootbox.min.js"></script>

@@ -212,7 +212,7 @@ $user_name = $_SESSION['user_name'];
                                         include "../model/conection.php";
                                         error_reporting(E_ALL);
 
-                                        $res = $mysqli->query("SELECT id_faqs,question,answer from faqs WHERE category='siposium'");
+                                        $res = $mysqli->query("SELECT id_faqs,question,answer from faqs WHERE category='simposium'");
                                         $mysqli->close();
                                         while ($row = $res->fetch_assoc()) {
                                             ?>

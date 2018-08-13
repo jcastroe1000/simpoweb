@@ -7,7 +7,7 @@ $(function () {
             var formulario = $('#create_course_question');
             var datos = formulario.serialize();
             var archivos = new FormData();
-            var url = 'model/register_question.php';
+            var url = '../model/register_question.php';
             
 
             $.ajax({
@@ -34,7 +34,7 @@ $(function () {
                         setTimeout(function () {
                             $('#guardando').modal('hide');
                             $('#cargando').modal('hide');
-                            $(location).attr('href', 'preguntas_cursos.php');
+                            $(location).attr('href', '../consultar/preguntas_cursos.php');
                         }, 6000);
                 
                     } else if (data.status == 'error') {

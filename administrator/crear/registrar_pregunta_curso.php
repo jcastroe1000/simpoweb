@@ -310,7 +310,7 @@ $user_name = $_SESSION['user_name'];
 
         <!-- Custom Theme Scripts -->
         <script src="../build/js/custom.min.js"></script>
-        <script src="../production/js/create_course_faq.js" ></script>
+        <script src="../js/create/create_course_faq.js"></script>
         <!--progress bar-->
         <script src="../production/js/bootbox.js"></script>
         <script src="../production/js/bootbox.min.js"></script>
