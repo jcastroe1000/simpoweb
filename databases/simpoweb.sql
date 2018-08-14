@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.8.2
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 06-02-2018 a las 06:50:04
--- Versión del servidor: 10.1.29-MariaDB
--- Versión de PHP: 7.2.0
+-- Servidor: localhost
+-- Tiempo de generación: 14-08-2018 a las 06:44:46
+-- Versión del servidor: 10.1.34-MariaDB
+-- Versión de PHP: 7.2.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -138,21 +138,24 @@ CREATE TABLE `faqs` (
 --
 
 INSERT INTO `faqs` (`id_faqs`, `question`, `answer`, `category`) VALUES
-(105, 'servicios emprsarial', 'serviiso emasdasd', 'servicio_empresarial'),
-(106, 'dfsdfsdq', 'safasdasdasd', 'servicio_empresarial'),
 (107, 'serviciso asadasd', 'sadasdasdasd', 'curso'),
 (108, '1', '2', 'servicio_empresarial'),
 (109, '12', '1212', 'servicio_empresarial'),
 (110, 'as', 'adasdasd', 'servicio_empresariales'),
 (111, 'z', 'asdas', 'servicios_empresariales'),
 (112, 'diplomados', 'diplomados', 'diplomados'),
-(113, 'revista', 'revista', 'revista'),
 (114, 'seminario', 'seminario', 'semiarios'),
 (115, '121', '1212', 'semiarios'),
 (116, 'semiarios', 'seminarios', 'semiarios'),
 (117, 'seminarios', 'seminarios', 'seminarios'),
 (118, 'simpo', 'simpoooo', 'simposiums'),
-(119, 'talleres', 'talleres', 'talleres');
+(119, 'talleres', 'talleres', 'talleres'),
+(120, 'La actriz, que en la serie de Manolo Caro hace el papel de Elena De la Mora, revela que fue un agasajo compartir el set con Verónica Castro, pero también en pleno rodaje tuvo molestias por su primer embarazo', 'La actriz, que en la serie de Manolo Caro hace el papel de Elena De la Mora, revela que fue un agasajo compartir el set con Verónica Castro, pero también en pleno rodaje tuvo molestias por su primer embarazo', 'curso'),
+(121, 'Angélica María solo sufrió un golpe tras caída en concierto', 'La cantante de 73 años ya se encuentra en Los Ángeles, California, donde se recuperará de su tropiezo en el Auditorio Nacional, donde pronto volverá a presentarse con Enrique Guzmán, César Costa y Alberto Vázque', 'diplomado'),
+(123, 'afael Nadal, número uno del mundo, secó el efecto Stefanos Tsitsipas y amargó el vigésimo cumpleaños del tenista griego, sensación del Masters 1.000 de Toronto que conquistó por cuarta vez el español para alcanzar el título número 80 de su carrera, cifra solo alcanzada antes por el suizo Roger Federer y por los estadounidenses Jimmy Connors e Ivan Lendl.', 'afael Nadal, número uno del mundo, secó el efecto Stefanos Tsitsipas y amargó el vigésimo cumpleaños del tenista griego, sensación del Masters 1.000 de Toronto que conquistó por cuarta vez el español para alcanzar el título número 80 de su carrera, cifra solo alcanzada antes por el suizo Roger Federer y por los estadounidenses Jimmy Connors e Ivan Lendl.', 'revista'),
+(126, '1', '2', 'servicio_empresarial'),
+(127, 'Lejos de enmendar el panorama en la segunda manga, el griego sufrió de entrada una nueva rotura que desequilibró la situación y afeó todavía más su panorama.', 'Lejos de enmendar el panorama en la segunda manga, el griego sufrió de entrada una nueva rotura que desequilibró la situación y afeó todavía más su panorama.', 'servicio_empresarial'),
+(129, 'Lejos de enmendar el panorama en la segunda manga, el griego sufrió de entrada una nueva rotura que desequilibró la situación y afeó todavía más su panorama.', 'Lejos de enmendar el panorama en la segunda manga, el griego sufrió de entrada una nueva rotura que desequilibró la situación y afeó todavía más su panorama.', 'simposium');
 
 -- --------------------------------------------------------
 
@@ -247,6 +250,7 @@ CREATE TABLE `registro_eventos` (
   `metodo_pago` text NOT NULL,
   `ruta` text NOT NULL,
   `fecha_creacion` date NOT NULL,
+  `fecha_modificacion` date NOT NULL,
   `seccion` varchar(25) CHARACTER SET utf8 NOT NULL,
   `usuario` varchar(50) CHARACTER SET utf8 DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -255,13 +259,12 @@ CREATE TABLE `registro_eventos` (
 -- Volcado de datos para la tabla `registro_eventos`
 --
 
-INSERT INTO `registro_eventos` (`id`, `nombre`, `resumen`, `dirigido`, `objetivo`, `periodo`, `duracion`, `dias`, `fecha_inicio`, `fecha_final`, `hora_inicio`, `hora_final`, `modalidad`, `requisitos`, `informacion_adicional`, `costo`, `metodo_pago`, `ruta`, `fecha_creacion`, `seccion`, `usuario`) VALUES
-(63, 'publiicaciÃ³n 2', 'asdasd', 'asdasda asd asd adasd asd adasd asd a asd adad ada asd a', ' asdasd a as adas ad aad adad ad ada asd ads', 'Dias', 2, '\"Lunes|Martes|Miu00e9rcoles\"', '2018-02-05', '2018-02-07', '12:00:00', '17:00:00', 'Presencial', 'asd asdas sadsa', 'asd asd asdas asd asd asd', 1350, 'Efectivo', '10395591875a7732ac6691f.png', '2018-02-04', 'publicacion', 'Esparza Castro José Antonio'),
-(90, 'adasdasd', '1231231', '2adasd', ' ad asd ada sadasd', 'Dias', 1, 'Miércoles|Viernes', '2018-02-26', '2018-03-02', '12:00:00', '17:00:00', 'Distancia', 'asd', 'asd', 121, 'Depósito Bancario', '17446420425a78ee74dbd3d.jpg', '2018-02-06', 'diplomado', 'Esparza Castro José Antonio'),
-(95, 'taller', 'asda', 'asdas', 'assdas', 'Semanal', 1, 'Martes|Miércoles', '2018-03-05', '2018-03-09', '09:00:00', '12:00:00', 'Presencial', 'asdas1as', 'asdasdas1', 112, 'Depósito Bancario', '19755389435a79269d82cb4.jpg', '2018-02-06', 'taller', 'Esparza Castro José Antonio'),
-(96, 'asdasd', '123213a', ' asd asd', ' asdasd', 'Mensual', 1, 'Miércoles|Jueves', '2018-02-26', '2018-03-01', '13:00:00', '17:01:00', 'Presencial', 'asdasd', 'asd', 11, 'Depósito Bancario', '11065108965a7927fd5273f.jpg', '2018-02-06', 'servicio empresarial', 'Esparza Castro José Antonio'),
-(97, '2123123', '123123', '123123', '123123', 'Semanal', 1, 'Miércoles|Viernes', '2018-02-26', '2018-02-28', '13:02:00', '15:01:00', 'Presencial', 'asdas', 'd12', 12, 'Efectivo', '11053610505a7928d4ad32f.jpg', '2018-02-06', 'curso', 'Esparza Castro José Antonio'),
-(98, 'sdf', 'sdfsdf', 'sdf', 'sdfsdf', 'Mensual', 2, 'Martes|Miércoles|Jueves', '2018-02-01', '2018-02-28', '09:00:00', '12:00:00', 'Presencial', 'asdasd', 'asd', 12, 'Pago en línea', '19035646585a792ee9e77ab.jpg', '2018-02-06', 'simposium', 'Esparza Castro José Antonio');
+INSERT INTO `registro_eventos` (`id`, `nombre`, `resumen`, `dirigido`, `objetivo`, `periodo`, `duracion`, `dias`, `fecha_inicio`, `fecha_final`, `hora_inicio`, `hora_final`, `modalidad`, `requisitos`, `informacion_adicional`, `costo`, `metodo_pago`, `ruta`, `fecha_creacion`, `fecha_modificacion`, `seccion`, `usuario`) VALUES
+(103, '000diplomado 1.1', 'Derivado de la oportuna intervención de elementos de la policía municipal de Nezahualcóyotl se logró la detención de un sujeto dedicado al robo de pertenencias con violencia en la colonia Agua Azul presuntamente de...', 'Derivado de la oportuna intervención de elementos de la policía municipal de Nezahualcóyotl se logró la detención de un sujeto dedicado al robo de pertenencias con violencia en la colonia Agua Azul presuntamente de...', 'Derivado de la oportuna intervención de elementos de la policía municipal de Nezahualcóyotl se logró la detención de un sujeto dedicado al robo de pertenencias con violencia en la colonia Agua Azul presuntamente de...ua Azul presuntamente de...', 'Dias', 12, 'Lunes,Martes,Miércoles,Jueves', '2018-08-07', '2018-08-28', '10:00:00', '19:00:00', 'Presencial', 'Derivado de la oportuna intervención de elementos de la policía municipal de Nezahualcóyotl se logró la detención de un sujeto dedicado al robo de pertenencias con violencia en la colonia Agua Azul presuntamente de...', 'Derivado de la oportuna intervención de elementos de la policía municipal de Nezahualcóyotl se logró la detención de un sujeto dedicado al robo de pertenencias con violencia en la colonia Agua Azul presuntamente de...', 1500, 'Depósito Bancario', '15125843185b679844d4d09.jpg', '2018-08-05', '2018-08-07', 'diplomado', 'Esparza Castro José Antonio'),
+(105, 'Curso 1.100', 'El futuro de  Eden  Hazard está más en el aire que nunca después de que el propio jugador asegurara que tenía interés en dejar el equipo en pos de fichar por el  Real  Madrid . Es por esto que el  Chelsea se ha puesto manos a la obra para que el belga siga vinculado al club, según informa el Times.', 'El futuro de  Eden  Hazard está más en el aire que nunca después de que el propio jugador asegurara que tenía interés en dejar el equipo en pos de fichar por el  Real  Madrid . Es por esto que el  Chelsea se ha puesto manos a la obra para que el belga siga vinculado al club, según informa el Times.', 'El futuro de  Eden  Hazard está más en el aire que nunca después de que el propio jugador asegurara que tenía interés en dejar el equipo en pos de fichar por el  Real  Madrid . Es por esto que el  Chelsea se ha puesto manos a la obra para que el belga siga vinculado al club, según informa el Times.', 'Dias', 2, 'Lunes,Martes', '2018-08-07', '2018-08-08', '10:00:00', '16:30:00', 'Presencial', 'El futuro de  Eden  Hazard está más en el aire que nunca después de que el propio jugador asegurara que tenía interés en dejar el equipo en pos de fichar por el  Real  Madrid . Es por esto que el  Chelsea se ha puesto manos a la obra para que el belga siga vinculado al club, según informa el Times.', 'El futuro de  Eden  Hazard está más en el aire que nunca después de que el propio jugador asegurara que tenía interés en dejar el equipo en pos de fichar por el  Real  Madrid . Es por esto que el  Chelsea se ha puesto manos a la obra para que el belga siga vinculado al club, según informa el Times.', 1000, 'Depósito Bancario', '14638397605b67a426c435f.jpg', '2018-08-06', '2018-08-11', 'curso', 'Esparza Castro José Antonio'),
+(106, 'diplomado 1.11', 'Derivado de la oportuna intervención de elementos de la policía municipal de Nezahualcóyotl se logró la detención de un sujeto dedicado al robo de pertenencias con violencia en la colonia Agua Azul presuntamente de...', 'Derivado de la oportuna intervención de elementos de la policía municipal de Nezahualcóyotl se logró la detención de un sujeto dedicado al robo de pertenencias con violencia en la colonia Agua Azul presuntamente de...', 'Derivado de la oportuna intervención de elementos de la policía municipal de Nezahualcóyotl se logró la detención de un sujeto dedicado al robo de pertenencias con violencia en la colonia Agua Azul presuntamente de...', 'Semanas', 1, 'Lunes,Martes,Miércoles,Jueves,Viernes', '2018-08-07', '2018-08-10', '09:00:00', '13:00:00', 'Presencial y/o Dista', 'Derivado de la oportuna intervención de elementos de la policía municipal de Nezahualcóyotl se logró la detención de un sujeto dedicado al robo de pertenencias con violencia en la colonia Agua Azul presuntamente de...', 'Derivado de la oportuna intervención de elementos de la policía municipal de Nezahualcóyotl se logró la detención de un sujeto dedicado al robo de pertenencias con violencia en la colonia Agua Azul presuntamente de...', 1500, 'Depósito Bancario', '18026275545b67a6fad4d08.jpg', '2018-08-06', '0000-00-00', 'diplomado', 'Esparza Castro José Antonio'),
+(107, 'prueba curso', 'Fueron policías municipales quienes reportaron el hallazgo del cadáver de un hombre de entre 40 y 50 años. El individuo estaba semidesnudo, con un costal color blanco en la cabeza, un cinturón al cuello y tenía los pies atados. Además no tenía pantalón, sólo ropa interior oscura, una camisa a cuadros y una especie de cobija en las piernas', 'Fueron policías municipales quienes reportaron el hallazgo del cadáver de un hombre de entre 40 y 50 años. El individuo estaba semidesnudo, con un costal color blanco en la cabeza, un cinturón al cuello y tenía los pies atados. Además no tenía pantalón, sólo ropa interior oscura, una camisa a cuadros y una especie de cobija en las piernas', 'Fueron policías municipales quienes reportaron el hallazgo del cadáver de un hombre de entre 40 y 50 años. El individuo estaba semidesnudo, con un costal color blanco en la cabeza, un cinturón al cuello y tenía los pies atados. Además no tenía pantalón, sólo ropa interior oscura, una camisa a cuadros y una especie de cobija en las piernas', 'Dias', 2, 'Lunes,Martes,Miércoles', '2018-08-07', '2018-08-31', '08:00:00', '12:00:00', 'Presencial', 'Fueron policías municipales quienes reportaron el hallazgo del cadáver de un hombre de entre 40 y 50 años. El individuo estaba semidesnudo, con un costal color blanco en la cabeza, un cinturón al cuello y tenía los pies atados. Además no tenía pantalón, sólo ropa interior oscura, una camisa a cuadros y una especie de cobija en las piernas', 'Fueron policías municipales quienes reportaron el hallazgo del cadáver de un hombre de entre 40 y 50 años. El individuo estaba semidesnudo, con un costal color blanco en la cabeza, un cinturón al cuello y tenía los pies atados. Además no tenía pantalón, sólo ropa interior oscura, una camisa a cuadros y una especie de cobija en las piernas', 150, 'Depósito Bancario', '2264555105b67ab6b65bcb.jpg', '2018-08-06', '0000-00-00', 'curso', 'Esparza Castro José Antonio'),
+(114, 'taller 2.1', 'Sergio Robleto, especialista en investigaciones y seguridad, recomienda estar atentos en los simulacros, para tener una idea de cómo se puede reaccionar en estos casos. Aunque en la situación de riesgo puede haber reacciones impredecibles, hay que tratar de mantener la calma para decidir si es menos arriesgado correr o quedarse en el lugar más seguro posible.', 'Sergio Robleto, especialista en investigaciones y seguridad, recomienda estar atentos en los simulacros, para tener una idea de cómo se puede reaccionar en estos casos. Aunque en la situación de riesgo puede haber reacciones impredecibles, hay que tratar de mantener la calma para decidir si es menos arriesgado correr o quedarse en el lugar más seguro posible.', 'Sergio Robleto, especialista en investigaciones y seguridad, recomienda estar atentos en los simulacros, para tener una idea de cómo se puede reaccionar en estos casos. Aunque en la situación de riesgo puede haber reacciones impredecibles, hay que tratar de mantener la calma para decidir si es menos arriesgado correr o quedarse en el lugar más seguro posible.', 'Dias', 2, 'Martes,Miércoles', '2018-08-07', '2018-08-08', '10:00:00', '15:00:00', 'Presencial', 'Sergio Robleto, especialista en investigaciones y seguridad, recomienda estar atentos en los simulacros, para tener una idea de cómo se puede reaccionar en estos casos. Aunque en la situación de riesgo puede haber reacciones impredecibles, hay que tratar de mantener la calma para decidir si es menos arriesgado correr o quedarse en el lugar más seguro posible.', 'Sergio Robleto, especialista en investigaciones y seguridad, recomienda estar atentos en los simulacros, para tener una idea de cómo se puede reaccionar en estos casos. Aunque en la situación de riesgo puede haber reacciones impredecibles, hay que tratar de mantener la calma para decidir si es menos arriesgado correr o quedarse en el lugar más seguro posible.', 600, 'Depósito Bancario', '8936256165b6f4f4457229.jpg', '2018-08-11', '2018-08-11', 'taller', 'Esparza Castro José Antonio');
 
 -- --------------------------------------------------------
 
@@ -435,7 +438,7 @@ ALTER TABLE `estados_republica`
 -- AUTO_INCREMENT de la tabla `faqs`
 --
 ALTER TABLE `faqs`
-  MODIFY `id_faqs` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=120;
+  MODIFY `id_faqs` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=131;
 
 --
 -- AUTO_INCREMENT de la tabla `newsletter`
@@ -453,7 +456,7 @@ ALTER TABLE `publicaciones`
 -- AUTO_INCREMENT de la tabla `registro_eventos`
 --
 ALTER TABLE `registro_eventos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=99;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=115;
 
 --
 -- AUTO_INCREMENT de la tabla `servicios_empresariales`
