@@ -1,7 +1,7 @@
 <?php
 header("Content-Type: text/html;charset=utf-8");
 include "../config.php";
-error_reporting(E_ALL);
+error_reporting(E_ERROR | E_WARNING | E_PARSE);
 session_start();
 if (!isset($_SESSION['user_name'])) {
     header("Location:/simpoweb/administrator/login.php");
@@ -194,6 +194,38 @@ $user_name = $_SESSION['user_name'];
                         </div>
                         <div class="clearfix"><h2 style="text-align: center;color: black;font-size: 25px" class="Sansation_Regular">Preguntas Frecuentes Simposiums</h2></div>
                         <div class="clearfix"><h2 style="text-align: center;color: black;font-size: 25px;padding-top:40px;" class="Sansation_Regular"><a href="../crear/registrar_pregunta_simposium.php"><button type="button"  class="btn btn-success"><i class="fa fa-plus"></i> Añadir Pregunta </button></a></h2></div>
+                        <div style="width: 50%" class="center-block">
+                            <?php
+                            $m = $_GET['m'];
+
+                            if ($m == 1) {
+
+                                $modal = '<div class="alert alert-success alert-dismissible " role="alert" style="text-align:center" id="ok">
+                                            <strong style="font-weight: 900;">Bien! La Pregunta ha sido eliminada exitosamente.</strong>
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close" style="opacity: 1;">
+                                            <span aria-hidden="true">&times;</span>
+                                            </button>
+                                          </div>';
+                            } elseif ($m == 2) {
+
+                                $modal = '<div class="alert alert-danger alert-dismissible " role="alert" style="text-align:center" id="error">
+                                            <strong style="font-weight: 900;">A ocurrido un error, por favor intentalo más tarde</strong>
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close" style="opacity: 1;">
+                                            <span aria-hidden="true">&times;</span>
+                                            </button>
+                                          </div>';
+                            } elseif ($m != 1 && $m != 2) {
+
+                                $modal = '<div class="alert alert-danger alert-dismissible hide " role="alert" style="text-align:center" id="error">
+                                            <strong style="font-weight: 900;">no</strong>
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close" style="opacity: 1;">
+                                            <span aria-hidden="true">&times;</span>
+                                            </button>
+                                          </div>';
+                            }
+                            ?>
+                            <?php echo $modal; ?>    
+                        </div>
                         <div class="row" >
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
@@ -258,7 +290,7 @@ $user_name = $_SESSION['user_name'];
                                                     </div>
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="icon-ban-circle"></i>&nbsp;Cancelar</button>
-                                                        <a href="Delete_Photo.php?d=<?php echo $row2['id'] ?>&f=<?php echo $row2['file'] ?>"><button type="button" class="btn btn-success"><i class="icon-ok"></i>Aceptar</button></a>
+                                                        <a href="../delete/delete_simpo_faqs.php?d=<?php echo $row['id_faqs'] ?>"><button type="button" class="btn btn-success"><i class="icon-ok"></i>Aceptar</button></a>
                                                     </div>
                                                 </div>
                                             </div>
