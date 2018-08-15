@@ -3,20 +3,20 @@
     include "../config.php";
     error_reporting(E_ALL);
     $course_name = $_GET['name'];
-    $review = $_GET['review'];
-    $addressed = $_GET['addressed'];
-    $objetive = $_GET['objetive'];
+    $review = utf8_decode($_GET['review']);
+    $addressed = utf8_decode($_GET['addressed']);
+    $objetive = utf8_decode($_GET['objetive']);
     $period = $_GET['period'];
     $duration = $_GET['duration'];
     $d_start=$_GET['date_start'];
     $d_finish=$_GET['date_finish'];
     $time_start=$_GET['time_start'];
     $time_finish=$_GET['time_finish'];
-    $days= json_encode(implode('|',$_GET['days']));
+    $days= implode(',',$_GET['days']);
     $days_converts=utf8_decode($days);
-    $modality=$_GET['modality'];
-    $requiriments=$_GET['requirements'];
-    $aditional_information=$_GET['aditional_information'];
+    $modality= utf8_decode($_GET['modality']);
+    $requiriments= utf8_decode($_GET['requirements']);
+    $aditional_information=utf8_decode($_GET['aditional_information']);
     $cost=$_GET['cost'];
     $pay_method= utf8_decode($_GET['pay_method']);
     $foto = trim($_FILES['file_image']['name']);
@@ -27,7 +27,7 @@
     if ($_FILES['file_image']['size'] <= 2097152) {
         while (true) {
             $filename = uniqid(rand()) . '.' .pathinfo($foto, PATHINFO_EXTENSION);
-            if (!file_exists('../album/course/' . $filename)) break;
+            if (!file_exists('../gallery/album/course/' . $filename)) break;
         }
         error_log($filename, 0);
         error_log("Despues de cambiar el nombre", 0);
@@ -41,7 +41,7 @@
         mysqli_query($mysqli, $query1);
         error_log("Despues del primer insert", 0);
         // Movemos el archivo
-        move_uploaded_file($_FILES['file_image']['tmp_name'], '../album/course/' . $filename);
+        move_uploaded_file($_FILES['file_image']['tmp_name'], '../gallery/album/course/' . $filename);
         error_log("Despues del mover el archivo", 0);
         //Cerramos la conexion
         $mysqli->close();

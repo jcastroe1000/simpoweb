@@ -1,13 +1,13 @@
 $(function () {
-    $('#create_business_services_question').submit(function () {
+    $('#create_se_question').submit(function () {
         var comprobar = $('#question').val().length * $('#answer').val().length 
                 * $('#category').val().length;
         if (comprobar > 0) {
 
-            var formulario = $('#create_business_services_question');
+            var formulario = $('#create_se_question');
             var datos = formulario.serialize();
             var archivos = new FormData();
-            var url = 'model/register_question.php';
+            var url = '../model/register_question.php';
             
 
             $.ajax({
@@ -34,7 +34,7 @@ $(function () {
                         setTimeout(function () {
                             $('#guardando').modal('hide');
                             $('#cargando').modal('hide');
-                            $(location).attr('href', 'preguntas_servicios_empresariales.php');
+                            $(location).attr('href', '../consultar/preguntas_servicios_empresariales.php');
                         }, 6000);
                 
                     } else if (data.status == 'error') {

@@ -1,10 +1,10 @@
 <?php
 header("Content-Type: text/html;charset=utf-8");
-include "config.php";
+include "../config.php";
 error_reporting(E_ALL);
 session_start();
 if (!isset($_SESSION['user_name'])) {
-    header("Location:login.php");
+    header("Location:/simpoweb/administrator/login.php");
 }
 $user_name = utf8_encode($_SESSION['user_name']);
 ?>
@@ -21,6 +21,7 @@ $user_name = utf8_encode($_SESSION['user_name']);
 
         <!-- Bootstrap -->
         <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+       
         <!-- Font Awesome -->
         <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
         <!-- NProgress -->
@@ -39,15 +40,15 @@ $user_name = utf8_encode($_SESSION['user_name']);
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
         <!-- bootstrap-progressbar -->
         <link href="../vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="form-wizard/font-awesome/css/font-awesome.min.css">
-        <link rel="stylesheet" href="form-wizard/css/form-elements.css">
-        <link rel="stylesheet" href="form-wizard/css/style.css">
-        <link href="../production/css/fileinput.css" media="all" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="../form-wizard/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../form-wizard/css/form-elements.css">
+        <link rel="stylesheet" href="../form-wizard/css/style.css">
+        <link href="../css/fileinput.css" media="all" rel="stylesheet" type="text/css">
         <!-- Latest compiled and minified CSS -->
         <link href="../vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
         <!--Multiselect-->
-        <link rel="stylesheet" href="../production/dist/css/bootstrap-select.css">
-        <script src="../production/dist/js/bootstrap-select.js" defer></script>
+        <link rel="stylesheet" href="../dist/css/bootstrap-select.css">
+        <script src="../dist/js/bootstrap-select.js" defer></script>
 
 
 
@@ -60,10 +61,10 @@ $user_name = utf8_encode($_SESSION['user_name']);
     <body class="nav-md">
         <div class="container body">
             <div class="main_container">
-                <div class="col-md-3 left_col">
+                     <div class="col-md-3 left_col">
                     <div class="left_col scroll-view">
                         <div class="navbar nav_title" style="border: 0;">
-                            <a href="index4.html" class="site_title"><i class="fa fa-mortar-board"></i> <span>SimpoWeb!</span></a>
+                            <a href="index4.html" class="site_title"><i class="fa fa-flask "></i> <span>Sistema de Administración</span></a>
                         </div>
 
                         <div class="clearfix"></div>
@@ -71,11 +72,11 @@ $user_name = utf8_encode($_SESSION['user_name']);
                         <!-- menu profile quick info -->
                         <div class="profile clearfix">
                             <div class="profile_pic center-block">
-                                <img src="images/img.jpg" alt="..." class="img-circle profile_img">
+                                <img src="../images/img.jpg" alt="..." class="img-circle profile_img">
                             </div>
                             <div class="profile_info">
-                                <span>Bienvenido</span>
-                                <h2><?php echo $user_name ?></h2>
+                                <span>Bienvenido (a)</span>
+                                <h2><?php echo utf8_encode($user_name); ?></h2>
                             </div>
                         </div>
                         <!-- /menu profile quick info -->
@@ -91,47 +92,39 @@ $user_name = utf8_encode($_SESSION['user_name']);
                                     <li><a><i class="fa fa-group"></i> Usuarios <span class="fa fa-chevron-down"></span></a>
                                         <ul class="nav child_menu">
                                             <li><a href="users_registers.php"><i class="fa fa-arrow-up"></i>Registrados</a></li>
-                                            <li><a href="newsletter.php"><i class="fa fa-envelope"></i>NewsLetter</a></li>
-                                            <li><a href="operadores.php"><i class="fa fa-users"></i>Operadores</a></li>
+                                            <li>
+                                                <a href="newsletter.php"><i class="fa fa-check-circle"></i>NewsLetter</a></li>
                                         </ul>
 
                                     </li>
-                                    <li><a><i class="fa fa-cogs"></i>Servicios <span class="fa fa-chevron-down"></span></a>
+                                    <li><a href="services.php"><i class="fa fa-arrow-circle-up"></i> Registro </a></li>
+
+
+                                    <li><a><i class="fa fa-cogs"></i>Secciones <span class="fa fa-chevron-down"></span></a>
                                         <ul class="nav child_menu">
 
                                             <li>
-                                                <a href="seminarios.php"><i class="fa fa-mortar-board"></i> Seminarios</a>
+                                                <a href="simposiums.html"><i class="fa fa-mortar-board"></i> Seminarios</a>
                                             </li>
                                             <li>
-                                                <a href="simposiums.php"><i class="fa fa-mortar-board"></i> Simposium</a>
+                                                <a href="simposiums.html"><i class="fa fa-laptop"></i> Talleres </a>
                                             </li>
                                             <li>
-                                                <a href="talleres.php"><i class="fa fa-laptop"></i> Talleres </a>
+                                                <a href="simposiums.html"><i class="fa fa-briefcase"></i> Cursos </a>
                                             </li>
                                             <li>
-                                                <a href="cursos.php"><i class="fa fa-briefcase"></i> Cursos </a>
-                                            </li>
-                                            <li>
-                                                <a href="diplomados.php"><i class="fa fa-university"></i> Diplomados </a>
-                                            </li>
-                                            <li>
-                                                <a href="servicios_empresariales.php"><i class="fa fa-mortar-board"></i> Servicios Empresariales</a>
-                                            </li>
-                                            <li>
-                                                <a href="publicaciones.php"><i class="fa fa-mortar-board"></i> Publicaciones</a>
+                                                <a href="simposiums.html"><i class="fa fa-university"></i> Diplomados </a>
                                             </li>
 
                                         </ul>
                                     </li>
-
 
                                     <li><a><i class="fa fa-plus-square"></i> Extras<span class="fa fa-chevron-down"></span></a>
                                         <ul class="nav child_menu">
                                             <li><a href="form.html"><i class="fa fa-book"></i>Directorio</a></li>
-                                            <li><a href="faqs.php"><i class="fa fa-question-circle"></i> FAQ'S</a></li>        
+
                                         </ul>
                                     </li>
-
 
 
                                 </ul>
@@ -152,7 +145,7 @@ $user_name = utf8_encode($_SESSION['user_name']);
                             <a data-toggle="tooltip" data-placement="top" title="Lock">
                                 <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
                             </a>
-                            <a data-toggle="modal" data-target="#myProfile"  data-placement="top" title="Logout">
+                            <a data-toggle="tooltip" data-placement="top" title="Logout">
                                 <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
                             </a>
                         </div>
@@ -213,7 +206,7 @@ $user_name = utf8_encode($_SESSION['user_name']);
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-body" style="text-align: center;padding:20px">
-                                    <h3>Curso Creado Exitosamente...</h3>
+                                    <h3>Curso Registrado Exitosamente...</h3>
                                 </div>
                             </div>
                         </div>
@@ -227,8 +220,8 @@ $user_name = utf8_encode($_SESSION['user_name']);
                  <div class="row">
               <div class="col-md-12">
                                 <div class="col-sm-11 col-sm-offset-1 col-md-9 col-md-offset-3 col-lg-6 col-lg-offset-3 form-box" style="height: 100%" >
-                        <form role="form" id="upload_course" name="upload_course" class="f1" style="margin-top: -15px;">
-                            <h3 style="text-align: center">Registrar Curso</h3>
+                        <form role="form" id="create_seminar" name="create_seminar" class="f1" style="margin-top: -15px;">
+                            <h3 style="text-align: center">Registrar Seminario</h3>
                             <div class="f1-steps">
                                 <div class="f1-progress">
                                     <div class="f1-progress-line" data-now-value="16.66" data-number-of-steps="3" style="width: 16.66%;"></div>
@@ -290,8 +283,8 @@ $user_name = utf8_encode($_SESSION['user_name']);
                                     <select class="combo" id="period" name="period" style="width: 100%">
                                         <option value="">Selecciona</option>
                                         <option value="Dias">Dias</option>
-                                        <option value="Semanal">Semanal</option>
-                                        <option value="Mensual">Mensual</option>
+                                        <option value="Semanas">Semanas</option>
+                                        <option value="Meses">Meses</option>
                                     </select>
 
                                 </div>
@@ -454,20 +447,20 @@ $user_name = utf8_encode($_SESSION['user_name']);
 
         <!-- Custom Theme Scripts -->
         <script src="../build/js/custom.min.js"></script>
-        <script src="../production/js/fileinput.js" type="text/javascript"></script>
+        <script src="../js/fileinput.js" type="text/javascript"></script>
         <!--form wizard-->
 
-        <script src="form-wizard/bootstrap/js/bootstrap.min.js"></script>
-        <script src="form-wizard/js/jquery.backstretch.min.js"></script>
-        <script src="form-wizard/js/retina-1.1.0.min.js"></script>
-        <script src="form-wizard/js/scripts.js"></script>
-        <script src="../production/js/fileinput.js" type="text/javascript"></script>
-        <script src="../production/js/upload_course.js"></script>
+        <script src="../form-wizard/bootstrap/js/bootstrap.min.js"></script>
+        <script src="../form-wizard/js/jquery.backstretch.min.js"></script>
+        <script src="../form-wizard/js/retina-1.1.0.min.js"></script>
+        <script src="../form-wizard/js/scripts.js"></script>
+        <script src="../js/fileinput.js" type="text/javascript"></script>
+        <script src="../js/create/create_seminar.js"></script>
         <!-- bootstrap-progressbar -->
         <script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
         <!-- Flot -->
-        <script src="../production/js/bootbox.js" type="text/javascript"></script>
-        <script src="../production/js/bootbox.min.js" type="text/javascript">
+        <script src="../js/bootbox.js" type="text/javascript"></script>
+        <script src="../js/bootbox.min.js" type="text/javascript">
             
         <script>
             $(document).ready(function () {
@@ -747,7 +740,7 @@ $user_name = utf8_encode($_SESSION['user_name']);
             $('#myModal').on('shown.bs.modal', function () {
                 var progress = setInterval(function () {
                     var $bar = $('.bar');
-                    if ($bar.width() == 500) {
+                    if ($bar.width() == 550) {
                         // complete
                         clearInterval(progress);
                         $('.progress').removeClass('active');
@@ -759,7 +752,7 @@ $user_name = utf8_encode($_SESSION['user_name']);
                     }
 
                     $bar.text($bar.width() / 5 + "%");
-                }, 800);
+                }, 720);
             })
 
         </script>

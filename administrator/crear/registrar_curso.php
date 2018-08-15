@@ -4,7 +4,7 @@ include "../config.php";
 error_reporting(E_ALL);
 session_start();
 if (!isset($_SESSION['user_name'])) {
-    header("Location:login.php");
+    header("Location:/simpoweb/administrator/login.php");
 }
 $user_name = utf8_encode($_SESSION['user_name']);
 ?>
@@ -214,7 +214,7 @@ $user_name = utf8_encode($_SESSION['user_name']);
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-body" style="text-align: center;padding:20px">
-                                    <h3>Curso Creado Exitosamente...</h3>
+                                    <h3>Curso Registrado Exitosamente...</h3>
                                 </div>
                             </div>
                         </div>
@@ -291,8 +291,8 @@ $user_name = utf8_encode($_SESSION['user_name']);
                                     <select class="combo" id="period" name="period" style="width: 100%">
                                         <option value="">Selecciona</option>
                                         <option value="Dias">Dias</option>
-                                        <option value="Semanal">Semanal</option>
-                                        <option value="Mensual">Mensual</option>
+                                        <option value="Semanas">Semanas</option>
+                                        <option value="Meses">Meses</option>
                                     </select>
 
                                 </div>
