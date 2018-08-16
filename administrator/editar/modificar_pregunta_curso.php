@@ -222,22 +222,21 @@ endif;
                                 <div class="x_content" style="padding-top: 3%">
 
                                     <form id="update_faq_course" name="update_faq_course"  class="form-horizontal form-label-left">
+                                        
                                         <div class="form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="first-name" style="color: black">Pregunta:</label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <textarea type="text" id="question" name="question" class="form-control col-md-7 col-xs-12" rows="4" >
-                                                    <?php echo utf8_encode($row['question']) ?>
+                                                <textarea name="review" id="review" placeholder="Resumen..." rows="3"
+                                                      class="form-control col-md-7 col-xs-12"  >  <?php echo utf8_encode($row['question']) ?>
                                                 </textarea>
-                                                <!--                                                          pattern="[A-Za-z]" title="Solo se permiten letras"></textarea>-->
                                             </div>
                                         </div>
                                         <div class="form-group" style="margin-top: 30px;">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="last-name" style="color: black">Respuesta:</label>
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="first-name" style="color: black">Pregunta:</label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <textarea type="text" id="answer" name="answer" class="form-control col-md-7 col-xs-12" rows="7">
-                                                    <?php echo utf8_encode($row['answer']) ?>
+                                                <textarea name="review" id="review" placeholder="Resumen..." rows="6"
+                                                      class="form-control col-md-7 col-xs-12"  >  <?php echo utf8_encode($row['answer']) ?>
                                                 </textarea>
-                                                <!--                                                          pattern="[A-Za-z]" title="Solo se permiten letras"></textarea>-->
                                             </div>
                                         </div>
                                         <div class="form-group">
