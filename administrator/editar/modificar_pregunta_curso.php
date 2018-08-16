@@ -187,15 +187,7 @@ endif;
                 </div>
             </div>
         </div>
-                <div id="guardando" class="modal fade" role="dialog">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-body" style="text-align: center;padding:20px">
-                        <h3>Por favor espera,registrando pregunta...</h3>
-                    </div>
-                </div>
-            </div>
-        </div>        
+              
         <!--Termina modal-->
         <!--Progress Modal-->
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -587,5 +579,27 @@ endif;
             gauge.setTextField(document.getElementById("gauge-text"));
         </script>
         <!-- /gauge.js -->
+        
+        
+            <!-- Process Bar-->
+            <script>
+            $('#myModal').on('shown.bs.modal', function () {
+            var progress = setInterval(function () {
+            var $bar = $('.bar');
+            if ($bar.width() == 550) {
+            // complete
+            clearInterval(progress);
+            $('.progress').removeClass('active');
+            $('#myModal').modal('hide');
+            $bar.width(0);
+        } else {
+                    // perform processing logic here
+                    $bar.width($bar.width() + 50);
+        }
+        
+        $bar.text($bar.width() / 5 + "%");
+        }, 720);
+        })
+        </script>
     </body>
 </html>
