@@ -18,6 +18,7 @@
     $requiriments= utf8_decode($_GET['requirements']);
     $aditional_information=utf8_decode($_GET['aditional_information']);
     $cost=$_GET['cost'];
+    $lugares_disp_s=$_GET['places_available'];
     $pay_method= utf8_decode($_GET['pay_method']);
     $foto = trim($_FILES['file_image']['name']);
     $creation_date=$_GET['creation_date'];
@@ -33,10 +34,10 @@
         error_log("Despues de cambiar el nombre", 0);
         // Guardamos la imagen (titulo, archivo, fecha de creacion)
     $query1 = "INSERT INTO registro_eventos(nombre,resumen,dirigido, objetivo,periodo, duracion,dias,"
-            . "fecha_inicio,fecha_final,hora_inicio,hora_final,modalidad,requisitos,informacion_adicional,costo,"
+            . "fecha_inicio,fecha_final,hora_inicio,hora_final,modalidad,requisitos,informacion_adicional,costo,lugares_disponibles,"
             . "metodo_pago,ruta,fecha_creacion,seccion,usuario) "
             . "VALUES ('$course_name', '$review','$addressed', '$objetive','$period' ,'$duration','$days_converts', '$d_start','$d_finish',"
-            . "'$time_start','$time_finish','$modality','$requiriments','$aditional_information','$cost','$pay_method','$filename',"
+            . "'$time_start','$time_finish','$modality','$requiriments','$aditional_information','$cost','$lugares_disp_s','$pay_method','$filename',"
             . "'$creation_date','$section','$created_by')";
         mysqli_query($mysqli, $query1);
         error_log("Despues del primer insert", 0);

@@ -19,6 +19,7 @@
     $requiriments=$_GET['requirements'];
     $aditional_information=$_GET['aditional_information'];
     $cost=$_GET['cost'];
+    $places_ava_sim=$_GET['places_available'];
     $pay_method= utf8_decode($_GET['pay_method']);
     $update_date=$_GET['update_date'];
     $created_by= utf8_decode($_GET['admin']);
@@ -29,11 +30,11 @@
        
     $stmt = $mysqli->prepare("UPDATE registro_eventos SET  nombre=? , resumen=?, dirigido=?,objetivo=?,periodo=?,
                              duracion=?, dias=?,fecha_inicio=?,fecha_final=?,hora_inicio=?,hora_final=?,modalidad=?, requisitos=?,
-                             informacion_adicional=?,costo=?,metodo_pago=?,fecha_modificacion=?,seccion=?,
+                             informacion_adicional=?,costo=?,lugares_disponibles=?,metodo_pago=?,fecha_modificacion=?,seccion=?,
                              usuario=? WHERE id=?");
-    $stmt->bind_param('ssssssssssssssssssss', $course_name,$review,$addressed,$objetive,$period,$duration,$days_converts,
+    $stmt->bind_param('sssssssssssssssssssss', $course_name,$review,$addressed,$objetive,$period,$duration,$days_converts,
                             $d_start,$d_finish,$time_start,$time_finish,$modality,$requiriments,$aditional_information,
-                            $cost,$pay_method,$update_date,$section,$created_by, $id_c);
+                            $cost,$places_ava_sim,$pay_method,$update_date,$section,$created_by, $id_c);
     
     $course_name = $_GET['name'];
     $review = utf8_decode( $_GET['review']);
@@ -51,6 +52,7 @@
     $requiriments= utf8_decode($_GET['requirements']);
     $aditional_information= utf8_decode($_GET['aditional_information']);
     $cost=$_GET['cost'];
+    $places_ava_sim=$_GET['places_available'];
     $pay_method= utf8_decode($_GET['pay_method']);
     $update_date=$_GET['update_date'];
     $section='simposium';

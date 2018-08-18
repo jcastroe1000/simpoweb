@@ -250,7 +250,7 @@ $user_name = $_SESSION['user_name'];
                                     <thead>
                                         <tr>
 
-                                            <th class="SSansPro-Regular" style="color: black;text-align: center">Nombre del Diplomado</th>
+                                            <th class="SSansPro-Regular" style="color: black;text-align: center">Nombre del Servicio Empresarial</th>
                                             <th class="SSansPro-Regular" style="color: black;text-align: center">Imagen</th>
                                             <th class="SSansPro-Regular" style="color: black;text-align: center">Detalles</th>
                                             <th class="SSansPro-Regular" style="color: black;text-align: center">Eliminar</th>
@@ -350,9 +350,12 @@ $user_name = $_SESSION['user_name'];
                                                 </div>
                                                 <div class="row hide" data-step="2" data-title="This is the second step!">
                                                     <div class="row">
-                                                        <div class="col-md-4"><h5 style="text-align: left"><strong style="text-align: justify">Modalidad:  </strong><?php echo utf8_encode($row['modalidad']) ?></h5></div>
-                                                        <div class="col-md-2"><h5 style="text-align: left"><strong style="text-align: justify">Costo:  </strong><?php echo "$" . $row['costo'] ?></h5></div>
+                                                        <div class="col-md-6"><h5 style="text-align: left"><strong style="text-align: justify">Modalidad:  </strong><?php echo utf8_encode($row['modalidad']) ?></h5></div>
+                                                        <div class="col-md-6"><h5 style="text-align: left"><strong style="text-align: justify">Costo:  </strong><?php echo "$" . $row['costo'] ?></h5></div>
+                                                    </div>
+                                                    <div class="row">
                                                         <div class="col-md-6"><h5 style="text-align: left"><strong style="text-align: justify">Método de Pago:  </strong><?php echo utf8_encode($row['metodo_pago']) ?></h5></div>
+                                                        <div class="col-md-6"><h5 style="text-align: left"><strong style="text-align: justify">Lugares Disponibles:  </strong><?php echo utf8_encode($row['lugares_disponibles']) ?></h5></div>
                                                     </div>
                                                     <h5 style="text-align: justify"> <strong >Requisitos:  </strong><?php echo utf8_encode($row['requisitos']) ?></h5>  
                                                     <h5 style="text-align: justify;"> <strong >Información adicional:  </strong><?php echo utf8_encode($row['informacion_adicional']) ?></h5>    

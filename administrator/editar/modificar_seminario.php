@@ -238,7 +238,7 @@ endif;
                         <div class="col-md-12">
                             <div class="col-sm-11 col-sm-offset-1 col-md-9 col-md-offset-3 col-lg-6 col-lg-offset-3 form-box" style="height: 100%" >
                                 <form role="form" id="update_seminar" name="update_seminar" class="f1" style="margin-top: -15px;">
-                                    <h3 style="text-align: center">Modificar Curso</h3>
+                                    <h3 style="text-align: center">Modificar Seminario</h3>
                                     <div class="f1-steps">
                                         <div class="f1-progress">
                                             <div class="f1-progress-line" data-now-value="16.66" data-number-of-steps="3" style="width: 16.66%;"></div>
@@ -429,11 +429,17 @@ endif;
                                             <textarea name="aditional_information" id="aditional_information" placeholder="Dirigido..." style="height: 123px;width: 100%"
                                                       class="f1-about-yourself form-control3" id="f1-about-yourself"><?php echo utf8_encode($row['informacion_adicional']) ?></textarea>
                                         </div>
-                                        <div class="form-group">
+                                        
+
+                                        <div class="form-group" style="width: 45%;display: inline-block;">
                                             <label class="etiquetas" for="f1-first-name">Costo:</label>
                                             <input type="number" name="cost" id="cost" min="1" max="1000000"  class="f1-first-name form-control3" 
-                                                   id="f1-first-name" style="width: 100%" placeholder="Ingresa un monto" 
-                                                   value="<?php echo $row['costo'] ?>">
+                                                   id="f1-first-name" style="width: 100%" placeholder="Ingresa un monto" value="<?php echo utf8_encode($row['costo']) ?>">
+                                        </div>
+                                        <div class="form-group" style="width: 45%;display: inline-block;float: right">
+                                           <label class="etiquetas" for="f1-first-name">Lugares Disponibles:</label>
+                                           <input type="number" name="places_available" id="places_available" placeholder="Lugares Disponibles" 
+                                                  class="f1-first-name form-control3" id="f1-first-name" style="width: 100%" value="<?php echo utf8_encode($row['lugares_disponibles']) ?>">
                                         </div>
                                         <div class="form-group">
                                             <label class="etiquetas" for="f1-first-name">Método de Pago:</label>
