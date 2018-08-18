@@ -132,7 +132,7 @@ error_reporting(E_ALL);
                         <br>
                         <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:10px;  ">SEMINARIOS</h2>
                     </div> 
-                    <div class="item  col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-3" style="padding-top: 5%">
+                    <div class="item  col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-3" >
                         <?php
                         $query1 = "SELECT * from faqs WHERE category='seminario'";
                         $res1 = mysqli_query($mysqli, $query1);
@@ -143,7 +143,7 @@ error_reporting(E_ALL);
                             ?>
                             <div class=" text-center" style="text-align: center">
                                 <br>
-                                <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:5px;text-align: center;padding-bottom:90px">Por el momento esta <br>sección no cuenta con preguntas</h2>
+                                <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:5px;text-align: center;padding-bottom:20px">Por el momento esta <br>sección no cuenta con preguntas</h2>
                             </div>
 
                         <?php } else { ?>   
@@ -180,7 +180,7 @@ error_reporting(E_ALL);
                         <br>
                         <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:10px;  ">SIMPOSIUM</h2>
                     </div> 
-                    <div class="item  col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-3" style="padding-top: 5%">
+                    <div class="item  col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-3" >
                         <?php
                         $query3 = "SELECT * from faqs WHERE category='simposium'";
                         $res3 = mysqli_query($mysqli3, $query3);
@@ -191,11 +191,11 @@ error_reporting(E_ALL);
                             ?>
                             <div class=" text-center" style="text-align: center">
                                 <br>
-                                <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:5px;text-align: center;padding-bottom:90px">Por el momento esta <br>sección no cuenta con preguntas</h2>
+                                <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:5px;text-align: center;padding-bottom:20px">Por el momento esta <br>sección no cuenta con preguntas</h2>
                             </div>
 
                         <?php } else { ?>   
-                            <div class="item  col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-3" style="padding-top: 5%">
+                            <div class="item  col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-3" >
                                 <?php
                                 $res4 = $mysqli4->query("SELECT * FROM faqs WHERE category='simposium'");
                                 $mysqli4->close();
@@ -229,7 +229,7 @@ error_reporting(E_ALL);
                         <br>
                         <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:10px;  ">DIPLOMADOS</h2>
                     </div> 
-                    <div class="item  col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-3" style="padding-top: 5%">
+                    <div class="item  col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-3">
                         <?php
                         $query5 = "SELECT * from faqs WHERE category='diplomados'";
                         $res5 = mysqli_query($mysqli5, $query5);
@@ -240,11 +240,11 @@ error_reporting(E_ALL);
                             ?>
                             <div class=" text-center" style="text-align: center">
                                 <br>
-                                <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:5px;text-align: center;padding-bottom:90px">Por el momento esta <br>sección no cuenta con preguntas</h2>
+                                <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:5px;text-align: center;padding-bottom:20px">Por el momento esta <br>sección no cuenta con preguntas</h2>
                             </div>
 
                         <?php } else { ?>   
-                            <div class="item  col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-3" style="padding-top: 5%">
+                            <div class="item  col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-3">
                                 <?php
                                 $res6 = $mysqli6->query("SELECT * FROM faqs WHERE category='diplomados'");
                                 $mysqli6->close();
@@ -278,7 +278,7 @@ error_reporting(E_ALL);
                         <br>
                         <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:10px;  ">TALLERES</h2>
                     </div> 
-                    <div class="item  col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-3" style="padding-top: 5%">
+                    <div class="item  col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-3">
                         <?php
                         $query7 = "SELECT * from faqs WHERE category='taller'";
                         $res7 = mysqli_query($mysqli7, $query7);
@@ -289,11 +289,11 @@ error_reporting(E_ALL);
                             ?>
                             <div class=" text-center" style="text-align: center">
                                 <br>
-                                <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:5px;text-align: center;padding-bottom:90px">Por el momento esta <br>sección no cuenta con preguntas</h2>
+                                <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:5px;text-align: center;padding-bottom:20px">Por el momento esta <br>sección no cuenta con preguntas</h2>
                             </div>
 
                         <?php } else { ?>   
-                            <div class="item  col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-3" style="padding-top: 5%">
+                        <div class="item  col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-3" >
                                 <?php
                                 $res8 = $mysqli8->query("SELECT * FROM faqs WHERE category='taller'");
                                 $mysqli8->close();
@@ -327,7 +327,7 @@ error_reporting(E_ALL);
                         <br>
                         <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:10px;  ">CURSOS</h2>
                     </div> 
-                    <div class="item  col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-3" style="padding-top: 5%">
+                    <div class="item  col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-3" >
                         <?php
                         $query9 = "SELECT * from faqs WHERE category='curso'";
                         $res9 = mysqli_query($mysqli9, $query9);
@@ -338,11 +338,11 @@ error_reporting(E_ALL);
                             ?>
                             <div class=" text-center" style="text-align: center">
                                 <br>
-                                <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:5px;text-align: center;padding-bottom:90px">Por el momento esta <br>sección no cuenta con preguntas</h2>
+                                <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:5px;text-align: center;padding-bottom:20px">Por el momento esta <br>sección no cuenta con preguntas</h2>
                             </div>
 
                         <?php } else { ?>   
-                            <div class="item  col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-3" style="padding-top: 5%">
+                            <div class="item  col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-3" >
                                 <?php
                                 $res10 = $mysqli10->query("SELECT * FROM faqs WHERE category='curso'");
                                 $mysqli10->close();
@@ -376,7 +376,7 @@ error_reporting(E_ALL);
                         <br>
                         <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:10px;  ">SERVICIOS EMPRESARIALES</h2>
                     </div> 
-                    <div class="item  col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-3" style="padding-top: 5%">
+                    <div class="item  col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-3" >
                         <?php
                         $query11 = "SELECT * from faqs WHERE category='servicio_empresarial'";
                         $res11 = mysqli_query($mysqli11, $query11);
@@ -387,11 +387,11 @@ error_reporting(E_ALL);
                             ?>
                             <div class=" text-center" style="text-align: center">
                                 <br>
-                                <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:5px;text-align: center;padding-bottom:90px">Por el momento esta <br>sección no cuenta con preguntas</h2>
+                                <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:5px;text-align: center;padding-bottom:20px">Por el momento esta <br>sección no cuenta con preguntas</h2>
                             </div>
 
                         <?php } else { ?>   
-                            <div class="item  col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-3" style="padding-top: 5%">
+                            <div class="item  col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-3" >
                                 <?php
                                 $res12 = $mysqli12->query("SELECT * FROM faqs WHERE category='servicio_empresarial'");
                                 $mysqli12->close();
@@ -425,7 +425,7 @@ error_reporting(E_ALL);
                         <br>
                         <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:10px;  ">REVISTA</h2>
                     </div> 
-                    <div class="item  col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-3" style="padding-top: 5%">
+                    <div class="item  col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-3">
                         <?php
                         $query13 = "SELECT * from faqs WHERE category='revista'";
                         $res13 = mysqli_query($mysqli13, $query13);
@@ -436,11 +436,11 @@ error_reporting(E_ALL);
                             ?>
                             <div class=" text-center" style="text-align: center">
                                 <br>
-                                <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:5px;text-align: center;padding-bottom:90px">Por el momento esta <br>sección no cuenta con preguntas</h2>
+                                <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:5px;text-align: center;padding-bottom:20px">Por el momento esta <br>sección no cuenta con preguntas</h2>
                             </div>
 
                         <?php } else { ?>   
-                            <div class="item  col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-3" style="padding-top: 5%">
+                            <div class="item  col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-3" >
                                 <?php
                                 $res14 = $mysqli14->query("SELECT * FROM faqs WHERE category='revista'");
                                 $mysqli14->close();
