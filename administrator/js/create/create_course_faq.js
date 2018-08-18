@@ -1,13 +1,13 @@
 $(function () {
     $('#create_course_question').submit(function () {
         var comprobar = $('#question').val().length * $('#answer').val().length 
-                * $('#id_faqs').val().length;
+                * $('#category').val().length;
         if (comprobar > 0) {
 
             var formulario = $('#create_course_question');
             var datos = formulario.serialize();
             var archivos = new FormData();
-            var url = '../update/update_faq_course.php';
+            var url = '../model/register_question.php';
             
 
             $.ajax({
