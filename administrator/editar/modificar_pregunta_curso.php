@@ -181,7 +181,7 @@ endif;
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-body" style="text-align: center;padding:20px">
-                        <h3>Pregunta creada exitosamente.</h3>
+                        <h3>Pregunta Modificada exitosamente.</h3>
                         <h2>Camiando de pagina.....</h2>
                     </div>
                 </div>
@@ -226,7 +226,7 @@ endif;
                                         <div class="form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="first-name" style="color: black">Pregunta:</label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <textarea name="review" id="review" placeholder="Resumen..." rows="3"
+                                                <textarea name="question" id="question" placeholder="Resumen..." rows="3"
                                                       class="form-control col-md-7 col-xs-12"  >  <?php echo utf8_encode($row['question']) ?>
                                                 </textarea>
                                             </div>
@@ -234,7 +234,7 @@ endif;
                                         <div class="form-group" style="margin-top: 30px;">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="first-name" style="color: black">Pregunta:</label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <textarea name="review" id="review" placeholder="Resumen..." rows="6"
+                                                <textarea name="answer" id="answer" placeholder="Resumen..." rows="6"
                                                       class="form-control col-md-7 col-xs-12"  >  <?php echo utf8_encode($row['answer']) ?>
                                                 </textarea>
                                             </div>
