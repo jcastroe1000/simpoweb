@@ -221,7 +221,7 @@ endif;
                                 </div>
                                 <div class="x_content" style="padding-top: 3%">
 
-                                    <form id="update_faq_course" name="update_faq_course"  class="form-horizontal form-label-left">
+                                    <form id="update_faq_seminar" name="update_faq_seminar"  class="form-horizontal form-label-left">
                                         
                                         <div class="form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="first-name" style="color: black">Pregunta:</label>
@@ -314,7 +314,7 @@ endif;
 
         <!-- Custom Theme Scripts -->
         <script src="../build/js/custom.min.js"></script>
-        <script src="../js/update/update_faq_course.js"></script>
+        <script src="../js/update/update_faq_seminar.js"></script>
         <!--progress bar-->
         <script src="../production/js/bootbox.js"></script>
         <script src="../production/js/bootbox.min.js"></script>

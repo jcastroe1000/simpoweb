@@ -13,8 +13,8 @@
     $stmt->bind_param('sss', $question_,$answer_,$id_faq);
     
     $id_faq = $_GET['id_faqs'];
-    $answer_= $_GET['answer'];
-    $question_ = $_GET['question'];
+    $answer_= utf8_decode( $_GET['answer']);
+    $question_ = utf8_decode($_GET['question']);
     
     if ($stmt->execute()):
        

@@ -269,7 +269,7 @@ $user_name = $_SESSION['user_name'];
                                                     </div>
                                                     <div class="modal-footer">
 
-                                                        <button type="button" class="btn btn-primary">Modificar</button>
+                                                        <a href="../editar/modificar_pregunta_simposium.php?d=<?php echo $row['id_faqs'] ?>"><button type="button" class="btn btn-primary">Modificar</button></a>
                                                         <button type="button" class="btn btn-info" data-dismiss="modal">Cerrar</button>
                                                        <!--<a href="Delete_Photo.php?d=<?php echo $row2['id'] ?>&f=<?php echo $row2['file'] ?>"><button type="button" class="btn btn-success"><i class="icon-ok"></i>Aceptar</button></a>-->
                                                     </div>

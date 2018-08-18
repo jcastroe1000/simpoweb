@@ -1,13 +1,13 @@
 $(function() {
-  $('#update_faq_course').submit(function() {
+  $('#update_faq_diplomat').submit(function() {
     var comprobar = $('#question').val().length * $('#answer').val().length 
                 * $('#id_faqs').val().length;
     if (comprobar > 0) {
       
-          var formulario = $('#update_faq_course');
+          var formulario = $('#update_faq_diplomat');
           var datos = formulario.serialize();
           var archivos = new FormData();
-          var url = '../update/update_faqs.php';
+         var url = '../update/update_faqs.php';
           
           $.ajax({
             url: url + '?' + datos,
@@ -28,7 +28,7 @@ $(function() {
                 }, 9500);
                 setTimeout(function () {
                     
-                    $(location).attr('href', '../consultar/preguntas_cursos.php');
+                    $(location).attr('href', '../consultar/preguntas_diplomados.php');
                 }, 12000);
             },
             error: function(data) {

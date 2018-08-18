@@ -1,10 +1,10 @@
 $(function() {
-  $('#update_faq_course').submit(function() {
+  $('#update_faq_ws').submit(function() {
     var comprobar = $('#question').val().length * $('#answer').val().length 
                 * $('#id_faqs').val().length;
     if (comprobar > 0) {
       
-          var formulario = $('#update_faq_course');
+          var formulario = $('#update_faq_ws');
           var datos = formulario.serialize();
           var archivos = new FormData();
           var url = '../update/update_faqs.php';
@@ -28,7 +28,7 @@ $(function() {
                 }, 9500);
                 setTimeout(function () {
                     
-                    $(location).attr('href', '../consultar/preguntas_cursos.php');
+                    $(location).attr('href', '../consultar/preguntas_talleres.php');
                 }, 12000);
             },
             error: function(data) {
