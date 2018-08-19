@@ -1,6 +1,6 @@
 $(function () {
     $('#create_user').submit(function () {
-        var comprobar = $('#name').val().length * $('#surnames').val().length * $('#telephone_contact').val().length * $('#email_contact').val().length
+        var comprobar = $('#name').val().length *$('#surname_p').val().length *$('#surname_m').val().length * $('#telephone_contact').val().length * $('#email_contact').val().length
                 * $('#gender').val().length * $('#password').val().length * $('#confirm_password').val().length * $('#creation_date').val().length;
 
         if (comprobar > 0) {

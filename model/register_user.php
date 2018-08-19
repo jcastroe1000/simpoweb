@@ -17,18 +17,19 @@ if ($email_contact == $row['email']) {
     echo json_encode($response_array);
 } else {
     $user__name = $_GET['name'];
-    $surnames = $_GET['surnames'];
+    $surname_p = $_GET['surname_p'];
+    $surname_m = $_GET['surname_m'];
     $email_contact = $_GET['email_contact'];
     $telephone_contact = $_GET['telephone_contact'];
     $password = crypt($_GET['password'], '$1$somethin$');
     $date_registration = $_GET['creation_date'];
     $gender = $_GET['gender'];
 
-    require_once '../model/user_register.php';
-    require_once '../model/user_register_admin.php';
+    //require_once '../model/user_register.php';
+    //require_once '../model/user_register_admin.php';
 
-    $query2= "INSERT INTO user_register(name,surnames,telephone, gender,email,password,creation_date) "
-            . "VALUES ('$user__name', '$surnames', '$telephone_contact', '$gender', '$email_contact', '$password','$date_registration')";
+    $query2= "INSERT INTO user_register(name,surname_p,surname_m,telephone, gender,email,password,creation_date) "
+            . "VALUES ('$user__name', '$surname_p', '$surname_m', '$telephone_contact', '$gender', '$email_contact', '$password','$date_registration')";
     mysqli_query($mysqli, $query2);
     $response_array['status'] = 'success';
     echo json_encode($response_array);

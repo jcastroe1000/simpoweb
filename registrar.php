@@ -160,7 +160,7 @@
                 </div>
                 <div class="container text-center">
                     <br>
-                    <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:75px;  ">REGISTRO</h2>
+                    <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top:75px;  ">REGISTRO DE USUARIO</h2>
                 </div>   
                 <br>
                 <br>
@@ -170,20 +170,27 @@
                         <div class="form-group">
                             <label class="control-label col-md-3 col-sm-3 col-xs-12 col-md-offset-1" for="first-name">Nombre (s) : 
                             </label>
-                            <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-1">
+                            <div class="col-md-4 col-sm-4 col-xs- 8">
                                 <input type="text" id="name" name="name" class="form-control col-md-7 col-xs-12">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12 col-sm-offset-1" for="last-name">Apellidos : 
+                            <label class="control-label col-sm-offset-1 col-md-3 col-sm-3 col-xs-12 col-sm-offset-1" for="last-name">Apellido Paterno: 
                             </label>
-                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                <input type="text" id="surnames" name="surnames"  class="form-control col-md-7 col-xs-12">
+                            <div class="col-md-4 col-sm-4 col-xs- 8">
+                                <input type="text" id="surname_p" name="surname_p"  class="form-control col-md-7 col-xs-12">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12 col-sm-offset-1" for="last-name">Apellido Materno: 
+                            </label>
+                            <div class="col-md-4 col-sm-4 col-xs- 8">
+                                <input type="text" id="surname_m" name="surname_m"  class="form-control col-md-7 col-xs-12">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="middle-name" class="control-label col-md-3 col-sm-3  col-xs-12 col-sm-offset-1">Telefono : </label>
-                            <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="col-md-4 col-sm-4 col-xs- 8">
                                 <input id="telephone_contact" name="telephone_contact" class="form-control col-md-7 col-xs-12" 
                                        type="tel" name="middle-name"  minlength="10" maxlength="12">
                             </div>
@@ -191,13 +198,13 @@
                         <div class="form-group">
                             <label for="middle-name" class="control-label col-md-3 col-sm-3  col-xs-12 col-sm-offset-1">Correo Electronico :  
                             </label>
-                            <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="col-md-4 col-sm-4 col-xs- 8">
                                 <input id="email_contact" name="email_contact" class="form-control col-md-7 col-xs-12" type="email" name="middle-name">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="control-label col-md-3 col-sm-3  col-xs-12 col-sm-offset-1">Genero :</label>
-                            <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="col-md-4 col-sm-4 col-xs- 8">
                                 <select class="form-control col-md-7 col-xs-12" id="gender" name="gender">
                                     <option>Elije una opción</option>
                                     <option value="1">Hombre</option>
@@ -211,14 +218,14 @@
                         <div class="form-group ">
                             <label class="control-label col-md-3 col-sm-3 col-xs-12 col-md-offset-1">Contraseña : 
                             </label>
-                            <div class="col-md-6 col-sm-6  col-xs-12 ">
+                            <div class="col-md-4 col-sm-4 col-xs- 8 ">
                                 <input id="password" name="password" class="date-picker form-control col-md-6 col-xs-12" type="password">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="control-label col-md-3 col-sm-3  col-xs-12 col-sm-offset-1">Confirmar contraseña : 
                             </label>
-                            <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="col-md-4 col-sm-4 col-xs- 8">
                                 <input id="confirm_password" name="confirm_password" class="date-picker form-control col-md-7 col-xs-12"  type="password">
                             </div>
                         </div>
@@ -227,7 +234,7 @@
                         </div>
                         <div class="ln_solid"></div>
                         <div class="form-group">
-                            <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-4">
+                            <div class="col-md-4 col-sm-4 col-xs- 8 col-md-offset-4">
                                 <button type="submit" class="btn btn-danger">Cancelar</button>
                                 <button type="submit" class="btn btn-success">Registrarme</button>
                             </div>
