@@ -27,6 +27,7 @@ if ($email_contact == $row['email']) {
 
     //require_once '../model/user_register.php';
     //require_once '../model/user_register_admin.php';
+    require_once '../mail.php';
 
     $query2= "INSERT INTO user_register(name,surname_p,surname_m,telephone, gender,email,password,creation_date) "
             . "VALUES ('$user__name', '$surname_p', '$surname_m', '$telephone_contact', '$gender', '$email_contact', '$password','$date_registration')";

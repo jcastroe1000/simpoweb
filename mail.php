@@ -19,9 +19,9 @@ $send_to = $email;
 # Make the call to the client.
 $result = $mgClient->sendMessage("$domain",
   array('from'    => 'Excited User <tonoescom@gmail.com>',
-        'to'      => 'Mailgun Devs <virialvarez1517@gmail.com>',
-        'subject' => 'Hello',
-        'text'    => 'Testing some Mailgun awesomeness!'));
+        'to'      => 'Mailgun Devs <jcastro@anzen.com.mx>',
+        'subject' => 'Registro',
+        'text'    => 'Gracias por registrarte en Simpoweb!'));
     
     
     

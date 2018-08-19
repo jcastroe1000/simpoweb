@@ -30,12 +30,10 @@ $send_to = $email;
         'subject' => 'Nuevo Usuario',
         'text' => 
         
-        'Nuevo Usuarios ' . $name . '
+        'Se registro ' . $name . '
         
             
-        Gracias por Adquirir Nuestro Libro
-        
-        ya tenemos tus datos y lo más pronto posible te haremos llegar tu libro'
+        '
     ));
     
     

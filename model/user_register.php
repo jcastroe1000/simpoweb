@@ -2,8 +2,8 @@
 include("../model/connection.php");
 use Mailgun\Mailgun;
 
-require '../vendor/autoload.php';
-$name = $user__name.$surnames;
+//require '../vendor/autoload.php';
+$name = $user__name.$surname_p.$surname_m;
 $email = $email_contact;
 
 
@@ -33,9 +33,7 @@ $send_to = $email;
         'Hola ' . $name . '
         
             
-        Gracias por Adquirir Nuestro Libro
-        
-        ya tenemos tus datos y lo más pronto posible te haremos llegar tu libro'
+        Gracias por registrarte en Simpoweb'
     ));
     
     
