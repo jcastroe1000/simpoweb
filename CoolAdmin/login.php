@@ -3,7 +3,7 @@
     session_start();
      error_reporting(0);
     if (isset($_SESSION['sesion_user']) != "") {
-        header("Location: index.php");
+        header("Location:index.php");
     }
     if (isset($_POST['btn-login'])) {
         $email = $_POST['email'];
@@ -25,11 +25,11 @@
             echo 'true';
 //            $_SESSION['user_name'] = $row['nombre']. '&nbsp;' .$row['apellido_paterno'] . '&nbsp;'.$row['apellido_materno'] ;
            $_SESSION['sesion_user'] = $row['surname_p'] . '&nbsp;' .$row['surname_m'].'&nbsp;' . $row['name'];
-            header("Location:../index.php");
+            header("Location:index.php");
            
         }
         else{
-            $result='<div class="alert alert-error">error</div>';
+            $result='<div class="alert alert-error">Contraseña y/o Usuario Incorrecto</div>';
         }
     }
 //        error_reporting(0);
