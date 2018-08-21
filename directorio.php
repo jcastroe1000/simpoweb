@@ -106,6 +106,18 @@
                 <br>
                 <div class="benefits text-center">
                     <div class="item  text-center">
+                         <?php
+                                            include "config.php";
+                                            error_reporting(E_ALL);
+                                            $res = $mysqli->query("SELECT * from biografia ");
+                                            $mysqli->close();
+
+                                            while ($row = $res->fetch_assoc()):
+                                                $id = $row ['id'];
+                                                $nombre = $row ['nombre'] .'&nbsp;'. $row['apellido_p'] .'&nbsp;'. $row['apellido_m']  ;
+                                               
+                                                ?>
+
                         <section class="aboutus" id="aboutus">
                             <div class="container">
                                 <div class="heading text-center">
@@ -114,30 +126,14 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="papers text-center">
-                                            <img src="img/customer_person_people_woman_you_1627.png" alt=""><br/>
-                                            <h4 class="notopmarg nobotmarg">Adelina Rosas Mercado</h4>
+                                            <img src="../simpoweb/administrator/gallery/album/biography/<?php echo $row['ruta']?>" alt="">
+                                            <h4 class="notopmarg nobotmarg"><?php echo $row['nombre']?></h4>
                                             <p style="text-align: justify">
-                                                Doctora en Clínica psicoanalítica, Maestra en psicología educativa de la
-
-                                                Universidad Nacional Autónoma de México y Master practitioner en Programación
-
-                                                Neurolingüística. Es profesora-investigadora de la Escuela Superior de Ingeniería Química e
-
-                                                Industrias Extractivas del Instituto Politécnico Nacional, docente de las asignaturas de Motivación,
-
-                                                trabajo en equipo y solución de conflictos, Desarrollo humano integral, y del seminario Coaching
-
-                                                ejecutivo estratégico en la industria. Es autora de tres libros y de numerosas ponencias
-
-                                                presentadas en congresos nacionales e internacionales y de artículos publicados en revistas
-
-                                                científicas y coordinadora o colaboradora en investigaciones con diferentes universidades y
-
-                                                organizaciones.
+                                                <?php echo utf8_decode(  $row['descripcion'])?>
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
+<!--                                    <div class="col-md-6">
                                         <div class="papers text-center">
                                             <img src="img/customer_person_people_woman_you_1627.png"  alt=""><br/>
                                             <h4 class="notopmarg nobotmarg">Adelina Pérez Rosas</h4>
@@ -161,9 +157,9 @@
                                                 internacionales. Proporciona servicios de detección de necesidades y capacitación a las empresas.
                                             </p>
                                         </div>
-                                    </div>
+                                    </div>-->
                                 </div>
-                                <div class="row">
+<!--                                <div class="row">
                                     <div class="col-md-6">
                                         <div class="papers text-center">
                                             <img src="img/customer_person_people_man_you_1625.png" alt=""><br/>
@@ -202,9 +198,12 @@
                                             </p>
                                         </div>
                                     </div>
-                                </div>
+                                </div>-->
                             </div>
                         </section>
+                                <?php
+                            endwhile;
+                            ?>
 
                     </div><!--l//item-inner--> 
 
