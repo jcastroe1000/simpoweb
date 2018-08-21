@@ -8,7 +8,7 @@ $id_image_course = $_GET['id_course'];
 $id_image_c=$_GET['id_image_c'];
 echo $id_image_course;
 $filename = "";
-if ($_FILES['file_image']['size'] <= 2097152) {
+if ($_FILES['file_image']['size'] <= 6097152) {
     while (true) {
         $filename = uniqid(rand()) . '.' . pathinfo($foto, PATHINFO_EXTENSION);
         if (!file_exists('../album/biography/' . $filename)) {

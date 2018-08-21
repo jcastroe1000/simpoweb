@@ -8,7 +8,7 @@ $(function() {
         $('#cargando h3').text("El archivo " + imagen[0].name + " no es una imagen");
         return false;
       } else {
-        if (imagen[0].size > 1024 * 1024 * 2) {
+        if (imagen[0].size > 1024 * 1024 * 6) {
           $('#cargando').modal('show');
           $('#cargando h3').text("El archivo " + imagen[0].name + " sobrepasa el peso permitido");
           return false;
