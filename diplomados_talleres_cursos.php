@@ -112,9 +112,9 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <ul class="portfolio-categ filter">
-					<li class="all active"><a href="#"><button type="button" class="btn btn-success">Diplomados</button></a></li>
-					<li class="web"><a href="#" title=""><button type="button" class="btn btn-success">Cursos</button></a></li>
-					<li class="icon"><a href="#" title=""><button type="button" class="btn btn-success">Talleres</button></a></li>
+					<li class="dip"><a href="#"><button type="button" class="btn btn-success">Diplomados</button></a></li>
+					<li class="cur"><a href="#" title=""><button type="button" class="btn btn-success">Cursos</button></a></li>
+					<li class="tall"><a href="#" title=""><button type="button" class="btn btn-success">Talleres</button></a></li>
 					
 				</ul>
                             <div class="clearfix">
@@ -122,94 +122,127 @@
                             <div class="row">
                                 <section id="projects">
                                     <ul id="thumbs" class="portfolio">
+                                         <?php
+                                            include "config.php";
+                                            error_reporting(E_ALL);
+                                            $res = $mysqli->query("SELECT id,nombre,resumen,seccion,ruta from registro_eventos where seccion IN('curso','seminario') ");
+                                            $mysqli->close();
+
+                                            while ($row = $res->fetch_assoc()):
+                                                $id = $row ['id'];
+                                                $nombre = $row ['nombre'];
+                                                $resumen= $row ['resumen'];
+                                                $sec=$row['seccion'];
+                                               
+                                                ?>
+                                        <?php if($sec == 'seminario'){  ?>
                                         <!-- Item Project and Filter Name -->
-                                        <li class="item-thumbs col-lg-3" data-id="id-0" data-type="web">
+                                        <li class="item-thumbs col-lg-3" data-id="id-0" data-type="dip">
                                             <!-- Fancybox - Gallery Enabled - Title - Full Image -->
-                                            <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Portfolio name" href="img/works/1.jpg">
+                                            <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="<?php echo utf8_decode($nombre)  ?>" href="../simpoweb/administrator/gallery/album/seminar/<?php echo $row['ruta']?>">
                                                 <span class="overlay-img"></span>
                                                 <span class="overlay-img-thumb font-icon-plus"></span>
                                             </a>
                                             <!-- Thumb Image and Description -->
-                                            <img src="img/works/1.jpg" 
+                                             <!-- Thumb Image and Description -->
+                                            <img src="../simpoweb/administrator/gallery/album/seminar/<?php echo $row['ruta']?>" 
 
-                                                 alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
+                                                 alt="<?php echo utf8_decode($resumen) ?>">
                                         </li>
-                                        <!-- End Item Project -->
-                                        <!-- Item Project and Filter Name -->
-                                        <li class="item-thumbs col-lg-3 design" data-id="id-1" data-type="icon">
+                                        <?php } elseif ($sec == 'curso') { ?>    
+                                        <li class="item-thumbs col-lg-3" data-id="id-0" data-type="cur">
                                             <!-- Fancybox - Gallery Enabled - Title - Full Image -->
+                                            <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="<?php echo utf8_decode($nombre)  ?>" href="../simpoweb/administrator/gallery/album/course/<?php echo $row['ruta']?>">
+                                                <span class="overlay-img"></span>
+                                                <span class="overlay-img-thumb font-icon-plus"></span>
+                                            </a>
+                                            <!-- Thumb Image and Description -->
+                                             <!-- Thumb Image and Description -->
+                                            <img src="../simpoweb/administrator/gallery/album/course/<?php echo $row['ruta']?>" 
+
+                                                 alt="<?php echo utf8_decode($resumen) ?>">
+                                        </li>
+                                        <?php }?>
+                                               
+<!--                                         End Item Project 
+                                         Item Project and Filter Name 
+                                        <li class="item-thumbs col-lg-3 design" data-id="id-1" data-type="icon">
+                                             Fancybox - Gallery Enabled - Title - Full Image 
                                             <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Portfolio name" href="img/works/2.jpg">
                                                 <span class="overlay-img"></span>
                                                 <span class="overlay-img-thumb font-icon-plus"></span>
                                             </a>
-                                            <!-- Thumb Image and Description -->
+                                             Thumb Image and Description 
                                             <img src="img/works/2.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
                                         </li>
-                                        <!-- End Item Project -->
-                                        <!-- Item Project and Filter Name -->
+                                         End Item Project 
+                                         Item Project and Filter Name 
                                         <li class="item-thumbs col-lg-3 photography" data-id="id-2" data-type="graphic">
-                                            <!-- Fancybox - Gallery Enabled - Title - Full Image -->
+                                             Fancybox - Gallery Enabled - Title - Full Image 
                                             <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Portfolio name" href="img/works/3.jpg">
                                                 <span class="overlay-img"></span>
                                                 <span class="overlay-img-thumb font-icon-plus"></span>
                                             </a>
-                                            <!-- Thumb Image and Description -->
+                                             Thumb Image and Description 
                                             <img src="img/works/3.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
                                         </li>
-                                        <!-- End Item Project -->
-                                        <!-- Item Project and Filter Name -->
+                                         End Item Project 
+                                         Item Project and Filter Name 
                                         <li class="item-thumbs col-lg-3 design" data-id="id-0" data-type="web">
-                                            <!-- Fancybox - Gallery Enabled - Title - Full Image -->
+                                             Fancybox - Gallery Enabled - Title - Full Image 
                                             <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Portfolio name" href="img/works/4.jpg">
                                                 <span class="overlay-img"></span>
                                                 <span class="overlay-img-thumb font-icon-plus"></span>
                                             </a>
-                                            <!-- Thumb Image and Description -->
+                                             Thumb Image and Description 
                                             <img src="img/works/4.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
                                         </li>
-                                        <!-- End Item Project -->
-                                        <!-- Item Project and Filter Name -->
+                                         End Item Project 
+                                         Item Project and Filter Name 
                                         <li class="item-thumbs col-lg-3 photography" data-id="id-4" data-type="web">
-                                            <!-- Fancybox - Gallery Enabled - Title - Full Image -->
+                                             Fancybox - Gallery Enabled - Title - Full Image 
                                             <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Portfolio name" href="img/works/5.jpg">
                                                 <span class="overlay-img"></span>
                                                 <span class="overlay-img-thumb font-icon-plus"></span>
                                             </a>
-                                            <!-- Thumb Image and Description -->
+                                             Thumb Image and Description 
                                             <img src="img/works/5.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
                                         </li>
-                                        <!-- End Item Project -->
-                                        <!-- Item Project and Filter Name -->
+                                         End Item Project 
+                                         Item Project and Filter Name 
                                         <li class="item-thumbs col-lg-3 photography" data-id="id-5" data-type="icon">
-                                            <!-- Fancybox - Gallery Enabled - Title - Full Image -->
+                                             Fancybox - Gallery Enabled - Title - Full Image 
                                             <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Portfolio name" href="img/works/6.jpg">
                                                 <span class="overlay-img"></span>
                                                 <span class="overlay-img-thumb font-icon-plus"></span>
                                             </a>
-                                            <!-- Thumb Image and Description -->
+                                             Thumb Image and Description 
                                             <img src="img/works/6.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
                                         </li>
-                                        <!-- End Item Project -->
+                                         End Item Project 
                                         <li class="item-thumbs col-lg-3 design" data-id="id-0" data-type="web">
-                                            <!-- Fancybox - Gallery Enabled - Title - Full Image -->
+                                             Fancybox - Gallery Enabled - Title - Full Image 
                                             <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Portfolio name" href="img/works/7.jpg">
                                                 <span class="overlay-img"></span>
                                                 <span class="overlay-img-thumb font-icon-plus"></span>
                                             </a>
-                                            <!-- Thumb Image and Description -->
+                                             Thumb Image and Description 
                                             <img src="img/works/7.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
                                         </li>
-                                        <!-- End Item Project -->
-                                        <!-- Item Project and Filter Name -->
+                                         End Item Project 
+                                         Item Project and Filter Name 
                                         <li class="item-thumbs col-lg-3 design" data-id="id-0" data-type="graphic">
-                                            <!-- Fancybox - Gallery Enabled - Title - Full Image -->
+                                             Fancybox - Gallery Enabled - Title - Full Image 
                                             <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Portfolio name" href="img/works/8.jpg">
                                                 <span class="overlay-img"></span>
                                                 <span class="overlay-img-thumb font-icon-plus"></span>
                                             </a>
-                                            <!-- Thumb Image and Description -->
+                                             Thumb Image and Description 
                                             <img src="img/works/8.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
-                                        </li>
+                                        </li>-->
+                                                             <?php
+                            endwhile;
+                            ?>
                                         <!-- End Item Project -->
                                     </ul>
                                 </section>
