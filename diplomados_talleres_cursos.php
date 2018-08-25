@@ -111,7 +111,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12">
-                            <ul class="portfolio-categ filter">
+                            <ul class="portfolio-categ filter center-block">
 					<li class="dip"><a href="#"><button type="button" class="btn btn-success">Diplomados</button></a></li>
 					<li class="cur"><a href="#" title=""><button type="button" class="btn btn-success">Cursos</button></a></li>
 					<li class="tall"><a href="#" title=""><button type="button" class="btn btn-success">Talleres</button></a></li>
@@ -125,7 +125,7 @@
                                          <?php
                                             include "config.php";
                                             error_reporting(E_ALL);
-                                            $res = $mysqli->query("SELECT id,nombre,resumen,seccion,ruta from registro_eventos where seccion IN('curso','seminario') ");
+                                            $res = $mysqli->query("SELECT id,nombre,resumen,seccion,ruta from registro_eventos where seccion IN('curso','diplomado','taller') ");
                                             $mysqli->close();
 
                                             while ($row = $res->fetch_assoc()):
@@ -135,11 +135,12 @@
                                                 $sec=$row['seccion'];
                                                
                                                 ?>
-                                        <?php if($sec == 'seminario'){  ?>
+                                        <?php if($sec == 'diplomado'){  ?>
                                         <!-- Item Project and Filter Name -->
                                         <li class="item-thumbs col-lg-3" data-id="id-0" data-type="dip">
                                             <!-- Fancybox - Gallery Enabled - Title - Full Image -->
-                                            <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="<?php echo utf8_decode($nombre)  ?>" href="../simpoweb/administrator/gallery/album/seminar/<?php echo $row['ruta']?>">
+                                            <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="<?php echo utf8_decode($nombre)  ?>" 
+                                               href="../simpoweb/administrator/gallery/album/seminar/<?php echo $row['ruta']?>" >
                                                 <span class="overlay-img"></span>
                                                 <span class="overlay-img-thumb font-icon-plus"></span>
                                             </a>
