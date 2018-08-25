@@ -106,7 +106,14 @@
                 <br>
                 <div class="benefits text-center">
                     <div class="item  text-center">
-                         <?php
+                        
+
+                        <section class="aboutus" id="aboutus">
+                            <div class="container">
+                                <div class="heading text-center">
+                                    <h2>Acerca de Nosotros</h2>
+                                </div>			
+                                 <?php
                                             include "config.php";
                                             error_reporting(E_ALL);
                                             $res = $mysqli->query("SELECT * from biografia ");
@@ -117,94 +124,22 @@
                                                 $nombre = $row ['nombre'] .'&nbsp;'. $row['apellido_p'] .'&nbsp;'. $row['apellido_m']  ;
                                                
                                                 ?>
-
-                        <section class="aboutus" id="aboutus">
-                            <div class="container">
-                                <div class="heading text-center">
-                                    <h2>Acerca de Nosotros</h2>
-                                </div>			
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="papers text-center">
                                             <img src="../simpoweb/administrator/gallery/album/biography/<?php echo $row['ruta']?>" alt="">
-                                            <h4 class="notopmarg nobotmarg"><?php echo $row['nombre']?></h4>
+                                            <h4 class="notopmarg nobotmarg"><?php echo $nombre?></h4>
                                             <p style="text-align: justify">
                                                 <?php echo utf8_decode(  $row['descripcion'])?>
                                             </p>
                                         </div>
                                     </div>
-<!--                                    <div class="col-md-6">
-                                        <div class="papers text-center">
-                                            <img src="img/customer_person_people_woman_you_1627.png"  alt=""><br/>
-                                            <h4 class="notopmarg nobotmarg">Adelina Pérez Rosas</h4>
-                                            <p style="text-align: justify">
-                                                Coach, licenciada en Administración de empresas y maestra en ciencias con
-
-                                                especialidad en administración y desarrollo de la educación. Es coordinadora General del
-
-                                                Simposium Internacional: “Aportaciones de las universidades a la docencia, la investigación, la
-
-                                                tecnología y el desarrollo” que se lleva a cabo anualmente en el Instituto Politécnico Nacional, y es
-
-                                                coordinadora general del seminario de actualización profesional: “Coaching ejecutivo estratégico
-
-                                                en la industria” que se imparte en cuatro ocasiones al año. Es maestra de Capacitación y
-
-                                                adiestramiento, Desarrollo de habilidades de liderazgo y Redacción ejecutiva. Ha publicado
-
-                                                artículos en revistas científicas y presentado aportaciones en congresos nacionales e
-
-                                                internacionales. Proporciona servicios de detección de necesidades y capacitación a las empresas.
-                                            </p>
-                                        </div>
-                                    </div>-->
-                                </div>
-<!--                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="papers text-center">
-                                            <img src="img/customer_person_people_man_you_1625.png" alt=""><br/>
-                                            <h4 class="notopmarg nobotmarg">Salvador Alejandro Pérez Rosas</h4>
-                                            <p style="text-align: justify">
-                                                Psicólogo de la Universidad del Valle de México donde obtuvo
-
-                                                el mejor promedio de su generación y es Master practitioner en PNL del Centro de Asesoría
-
-                                                Bertrand Russell. Posee un posgrado en psicoanálisis, es psicoterapeuta psicoanalítico y entrena y
-
-                                                da terapia en inglés y en español. Tiene numerosas publicaciones de artículos relacionados con su
-
-                                                campo del conocimiento y entrena en desarrollo de habilidades de Programación Neurolingüística.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="papers text-center">
-                                            <img src="img/customer_person_people_man_you_1625.png" alt=""><br/>
-                                            <h4 class="notopmarg nobotmarg">Fabián David Martínez Valdés</h4>
-                                            <p style="text-align: justify">
-                                                Licenciado en Economía de la Universidad Autónoma
-
-                                                Metropolitana y maestro en ciencias en matemáticas aplicadas. Es docente de Economía
-
-                                                Industrial, Matemáticas superiores, Liderazgo y Negociación. Obtuvo el mejor promedio de su
-
-                                                generación y se especializa en econometría para la evaluación de índices de calidad y
-
-                                                productividad en las empresas, así como la valoración de entornos socioeconómicos. Es coautor
-
-                                                del libro “Modelado de fenómenos económicos y financieros: una visión contemporánea” editado
-
-                                                por la Universidad de las Américas.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>-->
-                            </div>
-                        </section>
-                                <?php
+                                     <?php
                             endwhile;
                             ?>
-
+                                </div>
+                        </section>
+                               
                     </div><!--l//item-inner--> 
 
 

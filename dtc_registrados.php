@@ -156,61 +156,61 @@
                                             <!-- Thumb Image and Description -->
                                             <img src="img/works/3.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
                                         </li>
-                                        <!-- End Item Project -->
-                                        <!-- Item Project and Filter Name -->
+<!--                                         End Item Project 
+                                         Item Project and Filter Name 
                                         <li class="item-thumbs col-lg-3 design" data-id="id-0" data-type="web">
-                                            <!-- Fancybox - Gallery Enabled - Title - Full Image -->
+                                             Fancybox - Gallery Enabled - Title - Full Image 
                                             <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Portfolio name" href="img/works/4.jpg">
                                                 <span class="overlay-img"></span>
                                                 <span class="overlay-img-thumb font-icon-plus"></span>
                                             </a>
-                                            <!-- Thumb Image and Description -->
+                                             Thumb Image and Description 
                                             <img src="img/works/4.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
                                         </li>
-                                        <!-- End Item Project -->
-                                        <!-- Item Project and Filter Name -->
+                                         End Item Project 
+                                         Item Project and Filter Name 
                                         <li class="item-thumbs col-lg-3 photography" data-id="id-4" data-type="web">
-                                            <!-- Fancybox - Gallery Enabled - Title - Full Image -->
+                                             Fancybox - Gallery Enabled - Title - Full Image 
                                             <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Portfolio name" href="img/works/5.jpg">
                                                 <span class="overlay-img"></span>
                                                 <span class="overlay-img-thumb font-icon-plus"></span>
                                             </a>
-                                            <!-- Thumb Image and Description -->
+                                             Thumb Image and Description 
                                             <img src="img/works/5.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
                                         </li>
-                                        <!-- End Item Project -->
-                                        <!-- Item Project and Filter Name -->
+                                         End Item Project 
+                                         Item Project and Filter Name 
                                         <li class="item-thumbs col-lg-3 photography" data-id="id-5" data-type="icon">
-                                            <!-- Fancybox - Gallery Enabled - Title - Full Image -->
+                                             Fancybox - Gallery Enabled - Title - Full Image 
                                             <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Portfolio name" href="img/works/6.jpg">
                                                 <span class="overlay-img"></span>
                                                 <span class="overlay-img-thumb font-icon-plus"></span>
                                             </a>
-                                            <!-- Thumb Image and Description -->
+                                             Thumb Image and Description 
                                             <img src="img/works/6.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
                                         </li>
-                                        <!-- End Item Project -->
+                                         End Item Project 
                                         <li class="item-thumbs col-lg-3 design" data-id="id-0" data-type="web">
-                                            <!-- Fancybox - Gallery Enabled - Title - Full Image -->
+                                             Fancybox - Gallery Enabled - Title - Full Image 
                                             <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Portfolio name" href="img/works/7.jpg">
                                                 <span class="overlay-img"></span>
                                                 <span class="overlay-img-thumb font-icon-plus"></span>
                                             </a>
-                                            <!-- Thumb Image and Description -->
+                                             Thumb Image and Description 
                                             <img src="img/works/7.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
                                         </li>
-                                        <!-- End Item Project -->
-                                        <!-- Item Project and Filter Name -->
+                                         End Item Project 
+                                         Item Project and Filter Name 
                                         <li class="item-thumbs col-lg-3 design" data-id="id-0" data-type="graphic">
-                                            <!-- Fancybox - Gallery Enabled - Title - Full Image -->
+                                             Fancybox - Gallery Enabled - Title - Full Image 
                                             <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Portfolio name" href="img/works/8.jpg">
                                                 <span class="overlay-img"></span>
                                                 <span class="overlay-img-thumb font-icon-plus"></span>
                                             </a>
-                                            <!-- Thumb Image and Description -->
+                                             Thumb Image and Description 
                                             <img src="img/works/8.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
                                         </li>
-                                        <!-- End Item Project -->
+                                         End Item Project -->
                                     </ul>
                                 </section>
                             </div>

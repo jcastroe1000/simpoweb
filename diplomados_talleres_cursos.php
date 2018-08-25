@@ -101,8 +101,8 @@
             <section id="who" class="who2 section">
                 <div class="container text-center">
                     <br>
-                    <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top: 75px;">DIRECTORIO</h2>
-                    <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;">INSTITUTO POLITÉCNICO NACIONAL</h2>
+                   
+                   <h2 class="MediumItalic" style="font-size: xx-large;color: #2e2e35;margin-top: 10%">CURSOS TALLERES Y DIPLOMADOS</h2>
                 </div>   
                 <br>
                 <br>
@@ -115,7 +115,7 @@
 					<li class="all active"><a href="#"><button type="button" class="btn btn-success">Diplomados</button></a></li>
 					<li class="web"><a href="#" title=""><button type="button" class="btn btn-success">Cursos</button></a></li>
 					<li class="icon"><a href="#" title=""><button type="button" class="btn btn-success">Talleres</button></a></li>
-					<li class="graphic"><a href="#" title=""><button type="button" class="btn btn-success">Success</button></a></li>
+					
 				</ul>
                             <div class="clearfix">
                             </div>

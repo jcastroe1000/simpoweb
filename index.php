@@ -151,7 +151,7 @@
                                 <div class="caption-content">
                                     <h2 class="animated fadeInDown">ACTIVIDADES ACADEMICAS</h2>
                                     <span class="animated fadeInDown">ESIQIE-IPN</span>
-                                    <a href="" class="btn btn-blue btn-effect" data-toggle="modal" data-target="#gridSystemModal">REGISTRATE</a>
+                                    <a href="registrar.php" class="btn btn-blue btn-effect" >REGISTRATE</a>
                                 </div>
                             </div>
 
@@ -164,7 +164,7 @@
                                 <div class="caption-content">
                                     <h2 class="animated fadeInDown">ACTIVIDADES ACADEMICAS 1</h2>
                                     <span class="animated fadeInDown">ESIQIE-IPN</span>
-                                    <a href="#" class="btn btn-blue btn-effect" data-toggle="modal" data-target="#gridSystemModal">REGISTRATE</a>
+                                    <a href="registrar.php" class="btn btn-blue btn-effect" >REGISTRATE</a>
                                 </div>
                             </div>
 
@@ -177,7 +177,7 @@
                                 <div class="caption-content">
                                     <h2 class="animated fadeInDown">ACTIVIDADES ACADEMICAS 2</h2>
                                     <span class="animated fadeInDown">ESIQIE-IPN</span>
-                                    <a href="#" class="btn btn-blue btn-effect">REGISTRATE</a>
+                                    <a href="registrar.php" class="btn btn-blue btn-effect">REGISTRATE</a>
                                 </div>
                             </div>
 
@@ -189,7 +189,7 @@
                                 <div class="caption-content">
                                     <h2 class="animated fadeInDown">ACTIVIDADES ACADEMICAS 4</h2>
                                     <span class="animated fadeInDown">ESIQIE-IPN</span>
-                                    <a href="#" class="btn btn-blue btn-effect">REGISTRATE</a>
+                                    <a href="registrar.php" class="btn btn-blue btn-effect">REGISTRATE</a>
                                 </div>
                             </div>
 
@@ -201,7 +201,7 @@
                                 <div class="caption-content">
                                     <h2 class="animated fadeInDown">ACTIVIDADES ACADEMICAS 5</h2>
                                     <span class="animated fadeInDown">ESIQIE-IPN</span>
-                                    <a href="#" class="btn btn-blue btn-effect">REGISTRATE</a>
+                                    <a href="registrar.php" class="btn btn-blue btn-effect">REGISTRATE</a>
                                 </div>
                             </div>
 
@@ -215,7 +215,7 @@
                         <span class="nav-arrow-next">Next</span>
                     </nav>
                     -->
-                    <div id="gridSystemModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridModalLabel" aria-hidden="true">
+<!--                    <div id="gridSystemModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridModalLabel" aria-hidden="true">
                         <div class="modal-dialog"> 
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -276,7 +276,7 @@
                                                             </select>
                                                         </div>
                                                     </div> 
-                                                    <!--                                                    <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                                                                                                        <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
 
                                                         <div class=" selectContainer">
                                                             <select class="form-control" name="city" required>
@@ -314,7 +314,7 @@
                                                                 <option value="Zacatecas">Zacatecas</option>
                                                             </select>
                                                         </div>
-                                                    </div>   -->
+                                                    </div>   
 
 
                                                     <div class="ln_solid"></div>
@@ -334,7 +334,7 @@
                             </div>
                         </div>
 
-                    </div>
+                    </div>-->
                 </div>
                 
 
@@ -426,16 +426,16 @@
 
                         <div class="container" >
                             <div class="col-md-33 text-center wow animated zoomIn" data-wow-delay="0.3s" >
-                                <div class="service-item" style="padding-top: 60px;">
+                                <a href="seminarios.php"><div class="service-item" style="padding-top: 60px;">
                                     <div class="service-icon">
                                         <i class="fa fa-mortar-board fa-3x"></i>
                                     </div>
                                     <h3 class="FolksDecoon" style="font-weight: bold">SEMINARIOS</h3>
 <!--                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>-->
-                                </div>
+                                    </div></a>
                             </div>
                             <div class="col-md-33   text-center wow animated zoomIn" data-wow-delay="0.3s">
-                                <a  href="simposiums.php"><div class="service-item" style="padding-top: 60px;">
+                                <a  href="simposium.php"><div class="service-item" style="padding-top: 60px;">
                                         <div class="service-icon">
                                             <i class="fa fa-laptop fa-3x"></i>
                                         </div>
