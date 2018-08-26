@@ -140,13 +140,12 @@
                             </div>
                             <div class="row">
                                 
-                                
-                                    <ul id="thumbs" class="portfolio">
-                                        <section id="projects">
+                                <section id="projects">
                                     <div class="heading text-center">
-                                    <h2>Cursos</h2>
+                                        <h2 style="padding-top: 5%">Cursos</h2>
                                 </div>
                                     
+                                    <ul id="thumbs" class="portfolio">
                                         <?php
                                             include "config.php";
                                             error_reporting(E_ALL);
