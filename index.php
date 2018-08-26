@@ -430,16 +430,17 @@
                                     <div class="service-icon">
                                         <i class="fa fa-mortar-board fa-3x"></i>
                                     </div>
-                                    <h3 class="FolksDecoon" style="font-weight: bold">SEMINARIOS</h3>
+                                    <h3 class="FolksDecoon" style="font-weight: bold">CURSOS</h3>
 <!--                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>-->
                                     </div></a>
                             </div>
+                            
                             <div class="col-md-33   text-center wow animated zoomIn" data-wow-delay="0.3s">
                                 <a  href="simposium.php"><div class="service-item" style="padding-top: 60px;">
                                         <div class="service-icon">
                                             <i class="fa fa-laptop fa-3x"></i>
                                         </div>
-                                        <h3 class="FolksDecoon" style="font-weight: bold">SIMPOSIUMS</h3>
+                                        <h3 class="FolksDecoon" style="font-weight: bold">DIPLOMADOS</h3>
 
 <!--                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>-->
                                     </div></a>
@@ -449,10 +450,9 @@
                                         <div class="service-icon">
                                             <i class="fa fa-briefcase fa-3x"></i>
                                         </div>
-                                        <h3 class="FolksDecoon" style="font-weight: bold">Diplomados</h3>
-                                        <h3 class="FolksDecoon" style="font-weight: bold">Talleres</h3>
-                                        <h3 class="FolksDecoon" style="font-weight: bold">Cursos</h3>
-    <!--                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>-->
+                                        <h3 class="FolksDecoon" style="font-weight: bold">DOCTORADOS</h3>
+                                        
+    
                                     </div></a>
                             </div>
                             <div class="col-md-33   text-center wow animated zoomIn" data-wow-delay="0.3s">
@@ -460,7 +460,7 @@
                                         <div class="service-icon">
                                             <i class="fa fa-building fa-3x"></i>
                                         </div>
-                                        <h3 class="FolksDecoon" style="font-weight: bold">SERVICIOS EMPRESARIALES</h3>
+                                        <h3 class="FolksDecoon" style="font-weight: bold">ESPECIALIDADES</h3>
     <!--                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>-->
                                     </div></a>
                             </div>
@@ -469,10 +469,62 @@
                                     <div class="service-icon">
                                         <i class="fa fa-book fa-3x"></i>
                                     </div>
+                                    <h3 class="FolksDecoon" style="font-weight: bold">MAESTRIAS</h3>
+<!--                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>-->
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                        <div class="container" >
+                             <div class="col-md-33 text-center wow animated zoomIn" data-wow-delay="0.3s">
+                                <div class="service-item" style="padding-top: 60px;">
+                                    <div class="service-icon">
+                                        <i class="fa fa-book fa-3x"></i>
+                                    </div>
                                     <h3 class="FolksDecoon" style="font-weight: bold">REVISTA</h3>
 <!--                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>-->
                                 </div>
                             </div>
+                            <div class="col-md-33 text-center wow animated zoomIn" data-wow-delay="0.3s" >
+                                <a href="seminarios.php"><div class="service-item" style="padding-top: 60px;">
+                                    <div class="service-icon">
+                                        <i class="fa fa-mortar-board fa-3x"></i>
+                                    </div>
+                                    <h3 class="FolksDecoon" style="font-weight: bold">SERVICIOS EMPRESARIALES</h3>
+<!--                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>-->
+                                    </div></a>
+                            </div>
+                            
+                            <div class="col-md-33   text-center wow animated zoomIn" data-wow-delay="0.3s">
+                                <a  href="simposium.php"><div class="service-item" style="padding-top: 60px;">
+                                        <div class="service-icon">
+                                            <i class="fa fa-laptop fa-3x"></i>
+                                        </div>
+                                        <h3 class="FolksDecoon" style="font-weight: bold">SEMINARIOS</h3>
+
+<!--                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>-->
+                                    </div></a>
+                            </div>
+                            <div class="col-md-33   text-center wow animated zoomIn" data-wow-delay="0.3s">
+                                <a href="cursos_talles_dimplomados.php"><div class="service-item" style="padding-top: 60px;">
+                                        <div class="service-icon">
+                                            <i class="fa fa-briefcase fa-3x"></i>
+                                        </div>
+                                        <h3 class="FolksDecoon" style="font-weight: bold">SIMPOSIUMS</h3>
+                                    </div></a>
+                            </div>
+                            <div class="col-md-33   text-center wow animated zoomIn" data-wow-delay="0.3s">
+                                <a href="servicios_empresariales.php"><div class="service-item" style="padding-top: 60px;">
+                                        <div class="service-icon">
+                                            <i class="fa fa-building fa-3x"></i>
+                                        </div>
+                                        <h3 class="FolksDecoon" style="font-weight: bold">TALLERES</h3>
+    <!--                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>-->
+                                    </div></a>
+                            </div>
+                           
 
 
 

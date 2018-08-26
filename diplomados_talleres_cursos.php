@@ -111,12 +111,12 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12">
-                            <ul class="portfolio-categ filter center-block">
+                            <ul class="portfolio-categ filter">
 					<li class="dip"><a href="#"><button type="button" class="btn btn-success">Diplomados</button></a></li>
 					<li class="cur"><a href="#" title=""><button type="button" class="btn btn-success">Cursos</button></a></li>
 					<li class="tall"><a href="#" title=""><button type="button" class="btn btn-success">Talleres</button></a></li>
 					
-				</ul>
+                            </ul>
                             <div class="clearfix">
                             </div>
                             <div class="row">
@@ -136,8 +136,15 @@
                                                
                                                 ?>
                                         <?php if($sec == 'diplomado'){  ?>
+                                        
+                                        
                                         <!-- Item Project and Filter Name -->
                                         <li class="item-thumbs col-lg-3" data-id="id-0" data-type="dip">
+                                            
+<!--                                            <a href="conekta.html"><button type="button" class="btn btn-success">Más Información</button></a>
+                                            <br/>-->
+                                       <div style="text-align:center;font-weight:bold "><?php echo utf8_encode($nombre); ?></div>
+                                            
                                             <!-- Fancybox - Gallery Enabled - Title - Full Image -->
                                             <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="<?php echo utf8_decode($nombre)  ?>" 
                                                href="../simpoweb/administrator/gallery/album/seminar/<?php echo $row['ruta']?>" >
@@ -146,23 +153,52 @@
                                             </a>
                                             <!-- Thumb Image and Description -->
                                              <!-- Thumb Image and Description -->
+                                             
                                             <img src="../simpoweb/administrator/gallery/album/seminar/<?php echo $row['ruta']?>" 
-
-                                                 alt="<?php echo utf8_decode($resumen) ?>">
+                                                alt="<?php echo utf8_decode($resumen) ?>">
+                                            <a href="conekta.html"><button type="button" class="btn btn-success">Más Información</button></a>
                                         </li>
                                         <?php } elseif ($sec == 'curso') { ?>    
+                                        
                                         <li class="item-thumbs col-lg-3" data-id="id-0" data-type="cur">
+                                            
+                                            <div style="text-align:center;font-weight:bold"><?php echo utf8_encode($nombre); ?></div>
+                                              <br/>
                                             <!-- Fancybox - Gallery Enabled - Title - Full Image -->
-                                            <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="<?php echo utf8_decode($nombre)  ?>" href="../simpoweb/administrator/gallery/album/course/<?php echo $row['ruta']?>">
+                                            <a class="hover-wrap fancybox" style="text-align: center"data-fancybox-group="gallery" title="<?php echo utf8_encode($nombre)  ?>" 
+                                               href="../simpoweb/administrator/gallery/album/course/<?php echo $row['ruta']?>">
                                                 <span class="overlay-img"></span>
+                                   
+                                                 
                                                 <span class="overlay-img-thumb font-icon-plus"></span>
                                             </a>
-                                            <!-- Thumb Image and Description -->
-                                             <!-- Thumb Image and Description -->
+                                           
                                             <img src="../simpoweb/administrator/gallery/album/course/<?php echo $row['ruta']?>" 
-
-                                                 alt="<?php echo utf8_decode($resumen) ?>">
+                                                 alt="<?php echo utf8_encode($resumen) ?>" height="800px" width="900px">
+                                             <a href="conekta.html"><button type="button" class="btn btn-success">Más Información</button></a>
                                         </li>
+                                        
+                                        <?php } elseif ($sec == 'taller') { ?>    
+                                        
+                                        <li class="item-thumbs col-lg-3" data-id="id-0" data-type="taller">
+                                            
+                                            <div style="text-align:center;font-weight:bold"><?php echo utf8_encode($nombre); ?></div>
+                                              <br/>
+                                            <!-- Fancybox - Gallery Enabled - Title - Full Image -->
+                                            <a class="hover-wrap fancybox" style="text-align: center"data-fancybox-group="gallery" title="<?php echo utf8_encode($nombre)  ?>" 
+                                               href="../simpoweb/administrator/gallery/album/course/<?php echo $row['ruta']?>">
+                                                <span class="overlay-img"></span>
+                                   
+                                                 
+                                                <span class="overlay-img-thumb font-icon-plus"></span>
+                                            </a>
+                                           
+                                            <img src="../simpoweb/administrator/gallery/album/course/<?php echo $row['ruta']?>" 
+                                                 alt="<?php echo utf8_encode($resumen) ?>" height="800px" width="900px">
+                                             <a href="conekta.html"><button type="button" class="btn btn-success">Más Información</button></a>
+                                        </li>
+                                        
+                                              
                                         <?php }?>
                                                
 <!--                                         End Item Project 

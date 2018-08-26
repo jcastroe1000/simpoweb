@@ -19,6 +19,30 @@
 
         <!-- CSS
         ================================================== -->
+         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+
+        <!-- Fontawesome Icon font -->
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <!-- bootstrap.min -->
+        <link rel="stylesheet" href="css/jquery.fancybox.css">
+        <!-- bootstrap.min -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!-- bootstrap.min -->
+        <link rel="stylesheet" href="css/owl.carousel.css">
+        <!-- bootstrap.min -->
+        <link rel="stylesheet" href="css/slit-slider.css">
+        <!-- bootstrap.min -->
+        <link rel="stylesheet" href="css/animate.css">
+        <!-- Main Stylesheet -->
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/theme.css">
+        <!--Contacto Form-->
+
+        <link rel="stylesheet" href="css/form.css">
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/font-face.css"> 
+        <!-- Modernizer Script for old Browsers -->
+        <script src="js/modernizr-2.6.2.min.js"></script>
         <link href="css/bootstrap.min.css" rel="stylesheet" />
 
         <link href="css_portafolio/fancybox/jquery.fancybox.css" rel="stylesheet">
@@ -98,32 +122,12 @@
         ==================================== -->
 
         <main class="site-content" role="main">
-            <section id="who" class="who2 section">
-                <div class="container text-center">
-                    
-<!--                    <div class="col-md-8 col-md-offset-2 wow animated fadeInRight " style="padding-top: 5%">
-                            <div class="welcome-block center-block">
-                                <h3 style="text-align: center">Objetivo</h3>								
-                                <div class="message-body" style="text-align: justify">
-
-                                    <h4 style="color: black;padding:5px;line-height: 30px ">El objetivo del Simposium es propiciar un mayor intercambio de información entre 
-                                        profesores e investigadores de las diversas instituciones de educación en los ámbitos nacionales e internacionales, 
-                                        así como representantes del sector productivo.</h4>
-                                </div>
-
-                                <a  class="btn btn-border btn-effect col-md-offset-1 button_index" data-toggle="modal" data-target="#QuienesSomos">Leer Más</a>
-
-                            </div>
-                        </div>-->
-    
-                    
-                </div>   
-                <br>
-                <br>
-            </section>
+           
+          
 
             <section id="content">
-                              
+                
+                
                 
                 <div class="container">
                     
@@ -132,14 +136,21 @@
                         <div class="col-lg-12">
 
                             <div class="clearfix">
+                                
                             </div>
                             <div class="row">
-                                <section id="projects">
+                                
+                                
                                     <ul id="thumbs" class="portfolio">
+                                        <section id="projects">
+                                    <div class="heading text-center">
+                                    <h2>Cursos</h2>
+                                </div>
+                                    
                                         <?php
                                             include "config.php";
                                             error_reporting(E_ALL);
-                                            $res = $mysqli->query("SELECT id,nombre,resumen,ruta from registro_eventos where seccion= 'seminario' ");
+                                            $res = $mysqli->query("SELECT id,nombre,resumen,ruta from registro_eventos where seccion= 'curso' ");
                                             $mysqli->close();
 
                                             while ($row = $res->fetch_assoc()):
@@ -152,16 +163,16 @@
                                         
                                           <li class="item-thumbs col-lg-3" data-id="id-0" data-type="web">
                                             <!-- Fancybox - Gallery Enabled - Title - Full Image -->
-                                            <div style="text-align:center;font-weight:bold"><?php echo utf8_encode($nombre); ?></div>
+                                            <div style="text-align:center;font-weight:bold"><?php echo utf8_encode($nombre) ?></div>
                                               <br/>
                                                 
                                               
-                                            <a class="" data-fancybox-group="gallery" title="<?php echo utf8_decode($nombre) ?>" href="../simpoweb/administrator/gallery/album/seminar/<?php echo $row['ruta']?>">
+                                            <a class="" data-fancybox-group="gallery" title="<?php echo utf8_decode($nombre) ?>" href="../simpoweb/administrator/gallery/album/course/<?php echo $row['ruta']?>">
                                                 
                                             </a>
                                             
                                             
-                                                <img src="../simpoweb/administrator/gallery/album/seminar/<?php echo $row['ruta']?>" 
+                                                <img src="../simpoweb/administrator/gallery/album/course/<?php echo $row['ruta']?>" 
 
                                                      alt="<?php echo utf8_encode($resumen) ?>">
                                                 <br/>

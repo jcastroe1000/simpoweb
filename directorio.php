@@ -61,7 +61,7 @@
         <!--
         Fixed Navigation
         ==================================== -->
-        <header id="navigation" class="navbar-inverse navbar-fixed-top animated-header">
+       <header id="navigation" class="navbar-inverse navbar-fixed-top animated-header">
             <div class="container">
                 <div class="navbar-header">
                     <!-- responsive nav button -->
@@ -138,6 +138,7 @@
                             endwhile;
                             ?>
                                 </div>
+                            </div>
                         </section>
                                
                     </div><!--l//item-inner--> 

@@ -261,7 +261,7 @@ $user_name = utf8_encode($_SESSION['user_name']);
                                 <div class="form-group">
                                     <label class="etiquetas" for="f1-last-name">Resumen:</label>
                                     <textarea name="review" id="review" placeholder="Resumen..." style="height: 110px;width: 100%"
-                                              class="f1-about-yourself form-control3" id="f1-about-yourself" ></textarea>
+                                              class="f1-about-yourself form-control3" id="f1-about-yourself" maxlength="300" ></textarea>
                                 </div>
                                 <div class="form-group">
                                     <label class="etiquetas" for="f1-about-yourself">Dirigido:</label>
@@ -335,6 +335,8 @@ $user_name = utf8_encode($_SESSION['user_name']);
                                         <option value="Miércoles">Miércoles</option>
                                         <option value="Jueves">Jueves</option>
                                         <option value="Viernes">Viernes</option>
+                                        <option value="Sábado">Sábado</option>
+                                        <option value="Domingo">Domingo</option>
 
                                     </select>
 
