@@ -274,7 +274,7 @@ $user_name = $_SESSION['user_name'];
                                                 $fecha_creacion = $row ['fecha_creacion'];
                                                 ?>
 
-                                                <td class="SourceSansPro-Semibold" style="color: #013ADF;text-align: center;font-size: 14px"><?php echo $nombre ?></td>
+                                            <td class="SourceSansPro-Semibold" style="color: #013ADF;text-align: center;font-size: 14px"><?php echo utf8_encode($nombre) ?></td>
                                                 <td style="text-align: center"><a href="#<?php echo $row['id'] . 1 ?>"  data-toggle="modal" data-target="#<?php echo $row['id'] . 1 ?>" style="color:green"><i class="fa fa-picture-o fa-2x" aria-hidden="true"></i></a></td>
                                                 <td style="text-align: center"><a href="#<?php echo $row['id'] ?>"  data-toggle="modal" data-target="#<?php echo $row['id'] ?>" style="color:green"><i class="fa fa-eye fa-2x" style="font-size: 25px"></i></a></td>
                                                 <td style="text-align: center"><a href="#<?php echo $row['id'] . 11 ?>" data-toggle="modal" data-target="#<?php echo $row['id'] . 11 ?>" style="color:red"><i class="fa fa-trash fa-2x" style="font-size: 25px"></i></a></td>

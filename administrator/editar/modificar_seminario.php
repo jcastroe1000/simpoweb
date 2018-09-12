@@ -408,6 +408,16 @@ endif;
                                                 } else {
                                                     echo '<option value="Viernes" >Viernes</option>';
                                                 }
+                                                if (in_array('Sábado', $sep)) {
+                                                    echo '<option value="Sábado" selected="">Sábado</option>';
+                                                } else {
+                                                    echo '<option value="Sábado" >Sábado</option>';
+                                                }
+                                                if (in_array('Domingo', $sep)) {
+                                                    echo '<option value="Domingo" selected="">Domingo</option>';
+                                                } else {
+                                                    echo '<option value="Domingo" >Domingo</option>';
+                                                }
                                                 ?>
                                             </select>
 

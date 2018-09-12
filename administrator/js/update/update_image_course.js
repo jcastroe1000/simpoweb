@@ -1,6 +1,6 @@
 $(function() {
   $('#update_image_course').submit(function() {
-    var comprobar = $('#file_image').val().length*$('#id_course').val().length;
+    var comprobar = $('#file_image').val().length*$('#id_course').val().length*$('#id_image_c').val().length;
     if (comprobar > 0) {
       var imagen = document.getElementById("file_image").files;
       if (imagen[0].type != "image/png" && imagen[0].type != "image/jpg" && imagen[0].type != "image/jpeg") {

@@ -4,7 +4,7 @@ header("Content-Type: text/html;charset=utf-8");
 include("config.php");
 error_reporting(E_ALL);
 $foto = trim($_FILES['file_image']['name']);
-$id_image_course = $_GET['id_course'];
+$id_d= $_GET['id'];
 $id_image_d=$_GET['id_image_d'];
 
 $filename = "";
@@ -20,9 +20,10 @@ if ($_FILES['file_image']['size'] <= 2097152) {
     // Guardamos la imagen (titulo, archivo, fecha de creacion)
 
     $stmt = $mysqli->prepare("UPDATE registro_eventos SET ruta=? WHERE id=?");
-    $stmt->bind_param('ss', $image, $id_image_course);
+    $stmt->bind_param('ss', $image, $id_d);
     $image = $filename;
-    $id_image_course = $_GET['id_course'];
+    $id_d= $_GET['id'];
+ $id_image_d=$_GET['id_image_d'];
     if ($stmt->execute()):
         // Movemos el archivo
         move_uploaded_file($_FILES['file_image']['tmp_name'], '../album/diplomat/' . $filename);

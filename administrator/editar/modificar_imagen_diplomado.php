@@ -1,7 +1,7 @@
 <?php
 header("Content-Type: text/html;charset=utf-8");
 include "../config.php";
-$id_course= $_GET['u'];
+$id_di= $_GET['u'];
 $id_image=$_GET['i'];
 error_reporting(E_ALL);
 session_start();
@@ -262,7 +262,7 @@ $user_name = utf8_encode($_SESSION['user_name']);
                                           <div class="form-group" >
                                     <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="first-name" style="color: black"> </label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <input type="hidden" id="id_course" name="id_course"  value="<?php echo $id_course ?>" class="form-control col-md-7 col-xs-12">
+                                        <input type="hidden" id="id" name="id"  value="<?php echo $id_di ?>" class="form-control col-md-7 col-xs-12">
                                     </div>
                                      
                                 </div>
@@ -468,11 +468,11 @@ $user_name = utf8_encode($_SESSION['user_name']);
                                                             overwriteInitial: true,
                                                             initialPreviewAsData: true,
                                                             initialPreview: [
-                                                                    "<?php echo $path = '../gallery/album/course/' . $row['ruta']; ?> "
+                                                                    "<?php echo $path = '../gallery/album/diplomat/' . $row['ruta']; ?> "
 
                                                             ],
                                                             initialPreviewConfig: [
-                                                                    // {caption: "<?php echo $row['nombre']; ?> ", url: "{<?php echo $path = '../gallery/album/course/' . $row['ruta']; ?> }", key: 1}
+                                                                    // {caption: "<?php echo $row['nombre']; ?> ", url: "{<?php echo $path = '../gallery/album/diplomat/' . $row['ruta']; ?> }", key: 1}
 
                                                             ]
                                                             });

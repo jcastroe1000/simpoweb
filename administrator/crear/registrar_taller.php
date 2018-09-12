@@ -331,6 +331,9 @@ $user_name = utf8_encode($_SESSION['user_name']);
                                         <option value="Miércoles">Miércoles</option>
                                         <option value="Jueves">Jueves</option>
                                         <option value="Viernes">Viernes</option>
+                                        <option value="Sábado">Sábado</option>
+                                        <option value="Domingo">Domingo</option>
+                                        
 
                                     </select>
 
@@ -368,7 +371,6 @@ $user_name = utf8_encode($_SESSION['user_name']);
                                         <option value="">Selecciona</option>
                                         <option value="Depósito Bancario">Depósito Bancario</option>
                                         <option value="Efectivo">Efectivo</option>
-                                        <option value="Pago en línea">Pago en línea</option>
                                     </select>
                                 </div>
                                 <div class="form-group">

@@ -224,7 +224,7 @@ $user_name = utf8_encode($_SESSION['user_name']);
                             <h3 style="text-align: center">Registrar Diplomado</h3>
                             <div class="f1-steps">
                                 <div class="f1-progress">
-                                    <div class="f1-progress-line" data-now-value="16.66" data-number-of-steps="3" style="width: 16.66%;"></div>
+                                    <div class="f1-progress-line" ></div>
                                 </div>
                                 <div class="f1-step active" style="text-align: center">
                                     <div class="f1-step-icon"><i class="fa fa-book"></i></div>
@@ -242,10 +242,6 @@ $user_name = utf8_encode($_SESSION['user_name']);
                             </div>
 
                             <fieldset style="display: block;width: 100%">
-
-
-
-
                                 <div class="form-group">
                                     <label class="etiquetas" for="f1-first-name">Nombre:</label>
                                     <input type="text" name="name" id="name" placeholder="Nombre" class="f1-first-name form-control3" id="f1-first-name" style="width: 100%">
@@ -327,6 +323,8 @@ $user_name = utf8_encode($_SESSION['user_name']);
                                         <option value="Miércoles">Miércoles</option>
                                         <option value="Jueves">Jueves</option>
                                         <option value="Viernes">Viernes</option>
+                                        <option value="Sábado">Sábado</option>
+                                        <option value="Domingo">Domingo</option>
 
                                     </select>
 

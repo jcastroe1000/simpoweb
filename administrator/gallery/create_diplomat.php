@@ -2,7 +2,7 @@
     header("Content-Type: text/html;charset=utf-8");
     include "../config.php";
     error_reporting(E_ALL);
-    $course_name = $_GET['name'];
+    $course_name = utf8_decode($_GET['name']);
     $review = utf8_decode($_GET['review']);
     $addressed = utf8_decode($_GET['addressed']);
     $objetive = utf8_decode($_GET['objetive']);

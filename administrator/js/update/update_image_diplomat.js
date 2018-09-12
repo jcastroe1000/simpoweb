@@ -1,6 +1,6 @@
 $(function() {
   $('#update_image_diplomat').submit(function() {
-    var comprobar = $('#file_image').val().length*$('#id_course').val().length;
+    var comprobar = $('#file_image').val().length*$('#id').val().length*$('#id_image_d').val().length;
     if (comprobar > 0) {
       var imagen = document.getElementById("file_image").files;
       if (imagen[0].type != "image/png" && imagen[0].type != "image/jpg" && imagen[0].type != "image/jpeg") {
@@ -16,7 +16,7 @@ $(function() {
           var formulario = $('#update_image_diplomat');
           var datos = formulario.serialize();
           var archivos = new FormData();
-          var url = '../gallery/update/update_image_seminar.php';
+          var url = '../gallery/update/update_image_diplomat.php';
           for (var i = 0; i < (formulario.find('input[type=file]').length); i++) {
             archivos.append((formulario.find('input[type="file"]:eq(' + i + ')').attr("name")), ((formulario.find('input[type="file"]:eq(' + i + ')')[0]).files[0]));
           }
@@ -36,7 +36,7 @@ $(function() {
                     
                 }, 9500);
                 setTimeout(function () {
-                    $(location).attr('href', '../consultar/seminarios.php');
+                    $(location).attr('href', '../consultar/diplomados.php');
                 }, 12000);
             },
             error: function(data) {

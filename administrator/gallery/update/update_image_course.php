@@ -5,7 +5,8 @@ include("config.php");
 error_reporting(E_ALL);
 $foto = trim($_FILES['file_image']['name']);
 $id_image_course = $_GET['id_course'];
-echo $id_image_course;
+$id_image_c = $_GET['id_image_c'];
+
 $filename = "";
 if ($_FILES['file_image']['size'] <= 2097152) {
     while (true) {
@@ -25,6 +26,7 @@ if ($_FILES['file_image']['size'] <= 2097152) {
     if ($stmt->execute()):
         // Movemos el archivo
         move_uploaded_file($_FILES['file_image']['tmp_name'], '../album/course/' . $filename);
+    unlink('../album/course/'.$id_image_c);
         error_log("Despues del mover el archivo", 0);
     else:
         header('HTTP/1.1 500 Internal Server Error');
