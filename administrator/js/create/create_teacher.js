@@ -1,13 +1,13 @@
 $(function () {
-    $('#create_matter').submit(function () {
-      var comprobar = $('#name_matter').val().length * $('#section').val().length*
-                      $('#area').val().length*$('#impartidor').val().length;
+    $('#create_teacher').submit(function () {
+      var comprobar = $('#name').val().length * $('#last_name_p').val().length*
+                      $('#last_name_m').val().length;
         if (comprobar > 0) {
 
-            var formulario = $('#create_matter');
+            var formulario = $('#create_teacher');
             var datos = formulario.serialize();
             var archivos = new FormData();
-            var url = '../model/register_matter.php';
+            var url = '../model/register_teacher.php';
             
 
             $.ajax({
@@ -29,7 +29,7 @@ $(function () {
                 }, 9500);
                 setTimeout(function () {
                     
-                    $(location).attr('href', '../consultar/materias.php');
+                    $(location).attr('href', '../consultar/profesores.php');
                 }, 12000);
             },
             error: function(data) {

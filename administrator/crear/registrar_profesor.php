@@ -1,21 +1,12 @@
 <?php
 header("Content-Type: text/html;charset=utf-8");
-include "../config.php";
+//include "../config.php";
 error_reporting(E_ALL);
 session_start();
-$id= $_GET['u'];
 if (!isset($_SESSION['user_name'])) {
     header("Location:/simpoweb/administrator/login.php");
 }
-$user_name = utf8_encode($_SESSION['user_name']);
-
-if (isset($_GET['u'])):
-  
-    $res = $mysqli->query("SELECT * FROM materias WHERE id =" . $_GET['u']);
-    $row = $res->fetch_assoc();
-    mysqli_fetch_array($res);
-    $mysqli->close();
-endif;
+$user_name = $_SESSION['user_name'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -190,7 +181,7 @@ endif;
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-body" style="text-align: center;padding:20px">
-                        <h3>Pregunta creada exitosamente.</h3>
+                        <h3>Profesor (a), Registrado de manera exitosa.</h3>
                         <h2>Camiando de pagina.....</h2>
                     </div>
                 </div>
@@ -200,7 +191,7 @@ endif;
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-body" style="text-align: center;padding:20px">
-                        <h3>Por favor espera,registrando la meteria..</h3>
+                        <h3>Por favor espera,registrando al profesor (a)..</h3>
                     </div>
                 </div>
             </div>
@@ -229,106 +220,44 @@ endif;
                 <div class="right_col" role="main" >
                     <!-- top tiles -->
                     <div class="row" style="padding-top: 6%">
-                        <div class="col-md-12">
-                            <div class="x_panel" style="padding-top: 3%" >
+                        <div class="col-sm-10 col-sm-offset-1  col-lg-offset-2  col-md-12  col-lg-8 col-lg-offset-2 col-sm-offset-1 form-box">
+                            <div class="x_panel " style="padding-top: 3%" >
                              <div class="">
-                                    <h2 style="text-align: center;color: black;font-size: 20px;" class="Sansation_Regular">MODIFICAR MATERIA</h2>
+                                    <h2 style="text-align: center;color: black;font-size: 20px;" class="Sansation_Regular">REGISTRAR PROFESOR</h2>
 
                                     <div class="clearfix"></div>
                                 </div>
                                 <div class="x_content" style="padding-top: 3%">
 
-                                    <form id="update_matter" name="update_matter"  class="form-horizontal form-label-left">
+                                    <form id="create_teacher" name="create_teacher"  class="form-horizontal form-label-left">
                                         <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="first-name" style="color: black">Nombre Materia:</label>
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="first-name" style="color: black">Nombre:</label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <input type="text" id="name_matter" name="name_matter" class="form-control col-md-8 col-xs-12"
-                                                       value="<?php echo utf8_encode($row['nombre_materia']); ?>">
-                                                
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="first-name" style="color: black">Sección:</label>
-                                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <select class="selectpicker"  id="section" name="section[]" style="width: 100%" multiple="">
-                                                
-                                                <?php
-                                                $sec = explode(',', utf8_encode($row['seccion']));
-                                               
-                                                if (in_array('Especialidad', $sec)) {
-                                                    echo '<option value="Especialidad" selected="">Especialidad</option>';
-                                                } else {
-                                                    echo '<option value="Especialidad" >Especialidad</option>';
-                                                }
-                                                if (in_array('Doctorado', $sec)) {
-                                                    echo '<option value="Doctorado" selected="">Doctorado</option>';
-                                                } else {
-                                                    echo '<option value="Doctorado" >Doctorado</option>';
-                                                }
-                                                if (in_array('Maestria', $sec)) {
-                                                    echo '<option value="Maestria" selected="">Maestria</option>';
-                                                } else {
-                                                    echo '<option value="Maestria" >Maestria</option>';
-                                                }
-                                                ?>
-                                            </select>
-                                           
+                                                <input type="text" id="name" name="name" class="form-control col-md-8 col-xs-12">
+                                                <!--                                                          pattern="[A-Za-z]" title="Solo se permiten letras"></textarea>-->
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="first-name" style="color: black">Área:</label>
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="first-name" style="color: black">Apellido Paterno:</label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <select class="selectpicker"  id="area" name="area[]" style="width: 100%" multiple="">
-                                                
-                                                <?php
-                                                $area_p= explode(',', utf8_encode($row['area']));
-                                               
-                                                if (in_array('Clínica', $area_p)) {
-                                                    echo '<option value="Clínica" selected="">Clínica</option>';
-                                                } else {
-                                                    echo '<option value="Clínica" >Clínica</option>';
-                                                }
-                                                if (in_array('Teoría psicoanalítica', $area_p)) {
-                                                    echo '<option value="Teoría psicoanalítica" selected="">Teoría psicoanalítica</option>';
-                                                } else {
-                                                    echo '<option value="Teoría psicoanalítica" >Teoría psicoanalítica</option>';
-                                                }
-                                                if (in_array('Técnica', $area_p)) {
-                                                    echo '<option value="Técnica" selected="">Técnica</option>';
-                                                } else {
-                                                    echo '<option value="Técnica" >Técnica</option>';
-                                                }
-                                                if (in_array('Teoría y clínica', $area_p)) {
-                                                    echo '<option value="Teoría y clínica" selected="">Teoría y clínica</option>';
-                                                } else {
-                                                    echo '<option value="Teoría y clínica" >Teoría y clínica</option>';
-                                                }
-                                                 if (in_array('Investigación', $area_p)) {
-                                                    echo '<option value="Investigación" selected="">Investigación</option>';
-                                                } else {
-                                                    echo '<option value="Investigación" >Investigación</option>';
-                                                }
-                                                ?>
-                                            </select>
-                                           
+                                                <input type="text" id="last_name_p" name="last_name_p" class="form-control col-md-8 col-xs-12">
+                                                <!--                                                          pattern="[A-Za-z]" title="Solo se permiten letras"></textarea>-->
                                             </div>
                                         </div>
-                                         <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="first-name" style="color: black">Nombre Materia:</label>
+                                        
+                                        
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="first-name" style="color: black">Apellido Materno:</label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <input type="text" id="impartidor" name="impartidor" class="form-control col-md-8 col-xs-12"
-                                                       value="<?php echo utf8_encode($row['imparte']); ?>">
-                                                
+                                                <input type="text" id="last_name_m" name="last_name_m" class="form-control col-md-8 col-xs-12">
+                                                <!--                                                          pattern="[A-Za-z]" title="Solo se permiten letras"></textarea>-->
                                             </div>
-                                        </div>
-                                        <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <input type="hidden" id="id" name="id"  value="<?php echo $id?>" class="form-control col-md-7 col-xs-12">
                                         </div>
                                         
 
                                        <div class="ln_solid"></div>
                                         <div class="form-group">
-                                            <div class="col-md-7 col-sm-7 col-xs-12 col-md-offset-5">
+                                            <div class=" col-lg-offset-5 col-sm-offset-4 col-md-offset-4 ">
                                                 <button class="btn btn-danger">Cancelar</button>
                                                 <button type="submit" class="btn btn-success">Guardar</button>
                                             </div>
@@ -394,7 +323,7 @@ endif;
 
         <!-- Custom Theme Scripts -->
         <script src="../build/js/custom.min.js"></script>
-        <script src="../js/update/update_matter.js"></script>
+        <script src="../js/create/create_teacher.js"></script>
         <!--progress bar-->
         <script src="../production/js/bootbox.js"></script>
         <script src="../production/js/bootbox.min.js"></script>

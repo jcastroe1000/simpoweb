@@ -2,22 +2,28 @@
     header("Content-Type: text/html;charset=utf-8");
     include "../config.php";
     error_reporting(E_ALL);
-    $id_bio = $_GET['id'];
-    $name = $_GET['name'];
-    $review = $_GET['review'];
-    $a_paterno = $_GET['surname_p'];
-    $a_materno = $_GET['surname_m'];
+    $id_matter = $_GET['id'];
+    $name_m = $_GET['name_matter'];
+    $section_matter= implode(',',$_GET['section']);
+    $sec_matter=utf8_decode($section_matter);
+         $area_mat= implode(',',$_GET['area']);
+    $area_converts_2=utf8_decode($area_mat);
+    $imparte = utf8_decode($_GET['impartidor']);
     
-    if ($id_bio) {
+    if ($id_matter) {
        
-    $stmt = $mysqli->prepare("UPDATE biografia SET  nombre=? , apellido_p=?, apellido_m=?,descripcion=? WHERE id=?");
-    $stmt->bind_param('sssss', $name,$a_paterno,$a_materno,$review,$id_bio);
+    $stmt = $mysqli->prepare("UPDATE  materias SET  nombre_materia=? , seccion=?,"
+            . "area=?, imparte=? WHERE id=?");
+    $stmt->bind_param('sssss', $name_m,$sec_matter,$area_converts_2,$imparte,$id_matter);
     
-    $id_bio = $_GET['id'];
-    $name = $_GET['name'];
-    $review = utf8_decode($_GET['review']);
-    $a_paterno = $_GET['surname_p'];
-    $a_materno = $_GET['surname_m'];
+    $id_matter = $_GET['id'];
+    $name_m = utf8_decode($_GET['name_matter']);
+    $section_matter= implode(',',$_GET['section']);
+    $sec_matter=utf8_decode($section_matter);
+     $area_mat= implode(',',$_GET['area']);
+    $area_converts_2=utf8_decode($area_mat);
+    $imparte = utf8_decode($_GET['impartidor']);
+    
     if ($stmt->execute()):
        
        

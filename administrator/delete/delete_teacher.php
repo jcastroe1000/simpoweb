@@ -6,17 +6,17 @@ include "../config.php";
 
       
 
-        $query2 = "delete FROM materias WHERE id='". $id ."'";
+        $query2 = "delete FROM profesores WHERE id_prof='". $id ."'";
         $stmt = $mysqli->prepare($query2);
         
         if ($stmt->execute()):
             $mysqli->close();
             
             
-            echo "<script>location.href='../consultar/materias.php?m=1'</script>";
+            echo "<script>location.href='../consultar/profesores.php?m=1'</script>";
             
         else:
-            echo "<script>location.href='../consultar/materias.php?m=2'</script>";
+            echo "<script>location.href='../consultar/profesores.php?m=2'</script>";
         endif;
     endif;
 

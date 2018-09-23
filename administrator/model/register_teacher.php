@@ -2,19 +2,18 @@
     header("Content-Type: text/html;charset=utf-8");
     include "../config.php";
     error_reporting(E_ALL);
-    $name_matter = utf8_decode($_GET['name_matter']);
-    $section= implode(',',$_GET['section']);
-    $section_converts=utf8_decode($section);
-    $area= implode(',',$_GET['area']);
-    $area_converts=utf8_decode($area);
-    $imparte = utf8_decode($_GET['impartidor']);
+    $name_teacher = utf8_decode($_GET['name']);
+    $last_name_p = utf8_decode($_GET['last_name_p']);
+    $last_name_m = utf8_decode($_GET['last_name_m']);
     
     
-    if ($name_matter == !null & $section == !null) {
+    
+    
+    if ($name_teacher== !null & $last_name_p == !null) {
        
         // Guardamos la imagen (titulo, archivo, fecha de creacion)
-    $query1 = "INSERT INTO materias(nombre_materia,seccion,area,imparte) "
-            . "VALUES ('$name_matter', '$section_converts','$area_converts','$imparte')";
+    $query1 = "INSERT INTO profesores(nombre_prof,a_paterno_prof,a_materno_prof) "
+            . "VALUES ('$name_teacher', '$last_name_p','$last_name_m')";
         mysqli_query($mysqli, $query1);
         error_log("Despues del primer insert", 0);
         // Movemos el archivo

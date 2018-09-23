@@ -142,14 +142,14 @@
                                 
                                 <section id="projects">
                                     <div class="heading text-center">
-                                        <h2 style="padding-top: 5%">Servicios Empresariales</h2>
+                                        <h2 style="padding-top: 5%">Diplomados</h2>
                                 </div>
                                     
                                     <ul id="thumbs" class="portfolio">
                                         <?php
                                             include "config.php";
                                             error_reporting(E_ALL);
-                                            $res = $mysqli->query("SELECT id,nombre,resumen,ruta from registro_eventos where seccion= 'servicio_empresarial' ");
+                                            $res = $mysqli->query("SELECT id,nombre,resumen,ruta from registro_eventos where seccion= 'diplomado' ");
                                             $mysqli->close();
 
                                             while ($row = $res->fetch_assoc()):
@@ -166,12 +166,12 @@
                                               <br/>
                                                 
                                               
-                                            <a class="" data-fancybox-group="gallery" title="<?php echo utf8_decode($nombre) ?>" href="../simpoweb/administrator/gallery/album/bs/<?php echo $row['ruta']?>">
+                                            <a class="" data-fancybox-group="gallery" title="<?php echo utf8_decode($nombre) ?>" href="../simpoweb/administrator/gallery/album/diplomat/<?php echo $row['ruta']?>">
                                                 
                                             </a>
                                             
                                             
-                                                <img src="../simpoweb/administrator/gallery/album/bs/<?php echo $row['ruta']?>" 
+                                                <img src="../simpoweb/administrator/gallery/album/diplomat/<?php echo $row['ruta']?>" 
 
                                                      alt="<?php echo utf8_encode($resumen) ?>">
                                                 <br/>

@@ -220,8 +220,8 @@ $user_name = $_SESSION['user_name'];
                 <div class="right_col" role="main" >
                     <!-- top tiles -->
                     <div class="row" style="padding-top: 6%">
-                        <div class="col-md-12">
-                            <div class="x_panel" style="padding-top: 3%" >
+                        <div class="col-sm-10 col-sm-offset-1  col-lg-offset-2  col-md-12  col-lg-8 col-lg-offset-2 col-sm-offset-1 form-box">
+                            <div class="x_panel " style="padding-top: 3%" >
                              <div class="">
                                     <h2 style="text-align: center;color: black;font-size: 20px;" class="Sansation_Regular">REGISTRAR MATERIA</h2>
 
@@ -240,19 +240,38 @@ $user_name = $_SESSION['user_name'];
                                         <div class="form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="first-name" style="color: black">Sección:</label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <select class="f1-first-name combo" id="section" name="section" style="width:100%">
-                                                    <option value="">Selecciona</option>
-                                                    <option value="Especialidad">Especialidad</option>
+                                                <select class="selectpicker"  id="section" name="section[]" style="width: 100%" multiple="">
                                                     <option value="Doctorado">Doctorado</option>
+                                                    <option value="Especialidad">Especialidad</option>
                                                     <option value="Maestria">Maestria</option>
                                                 </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="first-name" style="color: black">Área:</label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <select class="selectpicker"  id="area" name="area[]" style="width: 100%" multiple="">
+                                                    <option value="Clínica">Clìnica</option>
+                                                    <option value="Teoría psicoanalítica">Teoría psicoanalítica</option>
+                                                    <option value="Técnica">Técnica</option>
+                                                    <option value="Teoría y clínica">Teoría y clínica</option>
+                                                    <option value="Investigación">Investigación</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="first-name" style="color: black">Impartidor:</label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <input type="text" id="impartidor" name="impartidor" class="form-control col-md-8 col-xs-12">
+                                                <!--                                                          pattern="[A-Za-z]" title="Solo se permiten letras"></textarea>-->
                                             </div>
                                         </div>
                                         
 
                                        <div class="ln_solid"></div>
                                         <div class="form-group">
-                                            <div class="col-md-7 col-sm-7 col-xs-12 col-md-offset-5">
+                                            <div class=" col-lg-offset-5 col-sm-offset-4 col-md-offset-4 ">
                                                 <button class="btn btn-danger">Cancelar</button>
                                                 <button type="submit" class="btn btn-success">Guardar</button>
                                             </div>

@@ -1,13 +1,14 @@
 $(function() {
-  $('#update_faq_course').submit(function() {
-    var comprobar = $('#question').val().length * $('#answer').val().length 
-                * $('#id_faqs').val().length;
+  $('#update_matter').submit(function() {
+    var comprobar = $('#name_matter').val().length * $('#section').val().length*
+             $('#area').val().length*$('#impartidor').val().length*$('#id').val().length;
+                   
     if (comprobar > 0) {
       
-          var formulario = $('#update_faq_course');
+          var formulario = $('#update_matter');
           var datos = formulario.serialize();
           var archivos = new FormData();
-          var url = '../update/update_faqs.php';
+          var url = '../update/update_matter.php';
           
           $.ajax({
             url: url + '?' + datos,
@@ -28,7 +29,7 @@ $(function() {
                 }, 9500);
                 setTimeout(function () {
                     
-                    $(location).attr('href', '../consultar/preguntas_cursos.php');
+                    $(location).attr('href', '../consultar/materias.php');
                 }, 12000);
             },
             error: function(data) {

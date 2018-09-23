@@ -209,9 +209,9 @@ $user_name = $_SESSION['user_name'];
                             </div>
                         </div>
 
-                        <div class="clearfix"><h2 style="text-align: center;color: black;font-size: 25px" class="SourceSansPro-Bold">Materias Registradas</h2></div>
+                        <div class="clearfix"><h2 style="text-align: center;color: black;font-size: 25px" class="SourceSansPro-Bold">Profesores Registrados</h2></div>
 
-                        <div class="clearfix"><h2 style="text-align: center;color: black;font-size: 25px;padding-top:0px;" class="Sansation_Regular"><a href="../crear/registrar_materia.php"><button type="button"  class="btn btn-success"><i class="fa fa-plus"></i> Registrar Materia</button></a></h2></div>
+                        <div class="clearfix"><h2 style="text-align: center;color: black;font-size: 25px;padding-top:0px;" class="Sansation_Regular"><a href="../crear/registrar_profesor.php"><button type="button"  class="btn btn-success"><i class="fa fa-plus"></i> Registrar Profesor</button></a></h2></div>
                         <div style="width: 50%" class="center-block">
                             <?php
                             $m = $_GET['m'];
@@ -219,7 +219,7 @@ $user_name = $_SESSION['user_name'];
                             if ($m == 1) {
 
                                 $modal = '<div class="alert alert-success alert-dismissible " role="alert" style="text-align:center" id="ok">
-                                            <strong style="font-weight: 900;">Bien! El curso ha sido eliminado exitosamente.</strong>
+                                            <strong style="font-weight: 900;">Bien! El profesor (a) ha sido eliminado exitosamente.</strong>
                                             <button type="button" class="close" data-dismiss="alert" aria-label="Close" style="opacity: 1;">
                                             <span aria-hidden="true">&times;</span>
                                             </button>
@@ -250,11 +250,9 @@ $user_name = $_SESSION['user_name'];
                                     <thead>
                                         <tr>
                                             
-                                            <th class="SSansPro-Regular" style="color: black;text-align: center">Nombre Materia</th>
-                                            <th class="SSansPro-Regular" style="color: black;text-align: center">Sección</th>
-                                            <th class="SSansPro-Regular" style="color: black;text-align: center">Área</th>
-                                            <th class="SSansPro-Regular" style="color: black;text-align: center">Imparte</th>
-                                            <th class="SSansPro-Regular" style="color: black;text-align: center">Modificar</th>
+                                            <th class="SSansPro-Regular" style="color: black;text-align: center">Nombre</th>
+                                            <th class="SSansPro-Regular" style="color: black;text-align: center">Apellido Paterno</th>
+                                            <th class="SSansPro-Regular" style="color: black;text-align: center">Apellido Materno</th>
                                             <th class="SSansPro-Regular" style="color: black;text-align: center">Eliminar</th>
 
 
@@ -267,26 +265,24 @@ $user_name = $_SESSION['user_name'];
                                             <?php
                                             include "../model/conection.php";
                                             error_reporting(E_ALL);
-                                                     $res = $mysqli->query("SELECT * FROM materias ORDER BY  nombre_materia ASC");
+                                                     $res = $mysqli->query("SELECT * FROM profesores");
                                                      $mysqli->close();
                                                      while ($row = $res->fetch_assoc()):
                                                 
                                            ?>
 
                                                 
-                                                <td  class="SourceSansPro-Semibold" style="color: #013ADF;text-align: center;font-size: 14px"><?php echo utf8_encode($row['nombre_materia']);?></td>
-                                                <td  class="SourceSansPro-Semibold" style="color: #013ADF;text-align: center;font-size: 14px"><?php echo $row['seccion']?></td>
-                                                <td  class="SourceSansPro-Semibold" style="color: #013ADF;text-align: center;font-size: 14px"><?php echo utf8_encode($row['area'])?></td>
-                                                <td  class="SourceSansPro-Semibold" style="color: #013ADF;text-align: center;font-size: 14px"><?php echo utf8_encode($row['imparte'])?></td>
-                                                <td style="text-align: center"><a href="#<?php echo $row['id'] ?>"  data-toggle="modal" data-target="#<?php echo $row['id'] ?>" style="color:green"><i class="fa fa-eye fa-2x" style="font-size: 25px"></i></a></td>
-                                                <td style="text-align: center"><a href="#<?php echo $row['id'] . 11 ?>" data-toggle="modal" data-target="#<?php echo $row['id'] . 11 ?>" style="color:red"><i class="fa fa-trash fa-2x" style="font-size: 25px"></i></a></td>
+                                                <td  class="SourceSansPro-Semibold" style="color: #013ADF;text-align: center;font-size: 14px"><?php echo utf8_encode($row['nombre_prof']);?></td>
+                                                <td  class="SourceSansPro-Semibold" style="color: #013ADF;text-align: center;font-size: 14px"><?php echo utf8_encode($row['a_paterno_prof'])?></td>
+                                                <td  class="SourceSansPro-Semibold" style="color: #013ADF;text-align: center;font-size: 14px"><?php echo utf8_encode($row['a_materno_prof'])?></td>
+                                                <td style="text-align: center"><a href="#<?php echo $row['id_prof'] . 11 ?>" data-toggle="modal" data-target="#<?php echo $row['id_prof'] . 11 ?>" style="color:red"><i class="fa fa-trash fa-2x" style="font-size: 25px"></i></a></td>
 
                                         </tr>
                                             
                                         <!-- modal imagen-->
                                    
                                         <!-- modal eliminar-->
-                                        <div class="modal fade" id="<?php echo $row['id'] . 11 ?>" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true" >
+                                        <div class="modal fade" id="<?php echo $row['id_prof'] . 11 ?>" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true" >
                                             <div class="modal-dialog">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
@@ -294,14 +290,14 @@ $user_name = $_SESSION['user_name'];
                                                         <h4 class="modal-title" id="myModalLabel" style="text-align: center;font-weight: bold">Atención</h4>
                                                     </div>
                                                     <div class="modal-body">
-                                                        <h3 style="text-align: center">¿Estas seguro de eliminar la materia  <strong><?php echo utf8_encode($row['nombre_materia']) ?></strong>?</h3>
+                                                        <h3 style="text-align: center">¿Estas seguro de eliminar al profesor (a)  <strong><?php echo utf8_encode($row['nombre_prof']) ?></strong>?</h3>
                                                     </div>
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="icon-ban-circle"></i>&nbsp;Cerrrar</button>
-                                                        <a href="../delete/delete_matter.php?d=<?php echo $row['id'] ?>"><button type="button" class="btn btn-success"><i class="icon-ok"></i>Aceptar</button></a>
+                                                        <a href="../delete/delete_teacher.php?d=<?php echo $row['id_prof'] ?>"><button type="button" class="btn btn-success"><i class="icon-ok"></i>Aceptar</button></a>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div
                                         </div>
                                       
                                         

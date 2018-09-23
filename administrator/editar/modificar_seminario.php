@@ -379,7 +379,7 @@ endif;
                                         <div class="form-group">
                                             <label class="etiquetas" for="f1-first-name">Dias:</label>
                                             <select class="selectpicker"  id="days" name="days[]" style="width: 100%" multiple="">
-                                                <option value="<?php echo $row['dias'] ?>" ></option>
+                                                
                                                 <?php
                                                 $sep = explode(',', utf8_encode($row['dias']));
                                                 print_r($sep);
