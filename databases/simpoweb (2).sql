@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 14-08-2018 a las 06:44:46
+-- Tiempo de generación: 23-09-2018 a las 18:15:58
 -- Versión del servidor: 10.1.34-MariaDB
 -- Versión de PHP: 7.2.7
 
@@ -75,6 +75,21 @@ INSERT INTO `administrator` (`id`, `nombre`, `apellido_paterno`, `apellido_mater
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `biografia`
+--
+
+CREATE TABLE `biografia` (
+  `id` int(11) NOT NULL,
+  `nombre` varchar(50) NOT NULL,
+  `apellido_p` varchar(50) NOT NULL,
+  `apellido_m` varchar(50) NOT NULL,
+  `descripcion` text NOT NULL,
+  `ruta` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `estados_republica`
 --
 
@@ -138,15 +153,15 @@ CREATE TABLE `faqs` (
 --
 
 INSERT INTO `faqs` (`id_faqs`, `question`, `answer`, `category`) VALUES
-(107, 'serviciso asadasd', 'sadasdasdasd', 'curso'),
-(108, '1', '2', 'servicio_empresarial'),
+(107, 'Venezuela le quitará 5 ceros a su moneda a partir del lunes                                    ', '        111111111111                                                                                                                                                                                                                                                                                                ', 'curso'),
+(108, 'GALLOS BLANCOS CONTRA AMÃ‰RICA NO SERÃ TRANSMITIDO POR TV AZTECA', '  2                                                ', 'servicio_empresarial'),
 (109, '12', '1212', 'servicio_empresarial'),
 (110, 'as', 'adasdasd', 'servicio_empresariales'),
 (111, 'z', 'asdas', 'servicios_empresariales'),
-(112, 'diplomados', 'diplomados', 'diplomados'),
+(112, 'diplomados', 'diplomados', 'diplomado'),
 (114, 'seminario', 'seminario', 'semiarios'),
 (115, '121', '1212', 'semiarios'),
-(116, 'semiarios', 'seminarios', 'semiarios'),
+(116, 'semiarios', 'seminarios', 'semiario'),
 (117, 'seminarios', 'seminarios', 'seminarios'),
 (118, 'simpo', 'simpoooo', 'simposiums'),
 (119, 'talleres', 'talleres', 'talleres'),
@@ -155,7 +170,37 @@ INSERT INTO `faqs` (`id_faqs`, `question`, `answer`, `category`) VALUES
 (123, 'afael Nadal, número uno del mundo, secó el efecto Stefanos Tsitsipas y amargó el vigésimo cumpleaños del tenista griego, sensación del Masters 1.000 de Toronto que conquistó por cuarta vez el español para alcanzar el título número 80 de su carrera, cifra solo alcanzada antes por el suizo Roger Federer y por los estadounidenses Jimmy Connors e Ivan Lendl.', 'afael Nadal, número uno del mundo, secó el efecto Stefanos Tsitsipas y amargó el vigésimo cumpleaños del tenista griego, sensación del Masters 1.000 de Toronto que conquistó por cuarta vez el español para alcanzar el título número 80 de su carrera, cifra solo alcanzada antes por el suizo Roger Federer y por los estadounidenses Jimmy Connors e Ivan Lendl.', 'revista'),
 (126, '1', '2', 'servicio_empresarial'),
 (127, 'Lejos de enmendar el panorama en la segunda manga, el griego sufrió de entrada una nueva rotura que desequilibró la situación y afeó todavía más su panorama.', 'Lejos de enmendar el panorama en la segunda manga, el griego sufrió de entrada una nueva rotura que desequilibró la situación y afeó todavía más su panorama.', 'servicio_empresarial'),
-(129, 'Lejos de enmendar el panorama en la segunda manga, el griego sufrió de entrada una nueva rotura que desequilibró la situación y afeó todavía más su panorama.', 'Lejos de enmendar el panorama en la segunda manga, el griego sufrió de entrada una nueva rotura que desequilibró la situación y afeó todavía más su panorama.', 'simposium');
+(129, 'Lejos de enmendar el panorama en la segunda manga, el griego sufrió de entrada una nueva rotura que desequilibró la situación y afeó todavía más su panorama.', 'Lejos de enmendar el panorama en la segunda manga, el griego sufrió de entrada una nueva rotura que desequilibró la situación y afeó todavía más su panorama.', 'simposium'),
+(130, '  Listo para operar el Nuevo Aeropuerto en CDMX, pero hasta el 2022                                                ', '  Listo para operar el Nuevo Aeropuerto en CDMX,                              ', 'diplomado'),
+(131, '  Listo para operar el Nuevo Aeropuerto en CDMX                                              ', '  Listo para operar el Nuevo Aeropuerto en CDMX, pero hasta el 2022                                                ', 'revista'),
+(132, '  Listo para operar el Nuevo Aeropuerto en CDMX, pero hasta el 2022                                                ', 'NAIM SegÃºn el plan maestro de la obra, la terminal abrirÃ­a operaciones hasta el segundo semestre de 2022, respecto al plan original que era octubre de 2020.', 'seminario'),
+(133, 'asdasdasd', '  Listo para operar el Nuevo Aeropuerto en CDMX, pero hasta el 2022                                                ', 'simposium'),
+(134, 'Satanistas piden retirar estatua de Diez Mandamientos ', '  Listo para operar el Nuevo Aeropuerto en CDMX, pero hasta el 2022                                                ', 'taller'),
+(135, 'Listo para operar el Nuevo Aeropuerto en CDMX, pero hasta el 2022', 'Listo para operar el Nuevo Aeropuerto en CDMX, pero hasta el 2022', 'servicio_empresarial'),
+(136, '  Listo para operar el Nuevo Aeropuerto en CDMX, pero hasta el 2022                                                ', '  Listo para operar el Nuevo Aeropuerto en CDMX                                           ', 'curso'),
+(137, '  Listo para operar el Nuevo Aeropuerto en CDMX, pero hasta el 2022                                                ', '  Listo para operar el Nuevo Aeropuerto en CDMX,             ', ''),
+(138, '  Listo para operar el Nuevo Aeropuerto en CDMX, pero hasta el 2022                                                ', '  Listo para operar el Nuevo Aeropuerto en CDMX,             ', '');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `materias`
+--
+
+CREATE TABLE `materias` (
+  `id` int(11) NOT NULL,
+  `nombre_materia` text NOT NULL,
+  `seccion` text NOT NULL,
+  `area` text NOT NULL,
+  `imparte` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `materias`
+--
+
+INSERT INTO `materias` (`id`, `nombre_materia`, `seccion`, `area`, `imparte`) VALUES
+(14, 'Metodología de la investigación 2', 'Doctorado', 'Clínica', 'Adelina');
 
 -- --------------------------------------------------------
 
@@ -176,6 +221,27 @@ CREATE TABLE `newsletter` (
 
 INSERT INTO `newsletter` (`id`, `correo_electronico`, `seccion`, `fecha_registro`) VALUES
 (16, 'tonoescom@gmail.com', 'Cursos', '2017-09-13');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `profesores`
+--
+
+CREATE TABLE `profesores` (
+  `id_prof` int(11) NOT NULL,
+  `nombre_prof` text NOT NULL,
+  `a_paterno_prof` text NOT NULL,
+  `a_materno_prof` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `profesores`
+--
+
+INSERT INTO `profesores` (`id_prof`, `nombre_prof`, `a_paterno_prof`, `a_materno_prof`) VALUES
+(2, 'Adelina', 'Pérez', 'Rosas'),
+(3, 'Adelina', 'Pérez', 'Rosas');
 
 -- --------------------------------------------------------
 
@@ -232,7 +298,7 @@ INSERT INTO `publicaciones` (`id`, `publication_name`, `review`, `addressed`, `o
 
 CREATE TABLE `registro_eventos` (
   `id` int(11) NOT NULL,
-  `nombre` varchar(60) CHARACTER SET utf8 NOT NULL,
+  `nombre` varchar(150) CHARACTER SET utf8 NOT NULL,
   `resumen` text NOT NULL,
   `dirigido` text NOT NULL,
   `objetivo` text NOT NULL,
@@ -247,6 +313,7 @@ CREATE TABLE `registro_eventos` (
   `requisitos` text NOT NULL,
   `informacion_adicional` text NOT NULL,
   `costo` float NOT NULL,
+  `lugares_disponibles` int(11) NOT NULL,
   `metodo_pago` text NOT NULL,
   `ruta` text NOT NULL,
   `fecha_creacion` date NOT NULL,
@@ -259,12 +326,10 @@ CREATE TABLE `registro_eventos` (
 -- Volcado de datos para la tabla `registro_eventos`
 --
 
-INSERT INTO `registro_eventos` (`id`, `nombre`, `resumen`, `dirigido`, `objetivo`, `periodo`, `duracion`, `dias`, `fecha_inicio`, `fecha_final`, `hora_inicio`, `hora_final`, `modalidad`, `requisitos`, `informacion_adicional`, `costo`, `metodo_pago`, `ruta`, `fecha_creacion`, `fecha_modificacion`, `seccion`, `usuario`) VALUES
-(103, '000diplomado 1.1', 'Derivado de la oportuna intervención de elementos de la policía municipal de Nezahualcóyotl se logró la detención de un sujeto dedicado al robo de pertenencias con violencia en la colonia Agua Azul presuntamente de...', 'Derivado de la oportuna intervención de elementos de la policía municipal de Nezahualcóyotl se logró la detención de un sujeto dedicado al robo de pertenencias con violencia en la colonia Agua Azul presuntamente de...', 'Derivado de la oportuna intervención de elementos de la policía municipal de Nezahualcóyotl se logró la detención de un sujeto dedicado al robo de pertenencias con violencia en la colonia Agua Azul presuntamente de...ua Azul presuntamente de...', 'Dias', 12, 'Lunes,Martes,Miércoles,Jueves', '2018-08-07', '2018-08-28', '10:00:00', '19:00:00', 'Presencial', 'Derivado de la oportuna intervención de elementos de la policía municipal de Nezahualcóyotl se logró la detención de un sujeto dedicado al robo de pertenencias con violencia en la colonia Agua Azul presuntamente de...', 'Derivado de la oportuna intervención de elementos de la policía municipal de Nezahualcóyotl se logró la detención de un sujeto dedicado al robo de pertenencias con violencia en la colonia Agua Azul presuntamente de...', 1500, 'Depósito Bancario', '15125843185b679844d4d09.jpg', '2018-08-05', '2018-08-07', 'diplomado', 'Esparza Castro José Antonio'),
-(105, 'Curso 1.100', 'El futuro de  Eden  Hazard está más en el aire que nunca después de que el propio jugador asegurara que tenía interés en dejar el equipo en pos de fichar por el  Real  Madrid . Es por esto que el  Chelsea se ha puesto manos a la obra para que el belga siga vinculado al club, según informa el Times.', 'El futuro de  Eden  Hazard está más en el aire que nunca después de que el propio jugador asegurara que tenía interés en dejar el equipo en pos de fichar por el  Real  Madrid . Es por esto que el  Chelsea se ha puesto manos a la obra para que el belga siga vinculado al club, según informa el Times.', 'El futuro de  Eden  Hazard está más en el aire que nunca después de que el propio jugador asegurara que tenía interés en dejar el equipo en pos de fichar por el  Real  Madrid . Es por esto que el  Chelsea se ha puesto manos a la obra para que el belga siga vinculado al club, según informa el Times.', 'Dias', 2, 'Lunes,Martes', '2018-08-07', '2018-08-08', '10:00:00', '16:30:00', 'Presencial', 'El futuro de  Eden  Hazard está más en el aire que nunca después de que el propio jugador asegurara que tenía interés en dejar el equipo en pos de fichar por el  Real  Madrid . Es por esto que el  Chelsea se ha puesto manos a la obra para que el belga siga vinculado al club, según informa el Times.', 'El futuro de  Eden  Hazard está más en el aire que nunca después de que el propio jugador asegurara que tenía interés en dejar el equipo en pos de fichar por el  Real  Madrid . Es por esto que el  Chelsea se ha puesto manos a la obra para que el belga siga vinculado al club, según informa el Times.', 1000, 'Depósito Bancario', '14638397605b67a426c435f.jpg', '2018-08-06', '2018-08-11', 'curso', 'Esparza Castro José Antonio'),
-(106, 'diplomado 1.11', 'Derivado de la oportuna intervención de elementos de la policía municipal de Nezahualcóyotl se logró la detención de un sujeto dedicado al robo de pertenencias con violencia en la colonia Agua Azul presuntamente de...', 'Derivado de la oportuna intervención de elementos de la policía municipal de Nezahualcóyotl se logró la detención de un sujeto dedicado al robo de pertenencias con violencia en la colonia Agua Azul presuntamente de...', 'Derivado de la oportuna intervención de elementos de la policía municipal de Nezahualcóyotl se logró la detención de un sujeto dedicado al robo de pertenencias con violencia en la colonia Agua Azul presuntamente de...', 'Semanas', 1, 'Lunes,Martes,Miércoles,Jueves,Viernes', '2018-08-07', '2018-08-10', '09:00:00', '13:00:00', 'Presencial y/o Dista', 'Derivado de la oportuna intervención de elementos de la policía municipal de Nezahualcóyotl se logró la detención de un sujeto dedicado al robo de pertenencias con violencia en la colonia Agua Azul presuntamente de...', 'Derivado de la oportuna intervención de elementos de la policía municipal de Nezahualcóyotl se logró la detención de un sujeto dedicado al robo de pertenencias con violencia en la colonia Agua Azul presuntamente de...', 1500, 'Depósito Bancario', '18026275545b67a6fad4d08.jpg', '2018-08-06', '0000-00-00', 'diplomado', 'Esparza Castro José Antonio'),
-(107, 'prueba curso', 'Fueron policías municipales quienes reportaron el hallazgo del cadáver de un hombre de entre 40 y 50 años. El individuo estaba semidesnudo, con un costal color blanco en la cabeza, un cinturón al cuello y tenía los pies atados. Además no tenía pantalón, sólo ropa interior oscura, una camisa a cuadros y una especie de cobija en las piernas', 'Fueron policías municipales quienes reportaron el hallazgo del cadáver de un hombre de entre 40 y 50 años. El individuo estaba semidesnudo, con un costal color blanco en la cabeza, un cinturón al cuello y tenía los pies atados. Además no tenía pantalón, sólo ropa interior oscura, una camisa a cuadros y una especie de cobija en las piernas', 'Fueron policías municipales quienes reportaron el hallazgo del cadáver de un hombre de entre 40 y 50 años. El individuo estaba semidesnudo, con un costal color blanco en la cabeza, un cinturón al cuello y tenía los pies atados. Además no tenía pantalón, sólo ropa interior oscura, una camisa a cuadros y una especie de cobija en las piernas', 'Dias', 2, 'Lunes,Martes,Miércoles', '2018-08-07', '2018-08-31', '08:00:00', '12:00:00', 'Presencial', 'Fueron policías municipales quienes reportaron el hallazgo del cadáver de un hombre de entre 40 y 50 años. El individuo estaba semidesnudo, con un costal color blanco en la cabeza, un cinturón al cuello y tenía los pies atados. Además no tenía pantalón, sólo ropa interior oscura, una camisa a cuadros y una especie de cobija en las piernas', 'Fueron policías municipales quienes reportaron el hallazgo del cadáver de un hombre de entre 40 y 50 años. El individuo estaba semidesnudo, con un costal color blanco en la cabeza, un cinturón al cuello y tenía los pies atados. Además no tenía pantalón, sólo ropa interior oscura, una camisa a cuadros y una especie de cobija en las piernas', 150, 'Depósito Bancario', '2264555105b67ab6b65bcb.jpg', '2018-08-06', '0000-00-00', 'curso', 'Esparza Castro José Antonio'),
-(114, 'taller 2.1', 'Sergio Robleto, especialista en investigaciones y seguridad, recomienda estar atentos en los simulacros, para tener una idea de cómo se puede reaccionar en estos casos. Aunque en la situación de riesgo puede haber reacciones impredecibles, hay que tratar de mantener la calma para decidir si es menos arriesgado correr o quedarse en el lugar más seguro posible.', 'Sergio Robleto, especialista en investigaciones y seguridad, recomienda estar atentos en los simulacros, para tener una idea de cómo se puede reaccionar en estos casos. Aunque en la situación de riesgo puede haber reacciones impredecibles, hay que tratar de mantener la calma para decidir si es menos arriesgado correr o quedarse en el lugar más seguro posible.', 'Sergio Robleto, especialista en investigaciones y seguridad, recomienda estar atentos en los simulacros, para tener una idea de cómo se puede reaccionar en estos casos. Aunque en la situación de riesgo puede haber reacciones impredecibles, hay que tratar de mantener la calma para decidir si es menos arriesgado correr o quedarse en el lugar más seguro posible.', 'Dias', 2, 'Martes,Miércoles', '2018-08-07', '2018-08-08', '10:00:00', '15:00:00', 'Presencial', 'Sergio Robleto, especialista en investigaciones y seguridad, recomienda estar atentos en los simulacros, para tener una idea de cómo se puede reaccionar en estos casos. Aunque en la situación de riesgo puede haber reacciones impredecibles, hay que tratar de mantener la calma para decidir si es menos arriesgado correr o quedarse en el lugar más seguro posible.', 'Sergio Robleto, especialista en investigaciones y seguridad, recomienda estar atentos en los simulacros, para tener una idea de cómo se puede reaccionar en estos casos. Aunque en la situación de riesgo puede haber reacciones impredecibles, hay que tratar de mantener la calma para decidir si es menos arriesgado correr o quedarse en el lugar más seguro posible.', 600, 'Depósito Bancario', '8936256165b6f4f4457229.jpg', '2018-08-11', '2018-08-11', 'taller', 'Esparza Castro José Antonio');
+INSERT INTO `registro_eventos` (`id`, `nombre`, `resumen`, `dirigido`, `objetivo`, `periodo`, `duracion`, `dias`, `fecha_inicio`, `fecha_final`, `hora_inicio`, `hora_final`, `modalidad`, `requisitos`, `informacion_adicional`, `costo`, `lugares_disponibles`, `metodo_pago`, `ruta`, `fecha_creacion`, `fecha_modificacion`, `seccion`, `usuario`) VALUES
+(12, 'Curso', 'El peso perdía la mañana de este viernes ante un recrudecimiento en las tensiones comerciales entre Estados Unidos y China, y preocupaciones por algunos mercados emergentes, mientras el mercado espera conocer si Canadá y Washington lograrán un acuerdo en el marco de las negociaciones del Tratado de ', 'El peso perdía la mañana de este viernes ante un recrudecimiento en las tensiones comerciales entre Estados Unidos y China, y preocupaciones por algunos mercados emergentes, mientras el mercado espera conocer si Canadá y Washington lograrán un acuerdo en el marco de las negociaciones del Tratado de Libre Comercio de América del Norte (TLCAN).', 'El peso perdía la mañana de este viernes ante un recrudecimiento en las tensiones comerciales entre Estados Unidos y China, y preocupaciones por algunos mercados emergentes, mientras el mercado espera conocer si Canadá y Washington lograrán un acuerdo en el marco de las negociaciones del Tratado de Libre Comercio de América del Norte (TLCAN).El peso perdía la mañana de este viernes ante un recrudecimiento en las tensiones comerciales entre Estados Unidos y China, y preocupaciones por algunos mercados emergentes, mientras el mercado espera conocer si Canadá y Washington lograrán un acuerdo en el marco de las negociaciones del Tratado de Libre Comercio de América del Norte (TLCAN).', 'Dias', 2, 'Viernes,Sábado,Domingo', '2018-09-24', '2018-09-25', '09:00:00', '15:00:00', 'Presencial', 'El peso perdía la mañana de este viernes ante un recrudecimiento en las tensiones comerciales entre Estados Unidos y China, y preocupaciones por algunos mercados emergentes, mientras el mercado espera conocer si Canadá y Washington lograrán un acuerdo en el marco de las negociaciones del Tratado de Libre Comercio de América del Norte (TLCAN).', 'El peso perdía la mañana de este viernes ante un recrudecimiento en las tensiones comerciales entre Estados Unidos y China, y preocupaciones por algunos mercados emergentes, mientras el mercado espera conocer si Canadá y Washington lograrán un acuerdo en el marco de las negociaciones del Tratado de Libre Comercio de América del Norte (TLCAN).', 1200, 5, 'Depósito Bancario', '8940088405b8b7479184f7.jpg', '2018-09-02', '2018-09-02', 'curso', 'Esparza Castro José Antonio'),
+(16, 'diplomado', ' En estos momentos son treinta grupos de unas veinte personas. En total medio millar de catalanes. ¿Su misión? Organizarse y retirar lazos amarillos, cruces y otros elementos de propaganda que el secesionismo distribuye sin tregua por calles, barrios y pueblos con total impunidad para pedir la libertad de sus dirigentes presos. ', ' En estos momentos son treinta grupos de unas veinte personas. En total medio millar de catalanes. ¿Su misión? Organizarse y retirar lazos amarillos, cruces y otros elementos de propaganda que el secesionismo distribuye sin tregua por calles, barrios y pueblos con total impunidad para pedir la libertad de sus dirigentes presos. ', ' En estos momentos son treinta grupos de unas veinte personas. En total medio millar de catalanes. ¿Su misión? Organizarse y retirar lazos amarillos, cruces y otros elementos de propaganda que el secesionismo distribuye sin tregua por calles, barrios y pueblos con total impunidad para pedir la libertad de sus dirigentes presos. ', 'Meses', 1, 'Sábado,Domingo', '2018-09-24', '2018-10-24', '09:00:00', '12:00:00', 'Distancia', ' En estos momentos son treinta grupos de unas veinte personas. En total medio millar de catalanes. ¿Su misión? Organizarse y retirar lazos amarillos, cruces y otros elementos de propaganda que el secesionismo distribuye sin tregua por calles, barrios y pueblos con total impunidad para pedir la libertad de sus dirigentes presos. ', ' En estos momentos son treinta grupos de unas veinte personas. En total medio millar de catalanes. ¿Su misión? Organizarse y retirar lazos amarillos, cruces y otros elementos de propaganda que el secesionismo distribuye sin tregua por calles, barrios y pueblos con total impunidad para pedir la libertad de sus dirigentes presos. ', 1850, 15, 'Efectivo', '251939035b8e76b21e603.jpg', '2018-09-04', '2018-09-04', 'diplomado', 'Esparza Castro José Antonio'),
+(19, '1', '1', '1', '1', 'Dias', 1, 'Sábado,Domingo', '2018-09-24', '2018-09-25', '09:30:00', '12:00:00', 'Distancia', '1', '1', 1, 1, 'Depósito Bancario', '9643230745b95f4328d8c8.jpg', '2018-09-10', '2018-09-10', 'servicio_empresarial', 'Esparza Castro José Antonio');
 
 -- --------------------------------------------------------
 
@@ -316,7 +381,8 @@ INSERT INTO `titulos` (`id`, `titulo`, `seccion`) VALUES
 CREATE TABLE `user_register` (
   `id` int(11) NOT NULL,
   `name` varchar(60) COLLATE utf8_spanish_ci NOT NULL,
-  `surnames` varchar(60) CHARACTER SET utf8 NOT NULL,
+  `surname_p` varchar(60) CHARACTER SET utf8 NOT NULL,
+  `surname_m` varchar(50) CHARACTER SET utf8 NOT NULL,
   `telephone` varchar(15) CHARACTER SET utf8 DEFAULT NULL,
   `gender` tinyint(1) NOT NULL,
   `email` varchar(60) CHARACTER SET utf8 NOT NULL,
@@ -328,25 +394,10 @@ CREATE TABLE `user_register` (
 -- Volcado de datos para la tabla `user_register`
 --
 
-INSERT INTO `user_register` (`id`, `name`, `surnames`, `telephone`, `gender`, `email`, `password`, `creation_date`) VALUES
-(101, 'JosÃ© Antonio', 'Esparza', '551695144', 1, 'tonoescom@gmail.com', '111', '2017-09-15'),
-(102, 'JosÃ© Antonio', 'Esparza', '5516915144', 1, 'tonoescom@gmail.com', '123', '2017-09-15'),
-(103, 'JosÃ© Antonio', 'Esparza', '(551) 691-5144', 1, 'tonoescom@gmail.com', '1234', '2017-09-15'),
-(104, 'JosÃ© Antonio', 'Esparza', '5516915144', 1, 'tonoescom@gmail.com', '1234', '2017-09-15'),
-(105, 'JosÃ© Antonio', 'Esparza', '5516915144', 2, 'tonoescom@gmail.com', '1234', '2017-09-15'),
-(106, 'JosÃ© Antonio', 'Esparza', '551695144', 1, 'tonoescom@gmail.com', '1234', '2017-09-15'),
-(107, 'JosÃ© Antonio', 'Esparza', '5516915144', 1, 'tonoescom@gmail.com', '12', '2017-09-15'),
-(108, 'JosÃ© Antonio', 'Esparza', '(551) 691-5144', 1, 'tonoescom@gmail.com', '1', '2017-09-17'),
-(109, 'JosÃ© Antonio', 'Esparza', '551691544', 1, 'tonoescom@gmail.com', '1', '2017-09-17'),
-(110, 'JosÃ© Antonio', 'Esparza', '5516915144', 1, 'tonoescom@gmail.com', '1', '2017-09-17'),
-(111, 'JosÃ© Antonio', 'Esparza', '(551) 691-5144', 1, 'tonoescom@gmail.com', '1', '2017-09-17'),
-(112, 'JosÃ© Antonio', 'Esparza', '(551) 691-5144', 1, 'tonoescom@gmail.com', '1', '2017-09-17'),
-(113, 'JosÃ© Antonio', 'Esparza', '000000000000000', 1, 'tonoescom@gmail.com', '000', '2017-09-17'),
-(114, 'JosÃ© Antonio', 'Esparza', '(551) 691-5144', 1, 'tonoescom@gmail.com', '123', '2017-09-17'),
-(115, 'JosÃ© Antonio', 'Esparza', '(551) 691-5144', 1, 'tonoescom@gmail.com', '1234', '2017-09-17'),
-(116, 'JosÃ© Antonio', 'Esparza', '000000000', 1, 'tonoescom@gmail.com', '1234', '2017-09-17'),
-(117, 'JosÃ© Antonio', 'Esparza', '46456456456456', 1, 'tonoescom@gmail.com', '$1$somethin$k8AtJbDPlkfGtvGU2qXx5.', '2017-09-17'),
-(118, 'JosÃ© Antonio', 'Esparza', '5516915144', 1, 'tonoescom@gmail.com', '$1$somethin$k8AtJbDPlkfGtvGU2qXx5.', '2017-09-17');
+INSERT INTO `user_register` (`id`, `name`, `surname_p`, `surname_m`, `telephone`, `gender`, `email`, `password`, `creation_date`) VALUES
+(120, 'Erika', 'Roldan', '', '5516915144', 2, 'jcastroe1000@alumno.ipn.mx', '1234', '2018-08-19'),
+(121, 'JosÃ© Antonio', 'Esparza', 'Esparza', '5516915144', 1, 'aguilita_ameri@hotmail.com', '$1$somethin$c1scW4MUVeVH8ibuvR063/', '2018-08-19'),
+(122, 'JosÃ© Antonio', 'Esparza', 'Esparza', '5516915144', 1, 'jcastro@anzen.com.mx', '$1$somethin$COEJ0zKut7beTen0WfTr2/', '2018-08-24');
 
 --
 -- Índices para tablas volcadas
@@ -365,6 +416,12 @@ ALTER TABLE `administrator`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indices de la tabla `biografia`
+--
+ALTER TABLE `biografia`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indices de la tabla `estados_republica`
 --
 ALTER TABLE `estados_republica`
@@ -377,10 +434,22 @@ ALTER TABLE `faqs`
   ADD PRIMARY KEY (`id_faqs`);
 
 --
+-- Indices de la tabla `materias`
+--
+ALTER TABLE `materias`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indices de la tabla `newsletter`
 --
 ALTER TABLE `newsletter`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `profesores`
+--
+ALTER TABLE `profesores`
+  ADD PRIMARY KEY (`id_prof`);
 
 --
 -- Indices de la tabla `publicaciones`
@@ -429,6 +498,12 @@ ALTER TABLE `administrator`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
+-- AUTO_INCREMENT de la tabla `biografia`
+--
+ALTER TABLE `biografia`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT de la tabla `estados_republica`
 --
 ALTER TABLE `estados_republica`
@@ -438,13 +513,25 @@ ALTER TABLE `estados_republica`
 -- AUTO_INCREMENT de la tabla `faqs`
 --
 ALTER TABLE `faqs`
-  MODIFY `id_faqs` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=131;
+  MODIFY `id_faqs` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=139;
+
+--
+-- AUTO_INCREMENT de la tabla `materias`
+--
+ALTER TABLE `materias`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT de la tabla `newsletter`
 --
 ALTER TABLE `newsletter`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+
+--
+-- AUTO_INCREMENT de la tabla `profesores`
+--
+ALTER TABLE `profesores`
+  MODIFY `id_prof` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `publicaciones`
@@ -456,7 +543,7 @@ ALTER TABLE `publicaciones`
 -- AUTO_INCREMENT de la tabla `registro_eventos`
 --
 ALTER TABLE `registro_eventos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=115;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT de la tabla `servicios_empresariales`
@@ -474,7 +561,7 @@ ALTER TABLE `titulos`
 -- AUTO_INCREMENT de la tabla `user_register`
 --
 ALTER TABLE `user_register`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=119;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=123;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
