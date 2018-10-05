@@ -260,11 +260,28 @@ $user_name = $_SESSION['user_name'];
                                             </div>
                                         </div>
                                         
-                                        <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="first-name" style="color: black">Impartidor:</label>
+                                           <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="first-name" style="color: black">Profesor Impartidor:</label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <input type="text" id="impartidor" name="impartidor" class="form-control col-md-8 col-xs-12">
-                                                <!--                                                          pattern="[A-Za-z]" title="Solo se permiten letras"></textarea>-->
+                                                 <?php
+                                            include "../model/conection.php";
+                                            error_reporting(E_ALL);
+                                            $res = $mysqli->query("SELECT * from profesores  ");
+                                            $mysqli->close();
+
+                                          
+                                                ?>
+                                                          <?php if ($res) { ?>       
+                                                <select class="selectpicker"  id="area" name="area[]" style="width: 100%" multiple="">
+                                                    <<?php  while ($registro=mysqli_fetch_assoc($res)) {?>
+              <option value="<?php echo $registro['id_prof'];?>"><?php echo $registro['nombre_prof']; ?></option>
+           <?php }?>
+         </select>
+                                                    
+                                                </select>
+                          <?php   } else{?>
+         <p>No hay contactos en la agenda</p>
+    <?php } ?>
                                             </div>
                                         </div>
                                         

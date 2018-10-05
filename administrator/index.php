@@ -301,9 +301,27 @@
                 $row= mysqli_fetch_assoc($res);
                 $total_m=$row['total_mujeres'];
                 $mysqli3->close();
+                
+                $res = $mysqli4->query("SELECT COUNT(*) as  total_materias FROM materias ");
+                $row= mysqli_fetch_assoc($res);
+                $total_matters=$row['total_materias'];
+                $mysqli4->close();
+                //script consulta profesores
+                $res = $mysqli5->query("SELECT COUNT(*) as total_profesores FROM profesores ");
+                $row= mysqli_fetch_assoc($res);
+                $total_profesores=$row['total_profesores'];
+                $mysqli5->close();
+                //script consulta doctorados
+                $res = $mysqli6->query("SELECT COUNT(*) as total_profesores FROM profesores ");
+                $row= mysqli_fetch_assoc($res);
+                $total_profesores=$row['total_profesores'];
+                $mysqli6->close();
             ?>
           <!-- top tiles -->
           <div class="row tile_count">
+              <br>
+              <h4 >Usuarios Registrados</h4>
+              <br>
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
               <span class="count_top"><i class="fa fa-user"></i> Usuarios Totales</span>
               <div class="count"><?php echo $total_users?></div>
@@ -321,26 +339,37 @@
           </div>
           <!-- /top tiles -->
           <div class="row tile_count">
+               <br>
+              <h4 >Materias y Profesores Registrados</h4>
+              <br>
+            <!--total_materias-->  
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-user"></i> Cursos Totales Registrados</span>
-              <div class="count">2500</div>
-              <span class="count_bottom"><i class="green">4% </i> From last Week</span>
+              <span class="count_top"><i class="fa fa-user"></i> Materias Totales Registradas</span>
+              <div class="count"><?php echo $total_matters?></div>
+              
+            </div>
+            <!--doctorado-->
+            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+              <span class="count_top"><i class="fa fa-clock-o"></i> Profesores Registrados</span>
+              <div class="count"><?php echo $total_profesores?></div>
+             
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-clock-o"></i> Seminarios Totales Registrados</span>
-              <div class="count">123.50</m      <div class="count">4,567</div>
-              <span class="count_bottom"><i class="red"><i class="fa fa-sort-desc"></i>12% </i> From last Week</span>
+              <span class="count_top"><i class="fa fa-clock-o"></i> Profesores Registrados</span>
+              <div class="count"><?php echo $total_profesores?></div>
+             
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-user"></i> Total Collections</span>
-              <div class="count">2,315</div>
-              <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
-            </div>
+              <span class="count_top"><i class="fa fa-clock-o"></i> Profesores Registrados</span>
+              <div class="count"><?php echo $total_profesores?></div>
+             
+            </div>  
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-user"></i> Total Connections</span>
-              <div class="count">7,325</div>
-              <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
+              <span class="count_top"><i class="fa fa-clock-o"></i> Profesores Registrados</span>
+              <div class="count"><?php echo $total_profesores?></div>
+             
             </div>
+          
           </div>
 
        
@@ -357,12 +386,7 @@
         <!-- /page content -->
 
         <!-- footer content -->
-        <footer>
-          <div class="pull-riget">
-            Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
-          </div>
-          <div class="clearfix"></div>
-        </footer>
+        
         <!-- /footer content -->
       </div>
     </div>
