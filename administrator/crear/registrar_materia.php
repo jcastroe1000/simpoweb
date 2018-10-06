@@ -267,21 +267,23 @@ $user_name = $_SESSION['user_name'];
                                             include "../model/conection.php";
                                             error_reporting(E_ALL);
                                             $res = $mysqli->query("SELECT * from profesores  ");
+                                            //$name_t=$res['nombre_prof'] . '&nbsp;' . utf8_encode($res['a_paterno_prof']) . '&nbsp;' . utf8_encode($res['a_materno_prof']);
                                             $mysqli->close();
 
                                           
                                                 ?>
                                                           <?php if ($res) { ?>       
-                                                <select class="selectpicker"  id="area" name="area[]" style="width: 100%" multiple="">
-                                                    <<?php  while ($registro=mysqli_fetch_assoc($res)) {?>
-              <option value="<?php echo $registro['id_prof'];?>"><?php echo $registro['nombre_prof']; ?></option>
-           <?php }?>
-         </select>
-                                                    
+                                                <select class="selectpicker"  id="impartidor" name="impartidor" style="width: 100%" multiple="">
+                                                        <?php while ($registro = mysqli_fetch_assoc($res)){ ?>
+                                                        
+                                                            <option value="<?php echo utf8_encode($registro['nombre_prof']) . '&nbsp;' . utf8_encode($registro['a_paterno_prof']) . '&nbsp;' . utf8_encode($registro['a_materno_prof']); ?>"><?php echo utf8_encode($registro['nombre_prof']) . '&nbsp;' . utf8_encode($registro['a_paterno_prof']) . '&nbsp;' . utf8_encode($registro['a_materno_prof']);?></option>
+                                                              <?php } ?>
                                                 </select>
-                          <?php   } else{?>
-         <p>No hay contactos en la agenda</p>
-    <?php } ?>
+
+                                                    
+                                                <?php } else { ?>
+                                                    <option value="">No</option>S
+                                            <?php } ?>
                                             </div>
                                         </div>
                                         
