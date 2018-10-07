@@ -316,27 +316,27 @@ endif;
                                          <div class="form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="first-name" style="color: black">Profesor Impartidor:</label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                                 <?php
+                                              <?php
                                             include "../model/conection.php";
                                             error_reporting(E_ALL);
-                                            $res = $mysqli->query("SELECT * from profesores  ");
-                                            //$name_t=$res['nombre_prof'] . '&nbsp;' . utf8_encode($res['a_paterno_prof']) . '&nbsp;' . utf8_encode($res['a_materno_prof']);
+                                            $res = $mysqli->query("SELECT * from profesores ");
                                             $mysqli->close();
 
-                                          
+                                            
+                                               
                                                 ?>
-                                                          <?php if ($res) { ?>       
-                                                <select class="selectpicker"  id="impartidor" name="impartidor" style="width: 100%" >
-                                                        <?php while ($registro = mysqli_fetch_assoc($res)){ ?>
-                                                    
-                                                    <option value="<?php echo utf8_encode($registro['nombre_prof']) . '&nbsp;' . utf8_encode($registro['a_paterno_prof']) . '&nbsp;' . utf8_encode($registro['a_materno_prof']); ?>" selected=""><?php echo utf8_encode($registro['nombre_prof']) . '&nbsp;' . utf8_encode($registro['a_paterno_prof']) . '&nbsp;' . utf8_encode($registro['a_materno_prof']);?></option>
-                                                              <?php } ?>
+                                                
+                                                <select class="selectpicker"  id="area" name="area[]" style="width: 100%" multiple="">
+                                                    <?php while ($row = $res->fetch_assoc()):
+                                                $n = $row ['nombre_prof']; 
+                                                    ?>
+                                                    <option value=""><?php echo $n ?></option>
+                                                     <?php
+                                                    endwhile;
+                                                    ?>
                                                 </select>
+                                                 
 
-                                                    
-                                                <?php } else { ?>
-                                                    <option value="">No</option>S
-                                            <?php } ?>
                                             </div>
                                         </div>
                                         <div class="col-md-6 col-sm-6 col-xs-12">
