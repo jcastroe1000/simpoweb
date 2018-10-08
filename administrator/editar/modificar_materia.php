@@ -317,21 +317,25 @@ endif;
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="first-name" style="color: black">Profesor Impartidor:</label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
                                               <?php
-                                            include "../model/conection.php";
-                                            error_reporting(E_ALL);
-                                            $res = $mysqli->query("SELECT * from profesores ");
-                                            $mysqli->close();
-
-                                            
-                                               
-                                                ?>
-                                                
-                                                <select class="selectpicker"  id="area" name="area[]" style="width: 100%" multiple="">
-                                                    <?php while ($row = $res->fetch_assoc()):
-                                                $n = $row ['nombre_prof']; 
+                                                include "../model/conection.php";
+                                                error_reporting(E_ALL);
+                                                $res2 = $mysqli2->query("SELECT * from profesores ");
+                                                $mysqli2->close();
+                                                 ?>
+                                                <select class="selectpicker"  id="area" name="area[]" style="width: 100%">
+                                                    <?php while ($row2 = $res2->fetch_assoc()):
+                                                        $d= utf8_encode($row['imparte']);
+                                                        $n = utf8_encode($row2 ['nombre_prof'].'&nbsp;'. $row2 ['a_paterno_prof'].'&nbsp;'.$row2 ['a_materno_prof']); 
+                                                        $com= strpos($d, $n);
+                                                        if($com===FALSE){
+                                                            
+                                                        }else{
+                                                            $sel='null';
+                                                        }
+                                                        
                                                     ?>
-                                                    <option value=""><?php echo $n ?></option>
-                                                     <?php
+                                                    <option value="<?php $n?>" selected="" ><?php echo $n ?></option>
+                                                     <?php 
                                                     endwhile;
                                                     ?>
                                                 </select>
