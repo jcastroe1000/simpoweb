@@ -356,7 +356,7 @@ endif;
                                             <label class="etiquetas" for="f1-first-name">Fecha Inicio:</label>
                                             <input type="date" name="date_start" min="2017-01-01" max="2030-12-31" 
                                                    id="date_start" placeholder="Nombre" class="f1-first-name form-control3" 
-                                                   id="f1-first-name" style="width: 100%" value="<?php echo $row['fecha_inicio'] ?>">
+                                                   id="f1-first-name" style="width: 100%" value="<?php echo utf8_encode($row['fecha_inicio']) ?>">
                                         </div>
                                         <div class="form-group" style="width: 45%;display: inline-block;float: right">
                                             <label class="etiquetas" for="f1-first-name">Fecha Final:</label>

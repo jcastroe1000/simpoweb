@@ -10,7 +10,7 @@ if (!isset($_SESSION['user_name'])) {
 $user_name = utf8_encode($_SESSION['user_name']);
 
 if (isset($_GET['u'])):
-  
+   
     $res = $mysqli->query("SELECT * FROM materias WHERE id =" . $_GET['u']);
     $row = $res->fetch_assoc();
     mysqli_fetch_array($res);
@@ -190,7 +190,7 @@ endif;
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-body" style="text-align: center;padding:20px">
-                        <h3>Pregunta creada exitosamente.</h3>
+                        <h3>La materia ha sido modificada exitosamente.</h3>
                         <h2>Camiando de pagina.....</h2>
                     </div>
                 </div>
@@ -229,8 +229,8 @@ endif;
                 <div class="right_col" role="main" >
                     <!-- top tiles -->
                     <div class="row" style="padding-top: 6%">
-                        <div class="col-md-12">
-                            <div class="x_panel" style="padding-top: 3%" >
+                        <div class="col-sm-10 col-sm-offset-1  col-lg-offset-2  col-md-12  col-lg-8 col-lg-offset-2 col-sm-offset-1 form-box">
+                            <div class="x_panel " style="padding-top: 3%" >
                              <div class="">
                                     <h2 style="text-align: center;color: black;font-size: 20px;" class="Sansation_Regular">MODIFICAR MATERIA</h2>
 
@@ -238,49 +238,49 @@ endif;
                                 </div>
                                 <div class="x_content" style="padding-top: 3%">
 
-                                    <form id="update_matter" name="update_matter"  class="form-horizontal form-label-left">
-                                        <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="first-name" style="color: black">Nombre Materia:</label>
-                                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <input type="text" id="name_matter" name="name_matter" class="form-control col-md-8 col-xs-12"
-                                                       value="<?php echo utf8_encode($row['nombre_materia']); ?>">
-                                                
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="first-name" style="color: black">Sección:</label>
-                                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <select class="selectpicker"  id="section" name="section[]" style="width: 100%" multiple="">
-                                                
-                                                <?php
-                                                $sec = explode(',', utf8_encode($row['seccion']));
+                                <form role="form" id="update_matter" name="update_matter" class="f1" style="margin-top: -15px;">
+                                  <div class="row">
+                                      <div class="form-group col-lg-12 col-md-4 col-sm-6 col-xs-12">
+                                    <label class="etiquetas" for="f1-first-name">Nombre de la Materia:</label>
+                                    <input type="text" name="name_matter" id="name_matter" placeholder="Nombre" 
+                                           class="f1-first-name  " id="f1-first-name" style="width: 100%;font-weight: bolder;color: #0000FF"
+                                           value="<?php echo utf8_encode( $row['nombre_materia'])?>">
+                                </div>
+                                    </div>
+                                
+                                
+                                    <div class="row">
+                                        <div class="form-group col-lg-5 col-md-4 col-sm-6 col-xs-12"  style=";display: inline-block;">
+                                    <label class="etiquetas" for="f1-first-name">Sección:</label>
+                                    <select class="combo" id="section" name="section[]" style="width: 100%;font-weight: bolder;color: #0000FF">
+                                        <?php
+                                                $section_m= explode(',', utf8_encode($row['section']));
                                                
-                                                if (in_array('Especialidad', $sec)) {
-                                                    echo '<option value="Especialidad" selected="">Especialidad</option>';
-                                                } else {
-                                                    echo '<option value="Especialidad" >Especialidad</option>';
-                                                }
-                                                if (in_array('Doctorado', $sec)) {
+                                                if (in_array('Doctorado', $section_m)) {
                                                     echo '<option value="Doctorado" selected="">Doctorado</option>';
                                                 } else {
                                                     echo '<option value="Doctorado" >Doctorado</option>';
                                                 }
-                                                if (in_array('Maestria', $sec)) {
+                                                if (in_array('Especialidad', $section_m)) {
+                                                    echo '<option value="Especialidad" selected="">Especialidad</option>';
+                                                } else {
+                                                    echo '<option value="Especialidad" >Especialidad</option>';
+                                                }
+                                                if (in_array('Maestria', $section_m)) {
                                                     echo '<option value="Maestria" selected="">Maestria</option>';
                                                 } else {
                                                     echo '<option value="Maestria" >Maestria</option>';
                                                 }
-                                                ?>
-                                            </select>
-                                           
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="first-name" style="color: black">Área:</label>
-                                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <select class="selectpicker"  id="area" name="area[]" style="width: 100%" multiple="">
                                                 
-                                                <?php
+                                                ?>
+                                    </select>
+
+                                </div>
+                                  
+                                <div class="form-group col-lg-5 col-md-4 col-sm-6 col-xs-12" style=";display: inline-block;float: right">
+                                    <label class="etiquetas" for="f1-first-name">Área:</label>
+                                    <select class="combo" id="area" name="area[]" style="width: 100%;font-weight: bolder;color: #0000FF">
+                                        <?php
                                                 $area_p= explode(',', utf8_encode($row['area']));
                                                
                                                 if (in_array('Clínica', $area_p)) {
@@ -309,53 +309,50 @@ endif;
                                                     echo '<option value="Investigación" >Investigación</option>';
                                                 }
                                                 ?>
-                                            </select>
-                                           
-                                            </div>
-                                        </div>
-                                         <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="first-name" style="color: black">Profesor Impartidor:</label>
-                                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                              <?php
-                                                include "../model/conection.php";
-                                                error_reporting(E_ALL);
-                                                $res2 = $mysqli2->query("SELECT * from profesores ");
-                                                $mysqli2->close();
-                                                 ?>
-                                                <select class="selectpicker"  id="area" name="area[]" style="width: 100%">
-                                                    <?php while ($row2 = $res2->fetch_assoc()):
-                                                        $d= utf8_encode($row['imparte']);
-                                                        $n = utf8_encode($row2 ['nombre_prof'].'&nbsp;'. $row2 ['a_paterno_prof'].'&nbsp;'.$row2 ['a_materno_prof']); 
-                                                        $com= strpos($d, $n);
-                                                        if($com===FALSE){
-                                                            
-                                                        }else{
-                                                            $sel='null';
-                                                        }
-                                                        
-                                                    ?>
-                                                    <option value="<?php $n?>" selected="" ><?php echo $n ?></option>
-                                                     <?php 
-                                                    endwhile;
-                                                    ?>
-                                                </select>
-                                                 
+                                    </select>
 
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                </div>
+                                    </div>
+                                
+                            <div class="row">
+                                <div class="form-group col-lg-4 col-md-4 col-sm-6 col-xs-12" style="display: inline-block;" >
+                                    <label class="etiquetas" for="f1-first-name">Nombre Profesor:</label>
+                                    <input type="text" name="nombre_prof"  id="nombre_prof" placeholder="Nombre" 
+                                           class="f1-first-name form-control3" id="f1-first-name" style="width: 100%;font-weight: bolder;color: #0000FF" 
+                                           value="<?php echo utf8_encode( $row['nombre_prof'])?>">
+                                </div>
+                                <div class="form-group col-lg-4 col-md-4 col-sm-6 col-xs-12" style="display: inline-block;float: bottom" >
+                                    <label class="etiquetas" for="f1-first-name">Apellido Paterno:</label>
+                                    <input type="text" name="apellido_pat_prof" id="apellido_pat_prof" placeholder="Apellido Paterno" class="f1-first-name form-control3 "
+                                           id="f1-first-name" style="width: 100%;font-weight: bolder;color: #0000FF"
+                                           value="<?php echo utf8_encode( $row['apellido_pat_prof'])?>">
+                                </div>
+                            <div class="form-group col-lg-4 col-md-4 col-sm-6 col-xs-12" style="display: inline-block;float: right">
+                                    <label class="etiquetas" for="f1-first-name">Apellido Materno:</label>
+                                    <input type="text" name="apellido_mat_prof" id="apellido_mat_prof" placeholder="Nombre" class="f1-first-name form-control3"
+                                           id="f1-first-name" style="width: 100%;font-weight: bolder;color: #0000FF"
+                                           value="<?php echo utf8_encode( $row['apellido_mat_prof'])?>">
+                                </div>
+                            </div>
+                                    
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
                                             <input type="hidden" id="id" name="id"  value="<?php echo $id?>" class="form-control col-md-7 col-xs-12">
                                         </div>
-                                        
-
+                                    
+                                    
+                                    
                                        <div class="ln_solid"></div>
                                         <div class="form-group">
-                                            <div class="col-md-7 col-sm-7 col-xs-12 col-md-offset-5">
+                                            <div class=" col-lg-offset-5 col-sm-offset-4 col-md-offset-4 ">
                                                 <button class="btn btn-danger">Cancelar</button>
-                                                <button type="submit" class="btn btn-success">Guardar</button>
+                                                <button type="submit" class="btn btn-success">Guardar Cambios</button>
                                             </div>
                                         </div>
-                                    </form>
+                             
+                                
+                            
+
+                        </form>
                                 </div>     
                             </div>
                         </div>

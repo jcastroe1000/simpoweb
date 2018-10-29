@@ -219,7 +219,7 @@ $user_name = $_SESSION['user_name'];
                             if ($m == 1) {
 
                                 $modal = '<div class="alert alert-success alert-dismissible " role="alert" style="text-align:center" id="ok">
-                                            <strong style="font-weight: 900;">Bien! El curso ha sido eliminado exitosamente.</strong>
+                                            <strong style="font-weight: 900;">Bien! La materia ha sido eliminada exitosamente.</strong>
                                             <button type="button" class="close" data-dismiss="alert" aria-label="Close" style="opacity: 1;">
                                             <span aria-hidden="true">&times;</span>
                                             </button>
@@ -277,9 +277,9 @@ $user_name = $_SESSION['user_name'];
                                                 <td  class="SourceSansPro-Semibold" style="color: #013ADF;text-align: center;font-size: 14px"><?php echo utf8_encode($row['nombre_materia']);?></td>
                                                 <td  class="SourceSansPro-Semibold" style="color: #013ADF;text-align: center;font-size: 14px"><?php echo $row['seccion']?></td>
                                                 <td  class="SourceSansPro-Semibold" style="color: #013ADF;text-align: center;font-size: 14px"><?php echo utf8_encode($row['area'])?></td>
-                                                <td  class="SourceSansPro-Semibold" style="color: #013ADF;text-align: center;font-size: 14px"><?php echo utf8_encode($row['imparte'])?></td>
+                                                <td  class="SourceSansPro-Semibold" style="color: #013ADF;text-align: center;font-size: 14px"><?php echo utf8_encode($row['nombre_prof'].'&nbsp;'.$row['apellido_pat_prof'].'&nbsp;'.$row['apellido_mat_prof']);?></td>
                                                 <td style="text-align: center"><a href="#<?php echo $row['id'] ?>"  data-toggle="modal" data-target="#<?php echo $row['id'] ?>" style="color:green"><i class="fa fa-eye fa-2x" style="font-size: 25px"></i></a></td>
-                                                <td style="text-align: center"><a href="#<?php echo $row['id'] . 11 ?>" data-toggle="modal" data-target="#<?php echo $row['id'] . 11 ?>" style="color:red"><i class="fa fa-trash fa-2x" style="font-size: 25px"></i></a></td>
+                                                <td style="text-align: center"><a href="#<?php echo $row['id'] . 11 ?> "  data-toggle="modal" data-target="#<?php echo $row['id'] . 11 ?>" style="color:red"><i class="fa fa-trash fa-2x" style="font-size: 25px"></i></a></td>
 
                                         </tr>
                                             
@@ -320,7 +320,7 @@ $user_name = $_SESSION['user_name'];
                                                     <h5 style="text-align: justify"><strong >Nombre Materia:  </strong><?php echo utf8_encode($row['nombre_materia']) ?></h5> 
                                                     <h5 style="text-align: justify"><strong >Sección:  </strong><?php echo utf8_encode($row['seccion']) ?></h5>
                                                     <h5 style="text-align: justify"><strong >Área:  </strong><?php echo utf8_encode($row['area']) ?></h5>
-                                                    <h5 style="text-align: justify"><strong >Imparte:  </strong><?php echo utf8_encode($row['imparte']) ?></h5>
+                                                    <h5 style="text-align: justify"><strong >Imparte:  </strong><?php echo utf8_encode($row['nombre_prof'].'&nbsp;'.$row['apellido_pat_prof'].'&nbsp;'.$row['apellido_mat_prof']);?></h5>
                                                 </div>
                                                 
                                                 
@@ -634,7 +634,13 @@ $user_name = $_SESSION['user_name'];
                     });
                 });
             </script>
-
+               
+            
+             <script>
+               function loader(){
+                   alert('prueba');
+               }
+            </script>
 
             <!-- /Starrr -->
     </body>

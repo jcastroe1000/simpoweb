@@ -181,7 +181,7 @@ $user_name = $_SESSION['user_name'];
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-body" style="text-align: center;padding:20px">
-                        <h3>Pregunta creada exitosamente.</h3>
+                        <h3>Materia registrada exitosamente.</h3>
                         <h2>Camiando de pagina.....</h2>
                     </div>
                 </div>
@@ -229,65 +229,62 @@ $user_name = $_SESSION['user_name'];
                                 </div>
                                 <div class="x_content" style="padding-top: 3%">
 
-                                    <form id="create_matter" name="create_matter"  class="form-horizontal form-label-left">
-                                        <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="first-name" style="color: black">Nombre Materia:</label>
-                                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <input type="text" id="name_matter" name="name_matter" class="form-control col-md-8 col-xs-12">
-                                                <!--                                                          pattern="[A-Za-z]" title="Solo se permiten letras"></textarea>-->
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="first-name" style="color: black">Sección:</label>
-                                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <select class="selectpicker"  id="section" name="section[]" style="width: 100%" multiple="">
-                                                    <option value="Doctorado">Doctorado</option>
-                                                    <option value="Especialidad">Especialidad</option>
-                                                    <option value="Maestria">Maestria</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="first-name" style="color: black">Área:</label>
-                                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <select class="selectpicker"  id="area" name="area[]" style="width: 100%" multiple="">
-                                                    <option value="Clínica">Clìnica</option>
-                                                    <option value="Teoría psicoanalítica">Teoría psicoanalítica</option>
-                                                    <option value="Técnica">Técnica</option>
-                                                    <option value="Teoría y clínica">Teoría y clínica</option>
-                                                    <option value="Investigación">Investigación</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        
-                                           <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12 FolksDecoon" for="first-name" style="color: black">Profesor Impartidor:</label>
-                                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                                 <?php
-                                            include "../model/conection.php";
-                                            error_reporting(E_ALL);
-                                            $res = $mysqli->query("SELECT * from profesores  ");
-                                            //$name_t=$res['nombre_prof'] . '&nbsp;' . utf8_encode($res['a_paterno_prof']) . '&nbsp;' . utf8_encode($res['a_materno_prof']);
-                                            $mysqli->close();
+                                <form role="form" id="create_matter" name="create_matter" class="f1" style="margin-top: -15px;">
+                                  <div class="row">
+                                      <div class="form-group col-lg-12 col-md-4 col-sm-6 col-xs-12">
+                                    <label class="etiquetas" for="f1-first-name">Nombre de la Materia:</label>
+                                    <input type="text" name="name_matter" id="name_matter" placeholder="Nombre" 
+                                           class="f1-first-name  " id="f1-first-name" style="width: 100%">
+                                </div>
+                                    </div>
+                                
+                                
+                                    <div class="row">
+                                        <div class="form-group col-lg-5 col-md-4 col-sm-6 col-xs-12"  style=";display: inline-block;">
+                                    <label class="etiquetas" for="f1-first-name">Sección:</label>
+                                    <select class="combo" id="section" name="section[]" style="width: 100%">
+                                        <option value="Clínica">Elije una Opción</option>
+                                        <option value="Doctorado">Doctorado</option>
+                                        <option value="Especialidad">Especialidad</option>
+                                        <option value="Maestria">Maestria</option>
+                                    </select>
 
-                                          
-                                                ?>
-                                                          <?php if ($res) { ?>       
-                                                <select class="selectpicker"  id="impartidor" name="impartidor" style="width: 100%" multiple="">
-                                                        <?php while ($registro = mysqli_fetch_assoc($res)){ ?>
-                                                        
-                                                            <option value="<?php echo utf8_encode($registro['nombre_prof']) . '&nbsp;' . utf8_encode($registro['a_paterno_prof']) . '&nbsp;' . utf8_encode($registro['a_materno_prof']); ?>"><?php echo utf8_encode($registro['nombre_prof']) . '&nbsp;' . utf8_encode($registro['a_paterno_prof']) . '&nbsp;' . utf8_encode($registro['a_materno_prof']);?></option>
-                                                              <?php } ?>
-                                                </select>
+                                </div>
+                                  
+                                <div class="form-group col-lg-5 col-md-4 col-sm-6 col-xs-12" style=";display: inline-block;float: right">
+                                    <label class="etiquetas" for="f1-first-name">Área:</label>
+                                    <select class="combo" id="area" name="area[]" style="width: 100%">
+                                        <option value="Clínica">Elije una Opción</option>
+                                        <option value="Clínica">Clìnica</option>
+                                        <option value="Teoría psicoanalítica">Teoría psicoanalítica</option>
+                                        <option value="Técnica">Técnica</option>
+                                        <option value="Teoría y clínica">Teoría y clínica</option>
+                                        <option value="Investigación">Investigación</option>
+                                    </select>
 
-                                                    
-                                                <?php } else { ?>
-                                                    <option value="">No</option>S
-                                            <?php } ?>
-                                            </div>
-                                        </div>
-                                        
-
+                                </div>
+                                    </div>
+                                
+                            <div class="row">
+                                <div class="form-group col-lg-4 col-md-4 col-sm-6 col-xs-12" style="display: inline-block;" >
+                                    <label class="etiquetas" for="f1-first-name">Nombre Profesor:</label>
+                                    <input type="text" name="name_teacher"  id="name_teacher" placeholder="Nombre" 
+                                           class="f1-first-name form-control3" id="f1-first-name" style="width: 100%" >
+                                </div>
+                                <div class="form-group col-lg-4 col-md-4 col-sm-6 col-xs-12" style="display: inline-block;float: bottom" >
+                                    <label class="etiquetas" for="f1-first-name">Apellido Paterno:</label>
+                                    <input type="text" name="last_name_p" id="last_name_p" placeholder="Apellido Paterno" class="f1-first-name form-control3 "
+                                           id="f1-first-name" style="width: 100%">
+                                </div>
+                            <div class="form-group col-lg-4 col-md-4 col-sm-6 col-xs-12" style="display: inline-block;float: right">
+                                    <label class="etiquetas" for="f1-first-name">Apellido Materno:</label>
+                                    <input type="text" name="last_name_m" id="last_name_m" placeholder="Nombre" class="f1-first-name form-control3"
+                                           id="f1-first-name" style="width: 100%" >
+                                </div>
+                            </div>
+                                    
+                                    
+                                    
                                        <div class="ln_solid"></div>
                                         <div class="form-group">
                                             <div class=" col-lg-offset-5 col-sm-offset-4 col-md-offset-4 ">
@@ -295,7 +292,11 @@ $user_name = $_SESSION['user_name'];
                                                 <button type="submit" class="btn btn-success">Guardar</button>
                                             </div>
                                         </div>
-                                    </form>
+                             
+                                
+                            
+
+                        </form>
                                 </div>     
                             </div>
                         </div>

@@ -6,15 +6,17 @@
     $name_m = $_GET['name_matter'];
     $section_matter= implode(',',$_GET['section']);
     $sec_matter=utf8_decode($section_matter);
-         $area_mat= implode(',',$_GET['area']);
+    $area_mat= implode(',',$_GET['area']);
     $area_converts_2=utf8_decode($area_mat);
-    $imparte = utf8_decode($_GET['impartidor']);
+    $name_t = utf8_decode($_GET['nombre_prof']);
+    $a_pat_prof = utf8_decode($_GET['apellido_pat_prof']);
+    $a_mat_prof = utf8_decode($_GET['apellido_mat_prof']);
     
     if ($id_matter) {
        
     $stmt = $mysqli->prepare("UPDATE  materias SET  nombre_materia=? , seccion=?,"
-            . "area=?, imparte=? WHERE id=?");
-    $stmt->bind_param('sssss', $name_m,$sec_matter,$area_converts_2,$imparte,$id_matter);
+            . "area=?, nombre_prof=?, apellido_pat_prof=?, apellido_mat_prof=? WHERE id=?");
+    $stmt->bind_param('sssssss', $name_m,$sec_matter,$area_converts_2,$name_t,$a_pat_prof,$a_mat_prof,$id_matter);
     
     $id_matter = $_GET['id'];
     $name_m = utf8_decode($_GET['name_matter']);
@@ -22,7 +24,9 @@
     $sec_matter=utf8_decode($section_matter);
      $area_mat= implode(',',$_GET['area']);
     $area_converts_2=utf8_decode($area_mat);
-    $imparte = utf8_decode($_GET['impartidor']);
+   $name_t = utf8_decode($_GET['nombre_prof']);
+    $a_pat_prof = utf8_decode($_GET['apellido_pat_prof']);
+    $a_mat_prof = utf8_decode($_GET['apellido_mat_prof']);
     
     if ($stmt->execute()):
        

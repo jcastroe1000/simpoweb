@@ -1,7 +1,8 @@
 $(function () {
     $('#create_matter').submit(function () {
       var comprobar = $('#name_matter').val().length * $('#section').val().length*
-                      $('#area').val().length*$('#impartidor').val().length;
+                      $('#area').val().length*$('#name_teacher').val().length*
+                      $('#last_name_p').val().length*$('#last_name_m').val().length;
         if (comprobar > 0) {
 
             var formulario = $('#create_matter');

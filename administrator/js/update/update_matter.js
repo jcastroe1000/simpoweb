@@ -1,7 +1,8 @@
 $(function() {
   $('#update_matter').submit(function() {
     var comprobar = $('#name_matter').val().length * $('#section').val().length*
-             $('#area').val().length*$('#impartidor').val().length*$('#id').val().length;
+             $('#area').val().length*$('#nombre_prof').val().length*$('#apellido_pat_prof').val().length*
+             $('#apellido_mat_prof').val().length*$('#id').val().length;
                    
     if (comprobar > 0) {
       
@@ -26,7 +27,7 @@ $(function() {
                 setTimeout(function () {
                   $('#cargando ').modal('show');
                     
-                }, 9500);
+                }, 10500);
                 setTimeout(function () {
                     
                     $(location).attr('href', '../consultar/materias.php');
