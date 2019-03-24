@@ -1,3 +1,14 @@
+<?php
+header("Content-Type: text/html;charset=utf-8");
+include "../config.php";
+error_reporting(E_ERROR | E_WARNING | E_PARSE);
+session_start();
+if (!isset($_SESSION['user_name'])) {
+    header("Location:/simpoweb/administrator/login.php");
+}
+$user_name = $_SESSION['user_name'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -34,22 +45,19 @@
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-                <a href="index.html" class="site_title"><h2>SIMPOSIUM <BR> INTERNACIONAL</h2></a>
-            </div>
+                 <a href="index4.html" class="site_title"><i class="fa fa-flask "></i> <span>Sistema de Administración</span></a>
 
             <div class="clearfix"></div>
 
-            <!-- menu profile quick info -->
             <div class="profile clearfix">
-              <div class="profile_pic">
-                <img src="images/img.jpg" alt="..." class="img-circle profile_img">
-              </div>
-              <div class="profile_info">
-                <span>Bienvenido</span>
-                <h2>John Doe</h2>
-              </div>
-            </div>
-            <!-- /menu profile quick info -->
+                            <div class="profile_pic center-block">
+                                <img src="images/img.jpg" alt="..." class="img-circle profile_img">
+                            </div>
+                            <div class="profile_info">
+                                <span>Bienvenido (a)</span>
+                                <h2><?php echo utf8_encode($user_name); ?></h2>
+                            </div>
+                        </div>
 
             <br />
 
@@ -60,18 +68,17 @@
                 <ul class="nav side-menu">
                   <li><a><i class="fa fa-home"></i>Consultas<span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                        <li><a href="consultar/cursos.php">Cursos</a></li>
-                      <li><a href="index2.html">Dashboard2</a></li>
-                      <li><a href="index3.html">Dashboard3</a></li>
-                      <li><a href="index.html">Dashboard</a></li>
-                      <li><a href="index2.html">Dashboard2</a></li>
-                      <li><a href="index3.html">Dashboard3</a></li>
-                      <li><a href="index.html">Dashboard</a></li>
-                      <li><a href="index2.html">Dashboard2</a></li>
-                      <li><a href="index3.html">Dashboard3</a></li>
-                      <li><a href="index.html">Dashboard</a></li>
-                      <li><a href="index2.html">Dashboard2</a></li>
-                      <li><a href="index3.html">Dashboard3</a></li>
+                      <li><a href="consultar/cursos.php">Cursos</a></li>
+                      <li><a href="consultar/diplomados.php">Diplomados</a></li>
+                      <li><a href="consultar/doctorado.php">Doctorados</a></li>
+                      <li><a href="consultar/">Especialidades</a></li>
+                      <li><a href="consultar/">Maestrias</a></li>
+                      <li><a href="consultar/publicaciones.php">Revista</a></li>
+                      <li><a href="consultar/servicios_empresariales.php">Servicios Empresariales</a></li>
+                      <li><a href="consultar/seminarios.php">Seminarios</a></li>
+                      <li><a href="consultar/simposiums.php">Simposiums</a></li>
+                      <li><a href="consultar/talleres.php">Talleres</a></li>
+                      
                     </ul>
                   </li>
                   <li><a><i class="fa fa-edit"></i> Registro<span class="fa fa-chevron-down"></span></a>
@@ -306,16 +313,7 @@
                 $row= mysqli_fetch_assoc($res);
                 $total_matters=$row['total_materias'];
                 $mysqli4->close();
-                //script consulta profesores
-                $res = $mysqli5->query("SELECT COUNT(*) as total_profesores FROM profesores ");
-                $row= mysqli_fetch_assoc($res);
-                $total_profesores=$row['total_profesores'];
-                $mysqli5->close();
-                //script consulta doctorados
-                $res = $mysqli6->query("SELECT COUNT(*) as total_profesores FROM profesores ");
-                $row= mysqli_fetch_assoc($res);
-                $total_profesores=$row['total_profesores'];
-                $mysqli6->close();
+                
             ?>
           <!-- top tiles -->
           <div class="row tile_count">
@@ -340,7 +338,7 @@
           <!-- /top tiles -->
           <div class="row tile_count">
                <br>
-              <h4 >Materias y Profesores Registrados</h4>
+              <h4 >Materias Registradas</h4>
               <br>
             <!--total_materias-->  
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
@@ -349,26 +347,7 @@
               
             </div>
             <!--doctorado-->
-            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-clock-o"></i> Profesores Registrados</span>
-              <div class="count"><?php echo $total_profesores?></div>
-             
-            </div>
-            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-clock-o"></i> Profesores Registrados</span>
-              <div class="count"><?php echo $total_profesores?></div>
-             
-            </div>
-            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-clock-o"></i> Profesores Registrados</span>
-              <div class="count"><?php echo $total_profesores?></div>
-             
-            </div>  
-            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-clock-o"></i> Profesores Registrados</span>
-              <div class="count"><?php echo $total_profesores?></div>
-             
-            </div>
+            
           
           </div>
 

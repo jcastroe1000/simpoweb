@@ -288,7 +288,7 @@ $user_name = $_SESSION['user_name'];
                                        <div class="ln_solid"></div>
                                         <div class="form-group">
                                             <div class=" col-lg-offset-5 col-sm-offset-4 col-md-offset-4 ">
-                                                <button class="btn btn-danger">Cancelar</button>
+                                                <a href="../consultar/materias.php"><button class="btn btn-danger" type="button">Cancelar</button></a>
                                                 <button type="submit" class="btn btn-success">Guardar</button>
                                             </div>
                                         </div>

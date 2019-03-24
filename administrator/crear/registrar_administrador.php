@@ -223,7 +223,7 @@ $user_name = $_SESSION['user_name'];
                         <div class="col-sm-10 col-sm-offset-1  col-lg-offset-2  col-md-12  col-lg-8 col-lg-offset-2 col-sm-offset-1 form-box">
                             <div class="x_panel " style="padding-top: 3%" >
                              <div class="">
-                                    <h2 style="text-align: center;color: black;font-size: 20px;" class="Sansation_Regular">REGISTRAR PROFESOR</h2>
+                                    <h2 style="text-align: center;color: black;font-size: 20px;" class="Sansation_Regular">REGISTRAR ADMINISTRADOR</h2>
 
                                     <div class="clearfix"></div>
                                 </div>
